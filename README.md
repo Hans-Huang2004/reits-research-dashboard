@@ -1,10 +1,10 @@
-# REITs 研究看板
+# REITs 项目表
 
 直接采集上交所、深交所公开披露的机构间 REITs／持有型不动产 ABS 申报与审核列表，提供项目查询、状态跟踪和官方披露入口。
 
 网站使用 GitHub Pages 部署，源代码保存在私有仓库。页面也可以在本地运行。
 
-网站入口：[沪深机构间 REITs 研究看板](https://hans-huang2004.github.io/reits-research-dashboard/)。
+网站入口：[沪深机构间 REITs 项目表](https://hans-huang2004.github.io/reits-research-dashboard/)。
 
 ## 当前版本
 
@@ -14,6 +14,8 @@
 - 分页依据服务端元数据，支持接口实际每页大小与请求值不一致；拒绝重复页、错误响应和不完整快照。
 - 搜索、交易所／资产大类／资产细类／状态／关键词筛选，统计、图表和表格统一联动；分类图表展示当前筛选中的全部类别。
 - 支持关注项目、浏览器内手动分类覆盖、排序、分页和 CSV 导出。
+- 提供自动／白天／黑夜三种配色选择，记住当前浏览器的偏好。
+- 对全部131条记录进行分类排查：120条有类别标签、11条待分类；其中27条类别有明确公开披露，6条依据项目线索推定，87条仍为名称关键词初判。详情展示底层资产、核验程度和证据链接。
 - 预留独立公募 REITs 页签，尚未接入公募行情或基金数据。
 
 ## 本地查看
@@ -53,7 +55,7 @@ python3 -m collectors.institutional --verify-links --raw-dir raw/2026-10-14
 - `is_expansion`：名称中包含扩募，作为独立申报记录保留。
 - 名称关键词匹配是项目纳入口径，不代替对交易结构的法律或投资判断。
 - 名称不能确认资产类别的项目保留“待分类”，不默认归为综合业态。
-- `classification_source` 区分关键词、人工覆盖和待分类。
+- `classification_source` 区分披露核实（verified）、线索推定（inferred）、名称初判（keyword）、人工分类（manual）和待分类（unknown）。分类证据确认的是资产用途，不自动确认法律权属。
 - 资产大类采用产权类、经营权类，资产细类使用下表的统一名称。两级分类均为研究分类；自动结果根据名称初判，具体权利与资产范围需结合项目披露确认。
 - 浏览器内关注和分类保存在当前浏览器。更换设备不会自动同步；当前可通过 CSV 导出筛选结果，尚未实现本地标记的 JSON 备份。
 - 仓库长期人工分类放在 `config/classification_overrides.json`；格式为项目 ID 到分类字段的映射，刷新不会覆盖它。
@@ -64,8 +66,11 @@ python3 -m collectors.institutional --verify-links --raw-dir raw/2026-10-14
 {
   "SSE_官方项目ID": {
     "ptype": "产权类",
-    "psub": "租赁住房",
-    "pnote": "依据原始项目披露核验"
+    "psub": "办公",
+    "pnote": "公告明确本项目入池写字楼",
+    "classification_confidence": "confirmed",
+    "classification_evidence": [{"title": "项目公告", "url": "https://example.com/project-disclosure"}],
+    "underlying_assets": "写字楼及配套停车位"
   }
 }
 ```
@@ -75,12 +80,22 @@ python3 -m collectors.institutional --verify-links --raw-dir raw/2026-10-14
 | 资产大类 | 资产细类 |
 | --- | --- |
 | 经营权类 | 市政生态、交通设施、能源 |
-| 产权类 | 产业园、租赁住房、物流仓储、消费、数据中心、办公、综合业态、文旅类 |
+| 产权类 | 产业园、租赁住房、物流仓储、消费、数据中心、办公、综合业态、文旅类、医疗健康 |
 | 待分类 | 待分类 |
 
 项目表、分类图表、详情和 CSV 使用同一套分类结果。详情区分名称关键词初判、仓库人工分类与当前浏览器的本地人工分类，并展示分类依据。旧本地标记“仓储物流”“办公楼”分别显示为“物流仓储”“办公”；不影响项目关注标记。
 
 名称规则识别滑雪场、商贸城、批发市场等明确线索。明确包含吾悦广场的项目不会仅因机构名称中的“安居”被判为住房；同时出现明确住房与商业资产线索时仍需复核。单纯的公司名称或“碳中和”等政策标签不足以确认底层资产，未确认项目不会默认归为综合业态。
+
+分类核查依据见 [分类研究记录](docs/asset-classification.md)。首发、扩募分别按项目ID核查；不能把首期资产或同一主体的其他证券化项目套入新申报。多个明确独立用途组成资产池时可标综合业态，配套停车位不单独改变主类。产权类／经营权类沿用研究分组，能源、市政、交通的行业名称不代表已验证其法律权利类型。
+
+补充仓库分类证据后，可直接应用到现有快照：
+
+```bash
+python3 scripts/classify_snapshot.py
+```
+
+该命令保留原始采集时间 `updated_at`，另写 `classification_updated_at`，重新计算分类质量统计和内容校验值。每日采集亦应用同一份分类配置，证据不会因刷新丢失；新项目按名称初判，信息不足时继续待分类。
 
 ## 项目结构
 
@@ -94,8 +109,10 @@ python3 -m collectors.institutional --verify-links --raw-dir raw/2026-10-14
 | `config/classification_overrides.json` | 仓库内人工分类覆盖 |
 | `tests/` | 纯离线回归与真实响应小样本 |
 | `scripts/validate_data.py` | 发布前的完整性、唯一性和原始链接检查 |
+| `scripts/classify_snapshot.py` | 将仓库证据应用到已有快照，保留真实采集时间 |
 | `scripts/build_static.py` | 生成静态站点 `dist/` |
 | `docs/source-links.md` | 官方链接机制、采集口径与核验证据 |
+| `docs/asset-classification.md` | 已检索分类、底层资产、证据与尚未确认项 |
 | `.github/workflows/` | 检查、定时刷新及网页部署配置 |
 
 ## 验证
@@ -117,6 +134,6 @@ Node 只用于 JavaScript 语法检查，查看页面和采集数据不需要安
 
 静态网页由 GitHub Pages 托管，部署内容包括页面、样式、交互脚本和完整数据快照。私有源代码仓库与网页访问范围分别管理；网站上的项目数据来自交易所公开披露。
 
-发布工作流为 `Publish dashboard to GitHub Pages`：主分支更新、手动运行或定时采集成功后触发，先验证完整数据，再构建并发布静态网页。仓库 Pages 的发布来源使用 **GitHub Actions**。
+发布工作流为 `Publish REITs project table to GitHub Pages`：主分支更新、手动运行或定时采集成功后触发，先验证完整数据，再构建并发布静态网页。仓库 Pages 的发布来源使用 **GitHub Actions**。
 
 数据准确性及披露口径以交易所官网为准。代码使用 MIT 许可；公开数据及来源网站内容的权利归相应权利人。

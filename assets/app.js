@@ -7,7 +7,7 @@ const STORAGE = { favorites: `${STORAGE_PREFIX}:favorites`, overrides: `${STORAG
 const STATUS = { '0': '已申报', '1': '已受理', '2': '已反馈', '3': '已接收反馈意见', '4': '通过', '5': '未通过', '8': '终止', '9': '中止', '10': '已回复意见', '11': '提交注册', '12': '注册生效' };
 const TAXONOMY = {
   '经营权类': ['市政生态', '交通设施', '能源'],
-  '产权类': ['产业园', '租赁住房', '物流仓储', '消费', '数据中心', '办公', '综合业态', '文旅类'],
+  '产权类': ['产业园', '租赁住房', '物流仓储', '消费', '数据中心', '办公', '综合业态', '文旅类', '医疗健康'],
   '待分类': ['待分类']
 };
 const ASSET_ALIASES = { '仓储物流': '物流仓储', '办公楼': '办公' };
@@ -20,7 +20,7 @@ const $ = id => document.getElementById(id);
 const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const format = value => Number(value).toLocaleString('zh-CN', { maximumFractionDigits: 2 });
 const statusLabel = value => STATUS[value] || String(value || '未披露');
-const state = { ex: '', kw: '', rights: '', asset: '', status: '', match: '', savedOnly: false, hideArchived: false, mode: 'count', sort: 'updated', direction: -1, page: 1, pageSize: 10 };
+const state = { ex: '', kw: '', rights: '', asset: '', status: '', confidence: '', match: '', savedOnly: false, hideArchived: false, mode: 'count', sort: 'updated', direction: -1, page: 1, pageSize: 10 };
 let snapshot = null;
 let records = [];
 let byId = new Map();
@@ -39,6 +39,33 @@ const storedFavorites = readStorage(STORAGE.favorites, []);
 const favorites = new Set(Array.isArray(storedFavorites) ? storedFavorites.filter(id => typeof id === 'string') : []);
 const storedOverrides = readStorage(STORAGE.overrides, {});
 const overrides = storedOverrides && typeof storedOverrides === 'object' && !Array.isArray(storedOverrides) ? storedOverrides : {};
+
+const THEME_STORAGE = 'reits:theme:v1';
+const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+let themeChoice = 'system';
+try { const saved = localStorage.getItem(THEME_STORAGE); if (['system', 'light', 'dark'].includes(saved)) themeChoice = saved; } catch { /* An unavailable storage still permits a session theme. */ }
+function applyTheme(choice, persist = false) {
+  themeChoice = choice;
+  const dark = choice === 'dark' || (choice === 'system' && systemTheme.matches);
+  document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+  $('theme-color').content = dark ? '#10191f' : '#f5f7f8';
+  document.querySelectorAll('[data-theme-choice]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.themeChoice === choice)));
+  if (persist) { try { localStorage.setItem(THEME_STORAGE, choice); } catch { /* Keep the chosen appearance for this session. */ } }
+}
+document.querySelectorAll('[data-theme-choice]').forEach(button => button.addEventListener('click', () => applyTheme(button.dataset.themeChoice, true)));
+systemTheme.addEventListener('change', () => { if (themeChoice === 'system') applyTheme('system'); });
+window.addEventListener('storage', event => { if (event.key === THEME_STORAGE) applyTheme(['light', 'dark'].includes(event.newValue) ? event.newValue : 'system'); });
+applyTheme(themeChoice);
+
+function evidenceURL(value) {
+  try { const url = new URL(value); return ['https:', 'http:'].includes(url.protocol) && !url.username && !url.password ? url.href : ''; }
+  catch { return ''; }
+}
+function evidenceFor(record) {
+  return (Array.isArray(record.classification_evidence) ? record.classification_evidence : []).filter(item => item && evidenceURL(item.url)).map(item => ({ title: String(item.title || '分类来源材料'), url: evidenceURL(item.url) }));
+}
+const confidenceLabel = value => ({ confirmed: '已核实', likely: '初步判断', unknown: '待分类' }[value] || '待分类');
+const underlyingAssets = record => Array.isArray(record.underlying_assets) ? record.underlying_assets.join('、') : String(record.underlying_assets || '');
 
 function sourceURL(record) {
   if (!record.source_url) return '';
@@ -66,13 +93,14 @@ function amount(record) {
 }
 function classification(record) {
   const override = overrides[record.id];
-  if (override && validClassification(override.ptype, override.psub)) return { psub: normalizedAsset(override.psub), ptype: override.ptype, source: 'local_manual', needsReview: override.psub === '待分类', note: String(override.pnote || override.note || '此前保存的本地分类，未填写依据。') };
-  if (override && typeof override === 'object') return { psub: '待分类', ptype: '待分类', source: 'local_manual', needsReview: true, note: `此前的本地分类为“${String(override.ptype || '未填写')} → ${String(override.psub || '未填写')}”，与当前分类口径不符，已标为待复核。原值仍保存在浏览器，可修订或恢复数据文件分类。${override.pnote || override.note ? ` 原备注：${String(override.pnote || override.note)}` : ''}` };
+  if (override && validClassification(override.ptype, override.psub)) return { psub: normalizedAsset(override.psub), ptype: override.ptype, source: 'local_manual', confidence: override.psub === '待分类' ? 'unknown' : 'likely', needsReview: true, note: String(override.pnote || override.note || '此前保存的本地分类，未填写依据。'), evidence: [] };
+  if (override && typeof override === 'object') return { psub: '待分类', ptype: '待分类', source: 'local_manual', confidence: 'unknown', needsReview: true, evidence: [], note: `此前的本地分类为“${String(override.ptype || '未填写')} → ${String(override.psub || '未填写')}”，与当前分类口径不符，已标为待复核。原值仍保存在浏览器，可修订或恢复数据文件分类。${override.pnote || override.note ? ` 原备注：${String(override.pnote || override.note)}` : ''}` };
   const psub = normalizedAsset(record.psub);
   const unknown = record.classification_source === 'unknown' || psub === '待分类' || !validClassification(record.ptype, psub);
-  return { psub: unknown ? '待分类' : psub, ptype: unknown ? '待分类' : record.ptype, source: record.classification_source === 'manual' ? 'manual' : unknown ? 'unknown' : record.classification_source || 'keyword', needsReview: unknown || Boolean(record.pflag || record.uncertain), note: record.pnote || '数据文件未提供分类依据。' };
+  const confidence = unknown ? 'unknown' : ['confirmed', 'likely'].includes(record.classification_confidence) ? record.classification_confidence : record.classification_source === 'verified' ? 'confirmed' : 'likely';
+  return { psub: unknown ? '待分类' : psub, ptype: unknown ? '待分类' : record.ptype, source: unknown ? 'unknown' : record.classification_source || 'keyword', confidence, needsReview: confidence !== 'confirmed', note: record.pnote || '数据文件未提供分类依据。', evidence: evidenceFor(record) };
 }
-function classificationSource(category) { return { local_manual: '本地人工修订', manual: '仓库人工分类', keyword: '名称关键词初判', unknown: '待分类' }[category.source] || '数据文件分类'; }
+function classificationSource(category) { return { local_manual: '本地人工修订', manual: '仓库人工分类', verified: '项目披露核实', inferred: '项目线索推定', keyword: '名称关键词初判', unknown: '尚无充分分类依据' }[category.source] || '数据文件分类'; }
 function keywords(record) {
   return Array.isArray(record.match_keywords) ? record.match_keywords.map(String) : [];
 }
@@ -87,8 +115,9 @@ function currentRecords() {
     const category = classification(record);
     return (!state.ex || record.ex === state.ex) && (!state.rights || category.ptype === state.rights) && (!state.asset || category.psub === state.asset)
       && (!state.status || String(record.status) === state.status) && (!state.match || keywordMatches(record, state.match))
+      && (!state.confidence || category.confidence === state.confidence)
       && (!state.savedOnly || favorites.has(record.id)) && (!state.hideArchived || !archived(record))
-      && (!keyword || [record.name, record.writer || record.mgr, record.origin, category.ptype, category.psub].join(' ').toLowerCase().includes(keyword));
+      && (!keyword || [record.name, record.writer || record.mgr, record.origin, category.ptype, category.psub, underlyingAssets(record)].join(' ').toLowerCase().includes(keyword));
   }).sort((a, b) => {
     if (state.sort === 'amount') {
       if (amount(a) == null && amount(b) != null) return 1;
@@ -151,13 +180,16 @@ function render() {
   const totalAmount = data.reduce((sum, record) => sum + (amount(record) ?? 0), 0);
   const missingAmounts = data.filter(record => amount(record) == null).length;
   const approved = data.filter(record => String(record.status) === '4').length;
-  const unknown = data.filter(record => classification(record).needsReview).length;
-  const stats = [['当前匹配记录', format(data.length), '条', '按交易所与官方项目 ID 去重'], ['审核通过', format(approved), '条', '不代表已完成发行'], ['拟发行金额', format(totalAmount), '亿元', missingAmounts ? `${missingAmounts} 条未披露金额，未计入汇总` : '按当前筛选全部状态汇总'], ['分类待复核', format(unknown), '条', '名称不足或分类线索待核实']];
-  $('stats').innerHTML = stats.map(([label, value, unit, foot]) => `<div class="stat"><div class="stat-label">${label}</div><div class="stat-value">${value}<small>${unit}</small></div><div class="stat-foot">${foot}</div></div>`).join('');
+  const unknown = data.filter(record => classification(record).confidence === 'unknown').length;
+  const confirmed = data.filter(record => classification(record).confidence === 'confirmed').length;
+  const likely = data.length - unknown - confirmed;
+  const stats = [['当前匹配记录', format(data.length), '条', '按交易所与官方项目 ID 去重'], ['审核通过', format(approved), '条', '公开审核进度 · 不代表已发行'], ['拟发行金额', format(totalAmount), '亿元', missingAmounts ? `${missingAmounts} 条未披露金额，未计入汇总` : '按当前筛选全部状态汇总'], ['资产待分类', format(unknown), '条', `已核实 ${confirmed} · 初步判断 ${likely}`]];
+  const icons = ['<path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/>', '<path d="m6 12 4 4 8-9M4 3h16v18H4z"/>', '<path d="M4 20h16M6 16v-5M12 16V5M18 16V8"/>', '<path d="M4 5h7l2 3h7v12H4zM9 14h6M12 11v6"/>'];
+  $('stats').innerHTML = stats.map(([label, value, unit, foot], index) => `<div class="stat"><div class="stat-label">${label}<svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[index]}</svg></div><div class="stat-value">${value}<small>${unit}</small></div><div class="stat-foot">${foot}</div></div>`).join('');
   renderBars('rights-chart', grouped(data, record => classification(record).ptype), { limit: Infinity, filter: 'rights' });
   renderBars('asset-chart', grouped(data, record => classification(record).psub), { limit: Infinity, filter: 'asset' });
   $('rights-chart-note').textContent = `当前筛选范围 · ${state.mode === 'count' ? '按记录数' : '按拟发行金额'} · 点击类别筛选`;
-  $('asset-chart-note').textContent = `${state.rights || '全部权利类型'} · ${state.mode === 'count' ? '按记录数' : '按拟发行金额'} · 点击类别筛选`;
+  $('asset-chart-note').textContent = `${state.rights || '全部研究大类'} · ${state.mode === 'count' ? '按记录数' : '按拟发行金额'} · 点击类别筛选`;
   renderBars('status-chart', grouped(data, record => String(record.status)), { isStatus: true, limit: Infinity });
   renderBars('manager-chart', grouped(data, record => record.writer || record.mgr));
   $('record-total').textContent = `${format(data.length)} 条`;
@@ -168,7 +200,9 @@ function render() {
     const saved = favorites.has(record.id);
     const name = url ? `<a class="name-link" href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(record.name)} ↗</a>` : `<span class="name-text">${escapeHTML(record.name)}</span>`;
     const categoryTags = category.psub === '待分类' ? '<span class="mini-tag review-tag">待分类</span>' : `<span class="mini-tag rights-tag${category.ptype === '经营权类' ? ' operating-tag' : ''}">${escapeHTML(category.ptype)}</span><span class="mini-tag">${escapeHTML(category.psub)}</span>`;
-    return `<tr><td class="name-cell"><div class="name-line"><button class="star${saved ? ' saved' : ''}" data-save="${escapeHTML(record.id)}" aria-label="${saved ? '取消关注' : '关注'}${escapeHTML(record.name)}" aria-pressed="${saved}">${saved ? '★' : '☆'}</button>${name}</div><div class="row-sub">${categoryTags}${record.is_expansion ? '<span class="mini-tag">扩募</span>' : ''}${archived(record) ? '<span class="mini-tag archive-tag">历史保留</span>' : ''}${category.needsReview ? '<span class="review-label">待复核</span>' : ['manual', 'local_manual'].includes(category.source) ? `<span>${classificationSource(category)}</span>` : ''}<button class="detail-button" data-detail="${escapeHTML(record.id)}">详情与分类</button></div></td><td>${escapeHTML(record.ex)}</td><td class="numeric">${amount(record) == null ? '<span class="muted">未披露</span>' : format(amount(record))}</td><td><span class="status ${String(record.status) === '4' ? 'ok' : ['8', '5'].includes(String(record.status)) ? 'muted' : 'wait'}">${escapeHTML(statusLabel(record.status))}</span></td><td class="mgr">${escapeHTML(record.writer || record.mgr || '未披露')}</td><td class="date">${escapeHTML(record.up || '未披露')}</td><td>${url ? `<a class="source-link" href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">${sourceLabel(record)} ↗</a>` : '<span class="muted">链接暂缺</span>'}</td></tr>`;
+    const assetDescription = underlyingAssets(record);
+    const descriptionPreview = assetDescription.length > 78 ? `${assetDescription.slice(0, 78)}…` : assetDescription;
+    return `<tr><td class="name-cell"><div class="name-line"><button class="star${saved ? ' saved' : ''}" data-save="${escapeHTML(record.id)}" aria-label="${saved ? '取消关注' : '关注'}${escapeHTML(record.name)}" aria-pressed="${saved}">${saved ? '★' : '☆'}</button>${name}</div><div class="row-sub">${categoryTags}${record.is_expansion ? '<span class="mini-tag">扩募</span>' : ''}${archived(record) ? '<span class="mini-tag archive-tag">历史保留</span>' : ''}<span class="confidence-tag ${category.confidence}" title="${escapeHTML(classificationSource(category))}">${confidenceLabel(category.confidence)}</span>${['manual', 'local_manual'].includes(category.source) ? `<span>${classificationSource(category)}</span>` : ''}<button class="detail-button" data-detail="${escapeHTML(record.id)}">分类依据 ↗</button>${assetDescription ? `<span class="underlying-preview" title="${escapeHTML(assetDescription)}">${escapeHTML(descriptionPreview)}</span>` : ''}</div></td><td>${escapeHTML(record.ex)}</td><td class="numeric">${amount(record) == null ? '<span class="muted">未披露</span>' : format(amount(record))}</td><td><span class="status ${String(record.status) === '4' ? 'ok' : ['8', '5'].includes(String(record.status)) ? 'muted' : 'wait'}">${escapeHTML(statusLabel(record.status))}</span></td><td class="mgr">${escapeHTML(record.writer || record.mgr || '未披露')}</td><td class="date">${escapeHTML(record.up || '未披露')}</td><td>${url ? `<a class="source-link" href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">${sourceLabel(record)} ↗</a>` : '<span class="muted">链接暂缺</span>'}</td></tr>`;
   }).join('') || `<tr><td colspan="7" class="empty">${snapshot ? '当前条件没有匹配记录' : '项目库尚未读取成功，请点击刷新数据'}</td></tr>`;
   $('page-count').textContent = data.length ? `显示 ${start + 1}–${Math.min(start + state.pageSize, data.length)} 条，共 ${data.length} 条` : '共 0 条';
   $('page-number').textContent = `${state.page} / ${pages}`;
@@ -245,9 +279,10 @@ function openDetail(id) {
   const category = classification(record);
   const url = sourceURL(record);
   const linkStatus = { verified: '已核验', constructed: '依据官方项目 ID 构建，待逐条核验', unverified: '尚未核验' }[record.link_status] || '尚未核验';
-  const fields = [['交易所', record.ex], ['当前状态', statusLabel(record.status)], ['拟发行金额', amount(record) == null ? '未披露' : `${format(amount(record))} 亿元`], ['权利类型', category.ptype], ['资产细类', category.psub], ['分类来源', classificationSource(category)], ['分类状态', category.needsReview ? '待复核' : '已有分类'], ['原始权益人', record.origin || '未披露'], ['计划管理人', record.writer || record.mgr || '未披露'], ['受理日期', record.acc || '未披露'], ['更新日期', record.up || '未披露'], ['名称命中口径', keywords(record).join('、') || '未提供'], ['记录状态', archived(record) ? '历史保留：本轮未再次检索到' : '本轮检索结果']];
+  const fields = [['交易所', record.ex], ['当前状态', statusLabel(record.status)], ['拟发行金额', amount(record) == null ? '未披露' : `${format(amount(record))} 亿元`], ['研究大类', category.ptype], ['资产细类', category.psub], ['分类来源', classificationSource(category)], ['资产确认程度', confidenceLabel(category.confidence)], ['底层资产', underlyingAssets(record) || '尚未取得具体资产说明'], ['原始权益人', record.origin || '未披露'], ['计划管理人', record.writer || record.mgr || '未披露'], ['受理日期', record.acc || '未披露'], ['更新日期', record.up || '未披露'], ['名称命中口径', keywords(record).join('、') || '未提供'], ['记录状态', archived(record) ? '历史保留：本轮未再次检索到' : '本轮检索结果']];
   const options = (values, selected) => values.map(value => `<option value="${escapeHTML(value)}"${value === selected ? ' selected' : ''}>${escapeHTML(value)}</option>`).join('');
-  $('detail-body').innerHTML = `<div class="detail-name">${escapeHTML(record.name)}</div><dl class="detail-grid">${fields.map(([label, value]) => `<div><dt>${label}</dt><dd>${escapeHTML(value)}</dd></div>`).join('')}</dl><div class="classification-evidence"><h3>分类依据</h3><p>${escapeHTML(category.note)}</p>${category.source === 'keyword' ? '<p class="muted">名称关键词提供初步线索；具体资产权利以项目披露文件为准。</p>' : ''}${category.source === 'local_manual' ? `<p class="muted">数据文件分类：${escapeHTML(normalizedAsset(record.psub))}；依据：${escapeHTML(record.pnote || '未提供')}。</p>` : ''}</div><form id="classification-form" class="classification-box"><h3>本地分类修订</h3><div class="classification-fields"><label class="field">权利类型<select name="rights">${options(RIGHTS, category.ptype)}</select></label><label class="field">资产细类<select name="asset">${options(TAXONOMY[category.ptype], category.psub)}</select></label></div><label class="field">分类依据／备注<textarea name="note" rows="3" maxlength="1000" required placeholder="写明披露文件、资产说明或判断依据">${category.source === 'local_manual' ? escapeHTML(category.note) : ''}</textarea></label><div class="classification-actions"><button class="button primary" type="submit">保存分类</button><button class="button" type="button" id="restore-classification"${category.source !== 'local_manual' ? ' disabled' : ''}>恢复数据文件分类</button></div><p class="classification-note">细类随权利类型联动。修订与依据仅保存在当前浏览器，导出结果会携带本地分类。</p><p id="classification-feedback" class="live" role="status"></p></form><div class="detail-source">官方项目 ID：${escapeHTML(record.source_id || record.id)}<p>来源链接：${escapeHTML(linkStatus)}${record.source_kind === 'project_data' ? '。深交所来源为该项目的官方原始数据。' : ''}</p>${url ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">打开${escapeHTML(record.ex)}${sourceLabel(record)} ↗</a>` : '<span class="muted">本条记录暂无可用官方详情链接。</span>'}</div>`;
+  const evidenceLinks = category.evidence.map(item => `<li><a href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span>${escapeHTML(item.title)}</a> <span>${escapeHTML(new URL(item.url).hostname.replace(/^www\./, ''))}</span></li>`).join('');
+  $('detail-body').innerHTML = `<div class="detail-name">${escapeHTML(record.name)}</div><dl class="detail-grid">${fields.map(([label, value]) => `<div><dt>${label}</dt><dd>${escapeHTML(value)}</dd></div>`).join('')}</dl><div class="classification-evidence"><h3>分类依据 <span class="confidence-tag ${category.confidence}">${confidenceLabel(category.confidence)}</span></h3><p>${escapeHTML(category.note)}</p>${evidenceLinks ? `<ul class="evidence-links" aria-label="分类来源材料">${evidenceLinks}</ul>` : ''}<p class="muted evidence-label">确认程度针对底层资产类型。产权／经营权为研究分类，具体法律权利以披露文件为准。</p>${category.source === 'keyword' ? '<p class="muted">名称关键词仅提供初步线索，尚未逐项核实底层资产。</p>' : ''}${category.source === 'local_manual' ? `<p class="muted">数据文件分类：${escapeHTML(normalizedAsset(record.psub))}；依据：${escapeHTML(record.pnote || '未提供')}。</p>` : ''}</div><form id="classification-form" class="classification-box"><h3>本地分类修订</h3><div class="classification-fields"><label class="field">研究大类<select name="rights">${options(RIGHTS, category.ptype)}</select></label><label class="field">资产细类<select name="asset">${options(TAXONOMY[category.ptype], category.psub)}</select></label></div><label class="field">分类依据／备注<textarea name="note" rows="3" maxlength="1000" required placeholder="写明披露文件、资产说明或判断依据">${category.source === 'local_manual' ? escapeHTML(category.note) : ''}</textarea></label><div class="classification-actions"><button class="button primary" type="submit">保存分类</button><button class="button" type="button" id="restore-classification"${category.source !== 'local_manual' ? ' disabled' : ''}>恢复数据文件分类</button></div><p class="classification-note">细类随研究大类联动。修订与依据仅保存在当前浏览器，导出结果会携带本地分类。</p><p id="classification-feedback" class="live" role="status"></p></form><div class="detail-source">官方项目 ID：${escapeHTML(record.source_id || record.id)}<p>来源链接：${escapeHTML(linkStatus)}${record.source_kind === 'project_data' ? '。深交所来源为该项目的官方原始数据。' : ''}</p>${url ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">打开${escapeHTML(record.ex)}${sourceLabel(record)} ↗</a>` : '<span class="muted">本条记录暂无可用官方详情链接。</span>'}</div>`;
   if (!$('detail-dialog').open) $('detail-dialog').showModal();
   const formElement = $('classification-form');
   formElement.elements.rights.addEventListener('change', event => {
@@ -261,7 +296,7 @@ function openDetail(id) {
     const psub = String(form.get('asset'));
     const ptype = String(form.get('rights'));
     const pnote = String(form.get('note') || '').trim();
-    if (!validClassification(ptype, psub) || !pnote) { $('classification-feedback').textContent = '请选择对应的权利类型与资产细类，并填写分类依据。'; return; }
+    if (!validClassification(ptype, psub) || !pnote) { $('classification-feedback').textContent = '请选择对应的研究大类与资产细类，并填写分类依据。'; return; }
     overrides[id] = { psub, ptype, pnote };
     const persisted = writeStorage(STORAGE.overrides, overrides);
     rebuildOptions(); render(); openDetail(id);
@@ -281,9 +316,9 @@ function csvCell(value) {
 }
 function exportCSV() {
   if (!snapshot) return;
-  const table = [['交易所', '项目名称', '计划管理人', '原始权益人', '资产细类', '权利类型', '拟发行金额(亿元)', '审核状态', '受理日期', '更新日期', '官方项目ID', 'source_url', 'match_keywords', '分类来源', '分类依据', '分类待复核', '是否扩募', 'archive_status', '链接核验状态'], ...currentRecords().map(record => {
+  const table = [['交易所', '项目名称', '计划管理人', '原始权益人', '资产细类', '研究大类', '拟发行金额(亿元)', '审核状态', '受理日期', '更新日期', '官方项目ID', 'source_url', 'match_keywords', '分类来源', '分类依据', '资产确认程度', '底层资产描述', '分类证据', '分类待复核', '是否扩募', 'archive_status', '链接核验状态'], ...currentRecords().map(record => {
     const category = classification(record);
-    return [record.ex, record.name, record.writer || record.mgr, record.origin, category.psub, category.ptype, amount(record), statusLabel(record.status), record.acc, record.up, record.source_id || record.id, sourceURL(record), keywords(record).join(' | '), classificationSource(category), category.note, category.needsReview ? '是' : '否', record.is_expansion ? '是' : '否', record.archive_status || 'current', record.link_status || 'unverified'];
+    return [record.ex, record.name, record.writer || record.mgr, record.origin, category.psub, category.ptype, amount(record), statusLabel(record.status), record.acc, record.up, record.source_id || record.id, sourceURL(record), keywords(record).join(' | '), classificationSource(category), category.note, confidenceLabel(category.confidence), underlyingAssets(record), category.evidence.map(item => `${item.title}: ${item.url}`).join(' | '), category.needsReview ? '是' : '否', record.is_expansion ? '是' : '否', record.archive_status || 'current', record.link_status || 'unverified'];
   })];
   const blob = new Blob(['\uFEFF' + table.map(row => row.map(csvCell).join(',')).join('\r\n')], { type: 'text/csv;charset=utf-8' });
   const url = URL.createObjectURL(blob);
@@ -292,7 +327,7 @@ function exportCSV() {
 }
 
 $('search').addEventListener('input', event => { state.kw = event.target.value; state.page = 1; render(); });
-for (const id of ['rights', 'asset', 'status', 'match']) $(id).addEventListener('change', event => {
+for (const id of ['rights', 'asset', 'status', 'confidence', 'match']) $(id).addEventListener('change', event => {
   state[id] = event.target.value;
   if (id === 'rights') rebuildAssetOptions();
   if (id === 'asset' && state.asset) { state.rights = rightsForAsset(state.asset); $('rights').value = state.rights; rebuildAssetOptions(); }
@@ -309,8 +344,8 @@ $('prev').addEventListener('click', () => { state.page--; render(); });
 $('next').addEventListener('click', () => { state.page++; render(); });
 $('page-size').addEventListener('change', event => { state.pageSize = Number(event.target.value); state.page = 1; render(); });
 $('reset').addEventListener('click', () => {
-  Object.assign(state, { ex: '', kw: '', rights: '', asset: '', status: '', match: '', savedOnly: false, hideArchived: false, sort: 'updated', direction: -1, page: 1 });
-  for (const id of ['search', 'rights', 'asset', 'status', 'match']) $(id).value = '';
+  Object.assign(state, { ex: '', kw: '', rights: '', asset: '', status: '', confidence: '', match: '', savedOnly: false, hideArchived: false, sort: 'updated', direction: -1, page: 1 });
+  for (const id of ['search', 'rights', 'asset', 'status', 'confidence', 'match']) $(id).value = '';
   rebuildAssetOptions();
   for (const id of ['saved-only', 'hide-archived']) $(id).checked = false;
   document.querySelectorAll('[data-ex]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.ex === '')));

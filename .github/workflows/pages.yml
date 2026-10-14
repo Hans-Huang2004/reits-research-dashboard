@@ -1,4 +1,4 @@
-name: Publish dashboard to GitHub Pages
+name: Publish REITs project table to GitHub Pages
 on:
   push:
     branches: [main]

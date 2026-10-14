@@ -33,6 +33,14 @@ STATUS_MAP_SZSE = {"已受理":"1", "已反馈":"2", "通过":"4", "不通过":"
                    "提交注册":"11", "注册生效":"12", "不予注册":"5", "终止":"8", "中止":"9"}
 STATUS_LABEL = {"0":"已申报", "1":"已受理", "2":"已反馈", "3":"已接收反馈意见", "4":"通过",
                 "5":"未通过", "8":"终止", "9":"中止", "10":"已回复交易所意见", "11":"提交注册", "12":"注册生效"}
+ASSET_TYPES = {
+    "经营权类": {"交通设施", "能源", "市政生态"},
+    "产权类": {"产业园", "租赁住房", "物流仓储", "消费", "数据中心", "办公", "综合业态", "文旅类", "医疗健康"},
+    "待分类": {"待分类"},
+}
+CLASSIFICATION_FIELDS = ("ptype", "psub", "pflag", "pnote", "classification_source",
+                         "classification_confidence", "classification_evidence",
+                         "classification_reviewed_at", "underlying_assets")
 
 
 class CollectionError(RuntimeError):
@@ -80,9 +88,9 @@ def classify_by_name(name):
     categories = {(pt, sub) for pt, sub, _ in hits}
     if len(categories) == 1:
         pt, sub = next(iter(categories))
-        return {"ptype":pt, "psub":sub, "pflag":"", "pnote":"名称关键词：" + "、".join(sorted({h[2] for h in hits})), "classification_source":"keyword"}
+        return {"ptype":pt, "psub":sub, "pflag":"", "pnote":"名称关键词：" + "、".join(sorted({h[2] for h in hits})), "classification_source":"keyword", "classification_confidence":"likely"}
     reason = "名称无明确资产关键词" if not hits else "名称命中多个资产类别，需核对底层资产"
-    return {"ptype":"待分类", "psub":"待分类", "pflag":"待分类", "pnote":reason, "classification_source":"unknown"}
+    return {"ptype":"待分类", "psub":"待分类", "pflag":"待分类", "pnote":reason, "classification_source":"unknown", "classification_confidence":"unknown"}
 
 
 def parse_szse_identity(zqmc):
@@ -304,15 +312,58 @@ def _atomic_json(path, payload):
 
 
 def _inherit_classification(row, previous, overrides):
-    # Repository-owned overrides take precedence. Unknown defaults stay unknown.
+    # Repository-reviewed evidence is tied to the official project ID, not issuer.
     override = overrides.get(row["id"]) or overrides.get(row["source_id"])
     if override:
-        for k in ("ptype","psub","pnote"):
-            if k in override:row[k]=override[k]
-        row.update({"pflag":"", "classification_source":"manual"})
-    elif previous and previous.get("classification_source") == "manual":
-        for k in ("ptype","psub","pflag","pnote","classification_source"):
+        ptype = override.get("ptype", row["ptype"])
+        psub = override.get("psub", row["psub"])
+        if psub not in ASSET_TYPES.get(ptype, set()):
+            raise CollectionError("Invalid classification taxonomy for " + row["id"])
+        confidence = override.get("classification_confidence")
+        evidence = override.get("classification_evidence", [])
+        if confidence not in (None, "confirmed", "likely", "unknown"):
+            raise CollectionError("Invalid classification confidence for " + row["id"])
+        if not isinstance(evidence, list) or any(
+            not isinstance(e, dict) or not e.get("title") or
+            urllib.parse.urlparse(e.get("url", "")).scheme not in ("http", "https") or
+            not urllib.parse.urlparse(e.get("url", "")).hostname for e in evidence
+        ):
+            raise CollectionError("Invalid classification evidence for " + row["id"])
+        if confidence == "confirmed" and (not evidence or psub == "待分类"):
+            raise CollectionError("Confirmed classification requires disclosed asset evidence: " + row["id"])
+        for k in CLASSIFICATION_FIELDS:
+            if k in override:
+                row[k] = override[k]
+        source = "verified" if confidence == "confirmed" else "inferred" if confidence == "likely" else "manual"
+        row.update({"pflag":"待分类" if psub == "待分类" else "", "classification_source":"unknown" if psub == "待分类" else source})
+        if confidence is None:
+            row.pop("classification_confidence", None)
+    elif previous and previous.get("classification_source") in ("manual", "verified", "inferred"):
+        for k in CLASSIFICATION_FIELDS:
             if k in previous:row[k]=previous[k]
+
+
+def update_classification_quality(snapshot):
+    """Recalculate the derived counts and checksum after classification changes."""
+    items = snapshot["items"]
+    quality = snapshot.setdefault("quality", {})
+    quality["unknown_classification"] = sum(r.get("psub") == "待分类" for r in items)
+    quality["classification_counts"] = {source:sum(r.get("classification_source") == source for r in items)
+                                        for source in ("verified", "inferred", "keyword", "manual", "unknown")}
+    quality["content_sha256"] = hashlib.sha256(json.dumps(items, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
+
+
+def reclassify_snapshot(snapshot, overrides):
+    """Review a stored snapshot without changing its collection timestamp."""
+    for row in snapshot["items"]:
+        previous = {k:row[k] for k in CLASSIFICATION_FIELDS if k in row}
+        for key in CLASSIFICATION_FIELDS:
+            row.pop(key, None)
+        row.update(classify_by_name(row["name"]))
+        _inherit_classification(row, previous, overrides)
+    snapshot["classification_updated_at"] = datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds")
+    update_classification_quality(snapshot)
+    return snapshot
 
 
 def collect_snapshot(request=None, previous=None, overrides=None, raw_dir=None):
@@ -377,11 +428,13 @@ def collect_snapshot(request=None, previous=None, overrides=None, raw_dir=None):
     missing = sorted(old_ids-current_ids)
     now = datetime.now(ZoneInfo("Asia/Shanghai"))
     checksum = hashlib.sha256(json.dumps(items,ensure_ascii=False,sort_keys=True).encode()).hexdigest()
-    return {"schema_version":1, "date":now.date().isoformat(), "updated_at":now.isoformat(timespec="seconds"),
+    snapshot = {"schema_version":1, "date":now.date().isoformat(), "updated_at":now.isoformat(timespec="seconds"),
             "source_status":source_status, "coverage":{"complete":True,"keywords":list(KEYWORDS),"population":"直接采集沪深交易所项目名称匹配关键词的机构间 REITs 申报记录","unit":"亿元","count":len(items)},
             "changes":{"added_ids":sorted(current_ids-old_ids) if old_ids else [],"missing_ids":missing},
             "quality":{"duplicate_ids":0,"unknown_classification":sum(r["classification_source"]=="unknown" for r in items),"detail_warnings":warnings,"content_sha256":checksum},
             "items":items}
+    update_classification_quality(snapshot)
+    return snapshot
 
 
 def write_snapshot(snapshot, output, archive_dir=None):

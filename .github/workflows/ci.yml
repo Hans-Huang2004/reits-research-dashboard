@@ -1,4 +1,4 @@
-name: Check dashboard
+name: Check REITs project table
 on:
   push:
     branches: [main]

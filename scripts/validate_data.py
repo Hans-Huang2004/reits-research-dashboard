@@ -38,6 +38,18 @@ def validate(snapshot):
                 raise ValueError('SZSE source URL does not identify this project')
         else:
             raise ValueError('Unexpected exchange')
+        source = row.get('classification_source', 'unknown')
+        evidence = row.get('classification_evidence', [])
+        if source not in ('verified', 'inferred', 'manual', 'keyword', 'unknown'):
+            raise ValueError('Unexpected classification source')
+        if not isinstance(evidence, list) or any(
+            not isinstance(e, dict) or not e.get('title') or
+            urlparse(e.get('url', '')).scheme not in ('http', 'https') or
+            not urlparse(e.get('url', '')).hostname for e in evidence
+        ):
+            raise ValueError('Invalid classification evidence link')
+        if source == 'verified' and (row.get('classification_confidence') != 'confirmed' or not evidence or row.get('psub') == '待分类'):
+            raise ValueError('Verified classification must have explicit asset evidence')
     for key, name in [('SSE', '上交所'), ('SZSE', '深交所')]:
         meta = snapshot['source_status'][key]
         if meta.get('ok') is not True or meta.get('total') != sum(r['ex'] == name for r in rows):

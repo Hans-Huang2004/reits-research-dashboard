@@ -66,14 +66,21 @@
   },
   "quality": {
     "duplicate_ids": 0,
-    "unknown_classification": 35,
+    "unknown_classification": 11,
     "detail_warnings": [],
-    "content_sha256": "7e332fd4d62db97159e894a16b0cb5366adb6e701324b302ce131ecdca0b8a26",
+    "content_sha256": "a3e0e58180df16a40dba5bd6f6a9de32308279c9f5e063a11aadc3e5a0680a2d",
     "link_validation": {
       "verified": 131,
       "total": 131,
       "checked_at": "2026-10-14T16:18:40+08:00",
       "method": "official_detail_identity_and_official_page_route"
+    },
+    "classification_counts": {
+      "verified": 27,
+      "inferred": 6,
+      "keyword": 87,
+      "manual": 0,
+      "unknown": 11
     }
   },
   "items": [
@@ -101,13 +108,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "1",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "产业园",
       "pflag": "",
       "pnote": "名称关键词：产业园",
       "classification_source": "keyword",
-      "num": "1",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_0af8d41233494350aa7aea124071b93a",
@@ -133,13 +141,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "2",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "2",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_c033fa493960437c951b59a5e3a8ef37",
@@ -165,13 +174,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "3",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "消费",
       "pflag": "",
       "pnote": "名称关键词：商业、零售",
       "classification_source": "keyword",
-      "num": "3",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_a3e22cf1373744618ad63ca92b07f5aa",
@@ -197,13 +207,23 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "4",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "待分类",
       "psub": "待分类",
       "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
+      "pnote": "交易所公开列表仅披露发行人、金额和审核信息。未找到本9.56亿元专项计划可核实的底层资产清单，不能根据济高科技的主营业务或另一只银行间类REITs替代认定。",
       "classification_source": "unknown",
-      "num": "4",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "unknown",
+      "classification_evidence": [
+        {
+          "title": "上海证券交易所：国君资管-济高控股持有型不动产资产支持专项计划项目页",
+          "url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=a3e22cf1373744618ad63ca92b07f5aa",
+          "source_level": "primary_project_identity"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "未找到本专项计划公开入池披露。"
     },
     {
       "id": "SZSE_DE9431533C974EA9949CA5453FE201BD",
@@ -230,13 +250,30 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "5",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "待分类",
       "psub": "待分类",
       "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
+      "pnote": "发行人官网采购公告确认筹备某商业不动产机构间REITs，但没有公开具体业态和资产清单。媒体写字楼判断明确注明入池清单未公开，仅为根据发行人持有物业的市场推测，暂不强行分类。",
       "classification_source": "unknown",
-      "num": "5",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "unknown",
+      "classification_evidence": [
+        {
+          "title": "蜀道资本集团某商业不动产机构间REITs/权益并表类REITs项目信用评级机构询比采购公告",
+          "url": "https://www.sdzbkg.com/ztbgg/33036.html",
+          "source_level": "primary",
+          "published_at": "2026-07-20"
+        },
+        {
+          "title": "蜀道资本10.05亿写字楼机构间REIT获深交所受理（正文注明入池清单尚未公开）",
+          "url": "https://cj.sina.com.cn/articles/view/7840890301/1d35a7dbd00101ie0i",
+          "source_level": "secondary",
+          "published_at": "2026-10-13"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "发行人披露为商业不动产；本专项计划具体资产尚未公开核实。"
     },
     {
       "id": "SZSE_5CCD030CB38E4250904A2C05D85E0342",
@@ -263,13 +300,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "6",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "6",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_d8eaddb351604e13b2b0807d0ee4c806",
@@ -295,13 +333,29 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "7",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "待分类",
       "psub": "待分类",
       "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
+      "pnote": "交易所披露两家原始权益人为持股平台；已找到的产业园方向报道明确注明本专项计划入池资产未公开，不能将金地2024年向领新基金转让的四个上海园区当作本次ABS底层资产。",
       "classification_source": "unknown",
-      "num": "7",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "unknown",
+      "classification_evidence": [
+        {
+          "title": "上海证券交易所：太保资产-金地商置持有型不动产资产支持专项计划项目页",
+          "url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=d8eaddb351604e13b2b0807d0ee4c806",
+          "source_level": "primary_project_identity"
+        },
+        {
+          "title": "从Pre-REIT到机构间REIT 金地商置10.57亿园区ABS获上交所受理（注明入池资产、评估值未披露）",
+          "url": "https://cj.sina.com.cn/articles/view/7840890301/1d35a7dbd00101hybs",
+          "source_level": "secondary",
+          "published_at": "2026-09-18"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "未找到本专项计划公开入池披露。"
     },
     {
       "id": "SSE_965c1753f47b479bb403802dd6598495",
@@ -327,13 +381,14 @@
       "is_expansion": true,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "8",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "数据中心",
       "pflag": "",
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
-      "num": "8",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_202b52b7b6e64a83b5797db0b824c335",
@@ -359,13 +414,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "9",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "交通设施",
       "pflag": "",
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
-      "num": "9",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_213e64e05b2a4db8a98568e1740b5101",
@@ -391,13 +447,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "10",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "交通设施",
       "pflag": "",
       "pnote": "名称关键词：大桥",
       "classification_source": "keyword",
-      "num": "10",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_36cc6e3d2d624fc588a9afdf41ec3f01",
@@ -423,13 +480,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "11",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "11",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_9b728f78214d433483b3d56d33e731ab",
@@ -455,13 +513,29 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "12",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "数据中心",
+      "pflag": "",
+      "pnote": "项目报道明确称底层为中金数据自持Tier IV高等级算力不动产，暂标数据中心；尚未找到发行人或交易所公开入池清单、权属披露，保留待核。",
+      "classification_source": "inferred",
+      "classification_confidence": "likely",
+      "classification_evidence": [
+        {
+          "title": "40.24亿！中金数据IDC机构间REIT获上交所受理，算力资产证券化扩容提速",
+          "url": "https://caifuhao.eastmoney.com/news/20260629164302330711320",
+          "source_level": "secondary",
+          "published_at": "2026-06-29"
+        },
+        {
+          "title": "上海证券交易所：华泰-中金数据持有型不动产资产支持专项计划项目页",
+          "url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=9b728f78214d433483b3d56d33e731ab",
+          "source_level": "primary_project_identity"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "报道指向自持高等级数据中心/算力机房；具体园区及入池资产清单尚未公开核实。"
     },
     {
       "id": "SSE_678579d5e0c24a459d376a9c57bb6163",
@@ -487,13 +561,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "13",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "租赁住房",
       "pflag": "",
       "pnote": "名称关键词：保租房",
       "classification_source": "keyword",
-      "num": "13",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_48af0fdb0e8b47c49b923f11f5e1431b",
@@ -519,13 +594,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "14",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "交通设施",
       "pflag": "",
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
-      "num": "14",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SZSE_CA98A72685014BA5BC8F18E5D376FF30",
@@ -552,13 +628,25 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "15",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "文旅类",
+      "pflag": "",
+      "pnote": "发行人2026-075号公告明确拟以长春高新洲际酒店、长春高新假日酒店及地下停车场的房屋所有权和国有建设用地使用权作为底层资产；按酒店业态归入文旅类，资产包含438个地下车位。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "长春高新：关于开展持有型不动产资产支持专项计划（机构间REITs）申报发行工作及相关授权事项的公告（2026-075）",
+          "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-21/9bfeec14-5ad7-4f89-b615-88c7789a179a.PDF",
+          "source_level": "primary",
+          "published_at": "2026-08-21",
+          "pages": "2–3"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "长春高新洲际酒店、长春高新假日酒店及438个地下停车位的房屋所有权与国有建设用地使用权；项目公司为长春海容酒店有限公司。"
     },
     {
       "id": "SSE_99ad63b648ac49cba77567407e2aeef7",
@@ -584,13 +672,14 @@
       "is_expansion": true,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "16",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "市政生态",
       "pflag": "",
       "pnote": "名称关键词：水务",
       "classification_source": "keyword",
-      "num": "16",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_5047c4b973dd4728b7c50f1a0db46101",
@@ -616,13 +705,14 @@
       "is_expansion": true,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "17",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "租赁住房",
       "pflag": "",
       "pnote": "名称关键词：住房租赁、租赁住房",
       "classification_source": "keyword",
-      "num": "17",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_f112c7774ea84dbea54e17bdb33895b5",
@@ -648,13 +738,25 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "18",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "医疗健康",
+      "pflag": "",
+      "pnote": "锦欣生殖港交所公告明确，专项计划收购恒裕全部股权及其全资物业，物业主要由深圳中山妇产医院承租使用，按实际医疗用途分类；并非医疗服务经营收入证券化。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "锦欣生殖：主要交易——建议发行资产支持证券及股权转让协议",
+          "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0929/2026092902180_c.pdf",
+          "source_level": "primary",
+          "published_at": "2026-09-29",
+          "pages": "4、7–8"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "深圳市恒裕联翔投资发展有限公司全部股权、股东贷款及其全资物业。物业位于深圳市福田区梅林街道锦运大厦B5–B1、1–2、4–8、10–18、20–21、25–27，总楼面面积78,170.34平方米，主要由深圳中山妇产医院租用，租约至2045年12月31日。"
     },
     {
       "id": "SZSE_2A6C5D1546094747BF3B83B1EF7DEB55",
@@ -681,13 +783,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "19",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：水电、能源",
       "classification_source": "keyword",
-      "num": "19",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_a94c118f910c46fbacfd7f4139a90685",
@@ -713,13 +816,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "20",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "文旅类",
       "pflag": "",
       "pnote": "名称关键词：滑雪场",
       "classification_source": "keyword",
-      "num": "20",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SZSE_8A1E09D85832487E8F5354EB6D049C8D",
@@ -746,13 +850,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "21",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "21",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_e8bd42e5d15a4b2c91de12e7eb03c44f",
@@ -778,13 +883,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "22",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "待分类",
       "psub": "待分类",
       "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
+      "pnote": "公开报道明确称底层资产细节未披露；集团文旅/商业项目属于主体经营信息，不能代替具体入池清单。",
       "classification_source": "unknown",
-      "num": "22",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "unknown",
+      "classification_evidence": [
+        {
+          "title": "交易所项目身份与审核信息（未披露具体底层资产）",
+          "url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=e8bd42e5d15a4b2c91de12e7eb03c44f"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "具体入池资产尚未找到可靠公开披露。"
     },
     {
       "id": "SSE_985324c17575494897af9b1b09bd780b",
@@ -810,13 +924,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "23",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "租赁住房",
       "pflag": "",
       "pnote": "名称关键词：租赁住房",
       "classification_source": "keyword",
-      "num": "23",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_cd269186a1344b0a92627dbaeb6503f7",
@@ -842,13 +957,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "24",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "产业园",
       "pflag": "",
-      "pnote": "名称关键词：产业园",
-      "classification_source": "keyword",
-      "num": "24",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "pnote": "官方企业介绍表明润邦达美汽车制造业供应链产业园具有加工、仓储、物流周转等功能；当前仍按产业园名称初判，准确入池期次和范围需计划文件确认。",
+      "classification_source": "inferred",
+      "classification_confidence": "likely",
+      "classification_evidence": [
+        {
+          "title": "润邦达美官网｜汽车制造业供应链产业园（二期）开工公告，说明一期及二期功能",
+          "url": "https://www.runbangdamei.com/nd.jsp?fromMid=385&id=20"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "沈阳润邦达美汽车制造业供应链产业园（加工、仓储及物流配套；具体入池范围待核）"
     },
     {
       "id": "SSE_6abfda7406914747b4d7d408f34a5229",
@@ -874,13 +998,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "25",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "25",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_5880b085aa2247f58f4945eadb3f8908",
@@ -906,13 +1031,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "26",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "26",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_44ed160bc4384974bffcf2a84309e7c9",
@@ -938,13 +1064,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "27",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "交通设施",
       "pflag": "",
       "pnote": "名称关键词：大桥、港口",
       "classification_source": "keyword",
-      "num": "27",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SZSE_E64643B78E7A47EBBC6F26E4E4AF971C",
@@ -971,13 +1098,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "28",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "28",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_250c88937e5e4dfb8259590e3c34210d",
@@ -1003,13 +1131,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "29",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "文旅类",
       "pflag": "",
       "pnote": "名称关键词：酒店",
       "classification_source": "keyword",
-      "num": "29",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_89fded3ba64b42479710a8b62f9be34a",
@@ -1035,13 +1164,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "30",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "待分类",
       "psub": "待分类",
       "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
+      "pnote": "仅查到交易所项目级状态/金额与地产集团主营情况，未见具体入池不动产披露。",
       "classification_source": "unknown",
-      "num": "30",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "unknown",
+      "classification_evidence": [
+        {
+          "title": "交易所项目身份与审核信息（未披露具体底层资产）",
+          "url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=89fded3ba64b42479710a8b62f9be34a"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "具体入池资产尚未找到可靠公开披露。"
     },
     {
       "id": "SZSE_99AA60238C3B4E2487F17211D0D528DB",
@@ -1068,13 +1206,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "31",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "待分类",
       "psub": "待分类",
       "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
+      "pnote": "仅查到交易所项目级状态和集团机构间REIT服务招标，未见该4.97亿元项目的具体入池不动产披露。",
       "classification_source": "unknown",
-      "num": "31",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "unknown",
+      "classification_evidence": [
+        {
+          "title": "交易所项目身份与审核信息（未披露具体底层资产）",
+          "url": "https://bond.szse.cn/disclosure/progressinfo/index.html?CATALOGID=xmjdxx_xq&TABKEY=tab1&xmbh=99AA60238C3B4E2487F17211D0D528DB&type=2"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "具体入池资产尚未找到可靠公开披露。"
     },
     {
       "id": "SSE_cad8b4866e174600b96d717693954bf4",
@@ -1100,13 +1247,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "32",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "消费",
       "pflag": "",
       "pnote": "名称关键词：义乌市场",
       "classification_source": "keyword",
-      "num": "32",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_c4975169bdd543c59e3a5e1f4734cff9",
@@ -1132,13 +1280,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "33",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "市政生态",
       "pflag": "",
       "pnote": "名称关键词：水务",
       "classification_source": "keyword",
-      "num": "33",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_02eb04f737e3491487fca3da90ab718c",
@@ -1164,13 +1313,26 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "34",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "产业园",
+      "pflag": "",
+      "pnote": "曲江新区官方页面将曲江创意谷明确称为文化产业园，包含办公、商业和配套公寓；按园区主场景分类，具体入池范围以专项计划披露为准。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "曲江新区管理委员会：曲江新势力｜商务楼宇，助力企业成长",
+          "url": "https://qjxq.xa.gov.cn/zsyz/tzhj/5eeb23f4f99d6503006e5c94.html"
+        },
+        {
+          "title": "每日经济新闻：西安不动产，正在批量上市",
+          "url": "https://www.nbd.com.cn/articles/2026-09-10/4578181.html"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "西安曲江创意谷文化产业园（办公、文创商业及配套）"
     },
     {
       "id": "SSE_669a64d28c8b46ffa3a441b290c6e360",
@@ -1196,13 +1358,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "35",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "租赁住房",
       "pflag": "",
       "pnote": "名称关键词：公寓",
       "classification_source": "keyword",
-      "num": "35",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_8ba758e3bef746c385dbce325697b35e",
@@ -1228,13 +1391,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "36",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "36",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_a90cad7bc53c4ef0a1df1f4c1ce2134e",
@@ -1260,13 +1424,26 @@
       "is_expansion": true,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "37",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "综合业态",
+      "pflag": "",
+      "pnote": "上市公司临2026-019公告明确本次机构间REIT扩募拟购入W5-3地块仓库及F18地块厂房，两种工业地产用途合并标注；不是首期4座厂房资产的复制。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "上海外高桥集团股份有限公司：关于暂停参与华安外高桥REIT扩募相关事项的公告（临2026-019；指定披露媒体版）",
+          "url": "https://epaper.stcn.com/att/202606/08/ZQ08B001-QQ_eBook.pdf"
+        },
+        {
+          "title": "上海证券交易所原文：外高桥临2026-019公告",
+          "url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-06-08/600648_20260608_14TF.pdf"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "上海外高桥W5-3地块仓库项目及F18地块厂房项目，合计约24.29万平方米"
     },
     {
       "id": "SZSE_38076302302742DF88032E0BF60FCE8A",
@@ -1293,13 +1470,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "38",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：水电、能源",
       "classification_source": "keyword",
-      "num": "38",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_72429c4ccc1d4ad0978aaa8a5ca9fe39",
@@ -1325,13 +1503,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "39",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "39",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_c3a65a356256442593a76ff3c099c134",
@@ -1357,13 +1536,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "40",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "40",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SZSE_3039710837684CF2BE105283EF0BE719",
@@ -1390,13 +1570,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "41",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "41",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_610637d6ae87472987d8f6413cedd5ad",
@@ -1422,13 +1603,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "42",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "产业园",
       "pflag": "",
       "pnote": "名称关键词：产业园",
       "classification_source": "keyword",
-      "num": "42",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SZSE_CE93777394A247CD961CE22879A94F76",
@@ -1455,13 +1637,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "43",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：储能",
       "classification_source": "keyword",
-      "num": "43",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_7af29dfa21bf48a692012feb1348eadc",
@@ -1487,13 +1670,22 @@
       "is_expansion": true,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "44",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "待分类",
       "psub": "待分类",
       "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
+      "pnote": "首期苏桐112国际科创园有官方披露，但该2026第一次扩募原始权益人不同，未见具体新增入池资产，不能复用首期分类。",
       "classification_source": "unknown",
-      "num": "44",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "unknown",
+      "classification_evidence": [
+        {
+          "title": "交易所项目身份与审核信息（未披露具体底层资产）",
+          "url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=7af29dfa21bf48a692012feb1348eadc"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "具体入池资产尚未找到可靠公开披露。"
     },
     {
       "id": "SSE_16810ef906a9453882e3390286b2dbc9",
@@ -1519,13 +1711,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "45",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "45",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_5b8427935c004cdc964218c9995a5354",
@@ -1551,13 +1744,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "46",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "消费",
       "pflag": "",
       "pnote": "名称关键词：广场",
       "classification_source": "keyword",
-      "num": "46",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SZSE_A008DEF35DB7497B80240D4B840C3F89",
@@ -1584,13 +1778,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "47",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "消费",
+      "pflag": "",
+      "pnote": "上市公司在深交所披露的专项计划公告明确：底层资产为北京市朝阳区北四环东路73号院1号北四环智能家居体验中心物业（家居卖场）。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "居然智家关于不动产资产支持专项计划获得深圳证券交易所无异议函的进展公告（2026-08-07）",
+          "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-07/e8f3e422-04e3-4f00-8d51-1dd910a98c81.PDF"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "北京北四环智能家居体验中心物业"
     },
     {
       "id": "SSE_24b496b291084b3287889b87735bfbc5",
@@ -1616,13 +1819,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "48",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "物流仓储",
       "pflag": "",
       "pnote": "名称关键词：仓储、物流",
       "classification_source": "keyword",
-      "num": "48",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SZSE_4A60D5E2DDEA40058B6116083A268A44",
@@ -1649,13 +1853,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "49",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "待分类",
       "psub": "待分类",
       "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
+      "pnote": "深交所项目基本信息仅显示北京风禾智行科技有限公司为原始权益人、申报规模11.56亿元；搜索仅找到受理新闻与企业工商资料，未有明确底层资产证据。不能将“科技”认作产业园/数据中心，也不能据原始权益人经营范围分类。",
       "classification_source": "unknown",
-      "num": "49",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "unknown",
+      "classification_evidence": [
+        {
+          "title": "交易所项目身份与审核信息（未披露具体底层资产）",
+          "url": "https://bond.szse.cn/disclosure/progressinfo/index.html?CATALOGID=xmjdxx_xq&TABKEY=tab1&xmbh=4A60D5E2DDEA40058B6116083A268A44&type=2"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "具体入池资产尚未找到可靠公开披露。"
     },
     {
       "id": "SSE_98e05b639ffa4e05a431b00b3876980b",
@@ -1681,13 +1894,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "50",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "50",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_d73ac2bed30144e99b6cf6a8ac5a6850",
@@ -1713,13 +1927,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "51",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "文旅类",
       "pflag": "",
       "pnote": "名称关键词：酒店",
       "classification_source": "keyword",
-      "num": "51",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_b3c6f5b98f0a442e93c7f87cfa35bc4a",
@@ -1745,13 +1960,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "52",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "产业园",
       "pflag": "",
       "pnote": "名称关键词：产业园",
       "classification_source": "keyword",
-      "num": "52",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_46a850964d07460c9e1ac14043048b8a",
@@ -1777,13 +1993,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "53",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "数据中心",
       "pflag": "",
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
-      "num": "53",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_d615ed841af642a1aa7c92b48838e20e",
@@ -1809,13 +2026,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "54",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "54",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_96e2d4a093c94acc84e0b715ffef055c",
@@ -1841,13 +2059,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "55",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "交通设施",
       "pflag": "",
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
-      "num": "55",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SZSE_4332659D9E3B4A598CC95FC6F37C84F0",
@@ -1874,13 +2093,14 @@
       "is_expansion": true,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "56",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "56",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_77e4f8f9cafd4f909ca53307a5159a86",
@@ -1906,13 +2126,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "57",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "57",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_8b9fc7d1b17d4533aada88572456d221",
@@ -1938,13 +2159,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "58",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "产业园",
       "pflag": "",
       "pnote": "名称关键词：产业园、园区",
       "classification_source": "keyword",
-      "num": "58",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_1b55a2a6fab14760bc34b2985670e113",
@@ -1970,13 +2192,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "59",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "59",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_0ba7147197f84495884cade76eea1d42",
@@ -2002,13 +2225,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "60",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "60",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_4b1931bec9284aad84ca396c6abf5abb",
@@ -2034,13 +2258,14 @@
       "is_expansion": true,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "61",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "消费",
       "pflag": "",
       "pnote": "名称关键词：商业、广场",
       "classification_source": "keyword",
-      "num": "61",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_afd265b13fea4628913108d7f9e77732",
@@ -2066,13 +2291,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "产权类",
-      "psub": "消费",
-      "pflag": "",
-      "pnote": "名称关键词：商业",
-      "classification_source": "keyword",
       "num": "62",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "综合业态",
+      "pflag": "",
+      "pnote": "凯德官方发行公告确认上海凯德晶萃广场包含零售与办公空间，两种业态合并标注为综合业态。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "凯德官网｜CCPR上市公告，明确premium retail and office space（2026-08-11）",
+          "url": "https://www.capitaland.com/en/about-capitaland/newsroom/news-releases/international/2026/august/capitaland-investment-successfully-lists-rmb315-billion-china-commercial-private-reit.html"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "上海凯德晶萃广场（LuOne）购物中心及办公空间，属于商办综合体"
     },
     {
       "id": "SSE_333e6f0072254077920d65c6527050eb",
@@ -2098,13 +2332,26 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "63",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "消费",
+      "pflag": "",
+      "pnote": "睿思网报道该专项计划以武汉新天地商业为核心底层资产，范围为新天地街区、壹方南馆及北馆；资产方官网证实这三处为零售餐饮购物商业。未找到专项计划官方发行文件直接确认入池范围，归为待核实的消费类。",
+      "classification_source": "inferred",
+      "classification_confidence": "likely",
+      "classification_evidence": [
+        {
+          "title": "武汉新天地57.92亿元机构间REIT获上交所受理 瑞安加速存量资产证券化（睿思网，2026-05-27）",
+          "url": "https://www.sohu.com/a/1028447863_121726219"
+        },
+        {
+          "title": "武汉新天地官方项目介绍（新天地资产方）",
+          "url": "https://www.xintiandi.com/project/xintiandi-wuhan/"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "待官方核实：武汉新天地街区、壹方南馆、壹方北馆"
     },
     {
       "id": "SZSE_DCF15E24B0844EB9BB6C040F1D6802DA",
@@ -2131,13 +2378,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "64",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "数据中心",
       "pflag": "",
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
-      "num": "64",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_0b4f9a9e62084fceab2344efb5fd6308",
@@ -2163,13 +2411,26 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "产权类",
-      "psub": "消费",
-      "pflag": "",
-      "pnote": "名称关键词：商业",
-      "classification_source": "keyword",
       "num": "65",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "综合业态",
+      "pflag": "",
+      "pnote": "发行新闻明确底层为成都万象城及成都木棉花酒店，购物中心与酒店组合标注为综合业态。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "华润置地｜落地市场规模最大产权类机构间REIT（同花顺刊载，2026-07-08）",
+          "url": "https://stock.10jqka.com.cn/hks/20260708/c678030009.shtml"
+        },
+        {
+          "title": "川观新闻｜成都万象城机构间REIT上市，发行最终资产对价达104.998亿元",
+          "url": "https://cbgc.scol.com.cn/news/7740546"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "成都万象城及成都木棉花酒店（购物中心与酒店组合）"
     },
     {
       "id": "SSE_13710c0a13aa48aeb5be57bad70672fd",
@@ -2195,13 +2456,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "66",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "消费",
       "pflag": "",
       "pnote": "名称关键词：商业",
       "classification_source": "keyword",
-      "num": "66",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_4fb3efe40f0a4c9f939a9f280eb81b7e",
@@ -2227,13 +2489,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "67",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "产业园",
       "pflag": "",
       "pnote": "名称关键词：产业园",
       "classification_source": "keyword",
-      "num": "67",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_6193f1f9ee7941198793739fc95950cc",
@@ -2259,13 +2522,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "68",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "物流仓储",
       "pflag": "",
       "pnote": "名称关键词：仓储、物流",
       "classification_source": "keyword",
-      "num": "68",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_ee369312e63f4e2fa74f6f0ff8a54f3c",
@@ -2291,13 +2555,30 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "69",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "办公",
+      "pflag": "",
+      "pnote": "成都高新区融媒体报道明确该专项计划底层资产为天府国际金融中心4号楼；资产运营方官网出租公告明确4号楼为写字楼。大类按项目表研究分类口径标注，非专项计划法律权属意见。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "成都交子公园投资公司盘活存量资产 首单机构间REITs成功获批（2026-05-13，成都高新区融媒体）",
+          "url": "https://web.csp.chinamcloud.com/cms/cdgxqrmt_html/APP/fglm/4896169564.shtml"
+        },
+        {
+          "title": "天府国际金融中心4号楼3层40328招租公告（成都交子公园金融商务区资产方）",
+          "url": "https://www.cdjrc.com/News_details/154.html"
+        },
+        {
+          "title": "天府国际金融中心4号楼写字楼40711-40712号房源的出租公告",
+          "url": "https://www.cdjrc.com/News_details/421.html"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "成都天府国际金融中心4号楼写字楼"
     },
     {
       "id": "SSE_bcb8a9bf61c6441d82f5a233d4983478",
@@ -2323,13 +2604,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "70",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "租赁住房",
       "pflag": "",
       "pnote": "名称关键词：公寓、长租",
       "classification_source": "keyword",
-      "num": "70",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_9d256ebda67c4d938cdd986f94214747",
@@ -2355,13 +2637,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "71",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "物流仓储",
       "pflag": "",
       "pnote": "名称关键词：仓储、物流",
       "classification_source": "keyword",
-      "num": "71",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_b8a83c4385e8487ea9d9446d65b80472",
@@ -2387,13 +2670,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "72",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "综合业态",
+      "pflag": "",
+      "pnote": "项目专业资产服务机构高和资本官网明确：底层为昆山、南京、成都、德阳四处仓储物流园区与数据中心基础设施，采用纯权益架构；存在仓储物流与数据中心两种业态，归为综合业态。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "以权益创新破局存量盘活，高和资本携手京东产发打造机构间REITs行业标杆（2026-05-29）",
+          "url": "https://www.gohighfund.com/news/new/1297"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "昆山、南京、成都、德阳四处仓储物流园区与数据中心基础设施"
     },
     {
       "id": "SZSE_996C0CD8DDEA4A07A33E0B76885913BB",
@@ -2420,13 +2712,26 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "73",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "经营权类",
+      "psub": "市政生态",
+      "pflag": "",
+      "pnote": "吉林省地方金融管理局及发行人长春城建集团官网均明确该专项计划以长春西郊污水处理厂为底层资产。大类按项目表研究分类口径标注，非专项计划法律权属意见。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "东北本土企业首单持有型不动产ABS项目获受理（吉林省地方金融管理局，2026-01-20）",
+          "url": "https://jr.jl.gov.cn/jrzx/jrdt/jgdt_66300/202601/t20260120_3546771.html"
+        },
+        {
+          "title": "首单突破！长春城建集团持有型不动产ABS获批，领航国资转型新航道（2026-04-23）",
+          "url": "https://cccjjt.com/index/newscon.html?id=511"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "长春西郊污水处理厂"
     },
     {
       "id": "SSE_08bbec2e9e3f42eeb5b5bf41d092be3d",
@@ -2452,13 +2757,26 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "74",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "经营权类",
+      "psub": "能源",
+      "pflag": "",
+      "pnote": "项目评估机构披露底层为甘肃酒泉电网侧独立储能电站，归入能源。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "东洲评估助力阿特斯全国首单储能电站机构间REITs成功落地",
+          "url": "https://www.dongzhou.com.cn/?p=8421"
+        },
+        {
+          "title": "财通证券媒体聚焦：储能项目投资—机构间REITs退出",
+          "url": "https://www.ctsec.com/news/detail/9317743"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "甘肃省酒泉市200MW/800MWh电网侧独立储能电站"
     },
     {
       "id": "SSE_45fd3bdaad2245c0aa577015e940224d",
@@ -2484,13 +2802,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "75",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "物流仓储",
       "pflag": "",
       "pnote": "名称关键词：仓储、物流",
       "classification_source": "keyword",
-      "num": "75",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_81b3f5fefc834e60aa496a6250470655",
@@ -2516,13 +2835,26 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "76",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "文旅类",
+      "pflag": "",
+      "pnote": "原始权益人关联集团披露项目为社区、景区、街区三区合一文商旅夜经济综合体；项目律师确认底层中铁·泰和里商业不动产。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "中铁资本两项产品斩获年度最佳机构间REITs产品",
+          "url": "https://zb.crec.cn/web/xwzx61/gsyw87/2026050610452531293/index.html"
+        },
+        {
+          "title": "德恒助力中铁七局泰和里持有型不动产资产支持专项计划成功发行",
+          "url": "https://www.dehenglaw.com/CN/newscontent/0006/036280/2.aspx?MID=0876"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "郑州中铁·泰和里文商旅夜经济综合体"
     },
     {
       "id": "SSE_9424f76a47cd448baaa3846dcd2af880",
@@ -2548,13 +2880,26 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "产权类",
-      "psub": "物流仓储",
-      "pflag": "",
-      "pnote": "名称关键词：物流",
-      "classification_source": "keyword",
       "num": "77",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "消费",
+      "pflag": "",
+      "pnote": "财通资管挂牌说明将其确认为全国首单农批市场机构间REITs；主业态为农产品批发市场，包含配套仓储冷链，并非单纯仓库。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "财通证券资管｜全国首单农批市场机构间REITs暨浙江省首单国企机构间REITs挂牌（新浪刊载，2026-07-16）",
+          "url": "https://finance.sina.com.cn/wm/2026-07-16/doc-inihzmmw1332226.shtml"
+        },
+        {
+          "title": "湖州项目挂牌报道｜全国首单农批市场机构间REITs正式上市",
+          "url": "https://finance.sina.com.cn/roll/2026-07-16/doc-inihzfcw4433003.shtml"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "湖州市农副产品物流集散中心一期：农批市场商铺、仓储用房及配套车位"
     },
     {
       "id": "SZSE_08DED90B438E4E6C9BD3C63CAC08E6D0",
@@ -2581,13 +2926,26 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "78",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "办公",
+      "pflag": "",
+      "pnote": "项目报道明确底层为西安城发中心商业综合体；高力国际受聘物业服务公告显示该同名物业为约4.5万平方米、24层商务办公楼，按主要业态归入办公，资产对应仍待专项计划文件复核。",
+      "classification_source": "inferred",
+      "classification_confidence": "likely",
+      "classification_evidence": [
+        {
+          "title": "机构间REITs加速扩容，交易所首现终止申报",
+          "url": "https://www.cls.cn/detail/2311948"
+        },
+        {
+          "title": "高力国际与西安城发中心携手打造高端物业管理服务场景",
+          "url": "https://www.colliers.com.cn/zh-cn/news/20251020xian"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "西安城发中心（商务办公楼，含配套商业）"
     },
     {
       "id": "SSE_913fae19dc2749a794b38eb4bd0cdde0",
@@ -2613,13 +2971,26 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "79",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "产业园",
+      "pflag": "",
+      "pnote": "新建元集团披露专项计划底层为苏桐112国际科创园，由低效厂房更新开发，归入产业园。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "元联苏园产城机构间REIT和娄葑联创产业园类REIT在上交所挂牌",
+          "url": "https://www.sungent.com/index.php?article=5026&id=25&m=article"
+        },
+        {
+          "title": "元联苏园产城机构间REIT和娄葑联创产业园类REIT成功举办挂牌仪式",
+          "url": "https://www.sipac.gov.cn/jjhswq/gzdt/202604/911b32948841412b940072437216f60b.shtml"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "苏桐112国际科创园"
     },
     {
       "id": "SZSE_75ADB37CB2B2485BB1201DE880F75588",
@@ -2646,13 +3017,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "80",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "文旅类",
       "pflag": "",
       "pnote": "名称关键词：文旅、酒店",
       "classification_source": "keyword",
-      "num": "80",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_611ea034d5d84f89b71452053297424b",
@@ -2678,13 +3050,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "81",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "数据中心",
       "pflag": "",
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
-      "num": "81",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_a4f49d8aa5734224b1cdedc6707738d7",
@@ -2710,13 +3083,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "82",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "待分类",
       "psub": "待分类",
       "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
+      "pnote": "已核查公开项目及主体披露，尚未找到本专项计划具体入池资产清单；主体业务覆盖多类物业，不能据公司名称确认。",
       "classification_source": "unknown",
-      "num": "82",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "unknown",
+      "classification_evidence": [
+        {
+          "title": "交易所项目身份与审核信息（未披露具体底层资产）",
+          "url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=a4f49d8aa5734224b1cdedc6707738d7"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "具体入池资产尚未找到可靠公开披露。"
     },
     {
       "id": "SSE_c33e8b8a7a5c45a8a7746c76d9e33e19",
@@ -2742,13 +3124,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "83",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "83",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SZSE_44F5FAE238634E68BD68279EDAE278F3",
@@ -2775,13 +3158,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "84",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "84",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_bc93baf652b249a191ed4383604d7b04",
@@ -2807,13 +3191,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "85",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "物流仓储",
       "pflag": "",
       "pnote": "名称关键词：仓储、物流",
       "classification_source": "keyword",
-      "num": "85",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_660d35fa453848bcb5523490e53625d3",
@@ -2839,13 +3224,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "86",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "数据中心",
       "pflag": "",
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
-      "num": "86",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_c4c39dfa801c461480aabbae1aa79326",
@@ -2871,13 +3257,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "87",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "数据中心",
       "pflag": "",
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
-      "num": "87",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_8e581a1011094674a59b9dccecb642cc",
@@ -2903,13 +3290,14 @@
       "is_expansion": true,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "88",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "交通设施",
       "pflag": "",
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
-      "num": "88",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_2d2e4884bc92462a985ba7757ed59f10",
@@ -2935,13 +3323,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "89",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "租赁住房",
       "pflag": "",
       "pnote": "名称关键词：保租房",
       "classification_source": "keyword",
-      "num": "89",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_858e70129c204e8ca8a963a0fa00fffa",
@@ -2967,13 +3356,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "90",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "待分类",
       "psub": "待分类",
       "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
+      "pnote": "已核查公开项目及主体披露，尚未找到本专项计划具体入池资产清单；主体业务覆盖多类物业，不能据公司名称确认。",
       "classification_source": "unknown",
-      "num": "90",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "unknown",
+      "classification_evidence": [
+        {
+          "title": "交易所项目身份与审核信息（未披露具体底层资产）",
+          "url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=858e70129c204e8ca8a963a0fa00fffa"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "具体入池资产尚未找到可靠公开披露。"
     },
     {
       "id": "SSE_2fedfef7b676482a95c4ed32c4043f49",
@@ -2999,13 +3397,26 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "91",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "经营权类",
+      "psub": "交通设施",
+      "pflag": "",
+      "pnote": "专项计划法律顾问披露该项目为中铁十五局下属收费公路桥梁持有型ABS，归入交通设施。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "中银律师助力中金公司—中铁十五局持有型不动产资产支持专项计划成功落地",
+          "url": "https://www.zhongyinlawyer.com/Home/NewsDetail?Title=%E4%B8%AD%E9%87%91%2C%E4%B8%AD%E9%93%81%2C%E5%8D%81%E4%BA%94%E5%B1%80%2C%E4%B8%8D%E5%8A%A8%E4%BA%A7%2C%E8%B5%84%E4%BA%A7%E6%94%AF%E6%8C%81"
+        },
+        {
+          "title": "东方金诚助力中金公司—中铁十五局持有型不动产资产支持专项计划成功发行",
+          "url": "https://www.dfratings.com/news-info/23709.html"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "中铁十五局所属收费公路桥梁"
     },
     {
       "id": "SSE_76f7af17f992438a81a9b100c5141a35",
@@ -3031,13 +3442,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "92",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "消费",
       "pflag": "",
-      "pnote": "名称关键词：商业",
-      "classification_source": "keyword",
-      "num": "92",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "pnote": "中国中铁官方新闻确认为银川中铁水务分散型商业物业项目；此处‘水务’为权益人名称，不能据此把商业物业归为市政水务。公开发行新闻尚未逐套披露物业功能，保留消费主类并注明分散型物业。",
+      "classification_source": "inferred",
+      "classification_confidence": "likely",
+      "classification_evidence": [
+        {
+          "title": "中国中铁｜中铁资本两项产品斩获金萃奖—年度最佳机构间REITs产品",
+          "url": "https://www.crecg.com/web/xwzx61/gsyw87/2026050610452531293/index.html"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "银川中铁水务持有的分散型商业物业组合，具体商铺/办公比例待计划文件复核"
     },
     {
       "id": "SSE_43180de30031439dbe40687bd3cf41e4",
@@ -3063,13 +3483,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "93",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "文旅类",
+      "pflag": "",
+      "pnote": "天津政府披露13.2亿元泰达航母机构间REITs底层为军事主题公园，原始权益人与列表一致，归入文旅类。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "天津：我市7单REITs项目获批170亿元",
+          "url": "https://www.tj.gov.cn/sy/tjxw/202605/t20260509_7295452.html"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "天津泰达航母主题公园"
     },
     {
       "id": "SSE_d88ec5abcd6e4304ba262aa585b4fbde",
@@ -3095,13 +3524,26 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "94",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "办公",
+      "pflag": "",
+      "pnote": "专项计划法律顾问披露该项目为中国铁建集团办公物业持有型ABS；申万宏源发行公告确认写字楼物业。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "中银律师助力平安证券—铁建投资集团持有型不动产资产支持专项计划成功落地",
+          "url": "https://www.zhongyinlawyer.com/Home/NewsDetail?Title=%E5%B9%B3%E5%AE%89%E8%AF%81%E5%88%B8%2C%E9%93%81%E5%BB%BA%2C%E6%8A%95%E8%B5%84%2C%E4%B8%8D%E5%8A%A8%E4%BA%A7%2C%E8%B5%84%E4%BA%A7%E6%94%AF%E6%8C%81%2C2025"
+        },
+        {
+          "title": "申万宏源助力铁建投资集团持有型不动产ABS成功发行",
+          "url": "https://finance.sina.cn/2026-01-07/detail-inhfmtvu5233183.d.html"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "中国铁建集团办公物业"
     },
     {
       "id": "SSE_5a248a9b5dea42b38a9af2c486f60d2e",
@@ -3127,13 +3569,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "产权类",
-      "psub": "消费",
-      "pflag": "",
-      "pnote": "名称关键词：商业",
-      "classification_source": "keyword",
       "num": "95",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "办公",
+      "pflag": "",
+      "pnote": "中建资本官方发行公告明确底层资产为天津中建中心物业，属于写字楼机构间REITs；项目名中的‘商业物业’不等于零售商场。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "中建资本｜成功搭建中建集团首个机构间REITs平台（2025-12-30）",
+          "url": "https://zjzb.cscec.com/zjzb/xwzx/gsxw/202601/3924919.html"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "天津中建中心写字楼物业"
     },
     {
       "id": "SSE_8fc676d3df944beaa7005fd6bc9e5eb1",
@@ -3159,13 +3610,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "96",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "交通设施",
       "pflag": "",
       "pnote": "名称关键词：公路、高速",
       "classification_source": "keyword",
-      "num": "96",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SZSE_3C1DB3F91A9648DAB110E3DA2CBE449D",
@@ -3192,13 +3644,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "97",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "97",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_c323cc5aa0b5413f98321411ced9b498",
@@ -3224,13 +3677,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "98",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "98",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_e1b855cf474b4483aa1af044b24f93b6",
@@ -3256,13 +3710,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "99",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "消费",
       "pflag": "",
       "pnote": "名称关键词：商业",
       "classification_source": "keyword",
-      "num": "99",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_217c2078fe384f489fb2f213030cfda8",
@@ -3288,13 +3743,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "产权类",
-      "psub": "消费",
-      "pflag": "",
-      "pnote": "名称关键词：商业",
-      "classification_source": "keyword",
       "num": "100",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "办公",
+      "pflag": "",
+      "pnote": "天津政府披露6.04亿元天津津轨机构间REITs底层为国际航运大厦成熟写字楼物业，修正商业关键词导致的消费类误判。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "天津：我市7单REITs项目获批170亿元",
+          "url": "https://www.tj.gov.cn/sy/tjxw/202605/t20260509_7295452.html"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "天津国际航运大厦写字楼物业"
     },
     {
       "id": "SSE_33d26d6eac804b31abce01535ef37b57",
@@ -3320,13 +3784,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "101",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "交通设施",
       "pflag": "",
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
-      "num": "101",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_312a1337f4394ab59fee3e16b4cf1607",
@@ -3352,13 +3817,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "102",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "102",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_66b5f08f3f41476b9f785c2d0f596d7b",
@@ -3384,13 +3850,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "103",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "经营权类",
+      "psub": "能源",
+      "pflag": "",
+      "pnote": "项目总协调人中国电建商业保理披露该专项计划依托火电资产现金流，归入能源。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "中国电建商业保理：完成全国首单乡村振兴及支持西部大开发机构间REITs发行",
+          "url": "https://baoli.powerchina.cn/djsybl/zxzx/gsxw/2026/6/I1512485623544414208.html"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "中电建（崇信）发电有限公司火电资产"
     },
     {
       "id": "SZSE_53025762E07841769C0752128D5803F3",
@@ -3417,13 +3892,26 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "104",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "经营权类",
+      "psub": "市政生态",
+      "pflag": "",
+      "pnote": "青岛市政府和发行新闻披露全国首单供热资产机构间REITs，底层为西海岸新区供热一次管网等市政供热设施，归入市政生态。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "青岛政务网：开辟市政基础设施权益融资新路径",
+          "url": "https://www.qingdao.gov.cn/ywdt/qsdt/202512/t20251231_10428516.shtml"
+        },
+        {
+          "title": "青岛西海岸公用事业集团机构间REITs正式挂牌上市",
+          "url": "https://finance.qingdaonews.com/content/2026-03/05/content_23720739.htm"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "青岛西海岸新区供热一次管网等供热设施"
     },
     {
       "id": "SSE_f400fac68939483fb2a6577930181456",
@@ -3449,13 +3937,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "105",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "交通设施",
       "pflag": "",
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
-      "num": "105",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_36eadfbbc67f4ff9866df503fb2773d0",
@@ -3481,13 +3970,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "106",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "产业园",
       "pflag": "",
       "pnote": "名称关键词：工业",
       "classification_source": "keyword",
-      "num": "106",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_4b1f60e601774066bbb96f5ffe8d5861",
@@ -3513,13 +4003,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "107",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "产业园",
       "pflag": "",
       "pnote": "名称关键词：产业园",
       "classification_source": "keyword",
-      "num": "107",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_3c372d322d2e4a4ca54c1b2d77aa3fdc",
@@ -3545,13 +4036,26 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "产权类",
-      "psub": "消费",
-      "pflag": "",
-      "pnote": "名称关键词：广场",
-      "classification_source": "keyword",
       "num": "108",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "办公",
+      "pflag": "",
+      "pnote": "华泰证券资管发行说明确认上海中建广场商办综合体；以办公作为主类，保留配套商业说明，不能仅以‘广场’判为购物中心。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "华泰证券资管｜推动中建集团首单持有型不动产ABS成功设立（新浪刊载，2025-12-01）",
+          "url": "https://finance.sina.com.cn/stock/relnews/cn/2025-12-01/doc-infzhtsf3614711.shtml"
+        },
+        {
+          "title": "中国证券报｜中建体系首单持有型不动产ABS发行",
+          "url": "https://www.cs.com.cn/ssgs/gsxw/202511/t20251128_6525729.html"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "上海中建广场商办综合体（写字楼、配套商业及停车空间）"
     },
     {
       "id": "SSE_a7bae8a2d83544288dcc29dfb90457f7",
@@ -3577,13 +4081,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "109",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "109",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_23a0510963724938a704512dbf26f4f2",
@@ -3609,13 +4114,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "110",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "市政生态",
       "pflag": "",
       "pnote": "名称关键词：水务",
       "classification_source": "keyword",
-      "num": "110",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_608a7a39abba40e9b6a2af7681d66f43",
@@ -3641,13 +4147,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "111",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "交通设施",
       "pflag": "",
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
-      "num": "111",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_71d38b93885c4fb8a9da4dfa5258bba6",
@@ -3673,13 +4180,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "112",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "产业园",
+      "pflag": "",
+      "pnote": "上交所披露本专项计划底层为外高桥保税区4个标准厂房项目，合计约19.06万平方米，归入产业园。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "上交所：沪市机构间REITs项目累计申报50单",
+          "url": "https://www.sse.com.cn/cpc/cpctheme/4th20thcpc/4th20thcpcgcxx/c/c_20251204_10800696.shtml"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "上海外高桥保税区4个标准厂房项目"
     },
     {
       "id": "SSE_24cfbda989614db4b858a12f83a0eaec",
@@ -3705,13 +4221,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "113",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "综合业态",
+      "pflag": "",
+      "pnote": "计划管理人人保资产披露底层为北京总部基地核心区域中铁诺德中心三期商办物业，按商业及办公组合归入综合业态。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "人保资产荣获年度创新资产盘活及优秀投资机构奖项",
+          "url": "https://www.piccamc.com/m/news/read?id=3469"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "北京中铁诺德中心三期商办物业"
     },
     {
       "id": "SZSE_B97CD5F5352244F1ACC26707A2786005",
@@ -3738,13 +4263,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "114",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "114",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_95b846a6aabc48a1ab5e9a168a7f05ee",
@@ -3770,13 +4296,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "115",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "市政生态",
       "pflag": "",
       "pnote": "名称关键词：水务",
       "classification_source": "keyword",
-      "num": "115",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_2e907a8b39a0485184ed03b170fdc10d",
@@ -3802,13 +4329,26 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "116",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "经营权类",
+      "psub": "能源",
+      "pflag": "",
+      "pnote": "专项计划法律顾问确认全国首单以火电资产为底层的不动产ABS；公开发行新闻明确新疆准东国信火电厂，归入能源。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "锦天城助力国金资管—新疆国信持有型不动产资产支持专项计划成功发行",
+          "url": "https://www.allbrightlaw.com/CN/10454/d4444b3e1b07a2d6.aspx"
+        },
+        {
+          "title": "全国首单火电机构间REITs顺利发行",
+          "url": "https://www.cnfin.com/zs-lb/detail/20251208/4347240_1.html"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "新疆准东国信火电厂"
     },
     {
       "id": "SSE_82a0db8056254a6e81bfaf0684b79026",
@@ -3834,13 +4374,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "117",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "消费",
       "pflag": "",
       "pnote": "名称关键词：广场",
       "classification_source": "keyword",
-      "num": "117",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_305372b0865a4332a5236bbaac464156",
@@ -3866,13 +4407,14 @@
       "is_expansion": true,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "118",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "租赁住房",
       "pflag": "",
       "pnote": "名称关键词：住房租赁、租赁住房",
       "classification_source": "keyword",
-      "num": "118",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_6235cf1b296b424394be359f01201227",
@@ -3898,13 +4440,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "119",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "产业园",
       "pflag": "",
       "pnote": "名称关键词：产业园、园区",
       "classification_source": "keyword",
-      "num": "119",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_9748b85733594cf0884070dc269ac79a",
@@ -3930,13 +4473,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "120",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "产业园",
       "pflag": "",
       "pnote": "名称关键词：产业园",
       "classification_source": "keyword",
-      "num": "120",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_53695",
@@ -3962,13 +4506,26 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "121",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "消费",
+      "pflag": "",
+      "pnote": "行业协会与市场公开发行报道将该专项计划对应上海浦江欢乐颂购物中心，原始权益人及管理人与列表一致，归入消费。未取得计划说明书，按公开报道列示。",
+      "classification_source": "inferred",
+      "classification_confidence": "likely",
+      "classification_evidence": [
+        {
+          "title": "中国购物中心与连锁经营协会：存量商业资产进入资本市场",
+          "url": "https://www.mallchina.org.cn/page5?article_id=1034"
+        },
+        {
+          "title": "欢乐颂机构间REIT成功发行",
+          "url": "https://finance.sina.com.cn/wm/2026-06-29/doc-inifayqu3690612.shtml"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "上海浦江欢乐颂购物中心"
     },
     {
       "id": "SSE_1ac6d26a734c4aefb3e327fa9dc96efe",
@@ -3994,13 +4551,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "122",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "能源",
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "122",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_5b048a3742404af4b74fb5e87851913e",
@@ -4026,13 +4584,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "123",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "数据中心",
       "pflag": "",
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
-      "num": "123",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_2e46db5dcd7943f899eb9f7e35c49209",
@@ -4058,13 +4617,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "124",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "待分类",
       "psub": "待分类",
       "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
+      "pnote": "已核查公开项目及主体披露，尚未找到本专项计划具体入池资产清单；主体业务覆盖多类物业，不能据公司名称确认。",
       "classification_source": "unknown",
-      "num": "124",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "unknown",
+      "classification_evidence": [
+        {
+          "title": "交易所项目身份与审核信息（未披露具体底层资产）",
+          "url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=2e46db5dcd7943f899eb9f7e35c49209"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "具体入池资产尚未找到可靠公开披露。"
     },
     {
       "id": "SSE_52840",
@@ -4090,13 +4658,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "125",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "交通设施",
       "pflag": "",
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
-      "num": "125",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_47475",
@@ -4122,13 +4691,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "126",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "产权类",
       "psub": "数据中心",
       "pflag": "",
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
-      "num": "126",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_52926",
@@ -4154,13 +4724,26 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
       "num": "127",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "办公",
+      "pflag": "",
+      "pnote": "公开发行公告及中国资产证券化论坛案例披露底层为广州南方铁道大厦，租户为金融、科技等企业；中诚信国际行业报告将本专项计划列为办公类。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "中国铁建持有型不动产ABS在上交所成功发行，平安证券担任管理人",
+          "url": "https://m.thepaper.cn/newsDetail_forward_29872821"
+        },
+        {
+          "title": "中国资产证券化论坛：持有型不动产ABS案例",
+          "url": "https://www.chinasecuritization.org/cn/NewDetails.aspx?id=a7d1e45e-16e7-42a7-b7b7-850eef42121b"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "广州南方铁道大厦"
     },
     {
       "id": "SSE_50209",
@@ -4186,13 +4769,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "128",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "交通设施",
       "pflag": "",
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
-      "num": "128",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SZSE_1220D502C98648E9B80207112269B2B0",
@@ -4219,13 +4803,22 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "产权类",
-      "psub": "消费",
-      "pflag": "",
-      "pnote": "名称关键词：商业",
-      "classification_source": "keyword",
       "num": "129",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
+      "ptype": "产权类",
+      "psub": "办公",
+      "pflag": "",
+      "pnote": "计划管理人中信证券披露底层为广州环贸中心写字楼，修正项目名称中商业一词带来的消费类误判。",
+      "classification_source": "verified",
+      "classification_confidence": "confirmed",
+      "classification_evidence": [
+        {
+          "title": "中信证券助力越秀集团设立市场首单商业物业持有型不动产ABS",
+          "url": "https://www.citics.citic/newsite/news/202503/t20250321_1196468.html"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "广州环贸中心（ICC）写字楼及对应车位"
     },
     {
       "id": "SSE_46546",
@@ -4251,13 +4844,14 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "130",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "交通设施",
       "pflag": "",
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
-      "num": "130",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     },
     {
       "id": "SSE_36404",
@@ -4283,13 +4877,15 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
+      "num": "131",
+      "link_checked_at": "2026-10-14T16:18:40+08:00",
       "ptype": "经营权类",
       "psub": "交通设施",
       "pflag": "",
       "pnote": "名称关键词：大桥",
       "classification_source": "keyword",
-      "num": "131",
-      "link_checked_at": "2026-10-14T16:18:40+08:00"
+      "classification_confidence": "likely"
     }
-  ]
+  ],
+  "classification_updated_at": "2026-10-14T22:48:08+08:00"
 }

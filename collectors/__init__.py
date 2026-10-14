@@ -1,1 +1,1 @@
-"""Official exchange collectors for the REITs research dashboard."""
+"""Official exchange collectors for the REITs project table."""
