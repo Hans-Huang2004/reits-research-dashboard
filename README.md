@@ -4,6 +4,8 @@
 
 网站使用 GitHub Pages 部署，源代码保存在私有仓库。页面也可以在本地运行。
 
+网站入口：[沪深机构间 REITs 研究看板](https://hans-huang2004.github.io/reits-research-dashboard/)。
+
 ## 当前版本
 
 - 两所同时搜索 **持有型不动产** 与 **机构间REIT**，取并集并按官方项目 ID 去重。
