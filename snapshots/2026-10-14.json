@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-10-14",
-  "updated_at": "2026-10-14T14:56:42+08:00",
+  "updated_at": "2026-10-14T16:18:03+08:00",
   "source_status": {
     "SSE": {
       "ok": true,
@@ -9,8 +9,8 @@
       "queries": [
         {
           "keyword": "持有型不动产",
-          "advertised_total": 104,
-          "raw_count": 104,
+          "advertised_total": 103,
+          "raw_count": 103,
           "pages": 2,
           "actual_page_size": 100,
           "unique_count": 103
@@ -56,7 +56,7 @@
       "持有型不动产",
       "机构间REIT"
     ],
-    "population": "沪深交易所项目名称匹配关键词的申报记录",
+    "population": "直接采集沪深交易所项目名称匹配关键词的机构间 REITs 申报记录",
     "unit": "亿元",
     "count": 131
   },
@@ -66,17 +66,49 @@
   },
   "quality": {
     "duplicate_ids": 0,
-    "unknown_classification": 38,
+    "unknown_classification": 35,
     "detail_warnings": [],
-    "content_sha256": "25bd8fa52f542a3d9aca5ee4aeca6bd2026070fa3c2aecbf79c01dfdcd68d80e",
+    "content_sha256": "7e332fd4d62db97159e894a16b0cb5366adb6e701324b302ce131ecdca0b8a26",
     "link_validation": {
       "verified": 131,
       "total": 131,
-      "checked_at": "2026-10-14T15:06:40+08:00",
+      "checked_at": "2026-10-14T16:18:40+08:00",
       "method": "official_detail_identity_and_official_page_route"
     }
   },
   "items": [
+    {
+      "id": "SSE_6b2a6d1c1bad4942a37dbf96c33dd426",
+      "source_id": "6b2a6d1c1bad4942a37dbf96c33dd426",
+      "ex": "上交所",
+      "name": "中金-麓谷发展产业园持有型不动产资产支持专项计划",
+      "writer": "中国国际金融股份有限公司",
+      "mgr": "中金公司",
+      "origin": "长沙麓谷实业发展股份有限公司",
+      "amt": 4.36,
+      "status": "1",
+      "up": "2026-10-14",
+      "acc": "2026-09-22",
+      "match_keywords": [
+        "持有型不动产"
+      ],
+      "query_keywords": [
+        "持有型不动产"
+      ],
+      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=6b2a6d1c1bad4942a37dbf96c33dd426",
+      "source_kind": "project_page",
+      "link_status": "verified",
+      "is_expansion": false,
+      "archive_status": "current",
+      "product_type": "institutional",
+      "ptype": "产权类",
+      "psub": "产业园",
+      "pflag": "",
+      "pnote": "名称关键词：产业园",
+      "classification_source": "keyword",
+      "num": "1",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
+    },
     {
       "id": "SSE_0af8d41233494350aa7aea124071b93a",
       "source_id": "0af8d41233494350aa7aea124071b93a",
@@ -106,8 +138,8 @@
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "1",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "2",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_c033fa493960437c951b59a5e3a8ef37",
@@ -138,8 +170,8 @@
       "pflag": "",
       "pnote": "名称关键词：商业、零售",
       "classification_source": "keyword",
-      "num": "2",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "3",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_a3e22cf1373744618ad63ca92b07f5aa",
@@ -170,8 +202,8 @@
       "pflag": "待分类",
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
-      "num": "3",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "4",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_DE9431533C974EA9949CA5453FE201BD",
@@ -203,8 +235,8 @@
       "pflag": "待分类",
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
-      "num": "4",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "5",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_5CCD030CB38E4250904A2C05D85E0342",
@@ -236,8 +268,8 @@
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "5",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "6",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_d8eaddb351604e13b2b0807d0ee4c806",
@@ -268,8 +300,8 @@
       "pflag": "待分类",
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
-      "num": "6",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "7",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_965c1753f47b479bb403802dd6598495",
@@ -300,8 +332,8 @@
       "pflag": "",
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
-      "num": "7",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "8",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_202b52b7b6e64a83b5797db0b824c335",
@@ -332,8 +364,8 @@
       "pflag": "",
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
-      "num": "8",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "9",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_213e64e05b2a4db8a98568e1740b5101",
@@ -364,8 +396,8 @@
       "pflag": "",
       "pnote": "名称关键词：大桥",
       "classification_source": "keyword",
-      "num": "9",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "10",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_36cc6e3d2d624fc588a9afdf41ec3f01",
@@ -396,8 +428,8 @@
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "10",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "11",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_9b728f78214d433483b3d56d33e731ab",
@@ -428,8 +460,8 @@
       "pflag": "待分类",
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
-      "num": "11",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "12",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_678579d5e0c24a459d376a9c57bb6163",
@@ -460,8 +492,8 @@
       "pflag": "",
       "pnote": "名称关键词：保租房",
       "classification_source": "keyword",
-      "num": "12",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "13",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_48af0fdb0e8b47c49b923f11f5e1431b",
@@ -492,8 +524,8 @@
       "pflag": "",
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
-      "num": "13",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "14",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_CA98A72685014BA5BC8F18E5D376FF30",
@@ -525,8 +557,8 @@
       "pflag": "待分类",
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
-      "num": "14",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "15",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_99ad63b648ac49cba77567407e2aeef7",
@@ -557,8 +589,8 @@
       "pflag": "",
       "pnote": "名称关键词：水务",
       "classification_source": "keyword",
-      "num": "15",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "16",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_5047c4b973dd4728b7c50f1a0db46101",
@@ -589,8 +621,8 @@
       "pflag": "",
       "pnote": "名称关键词：住房租赁、租赁住房",
       "classification_source": "keyword",
-      "num": "16",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "17",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_f112c7774ea84dbea54e17bdb33895b5",
@@ -621,8 +653,8 @@
       "pflag": "待分类",
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
-      "num": "17",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "18",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_2A6C5D1546094747BF3B83B1EF7DEB55",
@@ -654,8 +686,8 @@
       "pflag": "",
       "pnote": "名称关键词：水电、能源",
       "classification_source": "keyword",
-      "num": "18",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "19",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_a94c118f910c46fbacfd7f4139a90685",
@@ -681,13 +713,13 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
-      "num": "19",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "ptype": "产权类",
+      "psub": "文旅类",
+      "pflag": "",
+      "pnote": "名称关键词：滑雪场",
+      "classification_source": "keyword",
+      "num": "20",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_8A1E09D85832487E8F5354EB6D049C8D",
@@ -719,8 +751,8 @@
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "20",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "21",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_e8bd42e5d15a4b2c91de12e7eb03c44f",
@@ -751,8 +783,8 @@
       "pflag": "待分类",
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
-      "num": "21",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "22",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_985324c17575494897af9b1b09bd780b",
@@ -783,8 +815,8 @@
       "pflag": "",
       "pnote": "名称关键词：租赁住房",
       "classification_source": "keyword",
-      "num": "22",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "23",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_cd269186a1344b0a92627dbaeb6503f7",
@@ -815,8 +847,8 @@
       "pflag": "",
       "pnote": "名称关键词：产业园",
       "classification_source": "keyword",
-      "num": "23",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "num": "24",
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_6abfda7406914747b4d7d408f34a5229",
@@ -847,40 +879,8 @@
       "pflag": "",
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
-      "num": "24",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
-    },
-    {
-      "id": "SSE_6b2a6d1c1bad4942a37dbf96c33dd426",
-      "source_id": "6b2a6d1c1bad4942a37dbf96c33dd426",
-      "ex": "上交所",
-      "name": "中金-麓谷发展产业园持有型不动产资产支持专项计划",
-      "writer": "中国国际金融股份有限公司",
-      "mgr": "中金公司",
-      "origin": "长沙麓谷实业发展股份有限公司",
-      "amt": 4.36,
-      "status": "1",
-      "up": "2026-09-22",
-      "acc": "2026-09-22",
-      "match_keywords": [
-        "持有型不动产"
-      ],
-      "query_keywords": [
-        "持有型不动产"
-      ],
-      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=6b2a6d1c1bad4942a37dbf96c33dd426",
-      "source_kind": "project_page",
-      "link_status": "verified",
-      "is_expansion": false,
-      "archive_status": "current",
-      "product_type": "institutional",
-      "ptype": "产权类",
-      "psub": "产业园",
-      "pflag": "",
-      "pnote": "名称关键词：产业园",
-      "classification_source": "keyword",
       "num": "25",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_5880b085aa2247f58f4945eadb3f8908",
@@ -912,7 +912,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "26",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_44ed160bc4384974bffcf2a84309e7c9",
@@ -944,7 +944,7 @@
       "pnote": "名称关键词：大桥、港口",
       "classification_source": "keyword",
       "num": "27",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_E64643B78E7A47EBBC6F26E4E4AF971C",
@@ -977,7 +977,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "28",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_250c88937e5e4dfb8259590e3c34210d",
@@ -1009,7 +1009,7 @@
       "pnote": "名称关键词：酒店",
       "classification_source": "keyword",
       "num": "29",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_89fded3ba64b42479710a8b62f9be34a",
@@ -1041,7 +1041,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "30",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_99AA60238C3B4E2487F17211D0D528DB",
@@ -1074,7 +1074,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "31",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_cad8b4866e174600b96d717693954bf4",
@@ -1100,13 +1100,13 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称无明确资产关键词",
-      "classification_source": "unknown",
+      "ptype": "产权类",
+      "psub": "消费",
+      "pflag": "",
+      "pnote": "名称关键词：义乌市场",
+      "classification_source": "keyword",
       "num": "32",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_c4975169bdd543c59e3a5e1f4734cff9",
@@ -1138,7 +1138,7 @@
       "pnote": "名称关键词：水务",
       "classification_source": "keyword",
       "num": "33",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_02eb04f737e3491487fca3da90ab718c",
@@ -1170,7 +1170,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "34",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_669a64d28c8b46ffa3a441b290c6e360",
@@ -1202,7 +1202,7 @@
       "pnote": "名称关键词：公寓",
       "classification_source": "keyword",
       "num": "35",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_8ba758e3bef746c385dbce325697b35e",
@@ -1234,7 +1234,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "36",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_a90cad7bc53c4ef0a1df1f4c1ce2134e",
@@ -1266,7 +1266,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "37",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_38076302302742DF88032E0BF60FCE8A",
@@ -1299,7 +1299,7 @@
       "pnote": "名称关键词：水电、能源",
       "classification_source": "keyword",
       "num": "38",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_72429c4ccc1d4ad0978aaa8a5ca9fe39",
@@ -1331,7 +1331,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "39",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_c3a65a356256442593a76ff3c099c134",
@@ -1363,7 +1363,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "40",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_3039710837684CF2BE105283EF0BE719",
@@ -1396,7 +1396,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "41",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_610637d6ae87472987d8f6413cedd5ad",
@@ -1428,7 +1428,7 @@
       "pnote": "名称关键词：产业园",
       "classification_source": "keyword",
       "num": "42",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_CE93777394A247CD961CE22879A94F76",
@@ -1461,7 +1461,7 @@
       "pnote": "名称关键词：储能",
       "classification_source": "keyword",
       "num": "43",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_7af29dfa21bf48a692012feb1348eadc",
@@ -1493,7 +1493,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "44",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_16810ef906a9453882e3390286b2dbc9",
@@ -1525,7 +1525,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "45",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_5b8427935c004cdc964218c9995a5354",
@@ -1551,13 +1551,13 @@
       "is_expansion": false,
       "archive_status": "current",
       "product_type": "institutional",
-      "ptype": "待分类",
-      "psub": "待分类",
-      "pflag": "待分类",
-      "pnote": "名称命中多个资产类别，需核对底层资产",
-      "classification_source": "unknown",
+      "ptype": "产权类",
+      "psub": "消费",
+      "pflag": "",
+      "pnote": "名称关键词：广场",
+      "classification_source": "keyword",
       "num": "46",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_A008DEF35DB7497B80240D4B840C3F89",
@@ -1590,7 +1590,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "47",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_24b496b291084b3287889b87735bfbc5",
@@ -1622,7 +1622,7 @@
       "pnote": "名称关键词：仓储、物流",
       "classification_source": "keyword",
       "num": "48",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_4A60D5E2DDEA40058B6116083A268A44",
@@ -1655,7 +1655,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "49",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_98e05b639ffa4e05a431b00b3876980b",
@@ -1687,7 +1687,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "50",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_d73ac2bed30144e99b6cf6a8ac5a6850",
@@ -1719,7 +1719,7 @@
       "pnote": "名称关键词：酒店",
       "classification_source": "keyword",
       "num": "51",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_b3c6f5b98f0a442e93c7f87cfa35bc4a",
@@ -1751,7 +1751,7 @@
       "pnote": "名称关键词：产业园",
       "classification_source": "keyword",
       "num": "52",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_46a850964d07460c9e1ac14043048b8a",
@@ -1783,7 +1783,7 @@
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
       "num": "53",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_d615ed841af642a1aa7c92b48838e20e",
@@ -1815,7 +1815,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "54",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_96e2d4a093c94acc84e0b715ffef055c",
@@ -1847,7 +1847,7 @@
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
       "num": "55",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_4332659D9E3B4A598CC95FC6F37C84F0",
@@ -1880,7 +1880,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "56",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_77e4f8f9cafd4f909ca53307a5159a86",
@@ -1912,7 +1912,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "57",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_8b9fc7d1b17d4533aada88572456d221",
@@ -1944,7 +1944,7 @@
       "pnote": "名称关键词：产业园、园区",
       "classification_source": "keyword",
       "num": "58",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_1b55a2a6fab14760bc34b2985670e113",
@@ -1976,7 +1976,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "59",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_0ba7147197f84495884cade76eea1d42",
@@ -2008,7 +2008,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "60",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_4b1931bec9284aad84ca396c6abf5abb",
@@ -2040,7 +2040,7 @@
       "pnote": "名称关键词：商业、广场",
       "classification_source": "keyword",
       "num": "61",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_afd265b13fea4628913108d7f9e77732",
@@ -2072,7 +2072,7 @@
       "pnote": "名称关键词：商业",
       "classification_source": "keyword",
       "num": "62",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_333e6f0072254077920d65c6527050eb",
@@ -2104,7 +2104,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "63",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_DCF15E24B0844EB9BB6C040F1D6802DA",
@@ -2137,7 +2137,7 @@
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
       "num": "64",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_0b4f9a9e62084fceab2344efb5fd6308",
@@ -2169,7 +2169,7 @@
       "pnote": "名称关键词：商业",
       "classification_source": "keyword",
       "num": "65",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_13710c0a13aa48aeb5be57bad70672fd",
@@ -2201,7 +2201,7 @@
       "pnote": "名称关键词：商业",
       "classification_source": "keyword",
       "num": "66",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_4fb3efe40f0a4c9f939a9f280eb81b7e",
@@ -2233,7 +2233,7 @@
       "pnote": "名称关键词：产业园",
       "classification_source": "keyword",
       "num": "67",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_6193f1f9ee7941198793739fc95950cc",
@@ -2265,7 +2265,7 @@
       "pnote": "名称关键词：仓储、物流",
       "classification_source": "keyword",
       "num": "68",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_ee369312e63f4e2fa74f6f0ff8a54f3c",
@@ -2297,7 +2297,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "69",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_bcb8a9bf61c6441d82f5a233d4983478",
@@ -2329,7 +2329,7 @@
       "pnote": "名称关键词：公寓、长租",
       "classification_source": "keyword",
       "num": "70",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_9d256ebda67c4d938cdd986f94214747",
@@ -2361,7 +2361,7 @@
       "pnote": "名称关键词：仓储、物流",
       "classification_source": "keyword",
       "num": "71",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_b8a83c4385e8487ea9d9446d65b80472",
@@ -2393,7 +2393,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "72",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_996C0CD8DDEA4A07A33E0B76885913BB",
@@ -2426,7 +2426,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "73",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_08bbec2e9e3f42eeb5b5bf41d092be3d",
@@ -2458,7 +2458,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "74",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_45fd3bdaad2245c0aa577015e940224d",
@@ -2490,7 +2490,7 @@
       "pnote": "名称关键词：仓储、物流",
       "classification_source": "keyword",
       "num": "75",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_81b3f5fefc834e60aa496a6250470655",
@@ -2522,7 +2522,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "76",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_9424f76a47cd448baaa3846dcd2af880",
@@ -2554,7 +2554,7 @@
       "pnote": "名称关键词：物流",
       "classification_source": "keyword",
       "num": "77",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_08DED90B438E4E6C9BD3C63CAC08E6D0",
@@ -2587,7 +2587,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "78",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_913fae19dc2749a794b38eb4bd0cdde0",
@@ -2619,7 +2619,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "79",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_75ADB37CB2B2485BB1201DE880F75588",
@@ -2652,7 +2652,7 @@
       "pnote": "名称关键词：文旅、酒店",
       "classification_source": "keyword",
       "num": "80",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_611ea034d5d84f89b71452053297424b",
@@ -2684,7 +2684,7 @@
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
       "num": "81",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_a4f49d8aa5734224b1cdedc6707738d7",
@@ -2716,7 +2716,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "82",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_c33e8b8a7a5c45a8a7746c76d9e33e19",
@@ -2748,7 +2748,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "83",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_44F5FAE238634E68BD68279EDAE278F3",
@@ -2781,7 +2781,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "84",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_bc93baf652b249a191ed4383604d7b04",
@@ -2813,7 +2813,7 @@
       "pnote": "名称关键词：仓储、物流",
       "classification_source": "keyword",
       "num": "85",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_660d35fa453848bcb5523490e53625d3",
@@ -2845,7 +2845,7 @@
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
       "num": "86",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_c4c39dfa801c461480aabbae1aa79326",
@@ -2877,7 +2877,7 @@
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
       "num": "87",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_8e581a1011094674a59b9dccecb642cc",
@@ -2909,7 +2909,7 @@
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
       "num": "88",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_2d2e4884bc92462a985ba7757ed59f10",
@@ -2941,7 +2941,7 @@
       "pnote": "名称关键词：保租房",
       "classification_source": "keyword",
       "num": "89",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_858e70129c204e8ca8a963a0fa00fffa",
@@ -2973,7 +2973,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "90",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_2fedfef7b676482a95c4ed32c4043f49",
@@ -3005,7 +3005,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "91",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_76f7af17f992438a81a9b100c5141a35",
@@ -3037,7 +3037,7 @@
       "pnote": "名称关键词：商业",
       "classification_source": "keyword",
       "num": "92",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_43180de30031439dbe40687bd3cf41e4",
@@ -3069,7 +3069,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "93",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_d88ec5abcd6e4304ba262aa585b4fbde",
@@ -3101,7 +3101,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "94",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_5a248a9b5dea42b38a9af2c486f60d2e",
@@ -3133,7 +3133,7 @@
       "pnote": "名称关键词：商业",
       "classification_source": "keyword",
       "num": "95",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_8fc676d3df944beaa7005fd6bc9e5eb1",
@@ -3165,7 +3165,7 @@
       "pnote": "名称关键词：公路、高速",
       "classification_source": "keyword",
       "num": "96",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_3C1DB3F91A9648DAB110E3DA2CBE449D",
@@ -3198,7 +3198,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "97",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_c323cc5aa0b5413f98321411ced9b498",
@@ -3230,7 +3230,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "98",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_e1b855cf474b4483aa1af044b24f93b6",
@@ -3262,7 +3262,7 @@
       "pnote": "名称关键词：商业",
       "classification_source": "keyword",
       "num": "99",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_217c2078fe384f489fb2f213030cfda8",
@@ -3294,7 +3294,7 @@
       "pnote": "名称关键词：商业",
       "classification_source": "keyword",
       "num": "100",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_33d26d6eac804b31abce01535ef37b57",
@@ -3326,7 +3326,7 @@
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
       "num": "101",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_312a1337f4394ab59fee3e16b4cf1607",
@@ -3358,7 +3358,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "102",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_66b5f08f3f41476b9f785c2d0f596d7b",
@@ -3390,7 +3390,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "103",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_53025762E07841769C0752128D5803F3",
@@ -3423,7 +3423,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "104",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_f400fac68939483fb2a6577930181456",
@@ -3455,7 +3455,7 @@
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
       "num": "105",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_36eadfbbc67f4ff9866df503fb2773d0",
@@ -3487,7 +3487,7 @@
       "pnote": "名称关键词：工业",
       "classification_source": "keyword",
       "num": "106",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_4b1f60e601774066bbb96f5ffe8d5861",
@@ -3519,7 +3519,7 @@
       "pnote": "名称关键词：产业园",
       "classification_source": "keyword",
       "num": "107",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_3c372d322d2e4a4ca54c1b2d77aa3fdc",
@@ -3551,7 +3551,7 @@
       "pnote": "名称关键词：广场",
       "classification_source": "keyword",
       "num": "108",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_a7bae8a2d83544288dcc29dfb90457f7",
@@ -3583,7 +3583,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "109",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_23a0510963724938a704512dbf26f4f2",
@@ -3615,7 +3615,7 @@
       "pnote": "名称关键词：水务",
       "classification_source": "keyword",
       "num": "110",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_608a7a39abba40e9b6a2af7681d66f43",
@@ -3647,7 +3647,7 @@
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
       "num": "111",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_71d38b93885c4fb8a9da4dfa5258bba6",
@@ -3679,7 +3679,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "112",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_24cfbda989614db4b858a12f83a0eaec",
@@ -3711,7 +3711,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "113",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_B97CD5F5352244F1ACC26707A2786005",
@@ -3744,7 +3744,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "114",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_95b846a6aabc48a1ab5e9a168a7f05ee",
@@ -3776,7 +3776,7 @@
       "pnote": "名称关键词：水务",
       "classification_source": "keyword",
       "num": "115",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_2e907a8b39a0485184ed03b170fdc10d",
@@ -3808,7 +3808,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "116",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_82a0db8056254a6e81bfaf0684b79026",
@@ -3840,7 +3840,7 @@
       "pnote": "名称关键词：广场",
       "classification_source": "keyword",
       "num": "117",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_305372b0865a4332a5236bbaac464156",
@@ -3872,7 +3872,7 @@
       "pnote": "名称关键词：住房租赁、租赁住房",
       "classification_source": "keyword",
       "num": "118",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_6235cf1b296b424394be359f01201227",
@@ -3904,7 +3904,7 @@
       "pnote": "名称关键词：产业园、园区",
       "classification_source": "keyword",
       "num": "119",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_9748b85733594cf0884070dc269ac79a",
@@ -3936,7 +3936,7 @@
       "pnote": "名称关键词：产业园",
       "classification_source": "keyword",
       "num": "120",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_53695",
@@ -3968,7 +3968,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "121",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_1ac6d26a734c4aefb3e327fa9dc96efe",
@@ -4000,7 +4000,7 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "num": "122",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_5b048a3742404af4b74fb5e87851913e",
@@ -4032,7 +4032,7 @@
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
       "num": "123",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_2e46db5dcd7943f899eb9f7e35c49209",
@@ -4064,7 +4064,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "124",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_52840",
@@ -4096,7 +4096,7 @@
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
       "num": "125",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_47475",
@@ -4128,7 +4128,7 @@
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
       "num": "126",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_52926",
@@ -4160,7 +4160,7 @@
       "pnote": "名称无明确资产关键词",
       "classification_source": "unknown",
       "num": "127",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_50209",
@@ -4192,7 +4192,7 @@
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
       "num": "128",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SZSE_1220D502C98648E9B80207112269B2B0",
@@ -4225,7 +4225,7 @@
       "pnote": "名称关键词：商业",
       "classification_source": "keyword",
       "num": "129",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_46546",
@@ -4257,7 +4257,7 @@
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
       "num": "130",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     },
     {
       "id": "SSE_36404",
@@ -4289,7 +4289,7 @@
       "pnote": "名称关键词：大桥",
       "classification_source": "keyword",
       "num": "131",
-      "link_checked_at": "2026-10-14T15:06:40+08:00"
+      "link_checked_at": "2026-10-14T16:18:40+08:00"
     }
   ]
 }
