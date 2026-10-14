@@ -1,2 +1,108 @@
-# reits-research-dashboard
-沪深机构间 REITs 项目跟踪：双关键词补漏、原始项目链接与可扩展研究看板
+# REITs 研究看板
+
+沪深交易所机构间 REITs／持有型不动产 ABS 项目库。复现并改进
+[tingdall/reits-dashboard](https://github.com/tingdall/reits-dashboard)，保留原项目 MIT 许可和作者署名。
+
+本仓库为私有仓库，当前未启用公网网页发布。页面可以在本地运行。
+
+## 当前版本
+
+- 两所同时搜索 **持有型不动产** 与 **机构间REIT**，取并集并按官方项目 ID 去重。
+- 2026-10-14 实际抓取：**131 条**，上交所 **109** 条、深交所 **22** 条，比原版单关键词口径增加 **11** 条。
+- 每条记录保留官方项目 ID、命中关键词、原始项目详情网页；深交所还保留原始详情数据接口。
+- 分页依据服务端元数据，支持接口实际每页大小与请求值不一致；拒绝重复页、错误响应和不完整快照。
+- 搜索、交易所／类别／状态／关键词筛选，统计、图表和表格统一联动。
+- 支持关注项目、浏览器内手动分类覆盖、排序、分页和 CSV 导出。
+- 预留独立公募 REITs 页签，尚未接入公募行情或基金数据。
+
+## 本地查看
+
+需要 Python 3.9 及以上；抓取与测试仅使用标准库。
+
+```bash
+git clone https://github.com/Hans-Huang2004/reits-research-dashboard.git
+cd reits-research-dashboard
+python3 -m http.server 8765 --bind 127.0.0.1
+```
+
+浏览器打开 <http://127.0.0.1:8765/>。通过 HTTP 服务读取 JSON，不能直接双击 `index.html` 后期待浏览器允许 `file://` 数据请求。
+
+## 更新数据
+
+```bash
+python3 -m collectors.institutional --verify-links
+```
+
+脚本抓取两所、两个关键词的全部列表页，补齐深交所详情，再核验每条记录的官方详情身份，成功后原子写入 `data/institutional.json` 和 `snapshots/YYYY-MM-DD.json`。任一关键词／列表页或必需链接核验失败会中止，保留旧完整快照。
+
+需要保留原始证据时：
+
+```bash
+python3 -m collectors.institutional --verify-links --raw-dir raw/2026-10-14
+```
+
+仓库的 `Refresh institutional REIT data` 工作流每天设定为北京时间 **08:15**（UTC 00:15），也可在 Actions 页手动运行。实际启动时间可能受 GitHub 调度影响，页面展示数据自己的更新时间。无需个人访问令牌或其他外部密钥。
+
+## 数据口径
+
+一条记录代表一个交易所申报／审核项目，不能等同于一只已发行证券或一个独立底层资产。
+
+- `amt`：**拟发行金额，单位亿元**；不是已发行规模、存续规模或市值。
+- `status=4`：审核通过；不等于完成发行。
+- `is_expansion`：名称中包含扩募，作为独立申报记录保留。
+- 名称关键词匹配是项目纳入口径，不代替对交易结构的法律或投资判断。
+- 名称不能确认资产类别的项目保留“待分类”，不默认归为综合业态。
+- `classification_source` 区分关键词、人工覆盖和待分类。
+- 浏览器内关注和分类保存在当前浏览器。更换设备不会自动同步；当前可通过 CSV 导出筛选结果，尚未实现本地标记的 JSON 备份。
+- 仓库长期人工分类放在 `config/classification_overrides.json`；格式为项目 ID 到分类字段的映射，刷新不会覆盖它。
+
+示例：
+
+```json
+{
+  "SSE_官方项目ID": {
+    "ptype": "产权类",
+    "psub": "租赁住房",
+    "pnote": "依据原始项目披露核验"
+  }
+}
+```
+
+当前完整性是“两所两个关键词的全部列表页已获取”，不表示所有可能的机构间 REITs 都一定出现在这些名称查询中。
+
+## 项目结构
+
+| 路径 | 用途 |
+| --- | --- |
+| `index.html`、`assets/` | 页面、样式与交互 |
+| `collectors/institutional.py` | 官方 API 采集、规范化、去重、链接身份核验 |
+| `data/institutional.json` | 页面读取的当前完整数据 |
+| `snapshots/` | 按日期保留的完整快照 |
+| `raw/` | 首次采集的原始响应证据 |
+| `config/classification_overrides.json` | 仓库内人工分类覆盖 |
+| `tests/` | 纯离线回归与真实响应小样本 |
+| `scripts/validate_data.py` | 发布前的完整性、唯一性和原始链接检查 |
+| `scripts/build_static.py` | 生成静态站点 `dist/` |
+| `docs/source-links.md` | 官方链接机制和补漏证据 |
+| `.github/workflows/` | 检查、定时刷新及手动网页发布配置 |
+
+## 验证
+
+```bash
+python3 -m unittest discover -s tests -v
+node --check assets/app.js
+python3 scripts/validate_data.py data/institutional.json
+python3 scripts/build_static.py
+```
+
+Node 只用于 JavaScript 语法检查，查看页面和采集数据不需要安装 Node。
+
+## 后续公募 REITs
+
+公募部分使用独立采集器和 `data/public_reits.json`，共享展示组件。基金代码、行情、现金分配、运营指标及公告与机构间申报记录分开建模和统计；首版不填充示例基金或虚构行情。
+
+## 网站发布
+
+当前只创建并保存私有仓库。`Publish static dashboard (explicit opt-in)` 工作流不会默认发布，只有明确配置 `ENABLE_PUBLIC_PAGES=true` 并手动运行才部署。GitHub Pages 可用性取决于账号／仓库计划；网站访问范围须在启用时单独确认，不能从仓库的 Private 状态推断网站也私有。
+
+数据准确性及披露口径以交易所官网为准。代码沿用 MIT；公开数据及来源网站内容的权利归相应权利人。

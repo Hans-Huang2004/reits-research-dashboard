@@ -1,0 +1,34 @@
+name: Refresh institutional REIT data
+on:
+  schedule:
+    - cron: '15 0 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: institutional-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Check collector offline
+        run: python -m unittest discover -s tests -q
+      - name: Collect both exchanges and both keywords
+        run: python -m collectors.institutional --output data/institutional.json --archive-dir snapshots --verify-links
+      - name: Check complete snapshot
+        run: python scripts/validate_data.py data/institutional.json
+      - name: Commit complete data only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/institutional.json snapshots/
+          if ! git diff --cached --quiet; then
+            git commit -m "data: refresh institutional REIT snapshot"
+            git push
+          fi

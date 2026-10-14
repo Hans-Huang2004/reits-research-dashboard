@@ -1,0 +1,24 @@
+[
+  {
+    "metadata": {
+      "catalogid": "xmjdxx",
+      "pageno": 1,
+      "pagecount": 1,
+      "pagesize": 20,
+      "recordcount": 1
+    },
+    "data": [
+      {
+        "rowid": "1",
+        "zqmc": "<a href='javascript:void(0);'  a-back=1 a-param='/ShowReport/data?SHOWTYPE=JSON&CATALOGID=xmjdxx_xq&TABKEY=tab1&xmbh=5CCD030CB38E4250904A2C05D85E0342&type=2'>国金资管-TCL新能源不动产资产支持专项计划（机构间REIT）（乡村振兴）</a>",
+        "cxsjc": "<a target='_blank' href='http://bond.szse.cn/disclosure/progressinfo/query/index.html?txtCxs=%E5%9B%BD%E9%87%91%E8%B5%84%E7%AE%A1'>国金资管</a>",
+        "zqlb": "ABS",
+        "nfxje": "9.72",
+        "xmzt": "已反馈",
+        "xmslrq": "2026-09-21",
+        "xmztgxrq": "2026-10-12"
+      }
+    ],
+    "error": null
+  }
+]

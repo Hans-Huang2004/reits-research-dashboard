@@ -1,0 +1,24 @@
+name: Check dashboard
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Offline regressions
+        run: python -m unittest discover -s tests -v
+      - name: JavaScript syntax
+        run: node --check assets/app.js
+      - name: Validate saved dataset
+        run: python scripts/validate_data.py data/institutional.json
