@@ -1,5 +1,6 @@
 /* REITs dashboard for project lists collected directly from official SSE/SZSE APIs. */
 'use strict';
+import { enhanceFilterSelects, syncFilterSelects, closeFilterMenu } from './filter-select.js?v=20261014-filter-menu-1';
 
 const DATA_URL = new URL('../data/institutional.json', import.meta.url);
 const STORAGE_PREFIX = `reits:${DATA_URL.pathname}:v1`;
@@ -153,6 +154,7 @@ function fillSelect(id, values, labelFor = value => value) {
   select.replaceChildren(first);
   for (const value of values) { const option = document.createElement('option'); option.value = value; option.textContent = labelFor(value); select.appendChild(option); }
   select.value = selected;
+  if (select.selectedIndex < 0) { select.value = ''; state[id] = ''; }
 }
 function rebuildOptions() {
   fillSelect('rights', RIGHTS);
@@ -173,6 +175,7 @@ function selectClassificationFilter(key, value) {
   render();
 }
 function render() {
+  syncFilterSelects();
   const data = currentRecords();
   const pages = Math.max(1, Math.ceil(data.length / state.pageSize));
   state.page = Math.min(pages, Math.max(1, state.page));
@@ -274,6 +277,7 @@ async function loadData() {
   } finally { clearTimeout(timer); $('loading-state').hidden = true; $('reload').disabled = false; }
 }
 function openDetail(id) {
+  closeFilterMenu();
   const record = byId.get(id);
   if (!record) return;
   const category = classification(record);
@@ -362,10 +366,11 @@ $('rows').addEventListener('click', event => {
 });
 document.querySelectorAll('[data-close]').forEach(button => button.addEventListener('click', () => $(button.dataset.close).close()));
 document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', event => { if (event.target === dialog) { const box = dialog.getBoundingClientRect(); if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close(); } }));
-$('source-nav').addEventListener('click', () => $('source-dialog').showModal());
-$('classification-help').addEventListener('click', () => $('source-dialog').showModal());
+$('source-nav').addEventListener('click', () => { closeFilterMenu(); $('source-dialog').showModal(); });
+$('classification-help').addEventListener('click', () => { closeFilterMenu(); $('source-dialog').showModal(); });
 $('taxonomy-guide').innerHTML = RIGHTS.map(rights => `<div class="taxonomy-group"><strong>${escapeHTML(rights)}</strong><span>${escapeHTML(TAXONOMY[rights].join('、'))}</span></div>`).join('');
 function showModule(name) {
+  closeFilterMenu();
   const isPublic = name === 'public'; $('institutional-panel').hidden = isPublic; $('public-panel').hidden = !isPublic;
   for (const [id, active] of [['institutional-nav', !isPublic], ['public-nav', isPublic]]) { $(id).classList.toggle('active', active); if (active) $(id).setAttribute('aria-current', 'page'); else $(id).removeAttribute('aria-current'); }
 }
@@ -373,5 +378,6 @@ $('institutional-nav').addEventListener('click', () => showModule('institutional
 $('public-nav').addEventListener('click', () => showModule('public'));
 $('export').addEventListener('click', exportCSV);
 $('reload').addEventListener('click', loadData);
+enhanceFilterSelects();
 render();
 loadData();
