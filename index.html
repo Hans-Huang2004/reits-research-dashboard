@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="直接采集上交所、深交所机构间 REITs 项目列表，跟踪公开申报信息、审核进度与底层资产。">
   <title>REITs 研究看板</title>
-  <link rel="stylesheet" href="./assets/styles.css">
+  <link rel="stylesheet" href="./assets/styles.css?v=20261014-classification-1">
 </head>
 <body>
 <div class="app">
@@ -22,13 +22,14 @@
       <div class="stats" id="stats" aria-live="polite"></div>
       <div class="section-line"><h2>当前筛选概览</h2><div class="segment" aria-label="图表统计方式"><button data-mode="count" aria-pressed="true">按记录数</button><button data-mode="amount" aria-pressed="false">按拟发行金额</button></div></div>
       <div class="chart-grid">
+        <section class="chart-panel" aria-label="权利类型分布"><div class="chart-heading"><h3>权利类型分布</h3><button class="text-button" id="classification-help">分类口径</button></div><p class="chart-note" id="rights-chart-note">当前筛选范围 · 点击图中类别筛选</p><div id="rights-chart"></div></section>
+        <section class="chart-panel" aria-label="资产细类分布"><h3>资产细类分布</h3><p class="chart-note" id="asset-chart-note">全部细类 · 点击图中类别筛选</p><div id="asset-chart"></div></section>
         <section class="chart-panel" aria-label="项目状态分布"><h3>项目状态分布</h3><div id="status-chart"></div></section>
         <section class="chart-panel" aria-label="计划管理人排名"><h3>计划管理人 TOP5</h3><div id="manager-chart"></div></section>
-        <section class="chart-panel" aria-label="资产类型分布"><h3>资产类型 TOP5</h3><div id="asset-chart"></div></section>
       </div>
       <section class="project-box" aria-label="项目列表">
         <div class="project-top"><h2>项目明细 <span id="record-total"></span></h2><div class="segment" aria-label="交易所筛选"><button data-ex="" aria-pressed="true">全部</button><button data-ex="上交所" aria-pressed="false">上交所</button><button data-ex="深交所" aria-pressed="false">深交所</button></div></div>
-        <div class="filters"><label class="field">搜索项目／机构<input id="search" placeholder="项目名称、原始权益人、管理人" type="search"></label><label class="field">资产类别<select id="asset"><option value="">全部类别</option></select></label><label class="field">项目状态<select id="status"><option value="">全部状态</option></select></label><label class="field">名称命中口径<select id="match"><option value="">全部命中</option><option value="持有型不动产">持有型不动产</option><option value="机构间REIT">机构间 REIT</option></select></label><button class="button" id="reset">重置</button></div>
+        <div class="filters"><label class="field">搜索项目／机构<input id="search" placeholder="项目名称、原始权益人、管理人" type="search"></label><label class="field">权利类型<select id="rights"><option value="">全部大类</option></select></label><label class="field">资产细类<select id="asset"><option value="">全部细类</option></select></label><label class="field">项目状态<select id="status"><option value="">全部状态</option></select></label><label class="field">名称命中口径<select id="match"><option value="">全部命中</option><option value="持有型不动产">持有型不动产</option><option value="机构间REIT">机构间 REIT</option></select></label><button class="button" id="reset">重置</button></div>
         <div class="filter-foot"><span id="scope-text" class="live" aria-live="polite"></span><div class="filter-extras"><label><input type="checkbox" id="hide-archived">隐藏历史保留记录</label><label><input type="checkbox" id="saved-only">仅看关注项目</label></div></div>
         <div class="table-wrap"><table><caption class="sr">机构间 REITs 公开申报记录；拟发行金额单位为亿元</caption><thead><tr><th scope="col" class="name-cell">项目名称与分类</th><th scope="col">交易所</th><th scope="col" class="numeric"><button class="sort-button" data-sort="amount">拟发行金额 ↕</button></th><th scope="col">状态</th><th scope="col">计划管理人</th><th scope="col" aria-sort="descending"><button class="sort-button" data-sort="updated">更新日期 ↓</button></th><th scope="col">官方来源</th></tr></thead><tbody id="rows"></tbody></table></div>
         <div class="pagination"><span id="page-count"></span><div class="pages"><label class="page-size">每页 <select id="page-size" aria-label="每页记录数"><option value="10">10 条</option><option value="25">25 条</option><option value="50">50 条</option></select></label><button class="button" id="prev" aria-label="上一页">上一页</button><span id="page-number"></span><button class="button" id="next" aria-label="下一页">下一页</button></div></div>
@@ -42,8 +43,8 @@
   </main>
 </div>
 <dialog id="detail-dialog" aria-labelledby="detail-heading"><div class="dialog-head"><h2 id="detail-heading">项目详情</h2><button class="button" data-close="detail-dialog">关闭</button></div><div id="detail-body"></div></dialog>
-<dialog id="source-dialog" aria-labelledby="source-heading"><div class="dialog-head"><h2 id="source-heading">数据口径与来源</h2><button class="button" data-close="source-dialog">关闭</button></div><ul class="source-summary"><li>项目列表直接采集自上交所、深交所官方接口。两所分别搜索“持有型不动产”和“机构间REIT”，读取全部分页，合并后按交易所与官方项目 ID 去重。</li><li>统计单位为申报记录；首发与扩募可能对应同一底层资产。审核通过不等于已完成发行。</li><li>拟发行金额采用申报口径，包含当前筛选中的所有审核状态，不代表市场实际发行或存续规模。未披露金额不计入汇总。</li><li>资产分类根据名称关键词初判；信息不足时列为“待分类”。手动分类和关注项目仅保存在当前浏览器。</li><li>每条记录的项目名称和来源按钮均使用该项目的官方详情链接。分别打开上交所或深交所的对应项目详情页。链接未核验会在详情中标明。</li><li>历史保留记录表示本轮未再次检索到的已有记录，不自动视为终止；可单独隐藏。抓取不完整或数据过期时会提示。</li></ul><div class="source-summary" id="source-metadata"></div><p><a href="./data/institutional.json" target="_blank" rel="noopener noreferrer">查看本期数据文件 ↗</a></p></dialog>
+<dialog id="source-dialog" aria-labelledby="source-heading"><div class="dialog-head"><h2 id="source-heading">数据口径与来源</h2><button class="button" data-close="source-dialog">关闭</button></div><ul class="source-summary"><li>项目列表直接采集自上交所、深交所官方接口。两所分别搜索“持有型不动产”和“机构间REIT”，读取全部分页，合并后按交易所与官方项目 ID 去重。</li><li>统计单位为申报记录；首发与扩募可能对应同一底层资产。审核通过不等于已完成发行。</li><li>拟发行金额采用申报口径，包含当前筛选中的所有审核状态，不代表市场实际发行或存续规模。未披露金额不计入汇总。</li><li>底层资产按“权利类型 → 资产细类”组织，名称关键词初判属于研究分类。名称不足或线索冲突时保留“待分类”，权利归属应以披露文件为准。仓库人工分类和浏览器本地修订均在详情中显示来源与依据。</li><li>每条记录的项目名称和来源按钮均使用该项目的官方详情链接。分别打开上交所或深交所的对应项目详情页。链接未核验会在详情中标明。</li><li>历史保留记录表示本轮未再次检索到的已有记录，不自动视为终止；可单独隐藏。抓取不完整或数据过期时会提示。</li></ul><section class="taxonomy-summary"><h3>底层资产分类口径</h3><div id="taxonomy-guide"></div><p>信息不足的记录单列为待分类，不并入综合业态。关注项目与本地分类仅保存在当前浏览器。</p></section><div class="source-summary" id="source-metadata"></div><p><a href="./data/institutional.json" target="_blank" rel="noopener noreferrer">查看本期数据文件 ↗</a></p></dialog>
 <noscript><p class="data-notice">请启用 JavaScript 后查看项目库。<a href="./data/institutional.json">下载数据文件</a></p></noscript>
-<script type="module" src="./assets/app.js"></script>
+<script type="module" src="./assets/app.js?v=20261014-classification-1"></script>
 </body>
 </html>

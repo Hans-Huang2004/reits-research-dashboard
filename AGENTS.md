@@ -11,6 +11,9 @@ Static HTML/CSS/JS plus Python standard-library collectors. Run locally with
 - Project identity is `(exchange, official project ID)`, never the row number.
 - Preserve exact official project detail links and keyword provenance.
 - Keep unknown asset classifications unknown; preserve repository overrides.
+- Keep the two-level classification taxonomy consistent in filters, charts,
+  detail views, local overrides and CSV exports. Normalize legacy labels
+  仓储物流 to 物流仓储 and 办公楼 to 办公 without losing browser-local marks.
 - Every UI statistic/chart must use the same filtered records as the table.
 - Institutional submissions and public REIT market/fund data are separate
   populations. Do not combine their amounts or statuses.
