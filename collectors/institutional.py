@@ -68,11 +68,15 @@ def classify_by_name(name):
         ("产权类", "物流仓储", ["物流", "仓储", "冷链", "快递"]),
         ("产权类", "产业园", ["产业园", "园区", "科技园", "工业", "厂房", "孵化"]),
         ("产权类", "办公", ["办公", "写字楼", "总部"]),
-        ("产权类", "文旅类", ["文旅", "旅游", "酒店", "景区", "度假", "乐园"]),
-        ("产权类", "消费", ["消费", "商业", "广场", "购物中心", "百货", "商场", "零售", "农贸", "商厦"]),
+        ("产权类", "文旅类", ["文旅", "旅游", "酒店", "景区", "度假", "乐园", "滑雪场"]),
+        ("产权类", "消费", ["消费", "商业", "广场", "购物中心", "百货", "商场", "零售", "农贸", "商厦", "商贸城", "批发市场", "义乌市场"]),
     ]
     n = text(name).casefold()
     hits = [(pt, sub, kw) for pt, sub, kws in groups for kw in kws if kw.casefold() in n]
+    # In an explicitly named shopping-mall project, 安居 in the issuer's
+    # name is not housing evidence. Explicit housing asset terms still conflict.
+    if "吾悦广场" in n:
+        hits = [hit for hit in hits if hit[2] != "安居"]
     categories = {(pt, sub) for pt, sub, _ in hits}
     if len(categories) == 1:
         pt, sub = next(iter(categories))
@@ -184,11 +188,45 @@ def http_get_json(url, params, referer):
     raise CollectionError("Request failed: " + url + " (" + str(error) + ")")
 
 
+def _pagination_metadata(exchange, meta):
+    """Require explicit pagination evidence before treating a list as complete."""
+    if not isinstance(meta,dict):
+        raise CollectionError(exchange + " pagination metadata is missing or malformed")
+
+    def integer(keys, minimum):
+        key = next((key for key in keys if key in meta),None)
+        if key is None:
+            raise CollectionError(exchange + " pagination metadata is missing " + keys[0])
+        value = meta[key]
+        if isinstance(value,str) and re.fullmatch(r"[0-9]+",value.strip()):
+            value = int(value.strip())
+        if isinstance(value,bool) or not isinstance(value,int) or value < minimum:
+            raise CollectionError(exchange + " pagination metadata has invalid " + key)
+        return value
+
+    if exchange == "SSE":
+        total = integer(("total",),0)
+        size = integer(("pageSize","page_size"),1)
+        count = integer(("pageCount","pagecount"),0)
+        page = integer(("pageNo","pageno"),1)
+    else:
+        total = integer(("recordcount",),0)
+        size = integer(("pagesize",),1)
+        count = integer(("pagecount",),0)
+        page = integer(("pageno","pageNo"),1)
+    expected_count = (total + size - 1) // size
+    # Official APIs can represent an empty list as zero pages or one empty page.
+    if count != expected_count and not (total == 0 and count == 1):
+        raise CollectionError(exchange + " pagination metadata has inconsistent page count")
+    return total,size,count,page
+
+
 def _pages(exchange, keyword, request=None):
     fetch = request or http_get_json
     all_rows, raw_pages, advertised_total = [], [], None
     page, expected_pages, actual_size = 1, 1, PAGE_SIZE
     page_fingerprints = set()
+    advertised_pagination = None
     while page <= expected_pages:
         if page > MAX_PAGES:
             raise CollectionError("Pagination exceeds protective limit")
@@ -200,10 +238,7 @@ def _pages(exchange, keyword, request=None):
                 raise CollectionError("SSE response schema changed")
             if any(packet.get(key) for key in ("error","actionErrors","fieldErrors")):
                 raise CollectionError("SSE reported an API error")
-            rows, meta = packet.get("result"), packet.get("pageHelp") or {}
-            total = int(meta.get("total",len(rows or [])))
-            actual_size = int(meta.get("pageSize") or meta.get("page_size") or PAGE_SIZE)
-            new_pages = int(meta.get("pageCount") or meta.get("pagecount") or math.ceil(total/actual_size) or 1)
+            rows, meta = packet.get("result"), packet.get("pageHelp")
         else:
             params = {"SHOWTYPE":"JSON", "CATALOGID":"xmjdxx", "txtZqmc":keyword, "pageSize":PAGE_SIZE, "pageNo":page}
             packet = fetch(SZSE_ENDPOINT, params, SZSE_REFERER)
@@ -211,13 +246,15 @@ def _pages(exchange, keyword, request=None):
                 raise CollectionError("SZSE response schema changed")
             if packet[0].get("error"):
                 raise CollectionError("SZSE reported an API error")
-            rows, meta = packet[0].get("data"), packet[0].get("metadata") or {}
-            total = int(meta.get("recordcount",len(rows or [])))
-            actual_size = int(meta.get("pagesize") or PAGE_SIZE)
-            new_pages = int(meta.get("pagecount") or math.ceil(total/actual_size) or 1)
+            rows, meta = packet[0].get("data"), packet[0].get("metadata")
         if not isinstance(rows,list):
             raise CollectionError(exchange + " page is not a record list")
-        returned_page = int(meta.get("pageNo") or meta.get("pageno") or page)
+        total,actual_size,new_pages,returned_page = _pagination_metadata(exchange,meta)
+        pagination = (actual_size,new_pages)
+        if advertised_pagination is None:
+            advertised_pagination = pagination
+        elif pagination != advertised_pagination:
+            raise CollectionError(exchange + " pagination metadata changed during collection")
         if returned_page != page:
             raise CollectionError(exchange + " API returned a different page than requested")
         fingerprint = hashlib.sha256(json.dumps(rows,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
@@ -234,8 +271,8 @@ def _pages(exchange, keyword, request=None):
         all_rows.extend(rows)
         raw_pages.append(packet)
         page += 1
-    if len(all_rows) < (advertised_total or 0):
-        raise CollectionError(exchange + " returned fewer records than its advertised total")
+    if len(all_rows) != advertised_total:
+        raise CollectionError(exchange + " returned a different record count than its advertised total")
     return all_rows, {"keyword":keyword, "advertised_total":advertised_total or 0,
                       "raw_count":len(all_rows), "pages":len(raw_pages), "actual_page_size":actual_size,
                       "raw_pages":raw_pages}

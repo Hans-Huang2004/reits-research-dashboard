@@ -203,6 +203,108 @@ class NormalizeAndMergeTests(OfflineCase):
 
 
 class PaginationTests(OfflineCase):
+    def pagination_cases(self):
+        return (
+            (collector.fetch_sse, sse_response, [sse_raw()], "pageHelp",
+             ("total", "pageSize", "pageCount", "pageNo")),
+            (collector.fetch_szse, szse_response, [szse_raw()], "metadata",
+             ("recordcount", "pagesize", "pagecount", "pageno")),
+        )
+
+    def test_nonempty_first_page_requires_pagination_metadata(self):
+        for loader, response, records, field, keys in self.pagination_cases():
+            for metadata in (None, {}, [], "not an object"):
+                with self.subTest(exchange=loader.__name__, metadata=metadata):
+                    packet = response(records)
+                    owner = packet if isinstance(packet, dict) else packet[0]
+                    owner[field] = metadata
+                    with self.assertRaisesRegex(collector.CollectionError, "pagination metadata"):
+                        loader("机构间REIT", request=lambda *args: packet)
+
+    def test_each_pagination_field_is_required(self):
+        for loader, response, records, field, keys in self.pagination_cases():
+            for key in keys:
+                with self.subTest(exchange=loader.__name__, missing=key):
+                    packet = response(records)
+                    owner = packet if isinstance(packet, dict) else packet[0]
+                    del owner[field][key]
+                    with self.assertRaisesRegex(collector.CollectionError, "pagination metadata is missing"):
+                        loader("机构间REIT", request=lambda *args: packet)
+
+    def test_invalid_pagination_values_are_rejected(self):
+        for loader, response, records, field, keys in self.pagination_cases():
+            for key in keys:
+                for value in (None, "", True, -1, 1.5, "1.5", []):
+                    with self.subTest(exchange=loader.__name__, field=key, value=value):
+                        packet = response(records)
+                        owner = packet if isinstance(packet, dict) else packet[0]
+                        owner[field][key] = value
+                        with self.assertRaisesRegex(collector.CollectionError, "pagination metadata has invalid"):
+                            loader("机构间REIT", request=lambda *args: packet)
+            for key in keys[1::2]:
+                with self.subTest(exchange=loader.__name__, nonpositive=key):
+                    packet = response(records)
+                    owner = packet if isinstance(packet, dict) else packet[0]
+                    owner[field][key] = 0
+                    with self.assertRaisesRegex(collector.CollectionError, "pagination metadata has invalid"):
+                        loader("机构间REIT", request=lambda *args: packet)
+
+    def test_page_count_cannot_hide_unfetched_pages(self):
+        packet = sse_response([sse_raw(source_id=f"{n:032x}") for n in range(205)])
+        packet["pageHelp"]["pageCount"] = 1
+        with self.assertRaisesRegex(collector.CollectionError, "inconsistent page count"):
+            collector.fetch_sse("机构间REIT", request=lambda *args: packet)
+
+    def test_missing_pagination_metadata_on_later_page_aborts(self):
+        records = [sse_raw(source_id=f"{n:032x}") for n in range(101)]
+        def request(url, params, referer):
+            page = requested_page(params)
+            packet = sse_response(records, page=page)
+            if page == 2:
+                del packet["pageHelp"]
+            return packet
+        with self.assertRaisesRegex(collector.CollectionError, "pagination metadata"):
+            collector.fetch_sse("机构间REIT", request=request)
+
+    def test_valid_empty_lists_allow_zero_or_one_reported_page(self):
+        for loader, response, records, field, keys in self.pagination_cases():
+            for page_count in (0, 1):
+                with self.subTest(exchange=loader.__name__, pages=page_count):
+                    packet = response([])
+                    owner = packet if isinstance(packet, dict) else packet[0]
+                    owner[field][keys[2]] = page_count
+                    rows, metadata = loader("机构间REIT", request=lambda *args: packet)
+                    self.assertEqual(rows, [])
+                    self.assertEqual(metadata["advertised_total"], 0)
+                    self.assertEqual(metadata["pages"], 1)
+
+    def test_zero_total_with_nonempty_rows_is_not_complete(self):
+        packet = sse_response([sse_raw()])
+        packet["pageHelp"]["total"] = 0
+        with self.assertRaisesRegex(collector.CollectionError, "different record count"):
+            collector.fetch_sse("机构间REIT", request=lambda *args: packet)
+
+    def test_numeric_string_pagination_values_are_accepted(self):
+        for loader, response, records, field, keys in self.pagination_cases():
+            with self.subTest(exchange=loader.__name__):
+                packet = response(records)
+                owner = packet if isinstance(packet, dict) else packet[0]
+                owner[field] = {key: str(value) for key, value in owner[field].items()}
+                rows, metadata = loader("机构间REIT", request=lambda *args: packet)
+                self.assertEqual(len(rows), 1)
+                self.assertEqual(metadata["advertised_total"], 1)
+
+    def test_page_size_changing_during_collection_is_rejected(self):
+        records = [sse_raw(source_id=f"{n:032x}") for n in range(205)]
+        def request(url, params, referer):
+            page = requested_page(params)
+            packet = sse_response(records, page=page)
+            if page == 2:
+                packet["pageHelp"]["pageSize"] = 99
+            return packet
+        with self.assertRaisesRegex(collector.CollectionError, "pagination metadata changed"):
+            collector.fetch_sse("机构间REIT", request=request)
+
     def test_sse_reads_all_three_reported_pages(self):
         records = [sse_raw(source_id=f"sse-{n:03d}") for n in range(205)]
         pages = []
