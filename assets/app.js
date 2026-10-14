@@ -1,4 +1,4 @@
-/* REITs research dashboard. The published data file is the single source of records. */
+/* REITs dashboard for project lists collected directly from official SSE/SZSE APIs. */
 'use strict';
 
 const DATA_URL = new URL('../data/institutional.json', import.meta.url);

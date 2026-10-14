@@ -203,7 +203,7 @@ class NormalizeAndMergeTests(OfflineCase):
 
 
 class PaginationTests(OfflineCase):
-    def test_sse_reads_third_page_above_original_200_limit(self):
+    def test_sse_reads_all_three_reported_pages(self):
         records = [sse_raw(source_id=f"sse-{n:03d}") for n in range(205)]
         pages = []
         def request(url, params, referer):

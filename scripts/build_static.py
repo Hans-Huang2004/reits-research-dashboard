@@ -1,4 +1,4 @@
-"""Copy the browser app and reviewed data into a static distribution."""
+"""Build the static dashboard with project data collected from official exchanges."""
 from pathlib import Path
 import shutil
 

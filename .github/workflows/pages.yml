@@ -1,6 +1,12 @@
-name: Publish static dashboard (explicit opt-in)
+name: Publish dashboard to GitHub Pages
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
+  workflow_run:
+    workflows: [Refresh institutional REIT data]
+    types: [completed]
+    branches: [main]
 permissions:
   contents: read
 concurrency:
@@ -8,15 +14,21 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    if: ${{ vars.ENABLE_PUBLIC_PAGES == 'true' }}
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
     steps:
       - uses: actions/checkout@v6
+        with:
+          ref: main
       - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
       - name: Validate and build
         run: |
+          python -m unittest discover -s tests -q
           python scripts/validate_data.py data/institutional.json
           python scripts/build_static.py
       - uses: actions/configure-pages@v5
@@ -24,7 +36,6 @@ jobs:
         with:
           path: dist
   deploy:
-    if: ${{ vars.ENABLE_PUBLIC_PAGES == 'true' }}
     needs: build
     runs-on: ubuntu-latest
     permissions:

@@ -14,6 +14,9 @@ Static HTML/CSS/JS plus Python standard-library collectors. Run locally with
 - Every UI statistic/chart must use the same filtered records as the table.
 - Institutional submissions and public REIT market/fund data are separate
   populations. Do not combine their amounts or statuses.
-- Preserve MIT attribution to the upstream tingdall/reits-dashboard project.
-- The repository is private. Do not enable a public web deployment without an
-  explicit user instruction to publish the website.
+- Preserve required copyright and license notices in LICENSE.
+- Describe the project as direct collection of institutional REIT submissions
+  from the Shanghai and Shenzhen exchanges. Document actual source queries,
+  definitions, coverage, and quality checks.
+- Keep the source repository private. Publish the static dashboard through
+  GitHub Pages under the user's website deployment instruction.

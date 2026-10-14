@@ -1,4 +1,4 @@
-"""Collect institutional REIT project submissions from official SSE/SZSE APIs.
+"""Collect institutional REIT project lists directly from official SSE/SZSE APIs.
 
 Uses only Python's standard library. Lists are fetched for BOTH keywords and
 all reported pages. A failed list query aborts publication of the new snapshot.
@@ -341,7 +341,7 @@ def collect_snapshot(request=None, previous=None, overrides=None, raw_dir=None):
     now = datetime.now(ZoneInfo("Asia/Shanghai"))
     checksum = hashlib.sha256(json.dumps(items,ensure_ascii=False,sort_keys=True).encode()).hexdigest()
     return {"schema_version":1, "date":now.date().isoformat(), "updated_at":now.isoformat(timespec="seconds"),
-            "source_status":source_status, "coverage":{"complete":True,"keywords":list(KEYWORDS),"population":"沪深交易所项目名称匹配关键词的申报记录","unit":"亿元","count":len(items)},
+            "source_status":source_status, "coverage":{"complete":True,"keywords":list(KEYWORDS),"population":"直接采集沪深交易所项目名称匹配关键词的机构间 REITs 申报记录","unit":"亿元","count":len(items)},
             "changes":{"added_ids":sorted(current_ids-old_ids) if old_ids else [],"missing_ids":missing},
             "quality":{"duplicate_ids":0,"unknown_classification":sum(r["classification_source"]=="unknown" for r in items),"detail_warnings":warnings,"content_sha256":checksum},
             "items":items}
