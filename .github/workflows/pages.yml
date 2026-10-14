@@ -1,4 +1,4 @@
-name: Publish REITs project table to GitHub Pages
+name: Publish REITs project library to GitHub Pages
 on:
   push:
     branches: [main]

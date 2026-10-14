@@ -1,4 +1,4 @@
-"""Build the static project table with project data collected from official exchanges."""
+"""Build the static project library with project data collected from official exchanges."""
 from pathlib import Path
 import shutil
 
