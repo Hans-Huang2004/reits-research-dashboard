@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-15",
+  "updated_at": "2026-10-15T09:24:22+08:00",
+  "source_status": {
+    "SSE": {
+      "ok": true,
+      "total": 109,
+      "queries": [
+        {
+          "keyword": "持有型不动产",
+          "advertised_total": 103,
+          "raw_count": 103,
+          "pages": 2,
+          "actual_page_size": 100,
+          "unique_count": 103
+        },
+        {
+          "keyword": "机构间REIT",
+          "advertised_total": 6,
+          "raw_count": 6,
+          "pages": 1,
+          "actual_page_size": 100,
+          "unique_count": 6
+        }
+      ],
+      "list_endpoint": "https://query.sse.com.cn/sseQuery/commonSoaQuery.do"
+    },
+    "SZSE": {
+      "ok": true,
+      "total": 22,
+      "queries": [
+        {
+          "keyword": "持有型不动产",
+          "advertised_total": 17,
+          "raw_count": 17,
+          "pages": 1,
+          "actual_page_size": 20,
+          "unique_count": 17
+        },
+        {
+          "keyword": "机构间REIT",
+          "advertised_total": 5,
+          "raw_count": 5,
+          "pages": 1,
+          "actual_page_size": 20,
+          "unique_count": 5
+        }
+      ],
+      "list_endpoint": "https://bond.szse.cn/api/report/ShowReport/data"
+    }
+  },
+  "coverage": {
+    "complete": true,
+    "keywords": [
+      "持有型不动产",
+      "机构间REIT"
+    ],
+    "population": "直接采集沪深交易所项目名称匹配关键词的机构间 REITs 申报记录",
+    "unit": "亿元",
+    "count": 131
+  },
+  "quality": {
+    "duplicate_ids": 0,
+    "unknown_classification": 11,
+    "detail_warnings": [],
+    "content_sha256": "823277168e1e1696cc8f9bb42191eeefdfa18e50d02e20455f74524cd717bd91",
+    "classification_counts": {
+      "verified": 27,
+      "inferred": 6,
+      "keyword": 87,
+      "manual": 0,
+      "unknown": 11
+    },
+    "link_validation": {
+      "verified": 131,
+      "total": 131,
+      "checked_at": "2026-10-15T09:24:58+08:00",
+      "method": "official_detail_identity_and_official_page_route"
+    }
+  },
+  "changes": {
+    "added_ids": [],
+    "missing_ids": []
+  },
+  "raw_dir": "raw/2026-10-15/38665404074-1",
+  "raw_sha256": {
+    "raw/2026-10-15/38665404074-1/sse_holding_page1.json": "d5538a278c247fefb4a35abe8e750527ab99d36bc80045bb27fc9ba817d27f63",
+    "raw/2026-10-15/38665404074-1/sse_holding_page2.json": "7422695429e94158e72e406b9b37af7a4b2e582418b5fe46481ce064a6cbeec1",
+    "raw/2026-10-15/38665404074-1/sse_institutional_page1.json": "06192fbbd14f47ef6956a8d8d052ee405beb2a45b84b9be6f07e6cd321b91f20",
+    "raw/2026-10-15/38665404074-1/szse_detail_08DED90B438E4E6C9BD3C63CAC08E6D0.json": "263dc18208f176f03e27775b79dd5e55d38ef32473226aa2a20cb21ab3fd31e8",
+    "raw/2026-10-15/38665404074-1/szse_detail_1220D502C98648E9B80207112269B2B0.json": "5469d9aa344359a0834acd16b940ee3d8d08aab154a15601da6fb690645c8c99",
+    "raw/2026-10-15/38665404074-1/szse_detail_2A6C5D1546094747BF3B83B1EF7DEB55.json": "708f9cf831d1a7d45723924bde6bf756a11eed921c4fbc7c62551edb1ab71870",
+    "raw/2026-10-15/38665404074-1/szse_detail_3039710837684CF2BE105283EF0BE719.json": "828718b6149a9977ea3faf0c6d440cc2ecd202e39a4ef84c6ff55004df38acfc",
+    "raw/2026-10-15/38665404074-1/szse_detail_38076302302742DF88032E0BF60FCE8A.json": "e49163931eb5a4a17db2e23b0666ecdca27c090a060caf5db8a949ea9b7a745b",
+    "raw/2026-10-15/38665404074-1/szse_detail_3C1DB3F91A9648DAB110E3DA2CBE449D.json": "18f6d5e85922ee11f958bd4b43636cb70c88166dda1555fbfb95654f21819554",
+    "raw/2026-10-15/38665404074-1/szse_detail_4332659D9E3B4A598CC95FC6F37C84F0.json": "0fe05bec686bb87b0fe679e0c6b11633fdd1cd0c48f19cf31c978273a1f302e8",
+    "raw/2026-10-15/38665404074-1/szse_detail_44F5FAE238634E68BD68279EDAE278F3.json": "f1dd23972023773ae5299b02439e4651b8a36fe996fa30303f039689a4d09a85",
+    "raw/2026-10-15/38665404074-1/szse_detail_4A60D5E2DDEA40058B6116083A268A44.json": "306d4f638679ed581d8300cfdd074b537a71e4ee963333b55b020d030e30fff5",
+    "raw/2026-10-15/38665404074-1/szse_detail_53025762E07841769C0752128D5803F3.json": "cb51ef0539f8c522be8cfd0ce003102a8c3c7534ab7160b5f633d5650ad45140",
+    "raw/2026-10-15/38665404074-1/szse_detail_5CCD030CB38E4250904A2C05D85E0342.json": "f3ef5c9b2d57ec4e4efda58f65d0417557743a2a5c51a96620a45916c3656658",
+    "raw/2026-10-15/38665404074-1/szse_detail_75ADB37CB2B2485BB1201DE880F75588.json": "6c60cc1131d4faec53051a429b2c4b8af9679bec8bfb1023714fb361956f03b7",
+    "raw/2026-10-15/38665404074-1/szse_detail_8A1E09D85832487E8F5354EB6D049C8D.json": "e0da61f3ffcd329e5c01ce42e702076761db0acde24ec5e777c1c0eb2208dcec",
+    "raw/2026-10-15/38665404074-1/szse_detail_996C0CD8DDEA4A07A33E0B76885913BB.json": "63aad33b3e318bd752e46222c20672a9641c80205652f96290e9216895f4e7b0",
+    "raw/2026-10-15/38665404074-1/szse_detail_99AA60238C3B4E2487F17211D0D528DB.json": "e575f906ad16c386a6216b5dce6789ba804785b8ab689f157229f2d377cbb990",
+    "raw/2026-10-15/38665404074-1/szse_detail_A008DEF35DB7497B80240D4B840C3F89.json": "7f910d69b8df6a32f5ce0d951ea9a5f482b621e64f603fc9ced142677a856926",
+    "raw/2026-10-15/38665404074-1/szse_detail_B97CD5F5352244F1ACC26707A2786005.json": "8bdaf9835115424014831af4338132231da95fff4c4c1aa29be66b3b6050edbc",
+    "raw/2026-10-15/38665404074-1/szse_detail_CA98A72685014BA5BC8F18E5D376FF30.json": "810c5adeee09293f25cf7c4b68aa2b7bd24fb96e199df5e21a359b20cea3750e",
+    "raw/2026-10-15/38665404074-1/szse_detail_CE93777394A247CD961CE22879A94F76.json": "fde8ae68cc7d580ae6044cb3426a108033b927ab414cd8c5e2823a478d7bcd68",
+    "raw/2026-10-15/38665404074-1/szse_detail_DCF15E24B0844EB9BB6C040F1D6802DA.json": "faf1736195a2c9d1c8775012bb611f8e6086eea410d985d744a83a53724effee",
+    "raw/2026-10-15/38665404074-1/szse_detail_DE9431533C974EA9949CA5453FE201BD.json": "0b1daacd1268e0c20a99a38704a41078b9465f7f66ed96b419fbac53bfd87f27",
+    "raw/2026-10-15/38665404074-1/szse_detail_E64643B78E7A47EBBC6F26E4E4AF971C.json": "628826b358beb8fe8988e89a4dc348906687bede685bb3feeb21b9f2f21a5b88",
+    "raw/2026-10-15/38665404074-1/szse_holding_page1.json": "d39ee99701ec8ebb4eed356352c423894296e97252a06deea17e773c98fc25da",
+    "raw/2026-10-15/38665404074-1/szse_institutional_page1.json": "2e33e9c4f8671401601222444310fbd87460358fef388736f6915f444a09cf0a"
+  }
+}
