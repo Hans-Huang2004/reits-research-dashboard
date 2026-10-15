@@ -433,6 +433,8 @@ class SnapshotSafetyTests(OfflineCase):
         self.assertEqual(set(by_source_id["00000000000000000000000000000004"]["match_keywords"]), {"持有型不动产", "机构间REIT"})
         self.assertTrue(all(row["source_url"] for row in snapshot["items"]))
         self.assertEqual(snapshot["quality"]["detail_warnings"], [])
+        self.assertEqual(snapshot["field_scope"]["field_count"], 13)
+        self.assertTrue(all(row["approved_date"] is None and row["issued_date"] is None and row["is_issued"] is None for row in snapshot["items"]))
 
     def test_partial_snapshot_cannot_overwrite_last_complete_file(self):
         partial = {

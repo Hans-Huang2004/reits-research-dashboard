@@ -1,0 +1,15 @@
+{
+  "accepted_ids": [
+    "SSE_5a248a9b5dea42b38a9af2c486f60d2e",
+    "SSE_afd265b13fea4628913108d7f9e77732",
+    "SSE_b8a83c4385e8487ea9d9446d65b80472",
+    "SZSE_996C0CD8DDEA4A07A33E0B76885913BB",
+    "SSE_913fae19dc2749a794b38eb4bd0cdde0",
+    "SSE_43180de30031439dbe40687bd3cf41e4",
+    "SSE_71d38b93885c4fb8a9da4dfa5258bba6",
+    "SSE_24cfbda989614db4b858a12f83a0eaec",
+    "SSE_217c2078fe384f489fb2f213030cfda8"
+  ],
+  "policy": "Only explicit project-matched assets in existing first-party references; no new searches; no expansion inheritance.",
+  "review_path": "workpapers/enrichment/institutional/existing_assets_review.json"
+}

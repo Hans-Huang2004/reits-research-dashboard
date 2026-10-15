@@ -1,0 +1,1952 @@
+{
+  "generated_at": "2026-10-15T10:59:41+08:00",
+  "validation": {
+    "ok": true,
+    "funds": 144,
+    "issued_funds": 96,
+    "filings": 160,
+    "business_types": {
+      "首发": 144,
+      "扩募": 16
+    },
+    "fund_codes_unique": true,
+    "filing_ids_unique": true,
+    "unlinked_events": 0
+  },
+  "raw_hash_count": 270,
+  "raw_hash_failures": [],
+  "freshness": [
+    {
+      "series": "SSE公募REITs完整列表",
+      "source": "上交所",
+      "collected_at": "2026-10-15T10:49:22+08:00",
+      "latest_available_date": "2026-10-15",
+      "latest_business_update": "2026-10-14",
+      "expected_date": "2026-10-15",
+      "lagging": false,
+      "treatment": "业务日期与采集日期分开；无新申报不视为源滞后"
+    },
+    {
+      "series": "SZSE公募REITs完整列表",
+      "source": "深交所",
+      "collected_at": "2026-10-15T10:48:11+08:00",
+      "latest_available_date": "2026-10-15",
+      "latest_business_update": "2026-10-13",
+      "expected_date": "2026-10-15",
+      "lagging": false,
+      "treatment": "业务日期与采集日期分开；无新申报不视为源滞后"
+    }
+  ],
+  "connector_crosscheck": {
+    "source": "Fuyao MCP代码表",
+    "raw_file": "data/raw/public/2026-10-15/connector/fuyao_reits_tickers.json",
+    "source_timestamp": 1792029630693,
+    "connector_count": 90,
+    "official_issued_count": 96,
+    "official_only_codes": [
+      "180307",
+      "180505",
+      "508047",
+      "508095",
+      "508605",
+      "508607",
+      "508609"
+    ],
+    "connector_only_codes": [
+      "180107"
+    ],
+    "treatment": "官方上市名录与合同生效公告控制范围；MCP代码表仅作交叉检查，不决定是否已发行"
+  },
+  "raw_hashes": [
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/discovery/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/discovery/0.txt",
+      "sha256": "e073b520df26fc2b2d0afc6f1f45e543201aeadab11a8c996cc4f93876dd9340",
+      "ok": true,
+      "url": "https://www.sse.com.cn/xhtml/reits/js/search/search_info.js"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/discovery/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/discovery/1.txt",
+      "sha256": "cd6b93d0305e4b76eb14d56b8055b7ccdd1829d5930d444c05144f37b0f96135",
+      "ok": true,
+      "url": "https://www.sse.com.cn/xhtml/reits/js/search/search_issuanceInfo_2026.js"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/discovery/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/discovery/2.txt",
+      "sha256": "07a1b63f3f73426c21a34ae288b693275b2c5b6b1cafe2f5c772aa489205bf51",
+      "ok": true,
+      "url": "https://etf.sse.com.cn/fundlist/"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/discovery/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/discovery/3.txt",
+      "sha256": "883fbc7ff6f1766cd700deb5c7e0dddd026a50efcbc417bd506ac51c44fe11a5",
+      "ok": true,
+      "url": "https://www.sse.com.cn/xhtml/reits/js/main.js"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/discovery/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/discovery/4.txt",
+      "sha256": "5172790741ecc6fd2a5d0add73ccef10a2b01fa07ac6c9905c00645a3f6e1951",
+      "ok": true,
+      "url": "https://etf.sse.com.cn/xhtml/js/business.js"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/discovery/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/discovery/5.txt",
+      "sha256": "a5407085e7b2075de88af1fca85dcf6e0db1319247bd3eb424ae00df63de908f",
+      "ok": true,
+      "url": "https://etf.sse.com.cn/xhtml/js/js.js"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/discovery/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/discovery/COMMON_JJZWZ_JJLB_JJXQ_JBXX_C_detail.json",
+      "sha256": "ed0aecea736504194c573172015cba1c4c57ad6d973072415e4b22b5f1261346",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508001"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/discovery/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/discovery/COMMON_JJZWZ_JJLB_L.json",
+      "sha256": "51294970b6cca4d4da58e32ae4a3261f3cefa45020a06f188073156e105b5ee7",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_L&isPagination=true&pageHelp.pageNo=1&pageHelp.pageSize=100"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/discovery/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/discovery/COMMON_JJZWZ_JJLB_L_filtered.json",
+      "sha256": "b75adeb6f064e1a9bef2af611b603e75e0a170d9fc1230888daef281fccf333c",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_L&isPagination=true&pageHelp.pageNo=1&pageHelp.pageSize=100&pageHelp.cacheSize=1&CATEGORY=F600"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/discovery/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/discovery/REITS_FXYKM.json",
+      "sha256": "221466bef9c6aa5d82610b5bb0948c064a9366831d06e962d24f3967f3544cb3",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=REITS_FXYKM&isPagination=true&pageHelp.pageNo=1&pageHelp.pageSize=100"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/discovery/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/discovery/ZQ_XMLB.json",
+      "sha256": "39842d487d8c559d7d027e577a8f59b9b73605de684ad2a197f12fa646880616",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_XMLB&isPagination=true&pageHelp.pageNo=1&pageHelp.pageSize=100&bond_type=4"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/discovery/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/discovery/ZQ_XMLB_detail.json",
+      "sha256": "4d34275e1722ecaec09a38bbd9e242397ab6051dbabf6d8d73946c5319508798",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_XMLB&isPagination=false&audit_id=72c49c7e1ec847fea999460058302391"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/discovery/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/discovery/fundlist.js",
+      "sha256": "a8537fdf37f79db4125ff8f27fa382cffeda07324de1c65c79f9716d5b590b86",
+      "ok": true,
+      "url": "https://etf.sse.com.cn/xhtml/js/fundlist.js"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_script_94ffe036f5e8.bin",
+      "sha256": "e073b520df26fc2b2d0afc6f1f45e543201aeadab11a8c996cc4f93876dd9340",
+      "ok": true,
+      "url": "https://www.sse.com.cn/xhtml/reits/js/search/search_info.js"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/issuance_script_a0c744f518d6.bin",
+      "sha256": "cd6b93d0305e4b76eb14d56b8055b7ccdd1829d5930d444c05144f37b0f96135",
+      "ok": true,
+      "url": "https://www.sse.com.cn/xhtml/reits/js/search/search_issuanceInfo_2026.js"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fundlist_script_1fe26fc2e3c8.bin",
+      "sha256": "a8537fdf37f79db4125ff8f27fa382cffeda07324de1c65c79f9716d5b590b86",
+      "ok": true,
+      "url": "https://etf.sse.com.cn/xhtml/js/fundlist.js"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/ZQ_XMLB_p1_69120770dda6.json",
+      "sha256": "7b5f66d731c51907edde893d2ec26ca74e7df409c9ee01ee84e067128993c4bb",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_XMLB&isPagination=true&pageHelp.pageSize=100&pageHelp.cacheSize=1&pageHelp.pageNo=1&pageHelp.beginPage=1&pageHelp.endPage=1&bond_type=4"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/ZQ_XMLB_p2_b67fae1b381a.json",
+      "sha256": "579d82a70c594079f41eb7824176b6b051c64241a48db873d784f2d51920b2c7",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_XMLB&isPagination=true&pageHelp.pageSize=100&pageHelp.cacheSize=1&pageHelp.pageNo=2&pageHelp.beginPage=2&pageHelp.endPage=2&bond_type=4"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/REITS_FXYKM_p1_222ea0c7f136.json",
+      "sha256": "5154822994e948363aa6dd32360a5afb8b9b99422acf995fe534b13d95cc952c",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=REITS_FXYKM&isPagination=true&pageHelp.pageSize=100&pageHelp.cacheSize=1&pageHelp.pageNo=1&pageHelp.beginPage=1&pageHelp.endPage=1"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/COMMON_JJZWZ_JJLB_L_p1_754c94c4a699.json",
+      "sha256": "36d9ce660a25dace0c42a8b33dcc00edafdbaf95b47235d12dc811812e4e9b8a",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_L&isPagination=true&pageHelp.pageSize=100&pageHelp.cacheSize=1&pageHelp.pageNo=1&pageHelp.beginPage=1&pageHelp.endPage=1&CATEGORY=F600"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508005_ba6b008182ab.json",
+      "sha256": "1d6c4c302f839a5804f32a84722520d6beba10ad59a896d1e7152bc8ad3460cc",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508005"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508000_a4f7d97056cd.json",
+      "sha256": "aaa7db6e898a1416f4006a875d9e9291aac5cfa398662dc3edf655b782b6356e",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508000"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508006_37db0367a763.json",
+      "sha256": "5ac2059a3fdcc1e2a4461b2b9023aacf32247d8113aba8cde88c0c0cac0e6072",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508006"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508008_d222a36ad5a0.json",
+      "sha256": "f8fce54845f240921e04f20d173db20f72c155685f75d6978e700b1f0b3ebad4",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508008"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508010_0601898c48ef.json",
+      "sha256": "4fc57617efa1a13caf19073116c4db79f9500630b96833fff5b42316cfa3fef2",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508010"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508011_5bc022bbe250.json",
+      "sha256": "663ea89ec2079bd8551b1de10eced65a849d2be75088f55815c06f5c1386c154",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508011"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508002_58321dd94ed3.json",
+      "sha256": "271e8bfc6bfeacfbc3c2d971ef2a20be2d45851aef5d42e5dc1c1a21e616af5c",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508002"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508009_d0a1aacad395.json",
+      "sha256": "a8ad92717f8d5cd3271afbc75dcb8665aea3d2a9ebc3ab893b60778186b798ff",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508009"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508007_3f04ffc55a10.json",
+      "sha256": "6486b5895721515c83d4b8694efdb2298c2b204ed9077c03b9eaa0699738edf0",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508007"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508015_bc023d5a2956.json",
+      "sha256": "b7f3ec398000119eab71f819e06fb5d8b828e6cb923ec07645cad8b22a342da4",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508015"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508016_96263bfe7e09.json",
+      "sha256": "75ce2920d6add06bedec61bfb82dedc6f9d6331012c639f866314c6b1673590c",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508016"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508017_89c9c2cab4ba.json",
+      "sha256": "3ddef46c9b247b8485ac69b24f4e7a94da37a6665377df4fdb4761f2047aecb5",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508017"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508018_cf30f8b9ac74.json",
+      "sha256": "c97dbbf98b0cc29e223eadf723b7c761e7d96409f13818a008d4dd36f832ec11",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508018"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508020_892a045d4ce3.json",
+      "sha256": "b5ad0eeeb3f351325e70bb03e5100d9badee1dabe215a513391f0f6745000257",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508020"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508019_611e6c0c16d2.json",
+      "sha256": "800c887decfc9d86e26aa56df2270316f3d21e4bd866542e1abfc881c465681e",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508019"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508003_63161a2fe0af.json",
+      "sha256": "c5047a3c69a3dfbe88f2e29b7fc5f84bde3477d7f13095f9435f3f5cf5ed9272",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508003"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508001_1731a632cb08.json",
+      "sha256": "ed0aecea736504194c573172015cba1c4c57ad6d973072415e4b22b5f1261346",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508001"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508012_a25710aed7fe.json",
+      "sha256": "1f602fc75580fdf17a933ef60362662c8dc9aadfea79370e3051f0e98ae74941",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508012"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508029_489a11e3fea2.json",
+      "sha256": "21f32f1e99fe963482f67bb3521f4e248fbff938f3f7a32420609ed587f10c47",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508029"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508030_b6c1105c7235.json",
+      "sha256": "759730c2e53e63f273f2c93efa2c53915928886019ef6e2c620a0aefafcd0724",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508030"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508022_157cc24e9a03.json",
+      "sha256": "672e14948dec6f04d4183b6df527c7d987afe7d96695db975fba54873964d575",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508022"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508021_2c5ee2648623.json",
+      "sha256": "683192af8f00854181f785ecb1831b9df2f9d2205c272c4275849757cd07c761",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508021"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508027_d023e98bee36.json",
+      "sha256": "67cf244eabead0a41c60003ee2ebbf34b0521e2dc53f1ac6b1bcdee4ea0c342c",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508027"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508026_2f703cc3871f.json",
+      "sha256": "8c2cbb6707a914559b053b8c7c0a7958a8ecd9400fd3c644f953a20ca708f5de",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508026"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508036_e77eea481dfe.json",
+      "sha256": "7f413fc313c9beabab5e55772c87ec328b5e27e2ca69eb703b5b0a136ae44952",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508036"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508038_15f5acf1f29e.json",
+      "sha256": "43ddd9e320ffdc4927a117b1ffc5d94894fdea8d4bee1cc9a50be0a8dafaac7f",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508038"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508047_f2f769629e4e.json",
+      "sha256": "5bab5f30ced8cb122868ce0fc15bbc4d8ae1f2db6ea2b9782738ed9bade3bdb4",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508047"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508050_06dd2b9766cc.json",
+      "sha256": "85b9346aa7bbb9150d3c18ae7e0f2f009fa39dba43bef5cd30871fea534bb8c7",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508050"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508055_6fcca83d339e.json",
+      "sha256": "4bbbe6b3191a22e94ecee3b2c465848c2c16485bacf04fa15bbfea857700e044",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508055"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508056_2b1924193f18.json",
+      "sha256": "7c8df8efd60ccec510007128c94f9c54e827ec409d3b12c21167dd95c3b3bc79",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508056"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508048_7678283ac9e0.json",
+      "sha256": "b3ace27d4106b3d65c064885cd175d1cec72495c2b72cb11b1fcf53155ba1f3e",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508048"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508028_5453c4fbf42e.json",
+      "sha256": "f225fff3d18933b7e4cf643b6d8f71990a249162f92a002409b5c6c74bf39228",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508028"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508033_0345e69ef043.json",
+      "sha256": "ad9609545186c140d9a4c761f3850c79f3fc7e1dc183998aee1daf85fe1933b7",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508033"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508031_7b2e6798596e.json",
+      "sha256": "f0a8f86413669b10cf82a1eba5ab0338b709c50884b8ba6267925883ab560681",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508031"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508068_1621811bf606.json",
+      "sha256": "fe6505821a864ae3b76b2cbf24593533467d3c9ddda0162a109f131290a90b57",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508068"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508039_7e10fad3a135.json",
+      "sha256": "601066890bd78de9ed53f5917b76765bfbeb6cea22ef6baff69e15c5071779ae",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508039"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508077_37d930152cb8.json",
+      "sha256": "e725898309a2b94988124787b4d2b08d75b881aee1d8e57ab202c1e975e4060c",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508077"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508066_1b6ae9bac634.json",
+      "sha256": "b88d175bd7d3b8a180e61c5faa276b32d214a420351c087f6015bd7c8659c392",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508066"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508080_0533124d1869.json",
+      "sha256": "ec80fdd7ce7a732e101e6815b150517cb6591cc5a41a44811eb5b745747c2299",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508080"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508069_e201e45d896d.json",
+      "sha256": "f44fbe492fb508ac4ce471ea32689836aca162cd32a0be8a9d2637bcafc37ba8",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508069"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508081_63a4a923c60f.json",
+      "sha256": "e6ccec3633bf5b0a0fb815ef3574e7298559b777c9636dbf6e30dcfe62aee808",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508081"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508084_28046fc34982.json",
+      "sha256": "2f0a00ae60aa50b0aa25bb21b5c5c68414d5052154b999e0699067e2f3287419",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508084"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508082_29e4d0142884.json",
+      "sha256": "728a4ec39acf488af2f238147b230cd33d4678dfc37f5ac861f23174182d9f35",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508082"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508086_2a5f9fa41185.json",
+      "sha256": "22cb7c9224832d5fbd4c3933549a0d1f038a81dbb7232541111477443e34ddc1",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508086"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508058_ee8b864a5e03.json",
+      "sha256": "86a8912ff0e679bf6e91eac40c26bbb642cf33e749e987e409646af024a932bf",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508058"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508059_94d5f12501f0.json",
+      "sha256": "23c11e643f6e467b63092120f37dfb8d53cf1726787e4deb52c1d5498709b390",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508059"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508087_ca1e7382c5a4.json",
+      "sha256": "a14ac8e1d470334a48e46de6b937b6a6f5b711b2db55dd60ea0a03baeedc0464",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508087"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508088_fb6f745a149c.json",
+      "sha256": "addacb99e8640e30cbafd492744696a0b5a701ea62c54ff6f2e980c57f9ca4b9",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508088"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508091_08d654e77904.json",
+      "sha256": "6c2b207bc8aa4a15282e73582398371e2f9bec04bfccabd732e09bc4d2de55a2",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508091"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508092_d595bdfd1947.json",
+      "sha256": "02bfdcda995dd11ec708adb8e5a330571b76d96c97fe98fcea75379af7f265c2",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508092"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508093_c7a09edffeb2.json",
+      "sha256": "16e16b3e74e397e708964d207de80c45f5b15a77fd4842234c56711651dfb2f0",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508093"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508060_cf2cd693a189.json",
+      "sha256": "a3b2392b6b85f9ccac35e479e117bb5f84ad235badb9e5332f693546016e3fa8",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508060"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508096_51748389dbab.json",
+      "sha256": "073c1dc319e145f86cc483779a18c901095b969727cac33ce0a8a30fbeb99ba6",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508096"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508097_696e8f1b3c59.json",
+      "sha256": "cb1678659243625aede19e7a61eaf82b5bb4a0936fe9492c0016a48a4ec80bff",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508097"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508078_0b740ae56419.json",
+      "sha256": "ba05b2b29696d9ae682cd707cbe06319e7093a4274539e6296b511d13b2b90d5",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508078"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508098_2e6dac88d673.json",
+      "sha256": "db6f4ddb1549b193292301d19a73379cbc5e856af5e99ec2d0e5949874c6ff21",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508098"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508099_5979d1cd3ccf.json",
+      "sha256": "6a5fe22248254222fe2417874e5d504d7e5ddfecaab33d59493cd8597c339c9f",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508099"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508085_e17a30e82044.json",
+      "sha256": "3cd16cf205740e736e3121b9fdfe72815b73e54257542d332f0f564986bfe550",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508085"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508602_cf46e74d0186.json",
+      "sha256": "733517764faecfdc35343897ef024ef1a779412dcbd0986f1c55b31b8fcdf173",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508602"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508600_672b0196c364.json",
+      "sha256": "2c066c14801b92174d161ce61abe133ecc192f35e5d38326a886867abd655474",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508600"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508601_3ca40a689452.json",
+      "sha256": "ad1287cf8fb334e0b79809abe3746d24cdd26ba95f8dc3068ae336aecb9915d4",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508601"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508605_58a44ba1352b.json",
+      "sha256": "e6c9a57fe9c76959ec2c9a6ec4488aa4010fd8e4293cbd21a41aea9d25fbfb5b",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508605"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508606_f1985d019404.json",
+      "sha256": "a9c35d90285069ec044a6878f77ff16a8ae09c46c0a487db365ef711e714966f",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508606"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508607_a51c84a7036b.json",
+      "sha256": "11d0b3e7572f16dfc835783602e00189d5247017061024373aaf36f03e6d81f7",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508607"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508089_26b2d5cb2287.json",
+      "sha256": "d4eb2d217bf46a30520b651b5596a022eb3e56c43f66207005a7e8bff7e8ec8e",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508089"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508090_8762b8a58f46.json",
+      "sha256": "f986ca966ceb6229c717ff54ece95e7a0bacbf7f7b49fd05ff3a987a5c940172",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508090"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508610_500b2b4993f6.json",
+      "sha256": "5767cf8537c55c5821c4e805fce800418cf729014b342b4022b8b352128983bc",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508610"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508095_e30011b36d0b.json",
+      "sha256": "feb1e4dfdde7bddde73a882fe6331607765dd81b0bf7d7c381777d78330cdff0",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508095"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508603_dbe4a2aa0cd3.json",
+      "sha256": "3d4f2b3a0d6cc43d91892b38b9f27b060bf9f63f3abe58e0e9c8196db95cd91a",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508603"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/fund_508609_df449bc13614.json",
+      "sha256": "71f36a6d54544504428260954b8e630b47a6007e226ec1bac9305b9290e23648",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508609"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_84f8eff955614871a2e88d91891828a1_e58ebdd32d0b.json",
+      "sha256": "704390bb5fb743c7c03de38f2a7fded90e7b300abdf5e5951fd630aa2116d2fd",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=84f8eff955614871a2e88d91891828a1"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_72c49c7e1ec847fea999460058302391_1da5119927ec.json",
+      "sha256": "ebe0d908e5200281d67461ea3a2eb8a548892323f14d0335b6fea649ae025a1a",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=72c49c7e1ec847fea999460058302391"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_f461bff4962247f4a1dac82dea874c42_dba800ee0275.json",
+      "sha256": "aa759bfd52d959e521dbbfeed57da8e98b3b21a8e9b027d187b7208aa1cccf83",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=f461bff4962247f4a1dac82dea874c42"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_39be963ffbaf493ba0744506b3f451e2_72cdc4e6e6ff.json",
+      "sha256": "bb246186496771f29c0684088592170810918c2a71665bfe736a2c1f991e046e",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=39be963ffbaf493ba0744506b3f451e2"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_24e84189f68749109b5302f5e1e6ad29_0dbfd2ca7ea2.json",
+      "sha256": "3b622883c88758c803b5b9ef387006c1e47b33db755a2d89a7a52eba238eb74e",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=24e84189f68749109b5302f5e1e6ad29"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_0c134614a72047339c77d9e3049f03fc_98e1f2f4314f.json",
+      "sha256": "913035bdc9d48bb9f4d41f14e47a91b97c8d20130dcc9e5c7c74bf9a60c0a124",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=0c134614a72047339c77d9e3049f03fc"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_2b6853bdbec648e0821425c40f6d5b45_622d00091b14.json",
+      "sha256": "71eb534d17a19986a657801149a2fccd1eb9e135105548669cc68370a5517a2d",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=2b6853bdbec648e0821425c40f6d5b45"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_cdb91b06f7bd4b88a382d391bfdf687e_87925acb0a46.json",
+      "sha256": "157af0d7ae021561003f67ce6f4773b6f4340b04af765524dadcfc642c46fb52",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=cdb91b06f7bd4b88a382d391bfdf687e"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_2442d7bd13474f31972b8605ceebefdb_3146bdef7ee8.json",
+      "sha256": "a415cb90943906480ccca0244521ce1fcbd68e30ea79e711bd33097274ea94a9",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=2442d7bd13474f31972b8605ceebefdb"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_620f9db7cc1f48b1b6531c5af02e8b34_64b377844ab1.json",
+      "sha256": "305819b156e099b3cbe28def02032ac9282ea145c4a1974d41dba8f6fc9e2696",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=620f9db7cc1f48b1b6531c5af02e8b34"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_888e50b307b74902bef134005d5c8716_419e24bab77b.json",
+      "sha256": "da6f0cf23f466ce5bf0ccc890dac86eede7089181b0f974468009e376d6b43b2",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=888e50b307b74902bef134005d5c8716"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_80657bb8e3a84783a3b6a2a7c311654f_69ae1c574134.json",
+      "sha256": "2dd014ea5328f1aaaf402ff4c43c4b5eadda6d11fcf61414bf206f120d3da285",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=80657bb8e3a84783a3b6a2a7c311654f"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_567e0ce118814458b930c6cdebd8a43b_cb823d52b5ad.json",
+      "sha256": "251d328ea78c81b7c6d7e356908c4b24f9df32ae9ce22bb7b55560be8ef0b952",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=567e0ce118814458b930c6cdebd8a43b"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_762ec541a8a446018b6b854353629e7d_543e6ea47e22.json",
+      "sha256": "aa9e3bc548069038b8690e44d07c8bfb026b45b38ebb11fdbc139f01434ce281",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=762ec541a8a446018b6b854353629e7d"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_1cac0428e57a4c65b9dadaa89549741b_2db08f4f1c3f.json",
+      "sha256": "c78612334e8544a5fe1ab792239cac8a42bd54ca70de71f42f186c18c9fb9181",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=1cac0428e57a4c65b9dadaa89549741b"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_9c0e79ff1731437c8cb7571366675723_5cc4b9c8f344.json",
+      "sha256": "9d2bd7bd71cae022622e0e49ab5fae1585b8829ad5bd38745c79490d49ff30cd",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=9c0e79ff1731437c8cb7571366675723"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_894cbcc4623047c385444030dd83f921_9a68dea61e1f.json",
+      "sha256": "20bca5070ae0ce318748e49b7f6bba03f8f09ce9c393561a53453fe17cb45ed2",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=894cbcc4623047c385444030dd83f921"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_294417b17ff34e6e939763427f15a767_31c11187109c.json",
+      "sha256": "ab23bbff221e463804c1b6203ca12d7f128de427f5ed07c242e4bddee71b8f09",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=294417b17ff34e6e939763427f15a767"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_98519f6baf014a13a59dac8cb52f35e8_b8054b3a808a.json",
+      "sha256": "8d1ae32b70bc8645991cb46fb59708be0df6ab3c8a1b15aa4d670e37ed75b491",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=98519f6baf014a13a59dac8cb52f35e8"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_a9ce5e95e078472998cc47ad30846c2b_b3ebd1448bd1.json",
+      "sha256": "0a7709c77ccd57c435629ac02c76769b5b3455d3c87cd5f0edb5cf30ed48d3ec",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=a9ce5e95e078472998cc47ad30846c2b"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_c330717c560146148c72a9a3bdeb4de8_e03e7211d542.json",
+      "sha256": "6225e25f4fe5acd38043a24d566cb9b8d888d57d6a20d889dc1ea7acb6d6a53a",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=c330717c560146148c72a9a3bdeb4de8"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_d1e2d169bad04e489952ab042b62c577_d06cf56561db.json",
+      "sha256": "e7151ec44ad2b186cd9e4f07df2cc9fd3e7e286a9eac604a291877705347ed4b",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=d1e2d169bad04e489952ab042b62c577"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_6fa0b7c2f77944549b2ada7b1339be34_9a1b15c6ba0a.json",
+      "sha256": "60abdb5ac988b381982071bd2b4f92900d0ec6ea7c048474c994a41186b49d56",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=6fa0b7c2f77944549b2ada7b1339be34"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_7c28dbd738914f278d7b55b510cf44e9_b3716c86224d.json",
+      "sha256": "abbb261becc02ae735f3c2e0437a14057cb721043d06725b5dbf802be268856e",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=7c28dbd738914f278d7b55b510cf44e9"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_ca83f8b53ee34cb0b2ee8bede1007452_42b7a9fe5d8b.json",
+      "sha256": "5cbc9607886bc5af660204cd2b8ca86301ef1d803b37e61af7d6d66cd98db27e",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=ca83f8b53ee34cb0b2ee8bede1007452"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_3214c881b4ed492f8eb28966d291acf8_5b9a1c89c53b.json",
+      "sha256": "574a38f655e6c091460bd1503877b4f2094ae485919d56974dde73a5fc39b25e",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=3214c881b4ed492f8eb28966d291acf8"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_659a67730bd24417a9e3b98780589f73_80c729aea720.json",
+      "sha256": "f9b626c25a76448b4b5aa5616f14380b2e52672721e71218355ac432e7a7d4bc",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=659a67730bd24417a9e3b98780589f73"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_a1b8c90b144d41c2bbde49c4c0a2f96f_29e3a0dd8cdb.json",
+      "sha256": "85935adcc155fb29e3d54714ebeac167acd49cd33d2a2260e073eebfd21d9841",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=a1b8c90b144d41c2bbde49c4c0a2f96f"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_2b703424eb68448aafc7bd18f08e9a69_e575810f597e.json",
+      "sha256": "3f0601cc80b37987221b1e81e96f9f0f7ad5639ad179021a5346b379afc624ca",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=2b703424eb68448aafc7bd18f08e9a69"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_b80b031657254459b6d0010d6b2d5286_e42699cceacf.json",
+      "sha256": "16f9aa8960f8a644bed7f5e4b981aba60f9eb8a390656c166e6bed07d188477e",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=b80b031657254459b6d0010d6b2d5286"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_580477e00d3c436e943190c8c23be567_c38ffad04892.json",
+      "sha256": "15ba0c6b90cb560e77db9cc733fde0dfe643430701a97de5088c0c1ee2785c78",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=580477e00d3c436e943190c8c23be567"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_86ca5c30686342a3b403248a49578a6a_2f3cf0089021.json",
+      "sha256": "c4d7decb1a8e631f507ff42bdfd51a23fb3ff4d4ca6cb938ab6530b0fab5ffee",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=86ca5c30686342a3b403248a49578a6a"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_9709dd8e44ed4697bfb8a2cc24626dd5_6ae82d7fd1d0.json",
+      "sha256": "e28f060697d2937ef96ca74b5e97f84932d391f0b5994fb8a3a528d1fa8531e6",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=9709dd8e44ed4697bfb8a2cc24626dd5"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_437d1732bc7f4fd293d5969f10f8655c_eb53af40000c.json",
+      "sha256": "2429466372f5f65f7156ed81e682423904352b5d83c3a7cce6f5cdee03d50d9e",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=437d1732bc7f4fd293d5969f10f8655c"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_21837_0cc43e0ad17a.json",
+      "sha256": "5aed2f060e63b0103e872420c381f77788d2432166d14fed9ab6a47a4512eeb2",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21837"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_73c7577e4b3847aab5331d0379e15eff_c9c1d2ae50fe.json",
+      "sha256": "5e224f0bed3e25e47f5fc7d0213763bae735ccb5b64ace1b9305f2bbd8f0c3e7",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=73c7577e4b3847aab5331d0379e15eff"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_b20df5ca80084efaad2e52f1d590dc21_c67291d5b5c5.json",
+      "sha256": "8923d87c1aaa01121f706f62463d0ef782ec3bc47d2c4530c4e335092e0789fc",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=b20df5ca80084efaad2e52f1d590dc21"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_66b8e916901a4ad19167e5dd158606ac_fb2fd8ba842c.json",
+      "sha256": "1737fceab2824450f20bb7c0a8fc34270527327fbba7cecd47bdd870ee9a5c2f",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=66b8e916901a4ad19167e5dd158606ac"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_41702_ca4dd80dcde1.json",
+      "sha256": "ff74dd7e89d0b8f8a3a07c31b15ca40a8046524df0db7aa4fd6910b22e12b830",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=41702"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_51076_c70804ddaefc.json",
+      "sha256": "38a35deefbea0044839e40a38839ff45b205f4555728f678cf0553ebe0033fbf",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=51076"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_e3fa97711afa4d9baddfb472c7282f85_353d07df1e62.json",
+      "sha256": "156596abd81272ae47aef297e2760245855560bb449f3bee6e2c0152515488cc",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=e3fa97711afa4d9baddfb472c7282f85"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_4440fa26ec24475d9318be11d1151ef9_c5247afec97f.json",
+      "sha256": "ba997d90c727eeec7844436332e8cd18f01272762b3a6ec1b9db7f5509251688",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=4440fa26ec24475d9318be11d1151ef9"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_b5e45b19fd044a1ea49847f6dbd5ea0c_f73d3bb86da4.json",
+      "sha256": "e9b7a5d47b385d508d1b22e99323b3b02cc9cba4927af6e6b165cb47e70d5f63",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=b5e45b19fd044a1ea49847f6dbd5ea0c"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_43246_7984a9d4556f.json",
+      "sha256": "97d8c91b314125056872350388e24d5bb8c82b8cf69623684c47824376ab4c1c",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=43246"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_3dfc6f28af2e4c31b1a2e267ca5e0ce7_166085dfac3d.json",
+      "sha256": "21858facb5f77d6adbdf9747f60d20b929eb776baa3d087bb2d42164bf031013",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=3dfc6f28af2e4c31b1a2e267ca5e0ce7"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_53112_2e5d0b95c28f.json",
+      "sha256": "8884c44fa28bcc40714965dad72e0e7300c6067af1fbeb3843f9c1ea69d191b9",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=53112"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_a8de32e372144dbf96afee47f278bb2f_d8c1197af293.json",
+      "sha256": "ac433d4341f3567199cc70758a9d3c7602ccf2c606db97709250b01069e79ff8",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=a8de32e372144dbf96afee47f278bb2f"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_ea0d40078cc147768bdd9741b498f6ea_f85559114d95.json",
+      "sha256": "c4695c6a34c82ab2f58b6d88cb4aa088a67e8b5dc13325a4c27f98c3266e810e",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=ea0d40078cc147768bdd9741b498f6ea"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_52344_0aa53ca44756.json",
+      "sha256": "12778af9d552523715b6fa6e03c887e7b9359c2d886ba95fc9947d9a6dcbc995",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=52344"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_53773_e649fe4e5125.json",
+      "sha256": "5433eb152741f4c2b3ff3ceb3fb188f0f0b133c31c4e039be4ac8389fa7a660e",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=53773"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_54b56d3cc1cc46b29da3d05a5efe7bf0_75eb8eaa9f56.json",
+      "sha256": "0fc2b66c4c19e132bfc88201d5bf41dbd51d6003ebbd9ae38e0a8a5b509e8cf7",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=54b56d3cc1cc46b29da3d05a5efe7bf0"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_50692_b98347651ba9.json",
+      "sha256": "c7dc6e0c961d61c370078e60d95f2c315d7d0ec8f3ee95b08d6b1666dc29f08c",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=50692"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_f73619d5cf6a45a883283047e5886e8d_53b8fe377a0f.json",
+      "sha256": "badc6369160e037d616a93fc9f3a7653e939e359a2d6482c30bf591f7eb52113",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=f73619d5cf6a45a883283047e5886e8d"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_41693_5eb70ebcf2eb.json",
+      "sha256": "182eac4f62a91d368f7b0033de41299035f8b858251207b0ec43a2546def5305",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=41693"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_45217_86b3e8eb79b8.json",
+      "sha256": "515c8d1e3662efb608c45dc1814bdf8a748315534a477035e9d51246c7d74242",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=45217"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_53010_80eb592eded0.json",
+      "sha256": "f1deb2462dcafc742c822bf1ea8cc7d0bd9827151b80f8e5d86ef65a2552e0a3",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=53010"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_49603_634fc21d91d8.json",
+      "sha256": "914b05c5c46b18e814e2546b159855d53a5bb48042e4cdf85f81d5c5385c5338",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=49603"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_49494_56f2bd8844a3.json",
+      "sha256": "39909e1b155866cb23c9b12882c43d2339f71ab8b34655f67d063ded434f0cd5",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=49494"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_49835_f6d48a27ee33.json",
+      "sha256": "1ae0bcc94ae7512b0bbc9bff581512f560c3949a5c77587c1e1c936d79ed3a27",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=49835"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_45292_3f498ecf566a.json",
+      "sha256": "582e32aaab15bcae75ab9ba10220740d417834630afb491bd000c7e545b6b2bb",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=45292"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_49646_423888ee3bc8.json",
+      "sha256": "815362b996088d64e73227c1f660df431658ed7eab497e30cd273d67fcd0ace5",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=49646"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_41680_a15fa1fc9ee4.json",
+      "sha256": "5dead64f9f7f1dfa453c791ed51a407c9f1e6b3d5956a206454961ec579806a5",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=41680"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_35699_37e2fa371ec5.json",
+      "sha256": "aadc5f20cea32a0e20a8ce7e7826c29a85cf24a3038c25001dac980706715a9f",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=35699"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_34944_a30c1c9486ef.json",
+      "sha256": "d08232e455f25ac7c7b280d6983c606563234d7a1d5b6cdc065a9d7e0008a2de",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=34944"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_51470_04e57020fd28.json",
+      "sha256": "78fd35c7d2438ffc0594910bd8b32e6cd6d48f23eef73f5c28d6704a97b43bdd",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=51470"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_584b3368094645ea8c90eebb375c02df_549b98d14108.json",
+      "sha256": "315fff97789e03bc9cc03c758e2460ebfdceedef1f971840ce09c0fb7d2a2a6a",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=584b3368094645ea8c90eebb375c02df"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_37877_e75c0562ecd9.json",
+      "sha256": "7a0d7d8f0248f2eb61e371c32d550a2dfeee4ff088bb4a4760855a8e8cca8fd4",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=37877"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_38352_3af6886d518a.json",
+      "sha256": "2a2ea9cc2f7c7e5b7c1ca0cce28f91cefe9ebfd193ce0198efa480e4ed46c52f",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=38352"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_37050_d2d6cd00db46.json",
+      "sha256": "413ea2132a1c60f8bed29d84794e901bd251e18e8eb6524fcd239ce25e4645ae",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=37050"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_49865_7b7e1c98404e.json",
+      "sha256": "598d926e0481942492c720711d85c9960fe262fafa90b7690340782868fec5e0",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=49865"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_36405_b3665d8c5e63.json",
+      "sha256": "8e0ddc4741115597fceeb59f7ed2af74ea3aae4b7ebc66128a47425a181c9a78",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=36405"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_33670_a8de4f867bbd.json",
+      "sha256": "0ba441178f495d0faf1b1ac95a830773e98fc7f7d1655b4fb6a009d8c78d1348",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=33670"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_42815_33f8f6bdc817.json",
+      "sha256": "4098d759e4a3920a613a5f66c5fa7fde217e30b719c8ad7b755e102446a6306f",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=42815"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_36118_5d7fed705ed4.json",
+      "sha256": "10fd137f081039e6ebc24447de6659afcb04b732d24f669a3a0f63e65f087ee3",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=36118"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_36009_5c46b6ec337f.json",
+      "sha256": "5976dfd016379277b85cfd15124b93deb877c19e4d2e86d80a568c806f3ecc5c",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=36009"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_36024_a759b6c31af3.json",
+      "sha256": "df9f0133ed3ac4e2d0d7148382103974a682694e3a37cd65885fa5606893a4f3",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=36024"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_35723_76663b85debb.json",
+      "sha256": "879274cd9a39beea95b6a6a2eda3d67a46311ec39a6b7efafee1d9042b810114",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=35723"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_22255_07e2d7227d6b.json",
+      "sha256": "4f46100d6ffc232911ebd2d8d2e1c6792a1d091e49d76d53ea8d8fb1b101e8b8",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=22255"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_21625_4a1648470818.json",
+      "sha256": "02b2d87cffc83f31c0c35d0200ae7ec74904659a173d82d16320ff41d6c418d4",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21625"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_40701_6e862215f3b1.json",
+      "sha256": "e2d2b65c70191aace75f9331d5f53af1c87c66da3d9b06060db725ca7e53ef0b",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=40701"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_22908_05ac02ad4321.json",
+      "sha256": "cc6b511bc39426cea1a5fd39d33483f600bccbd6071bce23b814d0ca3232de80",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=22908"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_22546_28ea9d79575d.json",
+      "sha256": "7ecd19b5129a2b7a81603d7c357c11b4a32004a227b49efd4f5cc4e68ba6e291",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=22546"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_21754_6d4c97246be2.json",
+      "sha256": "ef929b5694bd908dcc9808ec8e4405f8339791fb482684a91cfe4f262b46dff9",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21754"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_21525_1abd6f8320bd.json",
+      "sha256": "18f3316f88ad7b95228dbdabeb18f1e22d1d1ceca9208134fd3067e60ffec446",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21525"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_29078_c23da76ef747.json",
+      "sha256": "553c3164c8df30b58a24794723afb74e2a4815779690fab22f8891848be17f96",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=29078"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_22863_c3ffa9d0f8d1.json",
+      "sha256": "4183546ce7cec59bbff6470c4da075e66884b1d1e751c4a1436834584df33f70",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=22863"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_18458_d0f0480ce28b.json",
+      "sha256": "f97afe5ee48975543814fddb08873bdd67a13eaf80df6f97139ee2c9e311eb3f",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=18458"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_34403_a227fc601734.json",
+      "sha256": "6d5c249c6b5663ee0ca6bbc9a78c18ed97a611bace356928027692c3ab2cadce",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=34403"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_20516_983bb9e4bac6.json",
+      "sha256": "e095d53235a140126ea83fd1dfb7f667ac4ada73512263ee12ee6e9821e87e40",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=20516"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_22897_edaba1043ea0.json",
+      "sha256": "8832daafe79116dcc4db40010ae42c7ed326630b0ea8ebc19dea0e8e6aac04a3",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=22897"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_21839_c15d03d6de4e.json",
+      "sha256": "47a47dabcd728721a6927c60a487ce2a5c8f2ad378f9be7eb3d9e02e118565e9",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21839"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_18740_6336a2357ef8.json",
+      "sha256": "f09d2e986b8108f59bd7b724401ce3911d701d6d7ee2826802aeac7aecad2786",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=18740"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_16943_1a15a8714ccd.json",
+      "sha256": "0264b5b91e855b369e2ae0296b532372896a5323b9bbe84746a09320e61d0983",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16943"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_16989_7e98c24ffd94.json",
+      "sha256": "a586d524afe1d21115acdfda43de0aaba4c53cacaff41f8fc278e6aed0a073fc",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16989"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_20413_97b46fbc432d.json",
+      "sha256": "2d973342974f524304206d669981f8defa3aea4341c6de578fa52ba52d3bbf55",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=20413"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_21292_d00f713736f3.json",
+      "sha256": "3398938c626955bf6c3bc7bb13841f4f1e5903bbdbd5f264f29cbae9e91068b4",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21292"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_20763_7efb6f816dce.json",
+      "sha256": "3e5cbfa48a676ec804696acb048112b87cbed55608ddb8d2dce3ee8f002955aa",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=20763"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_16964_faaba25d3a12.json",
+      "sha256": "ad9526fd6c91888642dc3b8ebca2f2df4a22d5e237122367ba6c1eab297c4a43",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16964"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_16983_717c5997c0e9.json",
+      "sha256": "fda30c2f0f85c692c50636aa4bc77a554536a27a6b2294975e37d8ea11f67d87",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16983"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_18465_a646ddfa6442.json",
+      "sha256": "901a3a0d44aa056468a8ec18ead6b36960858c7c3f7e9a237de6afe1172bd067",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=18465"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_16980_f058e1de2279.json",
+      "sha256": "e75509fda975fa3afc6e1230da00f6b0f7576054c56dcaf2607d8097fe11f7d1",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16980"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/filing_documents_16990_113a91fa11ea.json",
+      "sha256": "315297818cd0d2241819b2f42d13c898b6fe324b5848e91c680cf1956b1b3425",
+      "ok": true,
+      "url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16990"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/reviewed_alias_508087_7eb795bfdfd2.bin",
+      "sha256": "195fa2d23e2e352820aae880f3895433f95a0aa47ee781508a4eca6f5ae429c7",
+      "ok": true,
+      "url": "https://www.sse.com.cn/disclosure/fund/announcement/c/new/2025-02-08/508087_20250208_XPMJ.pdf"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/reviewed_alias_508017_5c1d31a1c0e5.bin",
+      "sha256": "db7524e518ea0223ec08e4ca207bdd273520655ab4a03d4efd5dfc71370096e1",
+      "ok": true,
+      "url": "https://www.sse.com.cn/disclosure/announcement/general/jjzssgg/c/c_20260112_10805014.shtml"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/reviewed_alias_508031_82692a38d74c.bin",
+      "sha256": "d3d9f205673e85294a9d24d60a31bd8be07371dbe96582dff5352806832084dc",
+      "ok": true,
+      "url": "https://www.sse.com.cn/disclosure/announcement/listing/c/c_20240111_5734483.shtml"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/reviewed_alias_508096_a5903a3393b4.bin",
+      "sha256": "82894bb0279f8c9ffd5c30cc5107e612d8764870a43c8e3928f36bc2c27e3cad",
+      "ok": true,
+      "url": "https://www.sse.com.cn/disclosure/announcement/listing/c/c_20230328_5718683.shtml"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/reviewed_alias_508088_a7d719cd89cc.bin",
+      "sha256": "c02d397f60795520b1c6cb392d8c678e6471b97f1829c6d9baec393b7e75172c",
+      "ok": true,
+      "url": "https://www.sse.com.cn/disclosure/announcement/general/jjzssgg/c/c_20221014_89bcf1a2079a44febcb140f4dfee79e2.shtml"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/reviewed_alias_508021_e7ff7e93d4b8.bin",
+      "sha256": "1c28e6695993953108a539a8f4d14ad24a9404ef3f32002e9c1e54ccf324f848",
+      "ok": true,
+      "url": "https://www.sse.com.cn/disclosure/announcement/listing/c/c_20221012_5709967.shtml"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/reviewed_alias_508000_8d77c1f277e7.bin",
+      "sha256": "4cd524eec81f841456d26856572d749e03af880bf4fe498a52203c7f0c38c822",
+      "ok": true,
+      "url": "https://www.sse.com.cn/disclosure/announcement/general/jjzssgg/c/c_20221018_721da1ca94fe4ddaa8c6c89d3f6822ac.shtml"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/sse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/sse/reviewed_alias_508091_16948a39a3c8.bin",
+      "sha256": "3b534ddb85de0d1ebd1126912137b6106267bee27b3f9347dcd0567fbc6e0eff",
+      "ok": true,
+      "url": "https://www.sse.com.cn/disclosure/announcement/general/jjzssgg/c/c_20260112_10805012.shtml"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/ann_effective_page1.json",
+      "sha256": "58a3ece72d871161c4e8a416d655aa8318ac410758ed9b707c3aff76798b295c",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/disc/announcement/annList"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/ann_listing_page1.json",
+      "sha256": "5b60f5e33f5e78e3e369ed7ab0b469b640662ba581b2b5d586983f0d90261af4",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/disc/announcement/annList"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/ann_prospectus_180201_page1.json",
+      "sha256": "b74c3c374eae572a2f49784579bc627f7118831980bcb1e02c2c3e0e168f0963",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/disc/announcement/annList"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/ann_prospectus_180801_page1.json",
+      "sha256": "ec1d4354b73701a9d14c03eec9ef6cf2694f4b21fc57b20ce899aa58ca369fed",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/disc/announcement/annList"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000002.json",
+      "sha256": "e1af4c58cc653e5a14f21ed5d5b8bdd7677fb49b6674152e91d1dcbcb6cd0c57",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000002"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000004.json",
+      "sha256": "498e4be64edfe5b2be0be469661ad030e8a2347e7325565633757da4eed43731",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000004"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000007.json",
+      "sha256": "66336f01401943e67e81dac271ecd3ea91b4f36f881099f29bc3d124e5fa1f9f",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000007"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000008.json",
+      "sha256": "7959bff32dc45c1f8842b5b40281d2a2b4c326571848030c31c9026128012f21",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000008"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000009.json",
+      "sha256": "e3de08c20ce7002408f32fa1cff0432c71b0c36b7218eb162effd9c156959abe",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000009"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000010.json",
+      "sha256": "56736fed6e8ee7ebb019fcd54d0ba75b80fe2950455e40699109d8cd570cd599",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000010"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000012.json",
+      "sha256": "f3147905cab3b4de7e739432b9e1a015514dec7bee841259edc6af8280918d25",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000012"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000014.json",
+      "sha256": "2716ebaccb8b79bc391b7d368327e39bad817f08bb6b5ae32561e5a0fd855dc7",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000014"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000015.json",
+      "sha256": "fdd4afbd2ff6e192f9084790dd64b0212f438544514e144d368df437519fd065",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000015"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000017.json",
+      "sha256": "2d9f799b11319434e3da296b671c865d295e8ab8a9845be7519e318666af9cdb",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000017"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000018.json",
+      "sha256": "19d02d05fd80a2b42b49fa5d9dbb0b28fcdc090d538129f2bed95b1121d7defc",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000018"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000019.json",
+      "sha256": "e159ff607f41e88b6217dad7519b285feaacf5d942e113a06d709ceb61d65445",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000019"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000020.json",
+      "sha256": "3c17a9ad215d746897deb3a39db094c146eb3873d2253cec08e8760d189d44d6",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000020"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000021.json",
+      "sha256": "6798654245db03bb0d0dc28246ccd25750817d990fad26a09a5756dc60042d58",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000021"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000024.json",
+      "sha256": "161e3c1c976b72e1d00a718664d2ef1ee6c78323c7e06e280ffc37e6d1af2d84",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000024"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000026.json",
+      "sha256": "194dbb16b329d8775a2dcb2352922bf66d8b19daccebc1b6b409703ddfafdedf",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000026"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000029.json",
+      "sha256": "e387198b810ea33ec2d80696141087854291d3a33148b9823d2e1f7b99ab7661",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000029"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000030.json",
+      "sha256": "86a86edf31a08bf80eeecbe17eadf83d9c8d2f083deb5e6ee1a26151bf82f8fa",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000030"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000031.json",
+      "sha256": "d38498fbea264acf5f2339af6d5176c8abae325dbd529d7f8560f2a94c2cf784",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000031"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000032.json",
+      "sha256": "90be12c864cb210c00b6a53e9b9fb4dcd95c4416a5634ae512ffe42ed17f37ba",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000032"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000033.json",
+      "sha256": "60a1186d7279fdb6885c7025b210d2be03b44b4958a9ebc19ae2c4dbc75c5124",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000033"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000036.json",
+      "sha256": "9c148110da00090b90eb45bdc9f7a473d207e9bf245b81b7f53af201e6ff1fe3",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000036"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000037.json",
+      "sha256": "da4eb20911e9603b8a3e9316eadc1c6df087742cd19938cc7d273b80f96f95a7",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000037"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000039.json",
+      "sha256": "7780c571b8935bc98a001d799407d6d958a80861ea0c4070dea4d6ff87542bbe",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000039"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000040.json",
+      "sha256": "6182a7cc2eb274611ea39e92bc12731cbe6949d712cc7c863c7e8c1102f5938b",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000040"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000041.json",
+      "sha256": "52e59e6241bb07d079524e275113c0e75d1f74233965f6d958fc7f1550c154eb",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000041"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000042.json",
+      "sha256": "459e739d2eba38565778bfd2d594ff8edc65fd9a6314a33b06ecf6ca80a292a6",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000042"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000045.json",
+      "sha256": "74ff8499148effd95fc30673aee4183e2e21931e727b456505a137726c3d37db",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000045"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000047.json",
+      "sha256": "6f12da07c386551ed4cd5f7b63897d538c3294af2aaeb1c63ba5660ab9e202c1",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000047"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000048.json",
+      "sha256": "4c0eefc218bca44a41721d296618ccf6d82b8f9f7e3d7249ce01ce6a7575b7c8",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000048"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000050.json",
+      "sha256": "59b10b258f7aa09795d746f5b4fab2d32d6bcde5cfe5c71891e3aa14b62f878d",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000050"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000051.json",
+      "sha256": "f5d923336d4a678346ee9326f77e6b8e5bffc947bc5dc67a850a1d564acf6dfb",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000051"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000052.json",
+      "sha256": "55d415a57d845e5acad9512e1e119ee35f58e6f4750fe4fc788179aacb7535aa",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000052"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000053.json",
+      "sha256": "daaa4e3d1a973c160439dedb733d367fcd7444f896af817e2532547ec4bd5c05",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000053"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000054.json",
+      "sha256": "c39debf1ecab2074be0d947bf7d7f88ac9546f77b1ee13d974470adf7616879d",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000054"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000055.json",
+      "sha256": "2ebbf554a33cf0eaea3b0267346696d44e23f7dc57e42752f07da54c6e55cf19",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000055"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000056.json",
+      "sha256": "a8b083cd2b0bb85d1d5d8144602ae7d70c7c344cf2e1ef88e66301c7433a2702",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000056"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000057.json",
+      "sha256": "3a549d0e91991111ec9b513649129c41127f0d4669b181ad3391d2b59950a4fe",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000057"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000060.json",
+      "sha256": "a82c43c50f65dfb63eb32dc0a71a6c59664ff0a27dd6dfec54b0977d0ff6077f",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000060"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000062.json",
+      "sha256": "a3b0ad81560d0f3b1a0fa2db863ed7e1739093f69eb94e9f6fd46750f6394063",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000062"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000065.json",
+      "sha256": "429352e0929f3e7b84b9065ace7422000523504fe2aab0c6d3710c10788b9135",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000065"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000067.json",
+      "sha256": "11af475f7b38a9139bd99238ec212bdffae20040a8748426dd89e973a44542da",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000067"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000068.json",
+      "sha256": "e01f6d66efaae98409ce6d2e3ad1ddfbbf8232afb7340b3b681226e2b3bf85d9",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000068"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000069.json",
+      "sha256": "b33ab572d69188a82f3e938a590456f809f934130e10ae4c94e958e44ba9a333",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000069"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000070.json",
+      "sha256": "72a2e396ddaafa765f8fe947a5fdac0dbc03d039df894d83545d62a93ab3ea98",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000070"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000071.json",
+      "sha256": "6669e9a1c4272aae66cd2c413a3468ea756c818fde51851a954dfb7f3fc23e9a",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000071"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000072.json",
+      "sha256": "bd9f255782809b513768473e24e3df9042737b691ee366c9d716fa383b5f89fa",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000072"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000074.json",
+      "sha256": "c5d3cd9961c72fce0cd25ed0fe367fb3b75068b6b869311da1aa8192721c8b05",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000074"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000076.json",
+      "sha256": "f526e744e0376ee90c2d2a2cfa574bba540f7b27ae47b88f937d05d6a3ec44d9",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000076"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000077.json",
+      "sha256": "b96fa9a5ef42b1f67cfb66f3cf4232ee31e8bbbd3f1b1c4f4984ece403c0bbc6",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000077"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000078.json",
+      "sha256": "0753faffd9220cc75ae1d487622aebfa37c27751d43ce6a5aa84c0e1203e6661",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000078"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000079.json",
+      "sha256": "2076a2737e4d3aae7585ebb9b1e272b3bcdb815c6faf4e6f2036d525d93f28bf",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000079"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000080.json",
+      "sha256": "7c11b40fb08ad357df6a31e790cca75d5bd63298391321f99ac5ef3061ed09bd",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000080"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000082.json",
+      "sha256": "5bbf0b3ad13f5082cedf64e20cf883ddf300ad2b761dd6124027260a5360aab1",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000082"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000083.json",
+      "sha256": "52b223fc19de593f200f01551c4073e14dd408530521bedec67860f2402e2ca9",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000083"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000084.json",
+      "sha256": "db65ab90011beac23292e164e45dcd47f376cb252eb1dd9ea5e75634102bf7ce",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000084"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000085.json",
+      "sha256": "8bac2eeea342717534235496d0663fb243751fadd2616ba5431995122a6d5c87",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000085"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/detail_5000086.json",
+      "sha256": "29f6da0d18e252f9c29a60eefea2660fdc6af7dece410bf6b6cc7198e3a8c673",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000086"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/funds_page1.json",
+      "sha256": "aca1eea6d75f749ec2c1ed862f34f60426e752780f1a6ee42ac2c57419d593c8",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=reits_fund_list&TABKEY=tab1&PAGENO=1"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/funds_page2.json",
+      "sha256": "05fac5c0182b25f38344e2fd01a860c4ef7645d962a4b1c013b5c8d6069f1b4f",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=reits_fund_list&TABKEY=tab1&PAGENO=2"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/projects_21_page1.json",
+      "sha256": "6081e9d0e7072919a9bbff37e7eab5cf59bc58f557039c7152f07149cf89dbaa",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/query?pageIndex=0&pageSize=100&bizType=2&biztypsb=21"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/projects_23_page1.json",
+      "sha256": "9eed20e9f287d23291c02762d68a17ce8c348dfadfd0c33b2eb779ceaf102df1",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/query?pageIndex=0&pageSize=100&bizType=2&biztypsb=23"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/projects_all_page1.json",
+      "sha256": "aa2b8c59cb002b9d16acd1ac1af72e79f140b1a0f6e7cc2812033e1ac07ab112",
+      "ok": true,
+      "url": "https://reits.szse.cn/api/reits/projectrends/query?pageIndex=0&pageSize=100&bizType=2"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest_effective_pdfs_v1.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/effective_180307.pdf",
+      "sha256": "a6ac7e814fcc1d836a90e6f638ac69b301e93ac47623cc56423c7ddd1d004064",
+      "ok": true,
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-30/d9c1f987-bc7a-41fb-8446-e094b7d19799.PDF"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest_effective_pdfs_v1.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/effective_180505.pdf",
+      "sha256": "7623521abb6458530bc556c5af7b779f59527f51562b9f16e3b5113464defd95",
+      "ok": true,
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-10-01/f39fb8fb-9422-4317-8e76-5637d0c2e479.PDF"
+    },
+    {
+      "manifest": "data/raw/public/2026-10-15/szse/manifest_field_semantics_v1.json",
+      "raw_file": "data/raw/public/2026-10-15/szse/schema_projectdynamic_20261015.html",
+      "sha256": "4d815160f06e1656afbd2152b430874d56c2e867edf040aa1f20a319093f15f1",
+      "ok": true,
+      "url": "https://reits.szse.cn/projectdynamic/index.html"
+    }
+  ]
+}

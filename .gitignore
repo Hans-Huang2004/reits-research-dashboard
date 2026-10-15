@@ -1,9 +1,12 @@
-__pycache__/
-*.py[cod]
-.DS_Store
-.venv/
 dist/
-artifacts/
-reits_dashboard_layout.html
-raw/**/*.js
-*.log
+__pycache__/
+*.pyc
+# Large source captures stay in the local audit archive; publish their manifests.
+data/raw/enrichment/**/*
+!data/raw/enrichment/**/
+!data/raw/enrichment/**/manifest.json
+workpapers/enrichment/**/texts/
+workpapers/enrichment/**/pdf_text/
+workpapers/enrichment/**/ocr_images/
+workpapers/enrichment/**/*.png
+workpapers/enrichment/**/*.pdf

@@ -1,0 +1,49 @@
+[
+  {
+    "url": "https://bond.sse.com.cn/xhtml/bridge2/js/main.js",
+    "request_url": "https://bond.sse.com.cn/xhtml/bridge2/js/main.js",
+    "query_parameters": {},
+    "referer": "https://bond.sse.com.cn/",
+    "extracted_at": "2026-10-15T11:40:19+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.sse.com.cn/xhtml/bridge2/js/main.js",
+    "content_type": "application/javascript",
+    "file": "data/raw/enrichment/institutional/discovery_2026-10-15T114019_0800/00001_6eef5c631e8b538c2dba.txt",
+    "sha256": "f8a53ad462f6c4fad59db2836717baf717af70cd3ffd3bd8af75c6e8ad535864",
+    "bytes": 2192,
+    "ok": true
+  },
+  {
+    "url": "https://bond.sse.com.cn/xhtml/bridge2/js/common/search_common.js",
+    "request_url": "https://bond.sse.com.cn/xhtml/bridge2/js/common/search_common.js",
+    "query_parameters": {},
+    "referer": "https://bond.sse.com.cn/",
+    "extracted_at": "2026-10-15T11:40:19+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.sse.com.cn/xhtml/bridge2/js/common/search_common.js",
+    "content_type": "application/javascript",
+    "file": "data/raw/enrichment/institutional/discovery_2026-10-15T114019_0800/00002_eebee1f426ba90410255.txt",
+    "sha256": "8ad4c228e453e9b63b08eb38051f22ab70b2ecc87e19cfed3ed0318b67a69aef",
+    "bytes": 36381,
+    "ok": true
+  },
+  {
+    "url": "https://bond.szse.cn/api/report/ShowReport/data",
+    "request_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=xmjdxx_xq&xmbh=53025762E07841769C0752128D5803F3&type=2",
+    "query_parameters": {
+      "SHOWTYPE": "JSON",
+      "CATALOGID": "xmjdxx_xq",
+      "xmbh": "53025762E07841769C0752128D5803F3",
+      "type": "2"
+    },
+    "referer": "https://bond.szse.cn/disclosure/progressinfo/index.html",
+    "extracted_at": "2026-10-15T11:40:21+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=xmjdxx_xq&xmbh=53025762E07841769C0752128D5803F3&type=2",
+    "content_type": "application/json",
+    "file": "data/raw/enrichment/institutional/discovery_2026-10-15T114019_0800/00003_a7ac9b203139af5500da.json",
+    "sha256": "9f4e4852858fa82db203a59de121e92d9141a110ce086333526a0af69f5342a1",
+    "bytes": 2295,
+    "ok": true
+  }
+]

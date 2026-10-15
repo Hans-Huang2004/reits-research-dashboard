@@ -1,0 +1,42 @@
+{
+  "verified_at": "2026-10-15T11:29:32+08:00",
+  "source_workbook_unchanged": true,
+  "csv_checks": {
+    "public": {
+      "expected_reference_fields": 19,
+      "exported_rows": 16,
+      "header_order_match": true,
+      "column_counts_consistent": true
+    },
+    "institutional": {
+      "expected_reference_fields": 13,
+      "exported_rows": 131,
+      "header_order_match": true,
+      "column_counts_consistent": true
+    }
+  },
+  "browser_checks": {
+    "institutional_core_fields": 9,
+    "institutional_all_fields": 13,
+    "public_core_fields": 10,
+    "public_all_fields": 19,
+    "expansion_to_fund_navigation": true,
+    "fund_related_events": true,
+    "search_and_reset": true,
+    "favorites_and_reset": true,
+    "mobile_viewport": 390,
+    "mobile_page_scroll_width": 390,
+    "horizontal_table_scroll_contained": true,
+    "mobile_dialog_width": 356
+  },
+  "checks": {
+    "python_tests": 94,
+    "node_semantic_tests": 4,
+    "javascript_syntax": "passed",
+    "git_diff_whitespace": "passed"
+  },
+  "not_performed": [
+    "Screenshot rendering capture was unavailable; layout was checked using the live browser DOM and rendered dimensions."
+  ],
+  "publication": "local_preview_only"
+}

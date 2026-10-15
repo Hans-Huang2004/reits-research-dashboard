@@ -1,0 +1,21 @@
+[
+  {
+    "url": "https://bond.szse.cn/api/report/ShowReport/data",
+    "request_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=ints_reits_cplb&pageNo=1&pageSize=100",
+    "query_parameters": {
+      "SHOWTYPE": "JSON",
+      "CATALOGID": "ints_reits_cplb",
+      "pageNo": 1,
+      "pageSize": 100
+    },
+    "referer": "https://bond.szse.cn/disclosure/productinfo/reit/index.html",
+    "extracted_at": "2026-10-15T11:51:45+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=ints_reits_cplb&pageNo=1&pageSize=100",
+    "content_type": "application/json",
+    "file": "data/raw/enrichment/institutional/szse_products_2026-10-15T115145_0800/00001_53d25d0c1164a14c8155.json",
+    "sha256": "a5237d5457662ae7e43046e8d80e7937c13d5ee0437d25c7c822ed4f91b29a94",
+    "bytes": 23006,
+    "ok": true
+  }
+]

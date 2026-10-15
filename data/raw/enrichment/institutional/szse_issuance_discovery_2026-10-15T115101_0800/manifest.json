@@ -1,0 +1,30 @@
+[
+  {
+    "url": "https://bond.szse.cn/application/publicindex/header/",
+    "request_url": "https://bond.szse.cn/application/publicindex/header/",
+    "query_parameters": {},
+    "referer": "https://bond.szse.cn/",
+    "extracted_at": "2026-10-15T11:51:01+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/application/publicindex/header/",
+    "content_type": "text/html",
+    "file": "data/raw/enrichment/institutional/szse_issuance_discovery_2026-10-15T115101_0800/00001_ce120a28aded6de0b992.html",
+    "sha256": "a457d4b83e18a23466cbfc276fd87458f89228eaf61a4681ddbbc212469203e6",
+    "bytes": 53375,
+    "ok": true
+  },
+  {
+    "url": "https://bond.szse.cn/disclosure/productinfo/detail/index.html?catelogId=gscpxq&code=566490",
+    "request_url": "https://bond.szse.cn/disclosure/productinfo/detail/index.html?catelogId=gscpxq&code=566490",
+    "query_parameters": {},
+    "referer": "https://bond.szse.cn/",
+    "extracted_at": "2026-10-15T11:51:01+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/disclosure/productinfo/detail/index.html?catelogId=gscpxq&code=566490",
+    "content_type": "text/html",
+    "file": "data/raw/enrichment/institutional/szse_issuance_discovery_2026-10-15T115101_0800/00002_19e56d2ecc4dd33cf0d1.html",
+    "sha256": "04c20595c35fd5fb999e83a47b422525fed17dd4ee9384c611bcab7266f39d38",
+    "bytes": 42159,
+    "ok": true
+  }
+]

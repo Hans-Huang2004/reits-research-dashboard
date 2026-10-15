@@ -1,0 +1,44 @@
+[
+  {
+    "url": "https://bond.sse.com.cn/xhtml/js/js_disclosure.js",
+    "request_url": "https://bond.sse.com.cn/xhtml/js/js_disclosure.js",
+    "query_parameters": {},
+    "referer": "https://bond.sse.com.cn/",
+    "extracted_at": "2026-10-15T11:43:39+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.sse.com.cn/xhtml/js/js_disclosure.js",
+    "content_type": "application/javascript",
+    "file": "data/raw/enrichment/institutional/securities_discovery_2026-10-15T114339_0800/00001_e325c2c4e6c86b275fb6.txt",
+    "sha256": "993fdf81013d0fc6d8d4f7108dbdfd92400231717b3300880f1778a35dca2dd1",
+    "bytes": 112537,
+    "ok": true
+  },
+  {
+    "url": "https://bond.sse.com.cn/disclosure/info/tb/allBonds.js",
+    "request_url": "https://bond.sse.com.cn/disclosure/info/tb/allBonds.js",
+    "query_parameters": {},
+    "referer": "https://bond.sse.com.cn/",
+    "extracted_at": "2026-10-15T11:43:39+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.sse.com.cn/disclosure/info/tb/allBonds.js",
+    "content_type": "application/javascript",
+    "file": "data/raw/enrichment/institutional/securities_discovery_2026-10-15T114339_0800/00002_465fbec57845edd72834.txt",
+    "sha256": "59b6160225c908a23e396e28be8114e8ac47d4ecfa00d9059fad0bf24680b2ac",
+    "bytes": 2957919,
+    "ok": true
+  },
+  {
+    "url": "https://bond.sse.com.cn/xhtml/bridge2/js/lib/common.js",
+    "request_url": "https://bond.sse.com.cn/xhtml/bridge2/js/lib/common.js",
+    "query_parameters": {},
+    "referer": "https://bond.sse.com.cn/",
+    "extracted_at": "2026-10-15T11:43:39+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.sse.com.cn/xhtml/bridge2/js/lib/common.js",
+    "content_type": "application/javascript",
+    "file": "data/raw/enrichment/institutional/securities_discovery_2026-10-15T114339_0800/00003_17eea69ffd2673c72342.txt",
+    "sha256": "de3e05ebfd4ed449f28a909f4f6ed9a785611f40fe72e5d682d2497e05bee4a2",
+    "bytes": 85262,
+    "ok": true
+  }
+]

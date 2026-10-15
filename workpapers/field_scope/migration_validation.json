@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-10-15T11:22:32+08:00",
+  "results": [
+    {
+      "population": "public",
+      "input_file": "data/public_reits.json",
+      "input_sha256": "6b10ea36f81d59f14882e43343bcfa031e46bae8bb18854979ea0978f7285499",
+      "output_sha256": "7b50bf0f055a52335d9398666bebacb156b06a2063a95162ed780a135a8a4dea",
+      "preserved_source_timestamp": "2026-10-15T10:59:41+08:00",
+      "field_count": 19,
+      "existing_project_values_changed": 0,
+      "project_values_imported_from_workbook": 0,
+      "validation": {
+        "ok": true,
+        "funds": 144,
+        "issued_funds": 96,
+        "filings": 160,
+        "business_types": {
+          "首发": 144,
+          "扩募": 16
+        },
+        "fund_codes_unique": true,
+        "filing_ids_unique": true,
+        "unlinked_events": 0
+      }
+    },
+    {
+      "population": "institutional",
+      "input_file": "data/institutional.json",
+      "input_sha256": "07e0259e1b174e1a285f0abff27b4f3dbf7cb466b3039451bd563509feab3c62",
+      "output_sha256": "a2ebc399661a2d19487b80baf9f853593ab4e8b42e381fdeae9228e1baf407f4",
+      "preserved_source_timestamp": "2026-10-15T09:24:22+08:00",
+      "field_count": 13,
+      "existing_project_values_changed": 0,
+      "project_values_imported_from_workbook": 0,
+      "validation": {
+        "count": 131,
+        "SSE": 109,
+        "SZSE": 22
+      }
+    }
+  ]
+}

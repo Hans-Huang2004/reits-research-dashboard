@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://query.sse.com.cn/sseQuery/commonSoaQuery.do",
+    "request_url": "https://query.sse.com.cn/sseQuery/commonSoaQuery.do?jsonCallBack=cb&isPagination=true&sqlId=CP_ZQ_ZQLB&BOND_TYPE=%E8%AF%81%E5%88%B8%E5%85%AC%E5%8F%B8%E8%B5%84%E4%BA%A7%E6%94%AF%E6%8C%81%E8%AF%81%E5%88%B8&BOND_CODE=%E6%8C%81%E6%9C%89%E5%9E%8B%E4%B8%8D%E5%8A%A8%E4%BA%A7&pageHelp.pageSize=100&pageHelp.pageNo=1",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "true",
+      "sqlId": "CP_ZQ_ZQLB",
+      "BOND_TYPE": "证券公司资产支持证券",
+      "BOND_CODE": "持有型不动产",
+      "pageHelp.pageSize": 100,
+      "pageHelp.pageNo": 1
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=268025",
+    "extracted_at": "2026-10-15T11:44:17+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/sseQuery/commonSoaQuery.do?jsonCallBack=cb&isPagination=true&sqlId=CP_ZQ_ZQLB&BOND_TYPE=%E8%AF%81%E5%88%B8%E5%85%AC%E5%8F%B8%E8%B5%84%E4%BA%A7%E6%94%AF%E6%8C%81%E8%AF%81%E5%88%B8&BOND_CODE=%E6%8C%81%E6%9C%89%E5%9E%8B%E4%B8%8D%E5%8A%A8%E4%BA%A7&pageHelp.pageSize=100&pageHelp.pageNo=1",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/issuance_probe_2026-10-15T114417_0800/00001_e69b9564d5be8811ecb3.json",
+    "sha256": "5e0d48257db39d05054c76de3b6337d058139736742cb7905ce9fb6d4b055cd6",
+    "bytes": 488,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/sseQuery/commonSoaQuery.do",
+    "request_url": "https://query.sse.com.cn/sseQuery/commonSoaQuery.do?jsonCallBack=cb&isPagination=true&sqlId=CP_ZQ_ZQLB&BOND_TYPE=%E8%AF%81%E5%88%B8%E5%85%AC%E5%8F%B8%E8%B5%84%E4%BA%A7%E6%94%AF%E6%8C%81%E8%AF%81%E5%88%B8&BOND_CODE=%E6%9C%BA%E6%9E%84%E9%97%B4&pageHelp.pageSize=100&pageHelp.pageNo=1",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "true",
+      "sqlId": "CP_ZQ_ZQLB",
+      "BOND_TYPE": "证券公司资产支持证券",
+      "BOND_CODE": "机构间",
+      "pageHelp.pageSize": 100,
+      "pageHelp.pageNo": 1
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=268025",
+    "extracted_at": "2026-10-15T11:44:17+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/sseQuery/commonSoaQuery.do?jsonCallBack=cb&isPagination=true&sqlId=CP_ZQ_ZQLB&BOND_TYPE=%E8%AF%81%E5%88%B8%E5%85%AC%E5%8F%B8%E8%B5%84%E4%BA%A7%E6%94%AF%E6%8C%81%E8%AF%81%E5%88%B8&BOND_CODE=%E6%9C%BA%E6%9E%84%E9%97%B4&pageHelp.pageSize=100&pageHelp.pageNo=1",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/issuance_probe_2026-10-15T114417_0800/00002_84af3d9bc85086d783b3.json",
+    "sha256": "5e0d48257db39d05054c76de3b6337d058139736742cb7905ce9fb6d4b055cd6",
+    "bytes": 488,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=268025",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "268025"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=268025",
+    "extracted_at": "2026-10-15T11:44:17+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=268025",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/issuance_probe_2026-10-15T114417_0800/00003_c9039b2f4f00f1ad0711.json",
+    "sha256": "f218843f87f38274d5bf5ad23eaff6e543ffeaa075a40e60d5b4a345dea22650",
+    "bytes": 1392,
+    "ok": true
+  }
+]

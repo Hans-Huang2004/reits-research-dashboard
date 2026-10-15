@@ -1,0 +1,320 @@
+[
+  {
+    "url": "https://bond.sse.com.cn/disclosure/info/tb/allBonds.js",
+    "request_url": "https://bond.sse.com.cn/disclosure/info/tb/allBonds.js",
+    "query_parameters": {},
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml",
+    "extracted_at": "2026-10-15T11:50:43+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.sse.com.cn/disclosure/info/tb/allBonds.js",
+    "content_type": "application/javascript",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00001_465fbec57845edd72834.js",
+    "sha256": "59b6160225c908a23e396e28be8114e8ac47d4ecfa00d9059fad0bf24680b2ac",
+    "bytes": 2957919,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=266474",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "266474"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=266474",
+    "extracted_at": "2026-10-15T11:50:45+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=266474",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00002_a7682cbacbd15bb51adb.json",
+    "sha256": "e9b424be7f9586e3142fe701bb971d1bb838f3ccd7c4f635141aeb2c435a0d85",
+    "bytes": 1388,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=266602",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "266602"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=266602",
+    "extracted_at": "2026-10-15T11:50:45+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=266602",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00003_de4adb127f503fb7d8ac.json",
+    "sha256": "5de593f12084e2cd7d7bf7f4162d5fad083e12478482027835dbe1524e56f297",
+    "bytes": 1371,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=266682",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "266682"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=266682",
+    "extracted_at": "2026-10-15T11:50:45+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=266682",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00004_1001d58bc5b2642ec13a.json",
+    "sha256": "f5838ea1dd19329bd964936c9e69905bd6ffdbde7280dfc60e95c613ea94f36a",
+    "bytes": 1360,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=267024",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "267024"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=267024",
+    "extracted_at": "2026-10-15T11:50:45+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=267024",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00005_e6129904085a65888b2f.json",
+    "sha256": "1efaa2508650f51a02d3b155d02256e07f350d46641c5d469fc3c8fb075b717b",
+    "bytes": 1363,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=267069",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "267069"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=267069",
+    "extracted_at": "2026-10-15T11:50:45+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=267069",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00006_8d404c12a549d1679574.json",
+    "sha256": "79033a10b362787b62d8dbdf46e3ddf1fb72dfabe344b6fd990944c6103bac74",
+    "bytes": 1366,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=267164",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "267164"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=267164",
+    "extracted_at": "2026-10-15T11:50:47+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=267164",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00007_654ca794a2e69b4ec70b.json",
+    "sha256": "cf71868bcaab7e7ebbe8e5fa19e7f47c875a93922eb22240eabacef164931d35",
+    "bytes": 1367,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=267605",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "267605"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=267605",
+    "extracted_at": "2026-10-15T11:50:47+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=267605",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00008_a6c9965b285a9404028e.json",
+    "sha256": "ec7e7884087cd6f55dd4411566a1ea5896a9c80903d0b29ad76657dc2226ccc9",
+    "bytes": 1373,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=267759",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "267759"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=267759",
+    "extracted_at": "2026-10-15T11:50:48+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=267759",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00009_52d040a74b3c28f6043f.json",
+    "sha256": "a9642db0973ff17ab44f2e3fd5ef43bdccad6d86afc26f144e4743665331dc27",
+    "bytes": 1393,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=267786",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "267786"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=267786",
+    "extracted_at": "2026-10-15T11:50:49+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=267786",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00010_dda407a0fb3095a3bf05.json",
+    "sha256": "6beaa19f08c43849a9a1677da5bd23297756e46f4013d1414e5eb490d753e813",
+    "bytes": 1393,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=267912",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "267912"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=267912",
+    "extracted_at": "2026-10-15T11:50:49+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=267912",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00011_34918e2964e84910d370.json",
+    "sha256": "5214b09d9c6df46e1b9df72a743ace77fc8d2bc8779679cdc83be0a1c64dedc9",
+    "bytes": 1388,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=268025",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "268025"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=268025",
+    "extracted_at": "2026-10-15T11:50:49+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=268025",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00012_c9039b2f4f00f1ad0711.json",
+    "sha256": "f218843f87f38274d5bf5ad23eaff6e543ffeaa075a40e60d5b4a345dea22650",
+    "bytes": 1392,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=268131",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "268131"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=268131",
+    "extracted_at": "2026-10-15T11:50:49+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=268131",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00013_7600058c0c7b0ad13d94.json",
+    "sha256": "f472bee31d3c20a04671a410807c68ebfda459d16c8c11090b0fc6f73812ff23",
+    "bytes": 1390,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=268132",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "268132"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=268132",
+    "extracted_at": "2026-10-15T11:50:49+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=268132",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00014_a10ec40d81285817e537.json",
+    "sha256": "0be3438a28b862a1ce46e3492de485e19f34cb5f89d975afab6ccfc9ca5a8d84",
+    "bytes": 1362,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=268384",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "268384"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=268384",
+    "extracted_at": "2026-10-15T11:50:52+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=268384",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00015_f0fa371dd64b6c8a8e75.json",
+    "sha256": "c36166ed801158460996afdd23359fb9822c5ef8c279b805979bd5234a525532",
+    "bytes": 1381,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=268687",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "268687"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=268687",
+    "extracted_at": "2026-10-15T11:50:52+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=268687",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00016_5e2d9328240138aecba7.json",
+    "sha256": "6db6e0154676224c605488e258b11340e5f76f1e029a9eb5fb137bea1368ce5d",
+    "bytes": 1377,
+    "ok": true
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "request_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=269214",
+    "query_parameters": {
+      "jsonCallBack": "cb",
+      "isPagination": "false",
+      "sqlId": "COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C",
+      "BOND_CODE": "269214"
+    },
+    "referer": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=269214",
+    "extracted_at": "2026-10-15T11:50:52+08:00",
+    "http_status": 200,
+    "final_url": "https://query.sse.com.cn/commonQuery.do?jsonCallBack=cb&isPagination=false&sqlId=COMMON_SSEBOND_XXPL_ZQXX_KZHGSZQ_XQ_C&BOND_CODE=269214",
+    "content_type": "application/json;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/20261015T115043/00017_7945ed9a65b26a6cc647.json",
+    "sha256": "4e7700cbc43ffd64c434560355e517395b1f75a5be3b7dbcbb98b244cf9c17da",
+    "bytes": 1370,
+    "ok": true
+  }
+]

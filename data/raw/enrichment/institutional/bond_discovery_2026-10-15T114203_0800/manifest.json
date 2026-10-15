@@ -1,0 +1,53 @@
+[
+  {
+    "url": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=268025",
+    "request_url": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=268025",
+    "query_parameters": {},
+    "referer": "https://bond.sse.com.cn/",
+    "extracted_at": "2026-10-15T11:42:03+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.sse.com.cn/disclosure/info/index.shtml?BONDCODE=268025",
+    "content_type": "text/html",
+    "file": "data/raw/enrichment/institutional/bond_discovery_2026-10-15T114203_0800/00001_027ec2e480759881899b.html",
+    "sha256": "0f2ac201a8f2f16df9ca0e5577b77a73444fa7d4aa17c2754436ac147b8df796",
+    "bytes": 21206,
+    "ok": true
+  },
+  {
+    "url": "https://bond.sse.com.cn/disclosure/announ/abs/",
+    "request_url": "https://bond.sse.com.cn/disclosure/announ/abs/",
+    "query_parameters": {},
+    "referer": "https://bond.sse.com.cn/",
+    "extracted_at": "2026-10-15T11:42:03+08:00",
+    "ok": false,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://bond.sse.com.cn/disclosure/info/",
+    "request_url": "https://bond.sse.com.cn/disclosure/info/",
+    "query_parameters": {},
+    "referer": "https://bond.sse.com.cn/",
+    "extracted_at": "2026-10-15T11:42:39+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.sse.com.cn/disclosure/info/",
+    "content_type": "text/html",
+    "file": "data/raw/enrichment/institutional/bond_discovery_2026-10-15T114203_0800/00003_45e021596ba01c9bdc6b.html",
+    "sha256": "0f2ac201a8f2f16df9ca0e5577b77a73444fa7d4aa17c2754436ac147b8df796",
+    "bytes": 21206,
+    "ok": true
+  },
+  {
+    "url": "https://bond.sse.com.cn/xhtml/bridge2/js/lib/common.js",
+    "request_url": "https://bond.sse.com.cn/xhtml/bridge2/js/lib/common.js",
+    "query_parameters": {},
+    "referer": "https://bond.sse.com.cn/",
+    "extracted_at": "2026-10-15T11:42:39+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.sse.com.cn/xhtml/bridge2/js/lib/common.js",
+    "content_type": "application/javascript",
+    "file": "data/raw/enrichment/institutional/bond_discovery_2026-10-15T114203_0800/00004_17eea69ffd2673c72342.txt",
+    "sha256": "de3e05ebfd4ed449f28a909f4f6ed9a785611f40fe72e5d682d2497e05bee4a2",
+    "bytes": 85262,
+    "ok": true
+  }
+]

@@ -1,0 +1,2136 @@
+{
+  "source_run_stamp": "20261015-113621",
+  "reviewed_at": "2026-10-15T12:12:34+08:00",
+  "review_scope": "最新招募正文项目概况、预测摘要及具体支持义务段落；扩募资产仅限本次新增；不接受被截断的历史资产池定义。",
+  "events": {
+    "SSE_f461bff4962247f4a1dac82dea874c42": {
+      "fields": {
+        "underlying_assets": "乌兰风电项目，东邻夏艾里沟村草原，南邻夏艾里沟村草原，西邻夏艾里沟村、那仁村草原，北邻夏艾里沟村草原，装机容量为200MW",
+        "project_return_forecast": "净现金流分派率/IRR2026年7-12月和2027年净现金流分派率分别为21.90%（年化）和9.86%，全周期IRR约为5.80%",
+        "asset_type": "能源",
+        "guarantee_support": "若国补应收账款超过5年仍未回收从而触发申能股份提供流动性支持的情况下，项目公司除要求申能股份支付流动性支持资金之外，存在需要额外向申能股份支付资金占用费的风险。"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 东方红申能股份新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/f461bf_20261014_N7ND.pdf",
+            "published_at": "2026-10-14",
+            "page": 60,
+            "excerpt": "本基金拟初始投资的项目为乌兰风电项目，东邻夏艾里沟村草原，南邻夏艾里沟村草原，西邻夏艾里沟村、那仁村草原，北邻夏艾里沟村草原，装机容量为200MW",
+            "document_stage": "feedback",
+            "rule": "explicit_initial_or_new_assets_sentence",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/242ceab827670b26df6796d9.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 东方红申能股份新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/f461bf_20261014_N7ND.pdf",
+            "published_at": "2026-10-14",
+            "page": 21,
+            "excerpt": "金投资其他品种，基金管理人在履行适当程序后，可以将其纳入投资范围，并可依据届时有效的法律法规适时合理地调整投资范围。基金存续期限自基金合同生效之日起15年专项计划期限自专项计划成立之日起15年预计基金募集份额（亿份）【】预计募集规模（亿元）14.611不动产项目估值（亿元）14.66（评估基准日为2026年6月30日）净现金流分派率/IRR2026年7-12月和2027年净现金流分派率分别为21.90%（年化）和9.86%，全周期IRR约为5.80%1截至评估基准日，项目公司除资产组外的其他资产和负债（不包括为搭建股债结构而需支付的可替换负债）净值约-534.23万元，以此计算的不动产基金募集规模为14.61亿元（计算结果向上取整）。",
+            "document_stage": "feedback",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/242ceab827670b26df6796d9.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 东方红申能股份新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/f461bf_20261014_N7ND.pdf",
+            "published_at": "2026-10-14",
+            "page": 21,
+            "excerpt": "不动产项目业态 能源基础设施（风电） 基金投资标的 本基金投资范围包括不动产资产支持证券，利率债（包括国债、",
+            "document_stage": "feedback",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/242ceab827670b26df6796d9.json"
+          }
+        ],
+        "guarantee_support": [
+          {
+            "title": "1-4-1 东方红申能股份新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/f461bf_20261014_N7ND.pdf",
+            "published_at": "2026-10-14",
+            "page": 46,
+            "excerpt": "若国补应收账款超过5年仍未回收从而触发申能股份提供流动性支持的情况下，项目公司除要求申能股份支付流动性支持资金之外，存在需要额外向申能股份支付资金占用费的风险。",
+            "document_stage": "feedback",
+            "rule": "specific_support_obligation_passage",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/242ceab827670b26df6796d9.json"
+          }
+        ]
+      }
+    },
+    "SSE_84f8eff955614871a2e88d91891828a1": {
+      "fields": {
+        "underlying_assets": "合肥银泰中心项目",
+        "project_return_forecast": "净现金流分派率2026年为4.64%（年化），2027年为5.19%",
+        "asset_type": "消费"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 华夏银泰百货封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/84f8ef_20260918_4PYX.pdf",
+            "published_at": "2026-09-18",
+            "page": 4,
+            "excerpt": "不动产项目名称 合肥银泰中心项目 （预计）募集规模 42.205 亿元 （拟）上市的证券交易所 上海证券交易所 基金管理人 华夏基金管理有限公司 基金托管人 招商银行股份有限公司 资产支持证券管理人 中信证券股份有限公司",
+            "document_stage": "feedback",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/e9060443624c5017c3777529.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 华夏银泰百货封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/84f8ef_20260918_4PYX.pdf",
+            "published_at": "2026-09-18",
+            "page": 31,
+            "excerpt": "券-银泰百货1号资产支持专项计划不动产项目业态购物中心基金投资标的80%以上的基金资产投资于不动产资产支持证券，通过持有其全部份额取得不动产项目公司全部股权、不动产项目完全所有权或者经营权利。基金存续期限33年专项计划期限33年预计基金募集份额（亿份）【】预计募集规模（亿元）42.205不动产项目估值（亿元）42.15净现金流分派率2026年为4.64%（年化），2027年为5.19%基金收益预计分配频率和分配比例本基金应当将不低于合并后年度可供分配金额的90%以现金形式分配给投资者。本基金的收益分配在符合分配条件的情况下每年不得少于1次，若基金合同生效不满6个月可不进行收益分配回收资金用途原始权益人取得不动产基金回收资金后，将用于与主营业务相关的存量资产收购、新增投资、装修改造、偿还债务以及补充流动资金，不涉及将募集资金用于购置商品住宅用地原始权益人及其同一控制下关联方拟持战配比例【51%】预计是否出表【否】特殊条款（如有）无参与人概况基金管理人华夏基金管理有限公司专项计划管理人中信证券股份有限公司托管人招商银行股份有限公司财务顾问（如有）无原始权益人银泰百货有限公司原始权益人企业性质民营企业原始权益人所属行业批发和零售业原始权益人注册地浙江省杭州市余杭区仓前街道良睦路1399号19号楼107-18室",
+            "document_stage": "feedback",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/e9060443624c5017c3777529.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 华夏银泰百货封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/84f8ef_20260918_4PYX.pdf",
+            "published_at": "2026-09-18",
+            "page": 31,
+            "excerpt": "不动产项目业态 购物中心 基金投资标的 80%以上的基金资产投资于不动产资产支持证券，通",
+            "document_stage": "feedback",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/e9060443624c5017c3777529.json"
+          }
+        ]
+      }
+    },
+    "SSE_72c49c7e1ec847fea999460058302391": {
+      "fields": {
+        "asset_type": "租赁住房"
+      },
+      "sources": {
+        "asset_type": [
+          {
+            "title": "1-4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金2026年度第一次扩募并新购入不动产项目招募说明书.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
+            "published_at": "2026-09-28",
+            "page": 29,
+            "excerpt": "不动产项目业态 租赁住房 基金投资标的 汇添富资本-上海地产租赁住房 2 号资产支持专项计划",
+            "document_stage": "application",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/7abf36e6eacfd1dcc35cbe73.json"
+          }
+        ]
+      }
+    },
+    "SSE_9c0e79ff1731437c8cb7571366675723": {
+      "fields": {
+        "underlying_assets": "杭州开元名都项目、温州开元名都项目、嵊州开元名都项目",
+        "project_return_forecast": "净现金流分派率根据《可供分配金额测算报告》，本基金预计2026年4-12月和2027年的可供分配金额分别为5,971.58万元和8,301.02万元，预计年化分派率分别为5.16%和5.38%",
+        "asset_type": "文旅类"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 中金开元旅业封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/9c0e79_20260930_YS26.pdf",
+            "published_at": "2026-09-30",
+            "page": 5,
+            "excerpt": "不动产项目名称 杭州开元名都项目、温州开元名都项目、嵊州开元名都项目 预计募集规模 15.431 亿元 拟上市的证券交易所 上海证券交易所 基金管理人 中金基金管理有限公司 基金托管人 中信银行股份有限公司 资产支持证券管理人 中国国际金融股份有限公司",
+            "document_stage": "sealed",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/b17357e845cbbd4127a0864b.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 中金开元旅业封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/9c0e79_20260930_YS26.pdf",
+            "published_at": "2026-09-30",
+            "page": 28,
+            "excerpt": "中金-开元旅业1期商业不动产资产支持专项计划大类资产类型商业不动产不动产项目业态酒店基金投资标的杭州开元名都项目、温州开元名都项目、嵊州开元名都项目基金存续期限34年专项计划期限34年预计基金募集份额（亿份）中国证监会准予本基金募集的基金份额总额为【】亿份预计募集规模（亿元）15.431不动产项目估值（亿元）15.04净现金流分派率根据《可供分配金额测算报告》，本基金预计2026年4-12月和2027年的可供分配金额分别为5,971.58万元和8,301.02万元，预计年化分派率1分别为5.16%和5.38%基金收益预计分配频率和分配比例在符合有关基金分红条件的前提下，本基金应当将90%以上合并后基金年度可供分配金额分配给投资者，每年不少于1次，若基金合同生效不满6个月可不进行收益分配回收资金用途原始权益人承诺用回收资金应当符合宏观政策导向，严格遵1预计年化分派率=预测可供分配金额/基金平价发行预计发售规模*预测月数/12，下同。",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/b17357e845cbbd4127a0864b.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 中金开元旅业封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/9c0e79_20260930_YS26.pdf",
+            "published_at": "2026-09-30",
+            "page": 28,
+            "excerpt": "不动产项目业态 酒店 基金投资标的 杭州开元名都项目、温州开元名都项目、嵊州开元名都项目 基金存续期限 34 年",
+            "document_stage": "sealed",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/b17357e845cbbd4127a0864b.json"
+          }
+        ]
+      }
+    },
+    "SSE_39be963ffbaf493ba0744506b3f451e2": {
+      "fields": {
+        "underlying_assets": "陶溪川首期项目",
+        "project_return_forecast": "净现金流分派率2026年7-12月预测年化净现金流分派率：5.23%；2027年预测净现金流分派率：5.48%",
+        "asset_type": "消费"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 嘉实陶邑消费封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202608/39be96_20260820_HVQG.pdf",
+            "published_at": "2026-08-20",
+            "page": 5,
+            "excerpt": "不动产项目名称 陶溪川首期项目 预计募集规模 1,325,154,816.16 元 拟上市的证券交易所 上海证券交易所 基金管理人 嘉实基金管理有限公司 基金托管人 中国建设银行股份有限公司 资产支持证券管理人 嘉实资本管理有限公司",
+            "document_stage": "application",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/d762b99579df6a26d6158c45.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 嘉实陶邑消费封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202608/39be96_20260820_HVQG.pdf",
+            "published_at": "2026-08-20",
+            "page": 28,
+            "excerpt": "街区基金投资标的80%以上的基金资产投资于不动产资产支持证券，通过持有其全部份额取得不动产项目公司全部股权、不动产项目完全所有权或者经营权利。基金存续期限38年专项计划期限38年预计基金募集份额（亿份）根据审批情况确定预计募集规模（元）1,325,154,816.16不动产项目估值（元）1,322,000,000.00净现金流分派率2026年7-12月预测年化净现金流分派率：5.23%2027年预测净现金流分派率：5.48%",
+            "document_stage": "application",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/d762b99579df6a26d6158c45.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 嘉实陶邑消费封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202608/39be96_20260820_HVQG.pdf",
+            "published_at": "2026-08-20",
+            "page": 28,
+            "excerpt": "不动产项目业态 消费基础设施-商业街区 基金投资标的 80%以上的基金资产投资于不动产资产支持证券，",
+            "document_stage": "application",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/d762b99579df6a26d6158c45.json"
+          }
+        ]
+      }
+    },
+    "SSE_24e84189f68749109b5302f5e1e6ad29": {
+      "fields": {
+        "underlying_assets": "华能青岛项目",
+        "project_return_forecast": "净现金流分派率/IRR2026年4-12月、2027年度预计分派率为5.82%、8.00%/IRR为5.92%",
+        "asset_type": "能源"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/24e841_20260920_IK4F.pdf",
+            "published_at": "2026-09-20",
+            "page": 4,
+            "excerpt": "不动产项目名称 华能青岛项目 （预计）募集规模 30.18 亿元 （拟）上市的证券交易所 上海证券交易所 基金管理人 长城基金管理有限公司 基金托管人 中国农业银行股份有限公司 资产支持证券管理人 长城证券资产管理有限公司",
+            "document_stage": "sealed",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/4f54eee01c12a3d7de1921bc.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/24e841_20260920_IK4F.pdf",
+            "published_at": "2026-09-20",
+            "page": 24,
+            "excerpt": "资产支持专项计划，并将优先投资于以青岛热电或其关联方拥有或推荐的能源类不动产项目为投资标的的资产支持专项计划，并持有资产支持专项计划的全部资产支持证券份额，从而取得不动产项目完全所有权或经营权利基金存续期限27年专项计划期限27年预计基金募集份额（亿份）10预计募集规模（亿元）30.18不动产项目估值（亿元）30.16净现金流分派率/IRR2026年4-12月、2027年度预计分派率为5.82%、8.00%/IRR为5.92%基金收益预计分配频率和分配比例本基金应当将不低于合并后年度可供分配金额的90%以现金形式分配给投资者。本基金的收益分配在符合分配条件的情况下每年不得少于1次，若基金合同生效不满6个月可不进行收益分配回收资金用途本次净回收资金拟主要用于青岛海上风电项目原始权益人及其同一控制下关联方拟持战配比例51%预计是否出表否特殊条款（如有）无参与人概况基金管理人长城基金管理有限公司专项计划管理人长城证券资产管理有限公司托管人中国农业银行股份有限公司",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/4f54eee01c12a3d7de1921bc.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/24e841_20260920_IK4F.pdf",
+            "published_at": "2026-09-20",
+            "page": 24,
+            "excerpt": "不动产项目业态 能源基础设施 基金投资标的 本基金存续期内按照《基金合同》的约定以 80%以上基金",
+            "document_stage": "sealed",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/4f54eee01c12a3d7de1921bc.json"
+          }
+        ]
+      }
+    },
+    "SSE_cdb91b06f7bd4b88a382d391bfdf687e": {
+      "fields": {
+        "underlying_assets": "香港新世界大厦（K11购物艺术中心）",
+        "project_return_forecast": "净现金流分派率2026年4月1日-2026年12月31日期间和2027年度本基金的预测净现金流分派率分别约为4.79%（年化）和4.75%",
+        "asset_type": "消费"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "5-1广发新世界封闭式商业不动产证券投资基金招募说明书（草案） .pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/cdb91b_20260919_LXYT.pdf",
+            "published_at": "2026-09-19",
+            "page": 4,
+            "excerpt": "不动产项目名称 香港新世界大厦（K11 购物艺术中心） 预计募集规模 38.18 亿元 拟上市的证券交易所 上海证券交易所 基金管理人 广发基金管理有限公司 基金托管人 招商银行股份有限公司 资产支持证券管理人 瑞元资本管理有限公司",
+            "document_stage": "application",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/5a40041116701aed166a82ef.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "5-1广发新世界封闭式商业不动产证券投资基金招募说明书（草案） .pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/cdb91b_20260919_LXYT.pdf",
+            "published_at": "2026-09-19",
+            "page": 28,
+            "excerpt": "部分等）、利率债、货币市场工具（包括同业存单、债券回购、银行存款（含协议存款、定期存款及其他银行存款）等）以及法律法规或中国证监会允许不动产基金投资的其他金融工具（但须符合中国证监会相关规定）。基金存续期限40年专项计划期限40年预计基金募集份额（亿份）【】预计募集规模（亿元）38.18不动产项目估值（亿元）45.68净现金流分派率/IRR2026年4月1日-2026年12月31日期间和2027年度本基金的预测净现金流分派率分别约为4.79%（年化）和4.75%基金收益预计分配频率和分配比例在符合分配条件的情况下，本基金的收益分配每年不得少于1次，本基金应当将不低于合并后年度可供分配金额的90%以现金形式分配给投资者。若《基金合同》生效不满6个月可不进行收益分配。回收资金用途原始权益人的回收资金拟用于偿还债务、补充流动资金等原始权益人及其同一控制下关联方拟持战配比例不低于20%预计是否出表是特殊条款无参与人概况基金管理人广发基金管理有限公司专项计划管理人瑞元资本管理有限公司托管人招商银行股份有限公司财务顾问国泰海通证券股份有限公司原始权益人上海新世创曜企业管理有限公司原始权益人企业性质有限责任公司（外商投资企业法人独资）原始权益人所属行业商务服务业原始权益人注册地上海市黄浦区淮海中路300号1112室原始权益人控股股东和持股比例上海三联物业发展有限公司，持股比例100%原始权益人实控人新世界发展有限公司原始权益人上市地点和股票代码不涉及运营管理机构上海凯诗怡商业管理有限公司运营管理机构注册地上海市黄浦区淮海中路300号1116室运营管理机构经营地上海市黄浦区淮海中路300号1116室重要现金流提供方不涉及资产评估机构深圳市戴德梁行土地房地产评估有限公司基金法律顾问北京市金杜律师事务所",
+            "document_stage": "application",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/5a40041116701aed166a82ef.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "5-1广发新世界封闭式商业不动产证券投资基金招募说明书（草案） .pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/cdb91b_20260919_LXYT.pdf",
+            "published_at": "2026-09-19",
+            "page": 27,
+            "excerpt": "不动产项目业态 商业综合体 基金投资标的 本基金投资范围包括不动产资产支持证券、AAA 级信用债（包括符合",
+            "document_stage": "application",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/5a40041116701aed166a82ef.json"
+          }
+        ]
+      }
+    },
+    "SSE_894cbcc4623047c385444030dd83f921": {
+      "fields": {
+        "underlying_assets": "城开·阡集汇社区",
+        "project_return_forecast": "净现金流分派率2026年度分派率（年化）：4.16%；2027年度分派率：4.08%",
+        "asset_type": "租赁住房"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1  国泰海通上实租赁住房封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/894cbc_20260909_SJNQ.pdf",
+            "published_at": "2026-09-09",
+            "page": 4,
+            "excerpt": "不动产项目名称 城开·阡集汇社区 预计募集规模 12.05 亿元 拟上市的证券交易所 上海证券交易所 基金管理人 上海国泰海通证券资产管理有限公司 基金托管人 中国建设银行股份有限公司 资产支持证券管理人 上海国泰海通证券资产管理有限公司",
+            "document_stage": "application",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/27b6ddef136907740a908860.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1  国泰海通上实租赁住房封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/894cbc_20260909_SJNQ.pdf",
+            "published_at": "2026-09-09",
+            "page": 25,
+            "excerpt": "金名称国泰海通上实租赁住房封闭式基础设施证券投资基金专项计划名称国泰海通资管-上实租赁住房基础设施资产支持专项计划不动产类型-不动产项目业态租赁住房-保障性租赁住房基金投资标的城开·阡集汇社区基金存续期限63年专项计划期限63年预计基金募集份额（亿份）【】份预计募集规模（亿元）12.05不动产资产估值（亿元）12.05净现金流分派率/IRR2026年度分派率（年化）：4.16%2027年度分派率：4.08%基金收益预计分配频率及分配比例每年不少于1次，收益分配比例不低于合并后基金年度可供分配金额的90%回收资金用途用于与主营业务相关的存量资产收购、新增投资，以及偿还债务、补充流动性资金等，不会用于购置商品住宅用地原始权益人及其同一控制下关联方拟持战配比例20%，最终比例以发售公告为准预计是否出表是",
+            "document_stage": "application",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/27b6ddef136907740a908860.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1  国泰海通上实租赁住房封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/894cbc_20260909_SJNQ.pdf",
+            "published_at": "2026-09-09",
+            "page": 26,
+            "excerpt": "不动产项目业态 保障性租赁住房 项目所在地 上海市徐汇区 资产范围 东至规划七路、南至规划八路、西至龙川北路、北至规划",
+            "document_stage": "application",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/27b6ddef136907740a908860.json"
+          }
+        ]
+      }
+    },
+    "SSE_a9ce5e95e078472998cc47ad30846c2b": {
+      "fields": {
+        "underlying_assets": "（1）位于山东省潍坊市奎文区东风东街的新天地项目、新天地接建项目（合称“潍坊泰华城项目”）；（2）位于山东省青州市的青州泰华城购物中心项目（简称“青州泰华城项目”）",
+        "project_return_forecast": "净现金流分派率自2026年4月1日（假设基金成立日）至2026年12月31日止期间预测数、2027年度预计年化分派率为4.64%、5.40%",
+        "asset_type": "消费"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+            "published_at": "2026-09-16",
+            "page": 4,
+            "excerpt": "不动产项目名称 （1）位于山东省潍坊市奎文区东风东街的新天地项目、新天地接建 项目（合称“潍坊泰华城项目”）； （2）位于山东省青州市的青州泰华城购物中心项目（简称“青州泰 华城项目”） （预计）募集规模 20.45 亿元",
+            "document_stage": "application",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+            "published_at": "2026-09-16",
+            "page": 29,
+            "excerpt": "华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）28基金投资标的本基金投资于不动产资产支持证券的比例不低于80%，投资于利率债、AAA级信用债、货币市场工具的比例不超过20%基金存续期限27年专项计划27年预计基金募集份额（亿份）【】预计募集规模（亿元）20.45亿元不动产项目估值（亿元）20.45亿元净现金流分派率/IRR自2026年4月1日（假设基金成立日）至2026年12月31日止期间预测数、2027年度预计年化分派率为4.64%、5.40%基金收益预计分配频率和分配比例基金收益分配每年不低于1次，收益分配比例不低于不动产基金年度可供分配金额的90%回收资金用途拟用于与主营业务相关的存量资产收购、新增投资，以及偿还债务、补充流动资金等，不用于购置商品住宅用地原始权益人及其同一控制下关联方拟持战配比例不低于40%预计是否出表不出表特殊条款（如有）无参与人概况基金管理人国联安基金管理有限公司专项计划管理人太平洋资产管理有限责任公司托管人中信银行股份有限公司财务顾问中国银河证券股份有限公司原始权益人山东大墉置业有限公司、潍坊泰华城商业发展有限公司原始权益人企业性质民营原始权益人所属行业商务服务业原始权益人注册地山东省潍坊市原始权益人控股股东和持股比例原始权益人一的控股股东：刘云江，持股比例90%；原始权益人二的控股股东：山东世纪泰华集团有限公司，持股比例84.31%原始权益人实控人刘云江原始权益人上市地点和股票代码（如有）不涉及运营管理机构潍坊泰华城商业发展有限公司运营管理机构注册地山东省潍坊市",
+            "document_stage": "application",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+            "published_at": "2026-09-16",
+            "page": 28,
+            "excerpt": "不动产项目业态 商业零售（购物中心）",
+            "document_stage": "application",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json"
+          }
+        ]
+      }
+    },
+    "SSE_c330717c560146148c72a9a3bdeb4de8": {
+      "fields": {
+        "underlying_assets": "珊溪水利枢纽工程项目",
+        "project_return_forecast": "净现金流分派率/内部收益率IRR预测现金分派率：2026年4-12月为3.90%（年化后为5.20%），2027年为5.33%；全周期IRR为5.11%"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 中金温州公用水利封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202608/c33071_20260813_Q8M1.pdf",
+            "published_at": "2026-08-13",
+            "page": 5,
+            "excerpt": "不动产项目名称 珊溪水利枢纽工程项目 预计募集规模 23.36 亿元 拟上市的证券交易所 上海证券交易所 基金管理人 中金基金管理有限公司 基金托管人 中国农业银行股份有限公司 资产支持证券管理人 中国国际金融股份有限公司",
+            "document_stage": "application",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/c108d9bb8775c6e2a72faba6.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 中金温州公用水利封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202608/c33071_20260813_Q8M1.pdf",
+            "published_at": "2026-08-13",
+            "page": 25,
+            "excerpt": "产支持专项计划不动产项目业态综合水利设施基金投资标的中金-温州公用水利基础设施资产支持专项计划资产支持证券基金存续期限自基金合同生效日起30年专项计划期限自专项计划设立日起30年预计基金募集份额（亿份）中国证监会准予本基金募集的基金份额总额为【】亿份预计募集规模（亿元）23.36亿元不动产项目估值（亿元）28.36亿元净现金流分派率/内部收益率IRR预测现金分派率：2026年4-12月为3.90%（年化后为5.20%），2027年为5.33%；全周期IRR为5.11%。基金收益预计分配频率和分配比例在符合有关基金分红条件的前提下，本基金应当将90%以上合并后基金年度可供分配金额分配给投资者，每年不少于1次，若基金合同生效不满6个月可不进行收益分配",
+            "document_stage": "application",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/c108d9bb8775c6e2a72faba6.json"
+          }
+        ]
+      }
+    },
+    "SSE_0c134614a72047339c77d9e3049f03fc": {
+      "fields": {
+        "underlying_assets": "宁夏国博新能源同心焦家畔风电项目、宁夏国博新农村风电项目",
+        "project_return_forecast": "净现金流分派率/IRR净现金流分派率：2026年4-12月：12.60%；2027年：10.44%IRR：5.69%",
+        "asset_type": "能源",
+        "guarantee_support": "2、流动性支持安排嘉泽新能已于2025年12月5日向交通银行宁夏分行、宁夏博疆出具《流动性支持函》，承诺对于账龄满5年仍未回款的国补应收账款，启动流动性支持。"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4 国金嘉泽新能源封闭式基础设施证券投资基金招募说明书（草案)-注册稿（盖章版）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/0c1346_20260914_Z4L5.pdf",
+            "published_at": "2026-09-14",
+            "page": 4,
+            "excerpt": "不动产项目名称 宁夏国博新能源同心焦家畔风电项目、宁夏国博新农村 风电项目 （预计）募集规模 10.46 亿元 （拟）上市的证券交易所 上海证券交易所 基金管理人 国金基金管理有限公司",
+            "document_stage": "sealed",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:05+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/573820fbc002480163d7a772.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4 国金嘉泽新能源封闭式基础设施证券投资基金招募说明书（草案)-注册稿（盖章版）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/0c1346_20260914_Z4L5.pdf",
+            "published_at": "2026-09-14",
+            "page": 22,
+            "excerpt": "称国金嘉泽新能源封闭式基础设施证券投资基金专项计划名称国金资管-嘉泽新能源1号资产支持专项计划不动产项目业态清洁能源（风电）基金投资标的国金资管-嘉泽新能源1号资产支持专项计划的全部份额基金存续期限16年专项计划期限16年预计基金募集份额（亿份）【】预计募集规模（亿元）10.46亿元不动产项目估值（亿元）10.46亿元净现金流分派率/IRR净现金流分派率：2026年4-12月：12.60%；2027年：10.44%IRR：5.69%基金收益预计分配频率和分配比例在符合分配条件的前提下，至少每年1次；90%以上回收资金用途拟投资于敦化泽瑞新能源有限公司300MW风电项目原始权益人及其同一控制下关联方拟持战配比例20%预计是否出表是特殊条款（如有）无参与人概况基金管理人国金基金管理有限公司专项计划管理人国金证券资产管理有限公司托管人交通银行股份有限公司财务顾问（如有）国金证券股份有限公司发起人嘉泽新能源股份有限公司发起人企业性质民营企业发起人所属行业电力生产发起人注册地宁夏回族自治区吴忠市红寺堡区发起人控股股东和持股比例上海博荣益弘科技有限公司，持股16.41%发起人实控人陈波发起人上市地点和股票代码（如有）上海证券交易所，股票代码：601619.SH原始权益人宁夏嘉盈新能源控股有限公司原始权益人企业性质民营企业原始权益人所属行业电力生产原始权益人注册地宁夏回族自治区银川市兴庆区原始权益人控股股东和持股比例北京嘉泽新能源有限公司，持股100%原始权益人实控人陈波原始权益人上市地点和股票代码（如有）无运营管理机构宁夏嘉隆新能源运营管理有限公司",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:05+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/573820fbc002480163d7a772.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4 国金嘉泽新能源封闭式基础设施证券投资基金招募说明书（草案)-注册稿（盖章版）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/0c1346_20260914_Z4L5.pdf",
+            "published_at": "2026-09-14",
+            "page": 22,
+            "excerpt": "不动产项目业态 清洁能源（风电） 基金投资标的 国金资管-嘉泽新能源 1 号资产支持专项计划",
+            "document_stage": "sealed",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:05+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/573820fbc002480163d7a772.json"
+          }
+        ],
+        "guarantee_support": [
+          {
+            "title": "1-4 国金嘉泽新能源封闭式基础设施证券投资基金招募说明书（草案)-注册稿（盖章版）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/0c1346_20260914_Z4L5.pdf",
+            "published_at": "2026-09-14",
+            "page": 149,
+            "excerpt": "2、流动性支持安排嘉泽新能已于2025年12月5日向交通银行宁夏分行、宁夏博疆出具《流动性支持函》，承诺对于账龄满5年仍未回款的国补应收账款，启动流动性支持。",
+            "document_stage": "sealed",
+            "rule": "specific_support_obligation_passage",
+            "reviewed_at": "2026-10-15T12:11:05+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/573820fbc002480163d7a772.json"
+          }
+        ]
+      }
+    },
+    "SSE_2b6853bdbec648e0821425c40f6d5b45": {
+      "fields": {
+        "asset_type": "物流仓储",
+        "underlying_assets": "本次拟购入西安项目、合肥项目（总建筑面积252,832.83平方米）"
+      },
+      "sources": {
+        "asset_type": [
+          {
+            "title": "1-4-1招募说明书草案及附件.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202607/2b6853_20260724_91UB.pdf",
+            "published_at": "2026-07-24",
+            "page": 30,
+            "excerpt": "不动产项目业态 仓储物流 基金投资标的 本基金本次扩募的实际募集金额在扣除基金层面预留",
+            "document_stage": "application",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/0d432db2f0f0e77492ff6dd8.json"
+          }
+        ],
+        "underlying_assets": [
+          {
+            "title": "1-4-1招募说明书草案及附件.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202607/2b6853_20260724_91UB.pdf",
+            "published_at": "2026-07-24",
+            "page": 59,
+            "excerpt": "本次拟购入不动产资产为西安项目公司持有的西安项目和合肥项目公司持有的合肥项目，总建筑面积为252,832.83平方米。",
+            "document_stage": "application",
+            "rule": "manual_current_expansion_pool_review",
+            "reviewed_at": "2026-10-15T12:12:34+08:00",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/0d432db2f0f0e77492ff6dd8.json",
+            "source_method": "native_pdf_text",
+            "scope": "本次扩募拟新增项目",
+            "review_status": "passage_reviewed"
+          }
+        ]
+      }
+    },
+    "SSE_2442d7bd13474f31972b8605ceebefdb": {
+      "fields": {
+        "underlying_assets": "汇智国际商业中心",
+        "project_return_forecast": "净现金流分派率（年化）2026年7月至12月：5.98%；2027年：6.07%",
+        "asset_type": "消费"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 华安中电浦软封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202607/2442d7_20260729_I3WT.pdf",
+            "published_at": "2026-07-29",
+            "page": 4,
+            "excerpt": "不动产项目名称 汇智国际商业中心 （预计）募集规模 11.03 亿元 （拟）上市的证券交易所 上海证券交易所 基金管理人 华安基金管理有限公司 基金托管人 中国建设银行股份有限公司 资产支持证券管理人 华安未来资产管理（上海）有限公司",
+            "document_stage": "application",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/4a11240fd28cda9e01e90455.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 华安中电浦软封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202607/2442d7_20260729_I3WT.pdf",
+            "published_at": "2026-07-29",
+            "page": 24,
+            "excerpt": "工具；本基金以初始募集资金投资的目标不动产资产支持证券为华安资产中电浦软商业不动产1号资产支持专项计划资产支持证券，目标不动产资产为汇智国际商业中心基金存续期限自基金合同生效之日起【20】年专项计划期限自专项计划设立日起【20】年预计基金募集份额（亿份）【】预计募集规模（亿元）11.03不动产项目估值（亿元）11.03净现金流分派率（年化）2026年7月至12月：5.98%2027年：6.07%基金收益预计分配频率和分配比例在符合有关基金分配条件的前提下，本基金每年至少收益分配一次。基金应当将不低于合并后基金年度可供分配金额的90%以现金形式分配给投资者。若基金合同生效不满3个月可不进行收益分配。",
+            "document_stage": "application",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/4a11240fd28cda9e01e90455.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 华安中电浦软封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202607/2442d7_20260729_I3WT.pdf",
+            "published_at": "2026-07-29",
+            "page": 24,
+            "excerpt": "不动产项目业态 购物中心 基金投资标的 按照基金合同约定，本基金主要投资于目标不动产资产支持",
+            "document_stage": "application",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/4a11240fd28cda9e01e90455.json"
+          }
+        ]
+      }
+    },
+    "SSE_a1b8c90b144d41c2bbde49c4c0a2f96f": {
+      "fields": {
+        "underlying_assets": "金鹰湖滨天地项目（包括一期奥莱项目、二期购物中心项目）",
+        "project_return_forecast": "净现金流分派率2026年4月1日至2026年12月31日期间、2027年度模拟预测现金流分派率分别为4.95%（年化）、5.04%",
+        "asset_type": "消费"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 华泰紫金金鹰封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202607/a1b8c9_20260731_8DI9.pdf",
+            "published_at": "2026-07-31",
+            "page": 5,
+            "excerpt": "不动产项目名称 金鹰湖滨天地项目（包括一期奥莱项目、二期购物中心项目） （预计）募集规模 32.07 亿元 （拟）上市的证券交 易所 上海证券交易所 基金管理人 华泰证券（上海）资产管理有限公司",
+            "document_stage": "application",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/8e0fb2efd265a172ae2d0a6e.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 华泰紫金金鹰封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202607/a1b8c9_20260731_8DI9.pdf",
+            "published_at": "2026-07-31",
+            "page": 23,
+            "excerpt": "天地资产支持专项计划不动产项目业态商业零售基金投资标的80%以上的基金资产投资于不动产资产支持证券，通过持有其全部份额取得不动产项目公司全部股权、不动产项目完全所有权或者经营权利。基金存续期限30年专项计划期限30年预计基金募集份额（亿份）【8】亿份预计募集规模（亿元）32.07亿元不动产项目估值（亿元）32.07亿元净现金流分派率2026年4月1日至2026年12月31日期间、2027年度模拟预测现金流分派率分别为4.95%（年化）、5.04%基金收益预计分配频率和分配比例在符合有关基金分红条件的前提下，本基金应当将90%以上合并后基金年度可供分配金额分配给投资者，每年不得少于1次，若基金合同生效不满6个月可不进行收益分配；本基金收益分配方式为现金分红；每一基金份额享有同等分配权；法律法规或监管机关另有规定的，从其规定。回收资金用途原始权益人取得不动产基金回收资金后，将用于与主营业务相关的存量资产收购、新增投资、偿还债务以及补充流动资金，不涉及将募集资金用于购置商品住宅用地原始权益人及其同一控制下关联方拟持战配比例【51%】预计是否出表否特殊条款（如有）无参与人概况基金管理人华泰证券（上海）资产管理有限公司专项计划管理人华泰证券（上海）资产管理有限公司托管人招商银行股份有限公司财务顾问/原始权益人原始权益人1：南京仙林金鹰天地科技实业有限公司原始权益人2：南京仙林金鹰购物中心有限公司原始权益人企业性质民营企业原始权益人所属行业零售业",
+            "document_stage": "application",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/8e0fb2efd265a172ae2d0a6e.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 华泰紫金金鹰封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202607/a1b8c9_20260731_8DI9.pdf",
+            "published_at": "2026-07-31",
+            "page": 23,
+            "excerpt": "不动产项目业态 商业零售 基金投资标的 80%以上的基金资产投资于不动产资产支持证券，通过持有其全",
+            "document_stage": "application",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/8e0fb2efd265a172ae2d0a6e.json"
+          }
+        ]
+      }
+    },
+    "SSE_620f9db7cc1f48b1b6531c5af02e8b34": {
+      "fields": {
+        "underlying_assets": "常州天宁吾悦广场、南通启东吾悦广场",
+        "project_return_forecast": "净现金流分派率2026年4-12月和2027年度本基金的预测净现金流分派率分别约为5.65%和5.77%",
+        "asset_type": "消费"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1广发新城吾悦商业不动产封闭式证券投资基金招募说明书（草案）-注册稿.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/620f9d_20260904_9HZ7.pdf",
+            "published_at": "2026-09-04",
+            "page": 4,
+            "excerpt": "不动产项目名称 常州天宁吾悦广场、南通启东吾悦广场 预计募集规模 15.41 亿元 拟上市的证券交易所 上海证券交易所 基金管理人 广发基金管理有限公司 基金托管人 招商银行股份有限公司 资产支持证券管理人 瑞元资本管理有限公司",
+            "document_stage": "sealed",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/03212d89d27b05a1ea51d9eb.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1广发新城吾悦商业不动产封闭式证券投资基金招募说明书（草案）-注册稿.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/620f9d_20260904_9HZ7.pdf",
+            "published_at": "2026-09-04",
+            "page": 27,
+            "excerpt": "部分等）、利率债、货币市场工具（包括同业存单、债券回购、银行存款（含协议存款、定期存款及其他银行存款）等）以及法律法规或中国证监会允许不动产基金投资的其他金融工具（但须符合中国证监会相关规定）。基金存续期限32年专项计划期限32年预计基金募集份额（亿份）【】预计募集规模（亿元）15.41不动产项目估值（亿元）20.29净现金流分派率/IRR2026年4-12月和2027年度本基金的预测净现金流分派率分别约为5.65%和5.77%基金收益预计分配频率和分配比例在符合分配条件的情况下，本基金的收益分配每年不得少于1次，本基金应当将不低于合并后年度可供分配金额的90%以现金形式分配给投资者。若《基金合同》生效不满6个月可不进行收益分配。回收资金用途原始权益人的回收资金拟用于与主营业务相关的存量资产收购、新增投资，以及偿还境内债务、补充流动资金等原始权益人及其同一控制下关联方拟持战配比例34%预计是否出表否特殊条款无参与人概况基金管理人广发基金管理有限公司专项计划管理人瑞元资本管理有限公司托管人招商银行股份有限公司财务顾问中信证券股份有限公司原始权益人吾悦顺瑞（上海）商业经营管理有限公司",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/03212d89d27b05a1ea51d9eb.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1广发新城吾悦商业不动产封闭式证券投资基金招募说明书（草案）-注册稿.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/620f9d_20260904_9HZ7.pdf",
+            "published_at": "2026-09-04",
+            "page": 27,
+            "excerpt": "不动产项目业态 商业购物中心 基金投资标的 本基金投资范围包括不动产资产支持证券、AAA级信用债（包",
+            "document_stage": "sealed",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/03212d89d27b05a1ea51d9eb.json"
+          }
+        ]
+      }
+    },
+    "SSE_888e50b307b74902bef134005d5c8716": {
+      "fields": {
+        "underlying_assets": "长清黄河大桥及其附属设施以及长清黄河大桥项目的特许经营权",
+        "project_return_forecast": "净现金流分派率/IRR经测算2026年4-12月和2027年净现金流分派率分别为7.57%（年化）和9.23%，全周期IRR约为6.58%",
+        "asset_type": "交通设施"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202608/888e50_20260818_2388.pdf",
+            "published_at": "2026-08-18",
+            "page": 62,
+            "excerpt": "本基金拟初始投资的不动产项目为长清黄河大桥及其附属设施以及长清黄河大桥项目的特许经营权",
+            "document_stage": "sealed",
+            "rule": "explicit_initial_or_new_assets_sentence",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/250ed0020ee1adcacb3c58e2.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202608/888e50_20260818_2388.pdf",
+            "published_at": "2026-08-18",
+            "page": 24,
+            "excerpt": "23预计募集规模（亿元）11.89不动产项目估值（亿元）11.89（评估基准日为2026年3月31日）净现金流分派率/IRR经测算2026年4-12月和2027年净现金流分派率分别为7.57%（年化）和9.23%，全周期IRR约为6.58%。基金收益预计分配频率和分配比例本基金收益分配采取现金分红方式。在符合有关基金分红条件的前提下，基金管理人可以根据实际情况进行收益分配，但每年至少分配一次，基金管理人调整收益分配频率，无需召开基金份额持有人大会审议，但应于调整后及时通知基金托管人。每年分配比例不低于合并后基金年度可供分配金额的90%；若基金合同生效不满6个月则可不进行收益分配。回收资金用途回收资金将用于与原始权益人主营业务相关的存量资产收购、新增投资，以及偿还债务、补充流动资金等，不用于购置商品住宅用地。原始权益人及其同一控制下关联方拟持战配比例不低于33.4%预计是否出表否特殊条款（如有）无参与人概况基金管理人博时基金管理有限公司专项计划管理人博时资本管理有限公司托管人招商银行股份有限公司财务顾问兴业证券股份有限公司原始权益人主要原始权益人：山东铁路综合开发有限公司其他原始权益人：上海建通投资有限公司原始权益人企业性质主要原始权益人：地方国有企业其他原始权益人：民营企业原始权益人所属行业主要原始权益人：租赁和商务服务业其他原始权益人：租赁和商务服务业原始权益人注册地主要原始权益人：山东省济南市其他原始权益人：上海市原始权益人控股股东和持股比例主要原始权益人：山东铁路投资控股集团有限公司（持股100%）其他原始权益人：上海三晶投资有限公司（持股65%）原始权益人实控人主要原始权",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/250ed0020ee1adcacb3c58e2.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202608/888e50_20260818_2388.pdf",
+            "published_at": "2026-08-18",
+            "page": 23,
+            "excerpt": "不动产项目业态 收费公路 基金投资标的 本基金投资范围包括不动产资产支持证券，利率债（包",
+            "document_stage": "sealed",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/250ed0020ee1adcacb3c58e2.json"
+          }
+        ]
+      }
+    },
+    "SSE_80657bb8e3a84783a3b6a2a7c311654f": {
+      "fields": {
+        "underlying_assets": "一期项目、冬季清洁采暖项目",
+        "project_return_forecast": "净现金流分派率/IRR预计2026年4-12月和2027年的分派率分别为8.36%（未年化，供热现金流具有季节性）和7.14%；IRR为5.06%"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 山证晋中公投瑞阳供热封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202608/80657b_20260818_4Z58.pdf",
+            "published_at": "2026-08-18",
+            "page": 3,
+            "excerpt": "不动产项目名称 一期项目、冬季清洁采暖项目 （预计）募集规模 10.70 亿元 （拟）上市的证券交易所 上海证券交易所 基金管理人 山证（上海）资产管理有限公司 基金托管人 招商银行股份有限公司 资产支持证券管理人 山证（上海）资产管理有限公司",
+            "document_stage": "sealed",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/890c9e91cb1a36ba4c3cae09.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 山证晋中公投瑞阳供热封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202608/80657b_20260818_4Z58.pdf",
+            "published_at": "2026-08-18",
+            "page": 17,
+            "excerpt": "项计划名称山证资管-晋中公投瑞阳供热1期资产支持专项计划不动产项目业态城镇供热基金投资标的一期项目、冬季清洁采暖项目的管网资产及供热附属设施设备，以及合法运营上述项目取得的经营收益权基金存续期限22年专项计划期限22年预计基金募集份额（亿份）根据审批情况确定预计募集规模（亿元）10.70不动产项目估值（亿元）10.70净现金流分派率/IRR预计2026年4-12月和2027年的分派率分别为8.36%1和7.14%；IRR为5.06%基金收益预计分配频率和分配比例按年度分配，分配比例不低于可供分配金额的90%回收资金用途原始权益人净回收资金主要用于投资城南生物质热电储能一体化及联网主线项目、跨潇河联网主线项目和集中12026年4-12月分派率考虑到供热行业现金流具有季节性未进行年化。",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/890c9e91cb1a36ba4c3cae09.json",
+            "forecast_basis": "2026年4-12月分派率8.36%未年化；2027年分派率7.14%；IRR5.06%。"
+          }
+        ]
+      }
+    },
+    "SSE_567e0ce118814458b930c6cdebd8a43b": {
+      "fields": {
+        "project_return_forecast": "净现金流分派率2026年度：4.02%（年化）2027年度：4.01%",
+        "asset_type": "租赁住房"
+      },
+      "sources": {
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 国泰海通中国建筑租赁住房封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202608/567e0c_20260820_2C78.pdf",
+            "published_at": "2026-08-20",
+            "page": 26,
+            "excerpt": "赁住房封闭式基础设施证券投资基金专项计划名国泰海通资管-中国建筑租赁住房基础设施资产支持专项计划不动产类型-不动产项目业态租赁住房-保障性租赁住房基金投资标的中建·幸孚+公寓（上海松江店）基金存续期限62年专项计划期限62年预计基金募集份额（亿份）【】份预计募集规模（亿元）12.901不动产资产估值（亿元）12.901净现金流分派率/IRR2026年度：4.02%（年化）2027年度：4.01%基金收益预计分配频率及分配比例每年不少于1次，收益分配比例不低于合并后基金年度可供分配金额的90%回收资金用途用于与主营业务相关的存量资产收购、新增投资，下及偿还债务、补充流动性资金等，不会用于购置商品住宅用地原始权益人及其同一控制简关联方拟持战配比例20%，最终比例下发售公告为准",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/3848be482bfd9b278f9dd682.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 国泰海通中国建筑租赁住房封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202608/567e0c_20260820_2C78.pdf",
+            "published_at": "2026-08-20",
+            "page": 28,
+            "excerpt": "不动产项目业态 保障性租赁住房 项目所在地 上海市松江区 资产范围 西侧临河道，北侧临施园路，南侧临广富林东路，东侧临",
+            "document_stage": "sealed",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/3848be482bfd9b278f9dd682.json"
+          }
+        ]
+      }
+    },
+    "SSE_762ec541a8a446018b6b854353629e7d": {
+      "fields": {
+        "underlying_assets": "位于山东省菏泽市东明县的东明东南风电项目、东明西南一期风电项目和东明西南二期风电项目，上述不动产项目的总装机容量为250兆瓦",
+        "project_return_forecast": "净现金流分派率2026年：11.83%；2027年：10.47%",
+        "asset_type": "能源"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 中信建投广州发展清洁能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/762ec5_20260609_O4MI.pdf",
+            "published_at": "2026-06-09",
+            "page": 20,
+            "excerpt": "本基金初始投资的不动产项目为位于山东省菏泽市东明县的东明东南风电项目、东明西南一期风电项目和东明西南二期风电项目，上述不动产项目的总装机容量为250兆瓦",
+            "document_stage": "application",
+            "rule": "explicit_initial_or_new_assets_sentence",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/65eb85d008fb5b07efe7f322.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 中信建投广州发展清洁能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/762ec5_20260609_O4MI.pdf",
+            "published_at": "2026-06-09",
+            "page": 20,
+            "excerpt": "的本基金初始投资的不动产项目为位于山东省菏泽市东明县的东明东南风电项目、东明西南一期风电项目和东明西南二期风电项目，上述不动产项目的总装机容量为250兆瓦。基金存续期限自基金合同生效日起15年专项计划期限自专项计划成立之日起15年预计基金募集份额（亿份）待定预计募集规模（亿元）23.08不动产项目估值（亿元）23.05净现金流分派率2026年：11.83%；2027年：10.47%基金收益预计分配频率和分配比例按现金分红方式分配，分配比例不低于可供分配金额的90%，在符合有关基金分红条件的前提下，每年至少进行收",
+            "document_stage": "application",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/65eb85d008fb5b07efe7f322.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 中信建投广州发展清洁能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/762ec5_20260609_O4MI.pdf",
+            "published_at": "2026-06-09",
+            "page": 20,
+            "excerpt": "不动产项目业态 新能源发电项目 基金投资标的 本基金初始投资的不动产项目为位于山东省菏泽市东明县的",
+            "document_stage": "application",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/65eb85d008fb5b07efe7f322.json"
+          }
+        ]
+      }
+    },
+    "SSE_1cac0428e57a4c65b9dadaa89549741b": {
+      "fields": {
+        "underlying_assets": "嘉亭荟城市生活广场一期项目",
+        "project_return_forecast": "净现金流分派率2026年（年化后）：5.26%；2027年：5.25%",
+        "asset_type": "消费"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 国泰海通崇邦封闭式商业不动产证券投资基金招募说明书.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/1cac04_20260626_GEG7.pdf",
+            "published_at": "2026-06-26",
+            "page": 4,
+            "excerpt": "不动产项目名称 嘉亭荟城市生活广场一期项目 预计募集规模 11.03 亿元 拟上市的证券交易所 上海证券交易所 基金管理人 上海国泰海通证券资产管理有限公司 基金托管人 中国工商银行股份有限公司 资产支持证券管理人 上海国泰海通证券资产管理有限公司",
+            "document_stage": "feedback",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:05+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/b9ce33c0bb7dfe67ebee2b10.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 国泰海通崇邦封闭式商业不动产证券投资基金招募说明书.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/1cac04_20260626_GEG7.pdf",
+            "published_at": "2026-06-26",
+            "page": 23,
+            "excerpt": "发行的有关中介机构基本情况基本情况基金名称国泰海通崇邦封闭式商业不动产证券投资基金专项计划名称国泰海通-崇邦商业不动产1号资产支持专项计划不动产类型商业不动产-商业零售基金投资标的嘉亭荟一期项目基金存续期限21年专项计划期限21年预计基金募集份额（亿份）【】预计募集规模（亿元）11.03不动产资产估值（亿元）11.03净现金流分派率2026年（年化后）：5.26%；2027年：5.25%基金收益预计分配频率及分配比例每年不少于1次，收益分配比例不低于合并后基金年度可供分配金额的90%回收资金用途主要原始权益人泛全有限公司拟将回收资金主要用于与主营业务相关的存量资产收购、新增投资，以及偿还债务、补充流动性资金等，不会用于购置商品住宅用地。具体而言，回收资金将用于存量项目的更新改造、补充项目营运资金、支持运管机构崇伦企管的发展。原始权益人上海国际汽车城新安亭联合发展有限公司拟将回收资金用于新建厂房，支持嘉定墨地方经济发展。原始权益人及其同一控制下关联方拟持战配比例20%，最终比例以发售公告为准预计是否出表是",
+            "document_stage": "feedback",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:05+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/b9ce33c0bb7dfe67ebee2b10.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 国泰海通崇邦封闭式商业不动产证券投资基金招募说明书.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/1cac04_20260626_GEG7.pdf",
+            "published_at": "2026-06-26",
+            "page": 24,
+            "excerpt": "不动产项目业态 商业零售 项目所在地 上海市嘉定墨",
+            "document_stage": "feedback",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:05+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/b9ce33c0bb7dfe67ebee2b10.json"
+          }
+        ]
+      }
+    },
+    "SSE_86ca5c30686342a3b403248a49578a6a": {
+      "fields": {
+        "underlying_assets": "三峡新能源大连市庄河Ⅲ（300MW）海上风电场项目",
+        "project_return_forecast": "净现金流分派率/IRR2026年：14.48%；2027年：14.40%IRR：5.28%",
+        "asset_type": "能源"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 华泰三峡清洁能源封闭式基础设施证券投资基金招募说明书（草案）-0601.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/86ca5c_20260611_7ZPZ.pdf",
+            "published_at": "2026-06-11",
+            "page": 24,
+            "excerpt": "本基金初始投资的不动产项目为三峡新能源大连市庄河Ⅲ（300MW）海上风电场项目基金存续期限自《基金合同》生效之日起20年专项计划期限自专项计划设立之日起约19.91年预计基金募集份额（亿份）5预计募集规模（亿元）37.66不动产项目估值（亿元）37.69净现金流分派率/IRR2026年：14.48%2027年：14.40%IRR：5.28%基金收益预计分配频率和分配比例按年分配，分配比例不低于可供分配金额的90%回收资金用途三峡能源承诺将不动产基金回收资金以资本金注入等方式投入新项目建设，拟投项目包括大连市海上风电场址DL6项目（500MW）、三峡能源阜新市250MW陆上风电项目等原始权益人及其同一控制下关联方拟持战配比例44%，其中原始权益人拟认购34%，关联方拟认购10%预计",
+            "document_stage": "sealed",
+            "rule": "explicit_initial_or_new_assets_sentence",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/bbad95149e928dc0caaca641.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 华泰三峡清洁能源封闭式基础设施证券投资基金招募说明书（草案）-0601.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/86ca5c_20260611_7ZPZ.pdf",
+            "published_at": "2026-06-11",
+            "page": 24,
+            "excerpt": "持证券，并持有其全部份额，穿透取得不动产项目完全所有权或经营权利。本基金初始投资的不动产项目为三峡新能源大连市庄河Ⅲ（300MW）海上风电场项目基金存续期限自《基金合同》生效之日起20年专项计划期限自专项计划设立之日起约19.91年预计基金募集份额（亿份）5预计募集规模（亿元）37.66不动产项目估值（亿元）37.69净现金流分派率/IRR2026年：14.48%2027年：14.40%IRR：5.28%基金收益预计分配频率和分配比例按年分配，分配比例不低于可供分配金额的90%回收资金用途三峡能源承诺将不动产基金回收资金以资本金注入等方式投入新项目建设，拟投项目包括大连市海上风电场址DL6项目（500MW）、三峡能源阜新市250MW陆上风电项目等原始权益人及其同一控制下关联方拟持战配比例44%，其中原始权益人拟认购34%，关联方拟认购10%预计是否出表否特殊条款（如有）无参与人概况基金管理人华泰证券（上海）资产管理有限公司专项计划管理人华泰证券（上海）资产管理有限公司托管人中国农业银行股份有限公司财务顾问（如有）无",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/bbad95149e928dc0caaca641.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 华泰三峡清洁能源封闭式基础设施证券投资基金招募说明书（草案）-0601.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/86ca5c_20260611_7ZPZ.pdf",
+            "published_at": "2026-06-11",
+            "page": 24,
+            "excerpt": "不动产项目业态 清洁能源发电项目（海上风电） 基金投资标的 本基金主要投资于不动产资产支持证券及扩募不动产资产",
+            "document_stage": "sealed",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/bbad95149e928dc0caaca641.json"
+          }
+        ]
+      }
+    },
+    "SSE_294417b17ff34e6e939763427f15a767": {
+      "fields": {
+        "underlying_assets": "茂业中心C塔项目",
+        "project_return_forecast": "净现金流分派率2026年：5.32%；2027年：6.00%",
+        "asset_type": "办公"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 红土创新茂业封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202604/294417_20260430_QAY9.pdf",
+            "published_at": "2026-04-30",
+            "page": 3,
+            "excerpt": "不动产项目名称 茂业中心 C 塔项目 （预计）募集规模 11.01 亿元 （拟）上市的证券交易所 上海证券交易所 基金管理人 红土创新基金管理有限公司 基金托管人 中国民生银行股份有限公司 资产支持证券管理人 深创投红土资产管理（深圳）有限公司",
+            "document_stage": "application",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/88cdc77e07d60651cb8fdc20.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 红土创新茂业封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202604/294417_20260430_QAY9.pdf",
+            "published_at": "2026-04-30",
+            "page": 19,
+            "excerpt": "部份额，本基金的其他基金资产可以投资于利率债、AAA级信用债或货币市场工具。本基金以初始募集资金投资的目标不动产资产支持证券为深创投-成都茂业中心塔楼商业不动产1号资产支持专项计划资产支持证券。基金存续期限21年专项计划期限21年预计基金募集份额（亿份）待定预计募集规模（亿元）11.01不动产项目估值（亿元）11.01净现金流分派率2026年：5.32%；2027年：6.00%基金收益预计分配频率和分配比例在符合有关基金分配条件的前提下，本基金每年至少收益分配一次。基金应当将不低于合并后基金年度可供分配金额的90%以现金形式分配给投资者。若基金合同生效不满6个月可不进行收益分配。回收资金用途本次回收资金将用于偿还债务、补充流动资金等，不会用于购置商品住宅用地。原始权益人使用不动产基金回收资金将符合宏观政策导向，严格遵守国家产业政策、外汇管理和有关法律法规规定。原始权益人及其同一控制下关联方拟持战配比例拟定为34%，最终比例以发售公告为准预计是否出表否特殊条款不涉及参与人概况基金管理人红土创新基金管理有限公司专项计划管理人深创投红土资产管理（深圳）有限公司托管人中国民生银行股份有限公司财务顾问无原始权益人深圳茂业（集团）股份有限公司、深圳茂业实业发展有限公司原始权益人企业性质民营企业原始权益人所属行业深圳茂业集团：房地产业深圳茂业实业：租赁和商务服务业原始权益人注册地深圳茂业集团：深圳市罗湖区深南东路4003号世界金融中心A座38楼深圳茂业实业：深圳市罗湖区深南东路4003号世界金融中心A座38层D区",
+            "document_stage": "application",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/88cdc77e07d60651cb8fdc20.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 红土创新茂业封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202604/294417_20260430_QAY9.pdf",
+            "published_at": "2026-04-30",
+            "page": 19,
+            "excerpt": "不动产项目业态 办公 基金投资标的 按照基金合同约定，本基金主要投资于目标不动产资产支持证",
+            "document_stage": "application",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/88cdc77e07d60651cb8fdc20.json"
+          }
+        ]
+      }
+    },
+    "SSE_4440fa26ec24475d9318be11d1151ef9": {
+      "fields": {
+        "underlying_assets": "深圳来福士项目、绵阳涪城项目",
+        "project_return_forecast": "净现金流分派率2026年为4.57%，2027年为4.61%",
+        "asset_type": "消费"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/4440fa_20260622_4362.pdf",
+            "published_at": "2026-06-22",
+            "page": 4,
+            "excerpt": "不动产项目名称 深圳来福士项目、绵阳涪城项目 预计募集规模 38.73 亿元 （拟）上市的证券交易所 上海证券交易所 基金管理人 华夏基金管理有限公司 基金托管人 招商银行股份有限公司 资产支持证券管理人 中信证券股份有限公司",
+            "document_stage": "sealed",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/94ac827992cb04a1ace4db3a.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/4440fa_20260622_4362.pdf",
+            "published_at": "2026-06-22",
+            "page": 27,
+            "excerpt": "华夏凯德封闭式商业不动产证券投资基金招募说明书（草案）27专项计划期限32年预计基金募集份额（亿份）7预计募集规模（亿元）38.73不动产项目估值（亿元）48.11净现金流分派率2026年为4.57%，2027年为4.61%基金收益预计分配频率和分配比例本基金将不低于合并后年度可供分配金额的90%以现金形式分配给投资者。本基金的收益分配在符合分配条件的情况下每年不得少于1次，若基金合同生效不满6个月可不进行收益分配回收资金用途用于与主营业务相关的存量资产收购、新增投资，以及偿还债务、补充流动资金等，不会用于购置商品住宅用地原始权益人及其同一控制下关联方拟持战配比例20%，最终比例以发售公告为准预计是否出表是特殊条款不涉及参与人概况基金管理人华夏基金管理有限公司专项计划管理人中信证券股份有限公司托管人招商银行股份有限公司财务顾问中信证券股份有限公司原始权益人1、主要原始权益人CAPITALANDMALLASIALIMITED2、原始权益人（1）深圳市凯来企业管理咨询有限公司（2）绵阳凯涪企业管理咨询有限公司原始权益人企业性质外资企业原始权益人所属行业1、主要原始权益人：商业不动产2、原始权益人：商务服务业原始权益人注册地1、主要原始权益人注册地新加坡罗宾逊路168号凯德大厦#30-01；2、原始权益人注册地（1）深圳市南山区南山街道荔秀社区南海大道2163号来福士广场05-04B；（2）四川省绵阳市涪城区临园路东段74号凯德广场6层6-30号原始权益人控股股东和持股比例（截至2025年12月31日）CAPITALANDINVESTMENTLIMITED（以下简称“凯德投资”），100%原始权益人实控人凯德投资原始权益人上市地点和股票代码不涉及",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/94ac827992cb04a1ace4db3a.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/4440fa_20260622_4362.pdf",
+            "published_at": "2026-06-22",
+            "page": 26,
+            "excerpt": "不动产项目业态 商业综合体、购物中心 基金投资标的 80%以上的基金资产投资于不动产资产支持证券，通",
+            "document_stage": "sealed",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/94ac827992cb04a1ace4db3a.json"
+          }
+        ]
+      }
+    },
+    "SSE_98519f6baf014a13a59dac8cb52f35e8": {
+      "fields": {
+        "underlying_assets": "广州保利中心项目、佛山保利水城项目",
+        "project_return_forecast": "净现金流分派率2026年：5.39%；2027年：5.41%"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1华夏保利发展封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/98519f_20260622_YGBM.pdf",
+            "published_at": "2026-06-22",
+            "page": 4,
+            "excerpt": "不动产项目名称 广州保利中心项目、佛山保利水城项目 预计募集规模 19.96 亿元 拟上市的证券交易所 上海证券交易所 基金管理人 华夏基金管理有限公司 基金托管人 中信银行股份有限公司 资产支持证券管理人 中信证券股份有限公司",
+            "document_stage": "sealed",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/7dee08928ccc770ff9a3f8e4.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1华夏保利发展封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/98519f_20260622_YGBM.pdf",
+            "published_at": "2026-06-22",
+            "page": 27,
+            "excerpt": "资产支持专项计划不动产项目业态办公及配套商业、商业零售基金投资标的80%以上的基金资产投资于不动产资产支持证券，通过持有其全部份额取得不动产项目公司全部股权、不动产项目完全所有权或者经营权利基金存续期限32年专项计划期限32年预计基金募集份额（亿份）5.00预计募集规模（亿元）19.96不动产项目估值（亿元）19.30净现金流分派率2026年：5.39%；2027年：5.41%基金收益预计分配频率和分配比例本基金将不低于合并后年度可供分配金额的90%以现金形式分配给投资者。本基金的收益分配在符合分配条件的情况下每年不得少于1次，若基金合同生效不满6个月可不进行收益分配回收资金用途回收资金将用于与原始权益人主营业务相关的存量资产收购、新增投资，以及偿还债务、补充流动资金等，不用于购置商品住宅用地原始权益人及其同一控制下关联方拟持战配比例不低于20%，最终比例以发售公告为准",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/7dee08928ccc770ff9a3f8e4.json"
+          }
+        ]
+      }
+    },
+    "SSE_6fa0b7c2f77944549b2ada7b1339be34": {
+      "fields": {
+        "underlying_assets": "晶耀前滩T1办公楼项目以及相关车位、晶耀前滩商场北区及西区项目、晶耀前滩商场东区及南区项目",
+        "project_return_forecast": "净现金流分派率2026年：4.54%；2027年：4.83%"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 华安陆家嘴封闭式商业不动产证券投资基金招募说明书（草案）-注册稿.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/6fa0b7_20260622_JFEX.pdf",
+            "published_at": "2026-06-22",
+            "page": 3,
+            "excerpt": "不动产项目名称 晶耀前滩 T1 办公楼项目以及相关车位、晶耀前滩商 场北区及西区项目、晶耀前滩商场东区及南区项目 （预计）募集规模 25.74 亿元 （拟）上市的证券交易 所",
+            "document_stage": "sealed",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/ed7ea25391dd0d4c6f128047.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 华安陆家嘴封闭式商业不动产证券投资基金招募说明书（草案）-注册稿.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/6fa0b7_20260622_JFEX.pdf",
+            "published_at": "2026-06-22",
+            "page": 20,
+            "excerpt": "华安陆家嘴封闭式商业不动产证券投资基金招募说明书19不动产项目估值（亿元）25.74净现金流分派率/IRR2026年：4.54%2027年：4.83%基金收益预计分配频率和分配比例在符合有关基金分配条件的前提下，本基金每年至少收益分配一次。基金应当将不低于合并后基金年度可供分配金额的90%以现金形式分配给投资者。若基金合同生效不满3个月可不进行收益分配回收资金用途公司承诺使用回收资金应当符合宏观政策导向，严格遵循国家产业政策、外汇管理和有关法律法规规定。回收资金用于与主营业务相关的存量资产收购、新增投资，以及偿还债务、补充流动资金等，不得用于购置商品住宅用地。原始权益人及其同一控制下关联方拟持战配比例不低于20%预计是否出表待定特殊条款无参与人概况基金管理人华安基金管理有限公司专项计划管理人华安未来资产管理（上海）有限公司托管人上海浦东发展银行股份有限公司财务顾问国泰海通证券股份有限公司原始权益人上海前滩国际商务区投资（集团）有限公司原始权益人企业性质国有企业原始权益人注册地上海市浦东新区灵岩南路728号6幢205室原始权益人控股股东和持股比例上海陆家嘴（集团）有限公司，70%原始权益人实控人上海市浦东新区国有资产监督管理委员会原始权益人上市地点和股票代码无",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/ed7ea25391dd0d4c6f128047.json"
+          }
+        ]
+      }
+    },
+    "SSE_3214c881b4ed492f8eb28966d291acf8": {
+      "fields": {
+        "underlying_assets": "静安大融城、江门大融城",
+        "project_return_forecast": "净现金流分派率2026年度：4.60%；2027年度：4.64%",
+        "asset_type": "消费"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/3214c8_20260623_ZELR.pdf",
+            "published_at": "2026-06-23",
+            "page": 4,
+            "excerpt": "不动产项目名称 静安大融城、江门大融城 （预计）募集规模 45.79 亿元 （拟）上市的证券交易所 上海证券交易所 基金管理人 光大保德信基金管理有限公司 基金托管人 兴业银行股份有限公司 资产支持证券管理人 光大保德信资产管理有限公司",
+            "document_stage": "sealed",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/995872d5e61259b486b74e0b.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/3214c8_20260623_ZELR.pdf",
+            "published_at": "2026-06-23",
+            "page": 43,
+            "excerpt": "及本次发行的中介机构基本情况表基本情况基金名称光大保德信光大安石封闭式商业不动产证券投资基金专项计划名称光大保德信光大安石1号资产支持专项计划不动产项目业态购物中心基金投资标的不动产资产支持证券基金存续期限28年专项计划期限28年预计基金募集份额（亿份）待定预计募集规模（亿元）45.79不动产项目估值（亿元）57.56净现金流分派率2026年度：4.60%；2027年度：4.64%基金收益预计分配频率和分配比例每年分配至少1次，分配比例不低于合并后基金年度可分配金额的90%回收资金用途原始权益人保证使用不动产基金回收资金符合宏观政策导向，严格遵循国家产业政策、外汇管理和有关法律法规规定。不动产基金回收资金由原始权益人或其关联方用于存量资产收购、新增投资，以及偿还债务、补充流动资金等，不会用于购置商品住宅用地。原始权益人及其同一控制下关联方拟持战配比例20%预计是否出表出表特殊条款（如有）无参与人概况基金管理人光大保德信基金管理有限公司专项计划管理人光大保德信资产管理有限公司托管人兴业银行股份有限公司财务顾问华泰联合证券有限责任公司原始权益人主要原始权益人：光大嘉宝股份有限公司原始权益人1：上海光翎投资中心（有限合伙）原始权益人2：天津安石锦瑞股权投资基金合伙企业（有限合伙）原始权益人企业性质主要原始权益人：国有控股企业原始权益人1：国有控股企业原始权益人2：国有控股企业原始权益人所属行业主要原始权益人：房地产业原始权益人1：商务服务业原始权益人2：商务服务业",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/995872d5e61259b486b74e0b.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/3214c8_20260623_ZELR.pdf",
+            "published_at": "2026-06-23",
+            "page": 43,
+            "excerpt": "不动产项目业态 购物中心 基金投资标的 不动产资产支持证券 基金存续期限 28 年",
+            "document_stage": "sealed",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/995872d5e61259b486b74e0b.json"
+          }
+        ]
+      }
+    },
+    "SSE_d1e2d169bad04e489952ab042b62c577": {
+      "fields": {
+        "project_return_forecast": "净现金流分派率2026年为4.56%、2027年为4.32%",
+        "asset_type": "消费"
+      },
+      "sources": {
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 华安锦江封闭式商业不动产证券投资基金招募说明书（草案）-注册稿.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/d1e2d1_20260623_OJ0J.pdf",
+            "published_at": "2026-06-23",
+            "page": 20,
+            "excerpt": "用等级在AAA（含）以上的债券及货币市场工具。本基金以初始募集资金投资的目标不动产资产支持证券为华安资产-锦江商业不动产1号资产支持专项计划资产支持证券。基金存续期限自基金合同生效之日起25年专项计划期限自专项计划设立之日起25年预计基金募集份额（亿份）【】预计募集规模（亿元）17.00不动产项目估值（亿元）16.84净现金流分派率2026年为4.56%、2027年为4.32%基金收益预计分配频率和分配比例在符合有关基金分配条件的前提下，本基金每年至少收益分配一次。基金应当将不低于合并后基金年度可供分配金额的90%以现金形式分配给投资者。若基金合同生效不满3个月可不进行收益分配。回收资金用途原始权益人承诺使用回收资金将符合宏观政策导向，严格遵循国家产业政策、外汇管理和有关法律法规规定。原始权益人承诺将回收资金用于与主营业务相关的存量资产收购、新增投资，以及偿还债务、补充流动资金等，不用于购置商品住宅用地。原始权益人及其同一控制下关联方拟持战配比例不低于20%预计是否出表是特殊条款无参与人概况基金管理人华安基金管理有限公司专项计划管理人华安未来资产管理（上海）有限公司托管人中信银行股份有限公司财务顾问国泰海通证券股份有限公司原始权益人上海锦江资产管理有限公司原始权益人企业性质国有控股",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/9548f08bf92160f657b58d0f.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 华安锦江封闭式商业不动产证券投资基金招募说明书（草案）-注册稿.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202606/d1e2d1_20260623_OJ0J.pdf",
+            "published_at": "2026-06-23",
+            "page": 20,
+            "excerpt": "不动产项目业态 商业不动产 基金投资标的 按照基金合同约定，本基金主要投资于目标不动产资产支持证券全部",
+            "document_stage": "sealed",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/9548f08bf92160f657b58d0f.json"
+          }
+        ]
+      }
+    },
+    "SSE_7c28dbd738914f278d7b55b510cf44e9": {
+      "fields": {
+        "underlying_assets": "三亚亚特兰蒂斯项目",
+        "project_return_forecast": "净现金流分派率2025年10-12月（年化）、2026年度预计分派率为4.56%、4.12%",
+        "asset_type": "消费"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 国联安复星封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/7c28db_20260326_YHMF.pdf",
+            "published_at": "2026-03-26",
+            "page": 31,
+            "excerpt": "不动产项目名称 三亚亚特兰蒂斯项目 大类资产类型 商业不动产 不动产类型 商业综合体 项目所在地 海南省三亚市海棠区海棠北路 36 号 资产范围 东侧紧邻海棠湾海域，南接香格里拉酒店，西临海棠北路，北侧为三亚亚特兰蒂斯棠 岸",
+            "document_stage": "application",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/4d95b0b81da6c41f213162b3.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 国联安复星封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/7c28db_20260326_YHMF.pdf",
+            "published_at": "2026-03-26",
+            "page": 30,
+            "excerpt": "国联安复星封闭式商业不动产证券投资基金招募说明书（草案）29预计募集规模（亿元）139.28不动产项目估值（亿元）139.28净现金流分派率2025年10-12月（年化）、2026年度预计分派率为4.56%、4.12%基金收益预计分配频率和分配比例基金收益分配每年不低于1次，收益分配比例不低于不动产基金年度可供分配金额的90%回收资金用途拟用于与主营业务相关的存量资产收购、新增投资，以及偿还债务、补充流动资金等，不用于购置商品住宅用地原始权益人及关联方拟持战配比例30%预计是否出表是特殊条款（如有）无特殊条款参与人概况基金管理人国联安基金管理有限公司专项计划管理人太平洋资产管理有限责任公司托管人招商银行股份有限公司财务顾问国泰海通证券股份有限公司原始权益人海南亚特兰蒂斯商旅发展有限公司原始权益人企业性质民营原始权益人所属行业租赁和商务服务业原始权益人注册地海南省三亚市原始权益人控股股东和持股比例上海齐锦投资管理有限公司，持股100%原始权益人实控人郭广昌原始权益人上市地点和股票代码（如有）不涉及运营管理机构海南亚特兰蒂斯商旅发展有限公司运营管理机构注册地海南省三亚市",
+            "document_stage": "application",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/4d95b0b81da6c41f213162b3.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 国联安复星封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/7c28db_20260326_YHMF.pdf",
+            "published_at": "2026-03-26",
+            "page": 29,
+            "excerpt": "不动产项目业态 商业不动产 基金投资标的 本基金投资于不动产资产支持证券的比例不低于 80%，投资 于利率债、AAA 级信用债、货币市场工具的比例不超过 20%",
+            "document_stage": "application",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/4d95b0b81da6c41f213162b3.json"
+          }
+        ]
+      }
+    },
+    "SSE_ca83f8b53ee34cb0b2ee8bede1007452": {
+      "fields": {
+        "underlying_assets": "鼎保大厦项目、鼎博大厦项目",
+        "project_return_forecast": "净现金流分派率2026年4.75%，2027年4.87%"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 汇添富上海地产封闭式商业不动产证券投资基金招募说明书.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202604/ca83f8_20260423_9HJM.pdf",
+            "published_at": "2026-04-23",
+            "page": 4,
+            "excerpt": "不动产项目名称 鼎保大厦项目、鼎博大厦项目 （预计）募集规模 38.49 亿元 上市的证券交易所 上海证券交易所 基金管理人 汇添富基金管理股份有限公司 基金托管人 上海浦东发展银行股份有限公司 资产支持证券管理人 汇添富资本管理有限公司",
+            "document_stage": "sealed",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/27803b8144f694b9130bf7f1.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 汇添富上海地产封闭式商业不动产证券投资基金招募说明书.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202604/ca83f8_20260423_9HJM.pdf",
+            "published_at": "2026-04-23",
+            "page": 28,
+            "excerpt": "27基本情况基金存续期限41年专项计划期限41年预计基金募集份额（亿份）【】预计募集规模（亿元）38.49不动产项目估值（亿元）36.89净现金流分派率/IRR2026年4.75%，2027年4.87%基金收益预计分配频率和分配比例每年不少于1次，收益分配比例不低于合并后基金年度可供分配金额的90%回收资金用途与主营业务相关的存量资产收购、新增投资，以及偿还债务、补充流动资金等原始权益人及其同一控制下关联方拟持战配比例34%预计是否出表是特殊条款无参与人概况基金管理人汇添富基金管理股份有限公司专项计划管理人汇添富资本管理有限公司托管人上海浦东发展银行股份有限公司财务顾问国泰海通证券股份有限公司原始权益人上海世博发展（集团）有限公司原始权益人企业性质地方国企原始权益人所属行业租赁和商务服务业原始权益人注册地中国（上海）自由贸易试验区浦东南路3588号3楼原始权益人控股股东和持股比例上海地产（集团）有限公司，持股比例为100%原始权益人实控人上海地产（集团）有限公司原始权益人上市地点和股票代码无运营管理机构上海世博发展（集团）有限公司运营管理机构注册地中国（上海）自由贸易试验区浦东南路3588号3楼运营管理机构经营地上海市浦东新区雪野路928号重要现金流提供方上海票据交易所及其子公司中票信息技术（上海）有限公司；上海数据集团及其子公司上海数据集团金融科技有限公司、上海市联合征信有限公司；世博科创；华东设计院",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/27803b8144f694b9130bf7f1.json"
+          }
+        ]
+      }
+    },
+    "SSE_54b56d3cc1cc46b29da3d05a5efe7bf0": {
+      "fields": {
+        "underlying_assets": "郑州杉杉奥特莱斯项目、哈尔滨杉杉奥特莱斯项目",
+        "project_return_forecast": "净现金流分派率预计2026年和2027年的分派率分别为4.84%和5.12%"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 中金唯品会封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202604/54b56d_20260424_98JY.pdf",
+            "published_at": "2026-04-24",
+            "page": 5,
+            "excerpt": "不动产项目名称 郑州杉杉奥特莱斯项目、哈尔滨杉杉奥特莱斯项目 预计募集规模 69.99 亿元 拟上市的证券交易所 上海证券交易所 基金管理人 中金基金管理有限公司 基金托管人 中国建设银行股份有限公司 资产支持证券管理人 中国国际金融股份有限公司",
+            "document_stage": "sealed",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/1bf5c3678b1a9309515a0a45.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 中金唯品会封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202604/54b56d_20260424_98JY.pdf",
+            "published_at": "2026-04-24",
+            "page": 26,
+            "excerpt": "专项计划名称中金-唯品会商业不动产资产支持专项计划大类资产类型商业不动产不动产项目业态奥特莱斯基金投资标的郑州杉杉奥特莱斯项目、哈尔滨杉杉奥特莱斯项目基金存续期限31年专项计划期限31年预计基金募集份额（亿份）中国证监会准予本基金募集的基金份额总额为【】亿份预计募集规模（亿元）69.99不动产项目估值（亿元）69.99净现金流分派率预计2026年和2027年的分派率分别为4.84%和5.12%现金流法律顾问评估机构审计机构税务顾问法律关系中金唯品会封闭式商业不动产证券投资基金托管行/监管行计划管理人/财务顾问中金公司中金-唯品会商业不动产资产支持专项计划设立并管理支付项目公司股权转让对价股东借款本息和股东分红（如有）专项计划资金托管基金管理人中金基金设立并管理运营管理统筹机构杉杉商业委托运营管理运营管理不动产项目战略投资者/网下投资者/公众投资者认购资金基金份额项目公司资金监管基金资金托管基金分红资产支持证券专项计划收益分配认购资金持有全部股权及债权发放股东借款100%持有财务顾问服务转让项目公司（交易前）全部股权郑州杉杉奥特莱斯项目郑州杉杉100%哈尔滨杉杉奥特莱斯项目哈尔滨杉杉100%原始权益人运营管理实施机构杉杉商业郑州唯奥、哈尔滨唯奥",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/1bf5c3678b1a9309515a0a45.json"
+          }
+        ]
+      }
+    },
+    "SSE_f73619d5cf6a45a883283047e5886e8d": {
+      "fields": {
+        "underlying_assets": "砂之船（西安）奥特莱斯项目",
+        "project_return_forecast": "净现金流分派率2026年预测净现金流分派率：5.46%；2027年预测净现金流分派率：5.80%",
+        "asset_type": "消费"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 国泰海通砂之船封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202604/f73619_20260424_9BH0.pdf",
+            "published_at": "2026-04-24",
+            "page": 3,
+            "excerpt": "不动产项目名称 砂之船（西安）奥特莱斯项目 预计募集规模 50.28 亿元 拟上市的证券交易所 上海证券交易所 基金管理人 上海国泰海通证券资产管理有限公司 基金托管人 招商银行股份有限公司 资产支持证券管理人 上海国泰海通证券资产管理有限公司",
+            "document_stage": "sealed",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/f91d695b1b982806584c0e4a.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 国泰海通砂之船封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202604/f73619_20260424_9BH0.pdf",
+            "published_at": "2026-04-24",
+            "page": 19,
+            "excerpt": "基金名称国泰海通砂之船封闭式商业不动产证券投资基金专项计划名称国泰海通资管砂之船商业不动产1期资产支持专项计划不动产项目业态商业不动产-商业零售基金投资标的砂之船（西安）奥特莱斯项目基金存续期限30年专项计划期限30年预计基金募集份额（亿份）根据审批情况确定预计募集规模（亿元）50.28不动产项目估值（亿元）50.28净现金流分派率/IRR2026年预测净现金流分派率：5.46%2027年预测净现金流分派率：5.80%基金收益预计分配频率和分配比例每年至少分配一次，分配比例不低于可供分配金额的90%回收资金用途补充流动资金、项目收购、新项目投资原始权益人及其同一控制下关联方拟持战配比例41%预计是否出表否特殊条款无参与人概况基金管理人上海国泰海通证券资产管理有限公司专项计划管理人上海国泰海通证券资产管理有限公司托管人招商银行股份有限公司财务顾问国泰海通证券股份有限公司原始权益人砂之船（西安）购物广场有限公司原始权益人企业性质民营企业原始权益人所属行业租赁和商务服务业原始权益人注册地陕西省西安市浐灞生态区原始权益人控股股东和持股比例砂之船西安有限公司，100%原始权益人实控人徐荣灿原始权益人上市地点和股票代码非上市",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/f91d695b1b982806584c0e4a.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 国泰海通砂之船封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202604/f73619_20260424_9BH0.pdf",
+            "published_at": "2026-04-24",
+            "page": 19,
+            "excerpt": "不动产项目业态 商业不动产-商业零售 基金投资标的 砂之船（西安）奥特莱斯项目 基金存续期限 30 年",
+            "document_stage": "sealed",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/f91d695b1b982806584c0e4a.json"
+          }
+        ]
+      }
+    },
+    "SSE_659a67730bd24417a9e3b98780589f73": {
+      "fields": {
+        "underlying_assets": "龙德广场项目",
+        "project_return_forecast": "净现金流分派率2026年：6.22%；2027年：5.60%",
+        "asset_type": "消费"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 中信建投首农食品集团封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202604/659a67_20260424_SFU8.pdf",
+            "published_at": "2026-04-24",
+            "page": 3,
+            "excerpt": "不动产项目名称 龙德广场项目 （预计）募集规模 27.40 亿元 （拟）上市的证券交易所 上海证券交易所 基金管理人 中信建投基金管理有限公司 基金托管人 华夏银行股份有限公司 资产支持证券管理人 中信建投证券股份有限公司",
+            "document_stage": "sealed",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/f6c51a1c13ed6c00b3824cad.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 中信建投首农食品集团封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202604/659a67_20260424_SFU8.pdf",
+            "published_at": "2026-04-24",
+            "page": 19,
+            "excerpt": "信建投-首农商业不动产1期资产支持专项计划不动产项目业态购物中心基金投资标的本基金主要投资于不动产资产支持证券，并持有其全部份额，通过投资不动产资产支持证券穿透取得不动产项目完全所有权或经营权利基金存续期限20年专项计划期限20年预计基金募集份额（亿份）10预计募集规模（亿元）27.40不动产项目估值（亿元）27.03净现金流分派率/IRR2026年：6.22%；2027年：5.60%基金收益预计分配频率和分配比例本基金将不低于合并后基金年度可供分配金额的90%以现金形式分配给投资者。本基金收益分配在符合分配条件的情况下每年不得少于1次，若基金合同生效不满6个月可不进行收益分配回收资金用途补充流动资金原始权益人及其同一控制下关联方拟持战配比例34%预计是否出表是特殊条款无参与人概况基金管理人中信建投基金管理有限公司专项计划管理人中信建投证券股份有限公司托管人华夏银行股份有限公司财务顾问中信建投证券股份有限公司原始权益人主要原始权益人：北京粮食集团有限责任公司其他原始权益人：北京元创联商业企业管理中心（有限合伙）主要原始权益人企业性质地方国有企业主要原始权益人所属行业零售业",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/f6c51a1c13ed6c00b3824cad.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 中信建投首农食品集团封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202604/659a67_20260424_SFU8.pdf",
+            "published_at": "2026-04-24",
+            "page": 19,
+            "excerpt": "不动产项目业态 购物中心 基金投资标的 本基金主要投资于不动产资产支持证",
+            "document_stage": "sealed",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/f6c51a1c13ed6c00b3824cad.json"
+          }
+        ]
+      }
+    },
+    "SSE_2b703424eb68448aafc7bd18f08e9a69": {
+      "fields": {
+        "underlying_assets": "大庆至广州高速公路湖北省麻城至浠水段（简称“大广北高速”）",
+        "project_return_forecast": "净现金流分派率2026年为10.67%，2027年为9.96%",
+        "asset_type": "交通设施"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 华夏湖北交投楚天高速公路封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/2b7034_20260331_T26W.pdf",
+            "published_at": "2026-03-31",
+            "page": 27,
+            "excerpt": "本基金拟初始投资的项目为大庆至广州高速公路湖北省麻城至浠水段（简称“大广北高速”）",
+            "document_stage": "feedback",
+            "rule": "explicit_initial_or_new_assets_sentence",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/a1ce25fc986b275772b945f6.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 华夏湖北交投楚天高速公路封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/2b7034_20260331_T26W.pdf",
+            "published_at": "2026-03-31",
+            "page": 26,
+            "excerpt": "华夏湖北交投楚天高速公路封闭式基础设施证券投资基金招募说明书（草案）26基金存续期限15年专项计划期限15年预计基金募集份额（亿份）【】预计募集规模（亿元）28.41不动产项目估值（亿元）35.08净现金流分派率2026年为10.67%，2027年为9.96%基金收益预计分配频率和分配比例本基金应当将不低于合并后年度可供分配金额的90%以现金形式分配给投资者。本基金的收益分配在符合分配条件的情况下每年不得少于1次，若基金合同生效不满6个月可不进行收益分配回收资金用途楚天高速拟将全部净回收资金以资本金形式投入沪渝高速公路武汉至宜昌段改扩建工程项目，建设集团拟将全部净回收资金用于补充流动资金原始权益人及其同一控制下关联方拟持战配比例楚天高速拟持有基金40%份额，建设集团拟持有基金20%份额预计是否出表否特殊条款（如有）无参与人概况基金管理人华夏基金管理有限公司专项计划管理人中信证券股份有限公司托管人招商银行股份有限公司财务顾问（如有）中信证券股份有限公司原始权益人1湖北楚天智能交通股份有限公司（简称“楚天高速”）原始权益人企业性质国有控股原始权益人所属行业交通运输、仓储和邮政业原始权益人注册地湖北省武汉市汉阳区四新大道26号湖北国展中心广场东塔23—24层原始权益人控股股东及持股比例湖北交通投资集团有限公司（37.64%）原始权益人实控人湖北省人民政府国有资产监督管理委员会原始权益人上市地点及股票代码（如有）上海证券交易所（600035.SH）原始权益人2湖北交投建设集团有限公司（简称“建设集团”）原始权益人企业性质国有控股原始权益人所属行业建筑业>土木工程建筑业>铁路、道路、隧道和桥梁工程建筑>公路工程建筑(E4812)原始权益人注册地湖北省武汉市汉阳区龙阳大道36号顶琇广场",
+            "document_stage": "feedback",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/a1ce25fc986b275772b945f6.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 华夏湖北交投楚天高速公路封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/2b7034_20260331_T26W.pdf",
+            "published_at": "2026-03-31",
+            "page": 25,
+            "excerpt": "不动产项目业态 高速公路 基金投资标的 80%以上的基金资产投资于不动产资产支持证券，",
+            "document_stage": "feedback",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/a1ce25fc986b275772b945f6.json"
+          }
+        ]
+      }
+    },
+    "SSE_b80b031657254459b6d0010d6b2d5286": {
+      "fields": {
+        "underlying_assets": "位于天津市滨海新区天津港保税区的天津临港工业港区2、3号粮油码头工程项目（以下简称“2、3号粮油码头项目”）和天津临港经济区粮油物流中心一期工程项目（以下简称“粮油物流中心一期工程项目”）",
+        "project_return_forecast": "净现金流分派率/IRR2025年10月1日至2025年12月31日期间、2026年度模拟预测现金流分派率分别为4.96%（年化）、5.05%，IRR为6.31%",
+        "asset_type": "交通设施"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+            "published_at": "2026-02-24",
+            "page": 16,
+            "excerpt": "不动产项目：指位于天津市滨海新区天津港保税区的天津临港工业港区2、3号粮油码头工程项目（以下简称“2、3号粮油码头项目”）和天津临港经济区粮油物流中心一期工程项目（以下简称“粮油物流中心一期工程项目”）",
+            "document_stage": "application",
+            "rule": "defined_named_initial_assets",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+            "published_at": "2026-02-24",
+            "page": 22,
+            "excerpt": "资产支持证券，并持有其全部份额，不动产基金通过不动产资产支持证券等特殊目的载体持有不动产项目公司全部股权，通过不动产资产支持证券和不动产项目公司等特殊目的载体取得不动产项目完全的所有权或经营权利基金存续期限50年专项计划期限50年预计基金募集份额（亿份）【】预计募集规模（亿元）23.95不动产资产估值（亿元）28.72净现金流分派率/IRR2025年10月1日至2025年12月31日期间、2026年度模拟预测现金流分派率分别为4.96%（年化）、5.05%，IRR为6.31%基金收益预计分配频率及分配比例每年至少分配一次，收益分配比例不低于合并后基金年度可供分配金额的90%回收资金用途不超过15%的净回收资金拟用于补充流动资金，不低于85%的净回收资金拟主要集中用于原始权益人项目建设原始权益人及其同一控制下关联方拟持战配比例34%预计是否出表否特殊条款（如有）无参与人概况基金管理人建信基金管理有限责任公司专项计划管理人建信资本管理有限责任公司托管人渤海银行股份有限公司财务顾问国泰海通证券股份有限公司原始权益人天津临港港务集团有限公司原始权益人企业性质国有企业原始权益人所属行业交通运输、仓储和邮政业原始权益人注册地天津市滨海新区临港经济区浑河道529号原始权益人控股股东及持股比例天津临港投资控股集团有限公司，持股比例为100.00%原始权益人实控人天津港保税区管理委员会原始权益人上市地点及股票代码不涉及",
+            "document_stage": "application",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+            "published_at": "2026-02-24",
+            "page": 22,
+            "excerpt": "不动产项目业态 交通基础设施-港口 基金投资标的 80%以上基金资产投资于不动产资产支持证券，并持",
+            "document_stage": "application",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json"
+          }
+        ]
+      }
+    },
+    "SSE_66b8e916901a4ad19167e5dd158606ac": {
+      "fields": {
+        "underlying_assets": "位于新疆生产建设兵团第六师北塔山牧场境内的北塔山风电项目，以及位于广西壮族自治区贺州市富川瑶族自治县的富川协合风电项目，富川协合风电项目包含两个子项目，分别为朝东风电项目和石家风电项目，上述不动产项目的总装机容量为196兆瓦",
+        "project_return_forecast": "净现金流分派率2025年10月-12月：13.93%（年化）；2026年：10.72%",
+        "asset_type": "能源"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4 招募说明书-注册稿.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/66b8e9_20260327_SVXK.pdf",
+            "published_at": "2026-03-27",
+            "page": 22,
+            "excerpt": "本基金初始投资的不动产项目为位于新疆生产建设兵团第六师北塔山牧场境内的北塔山风电项目，以及位于广西壮族自治区贺州市富川瑶族自治县的富川协合风电项目，富川协合风电项目包含两个子项目，分别为朝东风电项目和石家风电项目，上述不动产项目的总装机容量为196兆瓦",
+            "document_stage": "sealed",
+            "rule": "explicit_initial_or_new_assets_sentence",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/b6c8f9fe5c61732de8f42502.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4 招募说明书-注册稿.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/66b8e9_20260327_SVXK.pdf",
+            "published_at": "2026-03-27",
+            "page": 22,
+            "excerpt": "壮族自治区贺州市富川瑶族自治县的富川协合风电项目，富川协合风电项目包含两个子项目，分别为朝东风电项目和石家风电项目，上述不动产项目的总装机容量为196兆瓦。基金存续期限自基金合同生效日起17年专项计划期限自专项计划成立之日起17年预计基金募集份额（亿份）待定预计募集规模（亿元）12.18不动产项目估值（亿元）12.18净现金流分派率2025年10月-12月：13.93%（年化）；2026年：10.72%基金收益预计分配频率和分配比例按现金分红方式分配，分配比例不低于可供分配金额的90%，在符合有关基金分红条件的前提下，每年至少进行收益分配1次。若基金合同生效不满6个月可不进行收益分配。回收资金用途补充流动资金、以资本金形式投资于储能、新能源发电等项目的建设原始权益人及其同一控制下关联方拟持战配比例34%预计是否出表否特殊条款（如有）/参与人概况基金管理人中航基金管理有限公司专项计划管理人中航证券有限公司托管人中信银行股份有限公司财务顾问中信证券股份有限公司原始权益人中核汇能有限公司原始权益人企业性质国有企业原始权益人所属行业能源",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/b6c8f9fe5c61732de8f42502.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4 招募说明书-注册稿.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/66b8e9_20260327_SVXK.pdf",
+            "published_at": "2026-03-27",
+            "page": 22,
+            "excerpt": "不动产项目业态 新能源发电项目 基金投资标的 本基金初始投资的不动产项目为位于新疆生产建设兵团第六师",
+            "document_stage": "sealed",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/b6c8f9fe5c61732de8f42502.json"
+          }
+        ]
+      }
+    },
+    "SSE_580477e00d3c436e943190c8c23be567": {
+      "fields": {
+        "underlying_assets": "兰海高速广西南宁那南段",
+        "project_return_forecast": "净现金流分派率2026年和2027年度净现金流分派率分别为【9.07】%、【9.59】%",
+        "asset_type": "交通设施"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "易方达广西北投高速公路封闭式基础设施证券投资基金招募说明书.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202604/580477_20260408_1GN8.pdf",
+            "published_at": "2026-04-08",
+            "page": 3,
+            "excerpt": "不动产项目名称 兰海高速广西南宁那南段 （预计）募集规模 约【23.52】亿元 （拟）上市的证券交易所 上海证券交易所 基金管理人 易方达基金管理有限公司 基金托管人 交通银行股份有限公司 资产支持证券管理人 易方达资产管理有限公司",
+            "document_stage": "sealed",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/397f45d747e355cf0c7ad3b8.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "易方达广西北投高速公路封闭式基础设施证券投资基金招募说明书.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202604/580477_20260408_1GN8.pdf",
+            "published_at": "2026-04-08",
+            "page": 32,
+            "excerpt": "交易可转债的纯债部分除外）、可交换债券。如法律法规或监管机构以后允许基金投资其他品种，基金管理人在履行适当程序后，可以将其纳入投资范围，并可依据届时有效的法律法规适时合理地调整投资范围。基金存续期限18年专项计划期限18年预计基金募集份额（亿份）【X】预计募集规模（亿元）约【23.52】不动产项目估值（亿元）23.49净现金流分派率/IRR2026年和2027年度净现金流分派率分别为【9.07】%、【9.59】%",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/397f45d747e355cf0c7ad3b8.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "易方达广西北投高速公路封闭式基础设施证券投资基金招募说明书.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202604/580477_20260408_1GN8.pdf",
+            "published_at": "2026-04-08",
+            "page": 32,
+            "excerpt": "不动产项目业态 收费公路 基金投资标的 本基金存续期内主要投资于最终投资标的为高",
+            "document_stage": "sealed",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/397f45d747e355cf0c7ad3b8.json"
+          }
+        ]
+      }
+    },
+    "SSE_73c7577e4b3847aab5331d0379e15eff": {
+      "fields": {
+        "underlying_assets": "宋家庄福茂项目、华侨村商街项目、璞瑅商街项目",
+        "project_return_forecast": "净现金流分派率2025年10-12月（年化）：5.46%；2026年：5.72%",
+        "asset_type": "消费"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 嘉实首开封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/73c757_20260226_EICK.pdf",
+            "published_at": "2026-02-26",
+            "page": 4,
+            "excerpt": "不动产项目名称 宋家庄福茂项目、华侨村商街项目、璞瑅商街项目 预计募集规模 10.42 亿元 拟上市的证券交易所 上海证券交易所 基金管理人 嘉实基金管理有限公司 基金托管人 北京银行股份有限公司 资产支持证券管理人 嘉实资本管理有限公司",
+            "document_stage": "application",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/95c208b29514069bf8b4a784.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 嘉实首开封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/73c757_20260226_EICK.pdf",
+            "published_at": "2026-02-26",
+            "page": 26,
+            "excerpt": "次级债、可分离交易可转债的纯债部分等），货币市场工具（同业存单、债券回购、协议存款、定期存款及其他银行存款等），以及法律法规或中国证监会允许基金投资的其他金融工具（但须符合中国证监会相关规定）。基金存续期限33年专项计划期限33年预计基金募集份额（亿份）【】预计募集规模（亿元）10.42不动产项目估值（亿元）10.39净现金流分派率/IRR2025年10-12月（年化）：5.46%；2026年：5.72%基金收益预计分配频率和分配比例在符合有关基金收益分配条件的前提下，本基金管理人可以根据实际情况进行收益分配，每年至少分配一次，每年分配比例不低于合并后基金年度可供分配金额的90%；若《基金合同》生效不满6个月则可不进行收益分配。回收资金用途原始权益人承诺使用回收资金应当符合宏观政策导向，严格遵循国家产业政策、外汇管理和有关法律法规规定。回收资金用于与主营业务相关的存量资产收购、新增投资，以及偿还债务、补充流动资金等，不得用于购置商品住宅用地。原始权益人及其同一控制下关联方拟持战配比例不低于本次基金份额发售数量的20%预计是否出表是特殊条款（如有）无参与人概况基金管理人嘉实基金管理有限公司",
+            "document_stage": "application",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/95c208b29514069bf8b4a784.json"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 嘉实首开封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/73c757_20260226_EICK.pdf",
+            "published_at": "2026-02-26",
+            "page": 26,
+            "excerpt": "不动产项目业态 购物中心、社区商业 基金投资标的 本基金投资范围包括不动产资产支持证券，",
+            "document_stage": "application",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/95c208b29514069bf8b4a784.json"
+          }
+        ]
+      }
+    },
+    "SSE_9709dd8e44ed4697bfb8a2cc24626dd5": {
+      "fields": {
+        "asset_type": "租赁住房",
+        "underlying_assets": "本次拟购入保障性租赁住房林边公寓、公共租赁住房仁和公寓",
+        "project_return_forecast": "拟购入项目净现金流分派率：2025年10-12月4.11%（年化），2026年4.13%"
+      },
+      "sources": {
+        "asset_type": [
+          {
+            "title": "1-4-1 中金厦门安居保障性租赁住房封闭式基础设施证券投资基金2025年度第一次扩募并新购入不动产项目招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/9709dd_20260316_8J6A.pdf",
+            "published_at": "2026-03-16",
+            "page": 33,
+            "excerpt": "不动产项目业态 租赁住房 基金投资标的 本基金扩募募集的资金扣除必要税费（如有）及预留费用（如有）",
+            "document_stage": "sealed",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/637e0bf03dffea3393bc9b6e.json"
+          }
+        ],
+        "underlying_assets": [
+          {
+            "title": "1-4-1 中金厦门安居保障性租赁住房封闭式基础设施证券投资基金2025年度第一次扩募并新购入不动产项目招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/9709dd_20260316_8J6A.pdf",
+            "published_at": "2026-03-16",
+            "page": 52,
+            "excerpt": "本次拟购入的不动产项目分别为保障性租赁住房林边公寓和公共租赁住房仁和公寓",
+            "document_stage": "sealed",
+            "rule": "manual_current_expansion_pool_review",
+            "reviewed_at": "2026-10-15T12:12:34+08:00",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/637e0bf03dffea3393bc9b6e.json",
+            "source_method": "native_pdf_text",
+            "scope": "本次扩募拟新增项目",
+            "review_status": "passage_reviewed"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 中金厦门安居保障性租赁住房封闭式基础设施证券投资基金2025年度第一次扩募并新购入不动产项目招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/9709dd_20260316_8J6A.pdf",
+            "published_at": "2026-03-16",
+            "page": 33,
+            "excerpt": "净现金流分派率拟购入不动产项目2025年10-12月和2026年预计分派率为4.11%（已年化）、4.13%。",
+            "document_stage": "sealed",
+            "rule": "manual_current_expansion_pool_review",
+            "reviewed_at": "2026-10-15T12:12:34+08:00",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/637e0bf03dffea3393bc9b6e.json",
+            "source_method": "native_pdf_text",
+            "scope": "本次扩募拟新增项目",
+            "review_status": "passage_reviewed"
+          }
+        ]
+      }
+    },
+    "SSE_437d1732bc7f4fd293d5969f10f8655c": {
+      "fields": {
+        "underlying_assets": "钱江通道及接线工程钱江隧道段，路线全长4,450m，起点位于海宁周王庙镇，接北岸接线盐官西枢纽，在盐官上游2.5km处以过江隧道穿越钱塘江，终点与南岸接线相接",
+        "project_return_forecast": "净现金流分派率/IRR经测算2026年和2027年净现金流分派率分别为16.63%（含期初可供分配现金；不含则为10.09%）和10.30%，全周期IRR约为5.73%"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 东方红隧道股份高速公路封闭式基础设施基金招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/437d17_20260316_FHK7.pdf",
+            "published_at": "2026-03-16",
+            "page": 27,
+            "excerpt": "本基金拟初始投资的项目为钱江通道及接线工程钱江隧道段，路线全长4,450m，起点位于海宁周王庙镇，接北岸接线盐官西枢纽，在盐官上游2.5km处以过江隧道穿越钱塘江，终点与南岸接线相接",
+            "document_stage": "sealed",
+            "rule": "explicit_initial_or_new_assets_sentence",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/d6b0a90d1884581af69cd430.json"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 东方红隧道股份高速公路封闭式基础设施基金招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/437d17_20260316_FHK7.pdf",
+            "published_at": "2026-03-16",
+            "page": 26,
+            "excerpt": "他品种，基金管理人在履行适当程序后，可以将其纳入投资范围，并可依据届时有效的法律法规适时合理地调整投资范围。基金存续期限自基金合同生效之日起15年专项计划期限自专项计划成立之日起15年预计基金募集份额（亿份）【】预计募集规模（亿元）【43.56】基础设施项目估值（亿元）【41.58】（评估基准日为2025年9月30日）净现金流分派率/IRR经测算2026年和2027年净现金流分派率分别为16.63%1和10.30%，全周期IRR约为5.73%。基金收益预计分配频率和分配比例本基金收益分配采取现金分红方式。在符合有关基金分红条件的前提下，本基金管理人可以根据实际情况进行收益分配，但每年至少分配一次，基金管理人调整收益分配频率，无需召开基金份额持有人大会审议，但应于调整后及时通知基金托管人。每年分配比例不低于合并后基金年度可供分配金额的90%；若基金合同生效不满6个月则可不进行收益分配。回收资金用途募集资金将按照监管要求使用，以资本金注入方式投入新项目建设，具体用途为奉化区南山信创源项目及周边基础设施建设项目和嘉善经开区低碳园区开发（二期）项目以及补充流动资金，补充流动资金不超过净回收资金总额的15%。原始权益人及其同一控制下关联方拟持战配比例拟不低于51%1若不考虑期初可供分配现金，则分派率为10.09%。",
+            "document_stage": "sealed",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "forecast_basis": "2026年16.63%含期初可供分配现金；不含为10.09%。2027年10.30%，全周期IRR5.73%。",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/d6b0a90d1884581af69cd430.json"
+          }
+        ]
+      }
+    },
+    "SSE_b20df5ca80084efaad2e52f1d590dc21": {
+      "fields": {
+        "underlying_assets": "本基金通过资产支持证券和项目公司等载体取得的三个基础设施项目的统称，即位于北京市朝阳区的科技大厦、研发A1楼、国电总部4号楼项目，对应《房屋所有权证》/《不动产权证》编号分别为“京房权证朝其06字第001770号”、“X京房权证朝字第1396609号”、“京（2018）朝不动产权第0118551号”"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "1-4-1 招募说明书（草案）-电子城产业园REIT.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202505/b20df5_20250516_UF53.pdf",
+            "published_at": "2025-05-16",
+            "page": 33,
+            "excerpt": "标的基础设施项目：指本基金通过资产支持证券和项目公司等载体取得的三个基础设施项目的统称，即位于北京市朝阳区的科技大厦、研发A1楼、国电总部4号楼项目，对应《房屋所有权证》/《不动产权证》编号分别为“京房权证朝其06字第001770号”、“X京房权证朝字第1396609号”、“京（2018）朝不动产权第0118551号”",
+            "document_stage": "application",
+            "rule": "defined_named_initial_assets",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/10a05f0e6a72239628eb1549.json"
+          }
+        ]
+      }
+    },
+    "SSE_51076": {
+      "fields": {
+        "guarantee_support": "《运营管理服务协议》明确约定“运营管理机构应当对其在任期间项目公司未收到的基础设施项目孵化器租金补贴提供流动性支持”，虽然该流动性支持机制可一定程度缓释孵化器租金补贴收缴的相关风险，但若运营管理机构无法提供或无法及时提供上述流动性支持，则可能对本基金的现金分派产生不利影响。"
+      },
+      "sources": {
+        "guarantee_support": [
+          {
+            "title": "4-1 中信建投沈阳国际软件园封闭式基础设施证券投资基金招募说明书（草案）-封卷稿.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202509/051076_20250923_T8XJ.pdf",
+            "published_at": "2025-09-23",
+            "page": 17,
+            "excerpt": "《运营管理服务协议》明确约定“运营管理机构应当对其在任期间项目公司未收到的基础设施项目孵化器租金补贴提供流动性支持”，虽然该流动性支持机制可一定程度缓释孵化器租金补贴收缴的相关风险，但若运营管理机构无法提供或无法及时提供上述流动性支持，则可能对本基金的现金分派产生不利影响。",
+            "document_stage": "sealed",
+            "rule": "specific_support_obligation_passage",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/ddd49fc0c09f575823da73ce.json"
+          }
+        ]
+      }
+    },
+    "SSE_e3fa97711afa4d9baddfb472c7282f85": {
+      "fields": {
+        "guarantee_support": "运营管理机构应对未收回资产运营收入向新购入项目公司提供流动性支持，具体措施系递延支付运营管理机构对应金额的第四季度运营管理费。",
+        "underlying_assets": "本次新购入东久（南通）智造园、东久（重庆）智造园一期"
+      },
+      "sources": {
+        "guarantee_support": [
+          {
+            "title": "1-4-1 国泰君安东久新经济产业园封闭式基础设施证券投资基金2025年度第一次扩募并新购入基础设施项目招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202508/e3fa97_20250828_TQXN.pdf",
+            "published_at": "2025-08-28",
+            "page": 174,
+            "excerpt": "运营管理机构应对未收回资产运营收入向新购入项目公司提供流动性支持，具体措施系递延支付运营管理机构对应金额的第四季度运营管理费。",
+            "document_stage": "sealed",
+            "rule": "specific_support_obligation_passage",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/3e883614bbd500161241be8c.json"
+          }
+        ],
+        "underlying_assets": [
+          {
+            "title": "1-4-1 国泰君安东久新经济产业园封闭式基础设施证券投资基金2025年度第一次扩募并新购入基础设施项目招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202508/e3fa97_20250828_TQXN.pdf",
+            "published_at": "2025-08-28",
+            "page": 9,
+            "excerpt": "本次新购入基础设施项目底层租户行业分布存在较为集中的情况，其中汽车配件行业租赁面积占比为47.48%，总体较高。东久（南通）智造园、东久（重庆）智造园一期汽车配件行业租户承租面积分别占各自已出租面积的15.62%、86.95%。",
+            "document_stage": "sealed",
+            "rule": "manual_current_expansion_pool_review",
+            "reviewed_at": "2026-10-15T12:12:34+08:00",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/3e883614bbd500161241be8c.json",
+            "source_method": "native_pdf_text",
+            "scope": "本次扩募拟新增项目",
+            "review_status": "passage_reviewed"
+          }
+        ]
+      }
+    },
+    "SSE_50692": {
+      "fields": {
+        "underlying_assets": "项目公司合法持有的坐落于江苏省苏州市苏州工业园区启月街1号的菁英公寓项目，包括房屋所有权及其所占有范围内的国有土地使用权，及地下人防工程使用权"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "4-1 华泰紫金苏州恒泰租赁住房封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202503/050692_20250326_F9GE.pdf",
+            "published_at": "2025-03-26",
+            "page": 28,
+            "excerpt": "基础设施项目：指项目公司合法持有的坐落于江苏省苏州市苏州工业园区启月街1号的菁英公寓项目，包括房屋所有权及其所占有范围内的国有土地使用权，及地下人防工程使用权",
+            "document_stage": "sealed",
+            "rule": "defined_named_initial_assets",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/fcb8bfc0c9d34d93b1f6d49d.json"
+          }
+        ]
+      }
+    },
+    "SSE_41693": {
+      "fields": {
+        "guarantee_support": "运营管理机构应于该等3个月届满后5个工作日内向项目公司提供等额于未收回资产运营收入的流动性支持金（简称“流动性支持金”）。"
+      },
+      "sources": {
+        "guarantee_support": [
+          {
+            "title": "4-1华夏金隅智造工场产业园封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202412/041693_20241220_RHUS.pdf",
+            "published_at": "2024-12-20",
+            "page": 12,
+            "excerpt": "运营管理机构应于该等3个月届满后5个工作日内向项目公司提供等额于未收回资产运营收入的流动性支持金（简称“流动性支持金”）。",
+            "document_stage": "sealed",
+            "rule": "specific_support_obligation_passage",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/f22667fa4e2c1852222fe3d8.json"
+          }
+        ]
+      }
+    },
+    "SSE_40701": {
+      "fields": {
+        "guarantee_support": "（十六）流动性支持承诺提供方的违约风险根据保理安排，明阳智能分别向项目公司出具《关于国补资金的流动性支持承诺函》，承诺对《保理合同》约定的最长还款期限届满之日前十个工作日仍未回款的国补应收账款，启动流动性支持。"
+      },
+      "sources": {
+        "guarantee_support": [
+          {
+            "title": "4-1 中信建投明阳智能新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202406/040701_20240621_U98Y.pdf",
+            "published_at": "2024-06-21",
+            "page": 8,
+            "excerpt": "（十六）流动性支持承诺提供方的违约风险根据保理安排，明阳智能分别向项目公司出具《关于国补资金的流动性支持承诺函》，承诺对《保理合同》约定的最长还款期限届满之日前十个工作日仍未回款的国补应收账款，启动流动性支持。",
+            "document_stage": "sealed",
+            "rule": "specific_support_obligation_passage",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/05053a1f099b61f1fc10e8f4.json"
+          }
+        ]
+      }
+    },
+    "SSE_22908": {
+      "fields": {
+        "guarantee_support": "在上述保理方案的基础上，江苏电力公司、上海电力及国家电投分别出具流动性支持函，承诺对账龄满4.5年仍未回款的国补应收账款，启动流动性支持。"
+      },
+      "sources": {
+        "guarantee_support": [
+          {
+            "title": "4-1中信建投国家电投新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202303/022908_20230302_04CL.pdf",
+            "published_at": "2023-03-02",
+            "page": 54,
+            "excerpt": "在上述保理方案的基础上，江苏电力公司、上海电力及国家电投分别出具流动性支持函，承诺对账龄满4.5年仍未回款的国补应收账款，启动流动性支持。",
+            "document_stage": "sealed",
+            "rule": "specific_support_obligation_passage",
+            "reviewed_at": "2026-10-15T12:11:06+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/d1849a92abfb49f46d9e500b.json"
+          }
+        ]
+      }
+    },
+    "SSE_21292": {
+      "fields": {
+        "guarantee_support": "运营管理机构应于该等3个月届满后5个工作日内向项目公司提供等额于未收回资产运营收入的流动性支持金（简称“流动性支持金”）。"
+      },
+      "sources": {
+        "guarantee_support": [
+          {
+            "title": "4-1 国泰君安东久新经济产业园封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202209/021292_20220901_GCMR.pdf",
+            "published_at": "2022-09-01",
+            "page": 186,
+            "excerpt": "运营管理机构应于该等3个月届满后5个工作日内向项目公司提供等额于未收回资产运营收入的流动性支持金（简称“流动性支持金”）。",
+            "document_stage": "sealed",
+            "rule": "specific_support_obligation_passage",
+            "reviewed_at": "2026-10-15T12:11:05+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/2675f782b9f983d7b34b6a60.json"
+          }
+        ]
+      }
+    },
+    "SSE_16964": {
+      "fields": {
+        "underlying_assets": "渝遂高速公路重庆段及其附属设施的统称"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "4  国金铁建重庆渝遂高速公路封闭式基础设施证券投资基金-招募说明书.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202206/016964_20220606_LCOU.pdf",
+            "published_at": "2022-06-06",
+            "page": 29,
+            "excerpt": "基础设施项目：指渝遂高速公路重庆段及其附属设施的统称",
+            "document_stage": "sealed",
+            "rule": "defined_named_initial_assets",
+            "reviewed_at": "2026-10-15T12:11:05+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/3283bfcf3897e3b51f1ed05d.json"
+          }
+        ]
+      }
+    },
+    "SSE_16943": {
+      "fields": {
+        "underlying_assets": "由项目公司依法经营的位于浙江省境内自留下至昱岭关（皖浙省界）的杭徽高速公路（浙江段），起于杭州市留下，与杭州绕城公路西线相接，经闲林埠、中泰、临安汪家埠、青山、临安、玲珑、藻溪、於潜、太阳、昌化、龙岗、株柳、颊口、祝家庄、顺溪，终点位于浙皖两省交界昱岭关，主线路长度为122.245公里"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "6 浙商证券沪杭甬高速封闭式基础设施证券投资基金招募说明书4.23 clean.docx.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202104/016943_20210423_F1OC.pdf",
+            "published_at": "2021-04-23",
+            "page": 14,
+            "excerpt": "基础设施项目：指由项目公司依法经营的位于浙江省境内自留下至昱岭关（皖浙省界）的杭徽高速公路（浙江段），起于杭州市留下，与杭州绕城公路西线相接，经闲林埠、中泰、临安汪家埠、青山、临安、玲珑、藻溪、於潜、太阳、昌化、龙岗、株柳、颊口、祝家庄、顺溪，终点位于浙皖两省交界昱岭关，主线路长度为122.245公里",
+            "document_stage": "application",
+            "rule": "defined_named_initial_assets",
+            "reviewed_at": "2026-10-15T12:11:05+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/eaa295fbd31e86af9f837230.json"
+          }
+        ]
+      }
+    },
+    "SSE_21839": {
+      "fields": {
+        "underlying_assets": "本次新购入张润大厦"
+      },
+      "sources": {
+        "underlying_assets": [
+          {
+            "title": "4-1 华安张江光大园基金2022年度第一次扩募并新购入基础设施项目招募说明书（草案）-封卷稿.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202303/021839_20230331_VFN5.pdf",
+            "published_at": "2023-03-31",
+            "page": 5,
+            "excerpt": "本次新购入基础设施项目张润大厦重要现金流提供方租赁面积合计占其已出租面积的72.26%",
+            "document_stage": "sealed",
+            "rule": "manual_current_expansion_pool_review",
+            "reviewed_at": "2026-10-15T12:12:34+08:00",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/3552460888bd2c64c727eb4f.json",
+            "source_method": "native_pdf_text",
+            "scope": "本次扩募拟新增项目",
+            "review_status": "passage_reviewed"
+          }
+        ]
+      }
+    }
+  }
+}

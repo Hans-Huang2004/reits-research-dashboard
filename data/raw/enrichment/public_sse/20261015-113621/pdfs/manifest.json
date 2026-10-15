@@ -1,0 +1,15 @@
+[
+  {
+    "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/f461bf_20261014_N7ND.pdf",
+    "params": {},
+    "request_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/f461bf_20261014_N7ND.pdf",
+    "response_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/f461bf_20261014_N7ND.pdf",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-15T11:38:03+08:00",
+    "file": "SSE_f461bff4962247f4a1dac82dea874c42_prospectus_2_242ceab82767.bin",
+    "sha256": "86e881dc5dd11d12817c004d8d7986c189ef9e728f930bc61b8008d68edfd271",
+    "bytes": 38195324,
+    "content_type": "application/pdf",
+    "status": "ok"
+  }
+]

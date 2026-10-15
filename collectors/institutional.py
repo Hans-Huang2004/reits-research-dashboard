@@ -433,6 +433,8 @@ def collect_snapshot(request=None, previous=None, overrides=None, raw_dir=None):
             "changes":{"added_ids":sorted(current_ids-old_ids) if old_ids else [],"missing_ids":missing},
             "quality":{"duplicate_ids":0,"unknown_classification":sum(r["classification_source"]=="unknown" for r in items),"detail_warnings":warnings,"content_sha256":checksum},
             "items":items}
+    from collectors.project_fields import apply_field_scope
+    apply_field_scope(snapshot, "institutional", previous)
     update_classification_quality(snapshot)
     return snapshot
 

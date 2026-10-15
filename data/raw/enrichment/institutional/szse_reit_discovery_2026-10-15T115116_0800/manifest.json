@@ -1,0 +1,30 @@
+[
+  {
+    "url": "https://bond.szse.cn/disclosure/productinfo/reit/index.html",
+    "request_url": "https://bond.szse.cn/disclosure/productinfo/reit/index.html",
+    "query_parameters": {},
+    "referer": "https://bond.szse.cn/",
+    "extracted_at": "2026-10-15T11:51:16+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/disclosure/productinfo/reit/index.html",
+    "content_type": "text/html",
+    "file": "data/raw/enrichment/institutional/szse_reit_discovery_2026-10-15T115116_0800/00001_940d62ea04b3e3d0eb06.html",
+    "sha256": "5ed1e5fcde08dd8c9d02f2eaf7c181990c9146bb5a096e4171d0cbeb6ef510b4",
+    "bytes": 25385,
+    "ok": true
+  },
+  {
+    "url": "https://bond.szse.cn/disclosure/bizanno/pvtinfoanno/reit/index.html",
+    "request_url": "https://bond.szse.cn/disclosure/bizanno/pvtinfoanno/reit/index.html",
+    "query_parameters": {},
+    "referer": "https://bond.szse.cn/",
+    "extracted_at": "2026-10-15T11:51:16+08:00",
+    "http_status": 200,
+    "final_url": "https://owssso.szse.cn/sso/login?service=https://bond.szse.cn/disclosure/bizanno/pvtinfoanno/reit/index.html&locale=zh",
+    "content_type": "text/html;charset=UTF-8",
+    "file": "data/raw/enrichment/institutional/szse_reit_discovery_2026-10-15T115116_0800/00002_07af42cdddb1697e5861.html",
+    "sha256": "7a29ef96bd4d09080fe9519bd3a084fcc67e90dd17fb5b6fdef0b3ac95d80dc2",
+    "bytes": 42366,
+    "ok": true
+  }
+]

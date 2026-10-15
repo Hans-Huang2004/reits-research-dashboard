@@ -1,0 +1,23 @@
+{
+  "browser": "ego-browser",
+  "public": {
+    "rows": 3,
+    "columns": 61,
+    "all_rows_same_width": true,
+    "sha256": "2b55fd982f80a7bb9d1e48d07a2f3cad3aee2eb97cae43196a02611823e76f34"
+  },
+  "institutional": {
+    "rows": 1,
+    "columns": 47,
+    "all_rows_same_width": true,
+    "sha256": "c9c26d5acec1dcfe4459dcd18d0565107de3605f0de1b8ce1ef7ddff64f5dc60"
+  },
+  "python_checks": 101,
+  "javascript_checks": 5,
+  "mobile": {
+    "viewport": 390,
+    "body_width": 390,
+    "wide_table_scroll": true
+  },
+  "pixel_screenshot_verified": false
+}

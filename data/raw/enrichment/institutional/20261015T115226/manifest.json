@@ -1,0 +1,134 @@
+[
+  {
+    "url": "https://bond.szse.cn/api/report/ShowReport/data",
+    "request_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=ints_reits_cplb&pageNo=1",
+    "query_parameters": {
+      "SHOWTYPE": "JSON",
+      "CATALOGID": "ints_reits_cplb",
+      "pageNo": 1
+    },
+    "referer": "https://bond.szse.cn/disclosure/productinfo/reit/index.html",
+    "extracted_at": "2026-10-15T11:52:26+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=ints_reits_cplb&pageNo=1",
+    "content_type": "application/json",
+    "file": "data/raw/enrichment/institutional/20261015T115226/00001_acee728522f63a1ca508.json",
+    "sha256": "a5237d5457662ae7e43046e8d80e7937c13d5ee0437d25c7c822ed4f91b29a94",
+    "bytes": 23006,
+    "ok": true
+  },
+  {
+    "url": "https://bond.szse.cn/api/report/ShowReport/data",
+    "request_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=ints_reits_cplb&TABKEY=tab1&pageNo=2",
+    "query_parameters": {
+      "SHOWTYPE": "JSON",
+      "CATALOGID": "ints_reits_cplb",
+      "TABKEY": "tab1",
+      "pageNo": 2
+    },
+    "referer": "https://bond.szse.cn/disclosure/productinfo/reit/index.html",
+    "extracted_at": "2026-10-15T11:52:27+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=ints_reits_cplb&TABKEY=tab1&pageNo=2",
+    "content_type": "application/json",
+    "file": "data/raw/enrichment/institutional/20261015T115226/00002_bddd44a829331cbaa365.json",
+    "sha256": "a5237d5457662ae7e43046e8d80e7937c13d5ee0437d25c7c822ed4f91b29a94",
+    "bytes": 23006,
+    "ok": true
+  },
+  {
+    "url": "https://bond.szse.cn/api/report/ShowReport/data",
+    "request_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=ints_reits_cplb&TABKEY=tab1&pageNo=3",
+    "query_parameters": {
+      "SHOWTYPE": "JSON",
+      "CATALOGID": "ints_reits_cplb",
+      "TABKEY": "tab1",
+      "pageNo": 3
+    },
+    "referer": "https://bond.szse.cn/disclosure/productinfo/reit/index.html",
+    "extracted_at": "2026-10-15T11:52:27+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=ints_reits_cplb&TABKEY=tab1&pageNo=3",
+    "content_type": "application/json",
+    "file": "data/raw/enrichment/institutional/20261015T115226/00003_8b4b13018c80e2bd11a7.json",
+    "sha256": "a5237d5457662ae7e43046e8d80e7937c13d5ee0437d25c7c822ed4f91b29a94",
+    "bytes": 23006,
+    "ok": true
+  },
+  {
+    "url": "https://bond.szse.cn/api/report/ShowReport/data",
+    "request_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=ints_reits_cplb&TABKEY=tab1&pageNo=4",
+    "query_parameters": {
+      "SHOWTYPE": "JSON",
+      "CATALOGID": "ints_reits_cplb",
+      "TABKEY": "tab1",
+      "pageNo": 4
+    },
+    "referer": "https://bond.szse.cn/disclosure/productinfo/reit/index.html",
+    "extracted_at": "2026-10-15T11:52:27+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=ints_reits_cplb&TABKEY=tab1&pageNo=4",
+    "content_type": "application/json",
+    "file": "data/raw/enrichment/institutional/20261015T115226/00004_cca80a8b29effbc03ff6.json",
+    "sha256": "a5237d5457662ae7e43046e8d80e7937c13d5ee0437d25c7c822ed4f91b29a94",
+    "bytes": 23006,
+    "ok": true
+  },
+  {
+    "url": "https://bond.szse.cn/api/report/ShowReport/data",
+    "request_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=ints_reits_cplb&TABKEY=tab1&pageNo=5",
+    "query_parameters": {
+      "SHOWTYPE": "JSON",
+      "CATALOGID": "ints_reits_cplb",
+      "TABKEY": "tab1",
+      "pageNo": 5
+    },
+    "referer": "https://bond.szse.cn/disclosure/productinfo/reit/index.html",
+    "extracted_at": "2026-10-15T11:52:27+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=ints_reits_cplb&TABKEY=tab1&pageNo=5",
+    "content_type": "application/json",
+    "file": "data/raw/enrichment/institutional/20261015T115226/00005_54ee7e76ddf659985ea4.json",
+    "sha256": "a5237d5457662ae7e43046e8d80e7937c13d5ee0437d25c7c822ed4f91b29a94",
+    "bytes": 23006,
+    "ok": true
+  },
+  {
+    "url": "https://bond.szse.cn/api/report/ShowReport/data",
+    "request_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=ints_reits_cplb&TABKEY=tab1&pageNo=6",
+    "query_parameters": {
+      "SHOWTYPE": "JSON",
+      "CATALOGID": "ints_reits_cplb",
+      "TABKEY": "tab1",
+      "pageNo": 6
+    },
+    "referer": "https://bond.szse.cn/disclosure/productinfo/reit/index.html",
+    "extracted_at": "2026-10-15T11:52:27+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=ints_reits_cplb&TABKEY=tab1&pageNo=6",
+    "content_type": "application/json",
+    "file": "data/raw/enrichment/institutional/20261015T115226/00006_ce0397a0a78496dd402e.json",
+    "sha256": "a5237d5457662ae7e43046e8d80e7937c13d5ee0437d25c7c822ed4f91b29a94",
+    "bytes": 23006,
+    "ok": true
+  },
+  {
+    "url": "https://bond.szse.cn/api/report/ShowReport/data",
+    "request_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=ints_reits_cplb&TABKEY=tab1&pageNo=7",
+    "query_parameters": {
+      "SHOWTYPE": "JSON",
+      "CATALOGID": "ints_reits_cplb",
+      "TABKEY": "tab1",
+      "pageNo": 7
+    },
+    "referer": "https://bond.szse.cn/disclosure/productinfo/reit/index.html",
+    "extracted_at": "2026-10-15T11:52:27+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=ints_reits_cplb&TABKEY=tab1&pageNo=7",
+    "content_type": "application/json",
+    "file": "data/raw/enrichment/institutional/20261015T115226/00007_40c459b592e791731c37.json",
+    "sha256": "a5237d5457662ae7e43046e8d80e7937c13d5ee0437d25c7c822ed4f91b29a94",
+    "bytes": 23006,
+    "ok": true
+  }
+]

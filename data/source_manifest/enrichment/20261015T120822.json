@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-10-15T12:08:22+08:00",
+  "workpaper": "workpapers/enrichment/integration/20261015T120822/audit.json",
+  "inputs": {
+    "workpapers/enrichment/public_sse/latest_source.json": "22f77893af6db4bd4687139a526b4b5115234c3411b5b6e2ab544ae91eb58b67",
+    "workpapers/enrichment/public_szse/latest_source.json": "2593c043f26ae54a0a6b8059e2367080481f29a780ea1b54e1aa0740bb0aaba3",
+    "workpapers/enrichment/institutional/latest_source.json": "9fb37217afb0ff0d995f7c0d7547071bd55910ec6f2a1dbb73bda78b47ca3be3"
+  },
+  "supplement_hashes": {
+    "public_sse": "410be2a0079479eb9bcb329a9fdd0dfdd9434e5d04081d63de3a83b4899a7168",
+    "public_szse": "c9aec856a802c401af97c9b35776ddee21a3c7847fd859efee58bda5be6717eb",
+    "institutional": "f6f7590d0c524358dd8a2ba68ca5e19cbb2f4a57095d2962d15e13fb18b00806"
+  },
+  "outputs": {
+    "public": "8a407d4eab1febe3805274124cdf1a81f515ed5779d3192174207f2766556d0c",
+    "institutional": "98a3d880180b753be5d7418ee9ceb203a0c8ee07a8c74aebfb054651b0b9044f"
+  },
+  "raw_storage": "data/raw/enrichment/；大型PDF保留实际读取的原始字节区间及偏移、响应版本、哈希；范围见各来源manifest"
+}

@@ -12,6 +12,7 @@ def main():
     shutil.copytree(root / 'assets', target / 'assets', dirs_exist_ok=True)
     (target / 'data').mkdir(exist_ok=True)
     shutil.copy2(root / 'data/institutional.json', target / 'data/institutional.json')
+    shutil.copy2(root / 'data/public_reits.json', target / 'data/public_reits.json')
     (target / '.nojekyll').write_text('')
     print(target)
 

@@ -1,0 +1,55 @@
+{
+  "code": "180107",
+  "name": "平安西安高科产业园封闭式基础设施证券投资基金",
+  "verified_at": "2026-10-15T11:02:22+08:00",
+  "as_of": "2026-10-15",
+  "result": "发售中",
+  "offering_start_date": "2026-10-14",
+  "offering_end_date": "2026-10-20",
+  "established_date": null,
+  "listing_date": null,
+  "completed_issuance_confirmed": false,
+  "effective_announcement_found": false,
+  "listing_announcement_found": false,
+  "latest_announcement_date": "2026-10-14",
+  "sale_announcement": {
+    "title": "平安西安高科产业园REIT：平安西安高科产业园封闭式基础设施证券投资基金基金份额发售公告",
+    "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-30/112fe54b-776e-4ef2-ab60-3a290e94402f.PDF",
+    "date": "2026-09-30",
+    "evidence_pages": [
+      3,
+      13,
+      23,
+      28
+    ],
+    "evidence_snippet": "募集期为2026年10月14日起至2026年10月20日止"
+  },
+  "checks": {
+    "code_query_advertised_total": 9,
+    "code_query_rows": 9,
+    "name_query_advertised_total": 9,
+    "name_query_rows": 9,
+    "code_and_name_id_sets_match": true,
+    "code_query_complete": true,
+    "name_query_complete": true,
+    "no_effective_or_listing_announcements": true
+  },
+  "source_entry_url": "https://reits.szse.cn/disclosure/index.html?stock=180107",
+  "raw_files": [
+    "data/raw/public/2026-10-15/szse/crosscheck_code180107_page1.json",
+    "data/raw/public/2026-10-15/szse/crosscheck_name_xiangaoke_page1.json",
+    "data/raw/public/2026-10-15/szse/crosscheck_180107_sale_20260930.pdf"
+  ],
+  "manifests": [
+    "data/raw/public/2026-10-15/szse/manifest_180107_crosscheck_v1.json",
+    "data/raw/public/2026-10-15/szse/manifest_180107_sale_pdf_v1.json"
+  ],
+  "official_review_event_id": "SZSE_5000039",
+  "recommended_event_fields": {
+    "security_code": "180107",
+    "issuance_stage": "发售中",
+    "offering_start_date": "2026-10-14",
+    "offering_end_date": "2026-10-20",
+    "issuance_evidence_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-30/112fe54b-776e-4ef2-ab60-3a290e94402f.PDF"
+  }
+}

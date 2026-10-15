@@ -1,0 +1,761 @@
+{
+  "version": "v3",
+  "corrected_at": "2026-10-15T10:55:31+08:00",
+  "reason": "fundProvinceName是基金管理人注册地，原映射为资产所在地有误。资产所在地不由本字段推断。",
+  "source_field": "fundProvinceName",
+  "official_label": "输入基金管理人注册地",
+  "evidence": {
+    "file": "data/raw/public/2026-10-15/szse/schema_projectdynamic_20261015.html",
+    "url": "https://reits.szse.cn/projectdynamic/index.html",
+    "method": "GET",
+    "query_parameters": {},
+    "extracted_at": "2026-10-15T10:54:54+08:00",
+    "sha256": "4d815160f06e1656afbd2152b430874d56c2e867edf040aa1f20a319093f15f1",
+    "bytes": 70691,
+    "content_type": "text/html",
+    "semantic_evidence_line": 1164
+  },
+  "parser": "collectors.public_szse.correct_manager_region_mapping",
+  "changes": [
+    {
+      "id": "SZSE_5000080",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000086",
+      "source_field": "fundProvinceName",
+      "source_value": "上海",
+      "old_asset_location": "上海",
+      "manager_location": "上海",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000085",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000084",
+      "source_field": "fundProvinceName",
+      "source_value": "上海",
+      "old_asset_location": "上海",
+      "manager_location": "上海",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000083",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000072",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000056",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000082",
+      "source_field": "fundProvinceName",
+      "source_value": "上海",
+      "old_asset_location": "上海",
+      "manager_location": "上海",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000079",
+      "source_field": "fundProvinceName",
+      "source_value": "上海",
+      "old_asset_location": "上海",
+      "manager_location": "上海",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000078",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000071",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000068",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000055",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000051",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000077",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000039",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000060",
+      "source_field": "fundProvinceName",
+      "source_value": "上海",
+      "old_asset_location": "上海",
+      "manager_location": "上海",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000076",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000074",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000057",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000067",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000062",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000070",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000069",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000065",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000050",
+      "source_field": "fundProvinceName",
+      "source_value": "天津",
+      "old_asset_location": "天津",
+      "manager_location": "天津",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000054",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000053",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000032",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000015",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000052",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000048",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000047",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000045",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000042",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000041",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000040",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000031",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000033",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000036",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000037",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000020",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000029",
+      "source_field": "fundProvinceName",
+      "source_value": "上海",
+      "old_asset_location": "上海",
+      "manager_location": "上海",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000030",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000021",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000026",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000024",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000019",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000017",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000018",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000014",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000012",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000010",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000009",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000008",
+      "source_field": "fundProvinceName",
+      "source_value": "",
+      "old_asset_location": "",
+      "manager_location": "",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000007",
+      "source_field": "fundProvinceName",
+      "source_value": "",
+      "old_asset_location": "",
+      "manager_location": "",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000004",
+      "source_field": "fundProvinceName",
+      "source_value": "",
+      "old_asset_location": "",
+      "manager_location": "",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_5000002",
+      "source_field": "fundProvinceName",
+      "source_value": "",
+      "old_asset_location": "",
+      "manager_location": "",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180101",
+      "source_event_id": "SZSE_5000004",
+      "source_field": "fundProvinceName",
+      "source_value": "",
+      "old_asset_location": "",
+      "manager_location": "",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180102",
+      "source_event_id": "SZSE_5000014",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180103",
+      "source_event_id": "SZSE_5000018",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180105",
+      "source_event_id": "SZSE_5000021",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180106",
+      "source_event_id": "SZSE_5000031",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180201",
+      "source_event_id": "SZSE_5000007",
+      "source_field": "fundProvinceName",
+      "source_value": "",
+      "old_asset_location": "",
+      "manager_location": "",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180202",
+      "source_event_id": "SZSE_5000009",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180203",
+      "source_event_id": "SZSE_5000020",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180301",
+      "source_event_id": "SZSE_5000008",
+      "source_field": "fundProvinceName",
+      "source_value": "",
+      "old_asset_location": "",
+      "manager_location": "",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180302",
+      "source_event_id": "SZSE_5000030",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180303",
+      "source_event_id": "SZSE_5000029",
+      "source_field": "fundProvinceName",
+      "source_value": "上海",
+      "old_asset_location": "上海",
+      "manager_location": "上海",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180305",
+      "source_event_id": "SZSE_5000042",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180306",
+      "source_event_id": "SZSE_5000048",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180307",
+      "source_event_id": "SZSE_5000068",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180401",
+      "source_event_id": "SZSE_5000010",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180402",
+      "source_event_id": "SZSE_5000040",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180501",
+      "source_event_id": "SZSE_5000012",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180502",
+      "source_event_id": "SZSE_5000036",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180503",
+      "source_event_id": "SZSE_5000054",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180505",
+      "source_event_id": "SZSE_5000071",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180601",
+      "source_event_id": "SZSE_5000024",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180602",
+      "source_event_id": "SZSE_5000026",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180603",
+      "source_event_id": "SZSE_5000037",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180605",
+      "source_event_id": "SZSE_5000041",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180606",
+      "source_event_id": "SZSE_5000045",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180607",
+      "source_event_id": "SZSE_5000052",
+      "source_field": "fundProvinceName",
+      "source_value": "北京",
+      "old_asset_location": "北京",
+      "manager_location": "北京",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180701",
+      "source_event_id": "SZSE_5000033",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180801",
+      "source_event_id": "SZSE_5000002",
+      "source_field": "fundProvinceName",
+      "source_value": "",
+      "old_asset_location": "",
+      "manager_location": "",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_180901",
+      "source_event_id": "SZSE_5000047",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    },
+    {
+      "id": "SZSE_FUND_181001",
+      "source_event_id": "SZSE_5000062",
+      "source_field": "fundProvinceName",
+      "source_value": "广东",
+      "old_asset_location": "广东",
+      "manager_location": "广东",
+      "asset_location": ""
+    }
+  ],
+  "checks": {
+    "all_asset_locations_empty": true,
+    "manager_regions_bound_to_raw": true,
+    "fund_count_unchanged": true,
+    "event_count_unchanged": true
+  }
+}

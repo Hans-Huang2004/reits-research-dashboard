@@ -1,0 +1,67 @@
+{
+  "version": "v1",
+  "verified_at": "2026-10-15T10:53:16+08:00",
+  "parser": "collectors.public_szse.enrich_pending_from_local_pdfs",
+  "pypdf_version": "6.10.2",
+  "source_snapshot": "szse_collected.json",
+  "records": [
+    {
+      "code": "180307",
+      "source_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-30/d9c1f987-bc7a-41fb-8446-e094b7d19799.PDF",
+      "raw_file": "data/raw/public/2026-10-15/szse/effective_180307.pdf",
+      "sha256": "a6ac7e814fcc1d836a90e6f638ac69b301e93ac47623cc56423c7ddd1d004064",
+      "text_file": "workpapers/public/szse_effective_180307_text.txt",
+      "evidence_pages": [
+        2
+      ],
+      "parsed": {
+        "code": "180307",
+        "name": "中金菜鸟仓储物流封闭式基础设施证券投资基金",
+        "established_date": "2026-09-28",
+        "initial_raise_cny_100m": 14.9,
+        "initial_raise_basis": "募集期间净认购金额（不含认购利息）",
+        "initial_units": 500000000,
+        "evidence_snippets": {
+          "code": "基金主代码180307",
+          "effective_date": "基金合同生效日2026年9月28日",
+          "net_subscription": "募集期间净认购金额（单位：人民币元）1,490,000,000.00"
+        }
+      },
+      "checks": {
+        "security_code_match": true,
+        "full_name_match": true,
+        "raw_hash_match": true,
+        "actual_date_label_present": true
+      }
+    },
+    {
+      "code": "180505",
+      "source_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-10-01/f39fb8fb-9422-4317-8e76-5637d0c2e479.PDF",
+      "raw_file": "data/raw/public/2026-10-15/szse/effective_180505.pdf",
+      "sha256": "7623521abb6458530bc556c5af7b779f59527f51562b9f16e3b5113464defd95",
+      "text_file": "workpapers/public/szse_effective_180505_text.txt",
+      "evidence_pages": [
+        2
+      ],
+      "parsed": {
+        "code": "180505",
+        "name": "中金杭州安居保障性租赁住房封闭式基础设施证券投资基金",
+        "established_date": "2026-09-30",
+        "initial_raise_cny_100m": 9.15,
+        "initial_raise_basis": "募集期间净认购金额（不含认购利息）",
+        "initial_units": 300000000,
+        "evidence_snippets": {
+          "code": "基金主代码180505",
+          "effective_date": "基金合同生效日2026年9月30日",
+          "net_subscription": "募集期间净认购金额（单位：人民币元）915,000,000.00"
+        }
+      },
+      "checks": {
+        "security_code_match": true,
+        "full_name_match": true,
+        "raw_hash_match": true,
+        "actual_date_label_present": true
+      }
+    }
+  ]
+}

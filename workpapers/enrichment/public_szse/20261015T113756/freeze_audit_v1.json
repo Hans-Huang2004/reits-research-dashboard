@@ -1,0 +1,51 @@
+{
+  "frozen_at": "2026-10-15T13:12:25+08:00",
+  "supplement_sha256": "e95dae35eb98fae18cee8c3574edfcb28684b4bf996a462194dbc17329558665",
+  "latest_source_sha256": "2593c043f26ae54a0a6b8059e2367080481f29a780ea1b54e1aa0740bb0aaba3",
+  "source_unique_raw_hashes_verified": 112,
+  "event_and_fund_field_evidence_checked": 398,
+  "status": "passed",
+  "coverage": {
+    "checked_at": "2026-10-15T13:11:49+08:00",
+    "events_total": 58,
+    "funds_total": 33,
+    "events_with_readable_pdf": 57,
+    "event_field_counts": {
+      "underlying_assets": 32,
+      "proposed_sale_amount_application_cny_100m": 25,
+      "project_return_forecast": 40,
+      "external_loan_amount_cny_100m": 1,
+      "financial_advisor": 49,
+      "asset_type": 51,
+      "guarantee_support": 1,
+      "sale_amount_cny_100m": 29,
+      "established_date": 28,
+      "offering_start_date": 28,
+      "offering_end_date": 28,
+      "proposed_sale_amount_inquiry_cny_100m": 20
+    },
+    "pdf_ok": 180,
+    "pdf_failed": 29,
+    "raw_pdf_bytes": 903647327,
+    "first_issuance_and_followon_separated": true,
+    "unavailable_fields_explicit": true
+  },
+  "known_regressions_checked": [
+    "181001 OCR money",
+    "180601 net interest separation",
+    "5000057 current expansion pool",
+    "5000019 scenarios",
+    "5000070 IRR",
+    "5000077 adviser none",
+    "5000033/40/36 asset names",
+    "180502 annualization"
+  ],
+  "raw_total_bytes": 1342877575,
+  "limitations": [
+    "29 original filing prospectus URLs remained inaccessible or unavailable; 33 separate official earliest offering prospectuses were obtained without substituting them for application/feedback versions.",
+    "No explicitly identified feedback-version amount could be verified.",
+    "Issuer was not substituted by originator or fund manager.",
+    "180701 contract-effective PDF is scanned and lacks a verified amount in this supplement; its source status remains the official established/listed status.",
+    "Prospectus text extraction is restricted to first 200 physical pages; empty or inaccessible fields remain explicit unverified/not_available."
+  ]
+}

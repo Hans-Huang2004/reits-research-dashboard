@@ -1,0 +1,12 @@
+{
+  "source_path": "/Users/huangchenghan/Documents/实习/国泰海通固收/【10.07】待发行REITs项目一览表.xlsx",
+  "source_sha256": "a48fe20775296af92644f84277a799a6942d01c0464fa3be1036bdbb56462662",
+  "source_bytes": 48198,
+  "extracted_at": "2026-10-15T11:20:22+08:00",
+  "selected_ranges": [
+    "公募REITs项目!A1:S1",
+    "私募REITs项目!A1:M1"
+  ],
+  "raw_path": "data/raw/field_scope/a48fe2077529/headers.json",
+  "import_project_values": false
+}

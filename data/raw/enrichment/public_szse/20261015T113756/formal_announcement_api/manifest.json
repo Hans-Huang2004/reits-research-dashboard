@@ -1,0 +1,99 @@
+{
+  "requests": [
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/formal_announcement_api/ann_formal_prospectuses_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "request_url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "method": "POST",
+      "query_parameters": {},
+      "request_body": {
+        "channelCode": [
+          "reits-xxpl"
+        ],
+        "searchKey": [
+          "招募说明书"
+        ],
+        "pageSize": 50,
+        "pageNum": 1
+      },
+      "extracted_at": "2026-10-15T12:02:15+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "f04731ebf5d3d77a018c7fa3a16f62218abf0e3eeebd43bfca3b170ded4a1a50",
+      "bytes": 29087
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/formal_announcement_api/ann_formal_prospectuses_page2.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "request_url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "method": "POST",
+      "query_parameters": {},
+      "request_body": {
+        "channelCode": [
+          "reits-xxpl"
+        ],
+        "searchKey": [
+          "招募说明书"
+        ],
+        "pageSize": 50,
+        "pageNum": 2
+      },
+      "extracted_at": "2026-10-15T12:02:17+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "54feb0608033bf1c41cda73b51731ab55299c123f2f9cef8a85dfad81ed051b0",
+      "bytes": 28917
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/formal_announcement_api/ann_formal_prospectuses_page3.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "request_url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "method": "POST",
+      "query_parameters": {},
+      "request_body": {
+        "channelCode": [
+          "reits-xxpl"
+        ],
+        "searchKey": [
+          "招募说明书"
+        ],
+        "pageSize": 50,
+        "pageNum": 3
+      },
+      "extracted_at": "2026-10-15T12:02:18+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "774edcb3884bfce9b88f0996216e81200b723eae75e3f2d24758adf94f2b75b2",
+      "bytes": 28942
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/formal_announcement_api/ann_formal_prospectuses_page4.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "request_url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "method": "POST",
+      "query_parameters": {},
+      "request_body": {
+        "channelCode": [
+          "reits-xxpl"
+        ],
+        "searchKey": [
+          "招募说明书"
+        ],
+        "pageSize": 50,
+        "pageNum": 4
+      },
+      "extracted_at": "2026-10-15T12:02:20+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "6da759f882bd654b175ddde8e55f35893495633624d9cdfc7d56d2c088594bc4",
+      "bytes": 1914
+    }
+  ],
+  "pagination_check": {
+    "keyword": "招募说明书",
+    "stock": null,
+    "advertised_total": 154,
+    "raw_count": 154,
+    "pages": 4
+  }
+}

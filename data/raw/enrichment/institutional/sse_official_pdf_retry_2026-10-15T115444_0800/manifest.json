@@ -1,0 +1,62 @@
+[
+  {
+    "url": "https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-06-08/600648_20260608_14TF.pdf",
+    "request_url": "https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-06-08/600648_20260608_14TF.pdf",
+    "query_parameters": {},
+    "referer": "https://www.sse.com.cn/",
+    "extracted_at": "2026-10-15T11:54:44+08:00",
+    "http_status": 200,
+    "final_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-06-08/600648_20260608_14TF.pdf",
+    "content_type": "text/html; charset=utf-8",
+    "content_encoding": "gzip",
+    "file": "data/raw/enrichment/institutional/sse_official_pdf_retry_2026-10-15T115444_0800/00001_0860c60a84416863f027.pdf",
+    "sha256": "5e8c6299c61fa05ff1da1e77b0078a97e905a3a211c4922310a027e039effcf4",
+    "bytes": 3872,
+    "ok": true
+  },
+  {
+    "url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-06-08/600648_20260608_14TF.pdf",
+    "request_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-06-08/600648_20260608_14TF.pdf",
+    "query_parameters": {},
+    "referer": "https://www.sse.com.cn/",
+    "extracted_at": "2026-10-15T11:54:45+08:00",
+    "http_status": 200,
+    "final_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-06-08/600648_20260608_14TF.pdf",
+    "content_type": "text/html; charset=utf-8",
+    "content_encoding": "gzip",
+    "file": "data/raw/enrichment/institutional/sse_official_pdf_retry_2026-10-15T115444_0800/00002_ff6453b37fd316185c21.pdf",
+    "sha256": "5e8c6299c61fa05ff1da1e77b0078a97e905a3a211c4922310a027e039effcf4",
+    "bytes": 3872,
+    "ok": true
+  },
+  {
+    "url": "https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-02-25/600638_20260225_LIZ5.pdf",
+    "request_url": "https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-02-25/600638_20260225_LIZ5.pdf",
+    "query_parameters": {},
+    "referer": "https://www.sse.com.cn/",
+    "extracted_at": "2026-10-15T11:54:45+08:00",
+    "http_status": 200,
+    "final_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-02-25/600638_20260225_LIZ5.pdf",
+    "content_type": "text/html; charset=utf-8",
+    "content_encoding": "gzip",
+    "file": "data/raw/enrichment/institutional/sse_official_pdf_retry_2026-10-15T115444_0800/00003_fba22614799fa84f8e11.pdf",
+    "sha256": "5e8c6299c61fa05ff1da1e77b0078a97e905a3a211c4922310a027e039effcf4",
+    "bytes": 3872,
+    "ok": true
+  },
+  {
+    "url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-02-25/600638_20260225_LIZ5.pdf",
+    "request_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-02-25/600638_20260225_LIZ5.pdf",
+    "query_parameters": {},
+    "referer": "https://www.sse.com.cn/",
+    "extracted_at": "2026-10-15T11:54:46+08:00",
+    "http_status": 200,
+    "final_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-02-25/600638_20260225_LIZ5.pdf",
+    "content_type": "text/html; charset=utf-8",
+    "content_encoding": "gzip",
+    "file": "data/raw/enrichment/institutional/sse_official_pdf_retry_2026-10-15T115444_0800/00004_c9a4c94c5034df86a2ed.pdf",
+    "sha256": "5e8c6299c61fa05ff1da1e77b0078a97e905a3a211c4922310a027e039effcf4",
+    "bytes": 3872,
+    "ok": true
+  }
+]

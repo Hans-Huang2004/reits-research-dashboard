@@ -1,0 +1,696 @@
+{
+  "checked_at": "2026-10-15T13:09:25+08:00",
+  "supplement_sha256": "db3855f6d48db609d99f71834d33a04edafff467a86c99a6ebebcef838bcc99d",
+  "event_keys": 102,
+  "filled_fields": 269,
+  "money_cells": 69,
+  "coverage": {
+    "financial_advisor": 81,
+    "proposed_sale_amount_application_cny_100m": 30,
+    "proposed_sale_amount_feedback_cny_100m": 23,
+    "underlying_assets": 42,
+    "project_return_forecast": 37,
+    "asset_type": 32,
+    "guarantee_support": 8,
+    "sale_amount_cny_100m": 15,
+    "external_loan_amount_cny_100m": 1
+  },
+  "errors": [],
+  "unit_recalculations": [
+    {
+      "event_id": "SSE_f461bff4962247f4a1dac82dea874c42",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 16.04,
+      "raw_amount": "16.04",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_f461bff4962247f4a1dac82dea874c42",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 14.61,
+      "raw_amount": "14.61",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_84f8eff955614871a2e88d91891828a1",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 42.785,
+      "raw_amount": "42.785",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.000"
+    },
+    {
+      "event_id": "SSE_84f8eff955614871a2e88d91891828a1",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 42.205,
+      "raw_amount": "42.205",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.000"
+    },
+    {
+      "event_id": "SSE_9c0e79ff1731437c8cb7571366675723",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 18.4448,
+      "raw_amount": "18.4448",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.0000"
+    },
+    {
+      "event_id": "SSE_9c0e79ff1731437c8cb7571366675723",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 16.521,
+      "raw_amount": "16.521",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.000"
+    },
+    {
+      "event_id": "SSE_39be963ffbaf493ba0744506b3f451e2",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 13.25154816,
+      "raw_amount": "1,325,154,816.16",
+      "raw_unit": "元",
+      "difference_cny_100m": "1.6E-9"
+    },
+    {
+      "event_id": "SSE_24e84189f68749109b5302f5e1e6ad29",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 31.57,
+      "raw_amount": "31.57",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_24e84189f68749109b5302f5e1e6ad29",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 30.18,
+      "raw_amount": "30.18",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_cdb91b06f7bd4b88a382d391bfdf687e",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 38.18,
+      "raw_amount": "38.18",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_894cbcc4623047c385444030dd83f921",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 12.05,
+      "raw_amount": "12.05",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_a9ce5e95e078472998cc47ad30846c2b",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 20.45,
+      "raw_amount": "20.45",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_c330717c560146148c72a9a3bdeb4de8",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 23.36,
+      "raw_amount": "23.36",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_0c134614a72047339c77d9e3049f03fc",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 12.66,
+      "raw_amount": "12.66",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_0c134614a72047339c77d9e3049f03fc",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 10.46,
+      "raw_amount": "10.46",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_2b6853bdbec648e0821425c40f6d5b45",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 10.51,
+      "raw_amount": "10.51",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_2442d7bd13474f31972b8605ceebefdb",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 11.03,
+      "raw_amount": "11.03",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_a1b8c90b144d41c2bbde49c4c0a2f96f",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 32.07,
+      "raw_amount": "32.07",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_620f9db7cc1f48b1b6531c5af02e8b34",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 16.25,
+      "raw_amount": "16.25",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_620f9db7cc1f48b1b6531c5af02e8b34",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 15.41,
+      "raw_amount": "15.41",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_888e50b307b74902bef134005d5c8716",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 11.89,
+      "raw_amount": "11.89",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_80657bb8e3a84783a3b6a2a7c311654f",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 10.77,
+      "raw_amount": "10.77",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_80657bb8e3a84783a3b6a2a7c311654f",
+      "field": "sale_amount_cny_100m",
+      "value": 11.6639999549,
+      "raw_amount": "1,166,399,995.49",
+      "raw_unit": "元",
+      "difference_cny_100m": "0E-10"
+    },
+    {
+      "event_id": "SSE_567e0ce118814458b930c6cdebd8a43b",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 13.14,
+      "raw_amount": "13.14",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_567e0ce118814458b930c6cdebd8a43b",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 12.901,
+      "raw_amount": "12.901",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.000"
+    },
+    {
+      "event_id": "SSE_567e0ce118814458b930c6cdebd8a43b",
+      "field": "sale_amount_cny_100m",
+      "value": 13.6750000469,
+      "raw_amount": "1,367,500,004.69",
+      "raw_unit": "元",
+      "difference_cny_100m": "0E-10"
+    },
+    {
+      "event_id": "SSE_762ec541a8a446018b6b854353629e7d",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 23.08,
+      "raw_amount": "23.08",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_1cac0428e57a4c65b9dadaa89549741b",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 12.6,
+      "raw_amount": "12.60",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_1cac0428e57a4c65b9dadaa89549741b",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 11.03,
+      "raw_amount": "11.03",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_86ca5c30686342a3b403248a49578a6a",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 37.66,
+      "raw_amount": "37.66",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_86ca5c30686342a3b403248a49578a6a",
+      "field": "sale_amount_cny_100m",
+      "value": 40.0650001356,
+      "raw_amount": "4,006,500,013.56",
+      "raw_unit": "元",
+      "difference_cny_100m": "0E-10"
+    },
+    {
+      "event_id": "SSE_294417b17ff34e6e939763427f15a767",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 11.01,
+      "raw_amount": "11.01",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_4440fa26ec24475d9318be11d1151ef9",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 40.54,
+      "raw_amount": "40.54",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_4440fa26ec24475d9318be11d1151ef9",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 38.73,
+      "raw_amount": "38.73",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_98519f6baf014a13a59dac8cb52f35e8",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 20.93,
+      "raw_amount": "20.93",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_98519f6baf014a13a59dac8cb52f35e8",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 19.96,
+      "raw_amount": "19.96",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_98519f6baf014a13a59dac8cb52f35e8",
+      "field": "sale_amount_cny_100m",
+      "value": 17.9649999822,
+      "raw_amount": "1,796,499,998.22",
+      "raw_unit": "元",
+      "difference_cny_100m": "0E-10"
+    },
+    {
+      "event_id": "SSE_6fa0b7c2f77944549b2ada7b1339be34",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 28.1,
+      "raw_amount": "28.10",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_6fa0b7c2f77944549b2ada7b1339be34",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 27.1,
+      "raw_amount": "27.10",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_6fa0b7c2f77944549b2ada7b1339be34",
+      "field": "sale_amount_cny_100m",
+      "value": 27.3,
+      "raw_amount": "2,730,000,000.00",
+      "raw_unit": "元",
+      "difference_cny_100m": "0E-10"
+    },
+    {
+      "event_id": "SSE_3214c881b4ed492f8eb28966d291acf8",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 49.05,
+      "raw_amount": "49.05",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_3214c881b4ed492f8eb28966d291acf8",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 46.27,
+      "raw_amount": "46.27",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_d1e2d169bad04e489952ab042b62c577",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 17.03,
+      "raw_amount": "17.03",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_d1e2d169bad04e489952ab042b62c577",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 17.0,
+      "raw_amount": "17.00",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_d1e2d169bad04e489952ab042b62c577",
+      "field": "sale_amount_cny_100m",
+      "value": 18.7039999824,
+      "raw_amount": "1,870,399,998.24",
+      "raw_unit": "元",
+      "difference_cny_100m": "0E-10"
+    },
+    {
+      "event_id": "SSE_7c28dbd738914f278d7b55b510cf44e9",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 139.28,
+      "raw_amount": "139.28",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_ca83f8b53ee34cb0b2ee8bede1007452",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 40.02,
+      "raw_amount": "40.02",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_ca83f8b53ee34cb0b2ee8bede1007452",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 38.49,
+      "raw_amount": "38.49",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_ca83f8b53ee34cb0b2ee8bede1007452",
+      "field": "sale_amount_cny_100m",
+      "value": 40.9200000348,
+      "raw_amount": "4,092,000,003.48",
+      "raw_unit": "元",
+      "difference_cny_100m": "0E-10"
+    },
+    {
+      "event_id": "SSE_54b56d3cc1cc46b29da3d05a5efe7bf0",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 74.7,
+      "raw_amount": "74.70",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_54b56d3cc1cc46b29da3d05a5efe7bf0",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 69.99,
+      "raw_amount": "69.99",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_54b56d3cc1cc46b29da3d05a5efe7bf0",
+      "field": "sale_amount_cny_100m",
+      "value": 76.9599999303,
+      "raw_amount": "7,695,999,993.03",
+      "raw_unit": "元",
+      "difference_cny_100m": "0E-10"
+    },
+    {
+      "event_id": "SSE_f73619d5cf6a45a883283047e5886e8d",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 50.64,
+      "raw_amount": "50.64",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_f73619d5cf6a45a883283047e5886e8d",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 50.28,
+      "raw_amount": "50.28",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_659a67730bd24417a9e3b98780589f73",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 27.5,
+      "raw_amount": "27.50",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_659a67730bd24417a9e3b98780589f73",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 27.4,
+      "raw_amount": "27.40",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_659a67730bd24417a9e3b98780589f73",
+      "field": "sale_amount_cny_100m",
+      "value": 30.1300000696,
+      "raw_amount": "3,013,000,006.96",
+      "raw_unit": "元",
+      "difference_cny_100m": "0E-10"
+    },
+    {
+      "event_id": "SSE_2b703424eb68448aafc7bd18f08e9a69",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 28.41,
+      "raw_amount": "28.41",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_b80b031657254459b6d0010d6b2d5286",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 23.95,
+      "raw_amount": "23.95",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_66b8e916901a4ad19167e5dd158606ac",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 12.18,
+      "raw_amount": "12.18",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_66b8e916901a4ad19167e5dd158606ac",
+      "field": "sale_amount_cny_100m",
+      "value": 13.2380000309,
+      "raw_amount": "1,323,800,003.09",
+      "raw_unit": "元",
+      "difference_cny_100m": "0E-10"
+    },
+    {
+      "event_id": "SSE_580477e00d3c436e943190c8c23be567",
+      "field": "sale_amount_cny_100m",
+      "value": 24.75,
+      "raw_amount": "2,475,000,000.00",
+      "raw_unit": "元",
+      "difference_cny_100m": "0E-10"
+    },
+    {
+      "event_id": "SSE_73c7577e4b3847aab5331d0379e15eff",
+      "field": "proposed_sale_amount_application_cny_100m",
+      "value": 10.42,
+      "raw_amount": "10.42",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_437d1732bc7f4fd293d5969f10f8655c",
+      "field": "proposed_sale_amount_feedback_cny_100m",
+      "value": 43.56,
+      "raw_amount": "43.56",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_437d1732bc7f4fd293d5969f10f8655c",
+      "field": "sale_amount_cny_100m",
+      "value": 46.8,
+      "raw_amount": "4,680,000,000.00",
+      "raw_unit": "元",
+      "difference_cny_100m": "0E-10"
+    },
+    {
+      "event_id": "SSE_584b3368094645ea8c90eebb375c02df",
+      "field": "sale_amount_cny_100m",
+      "value": 15.0450001051,
+      "raw_amount": "1,504,500,010.51",
+      "raw_unit": "元",
+      "difference_cny_100m": "0E-10"
+    },
+    {
+      "event_id": "SSE_51076",
+      "field": "sale_amount_cny_100m",
+      "value": 10.98,
+      "raw_amount": "1,098,000,000.00",
+      "raw_unit": "元",
+      "difference_cny_100m": "0E-10"
+    },
+    {
+      "event_id": "SSE_ea0d40078cc147768bdd9741b498f6ea",
+      "field": "external_loan_amount_cny_100m",
+      "value": 3.84,
+      "raw_amount": "3.84",
+      "raw_unit": "亿元",
+      "difference_cny_100m": "0.00"
+    },
+    {
+      "event_id": "SSE_53773",
+      "field": "sale_amount_cny_100m",
+      "value": 13.1080000641,
+      "raw_amount": "1,310,800,006.41",
+      "raw_unit": "元",
+      "difference_cny_100m": "0E-10"
+    }
+  ],
+  "actual_amount_independent_cross_checks": [
+    {
+      "event_id": "SSE_80657bb8e3a84783a3b6a2a7c311654f",
+      "fund_code": "508047",
+      "actual_cny_100m": 11.6639999549,
+      "price_times_offered_units_cny_100m": "11.6640",
+      "difference_cny": "4.5100000000",
+      "check_only": "比较价格×发售份额，仅作独立数量级校验，不据此生成实际募集金额。"
+    },
+    {
+      "event_id": "SSE_567e0ce118814458b930c6cdebd8a43b",
+      "fund_code": "508095",
+      "actual_cny_100m": 13.6750000469,
+      "price_times_offered_units_cny_100m": "13.6750",
+      "difference_cny": "4.6900000000",
+      "check_only": "比较价格×发售份额，仅作独立数量级校验，不据此生成实际募集金额。"
+    },
+    {
+      "event_id": "SSE_86ca5c30686342a3b403248a49578a6a",
+      "fund_code": "508059",
+      "actual_cny_100m": 40.0650001356,
+      "price_times_offered_units_cny_100m": "40.0650",
+      "difference_cny": "13.5600000000",
+      "check_only": "比较价格×发售份额，仅作独立数量级校验，不据此生成实际募集金额。"
+    },
+    {
+      "event_id": "SSE_98519f6baf014a13a59dac8cb52f35e8",
+      "fund_code": "508605",
+      "actual_cny_100m": 17.9649999822,
+      "price_times_offered_units_cny_100m": "17.9650",
+      "difference_cny": "1.7800000000",
+      "check_only": "比较价格×发售份额，仅作独立数量级校验，不据此生成实际募集金额。"
+    },
+    {
+      "event_id": "SSE_6fa0b7c2f77944549b2ada7b1339be34",
+      "fund_code": "508607",
+      "actual_cny_100m": 27.3,
+      "price_times_offered_units_cny_100m": "27.300",
+      "difference_cny": "0.000",
+      "check_only": "比较价格×发售份额，仅作独立数量级校验，不据此生成实际募集金额。"
+    },
+    {
+      "event_id": "SSE_d1e2d169bad04e489952ab042b62c577",
+      "fund_code": "508609",
+      "actual_cny_100m": 18.7039999824,
+      "price_times_offered_units_cny_100m": "18.7040",
+      "difference_cny": "1.7600000000",
+      "check_only": "比较价格×发售份额，仅作独立数量级校验，不据此生成实际募集金额。"
+    },
+    {
+      "event_id": "SSE_ca83f8b53ee34cb0b2ee8bede1007452",
+      "fund_code": "508600",
+      "actual_cny_100m": 40.9200000348,
+      "price_times_offered_units_cny_100m": "40.9200",
+      "difference_cny": "3.4800000000",
+      "check_only": "比较价格×发售份额，仅作独立数量级校验，不据此生成实际募集金额。"
+    },
+    {
+      "event_id": "SSE_54b56d3cc1cc46b29da3d05a5efe7bf0",
+      "fund_code": "508603",
+      "actual_cny_100m": 76.9599999303,
+      "price_times_offered_units_cny_100m": "76.9600",
+      "difference_cny": "6.9700000000",
+      "check_only": "比较价格×发售份额，仅作独立数量级校验，不据此生成实际募集金额。"
+    },
+    {
+      "event_id": "SSE_659a67730bd24417a9e3b98780589f73",
+      "fund_code": "508601",
+      "actual_cny_100m": 30.1300000696,
+      "price_times_offered_units_cny_100m": "30.1300",
+      "difference_cny": "6.9600000000",
+      "check_only": "比较价格×发售份额，仅作独立数量级校验，不据此生成实际募集金额。"
+    },
+    {
+      "event_id": "SSE_66b8e916901a4ad19167e5dd158606ac",
+      "fund_code": "508030",
+      "actual_cny_100m": 13.2380000309,
+      "price_times_offered_units_cny_100m": "13.2380",
+      "difference_cny": "3.0900000000",
+      "check_only": "比较价格×发售份额，仅作独立数量级校验，不据此生成实际募集金额。"
+    },
+    {
+      "event_id": "SSE_580477e00d3c436e943190c8c23be567",
+      "fund_code": "508093",
+      "actual_cny_100m": 24.75,
+      "price_times_offered_units_cny_100m": "24.750",
+      "difference_cny": "0.000",
+      "check_only": "比较价格×发售份额，仅作独立数量级校验，不据此生成实际募集金额。"
+    },
+    {
+      "event_id": "SSE_437d1732bc7f4fd293d5969f10f8655c",
+      "fund_code": "508020",
+      "actual_cny_100m": 46.8,
+      "price_times_offered_units_cny_100m": "46.800",
+      "difference_cny": "0.000",
+      "check_only": "比较价格×发售份额，仅作独立数量级校验，不据此生成实际募集金额。"
+    },
+    {
+      "event_id": "SSE_584b3368094645ea8c90eebb375c02df",
+      "fund_code": "508050",
+      "actual_cny_100m": 15.0450001051,
+      "price_times_offered_units_cny_100m": "15.0450",
+      "difference_cny": "10.5100000000",
+      "check_only": "比较价格×发售份额，仅作独立数量级校验，不据此生成实际募集金额。"
+    },
+    {
+      "event_id": "SSE_51076",
+      "fund_code": "508029",
+      "actual_cny_100m": 10.98,
+      "price_times_offered_units_cny_100m": "10.980",
+      "difference_cny": "0.000",
+      "check_only": "比较价格×发售份额，仅作独立数量级校验，不据此生成实际募集金额。"
+    },
+    {
+      "event_id": "SSE_53773",
+      "fund_code": "508090",
+      "actual_cny_100m": 13.1080000641,
+      "price_times_offered_units_cny_100m": "13.1080",
+      "difference_cny": "6.4100000000",
+      "check_only": "比较价格×发售份额，仅作独立数量级校验，不据此生成实际募集金额。"
+    }
+  ],
+  "status": "passed"
+}

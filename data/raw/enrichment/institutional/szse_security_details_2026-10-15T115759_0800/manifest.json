@@ -1,0 +1,102 @@
+[
+  {
+    "url": "https://bond.szse.cn/api/report/ShowReport/data",
+    "request_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1107_detail&TABKEY=tab1&zqdh=121643",
+    "query_parameters": {
+      "SHOWTYPE": "JSON",
+      "CATALOGID": "1107_detail",
+      "TABKEY": "tab1",
+      "zqdh": "121643"
+    },
+    "referer": "https://bond.szse.cn/disclosure/productinfo/reit/index.html",
+    "extracted_at": "2026-10-15T11:57:59+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1107_detail&TABKEY=tab1&zqdh=121643",
+    "content_type": "application/json",
+    "content_encoding": "",
+    "file": "data/raw/enrichment/institutional/szse_security_details_2026-10-15T115759_0800/00001_647461c073781be34d13.json",
+    "sha256": "46948dea00e7c988ff97b4811732ea58b7d4ebfc22abb04055912370cd5d8ada",
+    "bytes": 2542,
+    "ok": true
+  },
+  {
+    "url": "https://bond.szse.cn/api/report/ShowReport/data",
+    "request_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1107_detail&TABKEY=tab1&zqdh=121627",
+    "query_parameters": {
+      "SHOWTYPE": "JSON",
+      "CATALOGID": "1107_detail",
+      "TABKEY": "tab1",
+      "zqdh": "121627"
+    },
+    "referer": "https://bond.szse.cn/disclosure/productinfo/reit/index.html",
+    "extracted_at": "2026-10-15T11:57:59+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1107_detail&TABKEY=tab1&zqdh=121627",
+    "content_type": "application/json",
+    "content_encoding": "",
+    "file": "data/raw/enrichment/institutional/szse_security_details_2026-10-15T115759_0800/00002_25f3b19a3422178f46c0.json",
+    "sha256": "4d56b56763bedeb88a2f83521f51d5223f2e4afa710d13af4dc996299851ddb3",
+    "bytes": 2558,
+    "ok": true
+  },
+  {
+    "url": "https://bond.szse.cn/api/report/ShowReport/data",
+    "request_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1107_detail&TABKEY=tab1&zqdh=121620",
+    "query_parameters": {
+      "SHOWTYPE": "JSON",
+      "CATALOGID": "1107_detail",
+      "TABKEY": "tab1",
+      "zqdh": "121620"
+    },
+    "referer": "https://bond.szse.cn/disclosure/productinfo/reit/index.html",
+    "extracted_at": "2026-10-15T11:57:59+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1107_detail&TABKEY=tab1&zqdh=121620",
+    "content_type": "application/json",
+    "content_encoding": "",
+    "file": "data/raw/enrichment/institutional/szse_security_details_2026-10-15T115759_0800/00003_7e5764b496b788c8a5f6.json",
+    "sha256": "716cfb8a9b7fa8a36cc14e2df03f20b938956c96eb9c7d14c689e4febf5f0cbd",
+    "bytes": 2513,
+    "ok": true
+  },
+  {
+    "url": "https://bond.szse.cn/api/report/ShowReport/data",
+    "request_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1107_detail&TABKEY=tab1&zqdh=121621",
+    "query_parameters": {
+      "SHOWTYPE": "JSON",
+      "CATALOGID": "1107_detail",
+      "TABKEY": "tab1",
+      "zqdh": "121621"
+    },
+    "referer": "https://bond.szse.cn/disclosure/productinfo/reit/index.html",
+    "extracted_at": "2026-10-15T11:57:59+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1107_detail&TABKEY=tab1&zqdh=121621",
+    "content_type": "application/json",
+    "content_encoding": "",
+    "file": "data/raw/enrichment/institutional/szse_security_details_2026-10-15T115759_0800/00004_32be2d5b6855c30076d0.json",
+    "sha256": "36d23bfef988026724f11607ed76adca40f7b93479a98d5ebcd1d118553843e1",
+    "bytes": 2518,
+    "ok": true
+  },
+  {
+    "url": "https://bond.szse.cn/api/report/ShowReport/data",
+    "request_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1107_detail&TABKEY=tab1&zqdh=121613",
+    "query_parameters": {
+      "SHOWTYPE": "JSON",
+      "CATALOGID": "1107_detail",
+      "TABKEY": "tab1",
+      "zqdh": "121613"
+    },
+    "referer": "https://bond.szse.cn/disclosure/productinfo/reit/index.html",
+    "extracted_at": "2026-10-15T11:58:00+08:00",
+    "http_status": 200,
+    "final_url": "https://bond.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1107_detail&TABKEY=tab1&zqdh=121613",
+    "content_type": "application/json",
+    "content_encoding": "",
+    "file": "data/raw/enrichment/institutional/szse_security_details_2026-10-15T115759_0800/00005_cc03adf718bc450b2652.json",
+    "sha256": "535e55920639831a827f4c96d27634e32bd95a986f7ba79e545cac49572846f5",
+    "bytes": 2516,
+    "ok": true
+  }
+]

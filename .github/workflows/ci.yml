@@ -19,6 +19,12 @@ jobs:
       - name: Offline regressions
         run: python -m unittest discover -s tests -v
       - name: JavaScript syntax
-        run: node --check assets/app.js
+        run: |
+          node --check assets/app.js
+          node --check assets/public-reits.js
+          node --check assets/project-fields.js
+          node --test tests/project_fields.test.mjs
       - name: Validate saved dataset
-        run: python scripts/validate_data.py data/institutional.json
+        run: |
+          python scripts/validate_data.py data/institutional.json
+          python scripts/validate_public_data.py data/public_reits.json

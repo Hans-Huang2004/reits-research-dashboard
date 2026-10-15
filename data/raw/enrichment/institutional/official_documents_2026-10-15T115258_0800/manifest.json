@@ -1,0 +1,72 @@
+[
+  {
+    "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-21/9bfeec14-5ad7-4f89-b615-88c7789a179a.PDF",
+    "request_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-21/9bfeec14-5ad7-4f89-b615-88c7789a179a.PDF",
+    "query_parameters": {},
+    "referer": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-21/9bfeec14-5ad7-4f89-b615-88c7789a179a.PDF",
+    "extracted_at": "2026-10-15T11:52:58+08:00",
+    "http_status": 200,
+    "final_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-21/9bfeec14-5ad7-4f89-b615-88c7789a179a.PDF",
+    "content_type": "application/pdf",
+    "file": "data/raw/enrichment/institutional/official_documents_2026-10-15T115258_0800/00001_6947d750547357586abb.pdf",
+    "sha256": "99d5e3c8887b32d137d38342c11d0e56738289f465239af7d66b510f80294eb2",
+    "bytes": 170060,
+    "ok": true
+  },
+  {
+    "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0929/2026092902180_c.pdf",
+    "request_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0929/2026092902180_c.pdf",
+    "query_parameters": {},
+    "referer": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0929/2026092902180_c.pdf",
+    "extracted_at": "2026-10-15T11:52:58+08:00",
+    "http_status": 200,
+    "final_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0929/2026092902180_c.pdf",
+    "content_type": "application/pdf",
+    "file": "data/raw/enrichment/institutional/official_documents_2026-10-15T115258_0800/00002_02d075039d207381a0fa.pdf",
+    "sha256": "619a3dfa548b74c8ee150118fe6f9f8e2e615d1784ae18b6e0835875072df4f3",
+    "bytes": 287707,
+    "ok": true
+  },
+  {
+    "url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-06-08/600648_20260608_14TF.pdf",
+    "request_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-06-08/600648_20260608_14TF.pdf",
+    "query_parameters": {},
+    "referer": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-06-08/600648_20260608_14TF.pdf",
+    "extracted_at": "2026-10-15T11:52:58+08:00",
+    "http_status": 200,
+    "final_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-06-08/600648_20260608_14TF.pdf",
+    "content_type": "text/html; charset=utf-8",
+    "file": "data/raw/enrichment/institutional/official_documents_2026-10-15T115258_0800/00003_ff6453b37fd316185c21.pdf",
+    "sha256": "ace33d7d9bae35a4bad7bfb3883f063e1c39bc0838afe9c2d5e102406407aec4",
+    "bytes": 3872,
+    "ok": true
+  },
+  {
+    "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-07/e8f3e422-04e3-4f00-8d51-1dd910a98c81.PDF",
+    "request_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-07/e8f3e422-04e3-4f00-8d51-1dd910a98c81.PDF",
+    "query_parameters": {},
+    "referer": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-07/e8f3e422-04e3-4f00-8d51-1dd910a98c81.PDF",
+    "extracted_at": "2026-10-15T11:52:58+08:00",
+    "http_status": 200,
+    "final_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-07/e8f3e422-04e3-4f00-8d51-1dd910a98c81.PDF",
+    "content_type": "application/pdf",
+    "file": "data/raw/enrichment/institutional/official_documents_2026-10-15T115258_0800/00004_7dff4935a588e78f8c08.pdf",
+    "sha256": "171e48bb291916f4c3237b76187a5a03d643fabe0ae7d4342c806b720882e69d",
+    "bytes": 87358,
+    "ok": true
+  },
+  {
+    "url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-02-25/600638_20260225_LIZ5.pdf",
+    "request_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-02-25/600638_20260225_LIZ5.pdf",
+    "query_parameters": {},
+    "referer": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-02-25/600638_20260225_LIZ5.pdf",
+    "extracted_at": "2026-10-15T11:52:59+08:00",
+    "http_status": 200,
+    "final_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-02-25/600638_20260225_LIZ5.pdf",
+    "content_type": "text/html; charset=utf-8",
+    "file": "data/raw/enrichment/institutional/official_documents_2026-10-15T115258_0800/00005_c9a4c94c5034df86a2ed.pdf",
+    "sha256": "fc7445c1899daef4a1b6f5255f88d93f62d83cc904001ec8bb4c0f575cf21f9c",
+    "bytes": 3873,
+    "ok": true
+  }
+]

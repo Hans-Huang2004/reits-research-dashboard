@@ -126,36 +126,45 @@
   "SZSE_CA98A72685014BA5BC8F18E5D376FF30": {
     "ptype": "产权类",
     "psub": "文旅类",
-    "pnote": "发行人2026-075号公告明确拟以长春高新洲际酒店、长春高新假日酒店及地下停车场的房屋所有权和国有建设用地使用权作为底层资产；按酒店业态归入文旅类，资产包含438个地下车位。",
+    "pflag": "",
+    "pnote": "发行人正式公告披露的物业用途；页码与原句见字段证据。",
+    "classification_source": "verified",
     "classification_confidence": "confirmed",
     "classification_evidence": [
       {
         "title": "长春高新：关于开展持有型不动产资产支持专项计划（机构间REITs）申报发行工作及相关授权事项的公告（2026-075）",
         "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-21/9bfeec14-5ad7-4f89-b615-88c7789a179a.PDF",
-        "source_level": "primary",
         "published_at": "2026-08-21",
-        "pages": "2–3"
+        "pages": [
+          2,
+          3
+        ]
       }
     ],
-    "underlying_assets": "长春高新洲际酒店、长春高新假日酒店及438个地下停车位的房屋所有权与国有建设用地使用权；项目公司为长春海容酒店有限公司。",
-    "classification_reviewed_at": "2026-10-14"
+    "classification_reviewed_at": "2026-10-14",
+    "underlying_assets": "长春高新洲际酒店、长春高新假日酒店及438个地下停车位对应的房屋所有权及国有建设用地使用权；项目公司为长春海容酒店有限公司。"
   },
   "SSE_f112c7774ea84dbea54e17bdb33895b5": {
     "ptype": "产权类",
     "psub": "医疗健康",
-    "pnote": "锦欣生殖港交所公告明确，专项计划收购恒裕全部股权及其全资物业，物业主要由深圳中山妇产医院承租使用，按实际医疗用途分类；并非医疗服务经营收入证券化。",
+    "pflag": "",
+    "pnote": "发行人正式公告披露的物业用途；页码与原句见字段证据。",
+    "classification_source": "verified",
     "classification_confidence": "confirmed",
     "classification_evidence": [
       {
         "title": "锦欣生殖：主要交易——建议发行资产支持证券及股权转让协议",
         "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0929/2026092902180_c.pdf",
-        "source_level": "primary",
         "published_at": "2026-09-29",
-        "pages": "4、7–8"
+        "pages": [
+          4,
+          7,
+          8
+        ]
       }
     ],
-    "underlying_assets": "深圳市恒裕联翔投资发展有限公司全部股权、股东贷款及其全资物业。物业位于深圳市福田区梅林街道锦运大厦B5–B1、1–2、4–8、10–18、20–21、25–27，总楼面面积78,170.34平方米，主要由深圳中山妇产医院租用，租约至2045年12月31日。",
-    "classification_reviewed_at": "2026-10-14"
+    "classification_reviewed_at": "2026-10-14",
+    "underlying_assets": "深圳市恒裕联翔投资发展有限公司全部股权、相关股东贷款及其全资物业。物业位于深圳市福田区梅林街道锦运大厦B5–B1、1–2、4–8、10–18、20–21、25–27，总楼面面积78,170.34平方米，主要由深圳中山妇产医院租用，租约至2045年12月31日。"
   },
   "SSE_02eb04f737e3491487fca3da90ab718c": {
     "ptype": "产权类",
@@ -196,16 +205,22 @@
   "SZSE_A008DEF35DB7497B80240D4B840C3F89": {
     "ptype": "产权类",
     "psub": "消费",
-    "pnote": "上市公司在深交所披露的专项计划公告明确：底层资产为北京市朝阳区北四环东路73号院1号北四环智能家居体验中心物业（家居卖场）。",
+    "pflag": "",
+    "pnote": "发行人正式公告披露的物业用途；页码与原句见字段证据。",
+    "classification_source": "verified",
     "classification_confidence": "confirmed",
     "classification_evidence": [
       {
         "title": "居然智家关于不动产资产支持专项计划获得深圳证券交易所无异议函的进展公告（2026-08-07）",
-        "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-07/e8f3e422-04e3-4f00-8d51-1dd910a98c81.PDF"
+        "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-07/e8f3e422-04e3-4f00-8d51-1dd910a98c81.PDF",
+        "published_at": "2026-08-07",
+        "pages": [
+          1
+        ]
       }
     ],
-    "underlying_assets": "北京北四环智能家居体验中心物业",
-    "classification_reviewed_at": "2026-10-14"
+    "classification_reviewed_at": "2026-10-14",
+    "underlying_assets": "北京市朝阳区北四环东路73号院1号北四环智能家居体验中心物业；项目公司为北京睿鸿商业管理有限公司、北京居然之家智能家居有限公司。"
   },
   "SSE_ee369312e63f4e2fa74f6f0ff8a54f3c": {
     "ptype": "产权类",

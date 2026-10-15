@@ -1,0 +1,1059 @@
+{
+  "source": "深圳证券交易所",
+  "generated_at": "2026-10-15T11:38:09+08:00",
+  "requests": [
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/ann_effective_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "request_url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "method": "POST",
+      "query_parameters": {},
+      "request_body": {
+        "channelCode": [
+          "reits-xxpl"
+        ],
+        "searchKey": [
+          "基金合同生效"
+        ],
+        "pageSize": 50,
+        "pageNum": 1
+      },
+      "extracted_at": "2026-10-15T11:38:05+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "58a3ece72d871161c4e8a416d655aa8318ac410758ed9b707c3aff76798b295c",
+      "bytes": 16997
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/ann_listing_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "request_url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "method": "POST",
+      "query_parameters": {},
+      "request_body": {
+        "channelCode": [
+          "reits-xxpl"
+        ],
+        "searchKey": [
+          "上市交易公告书"
+        ],
+        "pageSize": 50,
+        "pageNum": 1
+      },
+      "extracted_at": "2026-10-15T11:38:06+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "5b60f5e33f5e78e3e369ed7ab0b469b640662ba581b2b5d586983f0d90261af4",
+      "bytes": 19924
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/ann_prospectus_180201_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "request_url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "method": "POST",
+      "query_parameters": {},
+      "request_body": {
+        "channelCode": [
+          "reits-xxpl"
+        ],
+        "searchKey": [
+          "招募说明书"
+        ],
+        "pageSize": 50,
+        "pageNum": 1,
+        "stock": [
+          "180201"
+        ]
+      },
+      "extracted_at": "2026-10-15T11:38:08+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "b74c3c374eae572a2f49784579bc627f7118831980bcb1e02c2c3e0e168f0963",
+      "bytes": 4546
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/ann_prospectus_180801_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "request_url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "method": "POST",
+      "query_parameters": {},
+      "request_body": {
+        "channelCode": [
+          "reits-xxpl"
+        ],
+        "searchKey": [
+          "招募说明书"
+        ],
+        "pageSize": 50,
+        "pageNum": 1,
+        "stock": [
+          "180801"
+        ]
+      },
+      "extracted_at": "2026-10-15T11:38:09+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "ec1d4354b73701a9d14c03eec9ef6cf2694f4b21fc57b20ce899aa58ca369fed",
+      "bytes": 6880
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000002.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000002",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000002"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:03+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "c50a15a84c587c3330d0da7ffcf1cb8ef7417bf03cf9463e799a689268329de9",
+      "bytes": 5931
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000004.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000004",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000004"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:03+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "98ebf7267b00386c4f5f3a83f3401792f43a9000a1705d0db8586dd6ea5298b2",
+      "bytes": 7843
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000007.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000007",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000007"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:03+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "8372e6be168db9c7d7eca8ae028a81c2de47eda396abaf774c78c49374c91652",
+      "bytes": 6017
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000008.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000008",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000008"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:04+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "3911e949511d43420cf8e7247b1f2ee59a10ffbb243c02c421e644cfe2a417d9",
+      "bytes": 6103
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000009.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000009",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000009"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:03+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "84170b9e9975c60c0dffaf57817aa9b9e4e8b15510f890c2a58d7c3d9fe9d68d",
+      "bytes": 5891
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000010.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000010",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000010"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:03+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "7a1e183346a97bfae80e4f2b0b5881dffd39b3f227282ca3f324812ab8424354",
+      "bytes": 8155
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000012.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000012",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000012"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:03+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "00b00437cb2965769a9856cc4edb61c351b9a948668543cdc7293708cfa95ad4",
+      "bytes": 9220
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000014.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000014",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000014"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:03+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "211701118d06ff6bca471a2386c862f1655bfc79efae99fbf225c5510b517243",
+      "bytes": 8045
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000015.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000015",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000015"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:01+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "907896f5d6a41de8e2b2e7df604e1f593a9c41cf01a52fa7f7840f8fbb1d2dde",
+      "bytes": 6223
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000017.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000017",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000017"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:03+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "b844f215823fefcb096b66a35445cd193cc769c710ff60918ebb1dc088ee6fc6",
+      "bytes": 11162
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000018.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000018",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000018"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:03+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "e480523801be1b2b0ac7dd6a38784d085f0d04417c43f2e1f4c550e70d2acf3f",
+      "bytes": 7794
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000019.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000019",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000019"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:03+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "cdabfcb9ce62584f3c04831c776755a9f3e720e28b3c5bab8c3c2ae7875564ea",
+      "bytes": 10867
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000020.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000020",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000020"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:02+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "2a9c8203b35d9be3196d811b646f40742974fee110dd0074d94cf24c7912533a",
+      "bytes": 10917
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000021.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000021",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000021"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:02+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "dd138583613519397361537c0e5001d8ff2957459b5c73fa84efc35918d4c248",
+      "bytes": 11070
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000024.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000024",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000024"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:03+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "e12f342c2a7077835902a435fbf7b61eb5ecffaca0aebe0e4bdfda12584a7acd",
+      "bytes": 10230
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000026.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000026",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000026"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:03+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "ab56a547b52fde0a0f058bdfbb390873b01229609dcb8cedbac3ae840edf7055",
+      "bytes": 10852
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000029.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000029",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000029"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:02+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "e4dfe396e93bc4dac338667c492d207768f64e890258b79f454dc841db320176",
+      "bytes": 10726
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000030.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000030",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000030"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:02+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "aeb01af01f72844be916cc90b7fa3405e04baa6233ca6de98fadfd1c11753003",
+      "bytes": 10689
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000031.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000031",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000031"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:02+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "c951e22ec8ebe261d1dab74410675913dcdc9955d1922501fa0ef6cc42cd3faf",
+      "bytes": 11021
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000032.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000032",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000032"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:01+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "90be12c864cb210c00b6a53e9b9fb4dcd95c4416a5634ae512ffe42ed17f37ba",
+      "bytes": 6391
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000033.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000033",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000033"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:02+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "1359ff36ea95bea02a694a14ef8041e1469e363990b267edd2476364207bccc0",
+      "bytes": 10972
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000036.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000036",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000036"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:02+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "56425bff173f96e5ae737cebaf3b5ccc7c6f0d945826e4746bb1c346e4c4deed",
+      "bytes": 11055
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000037.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000037",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000037"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:02+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "4cf64962de08d6dff9be311df1282afbeadfa12b004bd2380a0d29d49734069b",
+      "bytes": 10712
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000039.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000039",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000039"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:00+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "6460ba2540a695e4c09c7465bb881daa0e29c58475db3d50e8f564a0565da03d",
+      "bytes": 11021
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000040.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000040",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000040"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:02+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "5d988395e80b2cbd584f471bbf998052091074764081f47471e52521138b94d6",
+      "bytes": 11157
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000041.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000041",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000041"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:02+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "010f8d7c5a259c5a51905ee4738ad7f03f3e945475d6d23bb6c63551efe0774b",
+      "bytes": 10851
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000042.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000042",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000042"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:02+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "d9449207d60ef0137061d0eb8dc236124868857414dfe4a97762e5f702f84674",
+      "bytes": 10955
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000045.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000045",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000045"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:02+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "b9a3bc7c04b554b6b83d72f5eed79445696199af1ed9bb793dfe67a069ca7132",
+      "bytes": 10940
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000047.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000047",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000047"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:02+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "9b361ef18d76c5b57439e833239dbfaeeeb096e048e60483c5ebbb2d87ef14c7",
+      "bytes": 11007
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000048.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000048",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000048"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:01+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "e1b2be7f2cab334f057da904e7631c6ef727de5d4bbb23c9241ee0e5f687ce84",
+      "bytes": 10658
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000050.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000050",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000050"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:01+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "c67fdd8878a7662da468eabdd9e0d299c1064aedcb1a607c1f2d162ff0e70b6f",
+      "bytes": 6156
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000051.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000051",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000051"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:00+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "0bbf065c8fcf13bc4aad38a1b3bfa212f0f25f25873a20ce2c64bd224b875a2d",
+      "bytes": 6525
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000052.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000052",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000052"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:02+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "87dbdddcc34dd2f1e7b3f85ddc90d3c875478447392da336d2b94078910dc789",
+      "bytes": 10324
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000053.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000053",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000053"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:01+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "d8e55ad588a7c9ea7392e9af093e508e202cdfb1febd3000819f13abcfaa6a09",
+      "bytes": 6708
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000054.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000054",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000054"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:01+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "2c952dc43bacd4ee28aa46cee8cb1407caad3d5da0b933e6a8e447d3b3b5a494",
+      "bytes": 10460
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000055.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000055",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000055"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:00+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "e71918d71e04cec76f1fddb9ad9e4918f72ea00f0121bb0a212f1f01e42efa4a",
+      "bytes": 10353
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000056.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000056",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000056"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:37:59+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "9c72e6873b3267eb55c4d02bb81008e3c27e579c14d2f0fbacc8ad49b82a69b6",
+      "bytes": 10431
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000057.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000057",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000057"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:00+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "9f83c0ab453a2a8a4091fb1af5e67ba3f72681505a703cf77d0d4cf3bd574b7f",
+      "bytes": 6738
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000060.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000060",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000060"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:00+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "894c77e1614ed0f7e607232dc3e1c851f71ef7b966cdf2f9bf1273cac5f2b9e4",
+      "bytes": 10922
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000062.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000062",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000062"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:01+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "6ef3eb1e0e13c7e52430ce16b57558caa5b52b2e98082bfda323491b6c897aa7",
+      "bytes": 11050
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000065.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000065",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000065"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:01+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "b6c1c1d6289acd862f81ee684158155b90512c182d4eb6cafec1f52056e6a8a8",
+      "bytes": 6682
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000067.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000067",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000067"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:01+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "8ffd2aba47df5ee635080a1e429ac56d8565ace7d461f35e2b64a4e7e8c761c1",
+      "bytes": 6611
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000068.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000068",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000068"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:00+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "8a0bf5675edaf2b440cab36f4354d80c2676e839e954eb62e0bf7af6d34eefbb",
+      "bytes": 10745
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000069.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000069",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000069"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:01+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "a1cc80635386caf93ad28e8b34652ed6ae88d399defe765c6300a0dd3b30590c",
+      "bytes": 6415
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000070.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000070",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000070"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:01+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "1fa24805c5dd913a26cae614c1c3700e08e80a8c69f10b9bf3e3b6c880fa31fd",
+      "bytes": 6616
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000071.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000071",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000071"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:00+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "0b4a1ff3c92625171e95125c141094e77d2b4e543de31b20efde7d09464b53dd",
+      "bytes": 11126
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000072.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000072",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000072"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:37:59+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "41e96176a3ff3c91f163aafaf2c8c0de9f70f68bff7607040e10567cfbdfe900",
+      "bytes": 10955
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000074.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000074",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000074"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:00+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "04489eb55a7c4352cafa326dd35d6c4e61274c160375bfaeea38375b1b2fe239",
+      "bytes": 6641
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000076.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000076",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000076"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:00+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "41f45a09e2d7e1e5ea2404d3dbd152a3b0809f528aa3e2bebdd23cb12ebe99f8",
+      "bytes": 6833
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000077.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000077",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000077"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:38:00+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "dddedb286bd7c74867aa9490507b504ea4ae0b34446628bfd0db2d911a2db8ad",
+      "bytes": 6383
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000078.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000078",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000078"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:37:59+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "5379679ce9c618b47ff183ad7debc3acf7321461d310918ad8c5cc52dd4a48c4",
+      "bytes": 6658
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000079.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000079",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000079"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:37:59+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "8130d33a1924255cf9f0611198781e1d578ef029ee29d0a34e9934e28c5ec16a",
+      "bytes": 5931
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000080.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000080",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000080"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:37:59+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "a037cce57ca9dea47d4e1422983bd8b9f09767b4bc823486b9ab5051fb29cd8d",
+      "bytes": 6305
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000082.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000082",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000082"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:37:59+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "e6b888f8a61f3cd06286e4c5bc79a99faaa4e30a83eb4a3c706840293b320b44",
+      "bytes": 5933
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000083.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000083",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000083"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:37:59+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "7bdb8853bd959e0eda8fb54f48e6bad7f92ace8e242e41cb16ea317412875369",
+      "bytes": 5559
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000084.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000084",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000084"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:37:59+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "63dec77e1584ea6f05c11199ed4e39813230af798bfe04fc492d245f9e377fcc",
+      "bytes": 6017
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000085.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000085",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000085"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:37:59+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "842d385f9ec36e6fda45b4c799d8ece189c1e3ead2be557765ad71e87893af68",
+      "bytes": 5703
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/detail_5000086.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000086",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000086"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:37:59+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "61171137aa20d84740ad43164aee3e4f460cdef85bb772508cc48d6696dbab54",
+      "bytes": 5856
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/funds_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/report/ShowReport/data",
+      "request_url": "https://reits.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=reits_fund_list&TABKEY=tab1&PAGENO=1",
+      "method": "GET",
+      "query_parameters": {
+        "SHOWTYPE": "JSON",
+        "CATALOGID": "reits_fund_list",
+        "TABKEY": "tab1",
+        "PAGENO": 1
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:37:57+08:00",
+      "content_type": "application/json",
+      "sha256": "aca1eea6d75f749ec2c1ed862f34f60426e752780f1a6ee42ac2c57419d593c8",
+      "bytes": 9051
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/funds_page2.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/report/ShowReport/data",
+      "request_url": "https://reits.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=reits_fund_list&TABKEY=tab1&PAGENO=2",
+      "method": "GET",
+      "query_parameters": {
+        "SHOWTYPE": "JSON",
+        "CATALOGID": "reits_fund_list",
+        "TABKEY": "tab1",
+        "PAGENO": 2
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:37:57+08:00",
+      "content_type": "application/json",
+      "sha256": "05fac5c0182b25f38344e2fd01a860c4ef7645d962a4b1c013b5c8d6069f1b4f",
+      "bytes": 4803
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/projects_21_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/query",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/query?pageIndex=0&pageSize=100&bizType=2&biztypsb=21",
+      "method": "GET",
+      "query_parameters": {
+        "pageIndex": 0,
+        "pageSize": 100,
+        "bizType": 2,
+        "biztypsb": 21
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:37:58+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "6081e9d0e7072919a9bbff37e7eab5cf59bc58f557039c7152f07149cf89dbaa",
+      "bytes": 70024
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/projects_23_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/query",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/query?pageIndex=0&pageSize=100&bizType=2&biztypsb=23",
+      "method": "GET",
+      "query_parameters": {
+        "pageIndex": 0,
+        "pageSize": 100,
+        "bizType": 2,
+        "biztypsb": 23
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:37:59+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "9eed20e9f287d23291c02762d68a17ce8c348dfadfd0c33b2eb779ceaf102df1",
+      "bytes": 9380
+    },
+    {
+      "file": "/Users/huangchenghan/.codex/.chatgpt-projects/g-p-6acf400f76b8819184ce8fad0146a81b/work/reits-research-dashboard/data/raw/enrichment/public_szse/20261015T113756/project_api/projects_all_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/query",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/query?pageIndex=0&pageSize=100&bizType=2",
+      "method": "GET",
+      "query_parameters": {
+        "pageIndex": 0,
+        "pageSize": 100,
+        "bizType": 2
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-15T11:37:58+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "2d39045032acd0da98bd68c52c520b35c7b2b624052a3fab28a377794ea38835",
+      "bytes": 76363
+    }
+  ]
+}

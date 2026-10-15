@@ -1,0 +1,323 @@
+{
+  "total_projects": 131,
+  "metadata_checked": 131,
+  "metadata_failures": [],
+  "complete_metadata": true,
+  "projects_with_documents": 24,
+  "document_count": 24,
+  "filled_fields": {
+    "origin": 131,
+    "writer": 131,
+    "underlying_assets": 12,
+    "asset_type": 3,
+    "approved_date": 0,
+    "issued_date": 21,
+    "is_issued": 21
+  },
+  "as_of": "2026-10-15",
+  "collected_at": "2026-10-15T11:59:19+08:00",
+  "official_security_master_abs_count": 26652,
+  "issuance_profiles_checked": 16,
+  "issuance_profile_failures": [],
+  "issuance_matches": [
+    {
+      "id": "SSE_13710c0a13aa48aeb5be57bad70672fd",
+      "code": "269214",
+      "security_full_name": "中金-安益商业持有型不动产资产支持专项计划资产支持证券",
+      "full_name_match": true,
+      "expansion_event_match": true,
+      "issue_start": "2026-08-05",
+      "issue_end": "2026-08-11",
+      "listing_date": "2026-09-24",
+      "timing_ok": true
+    },
+    {
+      "id": "SSE_bcb8a9bf61c6441d82f5a233d4983478",
+      "code": "268687",
+      "security_full_name": "中金-博邻长租公寓持有型不动产资产支持专项计划资产支持证券",
+      "full_name_match": true,
+      "expansion_event_match": true,
+      "issue_start": "2026-05-22",
+      "issue_end": "2026-05-29",
+      "listing_date": "2026-06-12",
+      "timing_ok": true
+    },
+    {
+      "id": "SSE_81b3f5fefc834e60aa496a6250470655",
+      "code": "268132",
+      "security_full_name": "中铁七局泰和里持有型不动产资产支持专项计划资产支持证券",
+      "full_name_match": true,
+      "expansion_event_match": true,
+      "issue_start": "2026-03-18",
+      "issue_end": "2026-03-19",
+      "listing_date": "2026-04-02",
+      "timing_ok": true
+    },
+    {
+      "id": "SSE_913fae19dc2749a794b38eb4bd0cdde0",
+      "code": "268131",
+      "security_full_name": "元联苏园产城持有型不动产资产支持专项计划资产支持证券",
+      "full_name_match": true,
+      "expansion_event_match": true,
+      "issue_start": "2026-03-23",
+      "issue_end": "2026-03-24",
+      "listing_date": "2026-03-31",
+      "timing_ok": true
+    },
+    {
+      "id": "SSE_611ea034d5d84f89b71452053297424b",
+      "code": "268025",
+      "security_full_name": "国金资管-鼎晖-有孚网络第一期数据中心持有型不动产资产支持专项计划资产支持证券",
+      "full_name_match": true,
+      "expansion_event_match": true,
+      "issue_start": "2026-03-04",
+      "issue_end": "2026-03-04",
+      "listing_date": "2026-03-26",
+      "timing_ok": true
+    },
+    {
+      "id": "SSE_660d35fa453848bcb5523490e53625d3",
+      "code": "267786",
+      "security_full_name": "国金资管-世纪乌兰数据中心持有型不动产资产支持专项计划资产支持证券",
+      "full_name_match": true,
+      "expansion_event_match": true,
+      "issue_start": "2026-01-26",
+      "issue_end": "2026-01-27",
+      "listing_date": "2026-03-02",
+      "timing_ok": true
+    },
+    {
+      "id": "SSE_c4c39dfa801c461480aabbae1aa79326",
+      "code": "267759",
+      "security_full_name": "国金资管-世纪泓源数据中心持有型不动产资产支持专项计划资产支持证券",
+      "full_name_match": true,
+      "expansion_event_match": true,
+      "issue_start": "2026-01-20",
+      "issue_end": "2026-01-22",
+      "listing_date": "2026-03-02",
+      "timing_ok": true
+    },
+    {
+      "id": "SSE_2d2e4884bc92462a985ba7757ed59f10",
+      "code": "267912",
+      "security_full_name": "太保资产-新黄浦筑梦城保租房持有型不动产资产支持专项计划资产支持证券",
+      "full_name_match": true,
+      "expansion_event_match": true,
+      "issue_start": "2026-02-11",
+      "issue_end": "2026-02-13",
+      "listing_date": "2026-03-30",
+      "timing_ok": true
+    },
+    {
+      "id": "SSE_76f7af17f992438a81a9b100c5141a35",
+      "code": "267605",
+      "security_full_name": "中国铁工投资分散型商业物业持有型不动产资产支持专项计划资产支持证券",
+      "full_name_match": true,
+      "expansion_event_match": true,
+      "issue_start": "2025-12-25",
+      "issue_end": "2025-12-25",
+      "listing_date": "2026-01-16",
+      "timing_ok": true
+    },
+    {
+      "id": "SSE_3c372d322d2e4a4ca54c1b2d77aa3fdc",
+      "code": "267164",
+      "security_full_name": "华泰-上海中建广场持有型不动产资产支持专项计划资产支持证券",
+      "full_name_match": true,
+      "expansion_event_match": true,
+      "issue_start": "2025-11-27",
+      "issue_end": "2025-11-28",
+      "listing_date": "2026-01-06",
+      "timing_ok": true
+    },
+    {
+      "id": "SSE_71d38b93885c4fb8a9da4dfa5258bba6",
+      "code": "267069",
+      "security_full_name": "中信建投-外高桥集团持有型不动产资产支持专项计划资产支持证券",
+      "full_name_match": true,
+      "expansion_event_match": true,
+      "issue_start": "2025-11-21",
+      "issue_end": "2025-11-25",
+      "listing_date": "2025-12-25",
+      "timing_ok": true
+    },
+    {
+      "id": "SSE_24cfbda989614db4b858a12f83a0eaec",
+      "code": "266602",
+      "security_full_name": "人保资产-中铁诺德持有型不动产资产支持专项计划资产支持证券",
+      "full_name_match": true,
+      "expansion_event_match": true,
+      "issue_start": "2025-09-25",
+      "issue_end": "2025-09-26",
+      "listing_date": "2025-10-22",
+      "timing_ok": true
+    },
+    {
+      "id": "SSE_95b846a6aabc48a1ab5e9a168a7f05ee",
+      "code": "266474",
+      "security_full_name": "富国资产-首创水务持有型不动产资产支持专项计划资产支持证券",
+      "full_name_match": true,
+      "expansion_event_match": true,
+      "issue_start": "2025-09-24",
+      "issue_end": "2025-09-25",
+      "listing_date": "2025-10-31",
+      "timing_ok": true
+    },
+    {
+      "id": "SSE_2e907a8b39a0485184ed03b170fdc10d",
+      "code": "266682",
+      "security_full_name": "国金资管-新疆国信持有型不动产资产支持专项计划资产支持证券",
+      "full_name_match": true,
+      "expansion_event_match": true,
+      "issue_start": "2025-11-27",
+      "issue_end": "2025-11-28",
+      "listing_date": "2025-12-30",
+      "timing_ok": true
+    },
+    {
+      "id": "SSE_82a0db8056254a6e81bfaf0684b79026",
+      "code": "267024",
+      "security_full_name": "国金资管-吾悦广场持有型不动产资产支持专项计划资产支持证券",
+      "full_name_match": true,
+      "expansion_event_match": true,
+      "issue_start": "2025-11-27",
+      "issue_end": "2025-11-28",
+      "listing_date": "2025-12-23",
+      "timing_ok": true
+    },
+    {
+      "id": "SSE_53695",
+      "code": "268384",
+      "security_full_name": "国金资管-欢乐颂持有型不动产资产支持专项计划资产支持证券",
+      "full_name_match": true,
+      "expansion_event_match": true,
+      "issue_start": "2026-06-26",
+      "issue_end": "2026-06-29",
+      "listing_date": "2026-08-03",
+      "timing_ok": true
+    }
+  ],
+  "szse_product_pagination": [
+    {
+      "tab": "tab1",
+      "name": "未到期",
+      "pages": 13,
+      "advertised_total": 184,
+      "raw_count": 184,
+      "cols": {
+        "zqdh": "证券代码",
+        "zqjc": "证券简称",
+        "cpqc": "产品名称",
+        "cxq": "期限",
+        "fxl": "发行量<br>（亿元）",
+        "llxs": "利率形式",
+        "yqsyl": "预期收益率(%)",
+        "cpclr": "起息日期",
+        "dqr": "到期日期",
+        "hbfxfs": "还本方式",
+        "fxzq": "付息周期",
+        "gprq": "挂牌日期",
+        "tzzfw": "允许的投资者范围",
+        "jjfs": "计价方式",
+        "yjlxe": "应计利息额<br>（元）",
+        "jyfs": "交易方式",
+        "dbjs": "是否可担保",
+        "glrjc": "管理人简称",
+        "cjxx": "历史成交信息"
+      }
+    },
+    {
+      "tab": "tab2",
+      "name": "已到期",
+      "pages": 0,
+      "advertised_total": 0,
+      "raw_count": 0,
+      "cols": {
+        "zqdh": "证券代码",
+        "zqjc": "证券简称",
+        "cpqc": "产品名称",
+        "cxq": "期限",
+        "fxl": "发行量<br>（亿元）",
+        "llxs": "利率形式",
+        "yqsyl": "预期收益率(%)",
+        "cpclr": "起息日期",
+        "dqr": "到期日期",
+        "hbfxfs": "还本方式",
+        "fxzq": "付息周期",
+        "gprq": "挂牌日期",
+        "tzzfw": "允许的投资者范围",
+        "jjfs": "计价方式",
+        "yjlxe": "应计利息额<br>（元）",
+        "jyfs": "交易方式",
+        "dbjs": "是否可担保",
+        "glrjc": "管理人简称",
+        "cjxx": "历史成交信息"
+      }
+    }
+  ],
+  "szse_product_rows_checked": 184,
+  "szse_issuance_matches": [
+    {
+      "id": "SZSE_DCF15E24B0844EB9BB6C040F1D6802DA",
+      "securities": [
+        {
+          "code": "121643",
+          "name": "中信证券-奥飞数据2026年第1期绿色数据中心持有型不动产资产支持专项计划",
+          "listing_date": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "id": "SZSE_44F5FAE238634E68BD68279EDAE278F3",
+      "securities": [
+        {
+          "code": "121627",
+          "name": "太保资产-港华智慧新能源基础设施碳中和绿色持有型不动产资产支持专项计划",
+          "listing_date": "2026-05-08"
+        }
+      ]
+    },
+    {
+      "id": "SZSE_3C1DB3F91A9648DAB110E3DA2CBE449D",
+      "securities": [
+        {
+          "code": "121620",
+          "name": "兴证基实-碧澄能发新能源持有型不动产资产支持专项计划（碳中和）",
+          "listing_date": "2026-01-22"
+        }
+      ]
+    },
+    {
+      "id": "SZSE_53025762E07841769C0752128D5803F3",
+      "securities": [
+        {
+          "code": "121621",
+          "name": "国泰海通资管-青岛西海岸公用事业持有型不动产资产支持专项计划",
+          "listing_date": "2026-03-05"
+        }
+      ]
+    },
+    {
+      "id": "SZSE_B97CD5F5352244F1ACC26707A2786005",
+      "securities": [
+        {
+          "code": "121613",
+          "name": "中信证券-四川能源发展清洁能源持有型不动产资产支持专项计划",
+          "listing_date": "2025-11-24"
+        }
+      ]
+    }
+  ],
+  "reviewed_official_pdf_projects": 3,
+  "projects_with_research_documents": 24,
+  "public_project_attachment_metadata_count": 0,
+  "official_pdfs_reviewed": 3,
+  "limitations": [
+    "131项官方详情均已逐ID核验，申报附件接口未返回公开附件。",
+    "上交所发行核对使用完整ABS证券简称主表生成候选后比对全称及日期，未匹配不等同未发行。",
+    "深交所产品名录完整184条；其定向信息公告入口要求登录。",
+    "上交所两份上市公司公告原路径返回防护HTML，已保留原始响应，未作为PDF正文取数。",
+    "未取得独立审核通过日期的项目保留未知；无异议函收函日与更新日期不替代通过日期。"
+  ],
+  "existing_reference_asset_fields_added": 9
+}
