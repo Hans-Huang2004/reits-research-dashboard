@@ -1,7 +1,7 @@
 /* REITs dashboard for project lists collected directly from official SSE/SZSE APIs. */
 'use strict';
 import { enhanceFilterSelects, syncFilterSelects, closeFilterMenu } from './filter-select.js?v=20261014-filter-menu-1';
-import { initializePublicReits, setPublicModuleActive, openPublicSources } from './public-reits.js?v=20261015-daily-1';
+import { initializePublicReits, setPublicModuleActive, openPublicSources } from './public-reits.js?v=20261015-origin-1';
 import { INSTITUTIONAL_FIELDS, getInstitutionalField, projectFieldCellText } from './project-fields.js?v=20261015-disclosures-1';
 import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-disclosures-1';
 

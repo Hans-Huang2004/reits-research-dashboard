@@ -36,6 +36,6 @@
 
 ## 项目研究字段
 
-两类快照新增`field_scope`，记录字段版本、名称、类型、单位及列表分组，独立于源数据的`updated_at`。公募采用19项、机构间采用13项，完整定义见`config/project_field_scope.json`与[字段说明](project-fields.md)。
+两类快照新增`field_scope`，记录字段版本、名称、类型、单位及列表分组，独立于源数据的`updated_at`。公募采用20项、机构间采用13项，完整定义见`config/project_field_scope.json`与[字段说明](project-fields.md)。
 
 公募的发行人、财务顾问、各版本拟发售金额、发售金额、外部贷款、收益预测与担保补足采用独立字段。基金与申报事件各自保存；扩募不得读取基金首发金额作为本次金额。机构间新增`approved_date`、`issued_date`和三态`is_issued`；空值不能推为未发行或没有支持安排。表头Raw与字段映射保存于独立字段底稿，未导入参考工作簿的项目业务值。

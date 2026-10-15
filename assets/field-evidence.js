@@ -9,6 +9,11 @@ export const AVAILABILITY_LABELS = {not_disclosed:'未披露', not_available:'�
 
 export function fieldEvidence(record, key, context = {}) {
   let evidence = record.research_field_sources?.[key] || [];
+  if (!evidence.length && ['origin', 'manager'].includes(key) && exists(record[key]) && safeURL(record.source_url)) {
+    evidence = [{title:'交易所项目基本信息', url:record.source_url,
+      checked_at:context.collectedAt || '',
+      note:record.updated_date ? `交易所项目更新日期：${record.updated_date}` : ''}];
+  }
   if (!evidence.length && key === 'sale_amount_cny_100m') {
     if (!context.isEvent) evidence = record.research_field_sources?.initial_raise_cny_100m || [];
     else if (record.business_type === '首发') evidence = context.fund?.research_field_sources?.sale_amount_cny_100m || context.fund?.research_field_sources?.initial_raise_cny_100m || [];
@@ -37,7 +42,7 @@ export function fieldEvidenceHTML(record, key, context = {}) {
 }
 export function fieldEvidenceText(record, key, context = {}) {
   const evidence = fieldEvidence(record, key, context);
-  if (evidence.length) return evidence.map(item => [item.title, item.published_at || item.date, item.page ? `第${item.page}页` : '', item.url || item.source_url].filter(Boolean).join('；')).join(' | ');
+  if (evidence.length) return evidence.map(item => [item.title, item.published_at || item.date || (item.checked_at ? `核查：${item.checked_at}` : ''), item.page ? `第${item.page}页` : '', item.note, item.url || item.source_url].filter(Boolean).join('；')).join(' | ');
   const availability = fieldAvailability(record, key);
   return availability ? [AVAILABILITY_LABELS[availability.status] || availability.status, availability.reason, availability.source_url, availability.checked_at].filter(Boolean).join('；') : '';
 }

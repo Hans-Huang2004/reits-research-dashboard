@@ -18,7 +18,7 @@ PUBLIC = [
     ("business_type", "text", "基本资料", True),
     ("exchange", "text", "基本资料", True),
     ("product_type", "text", "基本资料", True),
-    ("issuer", "text", "基本资料", True),
+    ("issuer", "text", "基本资料", False),
     ("manager", "text", "基本资料", True),
     ("financial_advisor", "text", "基本资料", False),
     ("proposed_sale_amount_application_cny_100m", "amount", "融资规模", False),
@@ -78,6 +78,8 @@ def main():
             raw.append({"sheet": sheet_name, "coordinate": cell.coordinate, "value": cell.value,
                         "data_type": cell.data_type, "number_format": cell.number_format})
             label = str(cell.value).replace("\n", "").strip()
+            if category == "public":
+                label = {"issuer": "发行人（单独披露）", "manager": "基金管理人"}.get(key, label)
             if value_type == "amount" and "亿元" not in label:
                 label += "（亿元）"
             spec = {"key": key, "label": label, "type": value_type, "unit": "亿元" if value_type == "amount" else "",
@@ -88,6 +90,14 @@ def main():
                             "unit_policy": "站点规范单位为亿元；参考公募表头未显式写金额单位，不导入其数值" if category == "public" and value_type == "amount" else "按字段原意映射",
                             "value_policy": "只调整字段范围；原工作簿项目值不导入"})
     workbook.close()
+    # The exchange role is separate from the reference workbook's issuer column.
+    origin = {"key": "origin", "label": "原始权益人/发起人", "type": "text", "unit": "",
+              "group": "基本资料", "core": True}
+    manager_index = next(i for i, field in enumerate(catalog["public"]) if field["key"] == "manager")
+    catalog["public"].insert(manager_index, origin)
+    mapping.append({"category": "public", "source_type": "official_exchange_project_metadata", **origin,
+                    "source_fields": {"SSE": "FULL_NAME", "SZSE": "primitiveInterestsor"},
+                    "value_policy": "直接展示同一基金或申报的原始权益人；不替代独立发行人，不从首发回填扩募"})
     raw_path = ROOT / "data/raw/field_scope" / digest[:12] / "headers.json"
     raw_path.parent.mkdir(parents=True, exist_ok=True)
     if raw_path.exists():

@@ -1,6 +1,6 @@
 /* Shared field meaning and formatting for the project tables, details and exports. */
-import { PUBLIC_FIELDS, INSTITUTIONAL_FIELDS } from './project-field-catalog.js?v=20261015-disclosures-1';
-import { missingFieldText } from './field-evidence.js?v=20261015-disclosures-1';
+import { PUBLIC_FIELDS, INSTITUTIONAL_FIELDS } from './project-field-catalog.js?v=20261015-origin-1';
+import { missingFieldText } from './field-evidence.js?v=20261015-origin-1';
 export { PUBLIC_FIELDS, INSTITUTIONAL_FIELDS };
 
 const exists = value => value !== null && value !== undefined && value !== '';

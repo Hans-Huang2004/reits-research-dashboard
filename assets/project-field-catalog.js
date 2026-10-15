@@ -42,7 +42,15 @@ export const PUBLIC_FIELDS = [
   },
   {
     "key": "issuer",
-    "label": "发行人",
+    "label": "发行人（单独披露）",
+    "type": "text",
+    "unit": "",
+    "group": "基本资料",
+    "core": false
+  },
+  {
+    "key": "origin",
+    "label": "原始权益人/发起人",
     "type": "text",
     "unit": "",
     "group": "基本资料",
@@ -50,7 +58,7 @@ export const PUBLIC_FIELDS = [
   },
   {
     "key": "manager",
-    "label": "管理人",
+    "label": "基金管理人",
     "type": "text",
     "unit": "",
     "group": "基本资料",

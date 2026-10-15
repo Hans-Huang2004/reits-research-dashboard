@@ -10,6 +10,17 @@ test('expansion never inherits a parent fund first-offering amount', () => {
 });
 test('issuer does not silently become originator', () => {
   assert.equal(getPublicField({origin:'原始权益人'},'issuer'), null);
+  assert.equal(PUBLIC_FIELDS.find(f => f.key === 'origin').core, true);
+  assert.equal(PUBLIC_FIELDS.find(f => f.key === 'issuer').core, false);
+  const fund = {origin:'首发原始权益人'};
+  assert.equal(getPublicField({origin:'扩募原始权益人'},'origin',{fund,isEvent:true}),'扩募原始权益人');
+  assert.equal(getPublicField({},'origin',{fund,isEvent:true}),null);
+  const event={origin:'扩募原始权益人',source_url:'https://www.sse.com.cn/reits/info/?audit_id=expansion',updated_date:'2026-10-14'};
+  const refs=fieldEvidence(event,'origin',{fund,isEvent:true,collectedAt:'2026-10-15T14:13:26+08:00'});
+  assert.equal(refs[0].url,event.source_url);
+  assert.ok(refs[0].note.includes('2026-10-14'));
+  assert.equal(refs[0].published_at,undefined);
+  assert.equal(fieldEvidence({origin:'企业',source_url:'javascript:alert(1)'},'origin').length,0);
 });
 test('null issuance evidence stays unknown while false and zero remain explicit', () => {
   const spec = INSTITUTIONAL_FIELDS.find(f => f.key === 'is_issued');

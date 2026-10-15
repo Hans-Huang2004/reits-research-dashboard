@@ -1,8 +1,8 @@
 /* Public REIT funds and their separate first-offering / expansion submissions. */
 'use strict';
 import { closeFilterMenu, syncFilterSelects } from './filter-select.js?v=20261014-filter-menu-1';
-import { PUBLIC_FIELDS, getPublicField, formatProjectField, projectFieldCellText } from './project-fields.js?v=20261015-disclosures-1';
-import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-disclosures-1';
+import { PUBLIC_FIELDS, getPublicField, formatProjectField, projectFieldCellText } from './project-fields.js?v=20261015-origin-1';
+import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-origin-1';
 
 const DATA_URL = new URL('../data/public_reits.json', import.meta.url);
 const COMPRESSED_DATA_URL = new URL('../data/public_reits.json.gz', import.meta.url);
@@ -14,9 +14,9 @@ const issued = fund => ['已上市', '成立待上市'].includes(fund.stage);
 const present = value => value != null && value !== '';
 const normalized = value => String(value ?? '').replace(/\s/g, '').toLowerCase();
 const state = { view: 'funds', fields: 'core', ex: '', search: '', product: '', asset: '', stage: '', business: '', manager: '', savedOnly: false, direction: -1, page: 1, pageSize: 10 };
-const CORE_FIELD_KEYS = new Set(['name', 'business_type', 'exchange', 'product_type', 'issuer', 'manager', 'sale_amount_cny_100m', 'asset_type', 'project_status', 'updated_date']);
+const CORE_FIELD_KEYS = new Set(['name', 'business_type', 'exchange', 'product_type', 'origin', 'manager', 'sale_amount_cny_100m', 'asset_type', 'project_status', 'updated_date']);
 const FIELD_GROUPS = [
-  ['基本资料', ['name', 'business_type', 'exchange', 'product_type', 'issuer', 'manager', 'financial_advisor']],
+  ['基本资料', ['name', 'business_type', 'exchange', 'product_type', 'origin', 'manager', 'issuer', 'financial_advisor']],
   ['各版本融资规模', ['proposed_sale_amount_application_cny_100m', 'proposed_sale_amount_feedback_cny_100m', 'proposed_sale_amount_inquiry_cny_100m', 'sale_amount_cny_100m', 'external_loan_amount_cny_100m']],
   ['资产与预测', ['asset_type', 'underlying_assets', 'project_return_forecast']],
   ['进度与增信', ['project_status', 'updated_date', 'guarantee_support']]
@@ -78,7 +78,7 @@ const dateFor = record => {
 };
 const plannedListingDate = record => record.planned_listing_date || record.expected_listing_date || (futureDate(record.listing_date) ? record.listing_date : '');
 const fundFor = event => fundById.get(event.fund_id);
-const fieldContext = (record, sequence, eventView = isEventView()) => ({ fund: eventView ? fundFor(record) : record, isEvent: eventView, sequence });
+const fieldContext = (record, sequence, eventView = isEventView()) => ({ fund: eventView ? fundFor(record) : record, isEvent: eventView, sequence, collectedAt:snapshot?.updated_at });
 const visibleFields = () => state.fields === 'all' ? PUBLIC_FIELDS : PUBLIC_FIELDS.filter(spec => CORE_FIELD_KEYS.has(spec.key));
 const fieldTitle = spec => `${spec.label}${spec.unit && !spec.label.includes(spec.unit) ? `（${spec.unit}）` : ''}`;
 
@@ -156,7 +156,7 @@ function publicColumnClass(spec) {
   if (spec.key === 'sequence') return 'public-sequence-cell';
   if (spec.key.endsWith('_cny_100m')) return 'numeric public-money-cell';
   if (spec.key === 'updated_date') return 'date';
-  if (spec.key === 'issuer') return 'public-issuer-cell';
+  if (['issuer', 'origin'].includes(spec.key)) return 'public-issuer-cell';
   if (spec.key === 'manager') return 'mgr';
   if (spec.key === 'asset_type') return 'public-asset-cell';
   if (['underlying_assets', 'project_return_forecast', 'guarantee_support'].includes(spec.key)) return 'public-narrative-cell';
@@ -220,7 +220,7 @@ function render() {
     return `<tr>${specs.map(spec => `<td class="${publicColumnClass(spec)}">${publicCellHTML(record, spec, context)}</td>`).join('')}<td>${sourceLink(record.source_url, eventView ? '官方项目页' : '基金资料')}</td></tr>`;
   }).join('') || `<tr><td colspan="${specs.length + 1}" class="empty">${snapshot ? '当前条件没有匹配记录' : loadError ? '公募项目库读取失败，请刷新重试。' : '选择公募模块后读取项目资料。'}</td></tr>`;
   document.querySelectorAll('[data-public-fields]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.publicFields === state.fields)));
-  $('public-fields-note').textContent = state.fields === 'all' ? '完整19项字段 · 左右滚动查看' : '核心10项字段 · 详情查看全部资料';
+  $('public-fields-note').textContent = state.fields === 'all' ? `完整${PUBLIC_FIELDS.length}项字段 · 左右滚动查看` : `核心${CORE_FIELD_KEYS.size}项字段 · 详情查看全部资料`;
   $('public-page-count').textContent = records.length ? `显示${start + 1}–${Math.min(start + state.pageSize, records.length)}条，共${records.length}条` : '共0条';
   $('public-page-number').textContent = `${state.page} / ${pages}`;
   $('public-prev').disabled = state.page <= 1;
@@ -365,7 +365,7 @@ function openFund(id) {
   if (fund.establishment_announcement_date) progress.push(datedField('成立公告发布日期', fund.establishment_announcement_date));
   if (plannedListingDate(fund) && !futureDate(fund.listing_date)) progress.push(['计划上市日期', plannedListingDate(fund)]);
   const groups = referenceGroupsHTML(fund, fieldContext(fund, null, false), {
-    basic: [['基金代码', fund.code || '待披露'], ['原始权益人', fund.origin]],
+    basic: [['基金代码', fund.code || '待披露']],
     finance: fund.initial_raise_basis ? [['募集规模口径', fund.initial_raise_basis]] : [],
     assets: [['资产所在地', [valueText(fund.province), valueText(fund.city)].filter(Boolean).join('、')]],
     progress
@@ -380,7 +380,7 @@ function openEvent(id) {
   const completion = event.completed === true || completionEvidence.length ? `<section class="public-detail-section"><h3>完成依据</h3>${event.completion_announcement_date ? `<p class="muted">${futureDate(event.completion_announcement_date) ? '计划完成公告发布日期' : '完成公告发布日期'}：${html(event.completion_announcement_date)}</p>` : ''}${documentsHTML(completionEvidence)}</section>` : '';
   const basis = event.sale_amount_basis || event.initial_raise_basis || (event.business_type === '首发' ? fund?.initial_raise_basis : '');
   const groups = referenceGroupsHTML(event, fieldContext(event, null, true), {
-    basic: [['基金代码', event.fund_code || fund?.code || '待披露'], ['原始权益人', event.origin]],
+    basic: [['基金代码', event.fund_code || fund?.code || '待披露']],
     finance: basis ? [['募集规模口径', basis]] : [],
     progress: [['官方审核状态', officialStatus(event)], datedField('受理日期', event.accepted_date), datedField('注册日期', event.registered_date)],
     progressBody: `<h3 class="public-timeline-title">披露时间节点</h3>${timelineHTML(event)}`
@@ -398,7 +398,7 @@ function documentsText(documents) {
 }
 function publicCSVTable(selected) {
   const eventView = isEventView();
-  const extraHeaders = ['视图', '基金代码', '基金ID', '申报ID', '原始权益人', '官方审核状态', '官方资产类型', '分类来源', '分类确认程度', '分类依据', '基金成立日期', '上市日期', '计划成立日期', '计划上市日期', '成立公告发布日期', '募集规模口径', '完成公告发布日期', '计划完成公告发布日期', '完成依据', '关联申报ID', '披露文件', '官方来源', '数据日期', '采集时间'];
+  const extraHeaders = ['视图', '基金代码', '基金ID', '申报ID', '官方审核状态', '官方资产类型', '分类来源', '分类确认程度', '分类依据', '基金成立日期', '上市日期', '计划成立日期', '计划上市日期', '成立公告发布日期', '募集规模口径', '完成公告发布日期', '计划完成公告发布日期', '完成依据', '关联申报ID', '披露文件', '官方来源', '数据日期', '采集时间'];
   const rows = selected.map((record, index) => {
     const context = fieldContext(record, index + 1);
     const fund = context.fund;
@@ -408,7 +408,7 @@ function publicCSVTable(selected) {
       return ['amount', 'integer'].includes(spec.type) ? raw : formatProjectField(raw, spec);
     });
     const basis = record.sale_amount_basis || record.initial_raise_basis || (eventView && record.business_type === '首发' ? fund?.initial_raise_basis : '');
-    const extras = [eventView ? '申报审核' : '已发行基金', eventView ? record.fund_code || fund?.code : record.code, fund?.id || '', eventView ? record.id : '', record.origin, eventView ? officialStatus(record) : '', record.official_asset_type, record.classification_source, record.classification_confidence, record.classification_note, !eventView ? actualDate(record.established_date) : '', !eventView ? actualDate(record.listing_date) : '', !eventView && futureDate(record.established_date) ? record.established_date : '', !eventView ? plannedListingDate(record) : '', !eventView ? actualDate(record.establishment_announcement_date) : '', basis, eventView ? actualDate(record.completion_announcement_date) : '', eventView && futureDate(record.completion_announcement_date) ? record.completion_announcement_date : '', eventView ? documentsText(record.completion_evidence) : '', (eventsByFund.get(fund?.id) || []).map(event => event.id).join(' | '), documentsText(record.documents), safeURL(record.source_url), snapshot.date, snapshot.updated_at];
+    const extras = [eventView ? '申报审核' : '已发行基金', eventView ? record.fund_code || fund?.code : record.code, fund?.id || '', eventView ? record.id : '', eventView ? officialStatus(record) : '', record.official_asset_type, record.classification_source, record.classification_confidence, record.classification_note, !eventView ? actualDate(record.established_date) : '', !eventView ? actualDate(record.listing_date) : '', !eventView && futureDate(record.established_date) ? record.established_date : '', !eventView ? plannedListingDate(record) : '', !eventView ? actualDate(record.establishment_announcement_date) : '', basis, eventView ? actualDate(record.completion_announcement_date) : '', eventView && futureDate(record.completion_announcement_date) ? record.completion_announcement_date : '', eventView ? documentsText(record.completion_evidence) : '', (eventsByFund.get(fund?.id) || []).map(event => event.id).join(' | '), documentsText(record.documents), safeURL(record.source_url), snapshot.date, snapshot.updated_at];
     return [...reference, ...extras];
   });
   const sourceHeaders = PUBLIC_FIELDS.filter(spec => spec.key !== 'sequence').map(spec => `${fieldTitle(spec)}：披露来源及日期`);
