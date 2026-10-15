@@ -18,6 +18,7 @@ import time
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
+from copy import deepcopy
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -313,6 +314,9 @@ def _atomic_json(path, payload):
 
 def _inherit_classification(row, previous, overrides):
     # Repository-reviewed evidence is tied to the official project ID, not issuer.
+    current_assets = row.get("underlying_assets")
+    same_previous = previous and previous.get("id") == row["id"]
+    reviewed_previous_assets = previous.get("underlying_assets") if same_previous and previous.get("research_field_sources", {}).get("underlying_assets") else None
     override = overrides.get(row["id"]) or overrides.get(row["source_id"])
     if override:
         ptype = override.get("ptype", row["ptype"])
@@ -332,7 +336,7 @@ def _inherit_classification(row, previous, overrides):
         if confidence == "confirmed" and (not evidence or psub == "待分类"):
             raise CollectionError("Confirmed classification requires disclosed asset evidence: " + row["id"])
         for k in CLASSIFICATION_FIELDS:
-            if k in override:
+            if k != "underlying_assets" and k in override:
                 row[k] = override[k]
         source = "verified" if confidence == "confirmed" else "inferred" if confidence == "likely" else "manual"
         row.update({"pflag":"待分类" if psub == "待分类" else "", "classification_source":"unknown" if psub == "待分类" else source})
@@ -340,7 +344,16 @@ def _inherit_classification(row, previous, overrides):
             row.pop("classification_confidence", None)
     elif previous and previous.get("classification_source") in ("manual", "verified", "inferred"):
         for k in CLASSIFICATION_FIELDS:
-            if k in previous:row[k]=previous[k]
+            if k != "underlying_assets" and k in previous:row[k]=previous[k]
+    # Classification notes can contain older abbreviated pool descriptions.
+    # They must not erase current API assets or same-ID field-reviewed assets.
+    asset_candidates = (current_assets, reviewed_previous_assets,
+                        override.get("underlying_assets") if override else None,
+                        previous.get("underlying_assets") if same_previous and previous.get("classification_source") in ("manual", "verified", "inferred") else None)
+    for assets in asset_candidates:
+        if assets not in (None, "", []):
+            row["underlying_assets"] = deepcopy(assets)
+            break
 
 
 def update_classification_quality(snapshot):
@@ -357,6 +370,7 @@ def reclassify_snapshot(snapshot, overrides):
     """Review a stored snapshot without changing its collection timestamp."""
     for row in snapshot["items"]:
         previous = {k:row[k] for k in CLASSIFICATION_FIELDS if k in row}
+        previous.update(id=row["id"], research_field_sources=row.get("research_field_sources", {}))
         for key in CLASSIFICATION_FIELDS:
             row.pop(key, None)
         row.update(classify_by_name(row["name"]))

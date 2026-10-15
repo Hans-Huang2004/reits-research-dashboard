@@ -62,6 +62,45 @@ class PublicLibraryTests(unittest.TestCase):
         self.assertEqual(before['funds'][0]['id'], after['funds'][0]['id'])
         self.assertEqual(after['funds'][0]['code'], '508001')
 
+    def test_current_initial_pool_replaces_prior_applicant_pool_with_matching_evidence(self):
+        old_evidence = [{'title': '旧申报稿', 'url': 'https://www.sse.com.cn/old'}]
+        new_evidence = [{'title': '本次反馈稿', 'url': 'https://www.sse.com.cn/new'}]
+        before, _ = build_snapshot(source([], [event(
+            asset_type='办公', official_asset_type='写字楼', underlying_assets=['旧资产'],
+            research_field_sources={'asset_type': old_evidence, 'underlying_assets': old_evidence})]), now=NOW)
+        after, _ = build_snapshot(source([], [event(
+            asset_type='消费', official_asset_type='购物中心', underlying_assets=['新资产'],
+            updated_date='2026-10-15', research_field_sources={'asset_type': new_evidence, 'underlying_assets': new_evidence})]),
+            previous=before, now=NOW)
+        self.assertEqual(before['funds'][0]['id'], after['funds'][0]['id'])
+        for row in (after['funds'][0], after['events'][0]):
+            self.assertEqual((row['asset_type'], row['underlying_assets']), ('消费', ['新资产']))
+            self.assertEqual(row['research_field_sources']['underlying_assets'], new_evidence)
+            self.assertEqual(row['official_asset_type'], '购物中心')
+
+    def test_missing_initial_disclosures_restore_reviewed_pool_and_metadata(self):
+        evidence = [{'title': '首发披露', 'url': 'https://www.sse.com.cn/pool'}]
+        before, _ = build_snapshot(source([], [event(
+            asset_type='办公', official_asset_type='写字楼', underlying_assets=['首发资产'],
+            research_field_sources={'asset_type': evidence, 'underlying_assets': evidence})]), now=NOW)
+        after, _ = build_snapshot(source([], [event(asset_type='待分类', underlying_assets=[])]), previous=before, now=NOW)
+        for row in (after['funds'][0], after['events'][0]):
+            self.assertEqual((row['asset_type'], row['underlying_assets']), ('办公', ['首发资产']))
+            self.assertEqual(row['classification_source'], 'official')
+            self.assertEqual(row['research_field_sources']['asset_type'], evidence)
+
+    def test_expansion_cannot_fill_missing_initial_pool_or_advisor(self):
+        expansion = event(id='SSE_456', source_id='456', business_type='扩募', fund_code='508001',
+                          asset_type='消费', official_asset_type='购物中心', underlying_assets=['新增商场'],
+                          financial_advisor='扩募财务顾问', manager='扩募管理人')
+        data, _ = build_snapshot(source([fund(asset_type='待分类')], [expansion]), now=NOW)
+        parent, filing = data['funds'][0], data['events'][0]
+        self.assertNotEqual(parent.get('underlying_assets'), ['新增商场'])
+        self.assertNotEqual(parent.get('asset_type'), '消费')
+        self.assertIsNone(parent.get('financial_advisor'))
+        self.assertEqual(filing['underlying_assets'], ['新增商场'])
+        self.assertEqual(filing['financial_advisor'], '扩募财务顾问')
+
     def test_exchange_identity_does_not_merge_same_name(self):
         sources = source([fund()], [event()])
         sources['SZSE'] = {'source_status': {'ok':True}, 'funds': [fund(exchange='深交所',code='180101')],

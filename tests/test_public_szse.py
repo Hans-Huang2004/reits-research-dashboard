@@ -1,4 +1,6 @@
+import tempfile
 import unittest
+from unittest.mock import patch
 
 from collectors import public_szse as szse
 
@@ -27,6 +29,98 @@ def report(data, total=None, page=1, size=20):
 
 
 class PublicSzseTests(unittest.TestCase):
+    def test_regular_collect_keeps_real_offering_codes_without_establishing_funds(self):
+        # Published exchange metadata for three offerings absent from the
+        # established/listed reports at this snapshot; no PDF text is needed.
+        identities = [
+            (5000039, "180107", "平安西安高科产业园封闭式基础设施证券投资基金", "2026-09-30",
+             "/disc/disk03/finalpage/2026-09-30/112fe54b-776e-4ef2-ab60-3a290e94402f.PDF"),
+            (5000060, "181002", "华泰紫金华住安住封闭式商业不动产证券投资基金", "2026-09-29",
+             "/disc/disk03/finalpage/2026-09-29/ed016f38-e64e-4369-b945-4c8fc670a360.PDF"),
+            (5000055, "180702", "银华粤海水务水利封闭式基础设施证券投资基金", "2026-09-24",
+             "/disc/disk03/finalpage/2026-09-24/70b940d4-c6cd-45b8-bf47-636763b12bef.PDF"),
+        ]
+        first = [{"prjid":pid, "cmpnm":name, "biztypsb":21, "prjst":"注册生效",
+                  "acptdt":"2026-01-01", "updtdt":"2026-09-24"}
+                 for pid, code, name, published, url in identities]
+        followon = {"prjid":6000001, "cmpnm":identities[0][2], "biztypsb":23,
+                    "acptdt":"2026-10-01", "updtdt":"2026-10-01"}
+        sale = [{"id":"sale-" + code, "annId":"official-" + code,
+                 "title":name + "基金份额发售公告", "secCode":[code], "secName":[code + "REIT"],
+                 "publishTime":published + " 00:00:00", "attachPath":url}
+                for pid, code, name, published, url in identities]
+        sale.append(dict(sale[0], id="expansion-sale", secCode=["180999"],
+                         title=identities[0][2] + "2026年度扩募基金份额发售公告"))
+        all_rows = first + [followon]
+        class MetadataReader:
+            def __init__(self):
+                self.manifest = []
+                self.urls = []
+            def request(self, key, url, params=None, body=None):
+                self.urls.append(url)
+                if url != szse.DETAIL:
+                    raise AssertionError("Unexpected data or PDF request: " + url)
+                return {"data":next(row for row in all_rows if str(row["prjid"]) == params["id"])}
+        reader = MetadataReader()
+        def fetch_projects(_reader, business=None):
+            rows = all_rows if business is None else first if business == 21 else [followon]
+            return rows, {"advertised_total":len(rows), "raw_count":len(rows), "pages":1}
+        def announcements(_reader, keyword, label, stock=None):
+            self.assertIsNone(stock)
+            rows = sale if keyword == "基金份额发售公告" else []
+            return rows, {"advertised_total":len(rows), "raw_count":len(rows), "pages":1}
+        with tempfile.TemporaryDirectory() as raw, \
+             patch.object(szse, "SourceReader", return_value=reader), \
+             patch.object(szse, "fetch_fund_report", return_value=([], {"report_date":"2026-10-15"})), \
+             patch.object(szse, "fetch_projects", side_effect=fetch_projects), \
+             patch.object(szse, "fetch_announcements", side_effect=announcements):
+            result = szse.collect(raw)
+        funds = {fund["code"]:fund for fund in result["funds"]}
+        self.assertEqual(set(funds), {"180107", "181002", "180702"})
+        for pid, code, name, published, url in identities:
+            fund = funds[code]
+            self.assertEqual(fund["name"], name)
+            self.assertEqual(fund["status"], "发售准备")
+            self.assertEqual(fund["listing_date"], "")
+            self.assertEqual(fund["established_date"], "")
+            self.assertEqual(fund["establishment_announcement_date"], "")
+            self.assertEqual(fund["issuance_evidence_url"], "")
+            self.assertIsNone(fund["initial_raise_cny_100m"])
+            self.assertEqual(fund["offering_announcements"][0]["date"], published)
+            self.assertEqual(fund["offering_announcements"][0]["url"], "https://disc.static.szse.cn/download" + url)
+            event = next(event for event in result["events"] if event["source_id"] == str(pid))
+            self.assertEqual(event["fund_code"], code)
+            self.assertEqual(event["fund_link_evidence"][0]["date"], published)
+        expansion = next(event for event in result["events"] if event["source_id"] == "6000001")
+        self.assertEqual(expansion["fund_code"], "")
+        self.assertNotIn("fund_link_evidence", expansion)
+        self.assertEqual(result["source_status"]["issued_fund_count"], 0)
+        self.assertEqual(result["source_status"]["issued_pending_listing_codes"], [])
+        self.assertEqual(result["source_status"]["disclosed_fund_count"], 3)
+        self.assertEqual(result["source_status"]["offering_only_codes"], sorted(funds))
+        self.assertEqual(result["source_status"]["pagination_checks"]["sale_announcements"]["raw_count"], 4)
+        self.assertTrue(all(url == szse.DETAIL for url in reader.urls))
+
+    def test_offering_link_requires_unique_exact_first_issuance_and_consistent_code(self):
+        event = {"id":"SZSE_1", "name":"甲封闭式基础设施证券投资基金", "business_type":"首发", "fund_code":""}
+        announcement = {"id":"sale-a", "title":event["name"] + "基金份额发售公告", "secCode":["180107"],
+                        "publishTime":"2026-09-30", "attachPath":"/official.PDF"}
+        for events, notice in [
+            ([event, dict(event, id="SZSE_2")], announcement),
+            ([dict(event, name="甲二期封闭式基础设施证券投资基金")], announcement),
+            ([event], dict(announcement, secCode=["180107", "181002"])),
+            ([event], dict(announcement, title=event["name"] + "扩募基金份额发售公告")),
+            ([dict(event, business_type="扩募")], announcement),
+        ]:
+            with self.subTest(events=events, notice=notice):
+                matched, audit = szse.match_first_offering_announcements(events, [notice])
+                self.assertEqual(matched, {})
+                self.assertEqual(len(audit["skipped_announcements"]), 1)
+        with self.assertRaises(szse.CollectionError):
+            szse.match_first_offering_announcements([dict(event, fund_code="180702")], [announcement])
+        with self.assertRaises(szse.CollectionError):
+            szse.match_first_offering_announcements([event], [announcement, dict(announcement, id="sale-b", secCode=["181002"])])
+
     def test_report_uses_uppercase_pageno_and_reconciles_both_pages(self):
         reader = Reader([report([{"sys_key":"180101"}], 2, 1, 1),
                          report([{"sys_key":"181001"}], 2, 2, 1)])

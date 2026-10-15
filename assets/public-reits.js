@@ -268,7 +268,7 @@ function renderMetadata() {
   if (active) {
     $('side-date').textContent = snapshot?.date || (loadError ? '读取失败' : '正在读取');
     $('side-source').textContent = '上交所／深交所公募REITs';
-    $('side-schedule').textContent = '采集时间见页面';
+    $('side-schedule').textContent = '每日08:30 · 北京时间';
   }
 }
 function applySnapshot(data, cached) {

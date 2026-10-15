@@ -312,6 +312,44 @@ def _unique_documents(rows):
     return list({row["url"]:row for row in rows}.values())
 
 
+def match_first_offering_announcements(events, announcements):
+    """Bind disclosed codes through one exact first-issuance project name.
+
+    A sale notice supplies identity and publication metadata only. Expansion
+    notices and ambiguous names never create or establish a first-offering fund.
+    """
+    first_by_name = {}
+    for event in events:
+        if event["business_type"] == "首发":
+            first_by_name.setdefault(event["name"], []).append(event)
+    matched, skipped, event_codes = {}, [], {}
+    for announcement in announcements:
+        title = clean(announcement.get("title"))
+        if "基金份额发售公告" not in title or any(word in title for word in ("扩募", "新购入")):
+            skipped.append({"source_id":str(announcement.get("id") or ""), "reason":"not_first_offering_notice"})
+            continue
+        name = fund_name_from_title(title)
+        matches = first_by_name.get(name, [])
+        codes = {str(code) for code in announcement.get("secCode", []) if re.fullmatch(r"18\d{4}", str(code))}
+        if len(matches) != 1 or len(codes) != 1:
+            skipped.append({"source_id":str(announcement.get("id") or ""), "name":name,
+                            "reason":"no_unique_exact_first_issuance_identity", "project_matches":len(matches),
+                            "valid_codes":sorted(codes)})
+            continue
+        first, code = matches[0], next(iter(codes))
+        document = announcement_document(announcement)
+        if not document["date"] or not announcement.get("attachPath"):
+            raise CollectionError("Official sale notice is missing publication date or document URL: " + code)
+        previous = first.get("fund_code") or event_codes.get(first["id"])
+        if previous and previous != code:
+            raise CollectionError("Official sale code conflicts with SZSE first-issuance identity: " + first["id"])
+        event_codes[first["id"]] = code
+        matched.setdefault(code, []).append(announcement)
+    return matched, {"matched_announcement_count":sum(len(rows) for rows in matched.values()),
+                     "matched_fund_codes":sorted(matched), "skipped_announcements":skipped,
+                     "identity_rule":"唯一首发项目全名精确匹配；发售公告不证明合同生效"}
+
+
 def collect(raw_dir):
     reader = SourceReader(raw_dir)
     listing_rows, listing_check = fetch_fund_report(reader)
@@ -338,14 +376,20 @@ def collect(raw_dir):
         events = list(pool.map(get_detail, all_rows))
     effective, effective_check = fetch_announcements(reader, "基金合同生效", "effective")
     listing_ann, announcement_check = fetch_announcements(reader, "上市交易公告书", "listing")
+    sale_ann, sale_check = fetch_announcements(reader, "基金份额发售公告", "sales")
+    offering_by_code, offering_links = match_first_offering_announcements(events, sale_ann)
     by_code = {clean(row["sys_key"]):row for row in listing_rows}
     effective_codes = {str(code) for row in effective for code in row.get("secCode", []) if re.fullmatch(r"18\d{4}", str(code))}
-    codes = set(by_code) | effective_codes
+    issued_codes = set(by_code) | effective_codes
+    offering_only_codes = set(offering_by_code) - issued_codes
+    codes = issued_codes | set(offering_by_code)
     announcements_by_code = {code:[] for code in codes}
     for announcement in effective + listing_ann:
         for code in announcement.get("secCode", []):
             if code in announcements_by_code:
                 announcements_by_code[code].append(announcement)
+    for code, announcements in offering_by_code.items():
+        announcements_by_code[code].extend(announcements)
     event_names = {e["name"] for e in events if e["business_type"] == "首发"}
     prospectus_checks = []
     for code in sorted(codes):
@@ -371,20 +415,22 @@ def collect(raw_dir):
         if not name:
             raise CollectionError("No official long name available for SZSE fund " + code)
         fund_docs = _unique_documents([announcement_document(a) for a in anns])
+        offering_docs = _unique_documents([announcement_document(a) for a in offering_by_code.get(code, [])])
         fund = {"id":"SZSE_FUND_" + code, "code":code, "name":name, "short_name":short,
                 "exchange":"深交所", "manager":clean(report.get("glrmc")) or first.get("manager", ""),
                 "origin":first.get("origin", ""), "product_type":first.get("product_type") or product_type(name),
                 "asset_type":first.get("asset_type", "待分类"), "official_asset_type":first.get("official_asset_type", ""),
                 "listing_date":date(report.get("ssrq")), "established_date":"", "initial_raise_cny_100m":None,
                 "source_url":BASE + "/disclosure/index.html?stock=" + code,
-                "status":"已上市" if report else "已成立待上市", "aliases":aliases,
+                "status":"已上市" if report else "已成立待上市" if code in effective_codes else "发售准备", "aliases":aliases,
                 "documents":fund_docs, "asset_location":"",
+                "offering_announcements":offering_docs,
                 "manager_location":first.get("manager_location", ""),
                 "underlying_assets":[], "issuance_evidence_url":next((announcement_document(a)["url"] for a in anns if "基金合同生效" in a["title"]), ""),
                 "establishment_announcement_date":next((date(a.get("publishTime")) for a in anns if "基金合同生效" in a["title"]), "")}
         funds.append(fund)
         for event in events:
-            if event["name"] in aliases:
+            if event["name"] in aliases and (code in issued_codes or event["business_type"] == "首发"):
                 event["fund_code"] = code
                 event["fund_link_evidence"] = [{"title":a["title"], "url":announcement_document(a)["url"],
                                                "date":date(a["publishTime"])}
@@ -404,21 +450,25 @@ def collect(raw_dir):
             event["completion_announcement_date"] = doc["date"]
             event["completion_evidence"] = [doc]
             event["documents"] = _unique_documents(event["documents"] + [doc])
-    pending = [f["code"] for f in funds if not f["listing_date"]]
+    pending = [f["code"] for f in funds if not f["listing_date"] and f["code"] in issued_codes]
     latest = max((e["updated_date"] for e in events), default="")
     collected_at = datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds")
     source_status = {"exchange":"深交所", "status":"complete", "collected_at":collected_at,
                      "latest_project_update":latest, "fund_report_date":listing_check["report_date"],
-                     "listed_fund_count":len(listing_rows), "issued_fund_count":len(funds),
+                     "listed_fund_count":len(listing_rows), "issued_fund_count":len(issued_codes),
+                     "disclosed_fund_count":len(funds), "offering_only_fund_count":len(offering_only_codes),
+                     "offering_only_codes":sorted(offering_only_codes), "offering_identity_checks":offering_links,
                      "issued_pending_listing_codes":pending, "event_count":len(events),
                      "detail_success_count":len(events), "detail_failure_count":0,
                      "pagination_checks":{"all_projects":all_check, "project_categories":checks,
                                           "listed_funds":listing_check, "effective_announcements":effective_check,
-                                          "listing_announcements":announcement_check, "identity_prospectuses":prospectus_checks},
+                                          "listing_announcements":announcement_check, "sale_announcements":sale_check,
+                                          "identity_prospectuses":prospectus_checks},
                      "freshness":{"series":"深交所公募REITs基金名录", "latest_available_date":listing_check["report_date"],
                                   "expected_date":collected_at[:10], "lagging":listing_check["report_date"] != collected_at[:10]},
                      "limitations":["基金合同生效日及首发募集金额未从公告正文提取；公告发布日期另列，不替代生效日。",
                                     "完成扩募以正式扩募上市交易公告书为证；公告发布日期另列，不替代扩募份额上市日。",
+                                    "仅有发售公告的产品保留公开代码、全名及公告来源，不据此认定成立或推定发售起止日。",
                                     "底层资产名称与数量未从招募说明书正文提取；保留全部官方申报附件入口。"]}
     reader.manifest.sort(key=lambda r:r["file"])
     (Path(raw_dir) / "manifest.json").write_text(json.dumps({"source":"深圳证券交易所", "generated_at":collected_at,

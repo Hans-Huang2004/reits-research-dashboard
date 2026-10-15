@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+from copy import deepcopy
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -15,6 +16,11 @@ PUBLIC_RESEARCH_FIELDS = (
 )
 INSTITUTIONAL_RESEARCH_FIELDS = ("approved_date", "issued_date", "is_issued")
 DISCLOSURE_FIELDS = ("underlying_assets", "asset_type", "offering_start_date", "offering_end_date", "established_date")
+ASSET_CLASSIFICATION_FIELDS = (
+    "official_asset_type", "classification_source", "classification_confidence",
+    "classification_evidence", "classification_note", "classification_reviewed_at",
+    "ptype", "psub", "pflag", "pnote",
+)
 
 
 def apply_field_scope(snapshot, population, previous=None):
@@ -33,9 +39,23 @@ def apply_field_scope(snapshot, population, previous=None):
             # Daily list refreshes do not erase reviewed disclosures. Core status
             # and source dates always remain those of the newly collected list.
             for key in DISCLOSURE_FIELDS:
-                prefer_disclosed_asset = key == "asset_type" and record.get("classification_source") in (None, "keyword", "unknown")
+                current_evidence = record.get("research_field_sources", {}).get(key)
+                prefer_disclosed_asset = (
+                    key == "asset_type"
+                    and record.get("classification_source") in (None, "keyword", "unknown")
+                    and not record.get("official_asset_type")
+                    and not current_evidence
+                )
                 if prior.get("research_field_sources", {}).get(key) and (not record.get(key) or prefer_disclosed_asset):
-                    record[key] = prior.get(key)
+                    record[key] = deepcopy(prior.get(key))
+                    if key == "asset_type":
+                        # The restored value keeps its own evidence and labels;
+                        # a fresh name heuristic must not relabel it as inferred.
+                        for metadata_key in ASSET_CLASSIFICATION_FIELDS:
+                            if metadata_key in prior:
+                                record[metadata_key] = deepcopy(prior[metadata_key])
+                            else:
+                                record.pop(metadata_key, None)
             if prior.get("research_field_sources"):
                 retained = {key: value for key, value in prior["research_field_sources"].items()
                             if key in fields + DISCLOSURE_FIELDS and record.get(key) == prior.get(key)}

@@ -4,7 +4,7 @@ on:
     branches: [main]
   workflow_dispatch:
   workflow_run:
-    workflows: [Refresh institutional REIT data, Refresh public REIT data]
+    workflows: [Refresh all REIT data]
     types: [completed]
     branches: [main]
 permissions:

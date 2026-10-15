@@ -1,10 +1,13 @@
 """Evidence must survive refresh and never become a false confirmed label."""
 import copy
+import json
+from pathlib import Path
 import unittest
 
 from collectors.institutional import (
     CollectionError, _inherit_classification, classify_by_name, reclassify_snapshot,
 )
+from collectors.project_fields import apply_field_scope
 
 
 class ClassificationEvidenceTests(unittest.TestCase):
@@ -77,6 +80,38 @@ class ClassificationEvidenceTests(unittest.TestCase):
         self.assertEqual(snapshot['quality']['unknown_classification'], 0)
         self.assertEqual(snapshot['quality']['classification_counts']['verified'], 1)
         self.assertIn('classification_updated_at', snapshot)
+
+    def test_current_api_assets_win_over_reviewed_history_and_classification_note(self):
+        previous = dict(self.row(), underlying_assets='历史已审核资产',
+                        research_field_sources={'underlying_assets': [{'title': '历史官方资产清单'}]})
+        row = dict(self.row(), underlying_assets='当日API新资产',
+                   research_field_sources={'underlying_assets': [{'title': '当日官方资产清单'}]})
+        _inherit_classification(row, previous, {row['id']: self.evidence()})
+        self.assertEqual(row['underlying_assets'], '当日API新资产')
+        self.assertEqual(row['classification_source'], 'verified')
+
+    def test_checked_in_reviewed_assets_do_not_lose_five_sources_on_refresh(self):
+        # The 2026-10-15 pool has 12 field-reviewed assets. The classification
+        # overrides contain shorter descriptions for five, formerly dropping
+        # their official evidence and reducing coverage to seven on refresh.
+        root = Path(__file__).resolve().parents[1]
+        previous = json.loads((root / 'data/institutional.json').read_text())
+        overrides = json.loads((root / 'config/classification_overrides.json').read_text())
+        reviewed = {r['id']: r for r in previous['items']
+                    if r.get('research_field_sources', {}).get('underlying_assets')}
+        self.assertTrue(reviewed)
+        fresh = {'items': []}
+        for old in previous['items']:
+            row = {key: old[key] for key in ('id', 'source_id', 'name')}
+            row.update(classify_by_name(row['name']))
+            _inherit_classification(row, old, overrides)
+            fresh['items'].append(row)
+        apply_field_scope(fresh, 'institutional', previous)
+        for row in fresh['items']:
+            if row['id'] in reviewed:
+                with self.subTest(project_id=row['id']):
+                    self.assertEqual(row['underlying_assets'], reviewed[row['id']]['underlying_assets'])
+                    self.assertEqual(row['research_field_sources']['underlying_assets'], reviewed[row['id']]['research_field_sources']['underlying_assets'])
 
 
 if __name__ == '__main__':

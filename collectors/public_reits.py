@@ -10,10 +10,13 @@ import hashlib
 import json
 import re
 from collections import Counter
+from copy import deepcopy
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
+
+from collectors.project_fields import PUBLIC_RESEARCH_FIELDS, ASSET_CLASSIFICATION_FIELDS
 
 ROOT = Path(__file__).resolve().parents[1]
 ISSUED_STAGES = {"已上市", "成立待上市"}
@@ -198,8 +201,6 @@ def build_snapshot(sources, previous=None, overrides=None, now=None):
             f = {"id": fid, "code": code, "exchange": e["exchange"], "name": e["name"],
                  "short_name": "", "manager": e.get("manager", ""), "origin": e.get("origin", ""),
                  "source_url": e["source_url"], "event_ids": [], "documents": [], "stage": stage_for_status(e.get("official_status"))}
-            if old_id and old_id in old_funds:
-                f = dict(old_funds[old_id], **f)
             funds[fid] = f
             method = "official_initial_filing"
         else:
@@ -213,9 +214,25 @@ def build_snapshot(sources, previous=None, overrides=None, now=None):
             e["linkage_evidence"] = override
         f["event_ids"].append(e["id"])
         f["aliases"] = sorted(set(f.get("aliases", []) + ([e["name"]] if e["name"] != f["name"] else [])))
-        for field in ("manager", "origin", "asset_type", "product_type", "underlying_assets", "province", "city", "classification_source", "classification_evidence", "classification_note", "classification_confidence"):
-            if not f.get(field) and e.get(field):
-                f[field] = e[field]
+        # The fund record describes its initial pool. Expansion disclosures stay
+        # on their own event even when the initial catalog omits these fields.
+        if e.get("business_type") == "首发":
+            event_asset_official = e.get("official_asset_type") or e.get("research_field_sources", {}).get("asset_type") or e.get("classification_source") == "official"
+            fund_asset_official = f.get("official_asset_type") or f.get("research_field_sources", {}).get("asset_type") or f.get("classification_source") == "official"
+            if event_asset_official and not fund_asset_official and e.get("asset_type") not in (None, "", "待分类"):
+                f["asset_type"] = e["asset_type"]
+                for field in ASSET_CLASSIFICATION_FIELDS:
+                    if field in e:
+                        f[field] = deepcopy(e[field])
+                    else:
+                        f.pop(field, None)
+            for field in ("manager", "origin", "asset_type", "product_type", "underlying_assets", "province", "city", *ASSET_CLASSIFICATION_FIELDS, *PUBLIC_RESEARCH_FIELDS):
+                if f.get(field) in (None, "", [], "待分类", "待核实") and e.get(field) not in (None, "", [], "待分类", "待核实"):
+                    f[field] = deepcopy(e[field])
+                    if e.get("research_field_sources", {}).get(field):
+                        f.setdefault("research_field_sources", {})[field] = deepcopy(e["research_field_sources"][field])
+            if event_asset_official and f.get("asset_type") == e.get("asset_type") and e.get("research_field_sources", {}).get("asset_type") and not f.get("research_field_sources", {}).get("asset_type"):
+                f.setdefault("research_field_sources", {})["asset_type"] = deepcopy(e["research_field_sources"]["asset_type"])
         f["documents"] = unique_documents(f.get("documents", []) + e.get("documents", []))
         if f.get("initial_raise_cny_100m") is not None and not f.get("initial_raise_basis") and f.get("initial_copies_100m") is not None:
             f["initial_raise_basis"] = "首发发售价格×官方首发募集份额（不含扩募）"

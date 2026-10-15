@@ -1,23 +1,23 @@
-name: Refresh institutional REIT data
+name: Refresh all REIT data
 on:
   schedule:
-    # 08:15 Beijing, with fallback opportunities if GitHub misses a trigger.
-    - cron: '15 0,1,2 * * *'
+    # 08:30 Beijing; 09:30 and 10:30 retry only if the joint batch is incomplete.
+    - cron: '30 0,1,2 * * *'
   workflow_dispatch:
   push:
     branches: [main]
     paths:
       - .github/workflows/update-data.yml
-      - scripts/refresh_due.py
+      - scripts/refresh_all.py
 permissions:
   contents: write
 concurrency:
-  group: institutional-refresh
+  group: reits-daily-refresh
   cancel-in-progress: false
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v6
         with:
@@ -25,63 +25,46 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
-      - name: Check whether today's verified collection is missing
+      - name: Check whether today's joint batch is complete
         id: freshness
-        shell: bash
+        env:
+          FORCE_REFRESH: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
-          if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ]; then
-            python -m scripts.refresh_due data/institutional.json --force >> "$GITHUB_OUTPUT"
+          if [ "$FORCE_REFRESH" = true ]; then
+            python scripts/refresh_all.py --check-only --force >> "$GITHUB_OUTPUT"
           else
-            python -m scripts.refresh_due data/institutional.json >> "$GITHUB_OUTPUT"
+            python scripts/refresh_all.py --check-only >> "$GITHUB_OUTPUT"
           fi
-      - name: Check collector offline
+      - name: Offline checks
         if: steps.freshness.outputs.due == 'true'
         run: python -m unittest discover -s tests -q
-      - name: Collect both exchanges and both keywords
+      - name: Collect public and institutional REITs together
         if: steps.freshness.outputs.due == 'true'
-        id: collect
-        shell: bash
-        run: |
-          raw_dir="raw/$(TZ=Asia/Shanghai date +%F)/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
-          audit_dir="workpapers/refresh/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
-          echo "raw_dir=$raw_dir" >> "$GITHUB_OUTPUT"
-          echo "audit_dir=$audit_dir" >> "$GITHUB_OUTPUT"
-          mkdir -p "$raw_dir" "$audit_dir"
-          git rev-parse HEAD > "$audit_dir/input-commit.txt"
-          python -m collectors.institutional --output data/institutional.json --archive-dir snapshots --verify-links --raw-dir "$raw_dir" 2>&1 | tee "$audit_dir/collection.log"
-      - name: Check complete snapshot
-        if: steps.freshness.outputs.due == 'true'
-        shell: bash
         env:
-          AUDIT_DIR: ${{ steps.collect.outputs.audit_dir }}
-          RAW_DIR: ${{ steps.collect.outputs.raw_dir }}
+          FORCE_REFRESH: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
-          python scripts/validate_data.py data/institutional.json | tee "$AUDIT_DIR/validation.json"
-          python - <<'PY'
-          import hashlib, json, os
-          from pathlib import Path
-          snapshot = json.loads(Path('data/institutional.json').read_text())
-          manifest = {key: snapshot[key] for key in ('date', 'updated_at', 'source_status', 'coverage', 'quality', 'changes')}
-          manifest['raw_dir'] = os.environ['RAW_DIR']
-          manifest['raw_sha256'] = {str(path): hashlib.sha256(path.read_bytes()).hexdigest() for path in sorted(Path(os.environ['RAW_DIR']).glob('*.json'))}
-          Path(os.environ['AUDIT_DIR'], 'source-manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
-          PY
-      - name: Commit complete data only
+          if [ "$FORCE_REFRESH" = true ]; then
+            python scripts/refresh_all.py --run-id '${{ github.run_id }}-${{ github.run_attempt }}' --force
+          else
+            python scripts/refresh_all.py --run-id '${{ github.run_id }}-${{ github.run_attempt }}'
+          fi
+      - name: Commit the complete pair
         if: steps.freshness.outputs.due == 'true'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/institutional.json snapshots/ raw/ workpapers/refresh/
+          git add data/institutional.json data/public_reits.json data/refresh_status.json data/raw/daily_refresh/ data/source_manifest/ workpapers/daily_refresh/ snapshots/public/
           if ! git diff --cached --quiet; then
-            git commit -m "data: refresh institutional REIT snapshot"
+            git commit -m "data: refresh public and institutional REITs together"
             git push
           fi
-      - name: Keep collection evidence even after failure
-        if: ${{ always() && steps.collect.outputs.raw_dir != '' }}
+      - name: Keep source evidence and validation even after failure
+        if: always() && steps.freshness.outputs.due == 'true'
         uses: actions/upload-artifact@v7
         with:
-          name: institutional-refresh-${{ github.run_id }}-${{ github.run_attempt }}
+          name: reits-daily-refresh-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
-            ${{ steps.collect.outputs.raw_dir }}
-            ${{ steps.collect.outputs.audit_dir }}
+            data/raw/daily_refresh/${{ github.run_id }}-${{ github.run_attempt }}/
+            workpapers/daily_refresh/${{ github.run_id }}-${{ github.run_attempt }}/
+            data/source_manifest/daily_refresh/${{ github.run_id }}-${{ github.run_attempt }}.json
           retention-days: 30

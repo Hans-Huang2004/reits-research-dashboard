@@ -1,7 +1,7 @@
 /* REITs dashboard for project lists collected directly from official SSE/SZSE APIs. */
 'use strict';
 import { enhanceFilterSelects, syncFilterSelects, closeFilterMenu } from './filter-select.js?v=20261014-filter-menu-1';
-import { initializePublicReits, setPublicModuleActive, openPublicSources } from './public-reits.js?v=20261015-disclosures-2';
+import { initializePublicReits, setPublicModuleActive, openPublicSources } from './public-reits.js?v=20261015-daily-1';
 import { INSTITUTIONAL_FIELDS, getInstitutionalField, projectFieldCellText } from './project-fields.js?v=20261015-disclosures-1';
 import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-disclosures-1';
 
@@ -442,7 +442,7 @@ function showModule(name) {
   setPublicModuleActive(isPublic);
   if (!isPublic) {
     $('side-date').textContent = snapshot?.date || '正在读取';
-    $('side-schedule').textContent = '每日08:15 · 北京时间';
+    $('side-schedule').textContent = '每日08:30 · 北京时间';
     $('side-source').textContent = '上交所／深交所公开申报';
   }
 }
