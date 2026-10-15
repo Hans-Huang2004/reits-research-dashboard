@@ -20,6 +20,7 @@ test('issuer does not silently become originator', () => {
   assert.equal(refs[0].url,event.source_url);
   assert.ok(refs[0].note.includes('2026-10-14'));
   assert.equal(refs[0].published_at,undefined);
+  assert.equal(fieldEvidence({origin:event.origin,source_url:'https://etf.sse.com.cn/funddetail/'},'origin',{originSource:event})[0].url,event.source_url);
   assert.equal(fieldEvidence({origin:'企业',source_url:'javascript:alert(1)'},'origin').length,0);
 });
 test('null issuance evidence stays unknown while false and zero remain explicit', () => {

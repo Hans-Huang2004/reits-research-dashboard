@@ -9,10 +9,11 @@ export const AVAILABILITY_LABELS = {not_disclosed:'未披露', not_available:'�
 
 export function fieldEvidence(record, key, context = {}) {
   let evidence = record.research_field_sources?.[key] || [];
-  if (!evidence.length && ['origin', 'manager'].includes(key) && exists(record[key]) && safeURL(record.source_url)) {
-    evidence = [{title:'交易所项目基本信息', url:record.source_url,
+  const roleSource = key === 'origin' && !context.isEvent && context.originSource?.origin === record.origin ? context.originSource : record;
+  if (!evidence.length && ['origin', 'manager'].includes(key) && exists(record[key]) && safeURL(roleSource?.source_url)) {
+    evidence = [{title:'交易所项目基本信息', url:roleSource.source_url,
       checked_at:context.collectedAt || '',
-      note:record.updated_date ? `交易所项目更新日期：${record.updated_date}` : ''}];
+      note:roleSource.updated_date ? `交易所项目更新日期：${roleSource.updated_date}` : ''}];
   }
   if (!evidence.length && key === 'sale_amount_cny_100m') {
     if (!context.isEvent) evidence = record.research_field_sources?.initial_raise_cny_100m || [];

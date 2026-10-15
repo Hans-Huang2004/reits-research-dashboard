@@ -1,8 +1,8 @@
 /* Public REIT funds and their separate first-offering / expansion submissions. */
 'use strict';
 import { closeFilterMenu, syncFilterSelects } from './filter-select.js?v=20261014-filter-menu-1';
-import { PUBLIC_FIELDS, getPublicField, formatProjectField, projectFieldCellText } from './project-fields.js?v=20261015-origin-1';
-import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-origin-1';
+import { PUBLIC_FIELDS, getPublicField, formatProjectField, projectFieldCellText } from './project-fields.js?v=20261015-origin-2';
+import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-origin-2';
 
 const DATA_URL = new URL('../data/public_reits.json', import.meta.url);
 const COMPRESSED_DATA_URL = new URL('../data/public_reits.json.gz', import.meta.url);
@@ -78,7 +78,8 @@ const dateFor = record => {
 };
 const plannedListingDate = record => record.planned_listing_date || record.expected_listing_date || (futureDate(record.listing_date) ? record.listing_date : '');
 const fundFor = event => fundById.get(event.fund_id);
-const fieldContext = (record, sequence, eventView = isEventView()) => ({ fund: eventView ? fundFor(record) : record, isEvent: eventView, sequence, collectedAt:snapshot?.updated_at });
+const fieldContext = (record, sequence, eventView = isEventView()) => ({ fund: eventView ? fundFor(record) : record, isEvent: eventView, sequence, collectedAt:snapshot?.updated_at,
+  originSource:eventView ? record : (eventsByFund.get(record.id) || []).find(event => event.business_type === '首发' && event.origin === record.origin) });
 const visibleFields = () => state.fields === 'all' ? PUBLIC_FIELDS : PUBLIC_FIELDS.filter(spec => CORE_FIELD_KEYS.has(spec.key));
 const fieldTitle = spec => `${spec.label}${spec.unit && !spec.label.includes(spec.unit) ? `（${spec.unit}）` : ''}`;
 
