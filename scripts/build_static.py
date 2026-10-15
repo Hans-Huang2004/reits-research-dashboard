@@ -1,5 +1,6 @@
 """Build the static project library with project data collected from official exchanges."""
 from pathlib import Path
+import gzip
 import shutil
 
 
@@ -13,6 +14,7 @@ def main():
     (target / 'data').mkdir(exist_ok=True)
     shutil.copy2(root / 'data/institutional.json', target / 'data/institutional.json')
     shutil.copy2(root / 'data/public_reits.json', target / 'data/public_reits.json')
+    (target / 'data/public_reits.json.gz').write_bytes(gzip.compress((root / 'data/public_reits.json').read_bytes(), mtime=0))
     (target / '.nojekyll').write_text('')
     print(target)
 

@@ -5,6 +5,7 @@ import { PUBLIC_FIELDS, getPublicField, formatProjectField, projectFieldCellText
 import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-disclosures-1';
 
 const DATA_URL = new URL('../data/public_reits.json', import.meta.url);
+const COMPRESSED_DATA_URL = new URL('../data/public_reits.json.gz', import.meta.url);
 const STORAGE_PREFIX = `reits:public:${DATA_URL.pathname}:v1`;
 const $ = id => document.getElementById(id);
 const html = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -285,12 +286,23 @@ async function loadData() {
   loading = (async () => {
     $('public-reload').disabled = true; $('public-loading').hidden = false;
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 20000);
+    const timer = setTimeout(() => controller.abort(), 35000);
     loadError = '';
     try {
-      const response = await fetch(DATA_URL, { cache: 'no-store', signal: controller.signal });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const data = validate(await response.json());
+      let payload;
+      if (typeof DecompressionStream === 'function') {
+        try {
+          const compressed = await fetch(COMPRESSED_DATA_URL, { cache: 'no-store', signal: controller.signal });
+          if (!compressed.ok || !compressed.body) throw new Error('Compressed snapshot unavailable');
+          payload = await new Response(compressed.body.pipeThrough(new DecompressionStream('gzip'))).json();
+        } catch (error) { if (controller.signal.aborted) throw error; }
+      }
+      if (!payload) {
+        const response = await fetch(DATA_URL, { cache: 'no-store', signal: controller.signal });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        payload = await response.json();
+      }
+      const data = validate(payload);
       applySnapshot(data, false); writeStorage('snapshot', data);
     } catch {
       loadError = '在线公募数据读取失败，请稍后刷新。';
