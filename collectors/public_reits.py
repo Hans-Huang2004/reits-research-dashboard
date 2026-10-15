@@ -21,6 +21,7 @@ from collectors.project_fields import PUBLIC_RESEARCH_FIELDS, ASSET_CLASSIFICATI
 ROOT = Path(__file__).resolve().parents[1]
 ISSUED_STAGES = {"已上市", "成立待上市"}
 TERMINAL_STAGES = {"终止", "撤回", "未通过"}
+INCLUDED_BUSINESS_TYPES = {"首发", "扩募"}
 
 
 def canonical_name(value):
@@ -116,6 +117,8 @@ def build_snapshot(sources, previous=None, overrides=None, now=None):
     previous = previous or {}
     overrides = overrides or {}
     funds, events, audit = {}, {}, []
+    scope_exclusions = []
+    source_event_ids = set()
     status = {}
     old_by_code = {(f["exchange"], f["code"]): f for f in previous.get("funds", []) if f.get("code")}
     old_by_event = {e["id"]: e["fund_id"] for e in previous.get("events", [])}
@@ -168,9 +171,18 @@ def build_snapshot(sources, previous=None, overrides=None, now=None):
                 raise ValueError("Duplicate official fund code " + code)
             funds[fid] = f
         for source_event in source.get("events", []):
+            if source_event["id"] in source_event_ids:
+                raise ValueError("Duplicate filing ID " + source_event["id"])
+            source_event_ids.add(source_event["id"])
+            if source_event.get("business_type") == "新购入":
+                # Preserve the source record and its attachments in the audit;
+                # acquisition alone does not establish an expansion offering.
+                scope_exclusions.append({"source_exchange": exchange_key, "record": deepcopy(source_event),
+                                         "reason": "单独新购入未归为扩募，不纳入首发及扩募申报范围"})
+                continue
+            if source_event.get("business_type") not in INCLUDED_BUSINESS_TYPES:
+                raise ValueError("Unsupported official filing business type for " + source_event["id"])
             e = classify_asset(source_event)
-            if e["id"] in events:
-                raise ValueError("Duplicate filing ID " + e["id"])
             events[e["id"]] = e
 
     def name_candidates(e):
@@ -263,19 +275,23 @@ def build_snapshot(sources, previous=None, overrides=None, now=None):
     fund_rows = sorted(funds.values(), key=lambda f:(f.get("updated_date", ""), f["id"]), reverse=True)
     event_rows = sorted(events.values(), key=lambda e:(e.get("updated_date", ""), e["id"]), reverse=True)
     old_events = {e["id"]: e for e in previous.get("events", [])}
+    excluded_event_ids = {item["record"]["id"] for item in scope_exclusions}
     changes = {"new_fund_ids": sorted(set(funds) - set(old_funds)), "new_event_ids": sorted(set(events) - set(old_events)),
                "changed_event_ids": sorted(eid for eid in set(events).intersection(old_events) if
                                            any(events[eid].get(k) != old_events[eid].get(k) for k in ("official_status", "stage", "updated_date", "fund_id"))),
-               "missing_event_ids": sorted(set(old_events) - set(events)),
+               "missing_event_ids": sorted(set(old_events) - set(events) - excluded_event_ids),
+               "excluded_event_ids": sorted(excluded_event_ids),
                "identity_consolidations": [{"event_id": eid, "previous_fund_id": old_events[eid]["fund_id"], "fund_id": events[eid]["fund_id"]}
                                             for eid in set(events).intersection(old_events) if old_events[eid].get("fund_id") != events[eid].get("fund_id")]}
     result = {"schema_version": 1, "date": today, "updated_at": now.isoformat(timespec="seconds"), "changes": changes,
               "source_status": status, "coverage": {"complete": True, "fund_count": len(funds), "event_count": len(events),
-                  "population": "沪深交易所公募REITs已发行基金及公开首发、扩募与新购入申报", "scope": "基础设施REITs及商业不动产REITs"},
+                  "excluded_event_count": len(scope_exclusions),
+                  "population": "沪深交易所公募REITs已发行基金及公开首发、扩募申报", "scope": "基础设施REITs及商业不动产REITs；单独新购入不计入申报"},
               "quality": {"unresolved_expansion_links": [], "funds_by_exchange": dict(Counter(f["exchange"] for f in fund_rows)),
                   "events_by_exchange": dict(Counter(e["exchange"] for e in event_rows)),
                   "stages": dict(Counter(f["stage"] for f in fund_rows)),
-                  "business_types": dict(Counter(e["business_type"] for e in event_rows))},
+                  "business_types": dict(Counter(e["business_type"] for e in event_rows)),
+                  "scope_exclusions": scope_exclusions},
               "funds": fund_rows, "events": event_rows}
     from collectors.project_fields import apply_field_scope
     apply_field_scope(result, "public", previous)
@@ -286,7 +302,7 @@ def build_snapshot(sources, previous=None, overrides=None, now=None):
 class UnresolvedLinks(ValueError):
     def __init__(self, rows):
         self.rows = rows
-        super().__init__(f"{len(rows)} expansion/acquisition filings require official fund linkage review")
+        super().__init__(f"{len(rows)} expansion filings require official fund linkage review")
 
 
 def write_json(path, data):
@@ -334,11 +350,13 @@ def main():
     from scripts.validate_public_data import validate
     validation = validate(snapshot)
     write_json(args.work_dir / "linkage_audit.json", audit)
+    write_json(args.work_dir / "scope_exclusions.json", snapshot["quality"]["scope_exclusions"])
     write_json(args.work_dir / "validation.json", validation)
     manifest = {"generated_at": now.isoformat(timespec="seconds"), "source_workpapers": {},
                 "raw_manifests": {key: value.get("manifest", []) for key, value in sources.items()},
                 "snapshot_sha256": hashlib.sha256((json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n").encode()).hexdigest(),
-                "definition": "基金与申报事件分别计数；首发募集金额与扩募金额分开；无公开证据不补值"}
+                "scope_exclusions": snapshot["quality"]["scope_exclusions"],
+                "definition": "基金与首发、扩募申报事件分别计数；单独新购入按范围排除并保留原记录；首发募集金额与扩募金额分开；无公开证据不补值"}
     for name in ("sse", "szse"):
         paper = papers[name]
         manifest["source_workpapers"][str(paper.relative_to(ROOT))] = hashlib.sha256(paper.read_bytes()).hexdigest()

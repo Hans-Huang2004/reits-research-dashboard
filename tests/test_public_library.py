@@ -1,4 +1,5 @@
 import unittest
+from copy import deepcopy
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -39,6 +40,44 @@ class PublicLibraryTests(unittest.TestCase):
         self.assertEqual(len(data['events']), 2)
         self.assertEqual(data['funds'][0]['stage'], '已上市')
         self.assertEqual(validate(data)['unlinked_events'], 0)
+
+    def test_acquisition_only_is_audited_out_without_losing_issued_funds(self):
+        acquisition = event(id='SSE_789', source_id='789', name='无法匹配的新购入项目', business_type='新购入',
+                            documents=[{'title': '新购入披露', 'url': 'https://www.sse.com.cn/acquisition.pdf'}])
+        expansion = event(id='SSE_456', source_id='456', business_type='扩募', fund_code='508001')
+        catalog_only = fund(code='508002', name='乙封闭式基础设施证券投资基金')
+        inputs = source([fund(), catalog_only], [event(), expansion, acquisition])
+        original = deepcopy(inputs)
+        data, audit = build_snapshot(inputs, now=NOW)
+        self.assertEqual(inputs, original)
+        self.assertEqual(data['coverage']['event_count'], 2)
+        self.assertEqual(data['coverage']['excluded_event_count'], 1)
+        self.assertEqual(data['quality']['business_types'], {'首发': 1, '扩募': 1})
+        self.assertEqual(data['quality']['scope_exclusions'][0]['record'], acquisition)
+        self.assertIn('不纳入', data['quality']['scope_exclusions'][0]['reason'])
+        self.assertEqual(data['changes']['excluded_event_ids'], ['SSE_789'])
+        self.assertNotIn('SSE_789', {row['event_id'] for row in audit})
+        self.assertEqual(validate(data)['issued_funds'], 2)
+        self.assertEqual(len(data['funds']), 2)
+        linked = {row['id']: row['fund_id'] for row in data['events']}
+        self.assertEqual(linked['SSE_123'], linked['SSE_456'])
+
+    def test_scope_exclusion_is_not_a_missing_source_record(self):
+        data, _ = build_snapshot(source([fund()], [event()]), now=NOW)
+        previous = deepcopy(data)
+        previous['events'][0]['business_type'] = '新购入'
+        excluded = event(business_type='新购入')
+        data, _ = build_snapshot(source([fund()], [excluded]), previous=previous, now=NOW)
+        self.assertEqual(data['changes']['missing_event_ids'], [])
+        self.assertEqual(data['changes']['excluded_event_ids'], ['SSE_123'])
+        self.assertEqual(data['events'], [])
+        self.assertEqual(len(data['funds']), 1)
+
+    def test_validation_rejects_acquisition_as_counted_filing(self):
+        data, _ = build_snapshot(source([fund()], [event()]), now=NOW)
+        data['events'][0]['business_type'] = '新购入'
+        with self.assertRaisesRegex(ValueError, 'business type'):
+            validate(data)
 
     def test_future_listing_is_a_plan_not_issued(self):
         data, _ = build_snapshot(source([fund(listing_date='2026-11-01', stage='已上市')], [event()]), now=NOW)

@@ -131,6 +131,8 @@ Node 只用于 JavaScript 语法检查，查看页面和采集数据不需要安
 
 公募部分使用独立采集器和`data/public_reits.json`，基金与首发、扩募申报分别建模。各版本拟发售金额、发售金额、外部贷款、收益预测与担保补足按具体业务事件记录；缺失值保留为空。机构间项目分别记录受理、通过、发行日期与发行状态。
 
+公募业务类型只纳入首发和扩募。采集器保留交易所新购入原记录；未归为扩募的单独新购入在合并快照时按范围排除，不计入申报数量，不视为采集失败。排除记录的原业务类型、来源和附件保存在`workpapers/public/scope_exclusions.json`及快照的`quality.scope_exclusions`；云端运行时底稿位于该批次`workpapers/daily_refresh/`。官方已发行基金名录不因排除新购入事件而删减。
+
 字段配置为`config/project_field_scope.json`，字段新增或修订后可用`python3 scripts/apply_project_field_scope.py`应用到现有快照，保留原有项目值和数据采集时间。采集器刷新按稳定ID保留研究字段。字段映射及来源核对位置见[字段范围](docs/project-fields.md)。
 
 ## 网站部署

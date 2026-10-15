@@ -107,7 +107,7 @@ function currentRecords() {
   return baseRecords().filter(record => {
     const fund = isEventView() ? fundFor(record) : record;
     const searchText = [record.name, record.short_name, record.code, record.fund_code, record.issuer, record.manager, record.origin, record.financial_advisor, record.asset_type, record.product_type, record.province, record.city, record.stage, record.official_status, valueText(record.aliases), valueText(record.underlying_assets), fund?.short_name, fund?.name, fund?.code].join(' ');
-    const businessMatch = !isEventView() || !state.business || (state.business === 'expansion' ? ['扩募', '新购入'].includes(record.business_type) : record.business_type === state.business);
+    const businessMatch = !isEventView() || !state.business || record.business_type === state.business;
     return (!state.ex || record.exchange === state.ex) && (!state.product || productLabel(record) === state.product)
       && (!state.asset || assetLabel(record) === state.asset) && (!state.stage || stageFor(record) === state.stage)
       && (!state.manager || managerLabel(record) === state.manager) && businessMatch
@@ -171,10 +171,10 @@ function publicCellHTML(record, spec, context) {
     const fund = context.fund;
     const code = context.isEvent ? record.fund_code || fund?.code : record.code;
     const key = recordKey(record);
-    const extra = context.isEvent ? [] : (eventsByFund.get(record.id) || []).filter(item => item.business_type !== '首发');
+    const extra = context.isEvent ? [] : (eventsByFund.get(record.id) || []).filter(item => item.business_type === '扩募');
     const classificationTag = record.classification_source === 'keyword' && !record.official_asset_type ? '<span class="confidence-tag likely">名称初判</span>' : '';
     const parent = context.isEvent && fund ? `<button class="detail-button public-parent-link" data-public-fund="${html(fund.id)}">所属基金：${html(fund.short_name || fund.name)} ↗</button>` : '';
-    const related = extra.length ? `<button class="detail-button public-parent-link" data-public-fund="${html(record.id)}">${extra.length}项扩募／新购入记录 ↗</button>` : '';
+    const related = extra.length ? `<button class="detail-button public-parent-link" data-public-fund="${html(record.id)}">${extra.length}项扩募记录 ↗</button>` : '';
     return `<div class="name-line"><button class="star${favorites.has(key) ? ' saved' : ''}" data-public-save="${html(key)}" aria-label="${favorites.has(key) ? '取消关注' : '关注'}${html(text)}" aria-pressed="${favorites.has(key)}">${favorites.has(key) ? '★' : '☆'}</button><button class="name-link" data-public-${context.isEvent ? 'event' : 'fund'}="${html(record.id)}">${html(text)}</button></div><div class="row-sub">${code ? `<span class="public-fund-code">${html(code)}</span>` : '<span class="muted">代码待披露</span>'}${classificationTag}${parent}${related}</div>`;
   }
   if (!present(raw) || (Array.isArray(raw) && !raw.length)) return `<span class="public-field-empty">${html(text)}</span>`;
@@ -192,7 +192,7 @@ function render() {
   const unit = eventView ? '条' : '只';
   const managerCount = new Set(records.map(managerLabel).filter(item => item !== '未披露')).size;
   const stats = eventView
-    ? [['当前匹配申报', records.length, '条', '按交易所官方申报ID统计'], ['首发申报', records.filter(item => item.business_type === '首发').length, '条', '当前筛选中的首次发行申报'], ['扩募与新购入', records.filter(item => ['扩募', '新购入'].includes(item.business_type)).length, '条', '各次业务分别保留'], ['中止与终止', records.filter(item => /中止|终止|撤回/.test(officialStatus(item))).length, '条', '历史申报仍可检索']]
+    ? [['当前匹配申报', records.length, '条', '按交易所官方申报ID统计'], ['首发申报', records.filter(item => item.business_type === '首发').length, '条', '当前筛选中的首次发行申报'], ['扩募申报', records.filter(item => item.business_type === '扩募').length, '条', '每次扩募分别保留，关联原基金'], ['中止与终止', records.filter(item => /中止|终止|撤回/.test(officialStatus(item))).length, '条', '历史申报仍可检索']]
     : [['当前匹配基金', records.length, '只', '每只基金一条记录'], ['已上市', records.filter(item => item.stage === '已上市').length, '只', '以基金上市资料为准'], ['成立待上市', records.filter(item => item.stage === '成立待上市').length, '只', '已成立、尚未上市'], ['基金管理人', managerCount, '家', '当前筛选中的已披露管理人']];
   $('public-stats').innerHTML = stats.map(([title, count, suffix, foot]) => `<div class="stat"><div class="stat-label">${title}</div><div class="stat-value">${format(count)}<small>${suffix}</small></div><div class="stat-foot">${foot}</div></div>`).join('');
   renderBars('public-product-chart', grouped(records, productLabel), 'product');
@@ -206,9 +206,9 @@ function render() {
   $('public-business-field').hidden = !eventView;
   $('public-list-heading').textContent = eventView ? '申报审核' : '已发行基金';
   $('public-record-total').textContent = `${format(records.length)}${unit}`;
-  $('public-view-note').textContent = eventView ? '每次申报一条记录 · 首发、扩募与新购入分别保留' : '每只基金一条记录 · 包含成立待上市基金';
+  $('public-view-note').textContent = eventView ? '每次申报一条记录 · 区分首发与扩募' : '每只基金一条记录 · 包含成立待上市基金';
   $('public-list-note').textContent = eventView ? '点击名称查看申报资料，点击所属基金查阅历次业务。' : '点击名称查看基金资料、底层资产与历次申报。';
-  $('public-table-caption').textContent = eventView ? '公募REITs首发、扩募与新购入申报记录' : '公募REITs已发行基金';
+  $('public-table-caption').textContent = eventView ? '公募REITs首发与扩募申报记录' : '公募REITs已发行基金';
   $('public-scope-text').textContent = `统计、图表与表格共用当前筛选的${format(records.length)}${unit}${eventView ? '申报记录' : '基金'}`;
   const pages = Math.max(1, Math.ceil(records.length / state.pageSize));
   state.page = Math.min(pages, Math.max(1, state.page));
@@ -274,7 +274,7 @@ function renderMetadata() {
 }
 function applySnapshot(data, cached) {
   snapshot = validate(data); fromCache = cached;
-  funds = snapshot.funds; events = snapshot.events;
+  funds = snapshot.funds; events = snapshot.events.filter(event => ['首发', '扩募'].includes(event.business_type));
   fundById = new Map(funds.map(fund => [fund.id, fund]));
   eventById = new Map(events.map(event => [event.id, event]));
   eventsByFund = new Map();
@@ -372,7 +372,7 @@ function openFund(id) {
     progress
   });
   const relatedHTML = related.length ? `<div class="public-event-list">${related.map(event => `<button class="public-event-card" data-public-event="${html(event.id)}"><span class="public-event-card-title"><span class="mini-tag rights-tag">${html(event.business_type || '待确认')}</span>${html(event.name)}</span><span class="public-event-card-meta"><span>${html(eventStage(event))}${eventStage(event) !== officialStatus(event) ? ` · 官方：${html(officialStatus(event))}` : ''}</span><time>${html(actualDate(event.updated_date) || actualDate(event.accepted_date) || '日期未披露')}</time><span>查看申报 ↗</span></span></button>`).join('')}</div>` : '<p class="muted">暂无已关联的交易所申报记录。</p>';
-  showDetail('基金详情', `<div class="detail-name">${html(fund.short_name || fund.name)}</div>${fund.short_name && fund.short_name !== fund.name ? `<p class="public-full-name">${html(fund.name)}</p>` : ''}${groups}<section class="public-detail-section"><h3>首发、扩募与新购入 <span class="muted">${related.length}条</span></h3>${relatedHTML}</section><section class="public-detail-section"><h3>基金披露资料</h3>${documentsHTML(fund.documents)}</section><div class="detail-source">${sourceLink(fund.source_url, '打开官方基金资料')}<p>基金记录：${html(fund.id)}</p></div>`);
+  showDetail('基金详情', `<div class="detail-name">${html(fund.short_name || fund.name)}</div>${fund.short_name && fund.short_name !== fund.name ? `<p class="public-full-name">${html(fund.name)}</p>` : ''}${groups}<section class="public-detail-section"><h3>首发与扩募 <span class="muted">${related.length}条</span></h3>${relatedHTML}</section><section class="public-detail-section"><h3>基金披露资料</h3>${documentsHTML(fund.documents)}</section><div class="detail-source">${sourceLink(fund.source_url, '打开官方基金资料')}<p>基金记录：${html(fund.id)}</p></div>`);
 }
 function openEvent(id) {
   const event = eventById.get(id); if (!event) return;
@@ -454,7 +454,7 @@ export function initializePublicReits() {
   $('public-expansion-shortcut').addEventListener('click', () => {
     Object.assign(state, { ex: '', search: '', product: '', asset: '', manager: '', savedOnly: false });
     $('public-search').value = ''; $('public-saved-only').checked = false;
-    switchView('events', 'expansion');
+    switchView('events', '扩募');
     $('public-projects').scrollIntoView({ block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
   });
   $('public-panel').addEventListener('click', event => {

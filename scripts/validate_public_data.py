@@ -9,7 +9,7 @@ from collections import Counter
 from pathlib import Path
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from collectors.public_reits import ISSUED_STAGES, official_url
+from collectors.public_reits import INCLUDED_BUSINESS_TYPES, ISSUED_STAGES, official_url
 
 
 def validate(data):
@@ -27,6 +27,12 @@ def validate(data):
         raise ValueError("Duplicate official fund code")
     if data["coverage"].get("fund_count") != len(funds) or data["coverage"].get("event_count") != len(events):
         raise ValueError("Coverage counts do not reconcile")
+    exclusions = data.get("quality", {}).get("scope_exclusions", [])
+    excluded_ids = [row.get("record", {}).get("id") for row in exclusions]
+    if (data["coverage"].get("excluded_event_count", 0) != len(exclusions) or
+            len(excluded_ids) != len(set(excluded_ids)) or event_ids.intersection(excluded_ids) or
+            any(row.get("record", {}).get("business_type") != "新购入" or not row.get("reason") for row in exclusions)):
+        raise ValueError("Scope exclusions do not reconcile")
     for f in funds:
         if not f.get("name") or f["exchange"] not in ("上交所", "深交所") or not official_url(f.get("source_url")):
             raise ValueError("Missing official fund identity/source")
@@ -50,7 +56,7 @@ def validate(data):
             raise ValueError("Unlinked filing/expansion")
         if e["exchange"] != f["exchange"] or str(e.get("fund_code") or "") != str(f.get("code") or ""):
             raise ValueError("Cross-exchange or mismatched fund linkage")
-        if e.get("business_type") not in ("首发", "扩募", "新购入") or not e.get("official_status"):
+        if e.get("business_type") not in INCLUDED_BUSINESS_TYPES or not e.get("official_status"):
             raise ValueError("Filing lacks business type or exact official status")
         if not official_url(e.get("source_url")) or not e.get("source_id"):
             raise ValueError("Filing lacks official identity/source")
@@ -58,6 +64,7 @@ def validate(data):
         raise ValueError("Unresolved expansion linkage")
     return {"ok": True, "funds": len(funds), "issued_funds": sum(f["stage"] in ISSUED_STAGES for f in funds),
             "filings": len(events), "business_types": dict(Counter(e["business_type"] for e in events)),
+            "excluded_filings": len(exclusions),
             "fund_codes_unique": True, "filing_ids_unique": True, "unlinked_events": 0}
 
 
