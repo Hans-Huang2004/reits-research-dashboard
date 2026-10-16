@@ -147,6 +147,52 @@
       "collected_at": "2026-10-16T09:16:11+08:00",
       "sequence": 15,
       "first_retained_at": "2026-10-16T13:25:02+08:00"
+    },
+    {
+      "population": "public",
+      "path": "snapshots/public/20261015-141326.json",
+      "retained_path": "workpapers/project_updates/inputs/public/0178424bd07360535d0b86921ade4a150b52d61aec963d7029cbbd1b15cd415b.json",
+      "sha256": "0178424bd07360535d0b86921ade4a150b52d61aec963d7029cbbd1b15cd415b",
+      "collected_at": "2026-10-15T14:15:16+08:00",
+      "sequence": 16,
+      "first_retained_at": "2026-10-16T13:43:57+08:00"
+    },
+    {
+      "population": "institutional",
+      "path": "workpapers/daily_refresh/38691124697-1/collected/institutional.json",
+      "retained_path": "workpapers/project_updates/inputs/institutional/e148f9cd8169e22efe8c5249eb2fb77d9e7597930c5df7d5a295c96ffd86a4de.json",
+      "sha256": "e148f9cd8169e22efe8c5249eb2fb77d9e7597930c5df7d5a295c96ffd86a4de",
+      "collected_at": "2026-10-15T14:14:01+08:00",
+      "sequence": 17,
+      "first_retained_at": "2026-10-16T13:43:57+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-111609-671548.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/fa95fea125f8eb7887186cfc1cc35e21e19e075de23eed1ce2273618314b75f3.json",
+      "sha256": "fa95fea125f8eb7887186cfc1cc35e21e19e075de23eed1ce2273618314b75f3",
+      "collected_at": "2026-10-16T11:16:09+08:00",
+      "sequence": 18,
+      "first_retained_at": "2026-10-16T13:43:57+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-112031-710774.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/9260fb8f72e267b981e7b738604dfcfdfb6fe2939c7b53f7bd58fd56e1dd40e8.json",
+      "sha256": "9260fb8f72e267b981e7b738604dfcfdfb6fe2939c7b53f7bd58fd56e1dd40e8",
+      "collected_at": "2026-10-16T11:20:31+08:00",
+      "sequence": 19,
+      "first_retained_at": "2026-10-16T13:43:57+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-134351-152929.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/bf4ce0680689ade6e591d1880243746915611e16561254a1bb3709037baecc75.json",
+      "sha256": "bf4ce0680689ade6e591d1880243746915611e16561254a1bb3709037baecc75",
+      "collected_at": "2026-10-16T13:43:51+08:00",
+      "sequence": 20,
+      "first_retained_at": "2026-10-16T13:43:57+08:00",
+      "current_path": "data/ndrc_recommendations.json"
     }
   ],
   "rejected_inputs": []
