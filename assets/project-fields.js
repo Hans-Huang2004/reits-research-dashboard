@@ -1,5 +1,5 @@
 /* Shared field meaning and formatting for the project tables, details and exports. */
-import { PUBLIC_FIELDS, INSTITUTIONAL_FIELDS } from './project-field-catalog.js?v=20261015-origin-2';
+import { PUBLIC_FIELDS, INSTITUTIONAL_FIELDS } from './project-field-catalog.js?v=20261016-subject-roles-1';
 import { missingFieldText } from './field-evidence.js?v=20261015-origin-2';
 export { PUBLIC_FIELDS, INSTITUTIONAL_FIELDS };
 
@@ -20,7 +20,6 @@ export function getPublicField(record, key, context = {}) {
     case 'business_type': return scalar(record.business_type || (context.isEvent ? '' : '首发'));
     case 'exchange': return scalar(record.exchange);
     case 'product_type': return scalar(record.product_type || fund?.product_type);
-    case 'issuer': return scalar(record.issuer); // Originator and issuer are distinct roles.
     case 'manager': return scalar(record.manager);
     case 'asset_type': return scalar(record.asset_type);
     case 'underlying_assets': return scalar(record.underlying_assets);

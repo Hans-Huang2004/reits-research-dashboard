@@ -41,14 +41,6 @@ export const PUBLIC_FIELDS = [
     "core": true
   },
   {
-    "key": "issuer",
-    "label": "发行人（单独披露）",
-    "type": "text",
-    "unit": "",
-    "group": "基本资料",
-    "core": false
-  },
-  {
     "key": "origin",
     "label": "原始权益人/发起人",
     "type": "text",

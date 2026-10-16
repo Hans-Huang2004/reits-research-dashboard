@@ -8,10 +8,11 @@ test('expansion never inherits a parent fund first-offering amount', () => {
   assert.equal(getPublicField({business_type:'扩募'},'sale_amount_cny_100m',{fund,isEvent:true}), null);
   assert.equal(getPublicField({business_type:'首发'},'sale_amount_cny_100m',{fund,isEvent:true}), 20);
 });
-test('issuer does not silently become originator', () => {
+test('public subjects exclude a standalone issuer and preserve each batch origin', () => {
   assert.equal(getPublicField({origin:'原始权益人'},'issuer'), null);
   assert.equal(PUBLIC_FIELDS.find(f => f.key === 'origin').core, true);
-  assert.equal(PUBLIC_FIELDS.find(f => f.key === 'issuer').core, false);
+  assert.equal(PUBLIC_FIELDS.some(f => f.key === 'issuer'), false);
+  assert.equal(PUBLIC_FIELDS.length, 19);
   const fund = {origin:'首发原始权益人'};
   assert.equal(getPublicField({origin:'扩募原始权益人'},'origin',{fund,isEvent:true}),'扩募原始权益人');
   assert.equal(getPublicField({},'origin',{fund,isEvent:true}),null);
@@ -38,11 +39,11 @@ test('three document versions stay separate and forecasts retain annualization t
   assert.equal(getPublicField(r,'project_return_forecast'),r.project_return_forecast);
 });
 test('disclosure details escape source text and keep unknown reasons separate from zero', () => {
-  const record = {research_field_sources:{external_loan_amount_cny_100m:[{title:'<script>bad</script>',url:'https://www.sse.com.cn/file.pdf',published_at:'2026-10-14',page:3}]},field_availability:{issuer:{status:'unverified',reason:'未取得独立发行人证据'}}};
+  const record = {research_field_sources:{external_loan_amount_cny_100m:[{title:'<script>bad</script>',url:'https://www.sse.com.cn/file.pdf',published_at:'2026-10-14',page:3}]},field_availability:{financial_advisor:{status:'unverified',reason:'未取得财务顾问证据'}}};
   const view = fieldEvidenceHTML(record,'external_loan_amount_cny_100m');
   assert.ok(view.includes('&lt;script&gt;'));
   assert.ok(view.includes('2026-10-14'));
   assert.ok(view.includes('第3页'));
-  assert.equal(missingFieldText(record,'issuer'),'待核实');
-  assert.equal(fieldEvidence({research_field_sources:{issuer:[{url:'javascript:alert(1)'}]}},'issuer').length,0);
+  assert.equal(missingFieldText(record,'financial_advisor'),'待核实');
+  assert.equal(fieldEvidence({research_field_sources:{financial_advisor:[{url:'javascript:alert(1)'}]}},'financial_advisor').length,0);
 });

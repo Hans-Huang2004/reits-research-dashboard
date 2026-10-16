@@ -12,6 +12,8 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
+# Reference-column definitions retain the workbook's original order, including
+# columns excluded from the display catalog.
 PUBLIC = [
     ("sequence", "integer", "基本资料", True),
     ("name", "text", "基本资料", True),
@@ -55,6 +57,42 @@ def write(path, data):
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def build_catalog(reference_headers):
+    """Map every source header before selecting the fields shown by the site."""
+    catalog = {"schema_version": 1, "public": [], "institutional": []}
+    mapping = []
+    for sheet_name, category, definitions in (("公募REITs项目", "public", PUBLIC), ("私募REITs项目", "institutional", INSTITUTIONAL)):
+        headers = [header for header in reference_headers if header["sheet"] == sheet_name]
+        if len(headers) != len(definitions):
+            raise ValueError("Reference header count changed: " + sheet_name)
+        for header, (key, value_type, group, core) in zip(headers, definitions):
+            label = str(header["value"]).replace("\n", "").strip()
+            if category == "public" and key == "manager":
+                label = "基金管理人"
+            if value_type == "amount" and "亿元" not in label:
+                label += "（亿元）"
+            spec = {"key": key, "label": label, "type": value_type, "unit": "亿元" if value_type == "amount" else "",
+                    "group": group, "core": core}
+            source_mapping = {"category": category, "sheet": sheet_name, "source_cell": header["coordinate"],
+                              "source_header": header["value"], **spec,
+                              "unit_policy": "站点规范单位为亿元；参考公募表头未显式写金额单位，不导入其数值" if category == "public" and value_type == "amount" else "按字段原意映射",
+                              "value_policy": "只调整字段范围；原工作簿项目值不导入"}
+            if category == "public" and key == "issuer":
+                source_mapping.update({"included_in_display": False,
+                                       "exclusion_reason": "公募REITs按原始权益人/发起人、基金管理人等具体角色展示"})
+            else:
+                catalog[category].append(spec)
+            mapping.append(source_mapping)
+    origin = {"key": "origin", "label": "原始权益人/发起人", "type": "text", "unit": "",
+              "group": "基本资料", "core": True}
+    manager_index = next(i for i, field in enumerate(catalog["public"]) if field["key"] == "manager")
+    catalog["public"].insert(manager_index, origin)
+    mapping.append({"category": "public", "source_type": "official_exchange_project_metadata", **origin,
+                    "source_fields": {"SSE": "FULL_NAME", "SZSE": "primitiveInterestsor"},
+                    "value_policy": "直接展示同一基金或申报的原始权益人，不从首发回填扩募"})
+    return catalog, mapping
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("workbook", type=Path)
@@ -65,39 +103,18 @@ def main():
     now = datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds")
     workbook = openpyxl.load_workbook(source, read_only=True, data_only=False)
     raw = []
-    catalog = {"schema_version": 1, "public": [], "institutional": []}
-    mapping = []
-    for sheet_name, category, definitions in (("公募REITs项目", "public", PUBLIC), ("私募REITs项目", "institutional", INSTITUTIONAL)):
+    for sheet_name, definitions in (("公募REITs项目", PUBLIC), ("私募REITs项目", INSTITUTIONAL)):
         sheet = workbook[sheet_name]
         sheet.reset_dimensions()
         cells = list(next(sheet.iter_rows(min_row=1, max_row=1)))
         populated = [cell for cell in cells if cell.value is not None]
         if len(populated) != len(definitions):
             raise ValueError("Reference header count changed: " + sheet_name)
-        for cell, (key, value_type, group, core) in zip(populated, definitions):
+        for cell in populated:
             raw.append({"sheet": sheet_name, "coordinate": cell.coordinate, "value": cell.value,
                         "data_type": cell.data_type, "number_format": cell.number_format})
-            label = str(cell.value).replace("\n", "").strip()
-            if category == "public":
-                label = {"issuer": "发行人（单独披露）", "manager": "基金管理人"}.get(key, label)
-            if value_type == "amount" and "亿元" not in label:
-                label += "（亿元）"
-            spec = {"key": key, "label": label, "type": value_type, "unit": "亿元" if value_type == "amount" else "",
-                    "group": group, "core": core}
-            catalog[category].append(spec)
-            mapping.append({"category": category, "sheet": sheet_name, "source_cell": cell.coordinate,
-                            "source_header": cell.value, **spec,
-                            "unit_policy": "站点规范单位为亿元；参考公募表头未显式写金额单位，不导入其数值" if category == "public" and value_type == "amount" else "按字段原意映射",
-                            "value_policy": "只调整字段范围；原工作簿项目值不导入"})
     workbook.close()
-    # The exchange role is separate from the reference workbook's issuer column.
-    origin = {"key": "origin", "label": "原始权益人/发起人", "type": "text", "unit": "",
-              "group": "基本资料", "core": True}
-    manager_index = next(i for i, field in enumerate(catalog["public"]) if field["key"] == "manager")
-    catalog["public"].insert(manager_index, origin)
-    mapping.append({"category": "public", "source_type": "official_exchange_project_metadata", **origin,
-                    "source_fields": {"SSE": "FULL_NAME", "SZSE": "primitiveInterestsor"},
-                    "value_policy": "直接展示同一基金或申报的原始权益人；不替代独立发行人，不从首发回填扩募"})
+    catalog, mapping = build_catalog(raw)
     raw_path = ROOT / "data/raw/field_scope" / digest[:12] / "headers.json"
     raw_path.parent.mkdir(parents=True, exist_ok=True)
     if raw_path.exists():

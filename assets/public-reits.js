@@ -2,7 +2,7 @@
 'use strict';
 import { REFRESH_SCHEDULE, refreshWarning } from './refresh-health.js?v=20261016-refresh-1';
 import { closeFilterMenu, syncFilterSelects } from './filter-select.js?v=20261014-filter-menu-1';
-import { PUBLIC_FIELDS, getPublicField, formatProjectField, projectFieldCellText } from './project-fields.js?v=20261015-origin-2';
+import { PUBLIC_FIELDS, getPublicField, formatProjectField, projectFieldCellText } from './project-fields.js?v=20261016-subject-roles-1';
 import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-origin-2';
 import { initializeNdrcRecommendations, setNdrcRecommendationsActive, loadNdrcRecommendations, renderNdrcRecommendations, renderNdrcMetadata, exportNdrcCSV, openNdrcSources, openNdrcRecommendation, ndrcReverseLinksHTML } from './ndrc-recommendations.js?v=20261016-clean-copy-1';
 
@@ -18,7 +18,7 @@ const normalized = value => String(value ?? '').replace(/\s/g, '').toLowerCase()
 const state = { view: 'funds', fields: 'core', ex: '', search: '', product: '', asset: '', stage: '', business: '', manager: '', savedOnly: false, direction: -1, page: 1, pageSize: 10 };
 const CORE_FIELD_KEYS = new Set(['name', 'business_type', 'exchange', 'product_type', 'origin', 'manager', 'sale_amount_cny_100m', 'asset_type', 'project_status', 'updated_date']);
 const FIELD_GROUPS = [
-  ['基本资料', ['name', 'business_type', 'exchange', 'product_type', 'origin', 'manager', 'issuer', 'financial_advisor']],
+  ['基本资料', ['name', 'business_type', 'exchange', 'product_type', 'origin', 'manager', 'financial_advisor']],
   ['各版本融资规模', ['proposed_sale_amount_application_cny_100m', 'proposed_sale_amount_feedback_cny_100m', 'proposed_sale_amount_inquiry_cny_100m', 'sale_amount_cny_100m', 'external_loan_amount_cny_100m']],
   ['资产与预测', ['asset_type', 'underlying_assets', 'project_return_forecast']],
   ['进度与增信', ['project_status', 'updated_date', 'guarantee_support']]
@@ -110,7 +110,7 @@ function currentRecords() {
   const needle = normalized(state.search);
   return baseRecords().filter(record => {
     const fund = isEventView() ? fundFor(record) : record;
-    const searchText = [record.name, record.short_name, record.code, record.fund_code, record.issuer, record.manager, record.origin, record.financial_advisor, record.asset_type, record.product_type, record.province, record.city, record.stage, record.official_status, valueText(record.aliases), valueText(record.underlying_assets), fund?.short_name, fund?.name, fund?.code].join(' ');
+    const searchText = [record.name, record.short_name, record.code, record.fund_code, record.manager, record.origin, record.financial_advisor, record.asset_type, record.product_type, record.province, record.city, record.stage, record.official_status, valueText(record.aliases), valueText(record.underlying_assets), fund?.short_name, fund?.name, fund?.code].join(' ');
     const businessMatch = !isEventView() || !state.business || record.business_type === state.business;
     return (!state.ex || record.exchange === state.ex) && (!state.product || productLabel(record) === state.product)
       && (!state.asset || assetLabel(record) === state.asset) && (!state.stage || stageFor(record) === state.stage)
@@ -161,7 +161,7 @@ function publicColumnClass(spec) {
   if (spec.key === 'sequence') return 'public-sequence-cell';
   if (spec.key.endsWith('_cny_100m')) return 'numeric public-money-cell';
   if (spec.key === 'updated_date') return 'date';
-  if (['issuer', 'origin'].includes(spec.key)) return 'public-issuer-cell';
+  if (spec.key === 'origin') return 'public-issuer-cell';
   if (spec.key === 'manager') return 'mgr';
   if (spec.key === 'asset_type') return 'public-asset-cell';
   if (['underlying_assets', 'project_return_forecast', 'guarantee_support'].includes(spec.key)) return 'public-narrative-cell';
