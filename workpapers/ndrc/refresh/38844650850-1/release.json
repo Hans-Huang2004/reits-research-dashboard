@@ -1,0 +1,52 @@
+{
+  "status": "complete",
+  "attempt_ok": true,
+  "date": "2026-10-16",
+  "batch_id": "38844650850-1",
+  "last_attempt_at": "2026-10-16T11:16:09+08:00",
+  "completed_at": "2026-10-16T11:16:14+08:00",
+  "last_successful_at": "2026-10-16T11:16:14+08:00",
+  "public_snapshot_sha256": "46a728b73a6fa8abd3366cf98130fbc4f63fa45884c1292ab9b70cb43d26f7ab",
+  "review_config_sha256": "081dc0901fab1e19aba56418eb2e0bd4c6e0c18d7557714b4d4bd2598c88a4e7",
+  "implementation_sha256": "9ad474a063427ae7fa6ec2845cede37f8b8b8a9af1f3ca924262cfd4bfbc5fdb",
+  "snapshot_sha256": "fa95fea125f8eb7887186cfc1cc35e21e19e075de23eed1ce2273618314b75f3",
+  "validation": {
+    "ok": true,
+    "items": 137,
+    "official_total": 137,
+    "pages": 3,
+    "identities_unique": true,
+    "raw_to_normalized_count_difference": 0,
+    "derived_not_official_ids": true,
+    "match_statuses": {
+      "confirmed": 126,
+      "unmatched": 9,
+      "candidate": 2
+    },
+    "relations": 126,
+    "business_types": {
+      "新购入": 16,
+      "首发": 111,
+      "待核实": 10
+    },
+    "earliest_recommended_date": "2020-12-30",
+    "latest_recommended_date": "2026-09-10",
+    "negative_acceptance_intervals": 16
+  },
+  "latest_recommended_date": "2026-09-10",
+  "command": [
+    "/opt/hostedtoolcache/Python/3.11.17/x64/bin/python",
+    "-m",
+    "collectors.ndrc_recommendations",
+    "--output",
+    "/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/ndrc/refresh/38844650850-1/ndrc_candidate.json",
+    "--public-input",
+    "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/public_reits.json",
+    "--raw-dir",
+    "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/ndrc/refresh/38844650850-1",
+    "--work-dir",
+    "/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/ndrc/refresh/38844650850-1/collection"
+  ],
+  "raw_dir": "data/raw/ndrc/refresh/38844650850-1",
+  "work_dir": "workpapers/ndrc/refresh/38844650850-1"
+}
