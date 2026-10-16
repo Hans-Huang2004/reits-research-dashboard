@@ -1,7 +1,6 @@
 """Collect both REIT libraries as one validated, traceable daily release."""
 from __future__ import annotations
 import argparse
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 import hashlib
 import json
@@ -122,9 +121,10 @@ def main(argv=None):
             subprocess.run(commands[key], cwd=ROOT, check=True, stdout=log, stderr=subprocess.STDOUT)
         return key
     try:
-        with ThreadPoolExecutor(max_workers=2) as executor:
-            for future in as_completed([executor.submit(collect, key) for key in FILES]):
-                print(json.dumps({"collected": future.result()}), flush=True)
+        # Both populations share the same exchange hosts. Avoid multiplying
+        # request rates across two independent subprocesses.
+        for key in FILES:
+            print(json.dumps({"collected": collect(key)}), flush=True)
         manifest = publish_candidates(candidates, ROOT / "data", batch_id, started_at)
         manifest.update({"raw_dir": str(raw.relative_to(ROOT)), "workpaper": str(work.relative_to(ROOT)),
                          "commands": {key: [str(Path(arg).relative_to(ROOT)) if str(arg).startswith(str(ROOT) + "/") else arg for arg in command] for key, command in commands.items()},
@@ -137,6 +137,10 @@ def main(argv=None):
         write(work / "failure.json", {"batch_id": batch_id, "failed_at": datetime.now(BEIJING).isoformat(timespec="seconds"),
                                       "error": str(exc), "policy": "Do not commit or deploy a partial collection"})
         print("Combined refresh failed; do not publish partial data: " + str(exc), file=sys.stderr)
+        for key in FILES:
+            log_path = work / (key + ".log")
+            if log_path.exists():
+                print(f"Collector diagnostics ({key}):\n" + log_path.read_text(encoding="utf-8")[-12000:], file=sys.stderr)
         return 1
 
 

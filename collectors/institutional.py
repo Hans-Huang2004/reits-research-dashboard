@@ -14,7 +14,6 @@ import os
 import re
 import sys
 import tempfile
-import time
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
@@ -22,6 +21,7 @@ from copy import deepcopy
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from collectors.http_policy import PACER, backoff
 
 KEYWORDS = ("持有型不动产", "机构间REIT")
 SSE_ENDPOINT = "https://query.sse.com.cn/sseQuery/commonSoaQuery.do"
@@ -181,6 +181,7 @@ def http_get_json(url, params, referer):
     error = None
     for attempt in range(3):
         try:
+            PACER.wait(target)
             with urllib.request.urlopen(request, timeout=30) as response:
                 raw = response.read().decode("utf-8-sig")
             try:
@@ -193,7 +194,7 @@ def http_get_json(url, params, referer):
         except Exception as exc:
             error = exc
             if attempt < 2:
-                time.sleep(1 + attempt)
+                backoff(target, exc, attempt)
     raise CollectionError("Request failed: " + url + " (" + str(error) + ")")
 
 
@@ -466,7 +467,7 @@ def write_snapshot(snapshot, output, archive_dir=None):
     _atomic_json(output,snapshot)
 
 
-def verify_project_links(snapshot, request=None, workers=4):
+def verify_project_links(snapshot, request=None, workers=1):
     """Validate identity through each official detail API, not just an HTML 200."""
     fetch = request or http_get_json
     def check(row):
@@ -484,8 +485,11 @@ def verify_project_links(snapshot, request=None, workers=4):
         if not valid:
             raise CollectionError('Official detail does not match project identity: '+row['id'])
         return row['id']
-    with ThreadPoolExecutor(max_workers=workers) as executor:
-        verified = set(executor.map(check,snapshot['items']))
+    if workers == 1:
+        verified = {check(row) for row in snapshot['items']}
+    else:
+        with ThreadPoolExecutor(max_workers=workers) as executor:
+            verified = set(executor.map(check,snapshot['items']))
     checked_at = datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(timespec='seconds')
     for row in snapshot['items']:
         if row['id'] in verified:

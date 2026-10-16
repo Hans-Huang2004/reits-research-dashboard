@@ -14,13 +14,13 @@ import json
 import math
 import re
 import threading
-import time
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from collectors.http_policy import PACER, backoff
 
 BASE = "https://reits.szse.cn"
 QUERY = BASE + "/api/reits/projectrends/query"
@@ -172,6 +172,7 @@ class SourceReader:
         error = None
         for attempt in range(3):
             try:
+                PACER.wait(target)
                 with urllib.request.urlopen(request, timeout=45) as response:
                     raw = response.read()
                     content_type = response.headers.get("Content-Type", "")
@@ -180,7 +181,7 @@ class SourceReader:
             except Exception as exc:
                 error = exc
                 if attempt < 2:
-                    time.sleep(attempt + 1)
+                    backoff(target, exc, attempt)
         else:
             raise CollectionError("SZSE request failed: " + target + " (" + str(error) + ")")
         filename = key + ".json"

@@ -6,7 +6,6 @@ use the returned checked result; a missing page or detail fails collection.
 from __future__ import annotations
 
 import argparse
-from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 import hashlib
 import html
@@ -15,10 +14,10 @@ import math
 from pathlib import Path
 import re
 import threading
-import time
 import urllib.parse
 import urllib.request
 from zoneinfo import ZoneInfo
+from collectors.http_policy import PACER, backoff
 
 API = "https://query.sse.com.cn/"
 REFERER = "https://www.sse.com.cn/reits/home/"
@@ -88,6 +87,7 @@ class RawClient:
         error = None
         for attempt in range(3):
             try:
+                PACER.wait(target)
                 req = urllib.request.Request(target, headers={"User-Agent":"Mozilla/5.0 (REITsResearchDashboard)", "Referer":referer, "Accept":"application/json,text/javascript,*/*"})
                 with urllib.request.urlopen(req, timeout=40) as response:
                     body = response.read()
@@ -114,7 +114,7 @@ class RawClient:
             except Exception as exc:
                 error = exc
                 if attempt < 2:
-                    time.sleep(1 + attempt)
+                    backoff(target, exc, attempt)
         raise CollectionError("Request failed: " + target + " : " + str(error))
 
 
@@ -286,9 +286,8 @@ def collect(raw_dir, link_overrides=None):
         event["documents_checked"] = True
         return event
 
-    with ThreadPoolExecutor(max_workers=6) as pool:
-        funds = list(pool.map(get_fund, codes))
-        events = list(pool.map(get_event, filings))
+    funds = [get_fund(code) for code in codes]
+    events = [get_event(row) for row in filings]
     link_exact_fund_names(events, funds)
     if link_overrides is None:
         override_path = Path(__file__).resolve().parent.parent / "config/public_fund_links.json"
