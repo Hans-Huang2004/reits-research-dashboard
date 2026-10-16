@@ -394,7 +394,7 @@ function openTimeline(target) {
   for (const event of timelineEvents(snapshot.events, target)) {
     const entry = el('section', 'updates-timeline-entry');
     const day = updateDate(event.official_date) || updateEventDate(event);
-    add(entry, el('h3', '', `${day || '日期未披露'} · ${event.business_type || POPULATIONS[event.population]}${isHistory(event) ? ' · 历史回填' : ''}`), event.entity_id !== target.entity_id ? el('p', 'updates-timeline-related', event.project_name) : null, eventDetail(event));
+    add(entry, el('h3', '', `${day || '日期未披露'} · ${event.business_type || POPULATIONS[event.population]}`), event.entity_id !== target.entity_id ? el('p', 'updates-timeline-related', event.project_name) : null, eventDetail(event));
     list.append(entry);
   }
   dialog.replaceChildren(header, meta, tools, note, list); showDialog(dialog);
