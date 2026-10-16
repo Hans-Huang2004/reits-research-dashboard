@@ -19,6 +19,7 @@
 .updates-custom-dates{display:flex;align-items:center;gap:14px;padding:0 24px 18px}
 .updates-custom-dates .field{flex:0 1 210px}
 .updates-custom-dates input{min-width:0}
+.updates-feed .filter-foot{justify-content:flex-end}
 .updates-coverage{font-size:10px;color:var(--sub);padding:12px 24px;background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line);line-height:1.8}
 .updates-list{padding:4px 24px 16px}
 .updates-date-heading{position:relative;font-size:11px;font-weight:550;padding:19px 0 9px;color:var(--sub);font-variant-numeric:tabular-nums;letter-spacing:.3px}

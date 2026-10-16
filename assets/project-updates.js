@@ -104,6 +104,14 @@ export function summarizeUpdates(events) {
   return result;
 }
 
+export function dailyUpdateCounts(events, asOf = today()) {
+  const counts = { public: 0, institutional: 0, ndrc: 0 };
+  for (const event of events) {
+    if (!isHistory(event) && updateDate(event.detected_at) === asOf && Object.hasOwn(counts, event.population)) counts[event.population]++;
+  }
+  return counts;
+}
+
 export function updateSourceHealth(sources = {}, asOf = today()) {
   return Object.keys(POPULATIONS).map(key => {
     const source = sources[key] || {};
@@ -159,7 +167,7 @@ function buildUI() {
   panel.classList.add('updates-panel');
   const head = el('header', 'head');
   const heading = el('div'); const eyebrow = add(el('div', 'eyebrow'), el('span', 'eyebrow-line'), el('span', '', 'PROJECT UPDATES'));
-  add(heading, eyebrow, el('h1', '', '项目动态'), el('p', 'subtitle', '追踪公募REITs、机构间REITs与国家发改委推荐项目的进展。'));
+  add(heading, eyebrow, el('h1', '', '项目动态'));
   const actions = el('div', 'header-actions'); const pill = el('span', 'pill', '正在读取动态'); pill.id = 'updates-data-pill';
   const exportButton = button('↓ 导出当前结果', 'button primary', 'export'); exportButton.id = 'updates-export'; exportButton.disabled = true;
   add(actions, pill, add(el('div', 'action-buttons'), button('↻ 刷新动态', 'button', 'reload'), exportButton)); add(head, heading, actions);
@@ -167,7 +175,7 @@ function buildUI() {
   const sources = el('div', 'updates-source-strip'); sources.id = 'updates-source-strip';
   const stats = el('div', 'updates-stats'); stats.id = 'updates-stats'; stats.setAttribute('aria-live', 'polite');
   const box = el('section', 'project-box updates-feed'); box.id = 'updates-feed'; box.tabIndex = -1; box.setAttribute('aria-label', '项目动态列表');
-  const top = el('div', 'project-top'); const topHeading = add(el('div'), el('h2', '', '最新进展'), el('p', 'section-meta', '按发现日期浏览；历史回填按官方日期排列。'));
+  const top = el('div', 'project-top'); const topHeading = add(el('div'), el('h2', '', '最新进展'));
   const range = el('div', 'segment updates-ranges'); range.setAttribute('role', 'group'); range.setAttribute('aria-label', '动态时间范围');
   for (const [value, name] of [['7', '近7天'], ['30', '近30天'], ['custom', '自定义']]) range.append(button(name, '', 'range', value));
   add(top, topHeading, range);
@@ -178,10 +186,10 @@ function buildUI() {
   const filters = el('div', 'filters updates-filters');
   const search = labeledControl('搜索项目／机构', 'updates-search', 'search'); search.classList.add('search-field'); search.lastChild.placeholder = '项目、基金代码、原始权益人或管理人';
   add(filters, search, labeledControl('交易所', 'updates-exchange', 'select', [['', '全部交易所']]), labeledControl('资产类型', 'updates-asset', 'select', [['', '全部资产']]), labeledControl('业务类型', 'updates-business', 'select', [['', '全部业务']]), labeledControl('事件类型', 'updates-type', 'select', [['', '全部事件']]), button('↺ 重置筛选', 'button reset-button', 'reset'));
-  const foot = el('div', 'filter-foot'); const count = el('span', 'live'); count.id = 'updates-count'; count.setAttribute('aria-live', 'polite');
+  const foot = el('div', 'filter-foot');
   const extras = el('div', 'filter-extras');
   for (const [id, label] of [['updates-saved-only', '仅看关注项目'], ['updates-include-history', '包含历史回填']]) { const wrapper = el('label'); const input = el('input'); input.type = 'checkbox'; input.id = id; add(wrapper, input, document.createTextNode(label)); extras.append(wrapper); }
-  add(foot, count, extras);
+  add(foot, extras);
   const coverage = el('div', 'updates-coverage'); coverage.id = 'updates-coverage';
   const list = el('div', 'updates-list'); list.id = 'updates-list'; list.setAttribute('aria-live', 'polite');
   const pagination = el('div', 'pagination'); const pageCount = el('span'); pageCount.id = 'updates-page-count'; const pages = el('div', 'pages'); const pageNumber = el('span'); pageNumber.id = 'updates-page-number';
@@ -228,17 +236,20 @@ function sourceStrip() {
   const strip = $('updates-source-strip'); strip.replaceChildren();
   for (const source of updateSourceHealth(snapshot?.sources)) {
     const item = el('div', `updates-source-status${source.healthy ? '' : ' is-warning'}`);
-    add(item, el('span', 'updates-status-dot'), el('strong', '', POPULATIONS[source.key]), el('span', '', source.checked_at ? `核查 ${String(source.checked_at).replace('T', ' ').slice(0, 16)}` : '尚无核查记录'), source.issue ? el('span', 'updates-source-issue', source.issue) : null);
+    add(item, el('span', 'updates-status-dot'), el('strong', '', POPULATIONS[source.key]), el('span', '', source.checked_at ? `更新时间 ${String(source.checked_at).replace('T', ' ').slice(0, 16)}` : '更新时间 暂无'), source.issue ? el('span', 'updates-source-issue', source.issue) : null);
     strip.append(item);
   }
 }
-function renderStats(events) {
-  const summary = summarizeUpdates(events); const stats = $('updates-stats'); stats.replaceChildren();
+function renderStats() {
+  const day = today(); const counts = dailyUpdateCounts(snapshot?.events || [], day); const period = updatePeriod(state, day);
+  const stats = $('updates-stats'); stats.replaceChildren();
   for (const population of ['public', 'institutional', 'ndrc']) {
-    const card = button('', `stat updates-stat${state.population === population ? ' selected' : ''}`, 'population', state.population === population ? '' : population);
-    card.setAttribute('aria-pressed', String(state.population === population));
-    card.setAttribute('aria-label', `筛选${POPULATIONS[population]}，当前${summary[population]}条事件`);
-    add(card, el('span', 'stat-label', POPULATIONS[population]), add(el('span', 'stat-value'), document.createTextNode(String(summary[population])), el('small', '', '条事件')), el('span', 'stat-foot', '当前筛选范围 · 点击筛选'));
+    const selected = state.population === population && period.start === day && period.end === day && !state.includeHistory;
+    const card = button('', `stat updates-stat${selected ? ' selected' : ''}`, 'today', population);
+    card.setAttribute('aria-pressed', String(selected));
+    card.setAttribute('aria-label', `查看${POPULATIONS[population]}今日${counts[population]}条更新`);
+    card.title = `${day} · 北京时间`;
+    add(card, el('span', 'stat-label', POPULATIONS[population]), add(el('span', 'stat-value'), document.createTextNode(String(counts[population])), el('small', '', '条更新')), el('span', 'stat-foot', '今日更新 · 点击查看'));
     stats.append(card);
   }
 }
@@ -298,18 +309,17 @@ function renderGroup(group) {
 }
 function render() {
   if (!initialized) return;
-  const events = currentEvents(); const summary = summarizeUpdates(events); const groups = groupUpdateEvents(events);
-  sourceStrip(); renderStats(events);
+  const events = currentEvents(); const groups = groupUpdateEvents(events);
+  sourceStrip(); renderStats();
   const health = updateSourceHealth(snapshot?.sources); const issues = health.filter(item => !item.healthy);
   const notice = $('updates-notice');
   notice.textContent = error || (snapshot && issues.length ? `${issues.map(item => `${POPULATIONS[item.key]}${item.issue}`).join('；')}。当前展示最近成功收录的动态，不能据此判断今日是否无变化。` : '');
   notice.hidden = !notice.textContent;
   const period = updatePeriod(state);
-  $('updates-count').textContent = !period.valid ? '起始日期须早于或等于截止日期' : `${summary.total}条事件 · ${summary.groups}组动态${summary.historical ? ` · 含${summary.historical}条历史回填` : ''}`;
   const baselineAt = snapshot?.audit?.tracking_started_at || snapshot?.audit?.baseline_at || snapshot?.audit?.baseline_created_at || snapshot?.generated_at;
-  $('updates-coverage').textContent = snapshot ? `持续变化记录自${updateDate(baselineAt) || '本次基线建立时'}开始。${state.includeHistory ? '历史回填按官方日期计入当前列表与统计。' : '首次导入的历史进展未计为新动态，可勾选“包含历史回填”查阅。'}` : '正在读取动态记录与来源核查状态…';
+  $('updates-coverage').textContent = snapshot ? `持续变化记录自${updateDate(baselineAt) || '本次基线建立时'}开始。${state.includeHistory ? '历史回填按官方日期计入当前列表。' : '首次导入的历史进展未计为新动态，可勾选“包含历史回填”查阅。'}` : '正在读取动态记录与来源核查状态…';
   $('updates-data-pill').textContent = snapshot ? `动态截至 ${snapshot.as_of_date}` : error ? '动态读取失败' : '正在读取动态';
-  $('updates-generated').textContent = snapshot ? `生成时间 ${String(snapshot.generated_at || '').replace('T', ' ').slice(0, 16)} · 事件数按当前筛选统计` : '';
+  $('updates-generated').textContent = snapshot ? `生成时间 ${String(snapshot.generated_at || '').replace('T', ' ').slice(0, 16)}` : '';
   $('updates-export').disabled = !snapshot || !events.length;
   const reload = document.querySelector('[data-updates-action="reload"]'); if (reload) reload.disabled = Boolean(loading);
   document.querySelectorAll('[data-updates-action="range"]').forEach(node => node.setAttribute('aria-pressed', String(node.dataset.value === state.range)));
@@ -371,7 +381,7 @@ export function openUpdatesSources() {
   const heading = add(el('div', 'updates-dialog-heading'), title, closeButton());
   const intro = el('p', '', '动态来自公募REITs、机构间REITs及国家发展改革委推荐项目的公开资料。三类事件分别统计；状态、业务批次和原始日期保留来源口径。');
   const definitions = el('dl', 'updates-definitions');
-  for (const [term, definition] of [['事件与项目', '一项状态变化、一次新增披露或一项资料修订各计一条事件。同项目同批次同日的事件合并显示，统计与CSV仍按事件计数。'], ['日期', '持续跟踪动态按首次发现日期筛选，官方日期另列；历史回填按官方日期筛选。'], ['历史覆盖', '首次导入建立基线，历史进展标为历史回填。时间线只展示已取得并留存的公开记录。'], ['关联与批次', '只合并已确认的关联关系；首发、扩募及具体申报批次分别保留。'], ['异常与刷新', '采集失败、来源不完整或记录暂时消失不生成终止事件。来源核查未完成时，不据此判断当天无变化。'], ['筛选与导出', '概览、动态列表和CSV使用同一筛选事件集合。项目时间线展示该项目及已确认关联项目的全部已留存记录。']]) add(definitions, el('dt', '', term), el('dd', '', definition));
+  for (const [term, definition] of [['事件与项目', '一项状态变化、一次新增披露或一项资料修订各计一条事件。同项目同批次同日的事件合并显示，统计与CSV仍按事件计数。'], ['日期', '持续跟踪动态按首次发现日期筛选，官方日期另列；历史回填按官方日期筛选。'], ['历史覆盖', '首次导入建立基线，历史进展标为历史回填。时间线只展示已取得并留存的公开记录。'], ['关联与批次', '只合并已确认的关联关系；首发、扩募及具体申报批次分别保留。'], ['异常与刷新', '采集失败、来源不完整或记录暂时消失不生成终止事件。来源核查未完成时，不据此判断当天无变化。'], ['筛选与导出', '概览卡片按北京时间当天首次发现的更新计数，不含历史回填，不受列表筛选影响。点击卡片查看该类今日更新。动态列表和CSV使用同一筛选事件集合。项目时间线展示该项目及已确认关联项目的全部已留存记录。']]) add(definitions, el('dt', '', term), el('dd', '', definition));
   const sourceList = el('div', 'updates-source-details');
   for (const source of updateSourceHealth(snapshot?.sources)) {
     const section = el('section');
@@ -423,6 +433,11 @@ async function onAction(event) {
   const action = event.target.closest('[data-updates-action]'); if (!action) return;
   const value = action.dataset.value;
   switch (action.dataset.updatesAction) {
+    case 'today': {
+      const day = today();
+      state = { ...DEFAULT_FILTERS, population: value, range: 'custom', start: day, end: day };
+      synchronizeInputs(); render(); break;
+    }
     case 'population': state.population = value; state.page = 1; render(); break;
     case 'range': state.range = value; if (value === 'custom' && !state.start) { const period = updatePeriod({ range: '30' }); state.start = period.start; state.end = period.end; synchronizeInputs(); } state.page = 1; render(); break;
     case 'reload': loadUpdates(); break;
