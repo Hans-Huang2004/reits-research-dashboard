@@ -190,11 +190,10 @@ function buildUI() {
   const extras = el('div', 'filter-extras');
   for (const [id, label] of [['updates-saved-only', '仅看关注项目'], ['updates-include-history', '包含历史回填']]) { const wrapper = el('label'); const input = el('input'); input.type = 'checkbox'; input.id = id; add(wrapper, input, document.createTextNode(label)); extras.append(wrapper); }
   add(foot, extras);
-  const coverage = el('div', 'updates-coverage'); coverage.id = 'updates-coverage';
   const list = el('div', 'updates-list'); list.id = 'updates-list'; list.setAttribute('aria-live', 'polite');
   const pagination = el('div', 'pagination'); const pageCount = el('span'); pageCount.id = 'updates-page-count'; const pages = el('div', 'pages'); const pageNumber = el('span'); pageNumber.id = 'updates-page-number';
   add(pages, button('上一页', 'button', 'prev'), pageNumber, button('下一页', 'button', 'next')); add(pagination, pageCount, pages);
-  add(box, top, populations, custom, filters, foot, coverage, list, pagination);
+  add(box, top, populations, custom, filters, foot, list, pagination);
   const footer = el('footer', 'foot'); const generated = el('span'); generated.id = 'updates-generated'; add(footer, generated, button('数据口径与来源 ↗', 'text-button', 'sources'));
   const detail = el('dialog', 'updates-detail-dialog'); detail.id = 'updates-detail-dialog'; detail.setAttribute('aria-labelledby', 'updates-detail-title');
   const sourceDialog = el('dialog', 'updates-source-dialog'); sourceDialog.id = 'updates-source-dialog'; sourceDialog.setAttribute('aria-labelledby', 'updates-source-title');
@@ -316,8 +315,6 @@ function render() {
   notice.textContent = error || (snapshot && issues.length ? `${issues.map(item => `${POPULATIONS[item.key]}${item.issue}`).join('；')}。当前展示最近成功收录的动态，不能据此判断今日是否无变化。` : '');
   notice.hidden = !notice.textContent;
   const period = updatePeriod(state);
-  const baselineAt = snapshot?.audit?.tracking_started_at || snapshot?.audit?.baseline_at || snapshot?.audit?.baseline_created_at || snapshot?.generated_at;
-  $('updates-coverage').textContent = snapshot ? `持续变化记录自${updateDate(baselineAt) || '本次基线建立时'}开始。${state.includeHistory ? '历史回填按官方日期计入当前列表。' : '首次导入的历史进展未计为新动态，可勾选“包含历史回填”查阅。'}` : '正在读取动态记录与来源核查状态…';
   $('updates-data-pill').textContent = snapshot ? `动态截至 ${snapshot.as_of_date}` : error ? '动态读取失败' : '正在读取动态';
   $('updates-generated').textContent = snapshot ? `生成时间 ${String(snapshot.generated_at || '').replace('T', ' ').slice(0, 16)}` : '';
   $('updates-export').disabled = !snapshot || !events.length;
@@ -381,7 +378,9 @@ export function openUpdatesSources() {
   const heading = add(el('div', 'updates-dialog-heading'), title, closeButton());
   const intro = el('p', '', '动态来自公募REITs、机构间REITs及国家发展改革委推荐项目的公开资料。三类事件分别统计；状态、业务批次和原始日期保留来源口径。');
   const definitions = el('dl', 'updates-definitions');
-  for (const [term, definition] of [['事件与项目', '一项状态变化、一次新增披露或一项资料修订各计一条事件。同项目同批次同日的事件合并显示，统计与CSV仍按事件计数。'], ['日期', '持续跟踪动态按首次发现日期筛选，官方日期另列；历史回填按官方日期筛选。'], ['历史覆盖', '首次导入建立基线，历史进展标为历史回填。时间线只展示已取得并留存的公开记录。'], ['关联与批次', '只合并已确认的关联关系；首发、扩募及具体申报批次分别保留。'], ['异常与刷新', '采集失败、来源不完整或记录暂时消失不生成终止事件。来源核查未完成时，不据此判断当天无变化。'], ['筛选与导出', '概览卡片按北京时间当天首次发现的更新计数，不含历史回填，不受列表筛选影响。点击卡片查看该类今日更新。动态列表和CSV使用同一筛选事件集合。项目时间线展示该项目及已确认关联项目的全部已留存记录。']]) add(definitions, el('dt', '', term), el('dd', '', definition));
+  const baselineAt = snapshot?.audit?.tracking_started_at || snapshot?.audit?.baseline_at || snapshot?.audit?.baseline_created_at || snapshot?.generated_at;
+  const coverage = `${snapshot ? `持续变化记录自${updateDate(baselineAt) || '本次基线建立时'}开始。` : '跟踪起点待读取。'}首次导入的历史进展未计为新动态，可勾选“包含历史回填”查阅。时间线只展示已取得并留存的公开记录。`;
+  for (const [term, definition] of [['事件与项目', '一项状态变化、一次新增披露或一项资料修订各计一条事件。同项目同批次同日的事件合并显示，统计与CSV仍按事件计数。'], ['日期', '持续跟踪动态按首次发现日期筛选，官方日期另列；历史回填按官方日期筛选。'], ['历史覆盖', coverage], ['关联与批次', '只合并已确认的关联关系；首发、扩募及具体申报批次分别保留。'], ['异常与刷新', '采集失败、来源不完整或记录暂时消失不生成终止事件。来源核查未完成时，不据此判断当天无变化。'], ['筛选与导出', '概览卡片按北京时间当天首次发现的更新计数，不含历史回填，不受列表筛选影响。点击卡片查看该类今日更新。动态列表和CSV使用同一筛选事件集合。项目时间线展示该项目及已确认关联项目的全部已留存记录。']]) add(definitions, el('dt', '', term), el('dd', '', definition));
   const sourceList = el('div', 'updates-source-details');
   for (const source of updateSourceHealth(snapshot?.sources)) {
     const section = el('section');
@@ -414,7 +413,7 @@ async function loadUpdates() {
       const next = validateUpdatesSnapshot(payload);
       snapshot = next; error = ''; fillOptions();
     } catch (cause) { error = `项目动态读取失败${snapshot ? '，已保留上次成功记录' : ''}。${cause.message || '请稍后刷新重试。'}`; }
-    finally { clearTimeout(timer); loading = null; render(); if (lastEntity && $('updates-detail-dialog').open) openTimeline(lastEntity); }
+    finally { clearTimeout(timer); loading = null; render(); if ($('updates-source-dialog').open) openUpdatesSources(); if (lastEntity && $('updates-detail-dialog').open) openTimeline(lastEntity); }
   })();
   render(); return loading;
 }
