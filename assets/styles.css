@@ -69,9 +69,9 @@ h3{font-size:12px;font-weight:600;margin:0}
 .section-meta{color:var(--sub);font-size:10px}
 .chart-grid{display:grid;grid-template-columns:.9fr 1.2fr 1fr 1.2fr;gap:14px}
 .chart-panel{min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:17px 18px 14px;box-shadow:var(--shadow)}
-.chart-panel>h3{margin-bottom:5px}
+.chart-panel>h3{margin-bottom:12px}
 .chart-top{font-size:9px;font-weight:500;color:var(--sub);margin-left:4px}
-.chart-heading{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.chart-heading{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-bottom:12px}
 .text-button{border:0;padding:0;background:transparent;color:var(--brand);font-size:9px;white-space:nowrap}
 .chart-note{margin:5px 0 13px;color:var(--sub);font-size:9px}
 #asset-chart,#status-chart,#manager-chart{max-height:207px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
@@ -102,7 +102,7 @@ h3{font-size:12px;font-weight:600;margin:0}
 .field input::placeholder,.field textarea::placeholder{color:var(--sub);opacity:1}
 .field textarea{resize:vertical;min-height:76px}
 .reset-button{padding:8px 12px}
-.filter-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:0 23px 16px;font-size:9px;color:var(--sub)}
+.filter-foot{display:flex;justify-content:flex-end;align-items:center;gap:12px;padding:0 23px 16px;font-size:9px;color:var(--sub)}
 .filter-foot label{display:flex;align-items:center;gap:5px}
 .filter-extras{display:flex;flex-wrap:wrap;gap:14px}
 .table-wrap{overflow-x:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent}

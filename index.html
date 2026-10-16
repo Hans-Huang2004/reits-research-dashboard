@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f5f7f8" id="theme-color">
   <title>REITs项目库</title>
   <script>try { const choice = localStorage.getItem('reits:theme:v1') || 'system'; document.documentElement.dataset.theme = choice === 'dark' || (choice !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'; } catch { document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }</script>
-  <link rel="stylesheet" href="./assets/styles.css?v=20261016-ndrc-1">
+  <link rel="stylesheet" href="./assets/styles.css?v=20261016-clean-copy-1">
   <link rel="stylesheet" href="./assets/project-updates.css?v=20261016-updates-4">
 </head>
 <body>
@@ -21,20 +21,20 @@
   <main class="main">
     <section id="updates-panel"></section>
     <section id="institutional-panel" hidden>
-      <header class="head"><div><div class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>INSTITUTIONAL REITS</div><h1>机构间REITs<span>项目库</span></h1><p class="subtitle">跟踪沪深交易所公开申报，查阅审核进度与底层资产。</p></div><div class="header-actions"><span class="pill" id="data-pill">正在读取数据</span><div class="action-buttons"><button class="button" id="reload"><span aria-hidden="true">↻</span> 刷新数据</button><button class="button primary" id="export" disabled><span aria-hidden="true">↓</span> 导出当前结果</button></div></div></header>
+      <header class="head"><div><div class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>INSTITUTIONAL REITS</div><h1>机构间REITs<span>项目库</span></h1></div><div class="header-actions"><span class="pill" id="data-pill">正在读取数据</span><div class="action-buttons"><button class="button" id="reload"><span aria-hidden="true">↻</span> 刷新数据</button><button class="button primary" id="export" disabled><span aria-hidden="true">↓</span> 导出当前结果</button></div></div></header>
       <div class="data-notice" id="data-notice" role="status" hidden></div>
       <div class="loading-state" id="loading-state" role="status">正在读取项目库…</div>
       <div class="stats" id="stats" aria-live="polite"></div>
-      <div class="section-line"><div><h2>项目概览</h2><span class="section-meta">与下方筛选结果同步</span></div><div class="segment" aria-label="图表统计方式"><button data-mode="count" aria-pressed="true">记录数</button><button data-mode="amount" aria-pressed="false">申报金额</button></div></div>
+      <div class="section-line"><div><h2>项目概览</h2></div><div class="segment" aria-label="图表统计方式"><button data-mode="count" aria-pressed="true">记录数</button><button data-mode="amount" aria-pressed="false">申报金额</button></div></div>
       <div class="chart-grid">
-        <section class="chart-panel" aria-label="研究大类分布"><div class="chart-heading"><h3>研究大类分布</h3><button class="text-button" id="classification-help">分类口径</button></div><p class="chart-note" id="rights-chart-note">当前筛选范围 · 点击图中类别筛选</p><div id="rights-chart"></div></section>
-        <section class="chart-panel" aria-label="资产细类分布"><h3>资产细类分布</h3><p class="chart-note" id="asset-chart-note">全部细类 · 点击图中类别筛选</p><div id="asset-chart"></div></section>
-        <section class="chart-panel" aria-label="项目状态分布"><h3>项目状态分布</h3><p class="chart-note">公开审核进度</p><div id="status-chart"></div></section>
-        <section class="chart-panel" aria-label="计划管理人排名"><h3>计划管理人 <span class="chart-top">TOP 5</span></h3><p class="chart-note">按当前统计方式排序</p><div id="manager-chart"></div></section>
+        <section class="chart-panel" aria-label="研究大类分布"><div class="chart-heading"><h3>研究大类分布</h3><button class="text-button" id="classification-help">分类口径</button></div><div id="rights-chart"></div></section>
+        <section class="chart-panel" aria-label="资产细类分布"><h3>资产细类分布</h3><div id="asset-chart"></div></section>
+        <section class="chart-panel" aria-label="项目状态分布"><h3>项目状态分布</h3><div id="status-chart"></div></section>
+        <section class="chart-panel" aria-label="计划管理人排名"><h3>计划管理人 <span class="chart-top">TOP 5</span></h3><div id="manager-chart"></div></section>
       </div>
       <section class="project-box" id="projects" aria-label="项目列表" tabindex="-1">
-        <div class="project-top"><div><h2>项目明细 <span id="record-total"></span></h2><p class="section-meta">点击项目名称查看官网，点击项目详情查阅披露来源与分类依据。</p></div><div class="segment" aria-label="交易所筛选"><button data-ex="" aria-pressed="true">全部</button><button data-ex="上交所" aria-pressed="false">上交所</button><button data-ex="深交所" aria-pressed="false">深交所</button></div></div>
-        <div class="section-line field-scope-toolbar"><div class="segment" role="group" aria-label="机构间字段范围"><button data-institutional-fields="core" aria-pressed="true">核心字段</button><button data-institutional-fields="all" aria-pressed="false">全部字段</button></div><span class="section-meta" id="institutional-fields-note">详情与CSV包含全部13项字段</span></div>
+        <div class="project-top"><div><h2>项目明细 <span id="record-total" aria-live="polite"></span></h2></div><div class="segment" aria-label="交易所筛选"><button data-ex="" aria-pressed="true">全部</button><button data-ex="上交所" aria-pressed="false">上交所</button><button data-ex="深交所" aria-pressed="false">深交所</button></div></div>
+        <div class="section-line field-scope-toolbar"><div class="segment" role="group" aria-label="机构间字段范围"><button data-institutional-fields="core" aria-pressed="true">核心字段</button><button data-institutional-fields="all" aria-pressed="false">全部字段</button></div></div>
         <div class="filters" aria-label="项目筛选">
           <label class="field search-field">搜索项目／机构<span class="search-control"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><input id="search" placeholder="搜索项目名称、原始权益人或管理人" type="search"></span></label>
           <div class="field"><label id="rights-label" for="rights">研究大类</label><select id="rights"><option value="">全部大类</option></select></div>
@@ -44,29 +44,29 @@
           <div class="field"><label id="match-label" for="match">名称命中口径</label><select id="match"><option value="">全部命中</option><option value="持有型不动产">持有型不动产</option><option value="机构间REIT">机构间REIT</option></select></div>
           <button class="button reset-button" id="reset"><span aria-hidden="true">↺</span>重置筛选</button>
         </div>
-        <div class="filter-foot"><span id="scope-text" class="live" aria-live="polite"></span><div class="filter-extras"><label><input type="checkbox" id="hide-archived">隐藏历史保留记录</label><label><input type="checkbox" id="saved-only">仅看关注项目</label></div></div>
+        <div class="filter-foot"><div class="filter-extras"><label><input type="checkbox" id="hide-archived">隐藏历史保留记录</label><label><input type="checkbox" id="saved-only">仅看关注项目</label></div></div>
         <div class="table-wrap" tabindex="0" aria-label="项目明细，可横向滚动"><table id="institutional-table"><caption class="sr">机构间REITs公开申报记录；申报金额单位亿元</caption><thead><tr id="institutional-table-head-row"></tr></thead><tbody id="rows"></tbody></table></div>
         <div class="pagination"><span id="page-count"></span><div class="pages"><label class="page-size">每页 <select id="page-size" aria-label="每页记录数"><option value="10">10 条</option><option value="25">25 条</option><option value="50">50 条</option></select></label><button class="button" id="prev" aria-label="上一页">上一页</button><span id="page-number"></span><button class="button" id="next" aria-label="下一页">下一页</button></div></div>
       </section>
       <footer class="foot"><span id="footer-date"></span><span>申报金额含所有当前筛选状态；是否已发行单独核实</span></footer>
     </section>
     <section id="public-panel" hidden>
-      <header class="head"><div><div class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>PUBLIC REITS</div><h1>公募REITs<span>项目库</span></h1><p class="subtitle">查阅已发行基金，跟踪推荐项目与首发、扩募申报。</p></div><div class="header-actions"><span class="pill" id="public-data-pill">正在读取数据</span><div class="action-buttons"><button class="button" id="public-reload"><span aria-hidden="true">↻</span> 刷新数据</button><button class="button primary" id="public-export" disabled><span aria-hidden="true">↓</span> 导出当前结果</button></div></div></header>
-      <div class="public-view-bar"><div class="segment public-views" role="group" aria-label="公募项目视图"><button data-public-view="funds" aria-pressed="true">已发行基金</button><button data-public-view="events" aria-pressed="false">申报审核</button><button data-public-view="recommendations" aria-pressed="false">发改委推荐</button></div><button class="text-button public-expansion-shortcut" id="public-expansion-shortcut">查看扩募项目 ↗</button><span class="section-meta" id="public-view-note">每只基金一条记录</span></div>
+      <header class="head"><div><div class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>PUBLIC REITS</div><h1>公募REITs<span>项目库</span></h1></div><div class="header-actions"><span class="pill" id="public-data-pill">正在读取数据</span><div class="action-buttons"><button class="button" id="public-reload"><span aria-hidden="true">↻</span> 刷新数据</button><button class="button primary" id="public-export" disabled><span aria-hidden="true">↓</span> 导出当前结果</button></div></div></header>
+      <div class="public-view-bar"><div class="segment public-views" role="group" aria-label="公募项目视图"><button data-public-view="funds" aria-pressed="true">已发行基金</button><button data-public-view="events" aria-pressed="false">申报审核</button><button data-public-view="recommendations" aria-pressed="false">发改委推荐</button></div><button class="text-button public-expansion-shortcut" id="public-expansion-shortcut">查看扩募项目 ↗</button></div>
       <div id="public-exchange-content">
       <div class="data-notice" id="public-data-notice" role="status" hidden></div>
       <div class="loading-state" id="public-loading" role="status" hidden>正在读取公募项目库…</div>
       <div class="stats" id="public-stats" aria-live="polite"></div>
-      <div class="section-line"><div><h2>项目概览</h2><span class="section-meta">与下方筛选结果同步</span></div><button class="text-button" id="public-source-help">查看数据口径 ↗</button></div>
+      <div class="section-line"><div><h2>项目概览</h2></div><button class="text-button" id="public-source-help">查看数据口径 ↗</button></div>
       <div class="chart-grid public-chart-grid">
-        <section class="chart-panel"><h3>REITs类型</h3><p class="chart-note">点击类别筛选</p><div id="public-product-chart"></div></section>
-        <section class="chart-panel"><h3>资产类型</h3><p class="chart-note">点击类别筛选</p><div id="public-asset-chart"></div></section>
-        <section class="chart-panel"><h3 id="public-stage-chart-heading">基金阶段</h3><p class="chart-note" id="public-stage-chart-note">点击阶段筛选</p><div id="public-stage-chart"></div></section>
-        <section class="chart-panel"><h3>基金管理人 <span class="chart-top">TOP 5</span></h3><p class="chart-note">按当前匹配记录数排序</p><div id="public-manager-chart"></div></section>
+        <section class="chart-panel"><h3>REITs类型</h3><div id="public-product-chart"></div></section>
+        <section class="chart-panel"><h3>资产类型</h3><div id="public-asset-chart"></div></section>
+        <section class="chart-panel"><h3 id="public-stage-chart-heading">基金阶段</h3><div id="public-stage-chart"></div></section>
+        <section class="chart-panel"><h3>基金管理人 <span class="chart-top">TOP 5</span></h3><div id="public-manager-chart"></div></section>
       </div>
       <section class="project-box" id="public-projects" aria-label="公募项目列表" tabindex="-1">
-        <div class="project-top"><div><h2><span id="public-list-heading" class="public-heading-label">已发行基金</span> <span id="public-record-total"></span></h2><p class="section-meta" id="public-list-note">点击名称查看基金资料、底层资产与历次申报。</p></div><div class="segment" role="group" aria-label="公募交易所筛选"><button data-public-ex="" aria-pressed="true">全部</button><button data-public-ex="上交所" aria-pressed="false">上交所</button><button data-public-ex="深交所" aria-pressed="false">深交所</button></div></div>
-        <div class="public-field-toolbar"><div class="segment" role="group" aria-label="公募字段范围"><button data-public-fields="core" aria-pressed="true">核心字段</button><button data-public-fields="all" aria-pressed="false">全部字段</button></div><span class="section-meta" id="public-fields-note">核心10项字段 · 详情查看全部资料</span><span class="section-meta public-export-note">CSV包含全部字段</span></div>
+        <div class="project-top"><div><h2><span id="public-list-heading" class="public-heading-label">已发行基金</span> <span id="public-record-total" aria-live="polite"></span></h2></div><div class="segment" role="group" aria-label="公募交易所筛选"><button data-public-ex="" aria-pressed="true">全部</button><button data-public-ex="上交所" aria-pressed="false">上交所</button><button data-public-ex="深交所" aria-pressed="false">深交所</button></div></div>
+        <div class="public-field-toolbar"><div class="segment" role="group" aria-label="公募字段范围"><button data-public-fields="core" aria-pressed="true">核心字段</button><button data-public-fields="all" aria-pressed="false">全部字段</button></div></div>
         <div class="filters public-filters" aria-label="公募项目筛选">
           <label class="field search-field">搜索基金／项目／机构<span class="search-control"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><input id="public-search" placeholder="搜索名称、代码、原始权益人或基金管理人" type="search"></span></label>
           <div class="field"><label id="public-product-label" for="public-product">REITs类型</label><select id="public-product"><option value="">全部产品</option></select></div>
@@ -76,7 +76,7 @@
           <div class="field"><label id="public-manager-label" for="public-manager">基金管理人</label><select id="public-manager"><option value="">全部管理人</option></select></div>
           <button class="button reset-button" id="public-reset"><span aria-hidden="true">↺</span>重置筛选</button>
         </div>
-        <div class="filter-foot"><span id="public-scope-text" class="live" aria-live="polite"></span><div class="filter-extras"><label><input type="checkbox" id="public-saved-only">仅看关注项目</label></div></div>
+        <div class="filter-foot"><div class="filter-extras"><label><input type="checkbox" id="public-saved-only">仅看关注项目</label></div></div>
         <div class="table-wrap" tabindex="0" aria-label="公募项目明细，可横向滚动"><table class="public-table" id="public-table"><caption class="sr" id="public-table-caption">公募REITs已发行基金</caption><thead id="public-table-head"></thead><tbody id="public-rows"></tbody></table></div>
         <div class="pagination"><span id="public-page-count"></span><div class="pages"><label class="page-size">每页 <select id="public-page-size" aria-label="公募每页记录数"><option value="10">10条</option><option value="25">25条</option><option value="50">50条</option></select></label><button class="button" id="public-prev" aria-label="公募上一页">上一页</button><span id="public-page-number"></span><button class="button" id="public-next" aria-label="公募下一页">下一页</button></div></div>
       </section>
@@ -86,15 +86,15 @@
         <div class="data-notice" id="ndrc-data-notice" role="status" hidden></div>
         <div class="loading-state" id="ndrc-loading" role="status" hidden>正在读取发改委推荐名单…</div>
         <div class="stats" id="ndrc-stats" aria-live="polite"></div>
-        <div class="section-line"><div><h2>推荐项目概览</h2><span class="section-meta">与下方筛选结果同步</span></div><button class="text-button" id="ndrc-source-help">查看数据口径 ↗</button></div>
+        <div class="section-line"><div><h2>推荐项目概览</h2></div><button class="text-button" id="ndrc-source-help">查看数据口径 ↗</button></div>
         <div class="chart-grid ndrc-chart-grid">
-          <section class="chart-panel"><h3>推荐年份</h3><p class="chart-note">点击年份筛选</p><div id="ndrc-year-chart"></div></section>
-          <section class="chart-panel"><h3>官方行业分类</h3><p class="chart-note">点击行业筛选</p><div id="ndrc-industry-chart"></div></section>
-          <section class="chart-panel"><h3>匹配状态</h3><p class="chart-note">与当前交易所申报记录匹配</p><div id="ndrc-match-chart"></div></section>
-          <section class="chart-panel"><h3>主申报地方／中央企业 <span class="chart-top">TOP 5</span></h3><p class="chart-note">点击筛选</p><div id="ndrc-region-chart"></div></section>
+          <section class="chart-panel"><h3>推荐年份</h3><div id="ndrc-year-chart"></div></section>
+          <section class="chart-panel"><h3>官方行业分类</h3><div id="ndrc-industry-chart"></div></section>
+          <section class="chart-panel"><h3>匹配状态</h3><div id="ndrc-match-chart"></div></section>
+          <section class="chart-panel"><h3>主申报地方／中央企业 <span class="chart-top">TOP 5</span></h3><div id="ndrc-region-chart"></div></section>
         </div>
         <section class="project-box" id="ndrc-projects" aria-label="发改委推荐项目列表" tabindex="-1">
-          <div class="project-top"><div><h2>推荐项目明细 <span id="ndrc-record-total"></span></h2><p class="section-meta">查阅推荐信息、匹配依据及关联申报。</p></div><div class="segment ndrc-shortcuts" role="group" aria-label="推荐项目快捷筛选"><button data-ndrc-shortcut="all" aria-pressed="true">全部</button><button data-ndrc-shortcut="unmatched" aria-pressed="false">仅看未匹配</button><button data-ndrc-shortcut="recent" aria-pressed="false">近期新增</button></div></div>
+          <div class="project-top"><div><h2>推荐项目明细 <span id="ndrc-record-total" aria-live="polite"></span></h2></div><div class="segment ndrc-shortcuts" role="group" aria-label="推荐项目快捷筛选"><button data-ndrc-shortcut="all" aria-pressed="true">全部</button><button data-ndrc-shortcut="unmatched" aria-pressed="false">仅看未匹配</button><button data-ndrc-shortcut="recent" aria-pressed="false">近期新增</button></div></div>
           <div class="filters ndrc-filters" aria-label="发改委推荐项目筛选">
             <label class="field search-field">搜索项目／关联基金<span class="search-control"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><input id="ndrc-search" placeholder="搜索项目、主申报地方／中央企业或关联基金" type="search"></span></label>
             <div class="field"><label id="ndrc-year-label" for="ndrc-year">推荐年份</label><select id="ndrc-year"><option value="">全部年份</option></select></div>
@@ -104,7 +104,7 @@
             <div class="field"><label id="ndrc-match-label" for="ndrc-match">匹配状态</label><select id="ndrc-match"><option value="">全部匹配状态</option><option value="confirmed">已确认匹配</option><option value="candidate">候选待核实</option><option value="unmatched">未匹配</option></select></div>
             <button class="button reset-button" id="ndrc-reset"><span aria-hidden="true">↺</span>重置筛选</button>
           </div>
-          <div class="filter-foot"><span id="ndrc-scope-text" class="live" aria-live="polite"></span><div class="filter-extras"><label><input type="checkbox" id="ndrc-saved-only">仅看关注项目</label></div></div>
+          <div class="filter-foot"><div class="filter-extras"><label><input type="checkbox" id="ndrc-saved-only">仅看关注项目</label></div></div>
           <div class="table-wrap" tabindex="0" aria-label="发改委推荐项目，可横向滚动"><table class="ndrc-table"><caption class="sr">国家发改委向中国证监会推荐的基础设施REITs项目，拟发售基金总额单位亿元</caption><thead><tr><th scope="col" class="name-cell">推荐项目</th><th scope="col" aria-sort="descending" id="ndrc-date-heading"><button class="sort-button" id="ndrc-sort">推荐日期 ↓</button></th><th scope="col">主申报地方／中央企业</th><th scope="col">官方行业分类</th><th scope="col" class="numeric">拟发售基金总额<span class="column-unit">亿元</span></th><th scope="col">业务类型</th><th scope="col">匹配状态</th><th scope="col">关联申报／基金</th><th scope="col">官方来源</th></tr></thead><tbody id="ndrc-rows"></tbody></table></div>
           <div class="pagination"><span id="ndrc-page-count"></span><div class="pages"><label class="page-size">每页 <select id="ndrc-page-size" aria-label="推荐项目每页记录数"><option value="10">10条</option><option value="25">25条</option><option value="50">50条</option></select></label><button class="button" id="ndrc-prev" aria-label="推荐项目上一页">上一页</button><span id="ndrc-page-number"></span><button class="button" id="ndrc-next" aria-label="推荐项目下一页">下一页</button></div></div>
         </section>
@@ -120,6 +120,6 @@
 <dialog id="public-source-dialog" aria-labelledby="public-source-heading"><div class="dialog-head"><h2 id="public-source-heading">公募REITs数据口径与来源</h2><button class="button" data-close="public-source-dialog">关闭</button></div><div class="source-summary"><ul><li>已发行基金视图包括已上市基金和成立待上市基金，每只基金一条记录。申报审核视图按交易所申报项目统计，仅统计首发和扩募；未涉及扩募的新购入不计入，同一次扩募并新购入按一条扩募申报保留。</li><li>基金阶段与申报状态分别记录。既有基金新增扩募申报，不改变该基金已经上市的阶段；中止、终止等历史申报仍可检索。</li><li>字段包括基本资料、各版本融资规模、资产与预测、进度与增信，共20项。核心列表展示原始权益人/发起人、基金管理人；发行人仅在单独披露时记录；缺失项区分未披露、暂无法取得、待核实和不适用。</li><li>申报稿、反馈稿、询价稿拟发售金额、发售金额与外部贷款金额分别保留，金额单位亿元。基金首发发售金额与扩募金额分开记录；补充字段在详情中列示官方文件日期、页码与金额口径。</li><li>资产类型区分交易所官方分类与名称初判，分类依据在详情中显示；每项申报保留对应官方详情及可取得的文件入口。</li><li>统计、图表、表格及导出共用当前筛选结果。CSV始终包含全部20项字段及来源信息；关注标记仅保存在当前浏览器。</li></ul><div id="public-source-metadata"></div><p><a href="./data/public_reits.json" target="_blank" rel="noopener noreferrer">查看本期公募数据文件 ↗</a></p></div></dialog>
 <dialog id="source-dialog" aria-labelledby="source-heading"><div class="dialog-head"><h2 id="source-heading">数据口径与来源</h2><button class="button" data-close="source-dialog">关闭</button></div><ul class="source-summary"><li>项目列表直接采集自上交所、深交所官方接口。两所分别搜索“持有型不动产”和“机构间REIT”，读取全部分页，合并后按交易所与官方项目 ID 去重。</li><li>统计单位为申报记录；首发与扩募可能对应同一底层资产。审核通过不等于已完成发行。</li><li>拟发行金额采用申报口径，包含当前筛选中的所有审核状态，不代表市场实际发行或存续规模。未披露金额不计入汇总。</li><li>底层资产按“研究大类 → 资产细类”组织，并区分项目披露核实、项目线索推定和名称关键词初判；信息不足时保留“待分类”。证据确认的是资产用途，不自动确认法律权属。产权／经营权为研究分类，具体法律权利以披露文件为准。分类依据、证据链接和浏览器本地修订在详情中显示。</li><li>每条记录的项目名称和来源按钮均使用该项目的官方详情链接。分别打开上交所或深交所的对应项目详情页。链接未核验会在详情中标明。</li><li>历史保留记录表示本轮未再次检索到的已有记录，不自动视为终止；可单独隐藏。抓取不完整或数据过期时会提示。</li></ul><section class="taxonomy-summary"><h3>底层资产分类口径</h3><div id="taxonomy-guide"></div><p>信息不足的记录单列为待分类，不并入综合业态。关注项目与本地分类仅保存在当前浏览器。</p></section><div class="source-summary" id="source-metadata"></div><p><a href="./data/institutional.json" target="_blank" rel="noopener noreferrer">查看本期数据文件 ↗</a></p></dialog>
 <noscript><p class="data-notice">请启用 JavaScript 后查看项目库。<a href="./data/institutional.json">下载数据文件</a></p></noscript>
-<script type="module" src="./assets/app.js?v=20261016-updates-5"></script>
+<script type="module" src="./assets/app.js?v=20261016-clean-copy-1"></script>
 </body>
 </html>

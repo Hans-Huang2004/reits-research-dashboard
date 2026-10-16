@@ -4,7 +4,7 @@ import { REFRESH_SCHEDULE, refreshWarning } from './refresh-health.js?v=20261016
 import { closeFilterMenu, syncFilterSelects } from './filter-select.js?v=20261014-filter-menu-1';
 import { PUBLIC_FIELDS, getPublicField, formatProjectField, projectFieldCellText } from './project-fields.js?v=20261015-origin-2';
 import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-origin-2';
-import { initializeNdrcRecommendations, setNdrcRecommendationsActive, loadNdrcRecommendations, renderNdrcRecommendations, renderNdrcMetadata, exportNdrcCSV, openNdrcSources, openNdrcRecommendation, ndrcReverseLinksHTML } from './ndrc-recommendations.js?v=20261016-updates-1';
+import { initializeNdrcRecommendations, setNdrcRecommendationsActive, loadNdrcRecommendations, renderNdrcRecommendations, renderNdrcMetadata, exportNdrcCSV, openNdrcSources, openNdrcRecommendation, ndrcReverseLinksHTML } from './ndrc-recommendations.js?v=20261016-clean-copy-1';
 
 const DATA_URL = new URL('../data/public_reits.json', import.meta.url);
 const COMPRESSED_DATA_URL = new URL('../data/public_reits.json.gz', import.meta.url);
@@ -196,7 +196,6 @@ function render() {
   if (active) document.querySelector('.skip-link').href = isRecommendationView() ? '#ndrc-projects' : '#public-projects';
   if (isRecommendationView()) {
     document.querySelectorAll('[data-public-view]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.publicView === state.view)));
-    $('public-view-note').textContent = '发改委向证监会推荐项目 · 关联交易所申报';
     renderNdrcMetadata(); renderNdrcRecommendations(); return;
   }
   if (active) $('public-reload').disabled = Boolean(loading);
@@ -205,24 +204,20 @@ function render() {
   const unit = eventView ? '条' : '只';
   const managerCount = new Set(records.map(managerLabel).filter(item => item !== '未披露')).size;
   const stats = eventView
-    ? [['当前匹配申报', records.length, '条', '按交易所官方申报ID统计'], ['首发申报', records.filter(item => item.business_type === '首发').length, '条', '当前筛选中的首次发行申报'], ['扩募申报', records.filter(item => item.business_type === '扩募').length, '条', '每次扩募分别保留，关联原基金'], ['中止与终止', records.filter(item => /中止|终止|撤回/.test(officialStatus(item))).length, '条', '历史申报仍可检索']]
-    : [['当前匹配基金', records.length, '只', '每只基金一条记录'], ['已上市', records.filter(item => item.stage === '已上市').length, '只', '以基金上市资料为准'], ['成立待上市', records.filter(item => item.stage === '成立待上市').length, '只', '已成立、尚未上市'], ['基金管理人', managerCount, '家', '当前筛选中的已披露管理人']];
-  $('public-stats').innerHTML = stats.map(([title, count, suffix, foot]) => `<div class="stat"><div class="stat-label">${title}</div><div class="stat-value">${format(count)}<small>${suffix}</small></div><div class="stat-foot">${foot}</div></div>`).join('');
+    ? [['当前匹配申报', records.length, '条'], ['首发申报', records.filter(item => item.business_type === '首发').length, '条'], ['扩募申报', records.filter(item => item.business_type === '扩募').length, '条'], ['中止与终止', records.filter(item => /中止|终止|撤回/.test(officialStatus(item))).length, '条']]
+    : [['当前匹配基金', records.length, '只'], ['已上市', records.filter(item => item.stage === '已上市').length, '只'], ['成立待上市', records.filter(item => item.stage === '成立待上市').length, '只'], ['基金管理人', managerCount, '家']];
+  $('public-stats').innerHTML = stats.map(([title, count, suffix]) => `<div class="stat"><div class="stat-label">${title}</div><div class="stat-value">${format(count)}<small>${suffix}</small></div></div>`).join('');
   renderBars('public-product-chart', grouped(records, productLabel), 'product');
   renderBars('public-asset-chart', grouped(records, assetLabel), 'asset');
   renderBars('public-stage-chart', grouped(records, stageFor), 'stage');
   renderBars('public-manager-chart', grouped(records, managerLabel), 'manager', 5);
   $('public-stage-chart-heading').textContent = eventView ? '业务阶段' : '基金阶段';
-  $('public-stage-chart-note').textContent = eventView ? '首发、审核与完成进程 · 点击筛选' : '点击阶段筛选';
   $('public-stage-label').textContent = eventView ? '业务阶段' : '基金阶段';
   $('public-stage').options[0].textContent = '全部阶段';
   $('public-business-field').hidden = !eventView;
   $('public-list-heading').textContent = eventView ? '申报审核' : '已发行基金';
   $('public-record-total').textContent = `${format(records.length)}${unit}`;
-  $('public-view-note').textContent = eventView ? '每次申报一条记录 · 区分首发与扩募' : '每只基金一条记录 · 包含成立待上市基金';
-  $('public-list-note').textContent = eventView ? '点击名称查看申报资料，点击所属基金查阅历次业务。' : '点击名称查看基金资料、底层资产与历次申报。';
   $('public-table-caption').textContent = eventView ? '公募REITs首发与扩募申报记录' : '公募REITs已发行基金';
-  $('public-scope-text').textContent = `统计、图表与表格共用当前筛选的${format(records.length)}${unit}${eventView ? '申报记录' : '基金'}`;
   const pages = Math.max(1, Math.ceil(records.length / state.pageSize));
   state.page = Math.min(pages, Math.max(1, state.page));
   const start = (state.page - 1) * state.pageSize;
@@ -234,7 +229,6 @@ function render() {
     return `<tr>${specs.map(spec => `<td class="${publicColumnClass(spec)}">${publicCellHTML(record, spec, context)}</td>`).join('')}<td>${sourceLink(record.source_url, eventView ? '官方项目页' : '基金资料')}</td></tr>`;
   }).join('') || `<tr><td colspan="${specs.length + 1}" class="empty">${snapshot ? '当前条件没有匹配记录' : loadError ? '公募项目库读取失败，请刷新重试。' : '选择公募模块后读取项目资料。'}</td></tr>`;
   document.querySelectorAll('[data-public-fields]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.publicFields === state.fields)));
-  $('public-fields-note').textContent = state.fields === 'all' ? `完整${PUBLIC_FIELDS.length}项字段 · 左右滚动查看` : `核心${CORE_FIELD_KEYS.size}项字段 · 详情查看全部资料`;
   $('public-page-count').textContent = records.length ? `显示${start + 1}–${Math.min(start + state.pageSize, records.length)}条，共${records.length}条` : '共0条';
   $('public-page-number').textContent = `${state.page} / ${pages}`;
   $('public-prev').disabled = state.page <= 1;

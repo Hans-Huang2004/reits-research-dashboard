@@ -2,7 +2,7 @@
 'use strict';
 import { REFRESH_SCHEDULE, refreshWarning } from './refresh-health.js?v=20261016-refresh-1';
 import { enhanceFilterSelects, syncFilterSelects, closeFilterMenu } from './filter-select.js?v=20261014-filter-menu-1';
-import { initializePublicReits, setPublicModuleActive, openPublicSources, openPublicRecord } from './public-reits.js?v=20261016-updates-1';
+import { initializePublicReits, setPublicModuleActive, openPublicSources, openPublicRecord } from './public-reits.js?v=20261016-clean-copy-1';
 import { initializeProjectUpdates, setUpdatesModuleActive, openUpdatesSources } from './project-updates.js?v=20261016-updates-5';
 import { INSTITUTIONAL_FIELDS, getInstitutionalField, projectFieldCellText } from './project-fields.js?v=20261015-disclosures-1';
 import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-disclosures-1';
@@ -210,7 +210,6 @@ function renderInstitutionalHeader(fields) {
     return `<th scope="col"${['amount', 'integer'].includes(spec.type) ? ' class="numeric"' : ''}${sort ? ` aria-sort="${direction}"` : ''}>${sort ? `<button type="button" class="sort-button" data-sort="${sort}" aria-label="按${label}排序">${label} ${arrow}</button>` : label}</th>`;
   }).join('') + '<th scope="col">来源与依据</th>';
   document.querySelectorAll('[data-institutional-fields]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.institutionalFields === state.fields)));
-  if ($('institutional-fields-note')) $('institutional-fields-note').textContent = `${state.fields === 'all' ? '全部' : '核心'}${fields.length}项字段 · 另附来源与分类依据`;
 }
 function institutionalTableCell(record, spec, context) {
   const text = projectFieldCellText(record, spec, context);
@@ -234,22 +233,16 @@ function render() {
   state.page = Math.min(pages, Math.max(1, state.page));
   const start = (state.page - 1) * state.pageSize;
   const totalAmount = data.reduce((sum, record) => sum + (amount(record) ?? 0), 0);
-  const missingAmounts = data.filter(record => amount(record) == null).length;
   const approved = data.filter(record => String(record.status) === '4').length;
   const unknown = data.filter(record => classification(record).confidence === 'unknown').length;
-  const confirmed = data.filter(record => classification(record).confidence === 'confirmed').length;
-  const likely = data.length - unknown - confirmed;
-  const stats = [['当前匹配记录', format(data.length), '条', '按交易所与官方项目 ID 去重'], ['审核通过', format(approved), '条', '公开审核进度 · 不代表已发行'], ['申报金额', format(totalAmount), '亿元', missingAmounts ? `${missingAmounts} 条未披露金额，未计入汇总` : '按当前筛选全部状态汇总'], ['资产待分类', format(unknown), '条', `已核实 ${confirmed} · 初步判断 ${likely}`]];
+  const stats = [['当前匹配记录', format(data.length), '条'], ['审核通过', format(approved), '条'], ['申报金额', format(totalAmount), '亿元'], ['资产待分类', format(unknown), '条']];
   const icons = ['<path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/>', '<path d="m6 12 4 4 8-9M4 3h16v18H4z"/>', '<path d="M4 20h16M6 16v-5M12 16V5M18 16V8"/>', '<path d="M4 5h7l2 3h7v12H4zM9 14h6M12 11v6"/>'];
-  $('stats').innerHTML = stats.map(([label, value, unit, foot], index) => `<div class="stat"><div class="stat-label">${label}<svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[index]}</svg></div><div class="stat-value">${value}<small>${unit}</small></div><div class="stat-foot">${foot}</div></div>`).join('');
+  $('stats').innerHTML = stats.map(([label, value, unit], index) => `<div class="stat"><div class="stat-label">${label}<svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[index]}</svg></div><div class="stat-value">${value}<small>${unit}</small></div></div>`).join('');
   renderBars('rights-chart', grouped(data, record => classification(record).ptype), { limit: Infinity, filter: 'rights' });
   renderBars('asset-chart', grouped(data, record => classification(record).psub), { limit: Infinity, filter: 'asset' });
-  $('rights-chart-note').textContent = `当前筛选范围 · ${state.mode === 'count' ? '按记录数' : '按申报金额'} · 点击类别筛选`;
-  $('asset-chart-note').textContent = `${state.rights || '全部研究大类'} · ${state.mode === 'count' ? '按记录数' : '按申报金额'} · 点击类别筛选`;
   renderBars('status-chart', grouped(data, record => String(record.status)), { isStatus: true, limit: Infinity });
   renderBars('manager-chart', grouped(data, record => record.writer || record.mgr));
   $('record-total').textContent = `${format(data.length)} 条`;
-  $('scope-text').textContent = `统计、图表与表格共用当前筛选结果${data.some(archived) ? ' · 含历史保留记录' : ''}`;
   const fields = institutionalFields();
   $('institutional-table')?.classList.toggle('institutional-table-all', state.fields === 'all');
   renderInstitutionalHeader(fields);
