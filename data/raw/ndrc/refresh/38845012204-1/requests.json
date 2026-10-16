@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
+    "method": "POST",
+    "params": {
+      "pageSize": 50,
+      "pageNum": 1,
+      "reitsProName": "",
+      "industry": "",
+      "mainDeclareUnit": "",
+      "startFundMoney": "",
+      "endFundMoney": "",
+      "reportRecommendStartTime": "",
+      "reportRecommendEndTime": ""
+    },
+    "retrieved_at": "2026-10-16T11:20:33+08:00",
+    "status": 200,
+    "tls_verified": true,
+    "raw_path": "data/raw/ndrc/refresh/38845012204-1/page0001.json",
+    "sha256": "08ac65d4f213c963488adb3f08eeb9876554c890806ccbfa31bb4407e8456028",
+    "bytes": 9326
+  },
+  {
+    "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
+    "method": "POST",
+    "params": {
+      "pageSize": 50,
+      "pageNum": 2,
+      "reitsProName": "",
+      "industry": "",
+      "mainDeclareUnit": "",
+      "startFundMoney": "",
+      "endFundMoney": "",
+      "reportRecommendStartTime": "",
+      "reportRecommendEndTime": ""
+    },
+    "retrieved_at": "2026-10-16T11:20:35+08:00",
+    "status": 200,
+    "tls_verified": true,
+    "raw_path": "data/raw/ndrc/refresh/38845012204-1/page0002.json",
+    "sha256": "2c291b2f60a092a0f9e19ce1e3d92e168eb8d8e288f9651a1ece87d0c2ac05fa",
+    "bytes": 9215
+  },
+  {
+    "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
+    "method": "POST",
+    "params": {
+      "pageSize": 50,
+      "pageNum": 3,
+      "reitsProName": "",
+      "industry": "",
+      "mainDeclareUnit": "",
+      "startFundMoney": "",
+      "endFundMoney": "",
+      "reportRecommendStartTime": "",
+      "reportRecommendEndTime": ""
+    },
+    "retrieved_at": "2026-10-16T11:20:37+08:00",
+    "status": 200,
+    "tls_verified": true,
+    "raw_path": "data/raw/ndrc/refresh/38845012204-1/page0003.json",
+    "sha256": "9ac316820af4047d1741055d9c630eaa76d89f74779cee94827ea9d3a7a49c3a",
+    "bytes": 7104
+  }
+]
