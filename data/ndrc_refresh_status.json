@@ -2,14 +2,14 @@
   "status": "complete",
   "attempt_ok": true,
   "date": "2026-10-16",
-  "batch_id": "38845012204-1",
-  "last_attempt_at": "2026-10-16T11:20:31+08:00",
-  "completed_at": "2026-10-16T11:20:37+08:00",
-  "last_successful_at": "2026-10-16T11:20:37+08:00",
+  "batch_id": "38851323014-1",
+  "last_attempt_at": "2026-10-16T12:34:36+08:00",
+  "completed_at": "2026-10-16T12:34:41+08:00",
+  "last_successful_at": "2026-10-16T12:34:41+08:00",
   "public_snapshot_sha256": "46a728b73a6fa8abd3366cf98130fbc4f63fa45884c1292ab9b70cb43d26f7ab",
-  "review_config_sha256": "081dc0901fab1e19aba56418eb2e0bd4c6e0c18d7557714b4d4bd2598c88a4e7",
-  "implementation_sha256": "9ad474a063427ae7fa6ec2845cede37f8b8b8a9af1f3ca924262cfd4bfbc5fdb",
-  "snapshot_sha256": "9260fb8f72e267b981e7b738604dfcfdfb6fe2939c7b53f7bd58fd56e1dd40e8",
+  "review_config_sha256": "69b571210e1494cbc8267f78390b35f1b0e14405c8516ddcdeec149b7844d576",
+  "implementation_sha256": "80df48c9a595d870e63ccec78a24c7b010e808f97b5ef5ec18d18519194ca529",
+  "snapshot_sha256": "5ebcef1a8d753a34bd49633816c7db0eaa5a8f9ddd5b93e6b441dd65cb474434",
   "validation": {
     "ok": true,
     "items": 137,
@@ -19,15 +19,14 @@
     "raw_to_normalized_count_difference": 0,
     "derived_not_official_ids": true,
     "match_statuses": {
-      "confirmed": 126,
-      "unmatched": 9,
-      "candidate": 2
+      "confirmed": 128,
+      "unmatched": 9
     },
-    "relations": 126,
+    "relations": 128,
     "business_types": {
       "新购入": 16,
-      "首发": 111,
-      "待核实": 10
+      "首发": 113,
+      "待核实": 8
     },
     "earliest_recommended_date": "2020-12-30",
     "latest_recommended_date": "2026-09-10",
