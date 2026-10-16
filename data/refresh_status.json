@@ -1,9 +1,9 @@
 {
   "status": "complete",
-  "date": "2026-10-15",
-  "batch_id": "38691124697-1",
-  "started_at": "2026-10-15T14:13:26+08:00",
-  "completed_at": "2026-10-15T14:15:16+08:00",
+  "date": "2026-10-16",
+  "batch_id": "38834122035-1",
+  "started_at": "2026-10-16T09:15:31+08:00",
+  "completed_at": "2026-10-16T09:22:53+08:00",
   "validation": {
     "institutional": {
       "count": 131,
@@ -13,12 +13,13 @@
     "public": {
       "ok": true,
       "funds": 144,
-      "issued_funds": 96,
+      "issued_funds": 97,
       "filings": 160,
       "business_types": {
         "首发": 144,
         "扩募": 16
       },
+      "excluded_filings": 0,
       "fund_codes_unique": true,
       "filing_ids_unique": true,
       "unlinked_events": 0

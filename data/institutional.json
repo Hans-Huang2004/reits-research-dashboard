@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "date": "2026-10-15",
-  "updated_at": "2026-10-15T14:14:01+08:00",
+  "date": "2026-10-16",
+  "updated_at": "2026-10-16T09:16:11+08:00",
   "source_status": {
     "SSE": {
       "ok": true,
@@ -68,7 +68,7 @@
     "duplicate_ids": 0,
     "unknown_classification": 11,
     "detail_warnings": [],
-    "content_sha256": "df74fd5ae5f07e7d71e597bb6bde7943a2b4cd1e96ed2e4fa62163d0ff28ea26",
+    "content_sha256": "46617d65a30a368d72ce2250f462ba1667c11bba336793c635e77ea782f7ac53",
     "classification_counts": {
       "verified": 27,
       "inferred": 6,
@@ -79,11 +79,167 @@
     "link_validation": {
       "verified": 131,
       "total": 131,
-      "checked_at": "2026-10-15T14:14:38+08:00",
+      "checked_at": "2026-10-16T09:18:26+08:00",
       "method": "official_detail_identity_and_official_page_route"
     }
   },
   "items": [
+    {
+      "id": "SSE_6abfda7406914747b4d7d408f34a5229",
+      "source_id": "6abfda7406914747b4d7d408f34a5229",
+      "ex": "上交所",
+      "name": "国联-华福-至善伏安新能源不动产资产支持专项计划（机构间REIT）",
+      "writer": "国联证券资产管理有限公司",
+      "mgr": "国联证券资管",
+      "origin": "福建至善伏安新能源投资有限公司",
+      "amt": 4.36,
+      "status": "2",
+      "up": "2026-10-15",
+      "acc": "2026-09-23",
+      "match_keywords": [
+        "机构间REIT"
+      ],
+      "query_keywords": [
+        "机构间REIT"
+      ],
+      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=6abfda7406914747b4d7d408f34a5229",
+      "source_kind": "project_page",
+      "link_status": "verified",
+      "is_expansion": false,
+      "archive_status": "current",
+      "product_type": "institutional",
+      "ptype": "经营权类",
+      "psub": "能源",
+      "pflag": "",
+      "pnote": "名称关键词：能源",
+      "classification_source": "keyword",
+      "classification_confidence": "likely",
+      "num": "1",
+      "approved_date": null,
+      "issued_date": null,
+      "is_issued": null,
+      "field_availability": {
+        "underlying_assets": {
+          "status": "unverified",
+          "reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=6abfda7406914747b4d7d408f34a5229",
+          "checked_at": "2026-10-15T11:43:26+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "已取得资料尚未明确本批次资产清单。"
+        },
+        "asset_type": {
+          "status": "unverified",
+          "reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=6abfda7406914747b4d7d408f34a5229",
+          "checked_at": "2026-10-15T11:43:26+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。"
+        },
+        "approved_date": {
+          "status": "unverified",
+          "reason": "官方详情更新日期并非通过日期；需项目审核时间线或明确通过日期的官方文件。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=6abfda7406914747b4d7d408f34a5229",
+          "checked_at": "2026-10-15T11:43:26+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "尚未取得明确记载审核通过日的官方文件。"
+        },
+        "issued_date": {
+          "status": "unverified",
+          "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=6abfda7406914747b4d7d408f34a5229",
+          "checked_at": "2026-10-15T11:43:26+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "尚未取得本次申报对应的发行或设立日期。"
+        },
+        "is_issued": {
+          "status": "unverified",
+          "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。 已全量检索上交所26652条ABS证券简称主表，取得0条候选证券要素；未取得完全匹配本申报事件的已发行证据。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=6abfda7406914747b4d7d408f34a5229",
+          "checked_at": "2026-10-15T11:43:26+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
+        }
+      },
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
+    },
+    {
+      "id": "SSE_0af8d41233494350aa7aea124071b93a",
+      "source_id": "0af8d41233494350aa7aea124071b93a",
+      "ex": "上交所",
+      "name": "国家电投-黄河公司水光互补清洁能源绿色持有型不动产资产支持专项计划",
+      "writer": "中信证券股份有限公司",
+      "mgr": "中信证券",
+      "origin": "青海黄河上游水电开发有限责任公司",
+      "amt": 63.0,
+      "status": "2",
+      "up": "2026-10-15",
+      "acc": "2026-08-28",
+      "match_keywords": [
+        "持有型不动产"
+      ],
+      "query_keywords": [
+        "持有型不动产"
+      ],
+      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=0af8d41233494350aa7aea124071b93a",
+      "source_kind": "project_page",
+      "link_status": "verified",
+      "is_expansion": false,
+      "archive_status": "current",
+      "product_type": "institutional",
+      "ptype": "经营权类",
+      "psub": "能源",
+      "pflag": "",
+      "pnote": "名称关键词：能源",
+      "classification_source": "keyword",
+      "classification_confidence": "likely",
+      "num": "2",
+      "approved_date": null,
+      "issued_date": null,
+      "is_issued": null,
+      "field_availability": {
+        "underlying_assets": {
+          "status": "unverified",
+          "reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=0af8d41233494350aa7aea124071b93a",
+          "checked_at": "2026-10-15T11:42:50+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "已取得资料尚未明确本批次资产清单。"
+        },
+        "asset_type": {
+          "status": "unverified",
+          "reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=0af8d41233494350aa7aea124071b93a",
+          "checked_at": "2026-10-15T11:42:50+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。"
+        },
+        "approved_date": {
+          "status": "unverified",
+          "reason": "官方详情更新日期并非通过日期；需项目审核时间线或明确通过日期的官方文件。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=0af8d41233494350aa7aea124071b93a",
+          "checked_at": "2026-10-15T11:42:50+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "尚未取得明确记载审核通过日的官方文件。"
+        },
+        "issued_date": {
+          "status": "unverified",
+          "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=0af8d41233494350aa7aea124071b93a",
+          "checked_at": "2026-10-15T11:42:50+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "尚未取得本次申报对应的发行或设立日期。"
+        },
+        "is_issued": {
+          "status": "unverified",
+          "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。 已全量检索上交所26652条ABS证券简称主表，取得0条候选证券要素；未取得完全匹配本申报事件的已发行证据。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=0af8d41233494350aa7aea124071b93a",
+          "checked_at": "2026-10-15T11:42:50+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
+        }
+      },
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
+    },
     {
       "id": "SSE_202b52b7b6e64a83b5797db0b824c335",
       "source_id": "202b52b7b6e64a83b5797db0b824c335",
@@ -114,11 +270,10 @@
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
       "classification_confidence": "likely",
-      "num": "1",
+      "num": "3",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -161,7 +316,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_cad8b4866e174600b96d717693954bf4",
@@ -193,11 +348,10 @@
       "pnote": "名称关键词：义乌市场",
       "classification_source": "keyword",
       "classification_confidence": "likely",
-      "num": "2",
+      "num": "4",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -240,7 +394,85 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
+    },
+    {
+      "id": "SSE_985324c17575494897af9b1b09bd780b",
+      "source_id": "985324c17575494897af9b1b09bd780b",
+      "ex": "上交所",
+      "name": "国泰海通资管-上实城开租赁住房持有型不动产资产支持专项计划",
+      "writer": "上海国泰海通证券资产管理有限公司",
+      "mgr": "国泰海通资管",
+      "origin": "上海城开（集团）有限公司",
+      "amt": 10.0,
+      "status": "2",
+      "up": "2026-10-15",
+      "acc": "2026-06-10",
+      "match_keywords": [
+        "持有型不动产"
+      ],
+      "query_keywords": [
+        "持有型不动产"
+      ],
+      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=985324c17575494897af9b1b09bd780b",
+      "source_kind": "project_page",
+      "link_status": "verified",
+      "is_expansion": false,
+      "archive_status": "current",
+      "product_type": "institutional",
+      "ptype": "产权类",
+      "psub": "租赁住房",
+      "pflag": "",
+      "pnote": "名称关键词：租赁住房",
+      "classification_source": "keyword",
+      "classification_confidence": "likely",
+      "num": "5",
+      "approved_date": null,
+      "issued_date": null,
+      "is_issued": null,
+      "field_availability": {
+        "underlying_assets": {
+          "status": "unverified",
+          "reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=985324c17575494897af9b1b09bd780b",
+          "checked_at": "2026-10-15T11:43:22+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "已取得资料尚未明确本批次资产清单。"
+        },
+        "asset_type": {
+          "status": "unverified",
+          "reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=985324c17575494897af9b1b09bd780b",
+          "checked_at": "2026-10-15T11:43:22+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。"
+        },
+        "approved_date": {
+          "status": "unverified",
+          "reason": "官方详情更新日期并非通过日期；需项目审核时间线或明确通过日期的官方文件。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=985324c17575494897af9b1b09bd780b",
+          "checked_at": "2026-10-15T11:43:22+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "尚未取得明确记载审核通过日的官方文件。"
+        },
+        "issued_date": {
+          "status": "unverified",
+          "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=985324c17575494897af9b1b09bd780b",
+          "checked_at": "2026-10-15T11:43:22+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "尚未取得本次申报对应的发行或设立日期。"
+        },
+        "is_issued": {
+          "status": "unverified",
+          "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。 已全量检索上交所26652条ABS证券简称主表，取得0条候选证券要素；未取得完全匹配本申报事件的已发行证据。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=985324c17575494897af9b1b09bd780b",
+          "checked_at": "2026-10-15T11:43:22+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
+        }
+      },
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_6b2a6d1c1bad4942a37dbf96c33dd426",
@@ -272,11 +504,10 @@
       "pnote": "名称关键词：产业园",
       "classification_source": "keyword",
       "classification_confidence": "likely",
-      "num": "3",
+      "num": "6",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -319,7 +550,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_99ad63b648ac49cba77567407e2aeef7",
@@ -351,11 +582,10 @@
       "pnote": "名称关键词：水务",
       "classification_source": "keyword",
       "classification_confidence": "likely",
-      "num": "4",
+      "num": "7",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -398,86 +628,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
-    },
-    {
-      "id": "SSE_0af8d41233494350aa7aea124071b93a",
-      "source_id": "0af8d41233494350aa7aea124071b93a",
-      "ex": "上交所",
-      "name": "国家电投-黄河公司水光互补清洁能源绿色持有型不动产资产支持专项计划",
-      "writer": "中信证券股份有限公司",
-      "mgr": "中信证券",
-      "origin": "青海黄河上游水电开发有限责任公司",
-      "amt": 63.0,
-      "status": "2",
-      "up": "2026-10-14",
-      "acc": "2026-08-28",
-      "match_keywords": [
-        "持有型不动产"
-      ],
-      "query_keywords": [
-        "持有型不动产"
-      ],
-      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=0af8d41233494350aa7aea124071b93a",
-      "source_kind": "project_page",
-      "link_status": "verified",
-      "is_expansion": false,
-      "archive_status": "current",
-      "product_type": "institutional",
-      "ptype": "经营权类",
-      "psub": "能源",
-      "pflag": "",
-      "pnote": "名称关键词：能源",
-      "classification_source": "keyword",
-      "classification_confidence": "likely",
-      "num": "5",
-      "approved_date": null,
-      "issued_date": null,
-      "is_issued": null,
-      "research_field_sources": {},
-      "field_availability": {
-        "underlying_assets": {
-          "status": "unverified",
-          "reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=0af8d41233494350aa7aea124071b93a",
-          "checked_at": "2026-10-15T11:42:50+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "已取得资料尚未明确本批次资产清单。"
-        },
-        "asset_type": {
-          "status": "unverified",
-          "reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=0af8d41233494350aa7aea124071b93a",
-          "checked_at": "2026-10-15T11:42:50+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。"
-        },
-        "approved_date": {
-          "status": "unverified",
-          "reason": "官方详情更新日期并非通过日期；需项目审核时间线或明确通过日期的官方文件。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=0af8d41233494350aa7aea124071b93a",
-          "checked_at": "2026-10-15T11:42:50+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "尚未取得明确记载审核通过日的官方文件。"
-        },
-        "issued_date": {
-          "status": "unverified",
-          "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=0af8d41233494350aa7aea124071b93a",
-          "checked_at": "2026-10-15T11:42:50+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "尚未取得本次申报对应的发行或设立日期。"
-        },
-        "is_issued": {
-          "status": "unverified",
-          "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。 已全量检索上交所26652条ABS证券简称主表，取得0条候选证券要素；未取得完全匹配本申报事件的已发行证据。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=0af8d41233494350aa7aea124071b93a",
-          "checked_at": "2026-10-15T11:42:50+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
-        }
-      },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_72429c4ccc1d4ad0978aaa8a5ca9fe39",
@@ -509,11 +660,10 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "classification_confidence": "likely",
-      "num": "6",
+      "num": "8",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -556,86 +706,85 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
-      "id": "SSE_985324c17575494897af9b1b09bd780b",
-      "source_id": "985324c17575494897af9b1b09bd780b",
+      "id": "SSE_5047c4b973dd4728b7c50f1a0db46101",
+      "source_id": "5047c4b973dd4728b7c50f1a0db46101",
       "ex": "上交所",
-      "name": "国泰海通资管-上实城开租赁住房持有型不动产资产支持专项计划",
-      "writer": "上海国泰海通证券资产管理有限公司",
-      "mgr": "国泰海通资管",
-      "origin": "上海城开（集团）有限公司",
-      "amt": 10.0,
-      "status": "2",
+      "name": "建信住房租赁基金持有型不动产资产支持专项计划（第二至N次扩募并新购入租赁住房项目）",
+      "writer": "中国国际金融股份有限公司",
+      "mgr": "中金公司",
+      "origin": "建万（北京）住房租赁投资基金（有限合伙）,建信（北京）投资住房租赁一号不动产私募投资基金",
+      "amt": 50.0,
+      "status": "4",
       "up": "2026-10-14",
-      "acc": "2026-06-10",
+      "acc": "2026-07-28",
       "match_keywords": [
         "持有型不动产"
       ],
       "query_keywords": [
         "持有型不动产"
       ],
-      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=985324c17575494897af9b1b09bd780b",
+      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=5047c4b973dd4728b7c50f1a0db46101",
       "source_kind": "project_page",
       "link_status": "verified",
-      "is_expansion": false,
+      "is_expansion": true,
       "archive_status": "current",
       "product_type": "institutional",
       "ptype": "产权类",
       "psub": "租赁住房",
       "pflag": "",
-      "pnote": "名称关键词：租赁住房",
+      "pnote": "名称关键词：住房租赁、租赁住房",
       "classification_source": "keyword",
       "classification_confidence": "likely",
-      "num": "7",
+      "num": "9",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
           "reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=985324c17575494897af9b1b09bd780b",
-          "checked_at": "2026-10-15T11:43:22+08:00",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=5047c4b973dd4728b7c50f1a0db46101",
+          "checked_at": "2026-10-15T11:43:24+08:00",
           "original_status": "not_obtained_after_official_source_review",
           "display_reason": "已取得资料尚未明确本批次资产清单。"
         },
         "asset_type": {
           "status": "unverified",
           "reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=985324c17575494897af9b1b09bd780b",
-          "checked_at": "2026-10-15T11:43:22+08:00",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=5047c4b973dd4728b7c50f1a0db46101",
+          "checked_at": "2026-10-15T11:43:24+08:00",
           "original_status": "not_obtained_after_official_source_review",
           "display_reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。"
         },
         "approved_date": {
           "status": "unverified",
           "reason": "官方详情更新日期并非通过日期；需项目审核时间线或明确通过日期的官方文件。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=985324c17575494897af9b1b09bd780b",
-          "checked_at": "2026-10-15T11:43:22+08:00",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=5047c4b973dd4728b7c50f1a0db46101",
+          "checked_at": "2026-10-15T11:43:24+08:00",
           "original_status": "not_obtained_after_official_source_review",
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         },
         "issued_date": {
           "status": "unverified",
           "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=985324c17575494897af9b1b09bd780b",
-          "checked_at": "2026-10-15T11:43:22+08:00",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=5047c4b973dd4728b7c50f1a0db46101",
+          "checked_at": "2026-10-15T11:43:24+08:00",
           "original_status": "not_obtained_after_official_source_review",
           "display_reason": "尚未取得本次申报对应的发行或设立日期。"
         },
         "is_issued": {
           "status": "unverified",
           "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。 已全量检索上交所26652条ABS证券简称主表，取得0条候选证券要素；未取得完全匹配本申报事件的已发行证据。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=985324c17575494897af9b1b09bd780b",
-          "checked_at": "2026-10-15T11:43:22+08:00",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=5047c4b973dd4728b7c50f1a0db46101",
+          "checked_at": "2026-10-15T11:43:24+08:00",
           "original_status": "not_obtained_after_official_source_review",
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_c033fa493960437c951b59a5e3a8ef37",
@@ -667,11 +816,10 @@
       "pnote": "名称关键词：商业、零售",
       "classification_source": "keyword",
       "classification_confidence": "likely",
-      "num": "8",
+      "num": "10",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -714,7 +862,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_a3e22cf1373744618ad63ca92b07f5aa",
@@ -746,7 +894,7 @@
       "pnote": "交易所公开列表仅披露发行人、金额和审核信息。未找到本9.56亿元专项计划可核实的底层资产清单，不能根据济高科技的主营业务或另一只银行间类REITs替代认定。",
       "classification_source": "unknown",
       "classification_confidence": "unknown",
-      "num": "9",
+      "num": "11",
       "classification_evidence": [
         {
           "title": "上海证券交易所：国君资管-济高控股持有型不动产资产支持专项计划项目页",
@@ -759,7 +907,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -794,7 +941,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_DE9431533C974EA9949CA5453FE201BD",
@@ -827,7 +974,7 @@
       "pnote": "发行人官网采购公告确认筹备某商业不动产机构间REITs，但没有公开具体业态和资产清单。媒体写字楼判断明确注明入池清单未公开，仅为根据发行人持有物业的市场推测，暂不强行分类。",
       "classification_source": "unknown",
       "classification_confidence": "unknown",
-      "num": "10",
+      "num": "12",
       "classification_evidence": [
         {
           "title": "蜀道资本集团某商业不动产机构间REITs/权益并表类REITs项目信用评级机构询比采购公告",
@@ -847,7 +994,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -882,7 +1028,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_5CCD030CB38E4250904A2C05D85E0342",
@@ -915,11 +1061,10 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "classification_confidence": "likely",
-      "num": "11",
+      "num": "13",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -962,7 +1107,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_d8eaddb351604e13b2b0807d0ee4c806",
@@ -994,7 +1139,7 @@
       "pnote": "交易所披露两家原始权益人为持股平台；已找到的产业园方向报道明确注明本专项计划入池资产未公开，不能将金地2024年向领新基金转让的四个上海园区当作本次ABS底层资产。",
       "classification_source": "unknown",
       "classification_confidence": "unknown",
-      "num": "12",
+      "num": "14",
       "classification_evidence": [
         {
           "title": "上海证券交易所：太保资产-金地商置持有型不动产资产支持专项计划项目页",
@@ -1013,7 +1158,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -1048,7 +1192,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_965c1753f47b479bb403802dd6598495",
@@ -1080,11 +1224,10 @@
       "pnote": "名称关键词：数据中心",
       "classification_source": "keyword",
       "classification_confidence": "likely",
-      "num": "13",
+      "num": "15",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -1127,7 +1270,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_213e64e05b2a4db8a98568e1740b5101",
@@ -1159,11 +1302,10 @@
       "pnote": "名称关键词：大桥",
       "classification_source": "keyword",
       "classification_confidence": "likely",
-      "num": "14",
+      "num": "16",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -1206,7 +1348,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_36cc6e3d2d624fc588a9afdf41ec3f01",
@@ -1238,11 +1380,10 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "classification_confidence": "likely",
-      "num": "15",
+      "num": "17",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -1285,7 +1426,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_9b728f78214d433483b3d56d33e731ab",
@@ -1317,7 +1458,7 @@
       "pnote": "项目报道明确称底层为中金数据自持Tier IV高等级算力不动产，暂标数据中心；尚未找到发行人或交易所公开入池清单、权属披露，保留待核。",
       "classification_source": "inferred",
       "classification_confidence": "likely",
-      "num": "16",
+      "num": "18",
       "classification_evidence": [
         {
           "title": "40.24亿！中金数据IDC机构间REIT获上交所受理，算力资产证券化扩容提速",
@@ -1336,7 +1477,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -1371,7 +1511,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_678579d5e0c24a459d376a9c57bb6163",
@@ -1403,11 +1543,10 @@
       "pnote": "名称关键词：保租房",
       "classification_source": "keyword",
       "classification_confidence": "likely",
-      "num": "17",
+      "num": "19",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -1450,7 +1589,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_48af0fdb0e8b47c49b923f11f5e1431b",
@@ -1482,11 +1621,10 @@
       "pnote": "名称关键词：高速",
       "classification_source": "keyword",
       "classification_confidence": "likely",
-      "num": "18",
+      "num": "20",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -1529,7 +1667,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_CA98A72685014BA5BC8F18E5D376FF30",
@@ -1562,7 +1700,7 @@
       "pnote": "发行人正式公告披露的物业用途；页码与原句见字段证据。",
       "classification_source": "verified",
       "classification_confidence": "confirmed",
-      "num": "19",
+      "num": "21",
       "classification_evidence": [
         {
           "title": "长春高新：关于开展持有型不动产资产支持专项计划（机构间REITs）申报发行工作及相关授权事项的公告（2026-075）",
@@ -1670,86 +1808,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
-    },
-    {
-      "id": "SSE_5047c4b973dd4728b7c50f1a0db46101",
-      "source_id": "5047c4b973dd4728b7c50f1a0db46101",
-      "ex": "上交所",
-      "name": "建信住房租赁基金持有型不动产资产支持专项计划（第二至N次扩募并新购入租赁住房项目）",
-      "writer": "中国国际金融股份有限公司",
-      "mgr": "中金公司",
-      "origin": "建万（北京）住房租赁投资基金（有限合伙）,建信（北京）投资住房租赁一号不动产私募投资基金",
-      "amt": 50.0,
-      "status": "2",
-      "up": "2026-09-30",
-      "acc": "2026-07-28",
-      "match_keywords": [
-        "持有型不动产"
-      ],
-      "query_keywords": [
-        "持有型不动产"
-      ],
-      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=5047c4b973dd4728b7c50f1a0db46101",
-      "source_kind": "project_page",
-      "link_status": "verified",
-      "is_expansion": true,
-      "archive_status": "current",
-      "product_type": "institutional",
-      "ptype": "产权类",
-      "psub": "租赁住房",
-      "pflag": "",
-      "pnote": "名称关键词：住房租赁、租赁住房",
-      "classification_source": "keyword",
-      "classification_confidence": "likely",
-      "num": "20",
-      "approved_date": null,
-      "issued_date": null,
-      "is_issued": null,
-      "research_field_sources": {},
-      "field_availability": {
-        "underlying_assets": {
-          "status": "unverified",
-          "reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=5047c4b973dd4728b7c50f1a0db46101",
-          "checked_at": "2026-10-15T11:43:24+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "已取得资料尚未明确本批次资产清单。"
-        },
-        "asset_type": {
-          "status": "unverified",
-          "reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=5047c4b973dd4728b7c50f1a0db46101",
-          "checked_at": "2026-10-15T11:43:24+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。"
-        },
-        "approved_date": {
-          "status": "unverified",
-          "reason": "官方详情更新日期并非通过日期；需项目审核时间线或明确通过日期的官方文件。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=5047c4b973dd4728b7c50f1a0db46101",
-          "checked_at": "2026-10-15T11:43:24+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "尚未取得明确记载审核通过日的官方文件。"
-        },
-        "issued_date": {
-          "status": "unverified",
-          "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=5047c4b973dd4728b7c50f1a0db46101",
-          "checked_at": "2026-10-15T11:43:24+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "尚未取得本次申报对应的发行或设立日期。"
-        },
-        "is_issued": {
-          "status": "unverified",
-          "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。 已全量检索上交所26652条ABS证券简称主表，取得0条候选证券要素；未取得完全匹配本申报事件的已发行证据。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=5047c4b973dd4728b7c50f1a0db46101",
-          "checked_at": "2026-10-15T11:43:24+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
-        }
-      },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_f112c7774ea84dbea54e17bdb33895b5",
@@ -1781,7 +1840,7 @@
       "pnote": "发行人正式公告披露的物业用途；页码与原句见字段证据。",
       "classification_source": "verified",
       "classification_confidence": "confirmed",
-      "num": "21",
+      "num": "22",
       "classification_evidence": [
         {
           "title": "锦欣生殖：主要交易——建议发行资产支持证券及股权转让协议",
@@ -1902,7 +1961,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_2A6C5D1546094747BF3B83B1EF7DEB55",
@@ -1935,11 +1994,10 @@
       "pnote": "名称关键词：水电、能源",
       "classification_source": "keyword",
       "classification_confidence": "likely",
-      "num": "22",
+      "num": "23",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -1982,7 +2040,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_a94c118f910c46fbacfd7f4139a90685",
@@ -2014,11 +2072,10 @@
       "pnote": "名称关键词：滑雪场",
       "classification_source": "keyword",
       "classification_confidence": "likely",
-      "num": "23",
+      "num": "24",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -2061,7 +2118,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_8A1E09D85832487E8F5354EB6D049C8D",
@@ -2094,11 +2151,10 @@
       "pnote": "名称关键词：能源",
       "classification_source": "keyword",
       "classification_confidence": "likely",
-      "num": "24",
+      "num": "25",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -2141,7 +2197,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_e8bd42e5d15a4b2c91de12e7eb03c44f",
@@ -2173,7 +2229,7 @@
       "pnote": "公开报道明确称底层资产细节未披露；集团文旅/商业项目属于主体经营信息，不能代替具体入池清单。",
       "classification_source": "unknown",
       "classification_confidence": "unknown",
-      "num": "25",
+      "num": "26",
       "classification_evidence": [
         {
           "title": "交易所项目身份与审核信息（未披露具体底层资产）",
@@ -2185,7 +2241,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -2220,7 +2275,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_cd269186a1344b0a92627dbaeb6503f7",
@@ -2252,7 +2307,7 @@
       "pnote": "官方企业介绍表明润邦达美汽车制造业供应链产业园具有加工、仓储、物流周转等功能；当前仍按产业园名称初判，准确入池期次和范围需计划文件确认。",
       "classification_source": "inferred",
       "classification_confidence": "likely",
-      "num": "26",
+      "num": "27",
       "classification_evidence": [
         {
           "title": "润邦达美官网｜汽车制造业供应链产业园（二期）开工公告，说明一期及二期功能",
@@ -2264,7 +2319,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -2299,86 +2353,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
-    },
-    {
-      "id": "SSE_6abfda7406914747b4d7d408f34a5229",
-      "source_id": "6abfda7406914747b4d7d408f34a5229",
-      "ex": "上交所",
-      "name": "国联-华福-至善伏安新能源不动产资产支持专项计划（机构间REIT）",
-      "writer": "国联证券资产管理有限公司",
-      "mgr": "国联证券资管",
-      "origin": "福建至善伏安新能源投资有限公司",
-      "amt": 4.36,
-      "status": "1",
-      "up": "2026-09-23",
-      "acc": "2026-09-23",
-      "match_keywords": [
-        "机构间REIT"
-      ],
-      "query_keywords": [
-        "机构间REIT"
-      ],
-      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=6abfda7406914747b4d7d408f34a5229",
-      "source_kind": "project_page",
-      "link_status": "verified",
-      "is_expansion": false,
-      "archive_status": "current",
-      "product_type": "institutional",
-      "ptype": "经营权类",
-      "psub": "能源",
-      "pflag": "",
-      "pnote": "名称关键词：能源",
-      "classification_source": "keyword",
-      "classification_confidence": "likely",
-      "num": "27",
-      "approved_date": null,
-      "issued_date": null,
-      "is_issued": null,
-      "research_field_sources": {},
-      "field_availability": {
-        "underlying_assets": {
-          "status": "unverified",
-          "reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=6abfda7406914747b4d7d408f34a5229",
-          "checked_at": "2026-10-15T11:43:26+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "已取得资料尚未明确本批次资产清单。"
-        },
-        "asset_type": {
-          "status": "unverified",
-          "reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=6abfda7406914747b4d7d408f34a5229",
-          "checked_at": "2026-10-15T11:43:26+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。"
-        },
-        "approved_date": {
-          "status": "unverified",
-          "reason": "官方详情更新日期并非通过日期；需项目审核时间线或明确通过日期的官方文件。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=6abfda7406914747b4d7d408f34a5229",
-          "checked_at": "2026-10-15T11:43:26+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "尚未取得明确记载审核通过日的官方文件。"
-        },
-        "issued_date": {
-          "status": "unverified",
-          "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=6abfda7406914747b4d7d408f34a5229",
-          "checked_at": "2026-10-15T11:43:26+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "尚未取得本次申报对应的发行或设立日期。"
-        },
-        "is_issued": {
-          "status": "unverified",
-          "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。 已全量检索上交所26652条ABS证券简称主表，取得0条候选证券要素；未取得完全匹配本申报事件的已发行证据。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=6abfda7406914747b4d7d408f34a5229",
-          "checked_at": "2026-10-15T11:43:26+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
-        }
-      },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_5880b085aa2247f58f4945eadb3f8908",
@@ -2414,7 +2389,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -2457,7 +2431,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_44ed160bc4384974bffcf2a84309e7c9",
@@ -2493,7 +2467,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -2536,7 +2509,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_E64643B78E7A47EBBC6F26E4E4AF971C",
@@ -2573,7 +2546,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -2616,7 +2588,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_250c88937e5e4dfb8259590e3c34210d",
@@ -2652,7 +2624,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -2695,7 +2666,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_89fded3ba64b42479710a8b62f9be34a",
@@ -2739,7 +2710,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -2774,7 +2744,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_99AA60238C3B4E2487F17211D0D528DB",
@@ -2819,7 +2789,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -2854,7 +2823,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_c4975169bdd543c59e3a5e1f4734cff9",
@@ -2890,7 +2859,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -2933,7 +2901,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_02eb04f737e3491487fca3da90ab718c",
@@ -2981,7 +2949,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -3016,7 +2983,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_669a64d28c8b46ffa3a441b290c6e360",
@@ -3052,7 +3019,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -3095,7 +3061,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_8ba758e3bef746c385dbce325697b35e",
@@ -3131,7 +3097,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -3174,7 +3139,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_a90cad7bc53c4ef0a1df1f4c1ce2134e",
@@ -3222,7 +3187,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -3257,7 +3221,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_38076302302742DF88032E0BF60FCE8A",
@@ -3294,7 +3258,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -3337,7 +3300,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_c3a65a356256442593a76ff3c099c134",
@@ -3373,7 +3336,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -3416,7 +3378,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_3039710837684CF2BE105283EF0BE719",
@@ -3453,7 +3415,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -3496,7 +3457,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_610637d6ae87472987d8f6413cedd5ad",
@@ -3532,7 +3493,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -3575,7 +3535,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_CE93777394A247CD961CE22879A94F76",
@@ -3612,7 +3572,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -3655,7 +3614,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_7af29dfa21bf48a692012feb1348eadc",
@@ -3699,7 +3658,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -3734,7 +3692,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_16810ef906a9453882e3390286b2dbc9",
@@ -3770,7 +3728,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -3813,7 +3770,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_5b8427935c004cdc964218c9995a5354",
@@ -3849,7 +3806,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -3892,7 +3848,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_A008DEF35DB7497B80240D4B840C3F89",
@@ -4020,7 +3976,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_24b496b291084b3287889b87735bfbc5",
@@ -4056,7 +4012,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -4099,7 +4054,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_4A60D5E2DDEA40058B6116083A268A44",
@@ -4144,7 +4099,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -4179,7 +4133,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_98e05b639ffa4e05a431b00b3876980b",
@@ -4215,7 +4169,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -4258,7 +4211,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_d73ac2bed30144e99b6cf6a8ac5a6850",
@@ -4294,7 +4247,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -4337,7 +4289,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_b3c6f5b98f0a442e93c7f87cfa35bc4a",
@@ -4373,7 +4325,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -4416,7 +4367,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_46a850964d07460c9e1ac14043048b8a",
@@ -4452,7 +4403,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -4495,7 +4445,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_d615ed841af642a1aa7c92b48838e20e",
@@ -4531,7 +4481,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -4574,7 +4523,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_96e2d4a093c94acc84e0b715ffef055c",
@@ -4610,7 +4559,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -4653,7 +4601,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_4332659D9E3B4A598CC95FC6F37C84F0",
@@ -4690,7 +4638,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -4733,7 +4680,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_77e4f8f9cafd4f909ca53307a5159a86",
@@ -4769,7 +4716,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -4812,7 +4758,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_8b9fc7d1b17d4533aada88572456d221",
@@ -4848,7 +4794,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -4891,7 +4836,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_1b55a2a6fab14760bc34b2985670e113",
@@ -4927,7 +4872,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -4970,7 +4914,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_0ba7147197f84495884cade76eea1d42",
@@ -5006,7 +4950,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -5049,7 +4992,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_4b1931bec9284aad84ca396c6abf5abb",
@@ -5085,7 +5028,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -5128,7 +5070,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_afd265b13fea4628913108d7f9e77732",
@@ -5223,7 +5165,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_333e6f0072254077920d65c6527050eb",
@@ -5271,7 +5213,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -5306,7 +5247,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_DCF15E24B0844EB9BB6C040F1D6802DA",
@@ -5413,7 +5354,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_0b4f9a9e62084fceab2344efb5fd6308",
@@ -5461,7 +5402,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -5496,7 +5436,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_13710c0a13aa48aeb5be57bad70672fd",
@@ -5590,7 +5530,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_4fb3efe40f0a4c9f939a9f280eb81b7e",
@@ -5626,7 +5566,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -5669,7 +5608,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_6193f1f9ee7941198793739fc95950cc",
@@ -5705,7 +5644,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -5748,7 +5686,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_ee369312e63f4e2fa74f6f0ff8a54f3c",
@@ -5800,7 +5738,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -5835,7 +5772,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_bcb8a9bf61c6441d82f5a233d4983478",
@@ -5929,7 +5866,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_9d256ebda67c4d938cdd986f94214747",
@@ -5965,7 +5902,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -6008,7 +5944,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_b8a83c4385e8487ea9d9446d65b80472",
@@ -6103,7 +6039,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_996C0CD8DDEA4A07A33E0B76885913BB",
@@ -6203,7 +6139,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_08bbec2e9e3f42eeb5b5bf41d092be3d",
@@ -6251,7 +6187,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -6286,7 +6221,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_45fd3bdaad2245c0aa577015e940224d",
@@ -6322,7 +6257,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -6365,7 +6299,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_81b3f5fefc834e60aa496a6250470655",
@@ -6463,7 +6397,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_9424f76a47cd448baaa3846dcd2af880",
@@ -6511,7 +6445,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -6546,7 +6479,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_08DED90B438E4E6C9BD3C63CAC08E6D0",
@@ -6595,7 +6528,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -6630,7 +6562,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_913fae19dc2749a794b38eb4bd0cdde0",
@@ -6743,7 +6675,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_75ADB37CB2B2485BB1201DE880F75588",
@@ -6780,7 +6712,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -6823,7 +6754,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_611ea034d5d84f89b71452053297424b",
@@ -6917,7 +6848,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_a4f49d8aa5734224b1cdedc6707738d7",
@@ -6961,7 +6892,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -6996,7 +6926,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_c33e8b8a7a5c45a8a7746c76d9e33e19",
@@ -7032,7 +6962,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -7075,7 +7004,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_44F5FAE238634E68BD68279EDAE278F3",
@@ -7182,7 +7111,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_bc93baf652b249a191ed4383604d7b04",
@@ -7218,7 +7147,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -7261,7 +7189,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_660d35fa453848bcb5523490e53625d3",
@@ -7355,7 +7283,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_c4c39dfa801c461480aabbae1aa79326",
@@ -7449,7 +7377,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_8e581a1011094674a59b9dccecb642cc",
@@ -7485,7 +7413,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -7528,7 +7455,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_2d2e4884bc92462a985ba7757ed59f10",
@@ -7622,7 +7549,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_858e70129c204e8ca8a963a0fa00fffa",
@@ -7666,7 +7593,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -7701,7 +7627,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_2fedfef7b676482a95c4ed32c4043f49",
@@ -7749,7 +7675,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -7784,7 +7709,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_76f7af17f992438a81a9b100c5141a35",
@@ -7878,7 +7803,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_43180de30031439dbe40687bd3cf41e4",
@@ -7973,7 +7898,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_d88ec5abcd6e4304ba262aa585b4fbde",
@@ -8021,7 +7946,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -8056,7 +7980,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_5a248a9b5dea42b38a9af2c486f60d2e",
@@ -8151,7 +8075,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_8fc676d3df944beaa7005fd6bc9e5eb1",
@@ -8187,7 +8111,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -8230,7 +8153,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_3C1DB3F91A9648DAB110E3DA2CBE449D",
@@ -8337,7 +8260,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_c323cc5aa0b5413f98321411ced9b498",
@@ -8373,7 +8296,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -8416,7 +8338,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_e1b855cf474b4483aa1af044b24f93b6",
@@ -8452,7 +8374,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -8495,7 +8416,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_217c2078fe384f489fb2f213030cfda8",
@@ -8590,7 +8511,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_33d26d6eac804b31abce01535ef37b57",
@@ -8626,7 +8547,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -8669,7 +8589,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_312a1337f4394ab59fee3e16b4cf1607",
@@ -8705,7 +8625,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -8748,7 +8667,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_66b5f08f3f41476b9f785c2d0f596d7b",
@@ -8792,7 +8711,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -8827,7 +8745,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_53025762E07841769C0752128D5803F3",
@@ -8938,7 +8856,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_f400fac68939483fb2a6577930181456",
@@ -8974,7 +8892,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -9017,7 +8934,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_36eadfbbc67f4ff9866df503fb2773d0",
@@ -9053,7 +8970,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -9096,7 +9012,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_4b1f60e601774066bbb96f5ffe8d5861",
@@ -9132,7 +9048,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -9175,7 +9090,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_3c372d322d2e4a4ca54c1b2d77aa3fdc",
@@ -9273,7 +9188,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_a7bae8a2d83544288dcc29dfb90457f7",
@@ -9309,7 +9224,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -9352,7 +9266,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_23a0510963724938a704512dbf26f4f2",
@@ -9388,7 +9302,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -9431,7 +9344,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_608a7a39abba40e9b6a2af7681d66f43",
@@ -9467,7 +9380,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -9510,7 +9422,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_71d38b93885c4fb8a9da4dfa5258bba6",
@@ -9619,7 +9531,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_24cfbda989614db4b858a12f83a0eaec",
@@ -9728,7 +9640,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_B97CD5F5352244F1ACC26707A2786005",
@@ -9835,7 +9747,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_95b846a6aabc48a1ab5e9a168a7f05ee",
@@ -9929,7 +9841,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_2e907a8b39a0485184ed03b170fdc10d",
@@ -10027,7 +9939,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_82a0db8056254a6e81bfaf0684b79026",
@@ -10121,7 +10033,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_305372b0865a4332a5236bbaac464156",
@@ -10157,7 +10069,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -10200,7 +10111,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_6235cf1b296b424394be359f01201227",
@@ -10236,7 +10147,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -10279,7 +10189,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_9748b85733594cf0884070dc269ac79a",
@@ -10315,7 +10225,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -10358,7 +10267,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_53695",
@@ -10456,7 +10365,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_1ac6d26a734c4aefb3e327fa9dc96efe",
@@ -10492,7 +10401,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -10535,7 +10443,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_5b048a3742404af4b74fb5e87851913e",
@@ -10571,7 +10479,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -10614,7 +10521,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_2e46db5dcd7943f899eb9f7e35c49209",
@@ -10658,7 +10565,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -10693,7 +10599,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_52840",
@@ -10729,7 +10635,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -10772,7 +10677,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_47475",
@@ -10808,7 +10713,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -10851,7 +10755,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_52926",
@@ -10899,7 +10803,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -10934,7 +10837,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_50209",
@@ -10970,7 +10873,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -11013,7 +10915,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SZSE_1220D502C98648E9B80207112269B2B0",
@@ -11058,7 +10960,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "asset_type": {
           "status": "unverified",
@@ -11093,7 +10994,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_46546",
@@ -11129,7 +11030,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -11172,7 +11072,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     },
     {
       "id": "SSE_36404",
@@ -11208,7 +11108,6 @@
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "research_field_sources": {},
       "field_availability": {
         "underlying_assets": {
           "status": "unverified",
@@ -11251,7 +11150,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-15T14:14:38+08:00"
+      "link_checked_at": "2026-10-16T09:18:26+08:00"
     }
   ],
   "enrichment": {
@@ -11431,12 +11330,12 @@
         "core": true
       }
     ],
-    "updated_at": "2026-10-15T14:14:01+08:00"
+    "updated_at": "2026-10-16T09:16:11+08:00"
   },
   "refresh_batch": {
-    "id": "38691124697-1",
-    "date": "2026-10-15",
-    "started_at": "2026-10-15T14:13:26+08:00",
-    "completed_at": "2026-10-15T14:15:16+08:00"
+    "id": "38834122035-1",
+    "date": "2026-10-16",
+    "started_at": "2026-10-16T09:15:31+08:00",
+    "completed_at": "2026-10-16T09:22:53+08:00"
   }
 }
