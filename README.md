@@ -45,7 +45,7 @@ python3 -m collectors.institutional --verify-links
 python3 -m collectors.institutional --verify-links --raw-dir raw/2026-10-14
 ```
 
-仓库的`Refresh all REIT data`每天设定为北京时间08:30，同一批次采集公募与机构间项目清单、官方审核状态及可取得的成立上市信息。两类数据均校验通过后统一提交并发布；09:30、10:30仅在当天联合批次未完成时补跑。实际启动时间受GitHub调度影响。已核实研究字段与来源按项目ID保留，披露核查日期与清单采集日期分别记录。失败不发布部分结果，原始响应和核查记录保留在`data/raw/daily_refresh/`、`data/source_manifest/daily_refresh/`、`workpapers/daily_refresh/`，另保留30天运行证据。
+仓库的`Refresh all REIT data`每天从北京时间07:37开始，07:52再次检查，以08:00前完成为目标，同一批次采集公募与机构间项目清单、官方审核状态及可取得的成立上市信息。两类数据均校验通过后统一提交并发布；08:07至11:52每15分钟检查，当天联合批次未完成才补跑。实际启动时间受GitHub调度影响；任务在默认分支运行，并记录触发方式与工作流启用状态。每次成功检查还会比对网站的联合批次，数据已采集但尚未上线时自动补发，已上线则跳过。08:00后网站若仍展示旧快照，公募与机构间页面都会提示今日刷新尚未完成。已核实研究字段与来源按项目ID保留，披露核查日期与清单采集日期分别记录。失败不发布部分结果，原始响应和核查记录保留在`data/raw/daily_refresh/`、`data/source_manifest/daily_refresh/`、`workpapers/daily_refresh/`，另保留30天运行证据。
 
 ## 数据口径
 

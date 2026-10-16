@@ -23,7 +23,7 @@ jobs:
           node --check assets/app.js
           node --check assets/public-reits.js
           node --check assets/project-fields.js
-          node --test tests/project_fields.test.mjs
+          node --test tests/*.test.mjs
       - name: Validate saved dataset
         run: |
           python scripts/validate_data.py data/institutional.json

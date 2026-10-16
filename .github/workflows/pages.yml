@@ -16,6 +16,8 @@ jobs:
   build:
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
+    outputs:
+      due: ${{ steps.publication.outputs.due }}
     permissions:
       contents: read
       pages: read
@@ -26,18 +28,32 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
+      - name: Check whether the completed batch is already live
+        id: publication
+        env:
+          FROM_REFRESH: ${{ github.event_name == 'workflow_run' }}
+        run: |
+          if [ "$FROM_REFRESH" = true ]; then
+            python scripts/pages_due.py --site-url 'https://hans-huang2004.github.io/reits-research-dashboard/' >> "$GITHUB_OUTPUT"
+          else
+            echo 'due=true' >> "$GITHUB_OUTPUT"
+          fi
       - name: Validate and build
+        if: steps.publication.outputs.due == 'true'
         run: |
           python -m unittest discover -s tests -q
           python scripts/validate_data.py data/institutional.json
           python scripts/validate_public_data.py data/public_reits.json
           python scripts/build_static.py
       - uses: actions/configure-pages@v5
+        if: steps.publication.outputs.due == 'true'
       - uses: actions/upload-pages-artifact@v4
+        if: steps.publication.outputs.due == 'true'
         with:
           path: dist
   deploy:
     needs: build
+    if: needs.build.outputs.due == 'true'
     runs-on: ubuntu-latest
     permissions:
       pages: write

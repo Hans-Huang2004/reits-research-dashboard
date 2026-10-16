@@ -1,5 +1,6 @@
 /* Public REIT funds and their separate first-offering / expansion submissions. */
 'use strict';
+import { REFRESH_SCHEDULE, refreshWarning } from './refresh-health.js?v=20261016-refresh-1';
 import { closeFilterMenu, syncFilterSelects } from './filter-select.js?v=20261014-filter-menu-1';
 import { PUBLIC_FIELDS, getPublicField, formatProjectField, projectFieldCellText } from './project-fields.js?v=20261015-origin-2';
 import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-origin-2';
@@ -251,8 +252,8 @@ function renderMetadata() {
   if (fromCache) warnings.push('正在展示此浏览器上次成功读取的公募快照。');
   if (snapshot?.coverage?.complete === false) warnings.push('本期来源尚未完整覆盖，具体缺口见数据口径。');
   if (snapshot) {
-    const time = Date.parse(snapshot.updated_at || `${snapshot.date}T00:00:00+08:00`);
-    if (Number.isFinite(time) && Date.now() - time > 48 * 60 * 60 * 1000) warnings.push(`公募数据已超过48小时未更新，快照日期为${snapshot.date}。`);
+    const morningWarning = refreshWarning(snapshot);
+    if (morningWarning) warnings.push(morningWarning);
     for (const [key, info] of sourceEntries()) if (sourceFailed(info)) warnings.push(`${sourceName(key, info)}本轮更新未完成。`);
   }
   if (storageWarning) warnings.push(storageWarning);
@@ -269,7 +270,7 @@ function renderMetadata() {
   if (active) {
     $('side-date').textContent = snapshot?.date || (loadError ? '读取失败' : '正在读取');
     $('side-source').textContent = '上交所／深交所公募REITs';
-    $('side-schedule').textContent = '每日08:30 · 北京时间';
+    $('side-schedule').textContent = REFRESH_SCHEDULE;
   }
 }
 function applySnapshot(data, cached) {

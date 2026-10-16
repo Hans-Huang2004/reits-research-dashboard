@@ -1,7 +1,8 @@
 /* REITs dashboard for project lists collected directly from official SSE/SZSE APIs. */
 'use strict';
+import { REFRESH_SCHEDULE, refreshWarning } from './refresh-health.js?v=20261016-refresh-1';
 import { enhanceFilterSelects, syncFilterSelects, closeFilterMenu } from './filter-select.js?v=20261014-filter-menu-1';
-import { initializePublicReits, setPublicModuleActive, openPublicSources } from './public-reits.js?v=20261015-business-1';
+import { initializePublicReits, setPublicModuleActive, openPublicSources } from './public-reits.js?v=20261016-refresh-1';
 import { INSTITUTIONAL_FIELDS, getInstitutionalField, projectFieldCellText } from './project-fields.js?v=20261015-disclosures-1';
 import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-disclosures-1';
 
@@ -266,7 +267,8 @@ function renderMetadata() {
   const warnings = [];
   if (cachedView) warnings.push('在线数据读取失败，正在展示此浏览器上次成功读取的快照。');
   const timestamp = Date.parse(snapshot.updated_at || `${snapshot.date}T08:00:00+08:00`);
-  if (Number.isFinite(timestamp) && Date.now() - timestamp > 48 * 60 * 60 * 1000) warnings.push(`数据已超过 48 小时未更新，快照日期为 ${snapshot.date}。`);
+  const morningWarning = refreshWarning(snapshot);
+  if (morningWarning) warnings.push(morningWarning);
   if (snapshot.coverage?.complete === false) warnings.push('本轮抓取未完成全部来源，当前数据可能不完整。');
   for (const [source, info] of Object.entries(snapshot.source_status || {})) {
     if (info?.ok === false) warnings.push(`${source === 'SSE' ? '上交所' : source === 'SZSE' ? '深交所' : source}本轮更新未完成。`);
@@ -442,7 +444,7 @@ function showModule(name) {
   setPublicModuleActive(isPublic);
   if (!isPublic) {
     $('side-date').textContent = snapshot?.date || '正在读取';
-    $('side-schedule').textContent = '每日08:30 · 北京时间';
+    $('side-schedule').textContent = REFRESH_SCHEDULE;
     $('side-source').textContent = '上交所／深交所公开申报';
   }
 }
