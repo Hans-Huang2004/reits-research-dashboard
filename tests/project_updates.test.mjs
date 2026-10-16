@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { validateUpdatesSnapshot, filterUpdateEvents, groupUpdateEvents, summarizeUpdates, dailyUpdateCounts, updateEventDate, updateDate, updatePeriod, updateSourceHealth, safeUpdateURL, updatesCSVTable, updatesCSVCell, timelineEvents, isUpdateFavorite, hasUpdateBefore, prioritizeUpdateEvents } from '../assets/project-updates.js';
+import { validateUpdatesSnapshot, filterUpdateEvents, groupUpdateEvents, summarizeUpdates, dailyUpdateEvents, dailyUpdateCounts, updateEventDate, updateDate, updatePeriod, updateSourceHealth, safeUpdateURL, updatesCSVTable, updatesCSVCell, timelineEvents, isUpdateFavorite, hasUpdateBefore, prioritizeUpdateEvents } from '../assets/project-updates.js';
 
 const event = (id, extra = {}) => ({ id, population: 'public', entity_id: 'SSE_A', entity_kind: 'filing', project_name: '物流基金一期', exchange: '上交所', asset_type: '物流仓储', business_type: '首发', manager: '甲基金', origin: '甲集团', event_type: 'status_changed', title: '审核状态变化', before: { status: '已受理' }, after: { status: '已反馈' }, official_date: '2026-10-14', detected_at: '2026-10-16T08:00:00+08:00', discovery_type: 'observed', source_url: 'https://www.sse.com.cn/reits/info/', changes: [{ field: 'status', label: '审核状态', before: '已受理', after: '已反馈' }], ...extra });
 const events = [event('a'), event('b', { event_type: 'document_added' }), event('c', { population: 'institutional', entity_id: 'SZSE_C', exchange: '深交所', business_type: '扩募', project_name: '能源项目', asset_type: '能源' }), event('d', { population: 'ndrc', entity_id: 'NDRC_D', entity_kind: 'recommendation', project_name: '新购入项目', official_date: '2026-10-12', discovery_type: 'baseline', is_baseline: true }), event('e', { entity_id: 'OLD', official_date: '2026-08-01', detected_at: '2026-10-16T10:00:00+08:00' })];
@@ -56,11 +56,43 @@ test('daily counts count each event and never substitute official dates for disc
   assert.equal(dailyEvents[0].entity_id, dailyEvents[1].entity_id);
   assert.deepEqual(dailyEvents.map(item => item.id), ['status', 'document', 'recommendation', 'old-discovery', 'missing-discovery', 'invalid-discovery']);
 });
+test('today list selects its own population and excludes history, missing discovery dates and other days', () => {
+  const dailyEvents = [
+    event('public-early', { official_date: '2026-08-01', detected_at: '2026-10-16T00:00:00+08:00' }),
+    event('institutional', { population: 'institutional', detected_at: '2026-10-16T09:00:00+08:00' }),
+    event('public-late', { detected_at: '2026-10-16T10:00:00+08:00' }),
+    event('ndrc', { population: 'ndrc', detected_at: '2026-10-16T12:00:00+08:00' }),
+    event('previous-day', { official_date: '2026-10-16', detected_at: '2026-10-15T23:59:59+08:00' }),
+    event('future', { detected_at: '2026-10-17T00:00:00+08:00' }),
+    event('missing', { official_date: '2026-10-16', event_date: '2026-10-16', detected_at: null }),
+    event('invalid', { detected_at: 'not-a-date' }),
+    ...[{ is_baseline: true }, { is_backfill: true }, { discovery_type: 'baseline' }, { discovery_type: 'backfill' }, { discovery_type: 'historical' }].map((marker, index) => event(`history-${index}`, marker))
+  ];
+  const originalOrder = dailyEvents.map(item => item.id);
+  assert.deepEqual(dailyUpdateEvents(dailyEvents, '', '2026-10-16').map(item => item.id), ['ndrc', 'public-late', 'institutional', 'public-early']);
+  assert.deepEqual(dailyUpdateEvents(dailyEvents, 'public', '2026-10-16').map(item => item.id), ['public-late', 'public-early']);
+  assert.deepEqual(dailyUpdateEvents(dailyEvents, 'institutional', '2026-10-16').map(item => item.id), ['institutional']);
+  assert.deepEqual(dailyUpdateEvents(dailyEvents, 'ndrc', '2026-10-16').map(item => item.id), ['ndrc']);
+  assert.deepEqual(dailyUpdateEvents(dailyEvents, 'public', '2026-10-18'), []);
+  assert.deepEqual(dailyEvents.map(item => item.id), originalOrder);
+});
 test('ranges are inclusive and invalid custom dates return no records', () => {
   assert.deepEqual(updatePeriod({ range: '7' }, '2026-10-16'), { start: '2026-10-10', end: '2026-10-16', valid: true });
   assert.deepEqual(updatePeriod({ range: '30' }, '2026-10-16'), { start: '2026-09-17', end: '2026-10-16', valid: true });
   assert.equal(filterUpdateEvents(events, { range: 'custom', start: '2026-10-17', end: '2026-10-16' }, new Set(), '2026-10-16').length, 0);
   assert.equal(filterUpdateEvents(events, { range: 'custom', start: '2026-10-16', end: '2026-10-16' }, new Set(), '2026-10-16').length, 4);
+});
+test('the full library keeps older observed updates with historical backfill opt-in', () => {
+  const libraryEvents = [
+    event('today'),
+    event('older-than-30-days', { detected_at: '2026-08-01T08:00:00+08:00' }),
+    event('history', { detected_at: '2026-10-16T08:00:00+08:00', official_date: '2026-07-01', discovery_type: 'baseline' }),
+    event('future', { detected_at: '2026-10-17T08:00:00+08:00' })
+  ];
+  assert.deepEqual(updatePeriod({ range: 'all' }, '2026-10-16'), { start: '', end: '2026-10-16', valid: true });
+  for (const range of ['7', '30']) assert.deepEqual(filterUpdateEvents(libraryEvents, { range }, new Set(), '2026-10-16').map(item => item.id), ['today']);
+  assert.deepEqual(filterUpdateEvents(libraryEvents, { range: 'all' }, new Set(), '2026-10-16').map(item => item.id), ['today', 'older-than-30-days']);
+  assert.deepEqual(filterUpdateEvents(libraryEvents, { range: 'all', includeHistory: true }, new Set(), '2026-10-16').map(item => item.id), ['today', 'older-than-30-days', 'history']);
 });
 test('all filters intersect and search covers institutions and codes', () => {
   assert.deepEqual(filterUpdateEvents(events, { population: 'institutional', exchange: '深交所', asset: '能源', business: '扩募', search: '能源' }, new Set(), '2026-10-16').map(item => item.id), ['c']);

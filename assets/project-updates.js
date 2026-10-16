@@ -4,8 +4,9 @@ const DATA_URL = new URL('../data/project_updates.json', import.meta.url);
 const COMPRESSED_DATA_URL = new URL('../data/project_updates.json.gz', import.meta.url);
 const POPULATIONS = { public: '公募REITs', institutional: '机构间REITs', ndrc: '发改委推荐' };
 const EVENT_LABELS = { status_change: '状态变化', status_changed: '状态变化', new_project: '新增项目', document_added: '新增披露', documents_added: '新增披露', revision: '资料修订', metadata_changed: '资料修订', recommendation: '新增推荐', recommendation_added: '新增推荐', milestone: '阶段进展', historical_milestone: '历史进展', baseline: '历史基线' };
-const DEFAULT_FILTERS = { population: '', range: '7', start: '', end: '', search: '', exchange: '', asset: '', business: '', type: '', savedOnly: false, includeHistory: false, page: 1, pageSize: 25 };
+const DEFAULT_FILTERS = { population: '', range: 'all', start: '', end: '', search: '', exchange: '', asset: '', business: '', type: '', savedOnly: false, includeHistory: false, page: 1, pageSize: 25 };
 let state = { ...DEFAULT_FILTERS };
+let dailyPopulation = '';
 let snapshot = null;
 let active = false;
 let initialized = false;
@@ -104,10 +105,14 @@ export function summarizeUpdates(events) {
   return result;
 }
 
+export function dailyUpdateEvents(events, population = '', asOf = today()) {
+  return filterUpdateEvents(events.filter(event => updateDate(event.detected_at) === asOf), { range: 'custom', start: asOf, end: asOf, population }, new Set(), asOf);
+}
+
 export function dailyUpdateCounts(events, asOf = today()) {
   const counts = { public: 0, institutional: 0, ndrc: 0 };
-  for (const event of events) {
-    if (!isHistory(event) && updateDate(event.detected_at) === asOf && Object.hasOwn(counts, event.population)) counts[event.population]++;
+  for (const event of dailyUpdateEvents(events, '', asOf)) {
+    if (Object.hasOwn(counts, event.population)) counts[event.population]++;
   }
   return counts;
 }
@@ -169,16 +174,21 @@ function buildUI() {
   const heading = el('div'); const eyebrow = add(el('div', 'eyebrow'), el('span', 'eyebrow-line'), el('span', '', 'PROJECT UPDATES'));
   add(heading, eyebrow, el('h1', '', '项目动态'));
   const actions = el('div', 'header-actions'); const pill = el('span', 'pill', '正在读取动态'); pill.id = 'updates-data-pill';
-  const exportButton = button('↓ 导出当前结果', 'button primary', 'export'); exportButton.id = 'updates-export'; exportButton.disabled = true;
-  add(actions, pill, add(el('div', 'action-buttons'), button('↻ 刷新动态', 'button', 'reload'), exportButton)); add(head, heading, actions);
+  const exportButton = button('↓ 导出动态库', 'button primary', 'export'); exportButton.id = 'updates-export'; exportButton.disabled = true;
+  add(actions, pill, add(el('div', 'action-buttons'), button('↻ 刷新动态', 'button', 'reload'))); add(head, heading, actions);
   const notice = el('div', 'data-notice'); notice.id = 'updates-notice'; notice.setAttribute('role', 'status'); notice.hidden = true;
   const sources = el('div', 'updates-source-strip'); sources.id = 'updates-source-strip';
   const stats = el('div', 'updates-stats'); stats.id = 'updates-stats'; stats.setAttribute('aria-live', 'polite');
-  const box = el('section', 'project-box updates-feed'); box.id = 'updates-feed'; box.tabIndex = -1; box.setAttribute('aria-label', '项目动态列表');
-  const top = el('div', 'project-top'); const topHeading = add(el('div'), el('h2', '', '最新进展'));
+  const daily = el('section', 'project-box updates-today'); daily.id = 'updates-today'; daily.tabIndex = -1; daily.setAttribute('aria-label', '今日更新');
+  const dailyDate = el('time', 'updates-today-date'); dailyDate.id = 'updates-today-date';
+  const dailyAll = button('全部', 'text-button', 'today-population', ''); dailyAll.id = 'updates-today-all';
+  const dailyList = el('div', 'updates-list updates-today-list'); dailyList.id = 'updates-today-list'; dailyList.setAttribute('aria-live', 'polite');
+  add(daily, add(el('div', 'project-top'), el('h2', '', '今日更新'), add(el('div', 'updates-today-tools'), dailyDate, dailyAll)), stats, dailyList);
+  const box = el('section', 'project-box updates-feed'); box.id = 'updates-feed'; box.tabIndex = -1; box.setAttribute('aria-label', '全部动态库');
+  const top = el('div', 'project-top'); const topHeading = add(el('div'), el('h2', '', '全部动态库'));
   const range = el('div', 'segment updates-ranges'); range.setAttribute('role', 'group'); range.setAttribute('aria-label', '动态时间范围');
-  for (const [value, name] of [['7', '近7天'], ['30', '近30天'], ['custom', '自定义']]) range.append(button(name, '', 'range', value));
-  add(top, topHeading, range);
+  for (const [value, name] of [['all', '全部'], ['7', '近7天'], ['30', '近30天'], ['custom', '自定义']]) range.append(button(name, '', 'range', value));
+  add(top, topHeading, add(el('div', 'updates-library-tools'), range, exportButton));
   const populations = el('div', 'segment updates-populations'); populations.setAttribute('role', 'group'); populations.setAttribute('aria-label', '动态范围');
   for (const [value, name] of [['', '全部'], ...Object.entries(POPULATIONS)]) populations.append(button(name, '', 'population', value));
   const custom = el('div', 'updates-custom-dates'); custom.id = 'updates-custom-dates'; custom.hidden = true;
@@ -197,7 +207,7 @@ function buildUI() {
   const footer = el('footer', 'foot'); const generated = el('span'); generated.id = 'updates-generated'; add(footer, generated, button('数据口径与来源 ↗', 'text-button', 'sources'));
   const detail = el('dialog', 'updates-detail-dialog'); detail.id = 'updates-detail-dialog'; detail.setAttribute('aria-labelledby', 'updates-detail-title');
   const sourceDialog = el('dialog', 'updates-source-dialog'); sourceDialog.id = 'updates-source-dialog'; sourceDialog.setAttribute('aria-labelledby', 'updates-source-title');
-  panel.replaceChildren(head, notice, sources, stats, box, footer, detail, sourceDialog);
+  panel.replaceChildren(head, notice, sources, daily, box, footer, detail, sourceDialog);
 }
 
 function readFavoriteSet() {
@@ -240,16 +250,29 @@ function sourceStrip() {
   }
 }
 function renderStats() {
-  const day = today(); const counts = dailyUpdateCounts(snapshot?.events || [], day); const period = updatePeriod(state, day);
+  const day = today(); const counts = dailyUpdateCounts(snapshot?.events || [], day);
   const stats = $('updates-stats'); stats.replaceChildren();
   for (const population of ['public', 'institutional', 'ndrc']) {
-    const selected = state.population === population && period.start === day && period.end === day && !state.includeHistory;
-    const card = button('', `stat updates-stat${selected ? ' selected' : ''}`, 'today', population);
+    const selected = dailyPopulation === population;
+    const card = button('', `stat updates-stat${selected ? ' selected' : ''}`, 'today-population', population);
     card.setAttribute('aria-pressed', String(selected));
     card.setAttribute('aria-label', `查看${POPULATIONS[population]}今日${counts[population]}条更新`);
     card.title = `${day} · 北京时间`;
-    add(card, el('span', 'stat-label', POPULATIONS[population]), add(el('span', 'stat-value'), document.createTextNode(String(counts[population])), el('small', '', '条更新')), el('span', 'stat-foot', '今日更新 · 点击查看'));
+    add(card, el('span', 'stat-label', POPULATIONS[population]), add(el('span', 'stat-value'), document.createTextNode(String(counts[population])), el('small', '', '条更新')));
     stats.append(card);
+  }
+}
+function renderToday() {
+  if (!initialized) return;
+  renderStats();
+  const day = today(); const date = $('updates-today-date'); date.textContent = day; date.dateTime = day;
+  $('updates-today-all').setAttribute('aria-pressed', String(!dailyPopulation));
+  const list = $('updates-today-list'); list.replaceChildren();
+  for (const group of groupUpdateEvents(dailyUpdateEvents(snapshot?.events || [], dailyPopulation, day))) list.append(renderGroup(group));
+  if (!list.children.length) {
+    const healthy = updateSourceHealth(snapshot?.sources).filter(source => !dailyPopulation || source.key === dailyPopulation).every(source => source.healthy);
+    const message = !snapshot ? error ? '今日动态读取失败' : '正在读取今日更新…' : !healthy ? '今日动态待更新' : `${POPULATIONS[dailyPopulation] || ''}今日暂无更新`;
+    list.append(add(el('div', 'updates-empty'), el('strong', '', message)));
   }
 }
 function changeDisplay(field, value) {
@@ -306,19 +329,12 @@ function renderGroup(group) {
   if (events.length > 1) { const details = el('details', 'updates-group-details'); details.append(el('summary', '', `展开${events.length}条事件明细`)); for (const item of events) details.append(eventDetail(item)); body.append(details); }
   add(article, marker, body); return article;
 }
-function render() {
+function renderLibrary() {
   if (!initialized) return;
   const events = currentEvents(); const groups = groupUpdateEvents(events);
-  sourceStrip(); renderStats();
   const health = updateSourceHealth(snapshot?.sources); const issues = health.filter(item => !item.healthy);
-  const notice = $('updates-notice');
-  notice.textContent = error || (snapshot && issues.length ? `${issues.map(item => `${POPULATIONS[item.key]}${item.issue}`).join('；')}。当前展示最近成功收录的动态，不能据此判断今日是否无变化。` : '');
-  notice.hidden = !notice.textContent;
   const period = updatePeriod(state);
-  $('updates-data-pill').textContent = snapshot ? `动态截至 ${snapshot.as_of_date}` : error ? '动态读取失败' : '正在读取动态';
-  $('updates-generated').textContent = snapshot ? `生成时间 ${String(snapshot.generated_at || '').replace('T', ' ').slice(0, 16)}` : '';
   $('updates-export').disabled = !snapshot || !events.length;
-  const reload = document.querySelector('[data-updates-action="reload"]'); if (reload) reload.disabled = Boolean(loading);
   document.querySelectorAll('[data-updates-action="range"]').forEach(node => node.setAttribute('aria-pressed', String(node.dataset.value === state.range)));
   document.querySelectorAll('.updates-populations [data-updates-action="population"]').forEach(node => node.setAttribute('aria-pressed', String(node.dataset.value === state.population)));
   $('updates-custom-dates').hidden = state.range !== 'custom';
@@ -339,8 +355,19 @@ function render() {
   $('updates-page-number').textContent = `${state.page} / ${pages}`;
   document.querySelector('[data-updates-action="prev"]').disabled = state.page <= 1;
   document.querySelector('[data-updates-action="next"]').disabled = state.page >= pages;
-  if (active) { if ($('side-date')) $('side-date').textContent = snapshot?.as_of_date || '正在读取'; if ($('side-schedule')) $('side-schedule').textContent = '每日核查 · 记录项目进展'; if ($('side-source')) $('side-source').textContent = '交易所／国家发改委公开信息'; }
   syncFilterSelects();
+}
+function render() {
+  if (!initialized) return;
+  sourceStrip(); renderToday(); renderLibrary();
+  const issues = updateSourceHealth(snapshot?.sources).filter(item => !item.healthy);
+  const notice = $('updates-notice');
+  notice.textContent = error || (snapshot && issues.length ? `${issues.map(item => `${POPULATIONS[item.key]}${item.issue}`).join('；')}。当前展示最近成功收录的动态，不能据此判断今日是否无变化。` : '');
+  notice.hidden = !notice.textContent;
+  $('updates-data-pill').textContent = snapshot ? `动态截至 ${snapshot.as_of_date}` : error ? '动态读取失败' : '正在读取动态';
+  $('updates-generated').textContent = snapshot ? `生成时间 ${String(snapshot.generated_at || '').replace('T', ' ').slice(0, 16)}` : '';
+  const reload = document.querySelector('[data-updates-action="reload"]'); if (reload) reload.disabled = Boolean(loading);
+  if (active) { if ($('side-date')) $('side-date').textContent = snapshot?.as_of_date || '正在读取'; if ($('side-schedule')) $('side-schedule').textContent = '每日核查 · 记录项目进展'; if ($('side-source')) $('side-source').textContent = '交易所／国家发改委公开信息'; }
 }
 
 function showDialog(dialog) {
@@ -380,7 +407,7 @@ export function openUpdatesSources() {
   const definitions = el('dl', 'updates-definitions');
   const baselineAt = snapshot?.audit?.tracking_started_at || snapshot?.audit?.baseline_at || snapshot?.audit?.baseline_created_at || snapshot?.generated_at;
   const coverage = `${snapshot ? `持续变化记录自${updateDate(baselineAt) || '本次基线建立时'}开始。` : '跟踪起点待读取。'}首次导入的历史进展未计为新动态，可勾选“包含历史回填”查阅。时间线只展示已取得并留存的公开记录。`;
-  for (const [term, definition] of [['事件与项目', '一项状态变化、一次新增披露或一项资料修订各计一条事件。同项目同批次同日的事件合并显示，统计与CSV仍按事件计数。'], ['日期', '持续跟踪动态按首次发现日期筛选，官方日期另列；历史回填按官方日期筛选。'], ['历史覆盖', coverage], ['关联与批次', '只合并已确认的关联关系；首发、扩募及具体申报批次分别保留。'], ['异常与刷新', '采集失败、来源不完整或记录暂时消失不生成终止事件。来源核查未完成时，不据此判断当天无变化。'], ['筛选与导出', '概览卡片按北京时间当天首次发现的更新计数，不含历史回填，不受列表筛选影响。点击卡片查看该类今日更新。动态列表和CSV使用同一筛选事件集合。项目时间线展示该项目及已确认关联项目的全部已留存记录。']]) add(definitions, el('dt', '', term), el('dd', '', definition));
+  for (const [term, definition] of [['事件与项目', '一项状态变化、一次新增披露或一项资料修订各计一条事件。同项目同批次同日的事件合并显示，统计与CSV仍按事件计数。'], ['日期', '持续跟踪动态按首次发现日期筛选，官方日期另列；历史回填按官方日期筛选。'], ['历史覆盖', coverage], ['关联与批次', '只合并已确认的关联关系；首发、扩募及具体申报批次分别保留。'], ['异常与刷新', '采集失败、来源不完整或记录暂时消失不生成终止事件。来源核查未完成时，不据此判断当天无变化。'], ['筛选与导出', '上方今日更新按北京时间当天首次发现的事件展示，不含历史回填。卡片只筛选今日列表；下方全部动态库的筛选、分页和明细展开与上方独立。CSV只导出下方动态库的当前筛选结果。项目时间线展示该项目及已确认关联项目的全部已留存记录。']]) add(definitions, el('dt', '', term), el('dd', '', definition));
   const sourceList = el('div', 'updates-source-details');
   for (const source of updateSourceHealth(snapshot?.sources)) {
     const section = el('section');
@@ -421,7 +448,7 @@ function exportCSV() {
   const rows = updatesCSVTable(currentEvents(), snapshot || {});
   const blob = new Blob(['\ufeff', rows.map(row => row.map(updatesCSVCell).join(',')).join('\r\n')], { type: 'text/csv;charset=utf-8' });
   const url = URL.createObjectURL(blob); const link = document.createElement('a');
-  link.href = url; link.download = `REITs项目动态_${snapshot?.as_of_date || today()}.csv`; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+  link.href = url; link.download = `REITs动态库_${snapshot?.as_of_date || today()}.csv`; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 function eventById(id) { return snapshot?.events.find(event => event.id === id); }
 function synchronizeInputs() {
@@ -432,13 +459,9 @@ async function onAction(event) {
   const action = event.target.closest('[data-updates-action]'); if (!action) return;
   const value = action.dataset.value;
   switch (action.dataset.updatesAction) {
-    case 'today': {
-      const day = today();
-      state = { ...DEFAULT_FILTERS, population: value, range: 'custom', start: day, end: day };
-      synchronizeInputs(); render(); break;
-    }
-    case 'population': state.population = value; state.page = 1; render(); break;
-    case 'range': state.range = value; if (value === 'custom' && !state.start) { const period = updatePeriod({ range: '30' }); state.start = period.start; state.end = period.end; synchronizeInputs(); } state.page = 1; render(); break;
+    case 'today-population': dailyPopulation = dailyPopulation === value ? '' : value; renderToday(); break;
+    case 'population': state.population = value; state.page = 1; renderLibrary(); break;
+    case 'range': state.range = value; if (value === 'custom' && !state.start) { const period = updatePeriod({ range: '30' }); state.start = period.start; state.end = period.end; synchronizeInputs(); } state.page = 1; renderLibrary(); break;
     case 'reload': loadUpdates(); break;
     case 'export': exportCSV(); break;
     case 'sources': openUpdatesSources(); break;
@@ -459,17 +482,17 @@ async function onAction(event) {
       break;
     }
     case 'close': action.closest('dialog')?.close(); break;
-    case 'show-history': state.includeHistory = true; state.range = '30'; state.page = 1; synchronizeInputs(); render(); break;
-    case 'reset': state = { ...DEFAULT_FILTERS }; synchronizeInputs(); render(); break;
-    case 'prev': state.page--; render(); break;
-    case 'next': state.page++; render(); break;
+    case 'show-history': state.includeHistory = true; state.range = 'all'; state.page = 1; synchronizeInputs(); renderLibrary(); break;
+    case 'reset': state = { ...DEFAULT_FILTERS }; synchronizeInputs(); renderLibrary(); break;
+    case 'prev': state.page--; renderLibrary(); break;
+    case 'next': state.page++; renderLibrary(); break;
   }
 }
 export function setUpdatesModuleActive(value) {
   active = Boolean(value);
   if (!initialized) return;
   if (!active) { for (const id of ['updates-detail-dialog', 'updates-source-dialog']) { const dialog = $(id); if (dialog?.open) dialog.close(); } return; }
-  document.querySelector('.skip-link')?.setAttribute('href', '#updates-feed');
+  document.querySelector('.skip-link')?.setAttribute('href', '#updates-today');
   render(); if (!snapshot && !loading) loadUpdates();
 }
 export function initializeProjectUpdates(options = {}) {
@@ -477,10 +500,10 @@ export function initializeProjectUpdates(options = {}) {
   if (initialized) return;
   buildUI(); initialized = true;
   $('updates-panel').addEventListener('click', onAction);
-  for (const key of ['search', 'exchange', 'asset', 'business', 'type', 'start', 'end']) $(`updates-${key}`).addEventListener(key === 'search' ? 'input' : 'change', event => { state[key] = event.target.value; state.page = 1; render(); });
-  for (const [id, key] of [['updates-saved-only', 'savedOnly'], ['updates-include-history', 'includeHistory']]) $(id).addEventListener('change', event => { state[key] = event.target.checked; state.page = 1; render(); });
+  for (const key of ['search', 'exchange', 'asset', 'business', 'type', 'start', 'end']) $(`updates-${key}`).addEventListener(key === 'search' ? 'input' : 'change', event => { state[key] = event.target.value; state.page = 1; renderLibrary(); });
+  for (const [id, key] of [['updates-saved-only', 'savedOnly'], ['updates-include-history', 'includeHistory']]) $(id).addEventListener('change', event => { state[key] = event.target.checked; state.page = 1; renderLibrary(); });
   for (const id of ['updates-detail-dialog', 'updates-source-dialog']) $(id).addEventListener('click', event => { if (event.target !== event.currentTarget) return; const rect = event.currentTarget.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) event.currentTarget.close(); });
-  window.addEventListener('storage', () => { if (active) render(); });
-  window.addEventListener('reits:favorites-changed', () => { if (active) render(); });
+  window.addEventListener('storage', () => { if (active) renderLibrary(); });
+  window.addEventListener('reits:favorites-changed', () => { if (active) renderLibrary(); });
   render(); loadUpdates();
 }

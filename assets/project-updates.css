@@ -5,6 +5,17 @@
 .updates-stat:hover,.updates-stat.selected{border-color:var(--brand);background:var(--soft)}
 .updates-stat.selected{box-shadow:inset 0 3px 0 var(--brand)}
 .updates-stat .stat-value,.updates-stat .stat-foot{display:block}
+.updates-today{margin-bottom:26px}
+.updates-today-tools,.updates-library-tools{display:flex;align-items:center;justify-content:flex-end;gap:14px;flex-wrap:wrap}
+.updates-today-date{font-size:11px;color:var(--sub);font-variant-numeric:tabular-nums}
+.updates-today-tools .text-button{font-size:11px;min-height:30px}
+.updates-today-tools .text-button[aria-pressed="true"]{color:var(--brand)}
+.updates-today .updates-stats{padding:0 24px;margin-bottom:8px;gap:12px}
+.updates-today .updates-stat,.updates-today .updates-stat:first-child{padding:14px 18px}
+.updates-today .stat-value{font-size:28px;margin:7px 0 0}
+.updates-today-list{padding-top:0}
+.updates-today-list .updates-empty{padding:28px 12px}
+.updates-feed .project-top{flex-wrap:wrap}
 .updates-source-strip{display:flex;gap:8px 20px;flex-wrap:wrap;margin:-7px 0 20px;font-size:10px;color:var(--sub)}
 .updates-source-status{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .updates-source-status strong{font-size:10px;font-weight:500;color:var(--ink)}
@@ -77,3 +88,4 @@
 @media(max-width:1000px){.updates-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.updates-filters .reset-button{grid-column:1/-1}.updates-source-strip{line-height:1.8}.updates-source-status{gap:5px}.updates-stat{padding-left:16px;padding-right:16px}.updates-stat .stat-label{font-size:10px}.updates-stat .stat-foot{font-size:9px}}
 @media(max-width:600px){.updates-stats{gap:8px;margin-bottom:20px}.updates-stat,.updates-stat:first-child{padding:14px 11px}.updates-stat .stat-value{font-size:27px;margin:8px 0 3px}.updates-stat .stat-value small{font-size:8px;margin-left:3px}.updates-stat .stat-foot{font-size:8px;line-height:1.7}.updates-source-strip{font-size:9px;gap:7px;display:grid;margin:0 0 17px}.updates-source-status strong{font-size:9px;min-width:66px}.updates-feed .project-top{align-items:flex-start;gap:13px}.updates-ranges button{font-size:10px;min-height:34px;padding:5px 11px}.updates-populations{margin:0 16px 17px;max-width:calc(100% - 32px);width:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}.updates-populations button{padding:6px 5px;font-size:9px;white-space:nowrap;min-height:38px}.updates-filters .field input,.updates-filters .field select{height:44px;font-size:14px}.updates-filters .search-field input{font-size:16px}.updates-custom-dates{padding:0 16px 16px;gap:10px}.updates-custom-dates input{font-size:13px}.updates-list{padding:0 16px 12px}.updates-row{gap:9px;grid-template-columns:10px minmax(0,1fr)}.updates-row-heading{gap:4px}.updates-project-name{font-size:12px}.updates-row-meta{font-size:9px;gap:3px 10px}.updates-row-links .text-button,.updates-source-link{font-size:10px;min-height:30px;display:inline-flex;align-items:center}.updates-tag{font-size:8px}.updates-change{gap:3px 7px}.updates-change-label{min-width:auto;flex-basis:100%}.updates-changes{font-size:10px}.updates-dialog-heading .detail-name{font-size:16px}.updates-dialog-heading{gap:12px}.updates-timeline-entry{padding-left:15px}.updates-event-detail{padding:10px}.updates-panel .foot{align-items:center}.updates-panel .foot .text-button{font-size:9px}.updates-panel .filter-extras{gap:7px 14px}.updates-panel .filter-extras label{font-size:10px}.updates-feed .pagination{align-items:center}.updates-feed .pages{max-width:230px}.updates-event-dates{font-size:9px}.updates-manager{overflow-wrap:anywhere}}
 @media(prefers-reduced-motion:reduce){.updates-stat{transition:none}}
+@media(max-width:600px){.updates-today{margin-bottom:20px}.updates-today .updates-stats{padding:0 16px;gap:8px}.updates-today .updates-stat,.updates-today .updates-stat:first-child{padding:12px 10px}.updates-today .stat-value{font-size:25px}.updates-today-tools{gap:12px}.updates-library-tools{width:100%;justify-content:space-between;gap:10px}.updates-ranges button{padding:5px 8px;font-size:9px}.updates-library-tools .button{font-size:9px;min-height:34px}.updates-today-list{padding-top:0}}
