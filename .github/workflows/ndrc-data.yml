@@ -68,7 +68,9 @@ jobs:
             git pull --rebase origin main
             # A concurrent exchange refresh may have arrived during collection.
             # Rematch after pulling; a second remote race safely rejects push.
-            python scripts/refresh_ndrc.py --run-id '${{ github.run_id }}-${{ github.run_attempt }}-rebased'
+            # Preserve a failure notice even if the source remains unavailable.
+            python scripts/refresh_ndrc.py --run-id '${{ github.run_id }}-${{ github.run_attempt }}-rebased' || true
+            python scripts/validate_ndrc_data.py data/ndrc_recommendations.json --public-input data/public_reits.json --allow-stale-public
             git add data/ndrc_recommendations.json data/ndrc_refresh_status.json data/raw/ndrc/ data/source_manifest/ndrc/ workpapers/ndrc/ snapshots/ndrc/
             if ! git diff --cached --quiet; then
               git commit -m "data: rematch recommendations after exchange input update"
