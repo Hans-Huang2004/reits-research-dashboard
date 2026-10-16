@@ -2,10 +2,18 @@
 from pathlib import Path
 import gzip
 import shutil
+import json
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 
 def main():
     root = Path(__file__).resolve().parents[1]
+    from scripts.project_updates import validate
+    validate(json.loads((root / 'data/project_updates.json').read_text(encoding='utf-8')))
     target = root / 'dist'
     target.mkdir(exist_ok=True)
     shutil.copy2(root / 'index.html', target / 'index.html')
@@ -15,6 +23,7 @@ def main():
     shutil.copy2(root / 'data/institutional.json', target / 'data/institutional.json')
     shutil.copy2(root / 'data/public_reits.json', target / 'data/public_reits.json')
     shutil.copy2(root / 'data/ndrc_recommendations.json', target / 'data/ndrc_recommendations.json')
+    shutil.copy2(root / 'data/project_updates.json', target / 'data/project_updates.json')
     ndrc_status = root / 'data/ndrc_refresh_status.json'
     if ndrc_status.exists():
         shutil.copy2(ndrc_status, target / 'data/ndrc_refresh_status.json')
@@ -22,6 +31,7 @@ def main():
     if status.exists():
         shutil.copy2(status, target / 'data/refresh_status.json')
     (target / 'data/public_reits.json.gz').write_bytes(gzip.compress((root / 'data/public_reits.json').read_bytes(), mtime=0))
+    (target / 'data/project_updates.json.gz').write_bytes(gzip.compress((root / 'data/project_updates.json').read_bytes(), mtime=0))
     (target / '.nojekyll').write_text('')
     print(target)
 

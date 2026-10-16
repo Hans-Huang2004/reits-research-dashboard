@@ -11,6 +11,7 @@ on:
     paths:
       - .github/workflows/update-data.yml
       - scripts/refresh_all.py
+      - scripts/project_updates.py
 permissions:
   contents: write
   actions: read
@@ -51,7 +52,9 @@ jobs:
         if: steps.freshness.outputs.due == 'true'
         run: python -m unittest discover -s tests -q
       - name: Collect public and institutional REITs together
+        id: collection
         if: steps.freshness.outputs.due == 'true'
+        continue-on-error: true
         env:
           FORCE_REFRESH: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
@@ -60,14 +63,21 @@ jobs:
           else
             python scripts/refresh_all.py --run-id '${{ github.run_id }}-${{ github.run_attempt }}'
           fi
-      - name: Commit the complete pair
+      - name: Build reviewed project updates after the complete pair
+        if: steps.freshness.outputs.due == 'true'
+        run: python scripts/project_updates.py
+      - name: Commit the complete pair or the failed attempt status
         if: steps.freshness.outputs.due == 'true'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/institutional.json data/public_reits.json data/refresh_status.json data/raw/daily_refresh/ data/source_manifest/ workpapers/daily_refresh/ snapshots/public/
+          git add data/institutional.json data/public_reits.json data/refresh_status.json data/project_updates.json data/raw/daily_refresh/ data/source_manifest/ workpapers/daily_refresh/ workpapers/project_updates/ snapshots/public/
           if ! git diff --cached --quiet; then
-            git commit -m "data: refresh public and institutional REITs together"
+            if [ '${{ steps.collection.outcome }}' = success ]; then
+              git commit -m "data: refresh public and institutional REITs together"
+            else
+              git commit -m "data: retain complete REIT snapshots and record failed attempt"
+            fi
             git push
           fi
       - name: Keep source evidence and validation even after failure
@@ -79,4 +89,9 @@ jobs:
             data/raw/daily_refresh/${{ github.run_id }}-${{ github.run_attempt }}/
             workpapers/daily_refresh/${{ github.run_id }}-${{ github.run_attempt }}/
             data/source_manifest/daily_refresh/${{ github.run_id }}-${{ github.run_attempt }}.json
+            data/source_manifest/project_updates/
+            workpapers/project_updates/
           retention-days: 30
+      - name: Report the failed collection after preserving the last complete data
+        if: steps.collection.outcome == 'failure'
+        run: exit 1

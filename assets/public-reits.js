@@ -4,7 +4,7 @@ import { REFRESH_SCHEDULE, refreshWarning } from './refresh-health.js?v=20261016
 import { closeFilterMenu, syncFilterSelects } from './filter-select.js?v=20261014-filter-menu-1';
 import { PUBLIC_FIELDS, getPublicField, formatProjectField, projectFieldCellText } from './project-fields.js?v=20261015-origin-2';
 import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-origin-2';
-import { initializeNdrcRecommendations, setNdrcRecommendationsActive, loadNdrcRecommendations, renderNdrcRecommendations, renderNdrcMetadata, exportNdrcCSV, openNdrcSources, ndrcReverseLinksHTML } from './ndrc-recommendations.js?v=20261016-ndrc-1';
+import { initializeNdrcRecommendations, setNdrcRecommendationsActive, loadNdrcRecommendations, renderNdrcRecommendations, renderNdrcMetadata, exportNdrcCSV, openNdrcSources, openNdrcRecommendation, ndrcReverseLinksHTML } from './ndrc-recommendations.js?v=20261016-updates-1';
 
 const DATA_URL = new URL('../data/public_reits.json', import.meta.url);
 const COMPRESSED_DATA_URL = new URL('../data/public_reits.json.gz', import.meta.url);
@@ -448,6 +448,27 @@ function switchView(view, business = '') {
 }
 
 export function openPublicSources() { if (isRecommendationView()) { openNdrcSources(); return; } closeFilterMenu(); renderMetadata(); if (!$('public-source-dialog').open) $('public-source-dialog').showModal(); }
+export async function openPublicRecord(project) {
+  if (!project?.entity_id) return false;
+  for (const id of ['updates-timeline-dialog', 'updates-detail-dialog']) { const dialog = $(id); if (dialog?.open) dialog.close(); }
+  if (project.population === 'ndrc') {
+    switchView('recommendations');
+    await loadNdrcRecommendations();
+    openNdrcRecommendation(project.entity_id);
+    return Boolean($('ndrc-detail-dialog')?.open);
+  }
+  await loadData();
+  if (project.entity_kind === 'fund') {
+    switchView('funds');
+    if (!fundById.has(project.entity_id)) return false;
+    openFund(project.entity_id);
+  } else {
+    switchView('events', ['首发', '扩募'].includes(project.business_type) ? project.business_type : '');
+    if (!eventById.has(project.entity_id)) return false;
+    openEvent(project.entity_id);
+  }
+  return Boolean($('public-detail-dialog')?.open);
+}
 export function setPublicModuleActive(value) {
   active = value;
   setNdrcRecommendationsActive(active && isRecommendationView());

@@ -19,10 +19,11 @@ on:
       - scripts/refresh_ndrc.py
       - scripts/export_ndrc_review.py
       - scripts/validate_ndrc_data.py
+      - scripts/project_updates.py
 permissions:
   contents: write
 concurrency:
-  group: reits-ndrc-refresh
+  group: reits-daily-refresh
   cancel-in-progress: false
 jobs:
   refresh:
@@ -67,7 +68,8 @@ jobs:
           if python scripts/validate_ndrc_data.py data/ndrc_recommendations.json --public-input data/public_reits.json; then
             python scripts/export_ndrc_review.py
           fi
-          git add data/ndrc_recommendations.json data/ndrc_refresh_status.json data/raw/ndrc/ data/source_manifest/ndrc/ workpapers/ndrc/ snapshots/ndrc/ outputs/ndrc/
+          python scripts/project_updates.py
+          git add data/ndrc_recommendations.json data/ndrc_refresh_status.json data/project_updates.json data/raw/ndrc/ data/source_manifest/ndrc/ data/source_manifest/project_updates/ workpapers/ndrc/ workpapers/project_updates/ snapshots/ndrc/ outputs/ndrc/
           if ! git diff --cached --quiet; then
             git commit -m "data: refresh NDRC recommendations and reviewed exchange links"
             git pull --rebase origin main
@@ -79,7 +81,8 @@ jobs:
             if python scripts/validate_ndrc_data.py data/ndrc_recommendations.json --public-input data/public_reits.json; then
               python scripts/export_ndrc_review.py
             fi
-            git add data/ndrc_recommendations.json data/ndrc_refresh_status.json data/raw/ndrc/ data/source_manifest/ndrc/ workpapers/ndrc/ snapshots/ndrc/ outputs/ndrc/
+            python scripts/project_updates.py
+            git add data/ndrc_recommendations.json data/ndrc_refresh_status.json data/project_updates.json data/raw/ndrc/ data/source_manifest/ndrc/ data/source_manifest/project_updates/ workpapers/ndrc/ workpapers/project_updates/ snapshots/ndrc/ outputs/ndrc/
             if ! git diff --cached --quiet; then
               git commit -m "data: rematch recommendations after exchange input update"
             fi
@@ -96,4 +99,6 @@ jobs:
             data/raw/ndrc/refresh/${{ github.run_id }}-${{ github.run_attempt }}-rebased/
             workpapers/ndrc/refresh/${{ github.run_id }}-${{ github.run_attempt }}-rebased/
             data/source_manifest/ndrc/
+            data/source_manifest/project_updates/
+            workpapers/project_updates/
           retention-days: 30

@@ -14,7 +14,9 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    # A failed collection may have committed a safe failed-attempt notice while
+    # preserving complete data. The normal validators still gate publication.
+    if: ${{ github.event_name != 'workflow_run' || contains(fromJSON('["success", "failure"]'), github.event.workflow_run.conclusion) }}
     runs-on: ubuntu-latest
     outputs:
       due: ${{ steps.publication.outputs.due }}
@@ -45,6 +47,7 @@ jobs:
           python scripts/validate_data.py data/institutional.json
           python scripts/validate_public_data.py data/public_reits.json
           python scripts/validate_ndrc_data.py data/ndrc_recommendations.json --public-input data/public_reits.json --allow-stale-public
+          python scripts/project_updates.py --check
           python scripts/build_static.py
       - uses: actions/configure-pages@v5
         if: steps.publication.outputs.due == 'true'

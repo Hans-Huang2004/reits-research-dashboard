@@ -23,6 +23,7 @@ jobs:
           node --check assets/app.js
           node --check assets/public-reits.js
           node --check assets/ndrc-recommendations.js
+          node --check assets/project-updates.js
           node --check assets/project-fields.js
           node --test tests/*.test.mjs
       - name: Validate saved dataset
@@ -30,3 +31,4 @@ jobs:
           python scripts/validate_data.py data/institutional.json
           python scripts/validate_public_data.py data/public_reits.json
           python scripts/validate_ndrc_data.py data/ndrc_recommendations.json --public-input data/public_reits.json --allow-stale-public
+          python scripts/project_updates.py --check

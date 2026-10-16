@@ -36,6 +36,20 @@ def write(path, value):
     temp.replace(path)
 
 
+def record_failed_attempt(output_dir, batch_id, started_at, error, now=None):
+    """Keep the last complete pair and separately expose the latest failed attempt."""
+    now = (now or datetime.now(BEIJING)).astimezone(BEIJING)
+    status_path = Path(output_dir) / 'refresh_status.json'
+    previous = read(status_path, {}) or {}
+    status = {**previous, 'status': 'failed', 'attempt_ok': False,
+              'last_attempt_batch_id': batch_id, 'last_attempt_at': started_at,
+              'failed_at': now.isoformat(timespec='seconds'), 'error': str(error),
+              'last_successful_at': previous.get('last_successful_at') or previous.get('completed_at'),
+              'policy': 'Retain the last complete public and institutional snapshots'}
+    write(status_path, status)
+    return status
+
+
 def public_due(snapshot, now):
     try:
         validate_public(snapshot)
@@ -72,8 +86,9 @@ def publish_candidates(candidates, output_dir, batch_id, started_at, now=None):
     output_dir = Path(output_dir)
     for snapshot in snapshots.values():
         snapshot["refresh_batch"] = batch
-    status = {"status": "complete", "date": batch["date"], "batch_id": batch_id,
+    status = {"status": "complete", "attempt_ok": True, "date": batch["date"], "batch_id": batch_id,
               "started_at": started_at, "completed_at": batch["completed_at"], "validation": validation,
+              "last_successful_at": batch["completed_at"], "last_attempt_at": started_at,
               "disclosure_checked_at": {key: value.get("enrichment", {}).get("checked_at") for key, value in snapshots.items()}}
     for key, snapshot in snapshots.items():
         write(output_dir / FILES[key], snapshot)
@@ -134,6 +149,7 @@ def main(argv=None):
         print(json.dumps({"status": "complete", "batch_id": batch_id, "validation": manifest["validation"]}, ensure_ascii=False))
         return 0
     except Exception as exc:
+        record_failed_attempt(ROOT / 'data', batch_id, started_at, exc)
         write(work / "failure.json", {"batch_id": batch_id, "failed_at": datetime.now(BEIJING).isoformat(timespec="seconds"),
                                       "error": str(exc), "policy": "Do not commit or deploy a partial collection"})
         print("Combined refresh failed; do not publish partial data: " + str(exc), file=sys.stderr)

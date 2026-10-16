@@ -6,11 +6,28 @@ import tempfile
 import unittest
 
 from collectors.public_reits import build_snapshot
-from scripts.refresh_all import publish_candidates, refresh_due
+from scripts.refresh_all import publish_candidates, refresh_due, record_failed_attempt
 from tests.test_public_library import event, fund
 
 
 class CombinedRefreshTests(unittest.TestCase):
+    def test_failed_retry_exposes_error_without_modifying_either_successful_snapshot(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'refresh_status.json').write_text(json.dumps({
+                'status': 'complete', 'batch_id': 'last-success',
+                'completed_at': '2026-10-16T07:50:00+08:00'}))
+            for name in ('public_reits.json', 'institutional.json'):
+                (root / name).write_bytes(b'complete prior data')
+            status = record_failed_attempt(root, 'failed-retry', '2026-10-16T09:00:00+08:00',
+                                           'source unavailable', datetime.fromisoformat('2026-10-16T09:02:00+08:00'))
+            self.assertEqual(status['batch_id'], 'last-success')
+            self.assertEqual(status['status'], 'failed')
+            self.assertFalse(status['attempt_ok'])
+            self.assertEqual(status['last_successful_at'], '2026-10-16T07:50:00+08:00')
+            for name in ('public_reits.json', 'institutional.json'):
+                self.assertEqual((root / name).read_bytes(), b'complete prior data')
+
     def setUp(self):
         self.now = datetime.fromisoformat('2026-10-15T10:00:00+08:00')
         root = Path(__file__).resolve().parents[1]

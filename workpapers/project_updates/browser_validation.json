@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-16T13:36:18.469525+08:00",
+  "python_tests": 176,
+  "javascript_tests": 23,
+  "observed_events": 6,
+  "csv_events": 6,
+  "csv_event_ids_match": true,
+  "browser_checks": [
+    "default_navigation_order",
+    "default_updates_page",
+    "search",
+    "custom_date_range",
+    "institutional_filter",
+    "project_timeline",
+    "public_fund_jump",
+    "institutional_filing_jump",
+    "ndrc_recommendation_jump",
+    "public_expansion_jump",
+    "shared_existing_favorites",
+    "light_dark_theme_tokens",
+    "390px_no_horizontal_overflow",
+    "1440px_no_horizontal_overflow"
+  ],
+  "visual_screenshot": "Ego screenshot capture timed out; DOM/layout and interaction checks completed",
+  "source_raw_hash_validation": {
+    "joint_batch": 276,
+    "ndrc_current_pages": 3
+  },
+  "scheduled_event_observed_after_change": false,
+  "schedule_verification_note": "The updated workflow is checked with this deployment; its next genuine schedule event has not occurred yet."
+}

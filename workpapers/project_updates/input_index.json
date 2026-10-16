@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "versions": [
+    {
+      "population": "public",
+      "path": "snapshots/public/20261015-105537.json",
+      "retained_path": "workpapers/project_updates/inputs/public/62f381d956357649948215447216a2c5e89e839ab473f61c5cc2eff5bd27cad5.json",
+      "sha256": "62f381d956357649948215447216a2c5e89e839ab473f61c5cc2eff5bd27cad5",
+      "collected_at": "2026-10-15T10:55:37+08:00",
+      "sequence": 0,
+      "first_retained_at": "2026-10-16T13:20:30+08:00"
+    },
+    {
+      "population": "public",
+      "path": "snapshots/public/20261015-105727.json",
+      "retained_path": "workpapers/project_updates/inputs/public/4c31e1bff2a320095407276510e4204738de551d17efe940e5801e4552ef1094.json",
+      "sha256": "4c31e1bff2a320095407276510e4204738de551d17efe940e5801e4552ef1094",
+      "collected_at": "2026-10-15T10:57:27+08:00",
+      "sequence": 1,
+      "first_retained_at": "2026-10-16T13:20:30+08:00"
+    },
+    {
+      "population": "public",
+      "path": "snapshots/public/20261015-105941.json",
+      "retained_path": "workpapers/project_updates/inputs/public/6b10ea36f81d59f14882e43343bcfa031e46bae8bb18854979ea0978f7285499.json",
+      "sha256": "6b10ea36f81d59f14882e43343bcfa031e46bae8bb18854979ea0978f7285499",
+      "collected_at": "2026-10-15T10:59:41+08:00",
+      "sequence": 2,
+      "first_retained_at": "2026-10-16T13:20:30+08:00"
+    },
+    {
+      "population": "public",
+      "path": "data/public_reits.json",
+      "retained_path": "workpapers/project_updates/inputs/public/46a728b73a6fa8abd3366cf98130fbc4f63fa45884c1292ab9b70cb43d26f7ab.json",
+      "sha256": "46a728b73a6fa8abd3366cf98130fbc4f63fa45884c1292ab9b70cb43d26f7ab",
+      "collected_at": "2026-10-16T09:22:52+08:00",
+      "sequence": 3,
+      "first_retained_at": "2026-10-16T13:20:30+08:00",
+      "current_path": "data/public_reits.json"
+    },
+    {
+      "population": "institutional",
+      "path": "snapshots/2026-10-14.json",
+      "retained_path": "workpapers/project_updates/inputs/institutional/d171c053ab742a109f321cd88c721e3880542193ae56a65a238fc94b6beb495a.json",
+      "sha256": "d171c053ab742a109f321cd88c721e3880542193ae56a65a238fc94b6beb495a",
+      "collected_at": "2026-10-14T16:18:03+08:00",
+      "sequence": 4,
+      "first_retained_at": "2026-10-16T13:20:30+08:00"
+    },
+    {
+      "population": "institutional",
+      "path": "snapshots/2026-10-15.json",
+      "retained_path": "workpapers/project_updates/inputs/institutional/07e0259e1b174e1a285f0abff27b4f3dbf7cb466b3039451bd563509feab3c62.json",
+      "sha256": "07e0259e1b174e1a285f0abff27b4f3dbf7cb466b3039451bd563509feab3c62",
+      "collected_at": "2026-10-15T09:24:22+08:00",
+      "sequence": 5,
+      "first_retained_at": "2026-10-16T13:20:30+08:00"
+    },
+    {
+      "population": "institutional",
+      "path": "data/institutional.json",
+      "retained_path": "workpapers/project_updates/inputs/institutional/eae88c2371d3787b41b5db7fef84cc2ff4a0c039692d19d73314ccb0b11ce5ee.json",
+      "sha256": "eae88c2371d3787b41b5db7fef84cc2ff4a0c039692d19d73314ccb0b11ce5ee",
+      "collected_at": "2026-10-16T09:16:11+08:00",
+      "sequence": 6,
+      "first_retained_at": "2026-10-16T13:20:30+08:00",
+      "current_path": "data/institutional.json"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-105939-682899.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/1d33cc675ce9c90239a7288cd11d2449a03eaa9819d90b67f35dff39c07fff61.json",
+      "sha256": "1d33cc675ce9c90239a7288cd11d2449a03eaa9819d90b67f35dff39c07fff61",
+      "collected_at": "2026-10-16T10:50:20+08:00",
+      "sequence": 7,
+      "first_retained_at": "2026-10-16T13:20:30+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-110030-472279.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/1495770377e830297d7c38e5c54402ed08ea82f3d8e30e2201961407aa59ccd1.json",
+      "sha256": "1495770377e830297d7c38e5c54402ed08ea82f3d8e30e2201961407aa59ccd1",
+      "collected_at": "2026-10-16T10:50:20+08:00",
+      "sequence": 8,
+      "first_retained_at": "2026-10-16T13:20:30+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-110109-411928.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/d29733320042667398f1ae3f53218348ad3126bd232124b4ea3a3f0d83c1caae.json",
+      "sha256": "d29733320042667398f1ae3f53218348ad3126bd232124b4ea3a3f0d83c1caae",
+      "collected_at": "2026-10-16T11:01:09+08:00",
+      "sequence": 9,
+      "first_retained_at": "2026-10-16T13:20:30+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-110912-057277.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/93c33d3b8d396ca68182aebde58514448a4234814ac82d8db4cdd42bfe36754c.json",
+      "sha256": "93c33d3b8d396ca68182aebde58514448a4234814ac82d8db4cdd42bfe36754c",
+      "collected_at": "2026-10-16T11:09:12+08:00",
+      "sequence": 10,
+      "first_retained_at": "2026-10-16T13:20:30+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-123209-174368.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/0ccc4dcc9978de93f5927aa128ad36d5285fdd6eefb670acfd9bd8998f9d31b3.json",
+      "sha256": "0ccc4dcc9978de93f5927aa128ad36d5285fdd6eefb670acfd9bd8998f9d31b3",
+      "collected_at": "2026-10-16T11:09:12+08:00",
+      "sequence": 11,
+      "first_retained_at": "2026-10-16T13:20:30+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-123243-811311.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/0f8cfaa1a1c32ef43cd12ab81a39bfde9797e445245636a4c56826b04c3d7985.json",
+      "sha256": "0f8cfaa1a1c32ef43cd12ab81a39bfde9797e445245636a4c56826b04c3d7985",
+      "collected_at": "2026-10-16T11:09:12+08:00",
+      "sequence": 12,
+      "first_retained_at": "2026-10-16T13:20:30+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "data/ndrc_recommendations.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/5ebcef1a8d753a34bd49633816c7db0eaa5a8f9ddd5b93e6b441dd65cb474434.json",
+      "sha256": "5ebcef1a8d753a34bd49633816c7db0eaa5a8f9ddd5b93e6b441dd65cb474434",
+      "collected_at": "2026-10-16T12:34:36+08:00",
+      "sequence": 13,
+      "first_retained_at": "2026-10-16T13:20:30+08:00",
+      "current_path": "data/ndrc_recommendations.json"
+    },
+    {
+      "population": "public",
+      "path": "workpapers/daily_refresh/38834122035-1/collected/public_reits.json",
+      "retained_path": "workpapers/project_updates/inputs/public/a5102c1c2588eeef1ee25672c1c6ba964cea90695a7c19a3b9da823780ad9d59.json",
+      "sha256": "a5102c1c2588eeef1ee25672c1c6ba964cea90695a7c19a3b9da823780ad9d59",
+      "collected_at": "2026-10-16T09:22:52+08:00",
+      "sequence": 14,
+      "first_retained_at": "2026-10-16T13:25:02+08:00"
+    },
+    {
+      "population": "institutional",
+      "path": "workpapers/daily_refresh/38834122035-1/collected/institutional.json",
+      "retained_path": "workpapers/project_updates/inputs/institutional/05f72a2b028a320c7c2608077a9aa62802f04de840ff500dc6ef3f9dc161ca66.json",
+      "sha256": "05f72a2b028a320c7c2608077a9aa62802f04de840ff500dc6ef3f9dc161ca66",
+      "collected_at": "2026-10-16T09:16:11+08:00",
+      "sequence": 15,
+      "first_retained_at": "2026-10-16T13:25:02+08:00"
+    }
+  ],
+  "rejected_inputs": []
+}

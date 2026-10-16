@@ -2,7 +2,8 @@
 'use strict';
 import { REFRESH_SCHEDULE, refreshWarning } from './refresh-health.js?v=20261016-refresh-1';
 import { enhanceFilterSelects, syncFilterSelects, closeFilterMenu } from './filter-select.js?v=20261014-filter-menu-1';
-import { initializePublicReits, setPublicModuleActive, openPublicSources } from './public-reits.js?v=20261016-ndrc-1';
+import { initializePublicReits, setPublicModuleActive, openPublicSources, openPublicRecord } from './public-reits.js?v=20261016-updates-1';
+import { initializeProjectUpdates, setUpdatesModuleActive, openUpdatesSources } from './project-updates.js?v=20261016-updates-1';
 import { INSTITUTIONAL_FIELDS, getInstitutionalField, projectFieldCellText } from './project-fields.js?v=20261015-disclosures-1';
 import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-disclosures-1';
 
@@ -31,6 +32,8 @@ let records = [];
 let byId = new Map();
 let cachedView = false;
 let storageWarning = '';
+let activeModule = 'updates';
+let institutionalLoading = null;
 
 function readStorage(key, fallback) {
   try { const value = localStorage.getItem(key); return value ? JSON.parse(value) : fallback; }
@@ -280,7 +283,7 @@ function renderMetadata() {
   $('data-notice').hidden = warnings.length === 0;
   $('data-notice').textContent = warnings.join(' ');
   $('data-pill').textContent = `${cachedView ? '本地快照' : snapshot.coverage?.complete === false ? '部分更新' : '数据日期'} ${snapshot.date}`;
-  if ($('public-panel').hidden) $('side-date').textContent = snapshot.date;
+  if (activeModule === 'institutional') $('side-date').textContent = snapshot.date;
   const updatedAt = Number.isFinite(timestamp) ? new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date(timestamp)) : snapshot.date;
   $('footer-date').textContent = `更新时间：${updatedAt}（北京时间）${cachedView ? ' · 浏览器缓存' : ''}`;
   const officialLinks = records.filter(record => sourceURL(record)).length;
@@ -297,6 +300,8 @@ function applySnapshot(data, fromCache = false) {
   render();
 }
 async function loadData() {
+  if (institutionalLoading) return institutionalLoading;
+  institutionalLoading = (async () => {
   $('reload').disabled = true;
   $('loading-state').hidden = false;
   $('loading-state').textContent = '正在读取项目库…';
@@ -320,6 +325,8 @@ async function loadData() {
       render();
     }
   } finally { clearTimeout(timer); $('loading-state').hidden = true; $('reload').disabled = false; }
+  })();
+  try { return await institutionalLoading; } finally { institutionalLoading = null; }
 }
 function openDetail(id) {
   closeFilterMenu();
@@ -433,26 +440,47 @@ $('rows').addEventListener('click', event => {
 });
 document.querySelectorAll('[data-close]').forEach(button => button.addEventListener('click', () => $(button.dataset.close).close()));
 document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', event => { if (event.target === dialog) { const box = dialog.getBoundingClientRect(); if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close(); } }));
-$('source-nav').addEventListener('click', () => { closeFilterMenu(); if (!$('public-panel').hidden) openPublicSources(); else $('source-dialog').showModal(); });
+$('source-nav').addEventListener('click', () => { closeFilterMenu(); if (activeModule === 'updates') openUpdatesSources(); else if (activeModule === 'public') openPublicSources(); else $('source-dialog').showModal(); });
 $('classification-help').addEventListener('click', () => { closeFilterMenu(); $('source-dialog').showModal(); });
 $('taxonomy-guide').innerHTML = RIGHTS.map(rights => `<div class="taxonomy-group"><strong>${escapeHTML(rights)}</strong><span>${escapeHTML(TAXONOMY[rights].join('、'))}</span></div>`).join('');
 function showModule(name) {
   closeFilterMenu();
-  const isPublic = name === 'public'; $('institutional-panel').hidden = isPublic; $('public-panel').hidden = !isPublic;
-  for (const [id, active] of [['institutional-nav', !isPublic], ['public-nav', isPublic]]) { $(id).classList.toggle('active', active); if (active) $(id).setAttribute('aria-current', 'page'); else $(id).removeAttribute('aria-current'); }
-  document.querySelector('.skip-link').href = isPublic ? '#public-projects' : '#projects';
-  setPublicModuleActive(isPublic);
-  if (!isPublic) {
+  activeModule = ['updates', 'public', 'institutional'].includes(name) ? name : 'updates';
+  for (const module of ['updates', 'public', 'institutional']) {
+    const active = activeModule === module;
+    $(`${module}-panel`).hidden = !active;
+    $(`${module}-nav`).classList.toggle('active', active);
+    if (active) $(`${module}-nav`).setAttribute('aria-current', 'page'); else $(`${module}-nav`).removeAttribute('aria-current');
+  }
+  document.querySelector('.skip-link').href = { updates: '#updates-list', public: '#public-projects', institutional: '#projects' }[activeModule];
+  setPublicModuleActive(activeModule === 'public');
+  setUpdatesModuleActive(activeModule === 'updates');
+  if (activeModule === 'institutional') {
     $('side-date').textContent = snapshot?.date || '正在读取';
     $('side-schedule').textContent = REFRESH_SCHEDULE;
     $('side-source').textContent = '上交所／深交所公开申报';
+    if (!snapshot && !institutionalLoading) loadData();
   }
 }
+$('updates-nav').addEventListener('click', () => showModule('updates'));
 $('institutional-nav').addEventListener('click', () => showModule('institutional'));
 $('public-nav').addEventListener('click', () => showModule('public'));
 $('export').addEventListener('click', exportCSV);
 $('reload').addEventListener('click', loadData);
-enhanceFilterSelects();
 initializePublicReits();
+initializeProjectUpdates({ onOpenProject: async project => {
+  if (project.population === 'institutional') {
+    showModule('institutional');
+    if (!snapshot) await loadData();
+    if (!byId.has(project.entity_id)) { showModule('updates'); return false; }
+    openDetail(project.entity_id);
+    return true;
+  }
+  showModule('public');
+  const opened = await openPublicRecord(project);
+  if (!opened) showModule('updates');
+  return opened;
+} });
+enhanceFilterSelects();
 render();
-loadData();
+showModule('updates');
