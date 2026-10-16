@@ -94,6 +94,11 @@ def validate(data, public_snapshot=None):
             if not eid or not official_url(relation.get("source_url")) or not relation.get("method") or not relation.get("note"):
                 raise ValueError("Confirmed relation lacks event identity/evidence method")
             evidence = relation.get("evidence_urls", [])
+            if relation.get("method") == "user_confirmed_association":
+                confirmation = relation.get("confirmation", {})
+                if (confirmation.get("source") != "user_confirmation" or
+                        not valid_timestamp(confirmation.get("confirmed_at")) or not confirmation.get("scope")):
+                    raise ValueError("User-confirmed relation lacks dated confirmation provenance")
             if not evidence or not all(official_evidence_url(url) for url in evidence):
                 raise ValueError("Confirmed relation requires official evidence URLs")
             if relation.get("business_type") not in ("首发", "扩募", "新购入"):

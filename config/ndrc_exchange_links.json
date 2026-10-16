@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_at": "2026-10-16T10:58:50+08:00",
+  "reviewed_at": "2026-10-16T11:32:15+08:00",
   "source_public_snapshot_updated_at": "2026-10-16T09:18:26+08:00",
   "policy": "名称相似仅生成候选；确认关系绑定推荐三字段身份、交易所具体申报ID、业务批次和官方文件证据。",
   "reviews": {
@@ -643,14 +643,32 @@
         "applicant_region": "四川省",
         "recommended_date": "2026-06-25"
       },
-      "reviewed_at": "2026-10-16T10:58:50+08:00",
-      "links": [],
-      "outcome": "candidate",
-      "note": "推荐名单为消费基础设施项目，现有候选为商业不动产REITs；尚未取得官方文件明确建立两者同一推荐关系。",
-      "candidate_links": [
+      "reviewed_at": "2026-10-16T11:32:15+08:00",
+      "links": [
         {
           "exchange_event_id": "SZSE_5000082",
+          "business_type": "首发",
+          "expected_accepted_date": "2026-09-16",
+          "method": "user_confirmed_association",
+          "reviewed_at": "2026-10-16T11:32:15+08:00",
+          "note": "用户于2026年10月16日人工确认该推荐项目与国泰海通鹏瑞利封闭式商业不动产证券投资基金对应；保留推荐名单及交易所各自的项目类型。",
+          "confirmation": {
+            "source": "user_confirmation",
+            "confirmed_at": "2026-10-16T11:32:15+08:00",
+            "scope": "推荐项目与该商业不动产首发申报为同一项目"
+          },
           "evidence": [
+            {
+              "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+              "title": "国家发展改革委推荐项目名单",
+              "asset_anchor": "鹏瑞利集团消费基础设施项目",
+              "note": "推荐项目身份及推荐日期。"
+            },
+            {
+              "url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000082",
+              "title": "交易所具体申报项目信息",
+              "note": "商业不动产首发申报，受理日期2026-09-16。"
+            },
             {
               "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_E362952377EE466FB97C8E9AEEC58447.pdf",
               "title": "1-4 国泰海通鹏瑞利封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
@@ -659,10 +677,11 @@
               "note": "官方文件列示本次申报相关的项目主体或基础设施资产。",
               "text_workpaper": "workpapers/enrichment/public_szse/20261015T113756/text/95d2d5422130aeb485ef1965.json"
             }
-          ],
-          "note": "官方商业不动产申报披露相关消费资产，推荐记录与该申报是否属于同一项目尚待明确证据。"
+          ]
         }
-      ]
+      ],
+      "outcome": "confirmed",
+      "note": "用户于2026年10月16日人工确认该推荐项目与国泰海通鹏瑞利封闭式商业不动产证券投资基金对应；保留推荐名单及交易所各自的项目类型。"
     },
     "NDRC_0c9349bb7b73ac77179b": {
       "identity": {
@@ -2233,14 +2252,32 @@
         "applicant_region": "江苏省",
         "recommended_date": "2025-11-09"
       },
-      "reviewed_at": "2026-10-16T10:58:50+08:00",
-      "links": [],
-      "outcome": "candidate",
-      "note": "推荐名单为消费基础设施项目，现有候选为商业不动产REITs；尚未取得官方文件明确建立两者同一推荐关系。",
-      "candidate_links": [
+      "reviewed_at": "2026-10-16T11:32:15+08:00",
+      "links": [
         {
           "exchange_event_id": "SSE_a1b8c90b144d41c2bbde49c4c0a2f96f",
+          "business_type": "首发",
+          "expected_accepted_date": "2026-08-06",
+          "method": "user_confirmed_association",
+          "reviewed_at": "2026-10-16T11:32:15+08:00",
+          "note": "用户于2026年10月16日人工确认该推荐项目与华泰紫金金鹰封闭式商业不动产证券投资基金对应；保留推荐名单及交易所各自的项目类型。",
+          "confirmation": {
+            "source": "user_confirmation",
+            "confirmed_at": "2026-10-16T11:32:15+08:00",
+            "scope": "推荐项目与该商业不动产首发申报为同一项目"
+          },
           "evidence": [
+            {
+              "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+              "title": "国家发展改革委推荐项目名单",
+              "asset_anchor": "金鹰商业消费基础设施项目",
+              "note": "推荐项目身份及推荐日期。"
+            },
+            {
+              "url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a1b8c90b144d41c2bbde49c4c0a2f96f",
+              "title": "交易所具体申报项目信息",
+              "note": "商业不动产首发申报，受理日期2026-08-06。"
+            },
             {
               "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202607/a1b8c9_20260731_8DI9.pdf",
               "title": "1-4-1 华泰紫金金鹰封闭式商业不动产证券投资基金招募说明书（草案）.pdf",
@@ -2249,10 +2286,11 @@
               "note": "官方文件列示本次申报相关的项目主体或基础设施资产。",
               "text_workpaper": "workpapers/enrichment/public_sse/texts/8e0fb2efd265a172ae2d0a6e.json"
             }
-          ],
-          "note": "官方商业不动产申报披露相关消费资产，推荐记录与该申报是否属于同一项目尚待明确证据。"
+          ]
         }
-      ]
+      ],
+      "outcome": "confirmed",
+      "note": "用户于2026年10月16日人工确认该推荐项目与华泰紫金金鹰封闭式商业不动产证券投资基金对应；保留推荐名单及交易所各自的项目类型。"
     },
     "NDRC_ecf240b6e6900d80f633": {
       "identity": {

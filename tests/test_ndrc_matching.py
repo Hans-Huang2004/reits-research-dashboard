@@ -34,6 +34,22 @@ def review(row=None, **link_changes):
 
 
 class NDRCMatchingTests(unittest.TestCase):
+    def test_user_confirmation_is_explicit_and_survives_matching_refresh(self):
+        source = snapshot(event(product_type='商业不动产REITs'))
+        confirmation = {'source': 'user_confirmation', 'confirmed_at': NOW.isoformat(),
+                        'scope': '推荐项目与该商业不动产首发申报为同一项目'}
+        config = review(method='user_confirmed_association', confirmation=confirmation)
+        rows, audit = match_recommendations([recommendation()], source, overrides=config, now=NOW)
+        self.assertEqual(rows[0]['match_status'], 'confirmed')
+        self.assertEqual(rows[0]['relations'][0]['confirmation'], confirmation)
+        self.assertEqual(audit['confirmation_basis_counts']['user_confirmed_association'], 1)
+        again, _ = match_recommendations(rows, source, overrides=config, now=NOW)
+        self.assertEqual(again[0]['relations'][0]['confirmation'], confirmation)
+        for missing in ({}, {**confirmation, 'source': 'inferred'}):
+            with self.assertRaises(ValueError):
+                match_recommendations([recommendation()], source,
+                                      overrides=review(method='user_confirmed_association', confirmation=missing), now=NOW)
+
     def test_name_similarity_never_confirms(self):
         rows,audit=match_recommendations([recommendation()],snapshot(),overrides={'reviews':{}},now=NOW)
         self.assertEqual(rows[0]['match_status'],'candidate')

@@ -6,7 +6,7 @@ const REFRESH_STATUS_URL = new URL('../data/ndrc_refresh_status.json', import.me
 const REFRESH_SCHEDULE = '每日07:45起 · 随交易所更新匹配';
 const STORAGE_PREFIX = `reits:ndrc:${DATA_URL.pathname}:v1`;
 const MATCH_LABELS = { confirmed: '已确认匹配', candidate: '候选待核实', unmatched: '未匹配' };
-const METHOD_LABELS = { official_document_asset_and_batch_review: '已核对官方资产及申报批次', official_project_identity_review: '已核对官方项目信息', official_explicit_recommendation_reference: '官方文件明确提及推荐', distinctive_name_or_asset_tokens_candidate_only: '名称或资产线索待核实', official_asset_identity_pending_recommendation_link: '已核对资产，推荐对应关系待核实' };
+const METHOD_LABELS = { user_confirmed_association: '人工确认对应关系', official_document_asset_and_batch_review: '已核对官方资产及申报批次', official_project_identity_review: '已核对官方项目信息', official_explicit_recommendation_reference: '官方文件明确提及推荐', distinctive_name_or_asset_tokens_candidate_only: '名称或资产线索待核实', official_asset_identity_pending_recommendation_link: '已核对资产，推荐对应关系待核实' };
 const $ = id => document.getElementById(id);
 const html = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const number = value => Number(value).toLocaleString('zh-CN', { maximumFractionDigits: 2 });

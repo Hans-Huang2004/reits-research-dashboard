@@ -100,8 +100,16 @@ def _candidate(item, event, fund=None):
 
 def _relation(item, link, event, fund, checked_at):
     method = link.get("method", "official_document_asset_and_batch_review")
-    if method not in {"official_document_asset_and_batch_review", "official_project_identity_review", "official_explicit_recommendation_reference"}:
-        raise ValueError("Confirmation requires a declared official evidence review method")
+    if method not in {"official_document_asset_and_batch_review", "official_project_identity_review", "official_explicit_recommendation_reference", "user_confirmed_association"}:
+        raise ValueError("Confirmation requires a declared evidence review method")
+    confirmation = link.get("confirmation", {})
+    if method == "user_confirmed_association":
+        try:
+            stamp = datetime.fromisoformat(confirmation.get("confirmed_at", ""))
+        except (TypeError, ValueError) as exc:
+            raise ValueError("User confirmation requires a dated provenance record") from exc
+        if confirmation.get("source") != "user_confirmation" or stamp.utcoffset() is None or not confirmation.get("scope"):
+            raise ValueError("User confirmation requires explicit provenance and scope")
     if not link.get("note", "").strip():
         raise ValueError("Confirmed link lacks its identity and batch explanation")
     evidence = link.get("evidence", [])
@@ -136,7 +144,9 @@ def _relation(item, link, event, fund, checked_at):
             "source_url": event.get("source_url", ""), "evidence_urls": list(dict.fromkeys(e["url"] for e in evidence)),
             "evidence": _public_evidence(evidence), "method": method, "note": link["note"],
             "days_to_acceptance": days, "chronology_status": chronology,
-            "chronology_note": chronology_note, "reviewed_at": link.get("reviewed_at", checked_at)}
+            "chronology_note": chronology_note, "reviewed_at": link.get("reviewed_at", checked_at),
+            **({"confirmation": {key: confirmation[key] for key in ("source", "confirmed_at", "scope")}}
+               if method == "user_confirmed_association" else {})}
 
 
 def match_recommendations(items, public_snapshot, overrides=None, extra_events=None, now=None):
@@ -220,10 +230,12 @@ def match_recommendations(items, public_snapshot, overrides=None, extra_events=N
              "match_status_counts": dict(Counter(row["match_status"] for row in result)),
              "review_status_counts": dict(Counter(row["match_review"]["status"] for row in result)),
              "confirmed_relation_count": sum(len(row["relations"]) for row in result),
+             "confirmation_basis_counts": dict(Counter(rel["method"] for row in result for rel in row["relations"])),
              "confirmed_exchange_event_count": len({rel["exchange_event_id"] for row in result for rel in row["relations"]}),
              "chronology_exceptions": chronology, "unused_review_ids": unused_reviews,
              "checks": {"unique_recommendation_ids": True, "exact_reviewed_recommendation_identity": True,
-                        "official_evidence_for_every_confirmation": True, "separate_initial_expansion_acquisition": True,
+                        "official_asset_sources_for_every_relation": True,
+                        "explicit_provenance_for_user_confirmations": True, "separate_initial_expansion_acquisition": True,
                         "negative_intervals_excluded_from_lead_time": True},
              "definition": "推荐记录与交易所具体申报事件多对多关联；名称相似仅生成候选；新购入单独保留；提前量只计算非负的推荐日至正式受理日间隔。"}
     return result, audit
