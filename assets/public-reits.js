@@ -4,6 +4,7 @@ import { REFRESH_SCHEDULE, refreshWarning } from './refresh-health.js?v=20261016
 import { closeFilterMenu, syncFilterSelects } from './filter-select.js?v=20261014-filter-menu-1';
 import { PUBLIC_FIELDS, getPublicField, formatProjectField, projectFieldCellText } from './project-fields.js?v=20261015-origin-2';
 import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-origin-2';
+import { initializeNdrcRecommendations, setNdrcRecommendationsActive, loadNdrcRecommendations, renderNdrcRecommendations, renderNdrcMetadata, exportNdrcCSV, openNdrcSources, ndrcReverseLinksHTML } from './ndrc-recommendations.js?v=20261016-ndrc-1';
 
 const DATA_URL = new URL('../data/public_reits.json', import.meta.url);
 const COMPRESSED_DATA_URL = new URL('../data/public_reits.json.gz', import.meta.url);
@@ -34,6 +35,7 @@ let initialized = false;
 let fromCache = false;
 let storageWarning = '';
 let loadError = '';
+let lastPublicDetail = null;
 
 function readStorage(key, fallback) {
   try { const value = localStorage.getItem(`${STORAGE_PREFIX}:${key}`); return value ? JSON.parse(value) : fallback; }
@@ -66,6 +68,7 @@ const assetLabel = record => valueText(record.asset_type) || '待分类';
 const managerLabel = record => valueText(record.manager) || '未披露';
 const productLabel = record => valueText(record.product_type) || '待确认';
 const isEventView = () => state.view === 'events';
+const isRecommendationView = () => state.view === 'recommendations';
 const recordKey = (record, kind = state.view) => `${kind === 'events' ? 'event' : 'fund'}:${record.id}`;
 const officialStatus = record => valueText(record.official_status) || valueText(record.stage) || '未披露';
 const eventStage = event => valueText(event.stage) || officialStatus(event);
@@ -188,6 +191,15 @@ function publicCellHTML(record, spec, context) {
 }
 
 function render() {
+  $('public-exchange-content').hidden = isRecommendationView();
+  $('ndrc-panel').hidden = !isRecommendationView();
+  if (active) document.querySelector('.skip-link').href = isRecommendationView() ? '#ndrc-projects' : '#public-projects';
+  if (isRecommendationView()) {
+    document.querySelectorAll('[data-public-view]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.publicView === state.view)));
+    $('public-view-note').textContent = '发改委向证监会推荐项目 · 关联交易所申报';
+    renderNdrcMetadata(); renderNdrcRecommendations(); return;
+  }
+  if (active) $('public-reload').disabled = Boolean(loading);
   const records = currentRecords();
   const eventView = isEventView();
   const unit = eventView ? '条' : '只';
@@ -247,6 +259,7 @@ function sourceEntries() {
 function sourceFailed(info) { return info?.ok === false || ['failed', 'error', 'partial'].includes(info?.status); }
 function sourceSucceeded(info) { return info?.ok === true || info?.status === 'complete'; }
 function renderMetadata() {
+  if (isRecommendationView()) { renderNdrcMetadata(); return; }
   const warnings = [];
   if (loadError) warnings.push(loadError);
   if (fromCache) warnings.push('正在展示此浏览器上次成功读取的公募快照。');
@@ -286,7 +299,7 @@ function applySnapshot(data, cached) {
 async function loadData() {
   if (loading) return loading;
   loading = (async () => {
-    $('public-reload').disabled = true; $('public-loading').hidden = false;
+    if (!isRecommendationView()) $('public-reload').disabled = true; $('public-loading').hidden = false;
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 35000);
     loadError = '';
@@ -311,7 +324,7 @@ async function loadData() {
       const previous = snapshot || readStorage('snapshot', null);
       try { if (!previous) throw new Error('无缓存'); applySnapshot(previous, true); }
       catch { renderMetadata(); render(); }
-    } finally { clearTimeout(timer); $('public-loading').hidden = true; $('public-reload').disabled = false; loading = null; }
+    } finally { clearTimeout(timer); $('public-loading').hidden = true; if (!isRecommendationView()) $('public-reload').disabled = false; loading = null; }
   })();
   return loading;
 }
@@ -362,6 +375,7 @@ function showDetail(title, body) {
 }
 function openFund(id) {
   const fund = fundById.get(id); if (!fund) return;
+  lastPublicDetail = { kind: 'fund', id };
   const related = eventsByFund.get(id) || [];
   const progress = [datedField('基金成立日期', fund.established_date), datedField('上市日期', fund.listing_date)];
   if (fund.establishment_announcement_date) progress.push(datedField('成立公告发布日期', fund.establishment_announcement_date));
@@ -373,10 +387,11 @@ function openFund(id) {
     progress
   });
   const relatedHTML = related.length ? `<div class="public-event-list">${related.map(event => `<button class="public-event-card" data-public-event="${html(event.id)}"><span class="public-event-card-title"><span class="mini-tag rights-tag">${html(event.business_type || '待确认')}</span>${html(event.name)}</span><span class="public-event-card-meta"><span>${html(eventStage(event))}${eventStage(event) !== officialStatus(event) ? ` · 官方：${html(officialStatus(event))}` : ''}</span><time>${html(actualDate(event.updated_date) || actualDate(event.accepted_date) || '日期未披露')}</time><span>查看申报 ↗</span></span></button>`).join('')}</div>` : '<p class="muted">暂无已关联的交易所申报记录。</p>';
-  showDetail('基金详情', `<div class="detail-name">${html(fund.short_name || fund.name)}</div>${fund.short_name && fund.short_name !== fund.name ? `<p class="public-full-name">${html(fund.name)}</p>` : ''}${groups}<section class="public-detail-section"><h3>首发与扩募 <span class="muted">${related.length}条</span></h3>${relatedHTML}</section><section class="public-detail-section"><h3>基金披露资料</h3>${documentsHTML(fund.documents)}</section><div class="detail-source">${sourceLink(fund.source_url, '打开官方基金资料')}<p>基金记录：${html(fund.id)}</p></div>`);
+  showDetail('基金详情', `<div class="detail-name">${html(fund.short_name || fund.name)}</div>${fund.short_name && fund.short_name !== fund.name ? `<p class="public-full-name">${html(fund.name)}</p>` : ''}${groups}${ndrcReverseLinksHTML('fund', fund.id)}<section class="public-detail-section"><h3>首发与扩募 <span class="muted">${related.length}条</span></h3>${relatedHTML}</section><section class="public-detail-section"><h3>基金披露资料</h3>${documentsHTML(fund.documents)}</section><div class="detail-source">${sourceLink(fund.source_url, '打开官方基金资料')}<p>基金记录：${html(fund.id)}</p></div>`);
 }
 function openEvent(id) {
   const event = eventById.get(id); if (!event) return;
+  lastPublicDetail = { kind: 'event', id };
   const fund = fundFor(event);
   const completionEvidence = Array.isArray(event.completion_evidence) ? event.completion_evidence : [];
   const completion = event.completed === true || completionEvidence.length ? `<section class="public-detail-section"><h3>完成依据</h3>${event.completion_announcement_date ? `<p class="muted">${futureDate(event.completion_announcement_date) ? '计划完成公告发布日期' : '完成公告发布日期'}：${html(event.completion_announcement_date)}</p>` : ''}${documentsHTML(completionEvidence)}</section>` : '';
@@ -387,7 +402,7 @@ function openEvent(id) {
     progress: [['官方审核状态', officialStatus(event)], datedField('受理日期', event.accepted_date), datedField('注册日期', event.registered_date)],
     progressBody: `<h3 class="public-timeline-title">披露时间节点</h3>${timelineHTML(event)}`
   });
-  showDetail('申报详情', `<div class="detail-name">${html(event.name)}</div>${fund ? `<button class="button public-back-fund" data-public-fund="${html(fund.id)}">← 所属基金：${html(fund.short_name || fund.name)}</button>` : ''}${groups}${completion}<section class="public-detail-section"><h3>申报披露资料</h3>${documentsHTML(event.documents)}</section><div class="detail-source">${sourceLink(event.source_url, '打开官方申报项目')}<p>申报记录：${html(event.id)}</p></div>`);
+  showDetail('申报详情', `<div class="detail-name">${html(event.name)}</div>${fund ? `<button class="button public-back-fund" data-public-fund="${html(fund.id)}">← 所属基金：${html(fund.short_name || fund.name)}</button>` : ''}${groups}${ndrcReverseLinksHTML('event', event.id)}${completion}<section class="public-detail-section"><h3>申报披露资料</h3>${documentsHTML(event.documents)}</section><div class="detail-source">${sourceLink(event.source_url, '打开官方申报项目')}<p>申报记录：${html(event.id)}</p></div>`);
 }
 
 function csvCell(value) {
@@ -428,18 +443,24 @@ function exportCSV() {
 function switchView(view, business = '') {
   closeFilterMenu();
   state.view = view; state.stage = ''; state.business = business; state.page = 1; state.direction = -1;
-  rebuildOptions(); render();
+  setNdrcRecommendationsActive(active && isRecommendationView());
+  if (!isRecommendationView()) rebuildOptions(); renderMetadata(); render();
 }
 
-export function openPublicSources() { closeFilterMenu(); renderMetadata(); if (!$('public-source-dialog').open) $('public-source-dialog').showModal(); }
+export function openPublicSources() { if (isRecommendationView()) { openNdrcSources(); return; } closeFilterMenu(); renderMetadata(); if (!$('public-source-dialog').open) $('public-source-dialog').showModal(); }
 export function setPublicModuleActive(value) {
   active = value;
+  setNdrcRecommendationsActive(active && isRecommendationView());
   if (!active) return;
+  document.querySelector('.skip-link').href = isRecommendationView() ? '#ndrc-projects' : '#public-projects';
   renderMetadata();
   if (!snapshot && !loading) loadData();
+  loadNdrcRecommendations();
 }
 export function initializePublicReits() {
   if (initialized) return; initialized = true;
+  initializeNdrcRecommendations({ getPublicFund: id => fundById.get(id), getPublicEvent: id => eventById.get(id), openPublicFund: openFund, openPublicEvent: openEvent,
+    onSnapshot: () => { if ($('public-detail-dialog').open && lastPublicDetail) { if (lastPublicDetail.kind === 'fund') openFund(lastPublicDetail.id); else openEvent(lastPublicDetail.id); } } });
   $('public-search').addEventListener('input', event => { state.search = event.target.value; state.page = 1; render(); });
   for (const key of ['product', 'asset', 'stage', 'business', 'manager']) $(`public-${key}`).addEventListener('change', event => { state[key] = event.target.value; state.page = 1; render(); });
   $('public-saved-only').addEventListener('change', event => { state.savedOnly = event.target.checked; state.page = 1; render(); });
@@ -472,8 +493,8 @@ export function initializePublicReits() {
     const fundButton = event.target.closest('[data-public-fund]'); if (fundButton) openFund(fundButton.dataset.publicFund);
     const eventButton = event.target.closest('[data-public-event]'); if (eventButton) openEvent(eventButton.dataset.publicEvent);
   });
-  $('public-export').addEventListener('click', exportCSV);
-  $('public-reload').addEventListener('click', loadData);
+  $('public-export').addEventListener('click', () => isRecommendationView() ? exportNdrcCSV() : exportCSV());
+  $('public-reload').addEventListener('click', () => isRecommendationView() ? loadNdrcRecommendations() : loadData());
   $('public-source-help').addEventListener('click', openPublicSources);
   render();
 }

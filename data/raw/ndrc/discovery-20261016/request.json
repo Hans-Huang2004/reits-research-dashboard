@@ -1,0 +1,17 @@
+{
+  "url": "https://59.252.66.79:8881/atom/api/v1/reits/getReitsPublicInfoList",
+  "method": "POST",
+  "params": {
+    "pageSize": 50,
+    "pageNum": 1,
+    "reitsProName": "",
+    "industry": "",
+    "mainDeclareUnit": "",
+    "startFundMoney": "",
+    "endFundMoney": "",
+    "reportRecommendStartTime": "",
+    "reportRecommendEndTime": ""
+  },
+  "retrieved_at": "2026-10-16T02:45:22.190Z",
+  "status": 200
+}

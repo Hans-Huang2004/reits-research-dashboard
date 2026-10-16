@@ -1,0 +1,46 @@
+[
+  {
+    "ordinal": 96,
+    "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202311/036024_20231126_PQMF.pdf",
+    "title": "4-1 国泰君安城投宽庭保障性租赁住房封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+    "total_pages": 1281,
+    "extracted_pages": 120,
+    "extracted_at": "2026-10-16T10:53:28.663343+08:00",
+    "range_index": "data/raw/ndrc/matching-evidence-20261016/0abc5af998648d01cfd87d3d/index.json",
+    "raw_index_sha256": "7dcc87bc28c634cb827765c7e50e8cba16a90d3fde8cdf455261f4a7f5d2895c",
+    "retention": "partial_http_ranges_for_accessed_pages"
+  },
+  {
+    "ordinal": 107,
+    "source_url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EBBAB3E77A4947EE907913ECFA7D747D.pdf",
+    "title": "1-4 红土创新盐田港仓储物流封闭式基础设施证券投资基金2023年度扩募并新购入基础设施项目招募说明书（草案）.pdf",
+    "total_pages": 345,
+    "extracted_pages": 120,
+    "extracted_at": "2026-10-16T10:53:28.790580+08:00",
+    "range_index": "data/raw/ndrc/matching-evidence-20261016/448bf1228935c98f81316910/index.json",
+    "raw_index_sha256": "e221b06f20c4366267f2d5a1fe8daa7ebc27eb94765c6afed443c8358736a3f1",
+    "retention": "partial_http_ranges_for_accessed_pages"
+  },
+  {
+    "ordinal": 127,
+    "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202208/018458_20220830_JA04.pdf",
+    "title": "4-1 国泰君安临港创新智造产业园封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+    "total_pages": 377,
+    "extracted_pages": 120,
+    "extracted_at": "2026-10-16T10:53:30.490592+08:00",
+    "range_index": "data/raw/ndrc/matching-evidence-20261016/9df2db3cc8ea66d16dfb52b5/index.json",
+    "raw_index_sha256": "4af1b7b5d3bf18a11ca4f62496837e09b1b081d979c546b33a9aab598b277672",
+    "retention": "partial_http_ranges_for_accessed_pages"
+  },
+  {
+    "ordinal": 132,
+    "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202105/016989_20210506_NKPL.pdf",
+    "title": "4-1 华安张江光大园封闭式基础设施证券投资基金招募说明书.pdf",
+    "total_pages": 336,
+    "extracted_pages": 120,
+    "extracted_at": "2026-10-16T10:53:30.927685+08:00",
+    "range_index": "data/raw/ndrc/matching-evidence-20261016/f058037892b3698d696cfc3a/index.json",
+    "raw_index_sha256": "4e81b0841a2f811ef3ab80aea69a84fe128079625e206ad1795f1707baace365",
+    "retention": "partial_http_ranges_for_accessed_pages"
+  }
+]

@@ -313,3 +313,31 @@ dialog::backdrop{background:#07171980;backdrop-filter:blur(3px)}
 @media(max-width:600px){.public-field-toolbar{padding:0 16px 18px;gap:10px}.public-field-toolbar .public-export-note{margin-left:0;flex-basis:100%}.public-field-toolbar .segment button{min-height:34px}.public-reference-section .detail-grid{grid-template-columns:1fr}.public-detail-wide{grid-column:auto}.public-table .name-cell{min-width:275px}}
 @media(max-width:1100px){.public-filters .search-field{grid-column:span 2}.public-view-bar>.section-meta{margin-left:0;flex-basis:100%}}
 @media(max-width:600px){.public-view-bar{gap:11px;margin-bottom:20px}.public-views button{padding:7px 16px;font-size:11px;min-height:35px}.public-expansion-shortcut{font-size:10px}.public-view-bar>.section-meta{font-size:9px}.public-filters .search-field{grid-column:1/-1}.public-chart-grid .chart-panel>div:last-child{max-height:190px}.public-parent-link{font-size:9px}.public-event-card{padding:12px}.public-event-card-meta{gap:6px 12px}.public-event-card-meta>span:last-child{margin-left:0}.public-document-list li{flex-wrap:wrap;gap:4px}.public-document-list span{margin-left:0;flex-basis:100%}.public-timeline{grid-template-columns:1fr;gap:14px}#public-detail-dialog{width:calc(100% - 24px)}}
+
+/* National Development and Reform Commission recommendations. */
+.ndrc-chart-grid .chart-panel>div:last-child{max-height:210px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent;padding-right:3px}
+.ndrc-filters .search-field{grid-column:span 4}
+.ndrc-shortcuts button{white-space:nowrap}
+.ndrc-table{min-width:1510px}
+.ndrc-table th{min-width:110px;white-space:normal;line-height:1.7}
+.ndrc-table td{max-width:220px;overflow-wrap:anywhere}
+.ndrc-table .name-cell{position:sticky;left:0;z-index:1;min-width:320px;max-width:360px;width:320px;background:var(--surface)}
+.ndrc-table th.name-cell{z-index:2;background:var(--bg)}
+.ndrc-table tbody tr:hover .name-cell{background:var(--surface-hover)}
+.ndrc-table .ndrc-related-cell{min-width:230px;max-width:290px}
+.ndrc-relation+.ndrc-relation{border-top:1px dashed var(--line);padding-top:8px;margin-top:8px}
+.ndrc-relation-link{display:block;text-align:left;white-space:normal;font-size:10px;line-height:1.7;margin-bottom:4px}
+.ndrc-relation-stage{display:block;color:var(--sub);font-size:9px}
+#ndrc-page-number{min-width:36px;text-align:center;font-variant-numeric:tabular-nums}
+#ndrc-detail-dialog{width:min(850px,calc(100% - 36px));overscroll-behavior:contain}
+.ndrc-relation-detail{padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:var(--bg);margin:10px 0}
+.ndrc-relation-detail>.ndrc-relation-link{font-size:12px}
+.ndrc-relation-detail .detail-grid{margin:14px 0}
+.ndrc-evidence-links{display:flex;gap:10px 18px;flex-wrap:wrap}
+.ndrc-evidence-list{list-style:none;padding:0;margin:16px 0 0;font-size:11px;line-height:1.8}
+.ndrc-evidence-list li{border-top:1px solid var(--line);padding:11px 0}
+.ndrc-evidence-list a{white-space:normal;overflow-wrap:anywhere}
+.ndrc-evidence-meta,.ndrc-evidence-list small{font-size:10px;color:var(--sub)}
+.ndrc-evidence-list p{margin:5px 0;overflow-wrap:anywhere}
+@media(max-width:1100px){.ndrc-filters .search-field{grid-column:span 2}}
+@media(max-width:600px){.public-views{width:100%}.public-views button{flex:1;padding:7px 8px}.ndrc-filters .search-field{grid-column:1/-1}.ndrc-shortcuts{width:100%}.ndrc-shortcuts button{flex:1;min-height:34px}.ndrc-chart-grid .chart-panel>div:last-child{max-height:190px}.ndrc-table .name-cell{min-width:275px;width:275px}.ndrc-relation-detail{padding:12px}.ndrc-relation-detail .detail-grid{grid-template-columns:1fr}#ndrc-detail-dialog{width:calc(100% - 24px)}}

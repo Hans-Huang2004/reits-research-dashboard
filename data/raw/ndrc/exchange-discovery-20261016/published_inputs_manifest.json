@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://hans-huang2004.github.io/reits-research-dashboard/data/public_reits.json?ndrc=20261016",
+    "file": "live_public_reits.json",
+    "sha256": "46a728b73a6fa8abd3366cf98130fbc4f63fa45884c1292ab9b70cb43d26f7ab",
+    "retrieved_at": "2026-10-16T02:46:36.751911+00:00",
+    "date": "2026-10-16",
+    "updated_at": "2026-10-16T09:18:26+08:00",
+    "layer": "Published reviewed exchange snapshot; underlying official source and request checks retained by its collection batch",
+    "cloud_batch": "38834122035-1"
+  },
+  {
+    "url": "https://hans-huang2004.github.io/reits-research-dashboard/data/institutional.json?ndrc=20261016",
+    "file": "live_institutional.json",
+    "sha256": "eae88c2371d3787b41b5db7fef84cc2ff4a0c039692d19d73314ccb0b11ce5ee",
+    "retrieved_at": "2026-10-16T02:47:57.600340+00:00",
+    "date": "2026-10-16",
+    "updated_at": "2026-10-16T09:16:11+08:00",
+    "layer": "Published reviewed exchange snapshot; underlying official source and request checks retained by its collection batch",
+    "cloud_batch": "38834122035-1"
+  },
+  {
+    "url": "https://hans-huang2004.github.io/reits-research-dashboard/data/refresh_status.json?ndrc=20261016",
+    "file": "live_refresh_status.json",
+    "sha256": "fc8ad91adf81c2f4fedd0b00483faa7c7c895a498a4a4695543b12d5aac24efd",
+    "retrieved_at": "2026-10-16T02:47:58.327045+00:00",
+    "date": "2026-10-16",
+    "updated_at": null,
+    "layer": "Published reviewed exchange snapshot; underlying official source and request checks retained by its collection batch",
+    "cloud_batch": "38834122035-1"
+  }
+]

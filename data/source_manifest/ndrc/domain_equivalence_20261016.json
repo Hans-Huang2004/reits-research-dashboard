@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-10-16T10:54:01+08:00",
+  "user_provided_hostname": "59.252.66.79:8881",
+  "canonical_hostname": "reitsgl.tzxm.gov.cn:8881",
+  "formal_collection_tls_verified": true,
+  "initial_ip_discovery_tls_verified": false,
+  "note": "初始公开IP发现数据仅用于接口定位；正式来源全部通过匹配主机名的默认TLS验证，未关闭任何全局TLS验证。三页公开响应逐字节相同。",
+  "checks": [
+    {
+      "page_num": 1,
+      "verified_hostname_raw": "data/raw/ndrc/20261016-105020-478154/page0001.json",
+      "verified_hostname_sha256": "08ac65d4f213c963488adb3f08eeb9876554c890806ccbfa31bb4407e8456028",
+      "ip_discovery_raw": "data/raw/ndrc/full-20261016/page1.json",
+      "ip_discovery_sha256": "08ac65d4f213c963488adb3f08eeb9876554c890806ccbfa31bb4407e8456028",
+      "byte_identical": true
+    },
+    {
+      "page_num": 2,
+      "verified_hostname_raw": "data/raw/ndrc/20261016-105020-478154/page0002.json",
+      "verified_hostname_sha256": "2c291b2f60a092a0f9e19ce1e3d92e168eb8d8e288f9651a1ece87d0c2ac05fa",
+      "ip_discovery_raw": "data/raw/ndrc/full-20261016/page2.json",
+      "ip_discovery_sha256": "2c291b2f60a092a0f9e19ce1e3d92e168eb8d8e288f9651a1ece87d0c2ac05fa",
+      "byte_identical": true
+    },
+    {
+      "page_num": 3,
+      "verified_hostname_raw": "data/raw/ndrc/20261016-105020-478154/page0003.json",
+      "verified_hostname_sha256": "9ac316820af4047d1741055d9c630eaa76d89f74779cee94827ea9d3a7a49c3a",
+      "ip_discovery_raw": "data/raw/ndrc/full-20261016/page3.json",
+      "ip_discovery_sha256": "9ac316820af4047d1741055d9c630eaa76d89f74779cee94827ea9d3a7a49c3a",
+      "byte_identical": true
+    }
+  ]
+}

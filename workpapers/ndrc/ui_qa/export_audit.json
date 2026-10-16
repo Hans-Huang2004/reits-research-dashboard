@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-16T11:09:50+08:00",
+  "export_path": "workpapers/ndrc/ui_qa/unmatched_export.csv",
+  "export_sha256": "61f015a6112d0ac374b2fbbbd1da3a70e77b747158c9b345d7ffa6805e5a26cc",
+  "snapshot_sha256": "93c33d3b8d396ca68182aebde58514448a4234814ac82d8db4cdd42bfe36754c",
+  "expected_filtered_rows": 9,
+  "actual_export_rows": 9,
+  "same_ids": true,
+  "amount_values_match": true,
+  "candidate_not_exported_as_confirmed": true,
+  "capture_method": "Actual browser UI export handler Blob; native download event timed out",
+  "screenshots": "Not passed: Page.captureScreenshot timed out on desktop and on final 375px attempt",
+  "navigation_interactions": "Pointer unmatched shortcut and export; keyboard matching dropdown; browser DOM event-driven detail navigation after native scroll helper intercepts"
+}

@@ -4,7 +4,7 @@ on:
     branches: [main]
   workflow_dispatch:
   workflow_run:
-    workflows: [Refresh all REIT data]
+    workflows: [Refresh all REIT data, Refresh NDRC recommendations]
     types: [completed]
     branches: [main]
 permissions:
@@ -44,6 +44,7 @@ jobs:
           python -m unittest discover -s tests -q
           python scripts/validate_data.py data/institutional.json
           python scripts/validate_public_data.py data/public_reits.json
+          python scripts/validate_ndrc_data.py data/ndrc_recommendations.json --public-input data/public_reits.json --allow-stale-public
           python scripts/build_static.py
       - uses: actions/configure-pages@v5
         if: steps.publication.outputs.due == 'true'

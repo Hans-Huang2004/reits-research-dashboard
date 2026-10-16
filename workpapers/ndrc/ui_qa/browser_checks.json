@@ -1,0 +1,50 @@
+{
+  "captured_at": "2026-10-16T03:08:54.298Z",
+  "dataset": "当前推荐记录137条按推荐项目统计已确认匹配126条已关联交易所申报或基金未匹配9条另有2条候选待核实本次新增0条当前筛选中的新发现记录",
+  "errors": [],
+  "recommendation": {
+    "id": "NDRC_233c4a62bf7a7d7c83a0",
+    "name": "上海地产租赁住房新购入项目",
+    "open": true,
+    "evidenceCount": 3,
+    "pageReferences": 1
+  },
+  "event": {
+    "open": true,
+    "heading": "申报详情",
+    "name": "汇添富上海地产租赁住房封闭式基础设施证券投资基金"
+  },
+  "fund": {
+    "heading": "基金详情",
+    "name": "汇添富上海地产租赁住房REIT",
+    "reverseCount": 2
+  },
+  "returned": {
+    "open": true,
+    "name": "上海地产租赁住房新购入项目",
+    "sameRecommendation": true
+  },
+  "light": {
+    "theme": "light",
+    "background": "rgb(245, 247, 248)"
+  },
+  "dark": {
+    "theme": "dark",
+    "background": "rgb(16, 25, 31)"
+  },
+  "recent": {
+    "total": "0条",
+    "scope": "统计、图表与表格共用当前筛选的0条推荐记录 · 最近30天首次发现，排除历史回填"
+  },
+  "sources": {
+    "text": "本期137条推荐记录；推荐期间：2020-12-30至2026-09-10。采集时间：2026/10/16 11:01（北京时间）。用于匹配的公募快照日期：2026-10-16；采集时间：2026/10/16 09:18（北京时间）。最近尝试：2026/10/16 11:01（北京时间）；见本期采集状态。"
+  },
+  "mobile": {
+    "width": 375,
+    "scrollWidth": 375,
+    "theme": "dark",
+    "tab": "true",
+    "rows": 10,
+    "overflows": []
+  }
+}

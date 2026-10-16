@@ -1,0 +1,89 @@
+name: Refresh NDRC recommendations
+on:
+  schedule:
+    # Beijing 07:45, then 08:10–11:40 until today's source/version passes.
+    - cron: '45 23 * * *'
+    - cron: '10,40 0-3 * * *'
+  workflow_dispatch:
+  workflow_run:
+    workflows: [Refresh all REIT data]
+    types: [completed]
+    branches: [main]
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/ndrc-data.yml
+      - collectors/ndrc_recommendations.py
+      - collectors/ndrc_matching.py
+      - config/ndrc_exchange_links.json
+      - scripts/refresh_ndrc.py
+permissions:
+  contents: write
+concurrency:
+  group: reits-ndrc-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Check recommendation freshness and matching version
+        id: freshness
+        env:
+          FORCE_REFRESH: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
+        run: |
+          if [ "$FORCE_REFRESH" = true ]; then
+            python scripts/refresh_ndrc.py --check-only --force >> "$GITHUB_OUTPUT"
+          else
+            python scripts/refresh_ndrc.py --check-only >> "$GITHUB_OUTPUT"
+          fi
+      - name: Offline checks
+        if: steps.freshness.outputs.due == 'true'
+        run: python -m unittest discover -s tests -q
+      - name: Collect and match recommendations independently
+        if: steps.freshness.outputs.due == 'true'
+        continue-on-error: true
+        env:
+          FORCE_REFRESH: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
+        run: |
+          if [ "$FORCE_REFRESH" = true ]; then
+            python scripts/refresh_ndrc.py --run-id '${{ github.run_id }}-${{ github.run_attempt }}' --force
+          else
+            python scripts/refresh_ndrc.py --run-id '${{ github.run_id }}-${{ github.run_attempt }}'
+          fi
+      - name: Commit complete recommendations or failure status
+        if: steps.freshness.outputs.due == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/ndrc_recommendations.json data/ndrc_refresh_status.json data/raw/ndrc/ data/source_manifest/ndrc/ workpapers/ndrc/ snapshots/ndrc/
+          if ! git diff --cached --quiet; then
+            git commit -m "data: refresh NDRC recommendations and reviewed exchange links"
+            git pull --rebase origin main
+            # A concurrent exchange refresh may have arrived during collection.
+            # Rematch after pulling; a second remote race safely rejects push.
+            python scripts/refresh_ndrc.py --run-id '${{ github.run_id }}-${{ github.run_attempt }}-rebased'
+            git add data/ndrc_recommendations.json data/ndrc_refresh_status.json data/raw/ndrc/ data/source_manifest/ndrc/ workpapers/ndrc/ snapshots/ndrc/
+            if ! git diff --cached --quiet; then
+              git commit -m "data: rematch recommendations after exchange input update"
+            fi
+            git push
+          fi
+      - name: Keep source evidence and validation
+        if: always() && steps.freshness.outputs.due == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: ndrc-recommendations-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            data/raw/ndrc/refresh/${{ github.run_id }}-${{ github.run_attempt }}/
+            workpapers/ndrc/refresh/${{ github.run_id }}-${{ github.run_attempt }}/
+            data/raw/ndrc/refresh/${{ github.run_id }}-${{ github.run_attempt }}-rebased/
+            workpapers/ndrc/refresh/${{ github.run_id }}-${{ github.run_attempt }}-rebased/
+            data/source_manifest/ndrc/
+          retention-days: 30
