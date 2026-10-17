@@ -395,6 +395,16 @@
       "sequence": 41,
       "first_retained_at": "2026-10-18T07:26:51+08:00",
       "current_path": "data/institutional.json"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261018-072719-445277.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/0657a4acfbe9eb5012f71af2dd6e0e6abc67634f84eeffe48e86a9a7e36c3870.json",
+      "sha256": "0657a4acfbe9eb5012f71af2dd6e0e6abc67634f84eeffe48e86a9a7e36c3870",
+      "collected_at": "2026-10-18T07:27:19+08:00",
+      "sequence": 42,
+      "first_retained_at": "2026-10-18T07:27:25+08:00",
+      "current_path": "data/ndrc_recommendations.json"
     }
   ],
   "rejected_inputs": []
