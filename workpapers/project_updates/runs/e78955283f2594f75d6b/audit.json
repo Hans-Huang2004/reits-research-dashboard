@@ -1,0 +1,821 @@
+{
+  "ok": true,
+  "events": 1631,
+  "observed_events": 7,
+  "baseline_events": 1624,
+  "projects": 573,
+  "unique_events": true,
+  "official_sources_only": true,
+  "current_input_hashes_match": true,
+  "generated_at": "2026-10-17T21:03:25+08:00",
+  "input_versions": [
+    {
+      "population": "public",
+      "path": "snapshots/public/20261015-105537.json",
+      "retained_path": "workpapers/project_updates/inputs/public/62f381d956357649948215447216a2c5e89e839ab473f61c5cc2eff5bd27cad5.json",
+      "sha256": "62f381d956357649948215447216a2c5e89e839ab473f61c5cc2eff5bd27cad5",
+      "collected_at": "2026-10-15T10:55:37+08:00"
+    },
+    {
+      "population": "public",
+      "path": "snapshots/public/20261015-105727.json",
+      "retained_path": "workpapers/project_updates/inputs/public/4c31e1bff2a320095407276510e4204738de551d17efe940e5801e4552ef1094.json",
+      "sha256": "4c31e1bff2a320095407276510e4204738de551d17efe940e5801e4552ef1094",
+      "collected_at": "2026-10-15T10:57:27+08:00"
+    },
+    {
+      "population": "public",
+      "path": "snapshots/public/20261015-105941.json",
+      "retained_path": "workpapers/project_updates/inputs/public/6b10ea36f81d59f14882e43343bcfa031e46bae8bb18854979ea0978f7285499.json",
+      "sha256": "6b10ea36f81d59f14882e43343bcfa031e46bae8bb18854979ea0978f7285499",
+      "collected_at": "2026-10-15T10:59:41+08:00"
+    },
+    {
+      "population": "public",
+      "path": "data/public_reits.json",
+      "retained_path": "workpapers/project_updates/inputs/public/46a728b73a6fa8abd3366cf98130fbc4f63fa45884c1292ab9b70cb43d26f7ab.json",
+      "sha256": "46a728b73a6fa8abd3366cf98130fbc4f63fa45884c1292ab9b70cb43d26f7ab",
+      "collected_at": "2026-10-16T09:22:52+08:00"
+    },
+    {
+      "population": "institutional",
+      "path": "snapshots/2026-10-14.json",
+      "retained_path": "workpapers/project_updates/inputs/institutional/d171c053ab742a109f321cd88c721e3880542193ae56a65a238fc94b6beb495a.json",
+      "sha256": "d171c053ab742a109f321cd88c721e3880542193ae56a65a238fc94b6beb495a",
+      "collected_at": "2026-10-14T16:18:03+08:00"
+    },
+    {
+      "population": "institutional",
+      "path": "snapshots/2026-10-15.json",
+      "retained_path": "workpapers/project_updates/inputs/institutional/07e0259e1b174e1a285f0abff27b4f3dbf7cb466b3039451bd563509feab3c62.json",
+      "sha256": "07e0259e1b174e1a285f0abff27b4f3dbf7cb466b3039451bd563509feab3c62",
+      "collected_at": "2026-10-15T09:24:22+08:00"
+    },
+    {
+      "population": "institutional",
+      "path": "data/institutional.json",
+      "retained_path": "workpapers/project_updates/inputs/institutional/eae88c2371d3787b41b5db7fef84cc2ff4a0c039692d19d73314ccb0b11ce5ee.json",
+      "sha256": "eae88c2371d3787b41b5db7fef84cc2ff4a0c039692d19d73314ccb0b11ce5ee",
+      "collected_at": "2026-10-16T09:16:11+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-105939-682899.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/1d33cc675ce9c90239a7288cd11d2449a03eaa9819d90b67f35dff39c07fff61.json",
+      "sha256": "1d33cc675ce9c90239a7288cd11d2449a03eaa9819d90b67f35dff39c07fff61",
+      "collected_at": "2026-10-16T10:50:20+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-110030-472279.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/1495770377e830297d7c38e5c54402ed08ea82f3d8e30e2201961407aa59ccd1.json",
+      "sha256": "1495770377e830297d7c38e5c54402ed08ea82f3d8e30e2201961407aa59ccd1",
+      "collected_at": "2026-10-16T10:50:20+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-110109-411928.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/d29733320042667398f1ae3f53218348ad3126bd232124b4ea3a3f0d83c1caae.json",
+      "sha256": "d29733320042667398f1ae3f53218348ad3126bd232124b4ea3a3f0d83c1caae",
+      "collected_at": "2026-10-16T11:01:09+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-110912-057277.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/93c33d3b8d396ca68182aebde58514448a4234814ac82d8db4cdd42bfe36754c.json",
+      "sha256": "93c33d3b8d396ca68182aebde58514448a4234814ac82d8db4cdd42bfe36754c",
+      "collected_at": "2026-10-16T11:09:12+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-123209-174368.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/0ccc4dcc9978de93f5927aa128ad36d5285fdd6eefb670acfd9bd8998f9d31b3.json",
+      "sha256": "0ccc4dcc9978de93f5927aa128ad36d5285fdd6eefb670acfd9bd8998f9d31b3",
+      "collected_at": "2026-10-16T11:09:12+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-123243-811311.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/0f8cfaa1a1c32ef43cd12ab81a39bfde9797e445245636a4c56826b04c3d7985.json",
+      "sha256": "0f8cfaa1a1c32ef43cd12ab81a39bfde9797e445245636a4c56826b04c3d7985",
+      "collected_at": "2026-10-16T11:09:12+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "data/ndrc_recommendations.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/5ebcef1a8d753a34bd49633816c7db0eaa5a8f9ddd5b93e6b441dd65cb474434.json",
+      "sha256": "5ebcef1a8d753a34bd49633816c7db0eaa5a8f9ddd5b93e6b441dd65cb474434",
+      "collected_at": "2026-10-16T12:34:36+08:00"
+    },
+    {
+      "population": "public",
+      "path": "workpapers/daily_refresh/38834122035-1/collected/public_reits.json",
+      "retained_path": "workpapers/project_updates/inputs/public/a5102c1c2588eeef1ee25672c1c6ba964cea90695a7c19a3b9da823780ad9d59.json",
+      "sha256": "a5102c1c2588eeef1ee25672c1c6ba964cea90695a7c19a3b9da823780ad9d59",
+      "collected_at": "2026-10-16T09:22:52+08:00"
+    },
+    {
+      "population": "institutional",
+      "path": "workpapers/daily_refresh/38834122035-1/collected/institutional.json",
+      "retained_path": "workpapers/project_updates/inputs/institutional/05f72a2b028a320c7c2608077a9aa62802f04de840ff500dc6ef3f9dc161ca66.json",
+      "sha256": "05f72a2b028a320c7c2608077a9aa62802f04de840ff500dc6ef3f9dc161ca66",
+      "collected_at": "2026-10-16T09:16:11+08:00"
+    },
+    {
+      "population": "public",
+      "path": "snapshots/public/20261015-141326.json",
+      "retained_path": "workpapers/project_updates/inputs/public/0178424bd07360535d0b86921ade4a150b52d61aec963d7029cbbd1b15cd415b.json",
+      "sha256": "0178424bd07360535d0b86921ade4a150b52d61aec963d7029cbbd1b15cd415b",
+      "collected_at": "2026-10-15T14:15:16+08:00"
+    },
+    {
+      "population": "institutional",
+      "path": "workpapers/daily_refresh/38691124697-1/collected/institutional.json",
+      "retained_path": "workpapers/project_updates/inputs/institutional/e148f9cd8169e22efe8c5249eb2fb77d9e7597930c5df7d5a295c96ffd86a4de.json",
+      "sha256": "e148f9cd8169e22efe8c5249eb2fb77d9e7597930c5df7d5a295c96ffd86a4de",
+      "collected_at": "2026-10-15T14:14:01+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-111609-671548.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/fa95fea125f8eb7887186cfc1cc35e21e19e075de23eed1ce2273618314b75f3.json",
+      "sha256": "fa95fea125f8eb7887186cfc1cc35e21e19e075de23eed1ce2273618314b75f3",
+      "collected_at": "2026-10-16T11:16:09+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-112031-710774.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/9260fb8f72e267b981e7b738604dfcfdfb6fe2939c7b53f7bd58fd56e1dd40e8.json",
+      "sha256": "9260fb8f72e267b981e7b738604dfcfdfb6fe2939c7b53f7bd58fd56e1dd40e8",
+      "collected_at": "2026-10-16T11:20:31+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261016-134351-152929.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/bf4ce0680689ade6e591d1880243746915611e16561254a1bb3709037baecc75.json",
+      "sha256": "bf4ce0680689ade6e591d1880243746915611e16561254a1bb3709037baecc75",
+      "collected_at": "2026-10-16T13:43:51+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261017-093034-569076.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/a84e805ad7cfe614b433f7f8d37422a51c2e0dfebe0f95a85fe84439fd292f19.json",
+      "sha256": "a84e805ad7cfe614b433f7f8d37422a51c2e0dfebe0f95a85fe84439fd292f19",
+      "collected_at": "2026-10-17T09:30:34+08:00"
+    },
+    {
+      "population": "public",
+      "path": "snapshots/public/20261017-195609.json",
+      "retained_path": "workpapers/project_updates/inputs/public/8c9cb1faecfdf17ef1199c4e3185ce057258b37184df06f88e87d38b20b149d9.json",
+      "sha256": "8c9cb1faecfdf17ef1199c4e3185ce057258b37184df06f88e87d38b20b149d9",
+      "collected_at": "2026-10-17T20:02:04+08:00"
+    },
+    {
+      "population": "public",
+      "path": "data/public_reits.json",
+      "retained_path": "workpapers/project_updates/inputs/public/f076f2f67457cd0e8178f871a2b49ae123c83c6c6456797c455c61a49c886fe2.json",
+      "sha256": "f076f2f67457cd0e8178f871a2b49ae123c83c6c6456797c455c61a49c886fe2",
+      "collected_at": "2026-10-17T20:02:04+08:00"
+    },
+    {
+      "population": "institutional",
+      "path": "workpapers/daily_refresh/39030351832-1/collected/institutional.json",
+      "retained_path": "workpapers/project_updates/inputs/institutional/dff5f31cb33e323f2549957e4e176d4f98e80a7f7b087005b2eeba64632c9304.json",
+      "sha256": "dff5f31cb33e323f2549957e4e176d4f98e80a7f7b087005b2eeba64632c9304",
+      "collected_at": "2026-10-17T19:53:30+08:00"
+    },
+    {
+      "population": "institutional",
+      "path": "data/institutional.json",
+      "retained_path": "workpapers/project_updates/inputs/institutional/4bb447a445077c365ad9ecdbcce85b737a94b478efef223efb81b40a2e29a0af.json",
+      "sha256": "4bb447a445077c365ad9ecdbcce85b737a94b478efef223efb81b40a2e29a0af",
+      "collected_at": "2026-10-17T19:53:30+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261017-200235-356741.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/497a7436b138acc1634ce98a47cf1508b400d69d68dcbc58713d9a0d8418c0ad.json",
+      "sha256": "497a7436b138acc1634ce98a47cf1508b400d69d68dcbc58713d9a0d8418c0ad",
+      "collected_at": "2026-10-17T20:02:35+08:00"
+    },
+    {
+      "population": "public",
+      "path": "snapshots/public/20261017-204011.json",
+      "retained_path": "workpapers/project_updates/inputs/public/ea08e8a5f07391c7dc10c11eb27792f259625453de736b1d3d531d9adce14d79.json",
+      "sha256": "ea08e8a5f07391c7dc10c11eb27792f259625453de736b1d3d531d9adce14d79",
+      "collected_at": "2026-10-17T20:47:31+08:00"
+    },
+    {
+      "population": "public",
+      "path": "data/public_reits.json",
+      "retained_path": "workpapers/project_updates/inputs/public/f37b583c4e9fb3ebeebd8933424a914507f047d5b2001411c852d9953f22a2a6.json",
+      "sha256": "f37b583c4e9fb3ebeebd8933424a914507f047d5b2001411c852d9953f22a2a6",
+      "collected_at": "2026-10-17T20:47:31+08:00"
+    },
+    {
+      "population": "institutional",
+      "path": "workpapers/daily_refresh/39033066537-1/collected/institutional.json",
+      "retained_path": "workpapers/project_updates/inputs/institutional/6a539c4f80383c12b64ba5cd782c00fc18fe1cc4078f8307fff4d663eda8a6b9.json",
+      "sha256": "6a539c4f80383c12b64ba5cd782c00fc18fe1cc4078f8307fff4d663eda8a6b9",
+      "collected_at": "2026-10-17T20:35:31+08:00"
+    },
+    {
+      "population": "institutional",
+      "path": "data/institutional.json",
+      "retained_path": "workpapers/project_updates/inputs/institutional/8ccf6c71e3d3d9bd1214241beed383e19a9b1e9b618f4bd3d694ca632bc040e9.json",
+      "sha256": "8ccf6c71e3d3d9bd1214241beed383e19a9b1e9b618f4bd3d694ca632bc040e9",
+      "collected_at": "2026-10-17T20:35:31+08:00"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261017-210319-864879.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/d673b25956e396c18e386d233ce4edcc18355b7372bc7ac555d189fead4e6887.json",
+      "sha256": "d673b25956e396c18e386d233ce4edcc18355b7372bc7ac555d189fead4e6887",
+      "collected_at": "2026-10-17T21:03:19+08:00"
+    }
+  ],
+  "rejected_inputs": [],
+  "missing_entities": [],
+  "metadata_revisions": [
+    {
+      "population": "public",
+      "entity_id": "SSE_FUND_508091",
+      "field": "name",
+      "before": "华夏凯德商业资产封闭式基础设施证券投资基金",
+      "after": "华夏凯德消费封闭式基础设施证券投资基金",
+      "input_sha256": "6b10ea36f81d59f14882e43343bcfa031e46bae8bb18854979ea0978f7285499",
+      "treatment": "metadata revision, excluded from activity counts"
+    },
+    {
+      "population": "public",
+      "entity_id": "SSE_FUND_508087",
+      "field": "name",
+      "before": "国泰君安济南能源供热封闭式基础设施证券投资基金",
+      "after": "国泰海通济南能源供热封闭式基础设施证券投资基金",
+      "input_sha256": "6b10ea36f81d59f14882e43343bcfa031e46bae8bb18854979ea0978f7285499",
+      "treatment": "metadata revision, excluded from activity counts"
+    },
+    {
+      "population": "public",
+      "entity_id": "SSE_FUND_508017",
+      "field": "name",
+      "before": "华夏金茂购物中心封闭式基础设施证券投资基金",
+      "after": "华夏金茂消费封闭式基础设施证券投资基金",
+      "input_sha256": "6b10ea36f81d59f14882e43343bcfa031e46bae8bb18854979ea0978f7285499",
+      "treatment": "metadata revision, excluded from activity counts"
+    },
+    {
+      "population": "public",
+      "entity_id": "SSE_FUND_508031",
+      "field": "name",
+      "before": "国泰君安城投宽庭保障性租赁住房封闭式基础设施证券投资基金",
+      "after": "国泰海通城投宽庭保障性租赁住房封闭式基础设施证券投资基金",
+      "input_sha256": "6b10ea36f81d59f14882e43343bcfa031e46bae8bb18854979ea0978f7285499",
+      "treatment": "metadata revision, excluded from activity counts"
+    }
+  ],
+  "raw_retention": {
+    "public": {
+      "referenced_files": 663,
+      "verified_local_files": 663,
+      "missing_local_paths": [],
+      "mismatched_paths": [],
+      "source_manifest_paths": [
+        "data/source_manifest/daily_refresh/39033066537-1.json"
+      ],
+      "treatment": "Original Raw hashes verified against source manifests"
+    },
+    "institutional": {
+      "referenced_files": 663,
+      "verified_local_files": 663,
+      "missing_local_paths": [],
+      "mismatched_paths": [],
+      "source_manifest_paths": [
+        "data/source_manifest/daily_refresh/39033066537-1.json"
+      ],
+      "treatment": "Original Raw hashes verified against source manifests"
+    },
+    "ndrc": {
+      "referenced_files": 3,
+      "verified_local_files": 3,
+      "missing_local_paths": [],
+      "mismatched_paths": [],
+      "source_manifest_paths": [
+        "data/source_manifest/ndrc/20261017-210319-864879.json"
+      ],
+      "treatment": "Original Raw hashes verified against source manifests"
+    }
+  },
+  "freshness": {
+    "public": {
+      "label": "公募REITs",
+      "checked_at": "2026-10-17T20:47:31+08:00",
+      "collected_at": "2026-10-17T20:47:31+08:00",
+      "latest_official_date": "2026-10-16",
+      "coverage_start": "2026-10-15T10:55:37+08:00",
+      "complete": true,
+      "record_count": 160,
+      "source_url": "https://www.sse.com.cn/reits/",
+      "source_urls": [
+        "https://www.sse.com.cn/reits/",
+        "https://reits.szse.cn/"
+      ],
+      "snapshot_path": "data/public_reits.json",
+      "snapshot_sha256": "f37b583c4e9fb3ebeebd8933424a914507f047d5b2001411c852d9953f22a2a6",
+      "raw_versions": [],
+      "source_versions": [],
+      "refresh_batch": {
+        "id": "39033066537-1",
+        "date": "2026-10-17",
+        "started_at": "2026-10-17T20:34:51+08:00",
+        "completed_at": "2026-10-17T20:47:32+08:00"
+      },
+      "source_status": {
+        "SSE": {
+          "exchange": "上交所",
+          "collected_at": "2026-10-17T20:40:22+08:00",
+          "as_of_date": "2026-10-17",
+          "complete": true,
+          "checks": [
+            {
+              "sql_id": "ZQ_XMLB",
+              "advertised_total": 102,
+              "collected_rows": 102,
+              "pages": 2,
+              "complete": true
+            },
+            {
+              "sql_id": "REITS_FXYKM",
+              "advertised_total": 78,
+              "collected_rows": 78,
+              "pages": 1,
+              "complete": true
+            },
+            {
+              "sql_id": "COMMON_JJZWZ_JJLB_L",
+              "advertised_total": 61,
+              "collected_rows": 61,
+              "pages": 1,
+              "complete": true
+            }
+          ],
+          "fund_details_expected": 70,
+          "fund_details_collected": 70,
+          "filing_documents_expected": 102,
+          "filing_documents_collected": 102,
+          "latest_filing_update": "2026-10-15",
+          "earliest_filing_acceptance": "2021-04-23",
+          "exact_linked_events": 69,
+          "unlinked_events": 21,
+          "notes": [
+            "基金名录与首次发售批次取并集，发售未开始及未来上市日期不视为已发行或已上市",
+            "REITS_TYPE=1按官方脚本标为扩募；保留原始申报类型，未独立推断新购入",
+            "仅对已核实基金代码、唯一已注册扩募申报及唯一已上市扩募批次匹配完成日期；其余保留未匹配状态"
+          ],
+          "collection_finished_at": "2026-10-17T20:46:23+08:00",
+          "normalization_updated_at": "2026-10-17T20:46:23+08:00",
+          "reviewed_linked_events": 12,
+          "linked_events": 81,
+          "completed_expansions": 8,
+          "ok": true
+        },
+        "SZSE": {
+          "exchange": "深交所",
+          "status": "complete",
+          "collected_at": "2026-10-17T20:47:31+08:00",
+          "latest_project_update": "2026-10-13",
+          "fund_report_date": "2026-10-16",
+          "listed_fund_count": 28,
+          "issued_fund_count": 31,
+          "disclosed_fund_count": 33,
+          "offering_only_fund_count": 2,
+          "offering_only_codes": [
+            "180107",
+            "181002"
+          ],
+          "offering_identity_checks": {
+            "matched_announcement_count": 28,
+            "matched_fund_codes": [
+              "180102",
+              "180103",
+              "180105",
+              "180106",
+              "180107",
+              "180202",
+              "180302",
+              "180303",
+              "180305",
+              "180306",
+              "180307",
+              "180401",
+              "180402",
+              "180501",
+              "180502",
+              "180503",
+              "180505",
+              "180601",
+              "180602",
+              "180603",
+              "180605",
+              "180606",
+              "180607",
+              "180701",
+              "180702",
+              "180901",
+              "181001",
+              "181002"
+            ],
+            "skipped_announcements": [
+              {
+                "source_id": "f6355832-ca6d-4c1b-ba56-b0bde57364c7",
+                "name": "",
+                "reason": "no_unique_exact_first_issuance_identity",
+                "project_matches": 0,
+                "valid_codes": [
+                  "180503"
+                ]
+              },
+              {
+                "source_id": "6969878c-0683-4db4-90d9-ca8a1ad2a797",
+                "name": "",
+                "reason": "no_unique_exact_first_issuance_identity",
+                "project_matches": 0,
+                "valid_codes": [
+                  "180201"
+                ]
+              },
+              {
+                "source_id": "02d2b990-29bd-4c0c-a597-c0696189ef80",
+                "name": "",
+                "reason": "no_unique_exact_first_issuance_identity",
+                "project_matches": 0,
+                "valid_codes": [
+                  "180101"
+                ]
+              },
+              {
+                "source_id": "be194b61-6f1c-43a6-8afe-3060f9c44810",
+                "name": "",
+                "reason": "no_unique_exact_first_issuance_identity",
+                "project_matches": 0,
+                "valid_codes": [
+                  "180301"
+                ]
+              },
+              {
+                "source_id": "859c9e25-c3f1-493f-94ea-6f5a02f38ed0",
+                "name": "",
+                "reason": "no_unique_exact_first_issuance_identity",
+                "project_matches": 0,
+                "valid_codes": [
+                  "180801"
+                ]
+              }
+            ],
+            "identity_rule": "唯一首发项目全名精确匹配；发售公告不证明合同生效"
+          },
+          "issued_pending_listing_codes": [
+            "180307",
+            "180505",
+            "180702"
+          ],
+          "event_count": 58,
+          "detail_success_count": 58,
+          "detail_failure_count": 0,
+          "pagination_checks": {
+            "all_projects": {
+              "business_code": null,
+              "advertised_total": 58,
+              "raw_count": 58,
+              "pages": 1
+            },
+            "project_categories": [
+              {
+                "business_code": 21,
+                "advertised_total": 53,
+                "raw_count": 53,
+                "pages": 1
+              },
+              {
+                "business_code": 23,
+                "advertised_total": 5,
+                "raw_count": 5,
+                "pages": 1
+              }
+            ],
+            "listed_funds": {
+              "advertised_total": 28,
+              "raw_count": 28,
+              "pages": 2,
+              "report_date": "2026-10-16"
+            },
+            "effective_announcements": {
+              "keyword": "基金合同生效",
+              "stock": null,
+              "advertised_total": 31,
+              "raw_count": 31,
+              "pages": 1
+            },
+            "listing_announcements": {
+              "keyword": "上市交易公告书",
+              "stock": null,
+              "advertised_total": 35,
+              "raw_count": 35,
+              "pages": 1
+            },
+            "sale_announcements": {
+              "keyword": "基金份额发售公告",
+              "stock": null,
+              "advertised_total": 33,
+              "raw_count": 33,
+              "pages": 1
+            },
+            "identity_prospectuses": [
+              {
+                "keyword": "招募说明书",
+                "stock": "180201",
+                "advertised_total": 8,
+                "raw_count": 8,
+                "pages": 1
+              },
+              {
+                "keyword": "招募说明书",
+                "stock": "180801",
+                "advertised_total": 12,
+                "raw_count": 12,
+                "pages": 1
+              }
+            ]
+          },
+          "freshness": {
+            "series": "深交所公募REITs基金名录",
+            "latest_available_date": "2026-10-16",
+            "expected_date": "2026-10-17",
+            "lagging": true
+          },
+          "limitations": [
+            "基金合同生效日及首发募集金额未从公告正文提取；公告发布日期另列，不替代生效日。",
+            "完成扩募以正式扩募上市交易公告书为证；公告发布日期另列，不替代扩募份额上市日。",
+            "仅有发售公告的产品保留公开代码、全名及公告来源，不据此认定成立或推定发售起止日。",
+            "底层资产名称与数量未从招募说明书正文提取；保留全部官方申报附件入口。"
+          ],
+          "ok": true
+        }
+      },
+      "status": "complete",
+      "error": null,
+      "last_successful_at": "2026-10-17T20:47:31+08:00",
+      "revision_status": "官方来源当前完整快照；来源未统一提供初值或修订标识",
+      "expected_latest_date": null,
+      "is_lagging": null,
+      "freshness_reason": "交易所及推荐名单不定期更新；完整成功核查时间和最新公开业务日期分别展示",
+      "source_manifest_paths": [
+        "data/source_manifest/daily_refresh/39033066537-1.json"
+      ],
+      "raw_retention": {
+        "referenced_files": 663,
+        "verified_local_files": 663,
+        "missing_local_files": 0,
+        "status": "verified"
+      }
+    },
+    "institutional": {
+      "label": "机构间REITs",
+      "checked_at": "2026-10-17T20:35:31+08:00",
+      "collected_at": "2026-10-17T20:35:31+08:00",
+      "latest_official_date": "2026-10-16",
+      "coverage_start": "2026-10-14T16:18:03+08:00",
+      "complete": true,
+      "record_count": 132,
+      "source_url": "https://bond.sse.com.cn/bridge/information/",
+      "source_urls": [
+        "https://bond.sse.com.cn/bridge/information/",
+        "https://bond.szse.cn/disclosure/progressinfo/index.html"
+      ],
+      "snapshot_path": "data/institutional.json",
+      "snapshot_sha256": "8ccf6c71e3d3d9bd1214241beed383e19a9b1e9b618f4bd3d694ca632bc040e9",
+      "raw_versions": [],
+      "source_versions": [],
+      "refresh_batch": {
+        "id": "39033066537-1",
+        "date": "2026-10-17",
+        "started_at": "2026-10-17T20:34:51+08:00",
+        "completed_at": "2026-10-17T20:47:32+08:00"
+      },
+      "source_status": {
+        "SSE": {
+          "ok": true,
+          "total": 110,
+          "queries": [
+            {
+              "keyword": "持有型不动产",
+              "advertised_total": 104,
+              "raw_count": 104,
+              "pages": 2,
+              "actual_page_size": 100,
+              "unique_count": 104
+            },
+            {
+              "keyword": "机构间REIT",
+              "advertised_total": 6,
+              "raw_count": 6,
+              "pages": 1,
+              "actual_page_size": 100,
+              "unique_count": 6
+            }
+          ],
+          "list_endpoint": "https://query.sse.com.cn/sseQuery/commonSoaQuery.do"
+        },
+        "SZSE": {
+          "ok": true,
+          "total": 22,
+          "queries": [
+            {
+              "keyword": "持有型不动产",
+              "advertised_total": 17,
+              "raw_count": 17,
+              "pages": 1,
+              "actual_page_size": 20,
+              "unique_count": 17
+            },
+            {
+              "keyword": "机构间REIT",
+              "advertised_total": 5,
+              "raw_count": 5,
+              "pages": 1,
+              "actual_page_size": 20,
+              "unique_count": 5
+            }
+          ],
+          "list_endpoint": "https://bond.szse.cn/api/report/ShowReport/data"
+        }
+      },
+      "status": "complete",
+      "error": null,
+      "last_successful_at": "2026-10-17T20:35:31+08:00",
+      "revision_status": "官方来源当前完整快照；来源未统一提供初值或修订标识",
+      "expected_latest_date": null,
+      "is_lagging": null,
+      "freshness_reason": "交易所及推荐名单不定期更新；完整成功核查时间和最新公开业务日期分别展示",
+      "source_manifest_paths": [
+        "data/source_manifest/daily_refresh/39033066537-1.json"
+      ],
+      "raw_retention": {
+        "referenced_files": 663,
+        "verified_local_files": 663,
+        "missing_local_files": 0,
+        "status": "verified"
+      }
+    },
+    "ndrc": {
+      "label": "国家发改委推荐",
+      "checked_at": "2026-10-17T21:03:19+08:00",
+      "collected_at": "2026-10-17T21:03:19+08:00",
+      "latest_official_date": "2026-09-10",
+      "coverage_start": "2026-10-16T10:50:20+08:00",
+      "complete": true,
+      "record_count": 137,
+      "source_url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+      "source_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list"
+      ],
+      "snapshot_path": "data/ndrc_recommendations.json",
+      "snapshot_sha256": "d673b25956e396c18e386d233ce4edcc18355b7372bc7ac555d189fead4e6887",
+      "raw_versions": [
+        {
+          "raw_path": "data/raw/ndrc/refresh/39034962851-1/page0001.json",
+          "sha256": "08ac65d4f213c963488adb3f08eeb9876554c890806ccbfa31bb4407e8456028",
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList"
+        },
+        {
+          "raw_path": "data/raw/ndrc/refresh/39034962851-1/page0002.json",
+          "sha256": "2c291b2f60a092a0f9e19ce1e3d92e168eb8d8e288f9651a1ece87d0c2ac05fa",
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList"
+        },
+        {
+          "raw_path": "data/raw/ndrc/refresh/39034962851-1/page0003.json",
+          "sha256": "9ac316820af4047d1741055d9c630eaa76d89f74779cee94827ea9d3a7a49c3a",
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList"
+        }
+      ],
+      "source_versions": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
+          "method": "POST",
+          "params": {
+            "pageSize": 50,
+            "pageNum": 1,
+            "reitsProName": "",
+            "industry": "",
+            "mainDeclareUnit": "",
+            "startFundMoney": "",
+            "endFundMoney": "",
+            "reportRecommendStartTime": "",
+            "reportRecommendEndTime": ""
+          },
+          "retrieved_at": "2026-10-17T21:03:21+08:00",
+          "status": 200,
+          "tls_verified": true,
+          "raw_path": "data/raw/ndrc/refresh/39034962851-1/page0001.json",
+          "sha256": "08ac65d4f213c963488adb3f08eeb9876554c890806ccbfa31bb4407e8456028",
+          "bytes": 9326
+        },
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
+          "method": "POST",
+          "params": {
+            "pageSize": 50,
+            "pageNum": 2,
+            "reitsProName": "",
+            "industry": "",
+            "mainDeclareUnit": "",
+            "startFundMoney": "",
+            "endFundMoney": "",
+            "reportRecommendStartTime": "",
+            "reportRecommendEndTime": ""
+          },
+          "retrieved_at": "2026-10-17T21:03:23+08:00",
+          "status": 200,
+          "tls_verified": true,
+          "raw_path": "data/raw/ndrc/refresh/39034962851-1/page0002.json",
+          "sha256": "2c291b2f60a092a0f9e19ce1e3d92e168eb8d8e288f9651a1ece87d0c2ac05fa",
+          "bytes": 9215
+        },
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
+          "method": "POST",
+          "params": {
+            "pageSize": 50,
+            "pageNum": 3,
+            "reitsProName": "",
+            "industry": "",
+            "mainDeclareUnit": "",
+            "startFundMoney": "",
+            "endFundMoney": "",
+            "reportRecommendStartTime": "",
+            "reportRecommendEndTime": ""
+          },
+          "retrieved_at": "2026-10-17T21:03:25+08:00",
+          "status": 200,
+          "tls_verified": true,
+          "raw_path": "data/raw/ndrc/refresh/39034962851-1/page0003.json",
+          "sha256": "9ac316820af4047d1741055d9c630eaa76d89f74779cee94827ea9d3a7a49c3a",
+          "bytes": 7104
+        },
+        {
+          "path": "data/public_reits.json",
+          "sha256": "f37b583c4e9fb3ebeebd8933424a914507f047d5b2001411c852d9953f22a2a6",
+          "date": "2026-10-17",
+          "updated_at": "2026-10-17T20:40:11+08:00"
+        },
+        {
+          "kind": "reviewed_matching_config",
+          "path": "config/ndrc_exchange_links.json",
+          "sha256": "69b571210e1494cbc8267f78390b35f1b0e14405c8516ddcdeec149b7844d576"
+        }
+      ],
+      "refresh_batch": null,
+      "source_status": {
+        "NDRC": {
+          "ok": true,
+          "complete": true,
+          "updated_at": "2026-10-17T21:03:19+08:00",
+          "latest_recommended_date": "2026-09-10",
+          "source_url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "api_url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
+          "tls_verified": true
+        }
+      },
+      "status": "complete",
+      "error": null,
+      "last_successful_at": "2026-10-17T21:03:19+08:00",
+      "revision_status": "官方来源当前完整快照；来源未统一提供初值或修订标识",
+      "expected_latest_date": null,
+      "is_lagging": null,
+      "freshness_reason": "交易所及推荐名单不定期更新；完整成功核查时间和最新公开业务日期分别展示",
+      "matching_public_current": true,
+      "matching_public_sha256": "f37b583c4e9fb3ebeebd8933424a914507f047d5b2001411c852d9953f22a2a6",
+      "source_manifest_paths": [
+        "data/source_manifest/ndrc/20261017-210319-864879.json"
+      ],
+      "raw_retention": {
+        "referenced_files": 3,
+        "verified_local_files": 3,
+        "missing_local_files": 0,
+        "status": "verified"
+      }
+    }
+  },
+  "transformation": "scripts/project_updates.py: build_payload; official workflow fields and documents only",
+  "output_path": "data/project_updates.json",
+  "raw_trail": [
+    "data/source_manifest/",
+    "data/raw/",
+    "raw/"
+  ],
+  "exceptions": [
+    "Historical snapshots failing current validators are rejected and listed",
+    "Missing precise official status dates remain blank; collection time is shown separately",
+    "NDRC matching can reference a prior public input; relation review creates no progress"
+  ]
+}
