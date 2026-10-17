@@ -1,0 +1,596 @@
+[
+  {
+    "metadata": {
+      "catalogid": "xmjdxx",
+      "name": "项目信息",
+      "excel": "xlsx",
+      "pagetype": null,
+      "subname": "",
+      "tabkey": "tab1",
+      "pagesize": 20,
+      "pageno": 1,
+      "pagecount": 1,
+      "recordcount": 5,
+      "showrecordcount": false,
+      "header": "",
+      "footer": "",
+      "reporttype": null,
+      "tabcss": null,
+      "conditions": [
+        {
+          "label": "债券类别",
+          "name": "zqlb",
+          "hidden": "0",
+          "defaultValue": "",
+          "labelstyle": "2",
+          "required": "false",
+          "inputType": "labelselect",
+          "typeAhead": "",
+          "options": [
+            {
+              "text": "大公募",
+              "value": "3",
+              "selected": "",
+              "group": "0.7462921405316678"
+            },
+            {
+              "text": "小公募",
+              "value": "0",
+              "selected": "",
+              "group": "0.9033785907614355"
+            },
+            {
+              "text": "私募",
+              "value": "1",
+              "selected": "",
+              "group": "0.8388548579913843"
+            },
+            {
+              "text": "资产支持证券（ABS）",
+              "value": "2",
+              "selected": "",
+              "group": "0.589381582954821"
+            }
+          ],
+          "property": "style='width:198px;'",
+          "maxlength": null,
+          "otherProperties": null,
+          "clientvalidate": ""
+        },
+        {
+          "label": "项目状态",
+          "name": "selectXmztt",
+          "hidden": "0",
+          "defaultValue": "",
+          "labelstyle": "2",
+          "required": "false",
+          "inputType": "labelselect",
+          "typeAhead": "",
+          "options": [
+            {
+              "text": "已受理 ",
+              "value": "已受理",
+              "selected": "",
+              "group": "0.28928082118650866"
+            },
+            {
+              "text": "已反馈 ",
+              "value": "已反馈",
+              "selected": "",
+              "group": "0.5230297985579206"
+            },
+            {
+              "text": "通过   ",
+              "value": "通过",
+              "selected": "",
+              "group": "0.3559305784722093"
+            },
+            {
+              "text": "不通过 ",
+              "value": "不通过",
+              "selected": "",
+              "group": "0.905597546489386"
+            },
+            {
+              "text": "提交注册",
+              "value": "提交注册",
+              "selected": "",
+              "group": "0.22026426109372255"
+            },
+            {
+              "text": "注册生效",
+              "value": "注册生效",
+              "selected": "",
+              "group": "0.4001067090931294"
+            },
+            {
+              "text": "不予注册",
+              "value": "不予注册",
+              "selected": "",
+              "group": "0.9392193369963553"
+            },
+            {
+              "text": "终止   ",
+              "value": "终止",
+              "selected": "",
+              "group": "0.9189605485337219"
+            }
+          ],
+          "property": null,
+          "maxlength": null,
+          "otherProperties": null,
+          "clientvalidate": ""
+        },
+        {
+          "label": "申报规模",
+          "name": "selectFxje",
+          "hidden": "0",
+          "defaultValue": "",
+          "labelstyle": "2",
+          "required": "false",
+          "inputType": "SelectBox",
+          "typeAhead": "",
+          "options": [
+            {
+              "text": "全部",
+              "value": "",
+              "selected": "selected",
+              "group": null
+            },
+            {
+              "text": "小于1亿",
+              "value": "1",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "1亿-5亿",
+              "value": "2",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "5亿-10亿",
+              "value": "3",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "10亿-50亿",
+              "value": "4",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "50亿以上",
+              "value": "5",
+              "selected": "",
+              "group": null
+            }
+          ],
+          "property": "style='width:220px;'",
+          "maxlength": null,
+          "otherProperties": null,
+          "clientvalidate": ""
+        },
+        {
+          "label": "地区",
+          "name": "selectdq",
+          "hidden": "0",
+          "defaultValue": "",
+          "labelstyle": "2",
+          "required": "false",
+          "inputType": "SelectBox",
+          "typeAhead": "",
+          "options": [
+            {
+              "text": "全部",
+              "value": "",
+              "selected": "selected",
+              "group": null
+            },
+            {
+              "text": "安徽",
+              "value": "安徽",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "澳门",
+              "value": "澳门",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "北京",
+              "value": "北京",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "福建",
+              "value": "福建",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "甘肃",
+              "value": "甘肃",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "广东",
+              "value": "广东",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "广西",
+              "value": "广西",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "贵州",
+              "value": "贵州",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "海南",
+              "value": "海南",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "河北",
+              "value": "河北",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "河南",
+              "value": "河南",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "黑龙江",
+              "value": "黑龙江",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "湖北",
+              "value": "湖北",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "湖南",
+              "value": "湖南",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "吉林",
+              "value": "吉林",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "江苏",
+              "value": "江苏",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "江西",
+              "value": "江西",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "境外地区",
+              "value": "境外地区",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "辽宁",
+              "value": "辽宁",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "内蒙古",
+              "value": "内蒙古",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "宁夏",
+              "value": "宁夏",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "其他",
+              "value": "其他",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "青海",
+              "value": "青海",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "山东",
+              "value": "山东",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "山西",
+              "value": "山西",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "陕西",
+              "value": "陕西",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "上海",
+              "value": "上海",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "四川",
+              "value": "四川",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "台湾",
+              "value": "台湾",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "天津",
+              "value": "天津",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "西藏",
+              "value": "西藏",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "香港",
+              "value": "香港",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "新疆",
+              "value": "新疆",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "云南",
+              "value": "云南",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "浙江",
+              "value": "浙江",
+              "selected": "",
+              "group": null
+            },
+            {
+              "text": "重庆",
+              "value": "重庆",
+              "selected": "",
+              "group": null
+            }
+          ],
+          "property": "style='width:220px;'",
+          "maxlength": null,
+          "otherProperties": null,
+          "clientvalidate": ""
+        },
+        {
+          "label": "行业",
+          "name": "selecthy",
+          "hidden": "1",
+          "defaultValue": "\"\"",
+          "labelstyle": "2",
+          "required": "false",
+          "inputType": "SelectBox",
+          "typeAhead": "",
+          "options": [],
+          "property": "style='width:220px;'",
+          "maxlength": null,
+          "otherProperties": null,
+          "clientvalidate": ""
+        },
+        {
+          "label": "承销商/管理人",
+          "name": "txtCxs",
+          "hidden": "0",
+          "defaultValue": "",
+          "labelstyle": "2",
+          "required": "false",
+          "inputType": "text",
+          "typeAhead": "",
+          "options": null,
+          "property": "style='width:215px;'",
+          "maxlength": null,
+          "otherProperties": null,
+          "clientvalidate": ""
+        },
+        {
+          "label": "发行人",
+          "name": "txtFxr",
+          "hidden": "0",
+          "defaultValue": "",
+          "labelstyle": "2",
+          "required": "false",
+          "inputType": "text",
+          "typeAhead": "",
+          "options": null,
+          "property": "style='width:215px;'",
+          "maxlength": null,
+          "otherProperties": null,
+          "clientvalidate": ""
+        },
+        {
+          "label": "债券名称",
+          "name": "txtZqmc",
+          "hidden": "0",
+          "defaultValue": "机构间REIT",
+          "labelstyle": "2",
+          "required": "false",
+          "inputType": "text",
+          "typeAhead": "",
+          "options": null,
+          "property": "style='width:215px;'",
+          "maxlength": null,
+          "otherProperties": null,
+          "clientvalidate": ""
+        }
+      ],
+      "colStyle": {
+        "rowid": {
+          "width": "6.579%",
+          "align": "center",
+          "group": "false",
+          "hidden": "0"
+        },
+        "zqmc": {
+          "width": "28.947%",
+          "align": "left",
+          "group": "false",
+          "hidden": "0"
+        },
+        "cxsjc": {
+          "width": "17.368%",
+          "align": "center",
+          "group": "false",
+          "hidden": "0"
+        },
+        "zqlb": {
+          "width": "10.211%",
+          "align": "center",
+          "group": "false",
+          "hidden": "0"
+        },
+        "nfxje": {
+          "width": "14.474%",
+          "align": "right",
+          "group": "false",
+          "hidden": "0"
+        },
+        "xmzt": {
+          "width": "11.211%",
+          "align": "center",
+          "group": "false",
+          "hidden": "0"
+        },
+        "xmslrq": {
+          "width": "11.211%",
+          "align": "center",
+          "group": "false",
+          "hidden": "0"
+        },
+        "xmztgxrq": {
+          "width": "11.211%",
+          "align": "center",
+          "group": "false",
+          "hidden": "0"
+        }
+      },
+      "cols": {
+        "rowid": "编号",
+        "zqmc": "债券名称",
+        "cxsjc": "承销商/管理人",
+        "zqlb": "债券类别",
+        "nfxje": "申报规模<br>(亿元)",
+        "xmzt": "项目状态",
+        "xmslrq": "受理日期",
+        "xmztgxrq": "更新日期"
+      },
+      "colspan": 0,
+      "notes": null,
+      "topHeader": "",
+      "hidden": "0",
+      "tablestyle": "",
+      "refreshCondition": false
+    },
+    "data": [
+      {
+        "rowid": "1",
+        "zqmc": "<a href='javascript:void(0);'  a-back=1 a-param='/ShowReport/data?SHOWTYPE=JSON&CATALOGID=xmjdxx_xq&TABKEY=tab1&xmbh=5CCD030CB38E4250904A2C05D85E0342&type=2'>国金资管-TCL新能源不动产资产支持专项计划（机构间REIT）（乡村振兴）</a>",
+        "cxsjc": "<a target='_blank' href='http://bond.szse.cn/disclosure/progressinfo/query/index.html?txtCxs=%E5%9B%BD%E9%87%91%E8%B5%84%E7%AE%A1'>国金资管</a>",
+        "zqlb": "ABS",
+        "nfxje": "9.72",
+        "xmzt": "已反馈",
+        "xmslrq": "2026-09-21",
+        "xmztgxrq": "2026-10-12"
+      },
+      {
+        "rowid": "2",
+        "zqmc": "<a href='javascript:void(0);'  a-back=1 a-param='/ShowReport/data?SHOWTYPE=JSON&CATALOGID=xmjdxx_xq&TABKEY=tab1&xmbh=8A1E09D85832487E8F5354EB6D049C8D&type=2'>中信建投-阳光新能源不动产资产支持专项计划（机构间REIT）</a>",
+        "cxsjc": "<a target='_blank' href='http://bond.szse.cn/disclosure/progressinfo/query/index.html?txtCxs=%E4%B8%AD%E4%BF%A1%E5%BB%BA%E6%8A%95'>中信建投</a>",
+        "zqlb": "ABS",
+        "nfxje": "4.09",
+        "xmzt": "已反馈",
+        "xmslrq": "2026-09-15",
+        "xmztgxrq": "2026-09-29"
+      },
+      {
+        "rowid": "3",
+        "zqmc": "<a href='javascript:void(0);'  a-back=1 a-param='/ShowReport/data?SHOWTYPE=JSON&CATALOGID=xmjdxx_xq&TABKEY=tab1&xmbh=E64643B78E7A47EBBC6F26E4E4AF971C&type=2'>兴证基实-开弦新能源不动产资产支持专项计划（机构间REIT）</a>",
+        "cxsjc": "<a target='_blank' href='http://bond.szse.cn/disclosure/progressinfo/query/index.html?txtCxs=%E5%85%B4%E8%AF%81%E8%B5%84%E7%AE%A1'>兴证资管</a>",
+        "zqlb": "ABS",
+        "nfxje": "2.00",
+        "xmzt": "已反馈",
+        "xmslrq": "2026-09-04",
+        "xmztgxrq": "2026-09-18"
+      },
+      {
+        "rowid": "4",
+        "zqmc": "<a href='javascript:void(0);'  a-back=1 a-param='/ShowReport/data?SHOWTYPE=JSON&CATALOGID=xmjdxx_xq&TABKEY=tab1&xmbh=A008DEF35DB7497B80240D4B840C3F89&type=2'>中信建投-居然智家不动产资产支持专项计划（机构间REIT）</a>",
+        "cxsjc": "<a target='_blank' href='http://bond.szse.cn/disclosure/progressinfo/query/index.html?txtCxs=%E4%B8%AD%E4%BF%A1%E5%BB%BA%E6%8A%95'>中信建投</a>",
+        "zqlb": "ABS",
+        "nfxje": "24.11",
+        "xmzt": "通过",
+        "xmslrq": "2026-04-01",
+        "xmztgxrq": "2026-07-17"
+      },
+      {
+        "rowid": "5",
+        "zqmc": "<a href='javascript:void(0);'  a-back=1 a-param='/ShowReport/data?SHOWTYPE=JSON&CATALOGID=xmjdxx_xq&TABKEY=tab1&xmbh=75ADB37CB2B2485BB1201DE880F75588&type=2'>大同-中航-依云四季酒店文旅不动产资产支持专项计划（机构间REIT）</a>",
+        "cxsjc": "<a target='_blank' href='http://bond.szse.cn/disclosure/progressinfo/query/index.html?txtCxs=%E5%A4%A7%E5%90%8C%E8%AF%81%E5%88%B8'>大同证券</a>",
+        "zqlb": "ABS",
+        "nfxje": "4.02",
+        "xmzt": "已反馈",
+        "xmslrq": "2026-02-11",
+        "xmztgxrq": "2026-03-02"
+      }
+    ],
+    "error": null
+  }
+]
