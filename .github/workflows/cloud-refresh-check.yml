@@ -1,0 +1,19 @@
+name: Launch independent cloud REIT refresh check
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/cloud-refresh-check.yml]
+permissions:
+  contents: read
+  actions: write
+jobs:
+  launch:
+    if: contains(github.event.head_commit.message, '[cloud-refresh-check-20261017]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Start the unchanged production workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh workflow run update-data.yml --ref main
