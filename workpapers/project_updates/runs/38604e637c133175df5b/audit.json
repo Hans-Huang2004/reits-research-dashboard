@@ -7,7 +7,7 @@
   "unique_events": true,
   "official_sources_only": true,
   "current_input_hashes_match": true,
-  "generated_at": "2026-10-16T13:43:57+08:00",
+  "generated_at": "2026-10-17T09:30:04+08:00",
   "input_versions": [
     {
       "population": "public",
@@ -485,8 +485,8 @@
           "ok": true
         }
       },
-      "status": "complete",
-      "error": null,
+      "status": "failed",
+      "error": "Command '['/opt/hostedtoolcache/Python/3.11.17/x64/bin/python', '-m', 'collectors.institutional', '--output', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/38990982796-1/collected/institutional.json', '--archive-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/38990982796-1/institutional_snapshots', '--verify-links', '--raw-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/38990982796-1/institutional']' returned non-zero exit status 1.",
       "last_successful_at": "2026-10-16T09:22:52+08:00",
       "revision_status": "官方来源当前完整快照；来源未统一提供初值或修订标识",
       "expected_latest_date": null,
@@ -500,7 +500,8 @@
         "verified_local_files": 276,
         "missing_local_files": 0,
         "status": "verified"
-      }
+      },
+      "last_attempted_at": "2026-10-17T09:30:03+08:00"
     },
     "institutional": {
       "label": "机构间REITs",
@@ -573,8 +574,8 @@
           "list_endpoint": "https://bond.szse.cn/api/report/ShowReport/data"
         }
       },
-      "status": "complete",
-      "error": null,
+      "status": "failed",
+      "error": "Command '['/opt/hostedtoolcache/Python/3.11.17/x64/bin/python', '-m', 'collectors.institutional', '--output', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/38990982796-1/collected/institutional.json', '--archive-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/38990982796-1/institutional_snapshots', '--verify-links', '--raw-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/38990982796-1/institutional']' returned non-zero exit status 1.",
       "last_successful_at": "2026-10-16T09:16:11+08:00",
       "revision_status": "官方来源当前完整快照；来源未统一提供初值或修订标识",
       "expected_latest_date": null,
@@ -588,7 +589,8 @@
         "verified_local_files": 276,
         "missing_local_files": 0,
         "status": "verified"
-      }
+      },
+      "last_attempted_at": "2026-10-17T09:30:03+08:00"
     },
     "ndrc": {
       "label": "国家发改委推荐",
