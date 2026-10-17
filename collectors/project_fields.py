@@ -14,7 +14,7 @@ PUBLIC_RESEARCH_FIELDS = (
     "proposed_sale_amount_feedback_cny_100m", "proposed_sale_amount_inquiry_cny_100m",
     "sale_amount_cny_100m", "external_loan_amount_cny_100m", "project_return_forecast", "guarantee_support",
 )
-INSTITUTIONAL_RESEARCH_FIELDS = ("approved_date", "issued_date", "is_issued")
+INSTITUTIONAL_RESEARCH_FIELDS = ("approved_date", "issued_date", "is_issued", "origin", "writer")
 DISCLOSURE_FIELDS = ("underlying_assets", "asset_type", "offering_start_date", "offering_end_date", "established_date")
 ASSET_CLASSIFICATION_FIELDS = (
     "official_asset_type", "classification_source", "classification_confidence",

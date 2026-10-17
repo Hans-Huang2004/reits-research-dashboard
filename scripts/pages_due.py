@@ -8,12 +8,14 @@ from urllib.request import Request, urlopen
 
 def publication_due(expected, deployed, ndrc_expected=None, ndrc_deployed=None,
                     updates_expected=None, updates_deployed=None):
-    if not isinstance(expected, dict) or expected.get('status') != 'complete' or not expected.get('batch_id'):
+    if not isinstance(expected, dict) or expected.get('status') not in ('complete', 'failed') or not expected.get('batch_id'):
         return True
-    pair_current = (isinstance(deployed, dict) and deployed.get('status') == 'complete'
+    pair_current = (isinstance(deployed, dict) and deployed.get('status') == expected.get('status')
                 and deployed.get('batch_id') == expected['batch_id']
                 and deployed.get('date') == expected.get('date')
-                and deployed.get('completed_at') == expected.get('completed_at'))
+                and deployed.get('completed_at') == expected.get('completed_at')
+                and all(deployed.get(key) == expected.get(key) for key in
+                        ('attempt_ok', 'last_attempt_batch_id', 'last_attempt_at', 'failed_at', 'error')))
     if updates_expected is not None and updates_expected != updates_deployed:
         return True
     # A recommendation refresh has its own publication identity. The exchange

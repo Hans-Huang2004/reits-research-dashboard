@@ -1,4 +1,5 @@
 from copy import deepcopy
+from datetime import datetime, timedelta
 import json
 from pathlib import Path
 import shutil
@@ -9,6 +10,14 @@ from scripts.project_updates import (FILES, build, build_payload, digest, entiti
                                      source_time, validate)
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def integration_time(root, minutes=0):
+    # Integration inputs are live repository snapshots. Their test clock must
+    # advance with them; the unit fixtures above retain their fixed dates.
+    latest = max(datetime.fromisoformat(source_time(json.loads((root / "data" / name).read_text())))
+                 for name in FILES.values())
+    return (latest + timedelta(days=1, minutes=minutes)).isoformat(timespec="seconds")
 
 
 def example():
@@ -238,14 +247,15 @@ class ProjectUpdateTests(unittest.TestCase):
             root = Path(directory); (root / "data").mkdir()
             for name in FILES.values():
                 shutil.copy2(ROOT / "data" / name, root / "data" / name)
-            payload = build(root, "2026-10-16T15:00:00+08:00")
+            generated = integration_time(root)
+            payload = build(root, generated)
             original = (root / "data/project_updates.json").read_bytes()
-            rebuilt = build(root, "2026-10-16T15:10:00+08:00", rebuild=True)
+            rebuilt = build(root, integration_time(root, 10), rebuild=True)
             self.assertEqual(payload, rebuilt)
             self.assertEqual(original, (root / "data/project_updates.json").read_bytes())
             self.assertTrue(validate(payload, root)["current_input_hashes_match"])
             data = json.loads((root / "data/institutional.json").read_text())
-            data["date"] = "2026-10-17"
+            data["date"] = (datetime.fromisoformat(generated) + timedelta(days=1)).date().isoformat()
             (root / "data/institutional.json").write_text(json.dumps(data))
             with self.assertRaisesRegex(ValueError, "stale"):
                 validate(payload, root)
@@ -255,13 +265,14 @@ class ProjectUpdateTests(unittest.TestCase):
             root = Path(directory); (root / "data").mkdir()
             for name in FILES.values():
                 shutil.copy2(ROOT / "data" / name, root / "data" / name)
-            build(root, "2026-10-16T15:00:00+08:00")
+            generated = integration_time(root)
+            build(root, generated)
             original = (root / "data/project_updates.json").read_bytes()
             data = json.loads((root / "data/public_reits.json").read_text())
             data["coverage"]["complete"] = False
             (root / "data/public_reits.json").write_text(json.dumps(data))
             with self.assertRaises(ValueError):
-                build(root, "2026-10-16T15:10:00+08:00")
+                build(root, integration_time(root, 10))
             self.assertEqual(original, (root / "data/project_updates.json").read_bytes())
 
     def test_forged_timeline_and_document_titles_fail_even_with_recomputed_event_id(self):
@@ -269,7 +280,8 @@ class ProjectUpdateTests(unittest.TestCase):
             root = Path(directory); (root / "data").mkdir()
             for name in FILES.values():
                 shutil.copy2(ROOT / "data" / name, root / "data" / name)
-            payload = build(root, "2026-10-16T15:00:00+08:00")
+            generated = integration_time(root)
+            payload = build(root, generated)
             forged = deepcopy(payload)
             event = next(e for e in forged["events"] if "timeline" in e["after"])
             event["changes"][0]["after"] = "伪造审核通过"
@@ -291,8 +303,9 @@ class ProjectUpdateTests(unittest.TestCase):
             root = Path(directory); (root / "data").mkdir()
             for name in FILES.values():
                 shutil.copy2(ROOT / "data" / name, root / "data" / name)
-            (root / "data/ndrc_refresh_status.json").write_text(json.dumps({"status": "failed", "last_attempt_at": "2026-10-16T14:00:00+08:00", "error": "source unavailable"}))
-            payload = build(root, "2026-10-16T15:00:00+08:00")
+            (root / "data/ndrc_refresh_status.json").write_text(json.dumps({"status": "failed", "last_attempt_at": integration_time(root), "error": "source unavailable"}))
+            generated = integration_time(root)
+            payload = build(root, generated)
             self.assertEqual(payload["sources"]["ndrc"]["status"], "failed")
             self.assertTrue(payload["sources"]["ndrc"]["complete"])
             self.assertEqual(payload["sources"]["ndrc"]["error"], "source unavailable")

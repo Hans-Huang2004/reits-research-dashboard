@@ -4,6 +4,7 @@ import argparse
 from datetime import datetime
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import shutil
@@ -15,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 from scripts.refresh_due import refresh_due as institutional_due
+from scripts.audit_refresh_fields import audit_retention
 from scripts.validate_data import validate as validate_institutional
 from scripts.validate_public_data import validate as validate_public
 BEIJING = ZoneInfo("Asia/Shanghai")
@@ -133,14 +135,25 @@ def main(argv=None):
     }
     def collect(key):
         with (work / (key + ".log")).open("w", encoding="utf-8") as log:
-            subprocess.run(commands[key], cwd=ROOT, check=True, stdout=log, stderr=subprocess.STDOUT)
+            subprocess.run(commands[key], cwd=ROOT, check=True, stdout=log, stderr=subprocess.STDOUT,
+                           env={**os.environ, "REITS_HTTP_AUDIT_DIR": str(raw / key / "transport")})
         return key
     try:
         # Both populations share the same exchange hosts. Avoid multiplying
         # request rates across two independent subprocesses.
+        failures = {}
         for key in FILES:
-            print(json.dumps({"collected": collect(key)}), flush=True)
+            try:
+                print(json.dumps({"collected": collect(key)}), flush=True)
+            except Exception as exc:
+                failures[key] = str(exc)
+                print(json.dumps({"failed": key, "error": str(exc)}), flush=True)
+        if failures:
+            raise RuntimeError(json.dumps(failures, ensure_ascii=False))
+        retention = {key: audit_retention(read(ROOT / "data" / FILES[key]), read(candidates[key]), key) for key in FILES}
+        write(work / "field_retention.json", retention)
         manifest = publish_candidates(candidates, ROOT / "data", batch_id, started_at)
+        manifest["field_retention"] = {key: {"checked_fields": value["checked_fields"], "workpaper": str((work / "field_retention.json").relative_to(ROOT))} for key, value in retention.items()}
         manifest.update({"raw_dir": str(raw.relative_to(ROOT)), "workpaper": str(work.relative_to(ROOT)),
                          "commands": {key: [str(Path(arg).relative_to(ROOT)) if str(arg).startswith(str(ROOT) + "/") else arg for arg in command] for key, command in commands.items()},
                          "raw_sha256": {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(raw.rglob("*")) if p.is_file()}})

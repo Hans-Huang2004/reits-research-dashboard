@@ -21,6 +21,7 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 from collectors.http_policy import PACER, backoff
+from collectors.http_transport import urlopen
 
 BASE = "https://reits.szse.cn"
 QUERY = BASE + "/api/reits/projectrends/query"
@@ -173,7 +174,7 @@ class SourceReader:
         for attempt in range(3):
             try:
                 PACER.wait(target)
-                with urllib.request.urlopen(request, timeout=45) as response:
+                with urlopen(request, timeout=45) as response:
                     raw = response.read()
                     content_type = response.headers.get("Content-Type", "")
                 packet = json.loads(raw.decode("utf-8-sig"))

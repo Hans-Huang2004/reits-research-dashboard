@@ -18,6 +18,7 @@ import urllib.parse
 import urllib.request
 from zoneinfo import ZoneInfo
 from collectors.http_policy import PACER, backoff
+from collectors.http_transport import urlopen
 
 API = "https://query.sse.com.cn/"
 REFERER = "https://www.sse.com.cn/reits/home/"
@@ -89,7 +90,7 @@ class RawClient:
             try:
                 PACER.wait(target)
                 req = urllib.request.Request(target, headers={"User-Agent":"Mozilla/5.0 (REITsResearchDashboard)", "Referer":referer, "Accept":"application/json,text/javascript,*/*"})
-                with urllib.request.urlopen(req, timeout=40) as response:
+                with urlopen(req, timeout=40) as response:
                     body = response.read()
                     final_url = response.url
                     content_type = response.headers.get("Content-Type", "")

@@ -20,6 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       due: ${{ steps.publication.outputs.due }}
+      source_sha: ${{ steps.source.outputs.sha }}
     permissions:
       contents: read
       pages: read
@@ -30,6 +31,9 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
+      - name: Record exact publication commit
+        id: source
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - name: Check whether the completed batch is already live
         id: publication
         env:
@@ -60,6 +64,7 @@ jobs:
     if: needs.build.outputs.due == 'true'
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       pages: write
       id-token: write
     environment:
@@ -69,3 +74,18 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ needs.build.outputs.source_sha }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Verify published data against the built commit
+        run: python scripts/verify_live.py --site-url 'https://hans-huang2004.github.io/reits-research-dashboard/'
+      - name: Keep publication verification
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: live-verification-${{ github.run_id }}
+          path: live-verification.json
+          retention-days: 30

@@ -22,6 +22,7 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 from collectors.http_policy import PACER, backoff
+from collectors.http_transport import urlopen
 
 KEYWORDS = ("持有型不动产", "机构间REIT")
 SSE_ENDPOINT = "https://query.sse.com.cn/sseQuery/commonSoaQuery.do"
@@ -114,6 +115,17 @@ def source_url(exchange, source_id):
     raise ValueError("Unknown exchange")
 
 
+def role_evidence(row, values):
+    checked = datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds")
+    for field, api_fields in values.items():
+        if row.get(field):
+            row.setdefault("research_field_sources", {})[field] = [{
+                "title": row["ex"] + "项目基本信息", "url": row["source_url"],
+                "api_fields": api_fields, "checked_at": checked,
+                "source_updated_at": row.get("up"), "source_method": "official_api"}]
+    return row
+
+
 def normalize_sse(raw, query_keyword):
     source_id = str(raw.get("BOND_NUM") or "").strip()
     if not source_id:
@@ -127,7 +139,8 @@ def normalize_sse(raw, query_keyword):
            "source_url":source_url("SSE",source_id), "source_kind":"project_page", "link_status":"constructed",
            "is_expansion":"扩募" in name, "archive_status":"current", "product_type":"institutional"}
     row.update(classify_by_name(name))
-    return row
+    return role_evidence(row, {"origin": {"FULL_NAME": raw.get("FULL_NAME")},
+                               "writer": {"WRITER_NAME": raw.get("WRITER_NAME")}})
 
 
 def normalize_szse(raw, query_keyword, detail=None):
@@ -143,7 +156,8 @@ def normalize_szse(raw, query_keyword, detail=None):
            "source_data_url":SZSE_ENDPOINT+"?"+urllib.parse.urlencode({"SHOWTYPE":"JSON","CATALOGID":"xmjdxx_xq","TABKEY":"tab1","xmbh":source_id,"type":"2"}),
            "is_expansion":"扩募" in name, "archive_status":"current", "product_type":"institutional"}
     row.update(classify_by_name(name))
-    return row
+    return role_evidence(row, {"origin": {"fxr": detail.get("fxr")},
+                               "writer": {"cxsqc": detail.get("cxsqc"), "cxsjc": detail.get("cxsjc")}})
 
 
 def merge_records(records):
@@ -182,7 +196,7 @@ def http_get_json(url, params, referer):
     for attempt in range(3):
         try:
             PACER.wait(target)
-            with urllib.request.urlopen(request, timeout=30) as response:
+            with urlopen(request, timeout=30) as response:
                 raw = response.read().decode("utf-8-sig")
             try:
                 return json.loads(raw)

@@ -12,6 +12,9 @@ on:
       - .github/workflows/update-data.yml
       - scripts/refresh_all.py
       - scripts/project_updates.py
+      - collectors/**
+      - tests/**
+      - scripts/validate*.py
 permissions:
   contents: write
   actions: read
@@ -56,6 +59,7 @@ jobs:
         if: steps.freshness.outputs.due == 'true'
         continue-on-error: true
         env:
+          REITS_HTTP_TRANSPORT: curl-ipv4
           FORCE_REFRESH: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
           if [ "$FORCE_REFRESH" = true ]; then
