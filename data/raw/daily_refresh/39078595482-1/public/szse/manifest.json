@@ -1,0 +1,1081 @@
+{
+  "source": "深圳证券交易所",
+  "generated_at": "2026-10-18T07:26:51+08:00",
+  "requests": [
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/ann_effective_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "request_url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "method": "POST",
+      "query_parameters": {},
+      "request_body": {
+        "channelCode": [
+          "reits-xxpl"
+        ],
+        "searchKey": [
+          "基金合同生效"
+        ],
+        "pageSize": 50,
+        "pageNum": 1
+      },
+      "extracted_at": "2026-10-18T07:26:46+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "26e529480256f17735b0a24f7b5ae17d7eeddd7650bb5eb0778b2c169a82def1",
+      "bytes": 17617
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/ann_listing_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "request_url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "method": "POST",
+      "query_parameters": {},
+      "request_body": {
+        "channelCode": [
+          "reits-xxpl"
+        ],
+        "searchKey": [
+          "上市交易公告书"
+        ],
+        "pageSize": 50,
+        "pageNum": 1
+      },
+      "extracted_at": "2026-10-18T07:26:47+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "5b60f5e33f5e78e3e369ed7ab0b469b640662ba581b2b5d586983f0d90261af4",
+      "bytes": 19924
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/ann_prospectus_180201_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "request_url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "method": "POST",
+      "query_parameters": {},
+      "request_body": {
+        "channelCode": [
+          "reits-xxpl"
+        ],
+        "searchKey": [
+          "招募说明书"
+        ],
+        "pageSize": 50,
+        "pageNum": 1,
+        "stock": [
+          "180201"
+        ]
+      },
+      "extracted_at": "2026-10-18T07:26:50+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "b74c3c374eae572a2f49784579bc627f7118831980bcb1e02c2c3e0e168f0963",
+      "bytes": 4546
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/ann_prospectus_180801_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "request_url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "method": "POST",
+      "query_parameters": {},
+      "request_body": {
+        "channelCode": [
+          "reits-xxpl"
+        ],
+        "searchKey": [
+          "招募说明书"
+        ],
+        "pageSize": 50,
+        "pageNum": 1,
+        "stock": [
+          "180801"
+        ]
+      },
+      "extracted_at": "2026-10-18T07:26:51+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "ec1d4354b73701a9d14c03eec9ef6cf2694f4b21fc57b20ce899aa58ca369fed",
+      "bytes": 6880
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/ann_sales_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "request_url": "https://reits.szse.cn/api/disc/announcement/annList",
+      "method": "POST",
+      "query_parameters": {},
+      "request_body": {
+        "channelCode": [
+          "reits-xxpl"
+        ],
+        "searchKey": [
+          "基金份额发售公告"
+        ],
+        "pageSize": 50,
+        "pageNum": 1
+      },
+      "extracted_at": "2026-10-18T07:26:49+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "7c970a7257c3f8a9530e67540843d9cabbe548550a00a7f26a1353e65a5c7963",
+      "bytes": 18659
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000002.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000002",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000002"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:42+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "9416259aaf945e00153b029869371802061c0e9e3e266e9416374de7759dc885",
+      "bytes": 5931
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000004.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000004",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000004"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:43+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "3bf9440e767725eb08a12b1ee1ae2ba4ac13222f698750520d429b4adc23584e",
+      "bytes": 7843
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000007.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000007",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000007"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:44+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "afb0cd5ba9952c76621dffb0b1ac7c9fbee30b375a6200430ee1e521265c4499",
+      "bytes": 6017
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000008.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000008",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000008"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:46+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "f6d6356b83ec437831210d19b32dc9c44b88b5d855f3df60f492f333a2769214",
+      "bytes": 6103
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000009.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000009",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000009"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:41+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "2f457152ad08109c6bcdcac1a1c42095b23df0befe7a499cde43545d3134d67b",
+      "bytes": 5891
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000010.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000010",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000010"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:40+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "a110c747defbba7ebb86338bffe8ae41f5b72e685f3f42e5895911156e7b270e",
+      "bytes": 8155
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000012.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000012",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000012"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:39+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "631751ea4057a7aa3546fc74b6aaae6b5f4d67f861ce7dc4e8f627ee32dc7a04",
+      "bytes": 9220
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000014.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000014",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000014"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:39+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "eb63743cad43df542dc37a930deaabe4f301cd12b06b4adda5dcc890eeb81a86",
+      "bytes": 8045
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000015.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000015",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000015"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:17+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "1815d405866a363126ae5d62c954ea293d20afc690b569f0dca0a0c81780f0ee",
+      "bytes": 6223
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000017.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000017",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000017"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:36+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "bd12eee358bc2fd4334c6b2deb70d94cbd34432334bc341c5bcc4c9f0580e3d7",
+      "bytes": 11162
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000018.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000018",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000018"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:37+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "cb3b1689c3a8b033b62e03f8e23f7edc1c32d40c1d7088c12a9e6dcbdbd841cb",
+      "bytes": 7794
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000019.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000019",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000019"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:36+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "86b74dc622957b869cdf8cd37d06913906191f1004c2bd928c5e3bafe79a765a",
+      "bytes": 10867
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000020.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000020",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000020"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:29+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "990f6c3e72008c9cf1ce2e63cf0ce0ce2c0206868b10a1211eaee7da54724240",
+      "bytes": 10917
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000021.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000021",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000021"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:32+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "fb182406d25f1b43a3b19806f69a9dd52c0f869789bb5c5de263a299d3b4671e",
+      "bytes": 11070
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000024.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000024",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000024"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:34+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "ef47a7c2ff60686e942825b82809e909bbd6c776d983d6a44ffb8aedce45020d",
+      "bytes": 10230
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000026.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000026",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000026"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:34+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "2923a519589074045b09cf455e9eb908a5ebf02748646f923f7bec46d1517417",
+      "bytes": 10852
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000029.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000029",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000029"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:30+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "199f18f64aa49c3b607cdba7fbf5fa6d31e975ee1470ef7acf93962fc32c5b2b",
+      "bytes": 10726
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000030.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000030",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000030"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:32+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "f43a68d65ef32484e8335a46f3a8bfe47c8d4383ede7950995396972f9919b45",
+      "bytes": 10689
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000031.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000031",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000031"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:24+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "73218ef985fc3df93539f43fbf58c354a7b38a58e66cf832ba3fa3f748cc977b",
+      "bytes": 11021
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000032.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000032",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000032"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:17+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "d9c41f4e0a6ff8f1b26fc7e8f470ac6e394c5dfe8acd9b6ce5d21c5bbd04c58f",
+      "bytes": 6391
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000033.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000033",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000033"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:26+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "acffac57778ef3ec32178ba5a6d72a23bc7d9d720effadaf9769dd10896bc39d",
+      "bytes": 10972
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000036.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000036",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000036"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:27+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "592220cdd241e5f931cfd620242d88ae6c3c1e81d408795fac6e7a50f9b4cae1",
+      "bytes": 11055
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000037.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000037",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000037"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:28+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "bf057beba750cd7c259870a65ceec26120141a12c32adb1133326f0dbabf3069",
+      "bytes": 10712
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000039.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000039",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000039"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:03+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "4d39af6d6394d0005ac50c7b444363ea9637f06d6e22a6c69bc6772fe3070995",
+      "bytes": 11021
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000040.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000040",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000040"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:25+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "2c93a9473f929708f510e627fbbeb9ee9991593c60f658de4077e1ba4797280c",
+      "bytes": 11157
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000041.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000041",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000041"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:23+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "71d797011c0e15738f4b5cdbcee08740a992a6204511a63edf6902a35c9e17cb",
+      "bytes": 10851
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000042.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000042",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000042"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:22+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "a4d9ab44cfcdcb8e4726c2dca5ac0737e838016df42c785567367ae81649f1ad",
+      "bytes": 10955
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000045.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000045",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000045"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:22+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "00c8ddcb0d82ee956f78979dadc52250a3a433e09ab6bb99f745866b8e2df623",
+      "bytes": 10940
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000047.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000047",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000047"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:20+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "21f1e38f54ffd46b098e5e65579a5c9360fffa9c2594d0b242bee2ab8ce528c9",
+      "bytes": 11007
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000048.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000048",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000048"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:18+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "17da8a3839b35942094577230c2f145a90e2fe49971fd88c6a7c4379db7ef717",
+      "bytes": 10658
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000050.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000050",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000050"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:13+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "92014c5faa686ce8af27274eeeab1b8c36f431f0cbc8418a0479f4c17659d86c",
+      "bytes": 6156
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000051.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000051",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000051"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:01+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "d105bdf8604c3fec59ec81487f567d735150f536a61d9e42ce97548b9fa294d1",
+      "bytes": 6525
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000052.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000052",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000052"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:20+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "2fe37d2d28cec8420680b493d45b660cb618c814d8880f8eb47ab27ec21b13e9",
+      "bytes": 10324
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000053.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000053",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000053"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:15+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "1d8a86243e0ed302f44d2727a1e0205e6e687bab2c165dd7f1ef1c10ee5e8178",
+      "bytes": 6708
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000054.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000054",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000054"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:14+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "512a3a80e122e3d2fa2c81be8bf9854ab459873aaa2a154e7fa94fb9a3613da9",
+      "bytes": 10460
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000055.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000055",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000055"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:25:58+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "4c4472558c523824531967ba2872a085c8da54bf42b0f012de636950036cba4c",
+      "bytes": 10353
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000056.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000056",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000056"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:25:53+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "1a11be51237df2ef05e7d7a995673fc429f0dad7d822705dcc5c935f3a2ad7e1",
+      "bytes": 10431
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000057.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000057",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000057"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:08+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "696ba2dab3fca4d9a0225b510d9c09e9ec13a5e2ad6e0700ef8ddba64f5e78c6",
+      "bytes": 6738
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000060.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000060",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000060"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:04+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "c1d1fbb2dc5b67631c46d35c8729989d87555d4a9b412e43341576c6b36eb2fa",
+      "bytes": 10922
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000062.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000062",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000062"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:09+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "cb64b884b33c1c68a3a194b0fdc36d805009ca484cafdeb12f81334cd4f5144c",
+      "bytes": 11050
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000065.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000065",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000065"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:12+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "3a5ecce2de7ffeb0a6520c0deca3c79d3d7fff8ade8edf5a3c40ee3f61376817",
+      "bytes": 6682
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000067.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000067",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000067"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:08+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "ac12f6bc3be1cb2bff2cd99572bedfe5e3a1c99aac5a4834d4ba5a2d3f32eca5",
+      "bytes": 6611
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000068.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000068",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000068"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:00+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "8263c79e9d67c53254cf06b8bede869b96002055fa9bdcbad367b8e8404278a9",
+      "bytes": 10745
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000069.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000069",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000069"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:11+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "efe6e6ba422ed1c51e95735554827b8aa3713d20477f27ed512c92628a7b413f",
+      "bytes": 6415
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000070.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000070",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000070"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:10+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "383bd303256e337080a953315262c438038188f8d3f9ef63acf1082fe5a1d441",
+      "bytes": 6616
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000071.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000071",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000071"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:00+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "80a0858757c780e2e4f818741fdbc864720ad33f687c141f22e8a9a37bd8e114",
+      "bytes": 11126
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000072.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000072",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000072"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:25:54+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "16203a8b1b12a40384cd311c2f5297645cfeb3ce1c85d69afffce24c5c896630",
+      "bytes": 10955
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000074.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000074",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000074"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:06+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "c4b89b5fc6275ee67ec947ca466b9cdb0e470955fd689e6a4f5c9fe789e6b714",
+      "bytes": 6641
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000076.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000076",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000076"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:05+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "0a6f2bd9bc7c2a6ab91213efe3ad35782c99a48f3eb74c8f6ab2bbafff4d64b8",
+      "bytes": 6833
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000077.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000077",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000077"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:26:03+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "f00fdb1992705494a347bc3ff1176fec43e7056bc0b4e6ce952da8f06eb5279b",
+      "bytes": 6383
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000078.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000078",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000078"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:25:55+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "6e651b66a5752bd703f548c4dc553904bb1d0a4a48797894e7075ccdd1180d93",
+      "bytes": 6658
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000079.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000079",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000079"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:25:56+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "141491ebe321b6b4c35bb3752c478d2228856cb83b900cbc72072460105e8b27",
+      "bytes": 5931
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000080.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000080",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000080"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:25:48+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "90ad4dbb29a43d2b72b7488e99776a1461bc289296c52483eb6d467f661e2453",
+      "bytes": 6305
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000082.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000082",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000082"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:25:58+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "014d04cefd9156757702917de41d8e7359873b6fc9c8d53adaddaf078adb2f59",
+      "bytes": 5933
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000083.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000083",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000083"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:25:49+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "caca346c47392626c20d44a0b7f2449e990801dcb043f60af5f72f3c3cf987dc",
+      "bytes": 5559
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000084.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000084",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000084"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:25:50+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "497d9112c0b4a14a4ccc52d7d1dd810aeb4716b4ea264ec9c36eff8bcfd71795",
+      "bytes": 6017
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000085.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000085",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000085"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:25:51+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "d9dc12f0d31fbf1b8f44f6fd48021a7ee915e3bc3c7673e64e56d24820928d6c",
+      "bytes": 5703
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/detail_5000086.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/details",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000086",
+      "method": "GET",
+      "query_parameters": {
+        "id": "5000086"
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:25:52+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "10b6ad3a85f120f7a2a2e2632ffebe6ed92c4ae18f1e6098ebb5f1c995b7a640",
+      "bytes": 5856
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/funds_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/report/ShowReport/data",
+      "request_url": "https://reits.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=reits_fund_list&TABKEY=tab1&PAGENO=1",
+      "method": "GET",
+      "query_parameters": {
+        "SHOWTYPE": "JSON",
+        "CATALOGID": "reits_fund_list",
+        "TABKEY": "tab1",
+        "PAGENO": 1
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:25:44+08:00",
+      "content_type": "application/json",
+      "sha256": "7e41242056dc154b3688ed8224751a0ded58e2dfded05b4b8b7a0f0a92116968",
+      "bytes": 9051
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/funds_page2.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/report/ShowReport/data",
+      "request_url": "https://reits.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=reits_fund_list&TABKEY=tab1&PAGENO=2",
+      "method": "GET",
+      "query_parameters": {
+        "SHOWTYPE": "JSON",
+        "CATALOGID": "reits_fund_list",
+        "TABKEY": "tab1",
+        "PAGENO": 2
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:25:44+08:00",
+      "content_type": "application/json",
+      "sha256": "7efc6904eed19897373bf5287a992337d8c7546abe4cd9b964d527dcebf10e1c",
+      "bytes": 4803
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/projects_21_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/query",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/query?pageIndex=0&pageSize=100&bizType=2&biztypsb=21",
+      "method": "GET",
+      "query_parameters": {
+        "pageIndex": 0,
+        "pageSize": 100,
+        "bizType": 2,
+        "biztypsb": 21
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:25:46+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "46aa8f47998df6a051e6bbb1548d6a9aaf8ce75b68dc400ac7d0d3ddfaf1f86c",
+      "bytes": 70024
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/projects_23_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/query",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/query?pageIndex=0&pageSize=100&bizType=2&biztypsb=23",
+      "method": "GET",
+      "query_parameters": {
+        "pageIndex": 0,
+        "pageSize": 100,
+        "bizType": 2,
+        "biztypsb": 23
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:25:48+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "67400b455b946203f6bd1cf870eef071572badd069608199a0808096d31091db",
+      "bytes": 9380
+    },
+    {
+      "file": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39078595482-1/public/szse/projects_all_page1.json",
+      "source": "深圳证券交易所",
+      "url": "https://reits.szse.cn/api/reits/projectrends/query",
+      "request_url": "https://reits.szse.cn/api/reits/projectrends/query?pageIndex=0&pageSize=100&bizType=2",
+      "method": "GET",
+      "query_parameters": {
+        "pageIndex": 0,
+        "pageSize": 100,
+        "bizType": 2
+      },
+      "request_body": null,
+      "extracted_at": "2026-10-18T07:25:46+08:00",
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "aa2b8c59cb002b9d16acd1ac1af72e79f140b1a0f6e7cc2812033e1ac07ab112",
+      "bytes": 76363
+    }
+  ]
+}
