@@ -8,7 +8,7 @@ permissions:
   actions: write
 jobs:
   launch:
-    if: contains(github.event.head_commit.message, '[cloud-refresh-check-20261017]')
+    if: contains(github.event.head_commit.message, '[cloud-refresh-retest-20261017]')
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
