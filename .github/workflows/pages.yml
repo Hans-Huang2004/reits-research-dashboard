@@ -3,10 +3,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  workflow_run:
-    workflows: [Refresh all REIT data, Refresh NDRC recommendations]
-    types: [completed]
-    branches: [main]
+  workflow_call:
+    inputs:
+      check_freshness:
+        type: boolean
+        default: true
 permissions:
   contents: read
 concurrency:
@@ -16,7 +17,6 @@ jobs:
   build:
     # A failed collection may have committed a safe failed-attempt notice while
     # preserving complete data. The normal validators still gate publication.
-    if: ${{ github.event_name != 'workflow_run' || contains(fromJSON('["success", "failure"]'), github.event.workflow_run.conclusion) }}
     runs-on: ubuntu-latest
     outputs:
       due: ${{ steps.publication.outputs.due }}
@@ -37,7 +37,7 @@ jobs:
       - name: Check whether the completed batch is already live
         id: publication
         env:
-          FROM_REFRESH: ${{ github.event_name == 'workflow_run' }}
+          FROM_REFRESH: ${{ inputs.check_freshness }}
         run: |
           if [ "$FROM_REFRESH" = true ]; then
             python scripts/pages_due.py --site-url 'https://hans-huang2004.github.io/reits-research-dashboard/' >> "$GITHUB_OUTPUT"

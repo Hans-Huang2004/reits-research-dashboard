@@ -5,10 +5,11 @@ on:
     - cron: '45 23 * * *'
     - cron: '10,40 0-3 * * *'
   workflow_dispatch:
-  workflow_run:
-    workflows: [Refresh all REIT data]
-    types: [completed]
-    branches: [main]
+  workflow_call:
+    inputs:
+      skip_publication:
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths:
@@ -22,11 +23,11 @@ on:
       - scripts/project_updates.py
 permissions:
   contents: write
-concurrency:
-  group: reits-daily-refresh
-  cancel-in-progress: false
 jobs:
   refresh:
+    concurrency:
+      group: reits-daily-refresh
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -102,3 +103,21 @@ jobs:
             data/source_manifest/project_updates/
             workpapers/project_updates/
           retention-days: 30
+      - name: Report recommendation failure after preserving evidence
+        if: steps.freshness.outputs.due == 'true'
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          status = json.loads(Path('data/ndrc_refresh_status.json').read_text())
+          if not status.get('attempt_ok'):
+              raise SystemExit('Recommendation refresh failed; inspect preserved evidence')
+          PY
+  publish:
+    needs: refresh
+    if: ${{ always() && !cancelled() && !inputs.skip_publication }}
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

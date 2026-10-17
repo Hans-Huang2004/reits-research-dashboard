@@ -18,11 +18,11 @@ on:
 permissions:
   contents: write
   actions: read
-concurrency:
-  group: reits-daily-refresh
-  cancel-in-progress: false
 jobs:
   refresh:
+    concurrency:
+      group: reits-daily-refresh
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
@@ -105,3 +105,20 @@ jobs:
       - name: Report the failed collection after preserving the last complete data
         if: steps.collection.outcome == 'failure'
         run: exit 1
+  recommendations:
+    needs: refresh
+    uses: ./.github/workflows/ndrc-data.yml
+    with:
+      skip_publication: true
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+  publish:
+    needs: [refresh, recommendations]
+    if: ${{ always() && !cancelled() && contains(fromJSON('["success", "failure"]'), needs.refresh.result) }}
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
