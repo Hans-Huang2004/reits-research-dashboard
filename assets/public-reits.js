@@ -1,8 +1,8 @@
 /* Public REIT funds and their separate first-offering / expansion submissions. */
 'use strict';
-import { REFRESH_SCHEDULE, refreshWarning } from './refresh-health.js?v=20261016-refresh-1';
+import { REFRESH_SCHEDULE, refreshWarning } from './refresh-health.js?v=20261017-refresh-2';
 import { closeFilterMenu, syncFilterSelects } from './filter-select.js?v=20261014-filter-menu-1';
-import { PUBLIC_FIELDS, getPublicField, formatProjectField, projectFieldCellText } from './project-fields.js?v=20261016-subject-roles-1';
+import { PUBLIC_FIELDS, getPublicField, formatProjectField, projectFieldCellText } from './project-fields.js?v=20261017-refresh-2';
 import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-origin-2';
 import { initializeNdrcRecommendations, setNdrcRecommendationsActive, loadNdrcRecommendations, renderNdrcRecommendations, renderNdrcMetadata, exportNdrcCSV, openNdrcSources, openNdrcRecommendation, ndrcReverseLinksHTML } from './ndrc-recommendations.js?v=20261016-clean-copy-1';
 

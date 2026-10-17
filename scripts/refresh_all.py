@@ -127,6 +127,8 @@ def main(argv=None):
         path.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(ROOT / "data" / FILES[key], path)
     started_at = now.isoformat(timespec="seconds")
+    source_commit = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT,
+                                   check=True, capture_output=True, text=True).stdout.strip()
     commands = {
         "institutional": [sys.executable, "-m", "collectors.institutional", "--output", str(candidates["institutional"]),
                           "--archive-dir", str(work / "institutional_snapshots"), "--verify-links", "--raw-dir", str(raw / "institutional")],
@@ -154,7 +156,8 @@ def main(argv=None):
         write(work / "field_retention.json", retention)
         manifest = publish_candidates(candidates, ROOT / "data", batch_id, started_at)
         manifest["field_retention"] = {key: {"checked_fields": value["checked_fields"], "workpaper": str((work / "field_retention.json").relative_to(ROOT))} for key, value in retention.items()}
-        manifest.update({"raw_dir": str(raw.relative_to(ROOT)), "workpaper": str(work.relative_to(ROOT)),
+        manifest.update({"source_commit": source_commit, "trigger_event": os.environ.get("GITHUB_EVENT_NAME", "local"),
+                         "workflow_run_id": os.environ.get("GITHUB_RUN_ID"), "raw_dir": str(raw.relative_to(ROOT)), "workpaper": str(work.relative_to(ROOT)),
                          "commands": {key: [str(Path(arg).relative_to(ROOT)) if str(arg).startswith(str(ROOT) + "/") else arg for arg in command] for key, command in commands.items()},
                          "raw_sha256": {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(raw.rglob("*")) if p.is_file()}})
         write(work / "validation.json", manifest)

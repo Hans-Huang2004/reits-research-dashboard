@@ -1,10 +1,10 @@
 /* REITs dashboard for project lists collected directly from official SSE/SZSE APIs. */
 'use strict';
-import { REFRESH_SCHEDULE, refreshWarning } from './refresh-health.js?v=20261016-refresh-1';
+import { REFRESH_SCHEDULE, refreshWarning } from './refresh-health.js?v=20261017-refresh-2';
 import { enhanceFilterSelects, syncFilterSelects, closeFilterMenu } from './filter-select.js?v=20261014-filter-menu-1';
-import { initializePublicReits, setPublicModuleActive, openPublicSources, openPublicRecord } from './public-reits.js?v=20261016-subject-roles-1';
+import { initializePublicReits, setPublicModuleActive, openPublicSources, openPublicRecord } from './public-reits.js?v=20261017-refresh-2';
 import { initializeProjectUpdates, setUpdatesModuleActive, openUpdatesSources } from './project-updates.js?v=20261016-updates-5';
-import { INSTITUTIONAL_FIELDS, getInstitutionalField, projectFieldCellText } from './project-fields.js?v=20261016-subject-roles-1';
+import { INSTITUTIONAL_FIELDS, getInstitutionalField, projectFieldCellText } from './project-fields.js?v=20261017-refresh-2';
 import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-disclosures-1';
 
 const DATA_URL = new URL('../data/institutional.json', import.meta.url);

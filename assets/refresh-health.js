@@ -1,5 +1,5 @@
 /* Both populations use the same Beijing morning freshness rule. */
-export const REFRESH_SCHEDULE = '每日07:37起 · 08:00前为目标';
+export const REFRESH_SCHEDULE = '每日05:37起 · 08:00前为目标';
 
 export function refreshWarning(snapshot, now = new Date()) {
   if (!snapshot) return '';

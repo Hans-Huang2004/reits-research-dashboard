@@ -1,9 +1,9 @@
 name: Refresh all REIT data
 on:
   schedule:
-    # UTC: 07:37/07:52 Beijing, then every 15 minutes at 08:07–11:52.
+    # UTC: 05:37–07:52 Beijing, then every 15 minutes at 08:07–11:52.
     # Start before the 08:00 reading time; skip once today's pair is complete.
-    - cron: '37,52 23 * * *'
+    - cron: '37,52 21-23 * * *'
     - cron: '7,22,37,52 0-3 * * *'
   workflow_dispatch:
   push:
@@ -81,6 +81,12 @@ jobs:
               git commit -m "data: refresh public and institutional REITs together"
             else
               git commit -m "data: retain complete REIT snapshots and record failed attempt"
+            fi
+            git pull --rebase origin main
+            python scripts/project_updates.py
+            git add data/project_updates.json data/source_manifest/project_updates/ workpapers/project_updates/
+            if ! git diff --cached --quiet; then
+              git commit -m "data: reconcile project updates with current branch inputs"
             fi
             git push
           fi
