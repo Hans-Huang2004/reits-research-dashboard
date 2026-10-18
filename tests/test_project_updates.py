@@ -63,10 +63,12 @@ def advance(snapshot, when="2026-10-15"):
 
 
 class ProjectUpdateTests(unittest.TestCase):
-    def test_initial_import_is_baseline_and_never_invents_prior_status_chain(self):
+    def test_initial_import_has_no_increment_and_never_invents_prior_status_chain(self):
         payload = calculate(example())
         self.assertTrue(payload["events"])
         self.assertTrue(all(e["is_baseline"] for e in payload["events"]))
+        self.assertTrue(all(not e["is_incremental"] for e in payload["events"]))
+        self.assertTrue(all(e["event_date"] == e["official_date"] for e in payload["events"]))
         self.assertFalse(any(e["event_type"] == "status_change" for e in payload["events"]))
         self.assertEqual(payload["audit"]["observed_event_count"], 0)
 
@@ -88,13 +90,15 @@ class ProjectUpdateTests(unittest.TestCase):
         self.assertEqual(observed[0]["event_date"], "2026-10-15")
         self.assertNotEqual(observed[0]["source_version"]["sha256"], observed[0]["previous_source_version"]["sha256"])
 
-    def test_old_dated_status_correction_is_historical_revision(self):
+    def test_old_dated_status_transition_is_incremental_with_official_archive_date(self):
         before = example(); after = deepcopy(before)
         advance(after["institutional"])
         after["institutional"]["items"][0]["status"] = "4"
-        revisions = [e for e in calculate(before, after)["events"] if e["event_type"] == "revision"]
+        revisions = [e for e in calculate(before, after)["events"] if e["event_type"] == "status_change"]
         self.assertEqual(len(revisions), 1)
-        self.assertTrue(revisions[0]["is_baseline"])
+        self.assertTrue(revisions[0]["is_incremental"])
+        self.assertEqual(revisions[0]["official_date"], "2026-10-01")
+        self.assertEqual(revisions[0]["event_date"], "2026-10-01")
 
     def test_same_day_repeated_status_transition_is_not_swallowed_by_fact_dedup(self):
         before = example(); current = deepcopy(before)
@@ -113,7 +117,7 @@ class ProjectUpdateTests(unittest.TestCase):
         self.assertEqual(len({e["id"] for e in observed}), 3)
         self.assertEqual(sum(e["after"].get("status") == "已反馈" for e in observed), 2)
 
-    def test_new_project_without_official_date_uses_first_observed_date(self):
+    def test_new_project_without_official_date_remains_undated(self):
         before = example(); after = deepcopy(before)
         advance(after["institutional"])
         new = deepcopy(after["institutional"]["items"][0])
@@ -123,16 +127,68 @@ class ProjectUpdateTests(unittest.TestCase):
         self.assertEqual(len(observed), 1)
         self.assertEqual(observed[0]["event_type"], "new_project")
         self.assertEqual(observed[0]["official_date"], "")
-        self.assertEqual(observed[0]["event_date"], "2026-10-15")
+        self.assertEqual(observed[0]["event_date"], "")
+        self.assertTrue(observed[0]["is_incremental"])
+        self.assertEqual(observed[0]["detected_at"], "2026-10-15T09:00:00+08:00")
 
-    def test_old_document_backfill_keeps_official_date_and_detection_separate(self):
+    def test_new_project_with_only_nonworkflow_prospectus_is_still_undated_increment(self):
+        before = example(); after = deepcopy(before); advance(after["public"])
+        new = deepcopy(after["public"]["events"][0])
+        new.update(id="SSE_prospectus_only", accepted_date="", timeline=[], documents=[{
+            "title": "基金招募说明书", "url": "https://static.sse.com.cn/prospectus.pdf", "date": "2026-10-01"}])
+        after["public"]["events"].append(new)
+        events = [e for e in calculate(before, after)["events"] if e["entity_id"] == new["id"]]
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["event_type"], "new_project")
+        self.assertTrue(events[0]["is_incremental"])
+        self.assertEqual(events[0]["official_date"], "")
+        self.assertEqual(events[0]["event_date"], "")
+
+    def test_first_crawled_old_document_is_incremental_but_archives_official_date(self):
         before = example(); after = deepcopy(before)
         advance(after["public"])
         after["public"]["events"][0]["documents"] = [{"title": "关于问询函的回复", "url": "https://static.sse.com.cn/old.pdf", "date": "2026-10-01"}]
         event = next(e for e in calculate(before, after)["events"] if e["event_type"] == "documents_added")
-        self.assertTrue(event["is_baseline"])
+        self.assertTrue(event["is_incremental"])
         self.assertEqual(event["official_date"], "2026-10-01")
+        self.assertEqual(event["event_date"], "2026-10-01")
         self.assertEqual(event["detected_at"], "2026-10-15T09:00:00+08:00")
+
+    def test_document_date_completion_or_correction_moves_only_its_own_archive_entry(self):
+        for original_date in ("", "2026-10-01"):
+            with self.subTest(original_date=original_date):
+                before = example()
+                before["public"]["events"][0]["documents"] = [
+                    {"title": "关于问询函的回复甲", "url": "https://static.sse.com.cn/reply-a.pdf", "date": original_date},
+                    {"title": "关于问询函的回复乙", "url": "https://static.sse.com.cn/reply-b.pdf", "date": original_date}]
+                after = deepcopy(before); advance(after["public"])
+                after["public"]["events"][0]["documents"][0]["date"] = "2026-10-03"
+                payload = calculate(before, after)
+                documents = [e for e in payload["events"] if e["event_type"] == "documents_added"]
+                self.assertEqual(len(documents), 2)
+                revised = next(e for e in documents if e["documents"][0]["url"].endswith("reply-a.pdf"))
+                unchanged = next(e for e in documents if e["documents"][0]["url"].endswith("reply-b.pdf"))
+                self.assertEqual(revised["official_date"], "2026-10-03")
+                self.assertEqual(revised["event_date"], "2026-10-03")
+                self.assertTrue(revised["is_incremental"])
+                self.assertEqual(revised["detected_at"], "2026-10-15T09:00:00+08:00")
+                self.assertEqual(revised["first_detected_at"], "2026-10-14T09:00:00+08:00")
+                self.assertEqual(unchanged["official_date"], original_date)
+                self.assertFalse(unchanged["is_incremental"])
+                audit = payload["audit"]["document_revisions"]
+                self.assertEqual(len(audit), 1)
+                self.assertEqual(audit[0]["before"]["date"], original_date)
+                self.assertEqual(audit[0]["after"]["date"], "2026-10-03")
+                self.assertEqual(audit[0]["previous_event"]["source_version"]["sha256"], digest(before["public"]))
+                self.assertEqual(audit[0]["source_version"]["sha256"], digest(after["public"]))
+                versions = {p: [version(p, before[p], 0, p != "public")] for p in FILES}
+                versions["public"].append(version("public", after["public"], 1))
+                repeated = deepcopy(after); repeated["public"]["updated_at"] = "2026-10-16T09:00:00+08:00"
+                repeated["public"]["date"] = "2026-10-16"
+                versions["public"].append(version("public", repeated["public"], 2, True))
+                rebuilt = build_payload(versions, repeated, "2026-10-16T15:00:00+08:00")
+                self.assertEqual(rebuilt["events"], payload["events"])
+                self.assertEqual(rebuilt["audit"]["document_revisions"], audit)
 
     def test_same_document_on_fund_and_filing_is_only_counted_on_filing(self):
         data = example()
@@ -142,6 +198,65 @@ class ProjectUpdateTests(unittest.TestCase):
         events = [e for e in calculate(data)["events"] if e["event_type"] == "documents_added"]
         self.assertEqual(len(events), 1)
         self.assertEqual(events[0]["entity_kind"], "filing")
+
+    def test_old_timeline_and_new_entity_facts_all_enter_first_crawl_increment(self):
+        before = example(); after = deepcopy(before); advance(after["public"])
+        after["public"]["events"][0]["timeline"] = [{"title": "已反馈", "date": "2026-10-03"}]
+        new = deepcopy(after["public"]["events"][0])
+        new.update(id="SSE_b", name="新增申报", accepted_date="2026-09-10", updated_date="2026-10-01",
+                   timeline=[], documents=[{"title": "关于反馈意见的回复", "url": "https://static.sse.com.cn/new-old.pdf", "date": "2026-09-20"}])
+        after["public"]["events"].append(new)
+        events = [e for e in calculate(before, after)["events"] if e["is_incremental"]]
+        self.assertEqual(len(events), 3)
+        self.assertEqual({e["official_date"] for e in events}, {"2026-10-03", "2026-09-10", "2026-09-20"})
+        self.assertTrue(all(e["event_date"] == e["official_date"] for e in events))
+        self.assertTrue(all(e["detected_at"] == "2026-10-15T09:00:00+08:00" for e in events))
+
+    def test_reappearing_facts_and_unrelated_snapshot_edits_do_not_duplicate_events(self):
+        before = example(); current = deepcopy(before)
+        snapshots = []
+        doc = {"title": "关于问询函的回复", "url": "https://static.sse.com.cn/reply.pdf", "date": "2026-10-01"}
+        for index in range(4):
+            snapshot = deepcopy(before["public"])
+            snapshot["updated_at"] = "2026-10-15T" + str(9 + index).zfill(2) + ":00:00+08:00"
+            snapshot["date"] = "2026-10-15"
+            snapshot["funds"][0]["research_note"] = "无关资料" + str(index)
+            if index in (1, 3):
+                snapshot["funds"][0]["established_date"] = "2026-10-02"
+                snapshot["events"][0]["documents"] = [deepcopy(doc)]
+            if index == 1:
+                snapshot["funds"][0]["offering_start_date"] = "2026-10-02"
+            snapshots.append(version("public", snapshot, index, index == 3))
+        current["public"] = snapshots[-1]["snapshot"]
+        versions = {p: [version(p, before[p], 0, True)] for p in FILES}
+        versions["public"] = snapshots
+        payload = build_payload(versions, current, "2026-10-16T15:00:00+08:00")
+        increments = [e for e in payload["events"] if e["is_incremental"]]
+        self.assertEqual(len(increments), 2)
+        self.assertEqual(sum("established_date" in e["after"] for e in payload["events"]), 1)
+        self.assertEqual({e["detected_at"] for e in increments}, {"2026-10-15T10:00:00+08:00"})
+        self.assertEqual(len({e["id"] for e in payload["events"]}), len(payload["events"]))
+
+    def test_rebuild_does_not_redate_existing_crawl_increments_to_migration_day(self):
+        before = example(); after = deepcopy(before); advance(after["public"])
+        after["public"]["events"][0]["documents"] = [{"title": "关于问询函的回复", "url": "https://static.sse.com.cn/old.pdf", "date": "2026-10-01"}]
+        versions = {p: [version(p, before[p], 0, p != "public")] for p in FILES}
+        versions["public"].append(version("public", after["public"], 1, True))
+        first = build_payload(versions, after, "2026-10-16T15:00:00+08:00")
+        migrated = build_payload(versions, after, "2026-10-18T15:00:00+08:00")
+        self.assertEqual(first["events"], migrated["events"])
+        self.assertFalse(any(e["detected_at"].startswith("2026-10-18") for e in migrated["events"]))
+
+    def test_validation_rejects_collection_date_fallback_and_nonboolean_increment(self):
+        payload = calculate(example())
+        forged = deepcopy(payload)
+        forged["events"][0]["event_date"] = "2026-10-14"
+        with self.assertRaisesRegex(ValueError, "archive date"):
+            validate(forged)
+        forged = deepcopy(payload)
+        forged["events"][0]["is_incremental"] = 0
+        with self.assertRaisesRegex(ValueError, "increment flag"):
+            validate(forged)
 
     def test_fund_identity_consolidation_does_not_create_new_fund(self):
         before = example(); after = deepcopy(before)
@@ -174,28 +289,29 @@ class ProjectUpdateTests(unittest.TestCase):
         self.assertEqual(observed[0]["after"]["amt"], 12)
         self.assertIn("亿元", next(c["label"] for c in observed[0]["changes"] if c["field"] == "amt"))
 
-    def test_old_dated_ndrc_core_changes_are_historical_revision_not_new_recommendation(self):
+    def test_old_dated_ndrc_core_change_is_incremental_official_revision(self):
         before = example()
         before["ndrc"]["items"][0].update(proposed_fund_amount_yi=10, applicant_region="甲市")
         after = deepcopy(before); advance(after["ndrc"])
         after["ndrc"]["items"][0].update(proposed_fund_amount_yi=12, applicant_region="乙市", industry_official="租赁住房")
         revisions = [e for e in calculate(before, after)["events"] if e["event_type"] == "revision"]
         self.assertEqual(len(revisions), 1)
-        self.assertTrue(revisions[0]["is_baseline"])
+        self.assertTrue(revisions[0]["is_incremental"])
+        self.assertEqual(revisions[0]["event_date"], "2026-09-01")
         self.assertEqual(set(revisions[0]["after"]), {"proposed_fund_amount_yi", "applicant_region", "industry_official"})
 
-    def test_later_matching_review_is_labelled_relation_revision_with_no_official_business_date(self):
+    def test_later_matching_review_is_audit_metadata_without_business_event(self):
         before = example(); after = deepcopy(before); advance(after["ndrc"])
         after["ndrc"]["matching_updated_at"] = "2026-10-15T10:00:00+08:00"
         after["ndrc"]["items"][0]["relations"] = [{"exchange_event_id": "SSE_a", "fund_id": "SSE_FUND_508001"}]
         versions = {p: [dict(version(p, before[p], 0, p != "ndrc"), first_retained_at="2026-10-14T12:00:00+08:00")] for p in FILES}
         versions["ndrc"].append(dict(version("ndrc", after["ndrc"], 1, True), first_retained_at="2026-10-15T12:00:00+08:00"))
-        observed = [e for e in build_payload(versions, after, "2026-10-16T15:00:00+08:00")["events"] if not e["is_baseline"]]
-        self.assertEqual(len(observed), 1)
-        self.assertEqual(observed[0]["event_type"], "revision")
-        self.assertEqual(observed[0]["title"], "关联资料修订")
-        self.assertEqual(observed[0]["official_date"], "")
-        self.assertEqual(observed[0]["reviewed_at"], "2026-10-15T10:00:00+08:00")
+        payload = build_payload(versions, after, "2026-10-16T15:00:00+08:00")
+        self.assertFalse(any(e["is_incremental"] for e in payload["events"]))
+        self.assertFalse(any("related_entity_ids" in e["after"] for e in payload["events"]))
+        audit = next(row for row in payload["audit"]["metadata_revisions"] if row["field"] == "related_entity_ids")
+        self.assertEqual(audit["reviewed_at"], "2026-10-15T10:00:00+08:00")
+        self.assertEqual(audit["collected_at"], "2026-10-15T09:00:00+08:00")
 
     def test_missing_entity_does_not_imply_termination(self):
         before = example(); after = deepcopy(before)
@@ -221,14 +337,16 @@ class ProjectUpdateTests(unittest.TestCase):
         self.assertFalse(any("listing_date" in e["after"] for e in payload["events"]))
         self.assertEqual(payload["sources"]["public"]["latest_official_date"], "2026-10-14")
 
-    def test_new_recommendation_is_observed_only_for_recent_official_date(self):
+    def test_new_recommendation_is_incremental_independent_of_official_date(self):
         before = example(); after = deepcopy(before)
         advance(after["ndrc"])
-        new = deepcopy(after["ndrc"]["items"][0]); new.update(id="NDRC_new", recommended_date="2026-10-15")
+        new = deepcopy(after["ndrc"]["items"][0]); new.update(id="NDRC_new", recommended_date="2026-08-01")
         after["ndrc"]["items"].append(new)
         observed = [e for e in calculate(before, after)["events"] if not e["is_baseline"]]
         self.assertEqual(len(observed), 1)
         self.assertEqual(observed[0]["title"], "新增国家发改委推荐项目")
+        self.assertTrue(observed[0]["is_incremental"])
+        self.assertEqual(observed[0]["event_date"], "2026-08-01")
 
     def test_official_timeline_duplicate_rows_are_deduplicated(self):
         data = example()

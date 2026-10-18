@@ -1,10 +1,10 @@
-/* An auditable event feed; baseline snapshots never become new discoveries. */
+/* Official dates archive events; collection metadata selects today's increments. */
 import { syncFilterSelects } from './filter-select.js?v=20261014-filter-menu-1';
 const DATA_URL = new URL('../data/project_updates.json', import.meta.url);
 const COMPRESSED_DATA_URL = new URL('../data/project_updates.json.gz', import.meta.url);
 const POPULATIONS = { public: '公募REITs', institutional: '机构间REITs', ndrc: '发改委推荐' };
-const EVENT_LABELS = { status_change: '状态变化', status_changed: '状态变化', new_project: '新增项目', document_added: '新增披露', documents_added: '新增披露', revision: '资料修订', metadata_changed: '资料修订', recommendation: '新增推荐', recommendation_added: '新增推荐', milestone: '阶段进展', historical_milestone: '历史进展', baseline: '历史基线' };
-const DEFAULT_FILTERS = { population: '', range: 'all', start: '', end: '', search: '', exchange: '', asset: '', business: '', type: '', savedOnly: false, includeHistory: false, page: 1, pageSize: 25 };
+const EVENT_LABELS = { status_change: '状态变化', status_changed: '状态变化', new_project: '新增项目', document_added: '新增披露', documents_added: '新增披露', revision: '资料修订', metadata_changed: '资料修订', recommendation: '新增推荐', recommendation_added: '新增推荐', milestone: '阶段进展', historical_milestone: '阶段进展', baseline: '项目进展' };
+const DEFAULT_FILTERS = { population: '', range: 'all', start: '', end: '', search: '', exchange: '', asset: '', business: '', type: '', savedOnly: false, page: 1, pageSize: 25 };
 let state = { ...DEFAULT_FILTERS };
 let dailyPopulation = '';
 let snapshot = null;
@@ -30,8 +30,11 @@ export function updateDate(value) {
   return result;
 }
 const today = () => updateDate(new Date().toISOString());
-const isHistory = event => event.is_baseline === true || event.is_backfill === true || ['baseline', 'backfill', 'historical'].includes(event.discovery_type);
-export const updateEventDate = event => isHistory(event) ? updateDate(event.official_date || event.event_date) : updateDate(event.detected_at || event.event_date || event.official_date);
+// Compatibility applies only until old snapshots gain an explicit increment flag.
+const isIncremental = event => Object.hasOwn(event, 'is_incremental') ? event.is_incremental === true : !(event.is_baseline === true || event.is_backfill === true || ['baseline', 'backfill', 'historical'].includes(event.discovery_type));
+const isBusinessEvent = event => event.internal_only !== true && event.title !== '关联资料修订' && !(event.changes?.length && event.changes.every(change => change.field === 'related_entity_ids'));
+export const updateEventDate = event => updateDate(event.official_date);
+const compareEventDates = (a, b) => updateEventDate(b).localeCompare(updateEventDate(a)) || a.id.localeCompare(b.id);
 const text = value => value == null || value === '' ? '未披露' : Array.isArray(value) ? value.map(text).join('、') : typeof value === 'object' ? Object.entries(value).map(([key, item]) => `${key}：${text(item)}`).join('；') : typeof value === 'boolean' ? value ? '是' : '否' : String(value);
 const normalized = value => String(value || '').replace(/\s/g, '').toLowerCase();
 export const updateEntityKey = event => `${event.population}:${event.entity_kind || 'project'}:${event.entity_id}`;
@@ -56,15 +59,16 @@ export function validateUpdatesSnapshot(data) {
   for (const event of data.events) {
     if (!event || !event.id || typeof event.id !== 'string' || ids.has(event.id) || !Object.hasOwn(POPULATIONS, event.population) || !event.entity_id || typeof event.project_name !== 'string' || !event.project_name || !Array.isArray(event.changes || [])) throw new Error('项目动态存在重复标识或缺少必要字段');
     ids.add(event.id);
-    if (!isHistory(event) && !updateDate(event.detected_at)) throw new Error('新发现动态缺少可核实的发现日期');
+    if (Object.hasOwn(event, 'is_incremental') && typeof event.is_incremental !== 'boolean') throw new Error('动态增量标识必须为布尔值');
+    if (isIncremental(event) && !updateDate(event.detected_at)) throw new Error('增量动态缺少可核实的采集时间');
   }
   return data;
 }
 
 export function updatePeriod(filters = {}, asOf = today()) {
+  if (!filters.range || filters.range === 'all') return { start: '', end: '', valid: true };
   const end = filters.range === 'custom' ? filters.end || asOf : asOf;
   if (filters.range === 'custom') return { start: filters.start || '', end, valid: !filters.start || !end || filters.start <= end };
-  if (filters.range === 'all') return { start: '', end, valid: true };
   const date = new Date(`${asOf}T00:00:00Z`);
   date.setUTCDate(date.getUTCDate() - (filters.range === '30' ? 29 : 6));
   return { start: date.toISOString().slice(0, 10), end, valid: true };
@@ -76,8 +80,8 @@ export function filterUpdateEvents(events, filters = {}, favorites = new Set(), 
   const needle = normalized(filters.search);
   return events.filter(event => {
     const date = updateEventDate(event);
-    return (!isHistory(event) || filters.includeHistory)
-      && (!period.start || date >= period.start) && (!period.end || date <= period.end) && Boolean(date)
+    return isBusinessEvent(event) && ((!filters.range || filters.range === 'all') || Boolean(date))
+      && (!period.start || date >= period.start) && (!period.end || (Boolean(date) && date <= period.end))
       && (!filters.population || event.population === filters.population)
       && (!filters.exchange || event.exchange === filters.exchange)
       && (!filters.asset || event.asset_type === filters.asset)
@@ -85,14 +89,14 @@ export function filterUpdateEvents(events, filters = {}, favorites = new Set(), 
       && (!filters.type || event.event_type === filters.type)
       && (!filters.savedOnly || isUpdateFavorite(event, favorites))
       && (!needle || normalized([event.project_name, event.manager, event.origin, event.fund_code, event.fund_id, event.entity_id, event.title, event.asset_type].join(' ')).includes(needle));
-  }).sort((a, b) => updateEventDate(b).localeCompare(updateEventDate(a)) || String(b.detected_at || '').localeCompare(String(a.detected_at || '')) || a.id.localeCompare(b.id));
+  }).sort(compareEventDates);
 }
 
 export function groupUpdateEvents(events) {
   const groups = new Map();
-  for (const event of events) {
-    // Entity IDs identify the official filing batch. Dates keep separate refreshes visible.
-    const key = `${updateEntityKey(event)}:${event.business_type || ''}:${updateEventDate(event)}:${event.source_version?.sha256 || ''}:${isHistory(event) ? 'history' : 'observed'}`;
+  for (const event of events.filter(isBusinessEvent)) {
+    // Entity IDs identify the official filing batch; refresh versions do not split a date.
+    const key = `${updateEntityKey(event)}:${event.business_type || ''}:${updateEventDate(event)}`;
     if (!groups.has(key)) groups.set(key, { key, date: updateEventDate(event), event, events: [] });
     groups.get(key).events.push(event);
   }
@@ -100,13 +104,18 @@ export function groupUpdateEvents(events) {
 }
 
 export function summarizeUpdates(events) {
-  const result = { total: events.length, projects: new Set(events.map(updateEntityKey)).size, groups: groupUpdateEvents(events).length, observed: 0, historical: 0, public: 0, institutional: 0, ndrc: 0 };
-  for (const event of events) { result[event.population]++; result[isHistory(event) ? 'historical' : 'observed']++; }
+  events = events.filter(isBusinessEvent);
+  const result = { total: events.length, projects: new Set(events.map(updateEntityKey)).size, groups: groupUpdateEvents(events).length, public: 0, institutional: 0, ndrc: 0 };
+  for (const event of events) result[event.population]++;
   return result;
 }
 
 export function dailyUpdateEvents(events, population = '', asOf = today()) {
-  return filterUpdateEvents(events.filter(event => updateDate(event.detected_at) === asOf), { range: 'custom', start: asOf, end: asOf, population }, new Set(), asOf);
+  const ids = new Set();
+  return events.filter(event => {
+    if (!isBusinessEvent(event) || !isIncremental(event) || updateDate(event.detected_at) !== asOf || (population && event.population !== population) || ids.has(event.id)) return false;
+    ids.add(event.id); return true;
+  }).sort(compareEventDates);
 }
 
 export function dailyUpdateCounts(events, asOf = today()) {
@@ -127,8 +136,9 @@ export function updateSourceHealth(sources = {}, asOf = today()) {
 }
 
 export function updatesCSVTable(events, data = {}) {
-  const header = ['事件ID', '范围', '项目ID', '项目名称', '业务类型', '交易所', '资产类型', '管理人', '原始权益人', '事件类型', '标题', '变化前', '变化后', '字段变化', '官方日期', '首次发现时间', '列表日期', '记录性质', '官方来源', '基金ID', '关联项目ID', '来源版本', '生成时间'];
-  return [header, ...events.map(event => [event.id, POPULATIONS[event.population], event.entity_id, event.project_name, event.business_type || '', event.exchange || '', event.asset_type || '', event.manager || '', event.origin || '', eventLabel(event), event.title || '', text(event.before), text(event.after), (event.changes || []).map(change => `${change.label || change.field}：${text(change.before)} → ${text(change.after)}`).join('；'), event.official_date || '', event.detected_at || '', updateEventDate(event), isHistory(event) ? '历史回填' : '持续跟踪', safeUpdateURL(event.source_url), event.fund_id || '', (event.related_entity_ids || []).join('；'), text(event.source_version), data.generated_at || ''])];
+  const header = ['事件ID', '范围', '项目ID', '项目名称', '业务类型', '交易所', '资产类型', '管理人', '原始权益人', '事件类型', '标题', '变化前', '变化后', '字段变化', '官方日期', '官方来源', '基金ID', '关联项目ID', '来源版本', '生成时间'];
+  const sourceVersion = version => text(Object.fromEntries(['sha256', 'path', 'retained_path'].filter(key => version?.[key] != null).map(key => [key, version[key]])));
+  return [header, ...events.filter(isBusinessEvent).map(event => [event.id, POPULATIONS[event.population], event.entity_id, event.project_name, event.business_type || '', event.exchange || '', event.asset_type || '', event.manager || '', event.origin || '', eventLabel(event), event.title || '', text(event.before), text(event.after), (event.changes || []).map(change => `${change.label || change.field}：${text(change.before)} → ${text(change.after)}`).join('；'), updateEventDate(event), safeUpdateURL(event.source_url), event.fund_id || '', (event.related_entity_ids || []).join('；'), sourceVersion(event.source_version), data.generated_at || ''])];
 }
 export function updatesCSVCell(value) {
   let cell = value == null ? '' : String(value);
@@ -198,7 +208,8 @@ function buildUI() {
   add(filters, search, labeledControl('交易所', 'updates-exchange', 'select', [['', '全部交易所']]), labeledControl('资产类型', 'updates-asset', 'select', [['', '全部资产']]), labeledControl('业务类型', 'updates-business', 'select', [['', '全部业务']]), labeledControl('事件类型', 'updates-type', 'select', [['', '全部事件']]), button('↺ 重置筛选', 'button reset-button', 'reset'));
   const foot = el('div', 'filter-foot');
   const extras = el('div', 'filter-extras');
-  for (const [id, label] of [['updates-saved-only', '仅看关注项目'], ['updates-include-history', '包含历史回填']]) { const wrapper = el('label'); const input = el('input'); input.type = 'checkbox'; input.id = id; add(wrapper, input, document.createTextNode(label)); extras.append(wrapper); }
+  const savedLabel = el('label'); const savedInput = el('input'); savedInput.type = 'checkbox'; savedInput.id = 'updates-saved-only';
+  add(savedLabel, savedInput, document.createTextNode('仅看关注项目')); extras.append(savedLabel);
   add(foot, extras);
   const list = el('div', 'updates-list'); list.id = 'updates-list'; list.setAttribute('aria-live', 'polite');
   const pagination = el('div', 'pagination'); const pageCount = el('span'); pageCount.id = 'updates-page-count'; const pages = el('div', 'pages'); const pageNumber = el('span'); pageNumber.id = 'updates-page-number';
@@ -236,7 +247,7 @@ function fillOptions() {
   for (const [key, property] of [['exchange', 'exchange'], ['asset', 'asset_type'], ['business', 'business_type'], ['type', 'event_type']]) {
     const select = $(`updates-${key}`); const first = select.firstElementChild.cloneNode(true);
     select.replaceChildren(first);
-    const values = [...new Set((snapshot?.events || []).map(event => event[property]).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'zh-CN'));
+    const values = [...new Set((snapshot?.events || []).filter(isBusinessEvent).map(event => event[property]).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'zh-CN'));
     for (const value of values) { const option = el('option', '', key === 'type' ? EVENT_LABELS[value] || value : value); option.value = value; select.append(option); }
     select.value = state[key];
   }
@@ -300,8 +311,7 @@ function eventDetail(event) {
   const item = el('div', 'updates-event-detail');
   add(item, el('strong', 'updates-event-title', event.title || eventLabel(event)), changeRows(event));
   const dates = el('div', 'updates-event-dates');
-  if (event.official_date) dates.append(el('span', '', `官方日期 ${updateDate(event.official_date)}`));
-  if (event.detected_at) dates.append(el('span', '', `${isHistory(event) ? '收录时间' : '首次发现'} ${String(event.detected_at).replace('T', ' ').slice(0, 16)}`));
+  dates.append(el('span', '', updateEventDate(event) ? `官方日期 ${updateEventDate(event)}` : '日期未披露'));
   add(item, dates, externalLink('官方披露 ↗', event.source_url));
   if (event.documents?.length) {
     const docs = el('div', 'updates-document-links');
@@ -316,12 +326,12 @@ function renderGroup(group) {
   const body = el('div', 'updates-row-body'); const line = el('div', 'updates-row-heading');
   const name = button(event.project_name, 'updates-project-name', 'timeline', event.id);
   const tags = el('div', 'updates-tags');
-  for (const label of [POPULATIONS[event.population], event.exchange, event.business_type, isHistory(event) ? '历史回填' : '']) if (label) tags.append(el('span', isHistory(event) && label === '历史回填' ? 'updates-tag history' : 'updates-tag', label));
+  for (const label of [POPULATIONS[event.population], event.exchange, event.business_type]) if (label) tags.append(el('span', 'updates-tag', label));
   add(line, name, tags); body.append(line);
   const main = events[0];
   add(body, el('p', 'updates-row-title', events.length === 1 ? main.title || eventLabel(main) : `${[...new Set(events.map(eventLabel))].join('、')} · ${events.length}条事件`), changeRows(main));
   const meta = el('div', 'updates-row-meta');
-  add(meta, el('span', '', event.official_date ? `官方日期 ${updateDate(event.official_date)}` : `首次发现 ${updateDate(event.detected_at)}`), event.asset_type ? el('span', '', event.asset_type) : null, event.manager ? el('span', 'updates-manager', event.manager) : null);
+  add(meta, el('span', '', updateEventDate(event) ? `官方日期 ${updateEventDate(event)}` : '日期未披露'), event.asset_type ? el('span', '', event.asset_type) : null, event.manager ? el('span', 'updates-manager', event.manager) : null);
   body.append(meta);
   const links = el('div', 'updates-row-links');
   add(links, button('项目时间线', 'text-button', 'timeline', event.id), button('项目库 ↗', 'text-button', 'project', event.id), externalLink('官方披露 ↗', event.source_url));
@@ -341,14 +351,13 @@ function renderLibrary() {
   const list = $('updates-list'); list.replaceChildren();
   const pages = Math.max(1, Math.ceil(groups.length / state.pageSize)); state.page = Math.min(pages, Math.max(1, state.page));
   const visible = groups.slice((state.page - 1) * state.pageSize, state.page * state.pageSize);
-  let date = '';
-  for (const group of visible) { if (date !== group.date) { date = group.date; list.append(el('h3', 'updates-date-heading', date)); } list.append(renderGroup(group)); }
+  let date = null;
+  for (const group of visible) { if (date !== group.date) { date = group.date; list.append(el('h3', 'updates-date-heading', date || '日期未披露')); } list.append(renderGroup(group)); }
   if (!visible.length) {
     const empty = el('div', 'updates-empty');
     const title = !snapshot ? error ? '动态读取失败' : '正在读取项目动态…' : !period.valid ? '请调整日期范围' : '当前条件没有可展示的动态';
-    const hint = !snapshot ? error || '正在核查动态记录与数据来源。' : issues.length ? '部分来源尚未完成核查，请查看上方来源状态。' : state.includeHistory ? '可以扩大日期范围，或重置其他筛选条件。' : '持续跟踪从建立基线后开始；可包含历史回填，查看已有项目的公开进展。';
+    const hint = !snapshot ? error || '正在核查动态记录与数据来源。' : issues.length ? '部分来源尚未完成核查，请查看上方来源状态。' : '可以扩大日期范围，或重置其他筛选条件。';
     add(empty, el('strong', '', title), el('p', '', hint));
-    if (snapshot && !state.includeHistory) empty.append(button('查看历史回填', 'button', 'show-history'));
     list.append(empty);
   }
   $('updates-page-count').textContent = `共${groups.length}组动态，每页${state.pageSize}组`;
@@ -377,7 +386,7 @@ function showDialog(dialog) {
 function closeButton() { const close = button('关闭', 'button updates-dialog-close', 'close'); close.setAttribute('aria-label', '关闭对话框'); return close; }
 export function timelineEvents(events, target) {
   const related = new Set([target.entity_id, ...(target.related_entity_ids || [])]);
-  return events.filter(event => updateEntityKey(event) === updateEntityKey(target) || related.has(event.entity_id) || (event.related_entity_ids || []).includes(target.entity_id)).sort((a, b) => (updateDate(b.official_date) || updateEventDate(b)).localeCompare(updateDate(a.official_date) || updateEventDate(a)) || a.id.localeCompare(b.id));
+  return events.filter(event => isBusinessEvent(event) && (updateEntityKey(event) === updateEntityKey(target) || related.has(event.entity_id) || (event.related_entity_ids || []).includes(target.entity_id))).sort(compareEventDates);
 }
 function openTimeline(target) {
   if (!target || !snapshot) return;
@@ -389,15 +398,14 @@ function openTimeline(target) {
   const attention = el('span', 'updates-timeline-note', saved ? '★ 项目或所属基金已关注' : '☆ 尚未关注');
   add(tools, attention, button('前往项目库／管理关注 ↗', 'button', 'project', target.id), externalLink('官方项目页 ↗', target.source_url));
   const meta = el('p', 'updates-timeline-note', [POPULATIONS[target.population], target.business_type, target.asset_type, target.fund_code].filter(Boolean).join(' · '));
-  const note = el('p', 'updates-timeline-note', '按官方日期排列；缺少官方日期的记录使用发现日期。已确认关联项目一并展示，首发与扩募保留各自批次。');
   const list = el('div', 'updates-timeline');
   for (const event of timelineEvents(snapshot.events, target)) {
     const entry = el('section', 'updates-timeline-entry');
-    const day = updateDate(event.official_date) || updateEventDate(event);
+    const day = updateEventDate(event);
     add(entry, el('h3', '', `${day || '日期未披露'} · ${event.business_type || POPULATIONS[event.population]}`), event.entity_id !== target.entity_id ? el('p', 'updates-timeline-related', event.project_name) : null, eventDetail(event));
     list.append(entry);
   }
-  dialog.replaceChildren(header, meta, tools, note, list); showDialog(dialog);
+  dialog.replaceChildren(header, meta, tools, list); showDialog(dialog);
 }
 export function openUpdatesSources() {
   if (!initialized) return;
@@ -405,9 +413,7 @@ export function openUpdatesSources() {
   const heading = add(el('div', 'updates-dialog-heading'), title, closeButton());
   const intro = el('p', '', '动态来自公募REITs、机构间REITs及国家发展改革委推荐项目的公开资料。三类事件分别统计；状态、业务批次和原始日期保留来源口径。');
   const definitions = el('dl', 'updates-definitions');
-  const baselineAt = snapshot?.audit?.tracking_started_at || snapshot?.audit?.baseline_at || snapshot?.audit?.baseline_created_at || snapshot?.generated_at;
-  const coverage = `${snapshot ? `持续变化记录自${updateDate(baselineAt) || '本次基线建立时'}开始。` : '跟踪起点待读取。'}首次导入的历史进展未计为新动态，可勾选“包含历史回填”查阅。时间线只展示已取得并留存的公开记录。`;
-  for (const [term, definition] of [['事件与项目', '一项状态变化、一次新增披露或一项资料修订各计一条事件。同项目同批次同日的事件合并显示，统计与CSV仍按事件计数。'], ['日期', '持续跟踪动态按首次发现日期筛选，官方日期另列；历史回填按官方日期筛选。'], ['历史覆盖', coverage], ['关联与批次', '只合并已确认的关联关系；首发、扩募及具体申报批次分别保留。'], ['异常与刷新', '采集失败、来源不完整或记录暂时消失不生成终止事件。来源核查未完成时，不据此判断当天无变化。'], ['筛选与导出', '上方今日更新按北京时间当天首次发现的事件展示，不含历史回填。卡片只筛选今日列表；下方全部动态库的筛选、分页和明细展开与上方独立。CSV只导出下方动态库的当前筛选结果。项目时间线展示该项目及已确认关联项目的全部已留存记录。']]) add(definitions, el('dt', '', term), el('dd', '', definition));
+  for (const [term, definition] of [['事件与项目', '一项状态变化、一次新增披露或一项资料修订各计一条事件。同项目同批次同官方日期的事件合并显示，统计与CSV仍按事件计数。'], ['日期', '全部记录按各节点的官方日期归档、排序和筛选；披露文件使用官方发布日期。未取得官方日期的记录列入“日期未披露”，不以采集日期代替，也不纳入具体日期范围。'], ['记录覆盖', '全部动态库和项目时间线展示已取得并留存的公开记录。记录整理和关联关系维护不计为业务增量。'], ['关联与批次', '只合并已确认的关联关系；首发、扩募及具体申报批次分别保留。'], ['异常与刷新', '采集失败、来源不完整或记录暂时消失不生成终止事件。来源核查未完成时，不据此判断当天无变化。'], ['筛选与导出', '上方今日更新累计北京时间当天采集新识别的节点、文件及内容变化，不受官方日期早晚或缺失影响，同一事件重复采集不重复计数。卡片只筛选今日列表；下方全部动态库的筛选、分页和明细展开与上方独立。CSV只导出下方动态库的当前筛选结果，日期使用官方日期。项目时间线包含已确认关联项目的记录。']]) add(definitions, el('dt', '', term), el('dd', '', definition));
   const sourceList = el('div', 'updates-source-details');
   for (const source of updateSourceHealth(snapshot?.sources)) {
     const section = el('section');
@@ -453,7 +459,7 @@ function exportCSV() {
 function eventById(id) { return snapshot?.events.find(event => event.id === id); }
 function synchronizeInputs() {
   for (const key of ['search', 'exchange', 'asset', 'business', 'type', 'start', 'end']) $(`updates-${key}`).value = state[key];
-  $('updates-saved-only').checked = state.savedOnly; $('updates-include-history').checked = state.includeHistory;
+  $('updates-saved-only').checked = state.savedOnly;
 }
 async function onAction(event) {
   const action = event.target.closest('[data-updates-action]'); if (!action) return;
@@ -482,7 +488,6 @@ async function onAction(event) {
       break;
     }
     case 'close': action.closest('dialog')?.close(); break;
-    case 'show-history': state.includeHistory = true; state.range = 'all'; state.page = 1; synchronizeInputs(); renderLibrary(); break;
     case 'reset': state = { ...DEFAULT_FILTERS }; synchronizeInputs(); renderLibrary(); break;
     case 'prev': state.page--; renderLibrary(); break;
     case 'next': state.page++; renderLibrary(); break;
@@ -501,7 +506,7 @@ export function initializeProjectUpdates(options = {}) {
   buildUI(); initialized = true;
   $('updates-panel').addEventListener('click', onAction);
   for (const key of ['search', 'exchange', 'asset', 'business', 'type', 'start', 'end']) $(`updates-${key}`).addEventListener(key === 'search' ? 'input' : 'change', event => { state[key] = event.target.value; state.page = 1; renderLibrary(); });
-  for (const [id, key] of [['updates-saved-only', 'savedOnly'], ['updates-include-history', 'includeHistory']]) $(id).addEventListener('change', event => { state[key] = event.target.checked; state.page = 1; renderLibrary(); });
+  $('updates-saved-only').addEventListener('change', event => { state.savedOnly = event.target.checked; state.page = 1; renderLibrary(); });
   for (const id of ['updates-detail-dialog', 'updates-source-dialog']) $(id).addEventListener('click', event => { if (event.target !== event.currentTarget) return; const rect = event.currentTarget.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) event.currentTarget.close(); });
   window.addEventListener('storage', () => { if (active) renderLibrary(); });
   window.addEventListener('reits:favorites-changed', () => { if (active) renderLibrary(); });

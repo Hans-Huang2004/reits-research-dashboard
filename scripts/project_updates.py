@@ -20,6 +20,7 @@ from scripts.validate_public_data import validate as validate_public
 from scripts.validate_ndrc_data import validate as validate_ndrc
 
 BEIJING = ZoneInfo("Asia/Shanghai")
+TRANSFORMATION_VERSION = "official-date-archive-v2"
 FILES = {"public": "public_reits.json", "institutional": "institutional.json", "ndrc": "ndrc_recommendations.json"}
 LABELS = {"public": "公募REITs", "institutional": "机构间REITs", "ndrc": "国家发改委推荐"}
 STATUS = {"0": "已申报", "1": "已受理", "2": "已反馈", "3": "已接收反馈意见", "4": "通过", "5": "未通过", "8": "终止", "9": "中止", "10": "已回复意见", "11": "提交注册", "12": "注册生效"}
@@ -168,20 +169,23 @@ def version_ref(version):
 
 
 def event_id(event):
-    identity = {"population": event["population"], "entity_id": event["entity_id"], "type": event["event_type"], "official_date": event["official_date"] or "", "changes": event["changes"], "documents": [d["url"] for d in event["documents"]]}
-    if not event["is_baseline"]:
-        # The same A→B transition can legitimately recur within one day.
-        # Baseline facts deduplicate by evidence; observed transitions bind the batch.
-        identity["observation_sha256"] = event["source_version"]["sha256"]
+    # A fact's identity must not change when an unrelated field or the input
+    # serialization changes. Repeated state transitions carry a replay-stable
+    # occurrence number, rather than the entire snapshot hash.
+    changes = event["changes"]
+    if event["event_type"] in ("milestone", "recommendation", "documents_added", "new_project"):
+        changes = [{"field": row["field"], "after": row["after"]} for row in changes]
+    identity = {"population": event["population"], "entity_id": event["entity_id"], "type": event["event_type"], "official_date": event["official_date"] or "", "changes": changes, "documents": sorted(d["url"] for d in event["documents"])}
+    if event.get("occurrence") is not None:
+        identity["occurrence"] = event["occurrence"]
     return "UPDATE_" + digest(identity)[:24]
 
 
-def make_event(entity, version, event_type, title, official_date, changes, documents=None, discovery_type="baseline"):
+def make_event(entity, version, event_type, title, official_date, changes, documents=None, is_incremental=False):
     before = {c["field"]: c["before"] for c in changes}
     after = {c["field"]: c["after"] for c in changes}
     docs = documents or []
-    baseline = discovery_type == "baseline"
-    event = {"population": entity["population"], "population_label": LABELS[entity["population"]], "entity_id": entity["id"], "entity_kind": entity["entity_kind"], **{key: deepcopy(entity[key]) for key in ("project_name", "exchange", "asset_type", "business_type", "manager", "origin", "fund_id", "fund_code", "related_entity_ids", "source_url")}, "event_type": event_type, "title": title, "before": before, "after": after, "official_date": official_date or "", "detected_at": version["collected_at"], "event_date": (official_date or day(version["collected_at"])) if baseline else day(version["collected_at"]), "discovery_type": discovery_type, "is_baseline": baseline, "documents": docs, "changes": changes, "source_version": version_ref(version), "batch_key": entity["population"] + "|" + entity["id"] + "|" + version["sha256"]}
+    event = {"population": entity["population"], "population_label": LABELS[entity["population"]], "entity_id": entity["id"], "entity_kind": entity["entity_kind"], **{key: deepcopy(entity[key]) for key in ("project_name", "exchange", "asset_type", "business_type", "manager", "origin", "fund_id", "fund_code", "related_entity_ids", "source_url")}, "event_type": event_type, "title": title, "before": before, "after": after, "official_date": official_date or "", "detected_at": version["collected_at"], "event_date": official_date or "", "is_incremental": bool(is_incremental), "discovery_type": "observed" if is_incremental else "baseline", "is_baseline": not is_incremental, "documents": docs, "changes": changes, "source_version": version_ref(version), "batch_key": entity["population"] + "|" + entity["id"] + "|" + (official_date or "undated")}
     event["id"] = event_id(event)
     return event
 
@@ -190,71 +194,74 @@ def change(field, before, after):
     return {"field": field, "label": FIELD_LABELS.get(field, field), "before": before, "after": after}
 
 
-def newer_fact(official_date, previous_version):
-    """Same-day source changes are observable; older dates are historical backfill."""
-    return bool(official_date and official_date >= day(previous_version["collected_at"]))
+def first_known_facts(event, known):
+    """Remove repeated static evidence before grouping it into an archive event."""
+    if event["event_type"] in ("milestone", "recommendation", "new_project"):
+        changes = []
+        for row in event["changes"]:
+            fact = (event["entity_id"], event["event_type"], event["official_date"], row["field"], digest(row["after"]))
+            if fact not in known:
+                changes.append(row)
+                known.add(fact)
+        if not changes:
+            return None
+        if len(changes) != len(event["changes"]) and all(row["field"] != "timeline" for row in changes):
+            event["title"] = "国家发改委推荐" if event["population"] == "ndrc" else "、".join(row["label"].removesuffix("日期") for row in changes)
+        event["changes"] = changes
+    event["before"] = {row["field"]: row["before"] for row in event["changes"]}
+    event["after"] = {row["field"]: row["after"] for row in event["changes"]}
+    event["id"] = event_id(event)
+    return event
 
 
 def entity_events(entity, old, version, previous_version):
     events = []
+    incremental = previous_version is not None
     milestones = {k: v for k, v in entity["milestones"].items() if not old or old["milestones"].get(k) != v}
     by_date = {}
     for key, value in milestones.items():
         by_date.setdefault(value, []).append(change(key, old["milestones"].get(key) if old else None, value))
     for when, changes in sorted(by_date.items()):
-        observed = old is not None and previous_version is not None and newer_fact(when, previous_version)
         title = "、".join(c["label"].removesuffix("日期") for c in changes)
         if entity["population"] == "ndrc":
             title = "国家发改委推荐"
-        events.append(make_event(entity, version, "recommendation" if entity["population"] == "ndrc" else "milestone", title, when, changes, discovery_type="observed" if observed else "baseline"))
+        events.append(make_event(entity, version, "recommendation" if entity["population"] == "ndrc" else "milestone", title, when, changes, is_incremental=incremental))
     old_timeline = {(r["date"], r["title"]) for r in old["timeline"]} if old else set()
     for when, title in sorted({(r["date"], r["title"]) for r in entity["timeline"]} - old_timeline):
-        observed = old is not None and previous_version is not None and newer_fact(when, previous_version)
-        events.append(make_event(entity, version, "milestone", title, when, [change("timeline", None, title)], discovery_type="observed" if observed else "baseline"))
-    old_docs = {doc["url"] for doc in old["documents"]} if old else set()
-    new_docs = [doc for doc in entity["documents"] if doc["url"] not in old_docs and workflow_document(doc)]
-    for when in sorted({doc["date"] for doc in new_docs}):
-        docs = [doc for doc in new_docs if doc["date"] == when]
-        observed = old is not None and previous_version is not None and newer_fact(when, previous_version)
-        title = "新增回复文件" if any(re.search("回复|答复", doc["title"]) for doc in docs) else "新增披露文件"
-        events.append(make_event(entity, version, "documents_added", title, when, [change("documents", None, [doc["title"] for doc in docs])], docs, "observed" if observed else "baseline"))
+        events.append(make_event(entity, version, "milestone", title, when, [change("timeline", None, title)], is_incremental=incremental))
+    old_docs = {doc["url"]: doc for doc in old["documents"]} if old else {}
+    for doc in entity["documents"]:
+        previous_doc = old_docs.get(doc["url"])
+        if (previous_doc != doc and workflow_document(doc)):
+            # One file per event lets a later date correction move only this
+            # URL's archive entry, without redating its former same-day peers.
+            title = "披露资料修订" if previous_doc else "新增回复文件" if re.search("回复|答复", doc["title"]) else "新增披露文件"
+            event = make_event(entity, version, "documents_added", title, doc["date"], [change("documents", [previous_doc["title"]] if previous_doc else None, [doc["title"]])], [doc], incremental)
+            event["first_detected_at"] = version["collected_at"]
+            events.append(event)
     if old:
         fields = ("official_status", "official_sub_status") if entity["population"] == "public" else ("status",) if entity["population"] == "institutional" else ()
         changes = [change(key, old["state"].get(key), entity["state"].get(key)) for key in fields if old["state"].get(key) != entity["state"].get(key)]
         if changes:
             when = entity["official_updated_date"]
-            observed = newer_fact(when, previous_version)
-            events.append(make_event(entity, version, "status_change" if observed else "revision", "审核状态更新" if observed else "历史状态资料修订", when, changes, discovery_type="observed" if observed else "baseline"))
+            events.append(make_event(entity, version, "status_change", "审核状态更新", when, changes, is_incremental=incremental))
         revision_fields = ("name", "amt") if entity["population"] == "institutional" else ("name", "proposed_fund_amount_yi", "applicant_region", "industry_official") if entity["population"] == "ndrc" else ("name",)
         revisions = [change(field, old["state"].get(field), entity["state"].get(field)) for field in revision_fields if old["state"].get(field) != entity["state"].get(field)]
         if revisions:
             when = entity["official_updated_date"]
-            observed = newer_fact(when, previous_version)
-            events.append(make_event(entity, version, "revision", "资料修订", when, revisions, discovery_type="observed" if observed else "baseline"))
-        if entity["population"] == "ndrc" and old["state"].get("related_entity_ids") != entity["state"].get("related_entity_ids"):
-            reviewed_at = entity.get("relation_revision_at") or ""
-            # Existing manually reviewed history is not launched as fresh progress.
-            # Subsequent reviews get an explicitly separate metadata revision.
-            observed = bool(reviewed_at and version.get("tracking_epoch") and reviewed_at >= version["tracking_epoch"])
-            event = make_event(entity, version, "revision", "关联资料修订", "", [change("related_entity_ids", old["state"].get("related_entity_ids"), entity["state"].get("related_entity_ids"))], discovery_type="observed" if observed else "baseline")
-            event["reviewed_at"] = reviewed_at
-            if reviewed_at:
-                event["detected_at"] = reviewed_at
-                event["event_date"] = day(reviewed_at)
-            events.append(event)
+            events.append(make_event(entity, version, "revision", "资料修订", when, revisions, is_incremental=incremental))
     elif previous_version and entity["entity_kind"] != "fund":
         when = entity["milestones"].get("accepted_date") or entity["milestones"].get("recommended_date")
-        if newer_fact(when, previous_version):
+        if when:
             for event in events:
                 if event["official_date"] == when and event["event_type"] in ("milestone", "recommendation"):
-                    event.update(discovery_type="observed", is_baseline=False, event_date=day(version["collected_at"]))
                     event["title"] = "新增受理项目" if entity["population"] != "ndrc" else "新增国家发改委推荐项目"
                     event["id"] = event_id(event)
                     break
-        elif not when and not entity["timeline"] and not entity["documents"]:
+        if not events:
             # Official lists can expose a new project without a business date.
             # Preserve the first observed appearance without inventing its date.
-            events.append(make_event(entity, version, "new_project", "首次发现项目", "", [change("project_presence", None, "已公开")], discovery_type="observed"))
+            events.append(make_event(entity, version, "new_project", "首次发现项目", "", [change("project_presence", None, "已公开")], is_incremental=True))
     return events
 
 
@@ -274,14 +281,15 @@ def source_meta(population, snapshot, version, coverage_start):
 def build_payload(versions, current, generated_at):
     """Pure calculation over validated retained input versions; no filesystem writes."""
     aliases = aliases_for_current(current)
-    tracking_epoch = min((v["first_retained_at"] for rows in versions.values() for v in rows if v.get("first_retained_at")), default="")
     ledger, latest, sources, populations = {}, {}, {}, {}
-    missing, revisions = [], []
+    missing, revisions, document_revisions = [], [], []
     for population in FILES:
         previous_entities, previous_entity_versions, previous_version = {}, {}, None
+        occurrences = Counter()
+        known_facts = set()
+        document_events = {}
         sequence = sorted(versions[population], key=lambda v: (v["collected_at"], v["sequence"]))
         for version in sequence:
-            version = dict(version, tracking_epoch=tracking_epoch)
             rows = entities(population, version["snapshot"], aliases)
             if previous_version:
                 absent = sorted(set(previous_entities) - set(rows))
@@ -291,10 +299,31 @@ def build_payload(versions, current, generated_at):
                 old = previous_entities.get(identity)
                 old_version = previous_entity_versions.get(identity) or previous_version
                 for event in entity_events(entity, old, version, old_version):
+                    event = first_known_facts(event, known_facts)
+                    if event is None:
+                        continue
                     event["previous_source_version"] = version_ref(old_version) if old and old_version else None
+                    if event["event_type"] in ("status_change", "revision"):
+                        signature = event_id(event)
+                        occurrences[signature] += 1
+                        event["occurrence"] = occurrences[signature]
+                        event["id"] = event_id(event)
+                    if event["event_type"] == "documents_added":
+                        document_key = (identity, event["documents"][0]["url"])
+                        previous_event = document_events.get(document_key)
+                        if previous_event is not None:
+                            if previous_event["documents"] == event["documents"]:
+                                continue
+                            event["first_detected_at"] = previous_event.get("first_detected_at", previous_event["detected_at"])
+                            event["title"] = "披露资料修订"
+                            document_revisions.append({"population": population, "entity_id": identity, "url": document_key[1], "before": deepcopy(previous_event["documents"][0]), "after": deepcopy(event["documents"][0]), "previous_event": deepcopy(previous_event), "source_version": version_ref(version), "collected_at": version["collected_at"], "treatment": "replace this URL's archive entry with corrected official metadata; retain prior source evidence here"})
+                            ledger.pop(previous_event["id"], None)
+                        document_events[document_key] = event
                     ledger.setdefault(event["id"], event)
                 if old and old["project_name"] != entity["project_name"]:
-                    revisions.append({"population": population, "entity_id": identity, "field": "name", "before": old["project_name"], "after": entity["project_name"], "input_sha256": version["sha256"], "treatment": "metadata revision, excluded from activity counts"})
+                    revisions.append({"population": population, "entity_id": identity, "field": "name", "before": old["project_name"], "after": entity["project_name"], "input_sha256": version["sha256"], "treatment": "official source name revision; preserve before/after evidence"})
+                if old and population == "ndrc" and old["state"].get("related_entity_ids") != entity["state"].get("related_entity_ids"):
+                    revisions.append({"population": population, "entity_id": identity, "field": "related_entity_ids", "before": old["state"].get("related_entity_ids"), "after": entity["state"].get("related_entity_ids"), "reviewed_at": entity.get("relation_revision_at") or "", "collected_at": version["collected_at"], "input_sha256": version["sha256"], "treatment": "manual relationship metadata; audit only, excluded from business events and daily increments"})
                 # Source pages can temporarily omit an attachment. Previously
                 # disclosed files/nodes remain known when they return later.
                 if old:
@@ -323,7 +352,9 @@ def build_payload(versions, current, generated_at):
         row = latest.get(event["population"] + "|" + event["entity_id"])
         if row:
             event["related_entity_ids"] = sorted(set(row["related_entity_ids"]))
-    audit = {"tracking_started_at": min(meta["coverage_start"] for meta in sources.values()), "baseline_at": min(meta["coverage_start"] for meta in sources.values()), "populations": populations, "event_count": len(events), "observed_event_count": sum(not e["is_baseline"] for e in events), "baseline_event_count": sum(e["is_baseline"] for e in events), "event_counts_by_population": dict(Counter(e["population"] for e in events)), "event_counts_by_type": dict(Counter(e["event_type"] for e in events)), "missing_entities": missing, "metadata_revisions": revisions, "policy": {"baseline": "Initial and older-dated disclosures are timeline backfills, excluded from default activity feed", "official_dates": "Source business/publication date differs from first successful snapshot detection time", "status": "Updated date alone and derived stages are never status transitions", "fund_identity": "Canonical current code or exact filing linkage; identity consolidation is not a new fund", "absence": "Missing records never imply termination", "research_fields": "Classification, matching, research fields and review dates are excluded from progress", "history": "Explicit dates, official timelines and official workflow documents only; no inferred historical status chain"}}
+    audit = {"tracking_started_at": min(meta["coverage_start"] for meta in sources.values()), "baseline_at": min(meta["coverage_start"] for meta in sources.values()), "populations": populations, "event_count": len(events), "incremental_event_count": sum(e["is_incremental"] for e in events), "undated_event_count": sum(not e["official_date"] for e in events), "observed_event_count": sum(not e["is_baseline"] for e in events), "baseline_event_count": sum(e["is_baseline"] for e in events), "event_counts_by_population": dict(Counter(e["population"] for e in events)), "event_counts_by_type": dict(Counter(e["event_type"] for e in events)), "missing_entities": missing, "metadata_revisions": revisions, "policy": {"archive": "All business events are archived by official_date; no collection-date fallback or history classification", "incremental": "New facts compared with prior successful complete snapshots, regardless of official date; initial snapshot is not a daily increment", "official_dates": "event_date equals official_date or remains blank; detected_at is used internally only to select the collection day's increments", "identity": "Static facts deduplicate by official evidence; recurring state transitions retain stable occurrence numbers independent of unrelated snapshot changes", "status": "Updated date alone and derived stages are never status transitions", "fund_identity": "Canonical current code or exact filing linkage; identity consolidation is not a new fund", "absence": "Missing records never imply termination", "research_fields": "Classification, matching, research fields and review dates are excluded from business events", "history": "Explicit dates, official timelines and official workflow documents only; no inferred historical status chain"}}
+    audit["transformation_version"] = TRANSFORMATION_VERSION
+    audit["document_revisions"] = document_revisions
     payload = {"schema_version": 1, "generated_at": generated_at, "as_of_date": day(generated_at), "sources": sources, "events": events, "projects": sorted(latest.values(), key=lambda r: (r["population"], r["id"])), "audit": audit}
     validate(payload)
     return payload
@@ -339,11 +370,20 @@ def validate(snapshot, root=None):
         raise ValueError("Duplicate project update ID")
     if len({(p["population"], p["id"]) for p in projects}) != len(projects):
         raise ValueError("Duplicate current project identity")
+    document_keys = set()
     for event in events:
         if event.get("population") not in FILES or event.get("discovery_type") not in ("baseline", "observed") or event.get("is_baseline") != (event.get("discovery_type") == "baseline"):
             raise ValueError("Invalid event population/baseline classification")
-        if not official_url(event.get("source_url")) or not timestamp(event.get("detected_at")) or not day(event.get("event_date")):
+        if not official_url(event.get("source_url")) or not timestamp(event.get("detected_at")):
             raise ValueError("Event lacks official evidence or dated detection")
+        if not isinstance(event.get("is_incremental"), bool) or event["is_incremental"] == event["is_baseline"]:
+            raise ValueError("Invalid event increment flag")
+        if event.get("event_date") != event.get("official_date"):
+            raise ValueError("Event archive date must equal official date without collection fallback")
+        if event["event_type"] in ("status_change", "revision") and (type(event.get("occurrence")) is not int or event["occurrence"] < 1):
+            raise ValueError("State transition lacks stable positive occurrence number")
+        if "related_entity_ids" in event.get("after", {}):
+            raise ValueError("Manual matching metadata cannot become a business event")
         if event.get("official_date") and (not day(event["official_date"]) or event["official_date"] > day(event["detected_at"])):
             raise ValueError("Future or invalid official event date")
         if not event.get("changes") or not re.fullmatch(r"[0-9a-f]{64}", event.get("source_version", {}).get("sha256", "")):
@@ -354,6 +394,17 @@ def validate(snapshot, root=None):
             raise ValueError("Event identity does not reconcile to its evidence")
         if not all(official_url(doc.get("url")) for doc in event.get("documents", [])):
             raise ValueError("Nonofficial activity document")
+        if event["event_type"] == "documents_added":
+            docs = event.get("documents", [])
+            first_detected = timestamp(event.get("first_detected_at"))
+            if len(docs) != 1 or docs[0].get("date") != event["official_date"]:
+                raise ValueError("Each document archive entry must use its own official date")
+            if not first_detected or first_detected > timestamp(event["detected_at"]):
+                raise ValueError("Invalid first document detection time")
+            key = (event["population"], event["entity_id"], docs[0]["url"])
+            if key in document_keys:
+                raise ValueError("Duplicate document archive entry")
+            document_keys.add(key)
     for population, filename in FILES.items():
         meta = snapshot.get("sources", {}).get(population, {})
         if meta.get("complete") is not True or not timestamp(meta.get("checked_at")) or not re.fullmatch(r"[0-9a-f]{64}", meta.get("snapshot_sha256", "")):
@@ -405,9 +456,9 @@ def validate(snapshot, root=None):
                 if any(value is not None and field in old_entity["state"] and value != old_entity["state"][field] for field, value in event["before"].items()):
                     raise ValueError("Event before value differs from referenced official source")
     audit = snapshot.get("audit", {})
-    if audit.get("event_count") != len(events) or audit.get("observed_event_count") != sum(not e["is_baseline"] for e in events) or audit.get("baseline_event_count") != sum(e["is_baseline"] for e in events):
+    if audit.get("event_count") != len(events) or audit.get("incremental_event_count") != sum(e["is_incremental"] for e in events) or audit.get("undated_event_count") != sum(not e["official_date"] for e in events) or audit.get("observed_event_count") != sum(not e["is_baseline"] for e in events) or audit.get("baseline_event_count") != sum(e["is_baseline"] for e in events):
         raise ValueError("Activity audit counts do not reconcile")
-    return {"ok": True, "events": len(events), "observed_events": audit["observed_event_count"], "baseline_events": sum(e["is_baseline"] for e in events), "projects": len(projects), "unique_events": True, "official_sources_only": True, "current_input_hashes_match": root is not None}
+    return {"ok": True, "events": len(events), "incremental_events": audit["incremental_event_count"], "undated_events": audit["undated_event_count"], "observed_events": audit["observed_event_count"], "baseline_events": sum(e["is_baseline"] for e in events), "projects": len(projects), "unique_events": True, "official_sources_only": True, "current_input_hashes_match": root is not None}
 
 
 def discover(root, population):
@@ -524,10 +575,10 @@ def build(root=ROOT, generated_at=None, rebuild=False):
         if status.get("status") not in (None, "complete") and attempted and attempted >= payload["sources"][population]["collected_at"]:
             payload["sources"][population].update(status=status["status"], error=status.get("error") or "最近一次核查未完成", last_attempted_at=attempted)
     audit = validate(payload, root)
-    source_id = digest({p: [v["sha256"] for v in sorted(values, key=lambda v: (v["collected_at"], v["sequence"]))] for p, values in versions.items()})[:20]
+    source_id = digest({"transformation_version": TRANSFORMATION_VERSION, "versions": {p: [v["sha256"] for v in sorted(values, key=lambda v: (v["collected_at"], v["sequence"]))] for p, values in versions.items()}})[:20]
     audit_path = "workpapers/project_updates/runs/" + source_id + "/audit.json"
     payload["audit"].update(audit_path=audit_path, input_index_path="workpapers/project_updates/input_index.json")
-    audit.update({"generated_at": generated_at, "input_versions": [{k: v[k] for k in ("population", "path", "retained_path", "sha256", "collected_at")} for v in records.values()], "rejected_inputs": rejected, "missing_entities": payload["audit"]["missing_entities"], "metadata_revisions": payload["audit"]["metadata_revisions"], "raw_retention": raw_checks, "freshness": payload["sources"], "transformation": "scripts/project_updates.py: build_payload; official workflow fields and documents only", "output_path": "data/project_updates.json", "raw_trail": ["data/source_manifest/", "data/raw/", "raw/"], "exceptions": ["Historical snapshots failing current validators are rejected and listed", "Missing precise official status dates remain blank; collection time is shown separately", "NDRC matching can reference a prior public input; relation review creates no progress"]})
+    audit.update({"generated_at": generated_at, "input_versions": [{k: v[k] for k in ("population", "path", "retained_path", "sha256", "collected_at")} for v in records.values()], "rejected_inputs": rejected, "missing_entities": payload["audit"]["missing_entities"], "metadata_revisions": payload["audit"]["metadata_revisions"], "raw_retention": raw_checks, "freshness": payload["sources"], "transformation": "scripts/project_updates.py: build_payload; official workflow fields and documents only", "output_path": "data/project_updates.json", "raw_trail": ["data/source_manifest/", "data/raw/", "raw/"], "exceptions": ["Historical snapshots failing current validators are rejected and listed", "Missing precise official status dates remain blank; collection time is retained internally for daily increments", "NDRC matching can reference a prior public input; relation review creates no progress"]})
     # Preserve generated_at and byte identity when inputs/events/health are unchanged.
     old_payload = read(root / "data/project_updates.json")
     if old_payload:
