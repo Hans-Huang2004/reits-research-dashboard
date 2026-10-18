@@ -1,0 +1,151 @@
+{
+  "generated_at": "2026-10-18T15:35:40+08:00",
+  "source_collected_at": "2026-10-18T15:35:34+08:00",
+  "source_url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+  "original_user_url": "https://59.252.66.79:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+  "api_url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
+  "tls_verified": true,
+  "collection": {
+    "official_total": 137,
+    "pages": 3,
+    "page_size": 50,
+    "raw_row_count": 137,
+    "complete": true,
+    "pages_checked": [
+      {
+        "page_num": 1,
+        "row_count": 50
+      },
+      {
+        "page_num": 2,
+        "row_count": 50
+      },
+      {
+        "page_num": 3,
+        "row_count": 37
+      }
+    ]
+  },
+  "requests": [
+    {
+      "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
+      "method": "POST",
+      "params": {
+        "pageSize": 50,
+        "pageNum": 1,
+        "reitsProName": "",
+        "industry": "",
+        "mainDeclareUnit": "",
+        "startFundMoney": "",
+        "endFundMoney": "",
+        "reportRecommendStartTime": "",
+        "reportRecommendEndTime": ""
+      },
+      "retrieved_at": "2026-10-18T15:35:36+08:00",
+      "status": 200,
+      "tls_verified": true,
+      "raw_path": "data/raw/ndrc/refresh/39108178576-1/page0001.json",
+      "sha256": "08ac65d4f213c963488adb3f08eeb9876554c890806ccbfa31bb4407e8456028",
+      "bytes": 9326
+    },
+    {
+      "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
+      "method": "POST",
+      "params": {
+        "pageSize": 50,
+        "pageNum": 2,
+        "reitsProName": "",
+        "industry": "",
+        "mainDeclareUnit": "",
+        "startFundMoney": "",
+        "endFundMoney": "",
+        "reportRecommendStartTime": "",
+        "reportRecommendEndTime": ""
+      },
+      "retrieved_at": "2026-10-18T15:35:38+08:00",
+      "status": 200,
+      "tls_verified": true,
+      "raw_path": "data/raw/ndrc/refresh/39108178576-1/page0002.json",
+      "sha256": "2c291b2f60a092a0f9e19ce1e3d92e168eb8d8e288f9651a1ece87d0c2ac05fa",
+      "bytes": 9215
+    },
+    {
+      "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
+      "method": "POST",
+      "params": {
+        "pageSize": 50,
+        "pageNum": 3,
+        "reitsProName": "",
+        "industry": "",
+        "mainDeclareUnit": "",
+        "startFundMoney": "",
+        "endFundMoney": "",
+        "reportRecommendStartTime": "",
+        "reportRecommendEndTime": ""
+      },
+      "retrieved_at": "2026-10-18T15:35:40+08:00",
+      "status": 200,
+      "tls_verified": true,
+      "raw_path": "data/raw/ndrc/refresh/39108178576-1/page0003.json",
+      "sha256": "9ac316820af4047d1741055d9c630eaa76d89f74779cee94827ea9d3a7a49c3a",
+      "bytes": 7104
+    },
+    {
+      "path": "data/public_reits.json",
+      "sha256": "102374c996c7a8ee6a0dfcee1d14c620f75d4686f23802a649df7dead296c35e",
+      "date": "2026-10-18",
+      "updated_at": "2026-10-18T07:22:40+08:00"
+    },
+    {
+      "kind": "reviewed_matching_config",
+      "path": "config/ndrc_exchange_links.json",
+      "sha256": "69b571210e1494cbc8267f78390b35f1b0e14405c8516ddcdeec149b7844d576"
+    }
+  ],
+  "normalization": {
+    "identity": "源接口无官方项目ID；派生ID由项目名称、主申报地方／中央企业及推荐日期生成；行业和金额变化不改变ID",
+    "date": "reportRecommendTime按源日期提取YYYY-MM-DD，未做时区偏移",
+    "text": "仅在计算层去除字段首尾空格，Raw保留原值",
+    "amount": "保留fundMoney数值，单位亿元，无换算"
+  },
+  "public_snapshot": {
+    "path": "data/public_reits.json",
+    "sha256": "102374c996c7a8ee6a0dfcee1d14c620f75d4686f23802a649df7dead296c35e"
+  },
+  "reviewed_workpaper": {
+    "path": "workpapers/ndrc/refresh/39108178576-1/collection/collection_reviewed_snapshot.json",
+    "sha256": "c1da2907f5484a44b09def32aba19ddbb93f9a28764637848fdf6fc286820967"
+  },
+  "normalized_workpaper": {
+    "path": "workpapers/ndrc/refresh/39108178576-1/collection/collection_normalized.json",
+    "sha256": "a7fd60d560ad4026c1028f9988d6b89c396d41fe389866fd5408707bf0f16aa9"
+  },
+  "match_review": {
+    "path": "config/ndrc_exchange_links.json",
+    "sha256": "69b571210e1494cbc8267f78390b35f1b0e14405c8516ddcdeec149b7844d576"
+  },
+  "output_path": "workpapers/ndrc/refresh/39108178576-1/ndrc_candidate.json",
+  "validation": {
+    "ok": true,
+    "items": 137,
+    "official_total": 137,
+    "pages": 3,
+    "identities_unique": true,
+    "raw_to_normalized_count_difference": 0,
+    "derived_not_official_ids": true,
+    "match_statuses": {
+      "confirmed": 128,
+      "unmatched": 9
+    },
+    "relations": 128,
+    "business_types": {
+      "新购入": 16,
+      "首发": 113,
+      "待核实": 8
+    },
+    "earliest_recommended_date": "2020-12-30",
+    "latest_recommended_date": "2026-09-10",
+    "negative_acceptance_intervals": 16
+  },
+  "snapshot_sha256": "c1da2907f5484a44b09def32aba19ddbb93f9a28764637848fdf6fc286820967"
+}
