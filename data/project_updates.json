@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-18T15:35:41+08:00",
-  "as_of_date": "2026-10-18",
+  "generated_at": "2026-10-19T07:41:15+08:00",
+  "as_of_date": "2026-10-19",
   "sources": {
     "public": {
       "label": "公募REITs",
-      "checked_at": "2026-10-18T07:26:51+08:00",
-      "collected_at": "2026-10-18T07:26:51+08:00",
-      "latest_official_date": "2026-10-16",
+      "checked_at": "2026-10-19T07:41:14+08:00",
+      "collected_at": "2026-10-19T07:41:14+08:00",
+      "latest_official_date": "2026-10-19",
       "coverage_start": "2026-10-15T10:55:37+08:00",
       "complete": true,
       "record_count": 160,
@@ -17,20 +17,20 @@
         "https://reits.szse.cn/"
       ],
       "snapshot_path": "data/public_reits.json",
-      "snapshot_sha256": "102374c996c7a8ee6a0dfcee1d14c620f75d4686f23802a649df7dead296c35e",
+      "snapshot_sha256": "868a31bd46850f4718c35fd0178042b2514daf5c95a55f402f6bc07e11764c5d",
       "raw_versions": [],
       "source_versions": [],
       "refresh_batch": {
-        "id": "39078595482-1",
-        "date": "2026-10-18",
-        "started_at": "2026-10-18T07:20:02+08:00",
-        "completed_at": "2026-10-18T07:26:51+08:00"
+        "id": "39177035708-1",
+        "date": "2026-10-19",
+        "started_at": "2026-10-19T07:33:59+08:00",
+        "completed_at": "2026-10-19T07:41:14+08:00"
       },
       "source_status": {
         "SSE": {
           "exchange": "上交所",
-          "collected_at": "2026-10-18T07:22:46+08:00",
-          "as_of_date": "2026-10-18",
+          "collected_at": "2026-10-19T07:36:54+08:00",
+          "as_of_date": "2026-10-19",
           "complete": true,
           "checks": [
             {
@@ -68,8 +68,8 @@
             "REITS_TYPE=1按官方脚本标为扩募；保留原始申报类型，未独立推断新购入",
             "仅对已核实基金代码、唯一已注册扩募申报及唯一已上市扩募批次匹配完成日期；其余保留未匹配状态"
           ],
-          "collection_finished_at": "2026-10-18T07:25:43+08:00",
-          "normalization_updated_at": "2026-10-18T07:25:43+08:00",
+          "collection_finished_at": "2026-10-19T07:40:04+08:00",
+          "normalization_updated_at": "2026-10-19T07:40:04+08:00",
           "reviewed_linked_events": 12,
           "linked_events": 81,
           "completed_expansions": 8,
@@ -78,7 +78,7 @@
         "SZSE": {
           "exchange": "深交所",
           "status": "complete",
-          "collected_at": "2026-10-18T07:26:51+08:00",
+          "collected_at": "2026-10-19T07:41:14+08:00",
           "latest_project_update": "2026-10-13",
           "fund_report_date": "2026-10-16",
           "listed_fund_count": 28,
@@ -246,7 +246,7 @@
           "freshness": {
             "series": "深交所公募REITs基金名录",
             "latest_available_date": "2026-10-16",
-            "expected_date": "2026-10-18",
+            "expected_date": "2026-10-19",
             "lagging": true
           },
           "limitations": [
@@ -260,13 +260,13 @@
       },
       "status": "complete",
       "error": null,
-      "last_successful_at": "2026-10-18T07:26:51+08:00",
+      "last_successful_at": "2026-10-19T07:41:14+08:00",
       "revision_status": "官方来源当前完整快照；来源未统一提供初值或修订标识",
       "expected_latest_date": null,
       "is_lagging": null,
       "freshness_reason": "交易所及推荐名单不定期更新；完整成功核查时间和最新公开业务日期分别展示",
       "source_manifest_paths": [
-        "data/source_manifest/daily_refresh/39078595482-1.json"
+        "data/source_manifest/daily_refresh/39177035708-1.json"
       ],
       "raw_retention": {
         "referenced_files": 663,
@@ -277,8 +277,8 @@
     },
     "institutional": {
       "label": "机构间REITs",
-      "checked_at": "2026-10-18T07:20:39+08:00",
-      "collected_at": "2026-10-18T07:20:39+08:00",
+      "checked_at": "2026-10-19T07:34:38+08:00",
+      "collected_at": "2026-10-19T07:34:38+08:00",
       "latest_official_date": "2026-10-16",
       "coverage_start": "2026-10-14T16:18:03+08:00",
       "complete": true,
@@ -289,14 +289,14 @@
         "https://bond.szse.cn/disclosure/progressinfo/index.html"
       ],
       "snapshot_path": "data/institutional.json",
-      "snapshot_sha256": "570e76957cac2cc6c81eb620e6ca7f53d5165a9e2ed5a5a1dd9fb21295d06f11",
+      "snapshot_sha256": "9672f341af3dd205a7acea93e3d95abee4667cdc1b5e80807d622f65c01b5822",
       "raw_versions": [],
       "source_versions": [],
       "refresh_batch": {
-        "id": "39078595482-1",
-        "date": "2026-10-18",
-        "started_at": "2026-10-18T07:20:02+08:00",
-        "completed_at": "2026-10-18T07:26:51+08:00"
+        "id": "39177035708-1",
+        "date": "2026-10-19",
+        "started_at": "2026-10-19T07:33:59+08:00",
+        "completed_at": "2026-10-19T07:41:14+08:00"
       },
       "source_status": {
         "SSE": {
@@ -348,13 +348,13 @@
       },
       "status": "complete",
       "error": null,
-      "last_successful_at": "2026-10-18T07:20:39+08:00",
+      "last_successful_at": "2026-10-19T07:34:38+08:00",
       "revision_status": "官方来源当前完整快照；来源未统一提供初值或修订标识",
       "expected_latest_date": null,
       "is_lagging": null,
       "freshness_reason": "交易所及推荐名单不定期更新；完整成功核查时间和最新公开业务日期分别展示",
       "source_manifest_paths": [
-        "data/source_manifest/daily_refresh/39078595482-1.json"
+        "data/source_manifest/daily_refresh/39177035708-1.json"
       ],
       "raw_retention": {
         "referenced_files": 663,
@@ -489,7 +489,7 @@
       "expected_latest_date": null,
       "is_lagging": null,
       "freshness_reason": "交易所及推荐名单不定期更新；完整成功核查时间和最新公开业务日期分别展示",
-      "matching_public_current": true,
+      "matching_public_current": false,
       "matching_public_sha256": "102374c996c7a8ee6a0dfcee1d14c620f75d4686f23802a649df7dead296c35e",
       "source_manifest_paths": [
         "data/source_manifest/ndrc/20261018-153534-886124.json"
@@ -503,6 +503,61 @@
     }
   },
   "events": [
+    {
+      "population": "public",
+      "population_label": "公募REITs",
+      "entity_id": "SZSE_APPLICANT_5000060",
+      "entity_kind": "fund",
+      "project_name": "华泰紫金华住安住封闭式商业不动产证券投资基金",
+      "exchange": "深交所",
+      "asset_type": "文旅类",
+      "business_type": "首发",
+      "manager": "华泰证券（上海）资产管理有限公司",
+      "origin": "上海安住此间商务信息咨询有限公司",
+      "fund_id": "SZSE_APPLICANT_5000060",
+      "fund_code": "181002",
+      "related_entity_ids": [
+        "SZSE_5000060"
+      ],
+      "source_url": "https://reits.szse.cn/disclosure/index.html?stock=181002",
+      "event_type": "milestone",
+      "title": "发售开始",
+      "before": {
+        "offering_start_date": null
+      },
+      "after": {
+        "offering_start_date": "2026-10-19"
+      },
+      "official_date": "2026-10-19",
+      "detected_at": "2026-10-19T07:41:14+08:00",
+      "event_date": "2026-10-19",
+      "is_incremental": true,
+      "discovery_type": "observed",
+      "is_baseline": false,
+      "documents": [],
+      "changes": [
+        {
+          "field": "offering_start_date",
+          "label": "发售开始日期",
+          "before": null,
+          "after": "2026-10-19"
+        }
+      ],
+      "source_version": {
+        "path": "snapshots/public/20261019-073648.json",
+        "sha256": "120c630b1fbbc58ff4d1a889d77c58988a98500022c94411a9d9455edc66cea3",
+        "collected_at": "2026-10-19T07:41:14+08:00",
+        "retained_path": "workpapers/project_updates/inputs/public/120c630b1fbbc58ff4d1a889d77c58988a98500022c94411a9d9455edc66cea3.json"
+      },
+      "batch_key": "public|SZSE_APPLICANT_5000060|2026-10-19",
+      "id": "UPDATE_c548564e58d0cc91fe16e845",
+      "previous_source_version": {
+        "path": "data/public_reits.json",
+        "sha256": "102374c996c7a8ee6a0dfcee1d14c620f75d4686f23802a649df7dead296c35e",
+        "collected_at": "2026-10-18T07:26:51+08:00",
+        "retained_path": "workpapers/project_updates/inputs/public/102374c996c7a8ee6a0dfcee1d14c620f75d4686f23802a649df7dead296c35e.json"
+      }
+    },
     {
       "population": "institutional",
       "population_label": "机构间REITs",
@@ -102218,7 +102273,7 @@
       "related_entity_ids": [
         "SZSE_5000060"
       ],
-      "status": "待发售",
+      "status": "发售中",
       "source_url": "https://reits.szse.cn/disclosure/index.html?stock=181002"
     },
     {
@@ -103082,12 +103137,12 @@
     "baseline_at": "2026-10-14T16:18:03+08:00",
     "populations": {
       "public": {
-        "input_versions": 14,
+        "input_versions": 16,
         "baseline_at": "2026-10-15T10:55:37+08:00",
         "current_entities": 304
       },
       "institutional": {
-        "input_versions": 13,
+        "input_versions": 15,
         "baseline_at": "2026-10-14T16:18:03+08:00",
         "current_entities": 132
       },
@@ -103097,18 +103152,18 @@
         "current_entities": 137
       }
     },
-    "event_count": 1688,
-    "incremental_event_count": 165,
+    "event_count": 1689,
+    "incremental_event_count": 166,
     "undated_event_count": 0,
-    "observed_event_count": 165,
+    "observed_event_count": 166,
     "baseline_event_count": 1523,
     "event_counts_by_population": {
+      "public": 1394,
       "institutional": 158,
-      "public": 1393,
       "ndrc": 137
     },
     "event_counts_by_type": {
-      "milestone": 1040,
+      "milestone": 1041,
       "documents_added": 502,
       "status_change": 4,
       "revision": 5,
@@ -103251,7 +103306,7 @@
     "transformation_version": "official-date-archive-v2",
     "document_revisions": [],
     "rejected_inputs": [],
-    "retained_input_count": 45,
+    "retained_input_count": 49,
     "raw_retention": {
       "public": {
         "referenced_files": 663,
@@ -103259,7 +103314,7 @@
         "missing_local_paths": [],
         "mismatched_paths": [],
         "source_manifest_paths": [
-          "data/source_manifest/daily_refresh/39078595482-1.json"
+          "data/source_manifest/daily_refresh/39177035708-1.json"
         ],
         "treatment": "Original Raw hashes verified against source manifests"
       },
@@ -103269,7 +103324,7 @@
         "missing_local_paths": [],
         "mismatched_paths": [],
         "source_manifest_paths": [
-          "data/source_manifest/daily_refresh/39078595482-1.json"
+          "data/source_manifest/daily_refresh/39177035708-1.json"
         ],
         "treatment": "Original Raw hashes verified against source manifests"
       },
@@ -103284,7 +103339,7 @@
         "treatment": "Original Raw hashes verified against source manifests"
       }
     },
-    "audit_path": "workpapers/project_updates/runs/d982eea531e03789e780/audit.json",
+    "audit_path": "workpapers/project_updates/runs/7e1aeb1d91bae588aaa2/audit.json",
     "input_index_path": "workpapers/project_updates/input_index.json"
   }
 }
