@@ -339,5 +339,42 @@ dialog::backdrop{background:#07171980;backdrop-filter:blur(3px)}
 .ndrc-evidence-list a{white-space:normal;overflow-wrap:anywhere}
 .ndrc-evidence-meta,.ndrc-evidence-list small{font-size:10px;color:var(--sub)}
 .ndrc-evidence-list p{margin:5px 0;overflow-wrap:anywhere}
+/* Shared source guide: readable sections with independent publication status. */
+#sources-panel{max-width:1240px}
+#sources-panel .head h1{margin-bottom:0}
+.source-guide-nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+.source-guide-nav a{display:block;padding:7px 12px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--sub);font-size:11px;text-decoration:none}
+.source-guide-nav a:hover{color:var(--brand);background:var(--soft)}
+.source-guide-section{margin:0 0 18px;padding:24px;border:1px solid var(--line);border-radius:11px;background:var(--surface);scroll-margin-top:24px}
+.source-guide-section>h2{font-size:16px;margin-bottom:20px}
+.source-guide-section:focus{outline:none}
+.source-guide-section:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+.source-guide-section>p{margin:18px 0 0;color:var(--sub);font-size:12px;line-height:1.9}
+.source-guide-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.source-guide-card{min-width:0;padding:17px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+.source-guide-card-heading{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.source-guide-card-heading h3{font-size:12px}
+.source-guide-status{flex:none;font-size:10px;line-height:1.8;border-radius:4px;padding:1px 6px;color:var(--sub);background:var(--surface)}
+.source-guide-status.complete{color:var(--positive);background:var(--positive-soft)}
+.source-guide-status.stale,.source-guide-status.failed,.source-guide-status.unavailable{color:var(--amber);background:var(--amber-soft)}
+.source-guide-count{font-size:14px;font-weight:550;line-height:1.8;margin:16px 0 13px;font-variant-numeric:tabular-nums}
+.source-guide-definitions{display:grid;grid-template-columns:126px minmax(0,1fr);gap:0 20px;margin:0;font-size:12px;line-height:1.9}
+.source-guide-definitions dt,.source-guide-definitions dd{margin:0;padding:14px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.source-guide-definitions dt{color:var(--sub);font-weight:500}
+.source-guide-definitions dt:first-of-type,.source-guide-definitions dd:first-of-type{padding-top:0}
+.source-guide-definitions dt:last-of-type,.source-guide-definitions dd:last-of-type{border-bottom:0;padding-bottom:0}
+.source-guide-card .source-guide-definitions{grid-template-columns:88px minmax(0,1fr);gap:0 6px;font-size:10px;line-height:1.8}
+.source-guide-card .source-guide-definitions dt,.source-guide-card .source-guide-definitions dd{border:0;padding:2px 0}
+.source-guide-status-note{font-size:10px;line-height:1.8;color:var(--sub);margin:12px 0 0}
+.source-guide-taxonomy,.source-guide-downloads{border-top:1px solid var(--line);padding-top:16px;margin-top:20px;font-size:12px}
+.source-guide-taxonomy summary,.source-guide-downloads summary{cursor:pointer;color:var(--brand);width:fit-content}
+.source-guide-taxonomy[open]>summary,.source-guide-downloads[open]>summary{margin-bottom:18px}
+.source-guide-link-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.source-guide-link-group h3{margin-bottom:12px}
+.source-guide-link-group a{display:block;width:fit-content;text-decoration:none;font-size:12px;line-height:1.9;margin:7px 0;overflow-wrap:anywhere}
+.source-guide-link-group a:hover,.source-guide-download-links a:hover{text-decoration:underline;text-underline-offset:3px}
+.source-guide-download-links{display:flex;flex-wrap:wrap;gap:12px 24px;font-size:12px}
+@media(max-width:1000px){.source-guide-cards{grid-template-columns:1fr}.source-guide-card{padding:18px}.source-guide-count{margin:12px 0 8px}.source-guide-card .source-guide-definitions{grid-template-columns:104px minmax(0,1fr)}.source-guide-status-note{margin-top:8px}}
+@media(max-width:600px){.source-guide-nav{gap:7px;margin-bottom:18px}.source-guide-nav a{padding:7px 10px;min-height:36px}.source-guide-section{padding:19px 17px}.source-guide-section>h2{margin-bottom:17px}.source-guide-definitions{grid-template-columns:1fr;gap:0}.source-guide-definitions dt{border:0;padding:14px 0 4px}.source-guide-definitions dd{padding:0 0 14px}.source-guide-definitions dd:first-of-type{padding-top:0}.source-guide-definitions dt:last-of-type{padding-bottom:4px}.source-guide-card .source-guide-definitions{grid-template-columns:100px minmax(0,1fr)}.source-guide-link-grid{grid-template-columns:1fr;gap:20px}.source-guide-link-group h3{margin-bottom:8px}.source-guide-download-links{gap:12px 18px}}
 @media(max-width:1100px){.ndrc-filters .search-field{grid-column:span 2}}
 @media(max-width:600px){.public-views{width:100%}.public-views button{flex:1;padding:7px 8px}.ndrc-filters .search-field{grid-column:1/-1}.ndrc-shortcuts{width:100%}.ndrc-shortcuts button{flex:1;min-height:34px}.ndrc-chart-grid .chart-panel>div:last-child{max-height:190px}.ndrc-table .name-cell{min-width:275px;width:275px}.ndrc-relation-detail{padding:12px}.ndrc-relation-detail .detail-grid{grid-template-columns:1fr}#ndrc-detail-dialog{width:calc(100% - 24px)}}

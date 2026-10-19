@@ -2,9 +2,10 @@
 'use strict';
 import { REFRESH_SCHEDULE, refreshWarning } from './refresh-health.js?v=20261017-refresh-2';
 import { enhanceFilterSelects, syncFilterSelects, closeFilterMenu } from './filter-select.js?v=20261014-filter-menu-1';
-import { initializePublicReits, setPublicModuleActive, openPublicSources, openPublicRecord } from './public-reits.js?v=20261017-refresh-2';
-import { initializeProjectUpdates, setUpdatesModuleActive, openUpdatesSources } from './project-updates.js?v=20261018-official-date-1';
+import { initializePublicReits, setPublicModuleActive, openPublicRecord } from './public-reits.js?v=20261019-source-guide-1';
+import { initializeProjectUpdates, setUpdatesModuleActive } from './project-updates.js?v=20261019-source-guide-1';
 import { INSTITUTIONAL_FIELDS, getInstitutionalField, projectFieldCellText } from './project-fields.js?v=20261017-refresh-2';
+import { initializeDataSources, setDataSourcesActive, openDataSourcesSection } from './data-sources.js?v=20261019-source-guide-1';
 import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-disclosures-1';
 
 const DATA_URL = new URL('../data/institutional.json', import.meta.url);
@@ -279,9 +280,6 @@ function renderMetadata() {
   if (activeModule === 'institutional') $('side-date').textContent = snapshot.date;
   const updatedAt = Number.isFinite(timestamp) ? new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date(timestamp)) : snapshot.date;
   $('footer-date').textContent = `更新时间：${updatedAt}（北京时间）${cachedView ? ' · 浏览器缓存' : ''}`;
-  const officialLinks = records.filter(record => sourceURL(record)).length;
-  const retained = records.filter(archived).length;
-  $('source-metadata').textContent = `本期${records.length}条记录，${officialLinks}条具备官方项目链接，${retained}条历史保留记录。快照日期：${snapshot.date}。${snapshot.enrichment?.checked_at ? `披露核查：${snapshot.enrichment.checked_at.slice(0, 10)}。各字段来源、文件日期和未取得原因见项目详情。` : ''}`;
 }
 function applySnapshot(data, fromCache = false) {
   snapshot = validated(data);
@@ -433,21 +431,36 @@ $('rows').addEventListener('click', event => {
 });
 document.querySelectorAll('[data-close]').forEach(button => button.addEventListener('click', () => $(button.dataset.close).close()));
 document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', event => { if (event.target === dialog) { const box = dialog.getBoundingClientRect(); if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close(); } }));
-$('source-nav').addEventListener('click', () => { closeFilterMenu(); if (activeModule === 'updates') openUpdatesSources(); else if (activeModule === 'public') openPublicSources(); else $('source-dialog').showModal(); });
-$('classification-help').addEventListener('click', () => { closeFilterMenu(); $('source-dialog').showModal(); });
-$('taxonomy-guide').innerHTML = RIGHTS.map(rights => `<div class="taxonomy-group"><strong>${escapeHTML(rights)}</strong><span>${escapeHTML(TAXONOMY[rights].join('、'))}</span></div>`).join('');
+function showSources(section = 'overview') {
+  showModule('sources');
+  openDataSourcesSection(section);
+}
+$('source-nav').addEventListener('click', () => showSources());
+$('classification-help').addEventListener('click', () => showSources('institutional'));
 function showModule(name) {
   closeFilterMenu();
-  activeModule = ['updates', 'public', 'institutional'].includes(name) ? name : 'updates';
-  for (const module of ['updates', 'public', 'institutional']) {
+  const leavingSources = activeModule === 'sources' && name !== 'sources';
+  activeModule = ['updates', 'public', 'institutional', 'sources'].includes(name) ? name : 'updates';
+  for (const module of ['updates', 'public', 'institutional', 'sources']) {
     const active = activeModule === module;
     $(`${module}-panel`).hidden = !active;
-    $(`${module}-nav`).classList.toggle('active', active);
-    if (active) $(`${module}-nav`).setAttribute('aria-current', 'page'); else $(`${module}-nav`).removeAttribute('aria-current');
+    const navigation = $(module === 'sources' ? 'source-nav' : `${module}-nav`);
+    navigation.classList.toggle('active', active);
+    if (active) navigation.setAttribute('aria-current', 'page'); else navigation.removeAttribute('aria-current');
   }
-  document.querySelector('.skip-link').href = { updates: '#updates-list', public: '#public-projects', institutional: '#projects' }[activeModule];
+  document.querySelector('.skip-link').href = { updates: '#updates-list', public: '#public-projects', institutional: '#projects', sources: '#sources-panel' }[activeModule];
   setPublicModuleActive(activeModule === 'public');
   setUpdatesModuleActive(activeModule === 'updates');
+  setDataSourcesActive(activeModule === 'sources');
+  if (leavingSources) {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    if (location.hash.startsWith('#sources-')) history.replaceState(null, '', location.pathname + location.search);
+  }
+  if (activeModule === 'sources') {
+    $('side-date').textContent = '分来源列示';
+    $('side-schedule').textContent = '统计口径与更新状态';
+    $('side-source').textContent = '交易所／国家发改委官方来源';
+  }
   if (activeModule === 'institutional') {
     $('side-date').textContent = snapshot?.date || '正在读取';
     $('side-schedule').textContent = REFRESH_SCHEDULE;
@@ -460,8 +473,9 @@ $('institutional-nav').addEventListener('click', () => showModule('institutional
 $('public-nav').addEventListener('click', () => showModule('public'));
 $('export').addEventListener('click', exportCSV);
 $('reload').addEventListener('click', loadData);
-initializePublicReits();
-initializeProjectUpdates({ onOpenProject: async project => {
+initializeDataSources({ taxonomy: TAXONOMY });
+initializePublicReits({ onOpenSources: showSources });
+initializeProjectUpdates({ onOpenSources: showSources, onOpenProject: async project => {
   if (project.population === 'institutional') {
     showModule('institutional');
     if (!snapshot) await loadData();
@@ -476,4 +490,5 @@ initializeProjectUpdates({ onOpenProject: async project => {
 } });
 enhanceFilterSelects();
 render();
-showModule('updates');
+const sourceSection = location.hash.match(/^#sources-(overview|dates|public|institutional|ndrc|fields|links)$/)?.[1];
+if (sourceSection) showSources(sourceSection); else showModule('updates');

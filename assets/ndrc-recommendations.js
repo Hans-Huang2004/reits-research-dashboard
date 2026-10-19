@@ -172,12 +172,10 @@ export function renderNdrcRecommendations() {
 export function renderNdrcMetadata() {
   const statuses = snapshot?.source_status || {}; const source = statuses.NDRC || statuses.ndrc || statuses; const coverage = snapshot?.coverage || {};
   const attempt = refreshStatus || source;
-  const matchedVersion = (Array.isArray(snapshot?.source_versions) ? snapshot.source_versions : []).find(version => /(?:^|\/)public_reits\.json$/.test(version.path || ''));
   const warnings = [loadError, fromCache ? '正在展示此浏览器上次成功读取的推荐快照。' : '', storageWarning];
   if (attempt.ok === false || attempt.complete === false || attempt.attempt_ok === false || ['failed', 'error', 'partial'].includes(attempt.status) || coverage.complete === false) warnings.push('推荐来源本轮更新未完成，保留上次完整名单。');
   $('ndrc-data-notice').textContent = warnings.filter(Boolean).join(' '); $('ndrc-data-notice').hidden = !warnings.some(Boolean);
   $('ndrc-footer-date').textContent = snapshot ? `采集时间：${timestamp(snapshot.updated_at)}（北京时间） · 最新推荐：${coverage.latest_recommended_date || source.latest_recommended_date || '未披露'}` : '';
-  $('ndrc-source-metadata').innerHTML = snapshot ? `<p>本期${number(snapshot.items.length)}条推荐记录；推荐期间：${html(coverage.earliest_recommended_date || [...snapshot.items].map(item => item.recommended_date).sort()[0] || '未披露')}至${html(coverage.latest_recommended_date || source.latest_recommended_date || [...snapshot.items].map(item => item.recommended_date).sort().at(-1) || '未披露')}。采集时间：${html(timestamp(snapshot.updated_at))}（北京时间）。</p>${matchedVersion ? `<p>用于匹配的公募快照日期：${html(matchedVersion.date || '未披露')}；采集时间：${html(timestamp(matchedVersion.updated_at))}（北京时间）。</p>` : ''}${snapshot.changes?.baseline ? '<p>本期为首次历史回填；新增统计从后续采集开始。</p>' : ''}${attempt.last_attempt_at || attempt.attempted_at ? `<p>最近尝试：${html(timestamp(attempt.last_attempt_at || attempt.attempted_at))}（北京时间）；${attempt.attempt_ok === false || attempt.ok === false ? '更新未完成' : '见本期采集状态'}。</p>` : ''}${attempt.error ? `<p>来源状态：${html(text(attempt.error))}</p>` : ''}` : '<p>推荐数据尚未读取成功。</p>';
   if (active) { $('public-data-pill').textContent = snapshot ? `${fromCache ? '本地快照' : '数据日期'} ${snapshot.date}` : loadError ? '读取失败' : '正在读取'; $('side-date').textContent = snapshot?.date || (loadError ? '读取失败' : '正在读取'); $('side-source').textContent = '国家发展改革委推荐项目'; $('side-schedule').textContent = REFRESH_SCHEDULE; }
 }
 function applySnapshot(data, cached) { snapshot = validateNdrcSnapshot(data); fromCache = cached; rebuildOptions(); renderNdrcMetadata(); renderNdrcRecommendations(); callbacks.onSnapshot?.(); }
@@ -220,7 +218,7 @@ export function exportNdrcCSV() {
   const url = URL.createObjectURL(new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8' }));
   const link = document.createElement('a'); link.href = url; link.download = `REITs_发改委推荐_${snapshot.date}.csv`; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
-export function openNdrcSources() { closeFilterMenu(); renderNdrcMetadata(); if (!$('ndrc-source-dialog').open) $('ndrc-source-dialog').showModal(); }
+export function openNdrcSources() { closeFilterMenu(); callbacks.onOpenSources?.('ndrc'); }
 export function setNdrcRecommendationsActive(value) { active = value; if (active) { renderNdrcMetadata(); renderNdrcRecommendations(); if (!snapshot && !loading) loadNdrcRecommendations(); } }
 export function initializeNdrcRecommendations(options = {}) {
   if (initialized) return; initialized = true; callbacks = options;

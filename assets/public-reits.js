@@ -4,7 +4,7 @@ import { REFRESH_SCHEDULE, refreshWarning } from './refresh-health.js?v=20261017
 import { closeFilterMenu, syncFilterSelects } from './filter-select.js?v=20261014-filter-menu-1';
 import { PUBLIC_FIELDS, getPublicField, formatProjectField, projectFieldCellText } from './project-fields.js?v=20261017-refresh-2';
 import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-origin-2';
-import { initializeNdrcRecommendations, setNdrcRecommendationsActive, loadNdrcRecommendations, renderNdrcRecommendations, renderNdrcMetadata, exportNdrcCSV, openNdrcSources, openNdrcRecommendation, ndrcReverseLinksHTML } from './ndrc-recommendations.js?v=20261016-clean-copy-1';
+import { initializeNdrcRecommendations, setNdrcRecommendationsActive, loadNdrcRecommendations, renderNdrcRecommendations, renderNdrcMetadata, exportNdrcCSV, openNdrcRecommendation, ndrcReverseLinksHTML } from './ndrc-recommendations.js?v=20261019-source-guide-1';
 
 const DATA_URL = new URL('../data/public_reits.json', import.meta.url);
 const COMPRESSED_DATA_URL = new URL('../data/public_reits.json.gz', import.meta.url);
@@ -15,6 +15,7 @@ const format = value => Number(value).toLocaleString('zh-CN', { maximumFractionD
 const issued = fund => ['已上市', '成立待上市'].includes(fund.stage);
 const present = value => value != null && value !== '';
 const normalized = value => String(value ?? '').replace(/\s/g, '').toLowerCase();
+let sourceGuideHandler = null;
 const state = { view: 'funds', fields: 'core', ex: '', search: '', product: '', asset: '', stage: '', business: '', manager: '', savedOnly: false, direction: -1, page: 1, pageSize: 10 };
 const CORE_FIELD_KEYS = new Set(['name', 'business_type', 'exchange', 'product_type', 'origin', 'manager', 'sale_amount_cny_100m', 'asset_type', 'project_status', 'updated_date']);
 const FIELD_GROUPS = [
@@ -268,12 +269,6 @@ function renderMetadata() {
   $('public-data-notice').textContent = warnings.join(' ');
   $('public-data-pill').textContent = snapshot ? `${fromCache ? '本地快照' : '数据日期'} ${snapshot.date}` : loadError ? '读取失败' : '等待读取';
   $('public-footer-date').textContent = snapshot ? `采集时间：${formatTimestamp(snapshot.updated_at || snapshot.date)}（北京时间）${fromCache ? ' · 浏览器缓存' : ''}` : '';
-  if (snapshot) {
-    const sourceRows = sourceEntries().map(([key, info]) => `<tr><td>${html(sourceName(key, info))}</td><td>${html(info.fund_report_date || info.as_of_date || info.latest_available_date || info.freshness?.latest_available_date || '未单独披露')}</td><td>${html(info.latest_project_update || info.latest_filing_update || info.latest_date || '未单独披露')}</td><td>${sourceFailed(info) ? '更新未完成' : sourceSucceeded(info) ? '采集成功' : '见来源记录'}</td></tr>`).join('');
-    const gaps = snapshot.coverage?.limitations || snapshot.coverage?.notes || snapshot.coverage?.missing_sources || [];
-    const sourceNotes = snapshot.enrichment?.checked_at ? `<li>披露核查：${html(formatTimestamp(snapshot.enrichment.checked_at))}（北京时间）。各字段来源、文件日期、物理页码及未取得原因见项目详情。基金视图的融资与预测采用首发口径，扩募另列。</li>` : sourceEntries().filter(([, info]) => valueText(info.limitations)).map(([key, info]) => `<li>${html(sourceName(key, info))}：${html(valueText(info.limitations))}</li>`).join('');
-    $('public-source-metadata').innerHTML = `<p>本期共${funds.filter(issued).length}只已发行基金、${events.length}条申报记录；另保留${funds.filter(fund => !issued(fund)).length}条待发行基金主记录。采集时间：${html(formatTimestamp(snapshot.updated_at || snapshot.date))}（北京时间）。</p>${present(gaps) && valueText(gaps) ? `<p>覆盖说明：${html(valueText(gaps))}</p>` : ''}${sourceRows ? `<div class="table-wrap"><table class="public-source-table"><thead><tr><th>来源</th><th>基金名录日期</th><th>申报最新更新</th><th>更新状态</th></tr></thead><tbody>${sourceRows}</tbody></table></div>` : ''}${sourceNotes ? `<ul>${sourceNotes}</ul>` : ''}`;
-  } else $('public-source-metadata').textContent = '公募数据尚未读取成功。';
   if (active) {
     $('side-date').textContent = snapshot?.date || (loadError ? '读取失败' : '正在读取');
     $('side-source').textContent = '上交所／深交所公募REITs';
@@ -441,7 +436,7 @@ function switchView(view, business = '') {
   if (!isRecommendationView()) rebuildOptions(); renderMetadata(); render();
 }
 
-export function openPublicSources() { if (isRecommendationView()) { openNdrcSources(); return; } closeFilterMenu(); renderMetadata(); if (!$('public-source-dialog').open) $('public-source-dialog').showModal(); }
+export function openPublicSources() { closeFilterMenu(); sourceGuideHandler?.(isRecommendationView() ? 'ndrc' : 'public'); }
 export async function openPublicRecord(project) {
   if (!project?.entity_id) return false;
   for (const id of ['updates-timeline-dialog', 'updates-detail-dialog']) { const dialog = $(id); if (dialog?.open) dialog.close(); }
@@ -472,9 +467,10 @@ export function setPublicModuleActive(value) {
   if (!snapshot && !loading) loadData();
   loadNdrcRecommendations();
 }
-export function initializePublicReits() {
+export function initializePublicReits(options = {}) {
+  sourceGuideHandler = options.onOpenSources || sourceGuideHandler;
   if (initialized) return; initialized = true;
-  initializeNdrcRecommendations({ getPublicFund: id => fundById.get(id), getPublicEvent: id => eventById.get(id), openPublicFund: openFund, openPublicEvent: openEvent,
+  initializeNdrcRecommendations({ onOpenSources: section => sourceGuideHandler?.(section), getPublicFund: id => fundById.get(id), getPublicEvent: id => eventById.get(id), openPublicFund: openFund, openPublicEvent: openEvent,
     onSnapshot: () => { if ($('public-detail-dialog').open && lastPublicDetail) { if (lastPublicDetail.kind === 'fund') openFund(lastPublicDetail.id); else openEvent(lastPublicDetail.id); } } });
   $('public-search').addEventListener('input', event => { state.search = event.target.value; state.page = 1; render(); });
   for (const key of ['product', 'asset', 'stage', 'business', 'manager']) $(`public-${key}`).addEventListener('change', event => { state[key] = event.target.value; state.page = 1; render(); });

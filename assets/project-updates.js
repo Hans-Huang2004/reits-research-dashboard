@@ -217,8 +217,7 @@ function buildUI() {
   add(box, top, populations, custom, filters, foot, list, pagination);
   const footer = el('footer', 'foot'); const generated = el('span'); generated.id = 'updates-generated'; add(footer, generated, button('数据口径与来源 ↗', 'text-button', 'sources'));
   const detail = el('dialog', 'updates-detail-dialog'); detail.id = 'updates-detail-dialog'; detail.setAttribute('aria-labelledby', 'updates-detail-title');
-  const sourceDialog = el('dialog', 'updates-source-dialog'); sourceDialog.id = 'updates-source-dialog'; sourceDialog.setAttribute('aria-labelledby', 'updates-source-title');
-  panel.replaceChildren(head, notice, sources, daily, box, footer, detail, sourceDialog);
+  panel.replaceChildren(head, notice, sources, daily, box, footer, detail);
 }
 
 function readFavoriteSet() {
@@ -408,20 +407,7 @@ function openTimeline(target) {
   dialog.replaceChildren(header, meta, tools, list); showDialog(dialog);
 }
 export function openUpdatesSources() {
-  if (!initialized) return;
-  const dialog = $('updates-source-dialog'); const title = el('h2', '', '项目动态：口径与来源'); title.id = 'updates-source-title';
-  const heading = add(el('div', 'updates-dialog-heading'), title, closeButton());
-  const intro = el('p', '', '动态来自公募REITs、机构间REITs及国家发展改革委推荐项目的公开资料。三类事件分别统计；状态、业务批次和原始日期保留来源口径。');
-  const definitions = el('dl', 'updates-definitions');
-  for (const [term, definition] of [['事件与项目', '一项状态变化、一次新增披露或一项资料修订各计一条事件。同项目同批次同官方日期的事件合并显示，统计与CSV仍按事件计数。'], ['日期', '全部记录按各节点的官方日期归档、排序和筛选；披露文件使用官方发布日期。未取得官方日期的记录列入“日期未披露”，不以采集日期代替，也不纳入具体日期范围。'], ['记录覆盖', '全部动态库和项目时间线展示已取得并留存的公开记录。记录整理和关联关系维护不计为业务增量。'], ['关联与批次', '只合并已确认的关联关系；首发、扩募及具体申报批次分别保留。'], ['异常与刷新', '采集失败、来源不完整或记录暂时消失不生成终止事件。来源核查未完成时，不据此判断当天无变化。'], ['筛选与导出', '上方今日更新累计北京时间当天采集新识别的节点、文件及内容变化，不受官方日期早晚或缺失影响，同一事件重复采集不重复计数。卡片只筛选今日列表；下方全部动态库的筛选、分页和明细展开与上方独立。CSV只导出下方动态库的当前筛选结果，日期使用官方日期。项目时间线包含已确认关联项目的记录。']]) add(definitions, el('dt', '', term), el('dd', '', definition));
-  const sourceList = el('div', 'updates-source-details');
-  for (const source of updateSourceHealth(snapshot?.sources)) {
-    const section = el('section');
-    add(section, el('h3', '', source.label), el('p', '', `最近核查：${source.checked_at || '未取得'}；最新官方日期：${source.latest_official_date || '未披露'}；${source.issue || '核查完整'}`), externalLink('官方来源 ↗', source.source_url));
-    sourceList.append(section);
-  }
-  add(sourceList, el('p', 'updates-timeline-note', `生成时间：${snapshot?.generated_at || '尚未读取'}。`));
-  dialog.replaceChildren(heading, intro, definitions, sourceList); showDialog(dialog);
+  callbacks.onOpenSources?.('dates');
 }
 
 async function loadUpdates() {
@@ -446,7 +432,7 @@ async function loadUpdates() {
       const next = validateUpdatesSnapshot(payload);
       snapshot = next; error = ''; fillOptions();
     } catch (cause) { error = `项目动态读取失败${snapshot ? '，已保留上次成功记录' : ''}。${cause.message || '请稍后刷新重试。'}`; }
-    finally { clearTimeout(timer); loading = null; render(); if ($('updates-source-dialog').open) openUpdatesSources(); if (lastEntity && $('updates-detail-dialog').open) openTimeline(lastEntity); }
+    finally { clearTimeout(timer); loading = null; render(); if (lastEntity && $('updates-detail-dialog').open) openTimeline(lastEntity); }
   })();
   render(); return loading;
 }
@@ -496,7 +482,7 @@ async function onAction(event) {
 export function setUpdatesModuleActive(value) {
   active = Boolean(value);
   if (!initialized) return;
-  if (!active) { for (const id of ['updates-detail-dialog', 'updates-source-dialog']) { const dialog = $(id); if (dialog?.open) dialog.close(); } return; }
+  if (!active) { for (const id of ['updates-detail-dialog']) { const dialog = $(id); if (dialog?.open) dialog.close(); } return; }
   document.querySelector('.skip-link')?.setAttribute('href', '#updates-today');
   render(); if (!snapshot && !loading) loadUpdates();
 }
@@ -507,7 +493,7 @@ export function initializeProjectUpdates(options = {}) {
   $('updates-panel').addEventListener('click', onAction);
   for (const key of ['search', 'exchange', 'asset', 'business', 'type', 'start', 'end']) $(`updates-${key}`).addEventListener(key === 'search' ? 'input' : 'change', event => { state[key] = event.target.value; state.page = 1; renderLibrary(); });
   $('updates-saved-only').addEventListener('change', event => { state.savedOnly = event.target.checked; state.page = 1; renderLibrary(); });
-  for (const id of ['updates-detail-dialog', 'updates-source-dialog']) $(id).addEventListener('click', event => { if (event.target !== event.currentTarget) return; const rect = event.currentTarget.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) event.currentTarget.close(); });
+  for (const id of ['updates-detail-dialog']) $(id).addEventListener('click', event => { if (event.target !== event.currentTarget) return; const rect = event.currentTarget.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) event.currentTarget.close(); });
   window.addEventListener('storage', () => { if (active) renderLibrary(); });
   window.addEventListener('reits:favorites-changed', () => { if (active) renderLibrary(); });
   render(); loadUpdates();
