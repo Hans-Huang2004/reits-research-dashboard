@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-21T08:10:41+08:00",
+  "output_path": "data/project_updates.json",
+  "output_sha256": "2a6efde0e28664d01a4b91efd117938ae283d8e004a9056beab00266b8945d8f",
+  "audit_path": "workpapers/project_updates/runs/8bc05768f90d26e7b2c0/audit.json",
+  "input_index_path": "workpapers/project_updates/input_index.json",
+  "sources": {
+    "public": {
+      "collected_at": "2026-10-21T08:10:40+08:00",
+      "latest_official_date": "2026-10-20",
+      "snapshot_path": "data/public_reits.json",
+      "snapshot_sha256": "5caf196cddea2c62b65f47094ada7e8ab741831707b2796eb7ec016f563f5f24",
+      "raw_versions": []
+    },
+    "institutional": {
+      "collected_at": "2026-10-21T08:04:04+08:00",
+      "latest_official_date": "2026-10-20",
+      "snapshot_path": "data/institutional.json",
+      "snapshot_sha256": "3b9c447cf97021d12abceb5436fafa610956b95b5918f4d297d807496f8ba8e0",
+      "raw_versions": []
+    },
+    "ndrc": {
+      "collected_at": "2026-10-20T08:41:32+08:00",
+      "latest_official_date": "2026-09-10",
+      "snapshot_path": "data/ndrc_recommendations.json",
+      "snapshot_sha256": "0146c8c45d6a26e5160c0a44ee49185753eb22955274443275e5275073353230",
+      "raw_versions": [
+        {
+          "raw_path": "data/raw/ndrc/refresh/39348334252-1/page0001.json",
+          "sha256": "08ac65d4f213c963488adb3f08eeb9876554c890806ccbfa31bb4407e8456028",
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList"
+        },
+        {
+          "raw_path": "data/raw/ndrc/refresh/39348334252-1/page0002.json",
+          "sha256": "2c291b2f60a092a0f9e19ce1e3d92e168eb8d8e288f9651a1ece87d0c2ac05fa",
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList"
+        },
+        {
+          "raw_path": "data/raw/ndrc/refresh/39348334252-1/page0003.json",
+          "sha256": "9ac316820af4047d1741055d9c630eaa76d89f74779cee94827ea9d3a7a49c3a",
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList"
+        }
+      ]
+    }
+  }
+}

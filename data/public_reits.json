@@ -1,19 +1,17 @@
 {
   "schema_version": 1,
-  "date": "2026-10-20",
-  "updated_at": "2026-10-20T08:36:27+08:00",
+  "date": "2026-10-21",
+  "updated_at": "2026-10-21T08:06:14+08:00",
   "changes": {
     "new_fund_ids": [],
     "new_event_ids": [],
     "changed_event_ids": [
-      "SSE_72c49c7e1ec847fea999460058302391",
-      "SSE_73c7577e4b3847aab5331d0379e15eff",
-      "SSE_894cbcc4623047c385444030dd83f921",
+      "SSE_24e84189f68749109b5302f5e1e6ad29",
+      "SSE_a9ce5e95e078472998cc47ad30846c2b",
+      "SSE_b80b031657254459b6d0010d6b2d5286",
       "SZSE_5000039",
       "SZSE_5000060",
-      "SZSE_5000065",
-      "SZSE_5000069",
-      "SZSE_5000082"
+      "SZSE_5000079"
     ],
     "missing_event_ids": [],
     "excluded_event_ids": [],
@@ -22,8 +20,8 @@
   "source_status": {
     "SSE": {
       "exchange": "上交所",
-      "collected_at": "2026-10-20T08:36:33+08:00",
-      "as_of_date": "2026-10-20",
+      "collected_at": "2026-10-21T08:06:21+08:00",
+      "as_of_date": "2026-10-21",
       "complete": true,
       "checks": [
         {
@@ -52,7 +50,7 @@
       "fund_details_collected": 70,
       "filing_documents_expected": 102,
       "filing_documents_collected": 102,
-      "latest_filing_update": "2026-10-19",
+      "latest_filing_update": "2026-10-20",
       "earliest_filing_acceptance": "2021-04-23",
       "exact_linked_events": 69,
       "unlinked_events": 21,
@@ -61,8 +59,8 @@
         "REITS_TYPE=1按官方脚本标为扩募；保留原始申报类型，未独立推断新购入",
         "仅对已核实基金代码、唯一已注册扩募申报及唯一已上市扩募批次匹配完成日期；其余保留未匹配状态"
       ],
-      "collection_finished_at": "2026-10-20T08:39:40+08:00",
-      "normalization_updated_at": "2026-10-20T08:39:40+08:00",
+      "collection_finished_at": "2026-10-21T08:09:31+08:00",
+      "normalization_updated_at": "2026-10-21T08:09:31+08:00",
       "reviewed_linked_events": 12,
       "linked_events": 81,
       "completed_expansions": 8,
@@ -71,8 +69,8 @@
     "SZSE": {
       "exchange": "深交所",
       "status": "complete",
-      "collected_at": "2026-10-20T08:40:49+08:00",
-      "latest_project_update": "2026-10-19",
+      "collected_at": "2026-10-21T08:10:40+08:00",
+      "latest_project_update": "2026-10-20",
       "fund_report_date": "2026-10-20",
       "listed_fund_count": 28,
       "issued_fund_count": 31,
@@ -239,8 +237,8 @@
       "freshness": {
         "series": "深交所公募REITs基金名录",
         "latest_available_date": "2026-10-20",
-        "expected_date": "2026-10-20",
-        "lagging": false
+        "expected_date": "2026-10-21",
+        "lagging": true
       },
       "limitations": [
         "基金合同生效日及首发募集金额未从公告正文提取；公告发布日期另列，不替代生效日。",
@@ -270,13 +268,12 @@
       "上交所": 102
     },
     "stages": {
-      "审核中": 24,
+      "审核中": 26,
       "已上市": 89,
-      "成立待上市": 8,
+      "成立待上市": 9,
       "获批待发行": 8,
-      "已受理": 7,
-      "发售结束待成立核验": 1,
-      "发售中": 2,
+      "已受理": 5,
+      "发售结束待成立": 2,
       "终止": 5
     },
     "business_types": {
@@ -286,6 +283,606 @@
     "scope_exclusions": []
   },
   "funds": [
+    {
+      "id": "SZSE_APPLICANT_5000079",
+      "code": "",
+      "exchange": "深交所",
+      "name": "华安晶澳科技新能源封闭式基础设施证券投资基金",
+      "short_name": "",
+      "manager": "华安基金管理有限公司",
+      "origin": "晶澳太阳能投资（中国）有限公司;朝阳龙盛太阳能发电有限公司",
+      "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
+      "event_ids": [
+        "SZSE_5000079"
+      ],
+      "documents": [
+        {
+          "title": "关于华安晶澳科技新能源封闭式基础设施证券投资基金上市及华安资产晶澳科技新能源1号资产支持专项计划挂牌申请文件的审核问询函.pdf",
+          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_7A37CCFF1FD54172A58F9B9855003EE9.pdf",
+          "date": "2026-10-20",
+          "source_id": "451",
+          "official_document_type": 22
+        },
+        {
+          "title": "1-5 关于华安晶澳科技新能源封闭式基础设施证券投资基金注册的法律意见书.pdf",
+          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_AF69FEAFAF0B4B10994A7809AA34ECD7.pdf",
+          "date": "2026-09-16",
+          "source_id": "415",
+          "official_document_type": 1
+        },
+        {
+          "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
+          "date": "2026-09-16",
+          "source_id": "414",
+          "official_document_type": 1
+        },
+        {
+          "title": "1-3 华安晶澳科技新能源封闭式基础设施证券投资基金托管协议（草案）.pdf",
+          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_2C3AA36DA8184038ADC9E388B027E48B.pdf",
+          "date": "2026-09-16",
+          "source_id": "413",
+          "official_document_type": 1
+        },
+        {
+          "title": "1-2 华安晶澳科技新能源封闭式基础设施证券投资基金基金合同（草案）.pdf",
+          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_3793463F728F4840A9AC5EF3E0C0DD9D.pdf",
+          "date": "2026-09-16",
+          "source_id": "412",
+          "official_document_type": 1
+        }
+      ],
+      "stage": "审核中",
+      "aliases": [],
+      "asset_type": "能源",
+      "official_asset_type": "光伏发电",
+      "classification_source": "official",
+      "product_type": "基础设施REITs",
+      "updated_date": "2026-10-20",
+      "issuer": null,
+      "financial_advisor": "国泰海通证券股份有限公司",
+      "proposed_sale_amount_application_cny_100m": 13.864,
+      "proposed_sale_amount_feedback_cny_100m": null,
+      "proposed_sale_amount_inquiry_cny_100m": null,
+      "sale_amount_cny_100m": null,
+      "external_loan_amount_cny_100m": null,
+      "project_return_forecast": "预测净现金流分派率：2026年（年化）：9.37%；2027年度：10.33%",
+      "guarantee_support": null,
+      "underlying_assets": [
+        "康保县晶能新能源开发有限公司100MWp光伏扶贫电站项目（晶澳）（一期20MW）、朝阳兴华太阳能发电有限公司持有的朝阳县晶澳300兆瓦光伏平价上网项目"
+      ],
+      "research_field_sources": {
+        "project_return_forecast": [
+          {
+            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
+            "published_at": "2026-09-16",
+            "page": 28,
+            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
+            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
+            "sha256_type": "whole_pdf",
+            "retention": "complete_pdf",
+            "text_method": "native_pdf_text",
+            "page_image": null,
+            "metric": "保留原文现金分派率/净现金流分派率及年份、年化口径",
+            "checked_at": "2026-10-15T13:14:26+08:00",
+            "scope": "首发披露，不含后续扩募"
+          }
+        ],
+        "proposed_sale_amount_application_cny_100m": [
+          {
+            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
+            "published_at": "2026-09-16",
+            "page": 4,
+            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
+            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
+            "sha256_type": "whole_pdf",
+            "retention": "complete_pdf",
+            "text_method": "native_pdf_text",
+            "page_image": null,
+            "unit": "亿元",
+            "source_unit": "亿元",
+            "source_value": "13.864",
+            "conversion": "原金额按单位换算为亿元",
+            "document_stage": "application",
+            "checked_at": "2026-10-15T13:14:26+08:00",
+            "scope": "首发披露，不含后续扩募"
+          }
+        ],
+        "underlying_assets": [
+          {
+            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
+            "published_at": "2026-09-16",
+            "page": 4,
+            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
+            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
+            "sha256_type": "whole_pdf",
+            "retention": "complete_pdf",
+            "text_method": "native_pdf_text",
+            "page_image": null,
+            "scope": "首发披露，不含后续扩募",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ],
+        "financial_advisor": [
+          {
+            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
+            "published_at": "2026-09-16",
+            "page": 4,
+            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
+            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
+            "sha256_type": "whole_pdf",
+            "retention": "complete_pdf",
+            "text_method": "native_pdf_text",
+            "page_image": null,
+            "role": "财务顾问",
+            "checked_at": "2026-10-15T13:14:26+08:00",
+            "scope": "首发披露，不含后续扩募"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "交易所基金或申报信息",
+            "url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
+            "published_at": "2026-09-18",
+            "checked_at": "2026-10-15T13:14:26+08:00",
+            "api_fields": {
+              "asset_type": "能源"
+            }
+          }
+        ]
+      },
+      "field_availability": {
+        "issuer": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
+          "display_reason": "已核查资料未单列发行人。"
+        },
+        "proposed_sale_amount_feedback_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
+          "display_reason": "未取得明确标注反馈稿的拟募集金额。"
+        },
+        "proposed_sale_amount_inquiry_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        },
+        "sale_amount_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        },
+        "external_loan_amount_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        },
+        "guarantee_support": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        }
+      }
+    },
+    {
+      "id": "SSE_APPLICANT_b80b031657254459b6d0010d6b2d5286",
+      "code": "",
+      "exchange": "上交所",
+      "name": "建信天津临港发展集团港口封闭式基础设施证券投资基金",
+      "short_name": "",
+      "manager": "建信基金管理有限责任公司",
+      "origin": "天津临港港务集团有限公司",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286",
+      "event_ids": [
+        "SSE_b80b031657254459b6d0010d6b2d5286"
+      ],
+      "documents": [
+        {
+          "title": "1-2 基金合同草案.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260211_S1O6.pdf",
+          "date": "2026-02-11",
+          "official_file_type": "91",
+          "official_version": "1"
+        },
+        {
+          "title": "1-2 基金合同草案.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/b80b03_20261020_DONQ.pdf",
+          "date": "2026-10-20",
+          "official_file_type": "91",
+          "official_version": "2"
+        },
+        {
+          "title": "1-3 基金托管协议草案.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260211_0LZF.pdf",
+          "date": "2026-02-11",
+          "official_file_type": "92",
+          "official_version": "1"
+        },
+        {
+          "title": "1-3 基金托管协议草案.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/b80b03_20261020_2XSL.pdf",
+          "date": "2026-10-20",
+          "official_file_type": "92",
+          "official_version": "2"
+        },
+        {
+          "title": "1-4-1 招募说明书草案.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+          "date": "2026-02-24",
+          "official_file_type": "93",
+          "official_version": "1"
+        },
+        {
+          "title": "1-4-1 招募说明书草案.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/b80b03_20261020_5YAH.pdf",
+          "date": "2026-10-20",
+          "official_file_type": "93",
+          "official_version": "2"
+        },
+        {
+          "title": "1-5 律师事务所对基金出具的法律意见书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8RDH.pdf",
+          "date": "2026-02-24",
+          "official_file_type": "94",
+          "official_version": "1"
+        },
+        {
+          "title": "1-5 律师事务所对基金出具的法律意见书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/b80b03_20261020_AN4G.pdf",
+          "date": "2026-10-20",
+          "official_file_type": "94",
+          "official_version": "2"
+        },
+        {
+          "title": "3-1 关于《关于建信天津临港发展集团港口封闭式基础设施证券投资基金上市及建信天津临港发展集团港口基础设施1号资产支持专项计划资产支持证券挂牌转让申请受理反馈意见》的答复.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/b80b03_20261020_0K5F.pdf",
+          "date": "2026-10-20",
+          "official_file_type": "",
+          "official_version": ""
+        },
+        {
+          "title": "关于建信天津临港发展集团港口封闭式基础设施证券投资基金上市及建信天津临港发展集团港口基础设施1号资产支持专项计划资产支持证券挂牌转让申请受理反馈意见.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/b80b03_20260330_YBEY.pdf",
+          "date": "2026-03-30",
+          "official_file_type": "",
+          "official_version": ""
+        }
+      ],
+      "stage": "审核中",
+      "aliases": [],
+      "asset_type": "交通设施",
+      "product_type": "基础设施REITs",
+      "classification_source": "keyword",
+      "classification_confidence": "likely",
+      "classification_note": "名称关键词：港口",
+      "updated_date": "2026-10-20",
+      "issuer": null,
+      "financial_advisor": "国泰海通证券股份有限公司",
+      "proposed_sale_amount_application_cny_100m": 23.95,
+      "proposed_sale_amount_feedback_cny_100m": null,
+      "proposed_sale_amount_inquiry_cny_100m": null,
+      "sale_amount_cny_100m": null,
+      "external_loan_amount_cny_100m": null,
+      "project_return_forecast": "净现金流分派率/IRR2025年10月1日至2025年12月31日期间、2026年度模拟预测现金流分派率分别为4.96%（年化）、5.05%，IRR为6.31%",
+      "guarantee_support": null,
+      "underlying_assets": "位于天津市滨海新区天津港保税区的天津临港工业港区2、3号粮油码头工程项目（以下简称“2、3号粮油码头项目”）和天津临港经济区粮油物流中心一期工程项目（以下简称“粮油物流中心一期工程项目”）",
+      "research_field_sources": {
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+            "published_at": "2026-02-24",
+            "page": 22,
+            "document_stage": "application",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
+            "checked_at": "2026-10-15T13:14:26+08:00",
+            "scope": "首发披露，不含后续扩募"
+          }
+        ],
+        "proposed_sale_amount_application_cny_100m": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+            "published_at": "2026-02-24",
+            "page": 22,
+            "document_stage": "application",
+            "rule": "explicit_proposed_monetary_scale",
+            "reviewed_at": "2026-10-15T13:04:58+08:00",
+            "raw_amount": "23.95",
+            "raw_unit": "亿元",
+            "currency": "CNY",
+            "normalized_unit": "亿元",
+            "amount_nature": "预计或拟发售规模",
+            "source_method": "native_pdf_text",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
+            "review_status": "passage_reviewed",
+            "unit": "亿元",
+            "source_unit": "亿元",
+            "source_value": "23.95",
+            "checked_at": "2026-10-15T13:14:26+08:00",
+            "scope": "首发披露，不含后续扩募"
+          }
+        ],
+        "underlying_assets": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+            "published_at": "2026-02-24",
+            "page": 16,
+            "document_stage": "application",
+            "rule": "defined_named_initial_assets",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
+            "checked_at": "2026-10-15T13:14:26+08:00",
+            "scope": "首发披露，不含后续扩募"
+          }
+        ],
+        "financial_advisor": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+            "published_at": "2026-02-24",
+            "page": 4,
+            "document_stage": "application",
+            "rule": "explicit_adviser_row_or_definition",
+            "reviewed_at": "2026-10-15T13:04:58+08:00",
+            "source_method": "native_pdf_text",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
+            "review_status": "passage_reviewed",
+            "checked_at": "2026-10-15T13:14:26+08:00",
+            "scope": "首发披露，不含后续扩募"
+          }
+        ]
+      },
+      "field_availability": {
+        "issuer": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286",
+          "display_reason": "已核查资料未单列发行人。"
+        },
+        "proposed_sale_amount_feedback_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286",
+          "display_reason": "未取得明确标注反馈稿的拟募集金额。"
+        },
+        "proposed_sale_amount_inquiry_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        },
+        "sale_amount_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        },
+        "external_loan_amount_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        },
+        "guarantee_support": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        }
+      }
+    },
+    {
+      "id": "SSE_APPLICANT_a9ce5e95e078472998cc47ad30846c2b",
+      "code": "",
+      "exchange": "上交所",
+      "name": "国联安泰华城封闭式商业不动产证券投资基金",
+      "short_name": "",
+      "manager": "国联安基金管理有限公司",
+      "origin": "山东大墉置业有限公司,潍坊泰华城商业发展有限公司",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b",
+      "event_ids": [
+        "SSE_a9ce5e95e078472998cc47ad30846c2b"
+      ],
+      "documents": [
+        {
+          "title": "1-2 国联安泰华城封闭式商业不动产证券投资基金基金合同（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260914_S7C3.pdf",
+          "date": "2026-09-14",
+          "official_file_type": "91",
+          "official_version": "1"
+        },
+        {
+          "title": "1-3 国联安泰华城封闭式商业不动产证券投资基金托管协议（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260914_N7F9.pdf",
+          "date": "2026-09-14",
+          "official_file_type": "92",
+          "official_version": "1"
+        },
+        {
+          "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+          "date": "2026-09-16",
+          "official_file_type": "93",
+          "official_version": "1"
+        },
+        {
+          "title": "1-5 国联安泰华城封闭式商业不动产证券投资基金法律意见书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260914_WEQH.pdf",
+          "date": "2026-09-14",
+          "official_file_type": "94",
+          "official_version": "1"
+        },
+        {
+          "title": "关于国联安泰华城封闭式商业不动产证券投资基金上市及太保资产-泰华城1号商业不动产资产支持专项计划资产支持证券挂牌转让申请受理反馈意见.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/a9ce5e_20261020_6LBZ.pdf",
+          "date": "2026-10-20",
+          "official_file_type": "",
+          "official_version": ""
+        }
+      ],
+      "stage": "审核中",
+      "aliases": [],
+      "product_type": "商业不动产REITs",
+      "classification_source": "unknown",
+      "classification_confidence": "unknown",
+      "classification_note": "名称无明确资产关键词",
+      "updated_date": "2026-10-20",
+      "asset_type": "待分类",
+      "issuer": null,
+      "financial_advisor": "中国银河证券股份有限公司",
+      "proposed_sale_amount_application_cny_100m": 20.45,
+      "proposed_sale_amount_feedback_cny_100m": null,
+      "proposed_sale_amount_inquiry_cny_100m": null,
+      "sale_amount_cny_100m": null,
+      "external_loan_amount_cny_100m": null,
+      "project_return_forecast": "净现金流分派率自2026年4月1日（假设基金成立日）至2026年12月31日止期间预测数、2027年度预计年化分派率为4.64%、5.40%",
+      "guarantee_support": null,
+      "underlying_assets": "（1）位于山东省潍坊市奎文区东风东街的新天地项目、新天地接建项目（合称“潍坊泰华城项目”）；（2）位于山东省青州市的青州泰华城购物中心项目（简称“青州泰华城项目”）",
+      "research_field_sources": {
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+            "published_at": "2026-09-16",
+            "page": 29,
+            "document_stage": "application",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
+            "checked_at": "2026-10-15T13:14:26+08:00",
+            "scope": "首发披露，不含后续扩募"
+          }
+        ],
+        "proposed_sale_amount_application_cny_100m": [
+          {
+            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+            "published_at": "2026-09-16",
+            "page": 29,
+            "document_stage": "application",
+            "rule": "explicit_proposed_monetary_scale",
+            "reviewed_at": "2026-10-15T13:04:58+08:00",
+            "raw_amount": "20.45",
+            "raw_unit": "亿元",
+            "currency": "CNY",
+            "normalized_unit": "亿元",
+            "amount_nature": "预计或拟发售规模",
+            "source_method": "native_pdf_text",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
+            "review_status": "passage_reviewed",
+            "unit": "亿元",
+            "source_unit": "亿元",
+            "source_value": "20.45",
+            "checked_at": "2026-10-15T13:14:26+08:00",
+            "scope": "首发披露，不含后续扩募"
+          }
+        ],
+        "underlying_assets": [
+          {
+            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+            "published_at": "2026-09-16",
+            "page": 4,
+            "document_stage": "application",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
+            "checked_at": "2026-10-15T13:14:26+08:00",
+            "scope": "首发披露，不含后续扩募"
+          }
+        ],
+        "financial_advisor": [
+          {
+            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+            "published_at": "2026-09-16",
+            "page": 4,
+            "document_stage": "application",
+            "rule": "explicit_adviser_row_or_definition",
+            "reviewed_at": "2026-10-15T13:04:58+08:00",
+            "source_method": "native_pdf_text",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
+            "review_status": "passage_reviewed",
+            "checked_at": "2026-10-15T13:14:26+08:00",
+            "scope": "首发披露，不含后续扩募"
+          }
+        ]
+      },
+      "field_availability": {
+        "issuer": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b",
+          "display_reason": "已核查资料未单列发行人。"
+        },
+        "proposed_sale_amount_feedback_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b",
+          "display_reason": "未取得明确标注反馈稿的拟募集金额。"
+        },
+        "proposed_sale_amount_inquiry_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        },
+        "sale_amount_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        },
+        "external_loan_amount_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        },
+        "guarantee_support": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        }
+      }
+    },
     {
       "id": "SZSE_APPLICANT_5000082",
       "code": "",
@@ -4936,14 +5533,14 @@
       "asset_type": "待分类",
       "listing_date": "",
       "planned_listing_date": "",
-      "established_date": "",
-      "initial_raise_cny_100m": null,
+      "established_date": "2026-10-20",
+      "initial_raise_cny_100m": 31.98,
       "initial_offered_cny_100m": 31.98,
       "initial_price_cny": 3.198,
       "initial_copies_100m": 10.0,
       "initial_issue_start": "2026-10-12",
       "initial_issue_end": "2026-10-13",
-      "stage": "发售结束待成立核验",
+      "stage": "成立待上市",
       "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508081&category=F600",
       "documents": [
         {
@@ -5056,6 +5653,7 @@
       "event_ids": [
         "SSE_24e84189f68749109b5302f5e1e6ad29"
       ],
+      "initial_raise_basis": "首发发售价格×官方首发募集份额（不含扩募）",
       "updated_date": "2026-09-20",
       "issuer": null,
       "financial_advisor": "招商证券股份有限公司",
@@ -5379,196 +5977,6 @@
       }
     },
     {
-      "id": "SZSE_APPLICANT_5000079",
-      "code": "",
-      "exchange": "深交所",
-      "name": "华安晶澳科技新能源封闭式基础设施证券投资基金",
-      "short_name": "",
-      "manager": "华安基金管理有限公司",
-      "origin": "晶澳太阳能投资（中国）有限公司;朝阳龙盛太阳能发电有限公司",
-      "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
-      "event_ids": [
-        "SZSE_5000079"
-      ],
-      "documents": [
-        {
-          "title": "1-5 关于华安晶澳科技新能源封闭式基础设施证券投资基金注册的法律意见书.pdf",
-          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_AF69FEAFAF0B4B10994A7809AA34ECD7.pdf",
-          "date": "2026-09-16",
-          "source_id": "415",
-          "official_document_type": 1
-        },
-        {
-          "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
-          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
-          "date": "2026-09-16",
-          "source_id": "414",
-          "official_document_type": 1
-        },
-        {
-          "title": "1-3 华安晶澳科技新能源封闭式基础设施证券投资基金托管协议（草案）.pdf",
-          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_2C3AA36DA8184038ADC9E388B027E48B.pdf",
-          "date": "2026-09-16",
-          "source_id": "413",
-          "official_document_type": 1
-        },
-        {
-          "title": "1-2 华安晶澳科技新能源封闭式基础设施证券投资基金基金合同（草案）.pdf",
-          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_3793463F728F4840A9AC5EF3E0C0DD9D.pdf",
-          "date": "2026-09-16",
-          "source_id": "412",
-          "official_document_type": 1
-        }
-      ],
-      "stage": "已受理",
-      "aliases": [],
-      "asset_type": "能源",
-      "official_asset_type": "光伏发电",
-      "classification_source": "official",
-      "product_type": "基础设施REITs",
-      "updated_date": "2026-09-18",
-      "issuer": null,
-      "financial_advisor": "国泰海通证券股份有限公司",
-      "proposed_sale_amount_application_cny_100m": 13.864,
-      "proposed_sale_amount_feedback_cny_100m": null,
-      "proposed_sale_amount_inquiry_cny_100m": null,
-      "sale_amount_cny_100m": null,
-      "external_loan_amount_cny_100m": null,
-      "project_return_forecast": "预测净现金流分派率：2026年（年化）：9.37%；2027年度：10.33%",
-      "guarantee_support": null,
-      "underlying_assets": [
-        "康保县晶能新能源开发有限公司100MWp光伏扶贫电站项目（晶澳）（一期20MW）、朝阳兴华太阳能发电有限公司持有的朝阳县晶澳300兆瓦光伏平价上网项目"
-      ],
-      "research_field_sources": {
-        "project_return_forecast": [
-          {
-            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
-            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
-            "published_at": "2026-09-16",
-            "page": 28,
-            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
-            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
-            "sha256_type": "whole_pdf",
-            "retention": "complete_pdf",
-            "text_method": "native_pdf_text",
-            "page_image": null,
-            "metric": "保留原文现金分派率/净现金流分派率及年份、年化口径",
-            "checked_at": "2026-10-15T13:14:26+08:00",
-            "scope": "首发披露，不含后续扩募"
-          }
-        ],
-        "proposed_sale_amount_application_cny_100m": [
-          {
-            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
-            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
-            "published_at": "2026-09-16",
-            "page": 4,
-            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
-            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
-            "sha256_type": "whole_pdf",
-            "retention": "complete_pdf",
-            "text_method": "native_pdf_text",
-            "page_image": null,
-            "unit": "亿元",
-            "source_unit": "亿元",
-            "source_value": "13.864",
-            "conversion": "原金额按单位换算为亿元",
-            "document_stage": "application",
-            "checked_at": "2026-10-15T13:14:26+08:00",
-            "scope": "首发披露，不含后续扩募"
-          }
-        ],
-        "underlying_assets": [
-          {
-            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
-            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
-            "published_at": "2026-09-16",
-            "page": 4,
-            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
-            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
-            "sha256_type": "whole_pdf",
-            "retention": "complete_pdf",
-            "text_method": "native_pdf_text",
-            "page_image": null,
-            "scope": "首发披露，不含后续扩募",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ],
-        "financial_advisor": [
-          {
-            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
-            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
-            "published_at": "2026-09-16",
-            "page": 4,
-            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
-            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
-            "sha256_type": "whole_pdf",
-            "retention": "complete_pdf",
-            "text_method": "native_pdf_text",
-            "page_image": null,
-            "role": "财务顾问",
-            "checked_at": "2026-10-15T13:14:26+08:00",
-            "scope": "首发披露，不含后续扩募"
-          }
-        ],
-        "asset_type": [
-          {
-            "title": "交易所基金或申报信息",
-            "url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
-            "published_at": "2026-09-18",
-            "checked_at": "2026-10-15T13:14:26+08:00",
-            "api_fields": {
-              "asset_type": "能源"
-            }
-          }
-        ]
-      },
-      "field_availability": {
-        "issuer": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
-          "display_reason": "已核查资料未单列发行人。"
-        },
-        "proposed_sale_amount_feedback_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
-          "display_reason": "未取得明确标注反馈稿的拟募集金额。"
-        },
-        "proposed_sale_amount_inquiry_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        },
-        "sale_amount_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        },
-        "external_loan_amount_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        },
-        "guarantee_support": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        }
-      }
-    },
-    {
       "id": "SZSE_APPLICANT_5000078",
       "code": "",
       "exchange": "深交所",
@@ -5751,183 +6159,6 @@
           "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
           "checked_at": "2026-10-15T13:14:26+08:00",
           "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000078",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        }
-      }
-    },
-    {
-      "id": "SSE_APPLICANT_a9ce5e95e078472998cc47ad30846c2b",
-      "code": "",
-      "exchange": "上交所",
-      "name": "国联安泰华城封闭式商业不动产证券投资基金",
-      "short_name": "",
-      "manager": "国联安基金管理有限公司",
-      "origin": "山东大墉置业有限公司,潍坊泰华城商业发展有限公司",
-      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b",
-      "event_ids": [
-        "SSE_a9ce5e95e078472998cc47ad30846c2b"
-      ],
-      "documents": [
-        {
-          "title": "1-2 国联安泰华城封闭式商业不动产证券投资基金基金合同（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260914_S7C3.pdf",
-          "date": "2026-09-14",
-          "official_file_type": "91",
-          "official_version": "1"
-        },
-        {
-          "title": "1-3 国联安泰华城封闭式商业不动产证券投资基金托管协议（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260914_N7F9.pdf",
-          "date": "2026-09-14",
-          "official_file_type": "92",
-          "official_version": "1"
-        },
-        {
-          "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-          "date": "2026-09-16",
-          "official_file_type": "93",
-          "official_version": "1"
-        },
-        {
-          "title": "1-5 国联安泰华城封闭式商业不动产证券投资基金法律意见书.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260914_WEQH.pdf",
-          "date": "2026-09-14",
-          "official_file_type": "94",
-          "official_version": "1"
-        }
-      ],
-      "stage": "已受理",
-      "aliases": [],
-      "product_type": "商业不动产REITs",
-      "classification_source": "unknown",
-      "classification_confidence": "unknown",
-      "classification_note": "名称无明确资产关键词",
-      "updated_date": "2026-09-16",
-      "asset_type": "待分类",
-      "issuer": null,
-      "financial_advisor": "中国银河证券股份有限公司",
-      "proposed_sale_amount_application_cny_100m": 20.45,
-      "proposed_sale_amount_feedback_cny_100m": null,
-      "proposed_sale_amount_inquiry_cny_100m": null,
-      "sale_amount_cny_100m": null,
-      "external_loan_amount_cny_100m": null,
-      "project_return_forecast": "净现金流分派率自2026年4月1日（假设基金成立日）至2026年12月31日止期间预测数、2027年度预计年化分派率为4.64%、5.40%",
-      "guarantee_support": null,
-      "underlying_assets": "（1）位于山东省潍坊市奎文区东风东街的新天地项目、新天地接建项目（合称“潍坊泰华城项目”）；（2）位于山东省青州市的青州泰华城购物中心项目（简称“青州泰华城项目”）",
-      "research_field_sources": {
-        "project_return_forecast": [
-          {
-            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-            "published_at": "2026-09-16",
-            "page": 29,
-            "document_stage": "application",
-            "rule": "explicit_year_and_forecast_rate",
-            "reviewed_at": "2026-10-15T12:11:08+08:00",
-            "review_status": "passage_reviewed",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
-            "checked_at": "2026-10-15T13:14:26+08:00",
-            "scope": "首发披露，不含后续扩募"
-          }
-        ],
-        "proposed_sale_amount_application_cny_100m": [
-          {
-            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-            "published_at": "2026-09-16",
-            "page": 29,
-            "document_stage": "application",
-            "rule": "explicit_proposed_monetary_scale",
-            "reviewed_at": "2026-10-15T13:04:58+08:00",
-            "raw_amount": "20.45",
-            "raw_unit": "亿元",
-            "currency": "CNY",
-            "normalized_unit": "亿元",
-            "amount_nature": "预计或拟发售规模",
-            "source_method": "native_pdf_text",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
-            "review_status": "passage_reviewed",
-            "unit": "亿元",
-            "source_unit": "亿元",
-            "source_value": "20.45",
-            "checked_at": "2026-10-15T13:14:26+08:00",
-            "scope": "首发披露，不含后续扩募"
-          }
-        ],
-        "underlying_assets": [
-          {
-            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-            "published_at": "2026-09-16",
-            "page": 4,
-            "document_stage": "application",
-            "rule": "named_underlying_project_table",
-            "reviewed_at": "2026-10-15T12:11:08+08:00",
-            "review_status": "passage_reviewed",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
-            "checked_at": "2026-10-15T13:14:26+08:00",
-            "scope": "首发披露，不含后续扩募"
-          }
-        ],
-        "financial_advisor": [
-          {
-            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-            "published_at": "2026-09-16",
-            "page": 4,
-            "document_stage": "application",
-            "rule": "explicit_adviser_row_or_definition",
-            "reviewed_at": "2026-10-15T13:04:58+08:00",
-            "source_method": "native_pdf_text",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
-            "review_status": "passage_reviewed",
-            "checked_at": "2026-10-15T13:14:26+08:00",
-            "scope": "首发披露，不含后续扩募"
-          }
-        ]
-      },
-      "field_availability": {
-        "issuer": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b",
-          "display_reason": "已核查资料未单列发行人。"
-        },
-        "proposed_sale_amount_feedback_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b",
-          "display_reason": "未取得明确标注反馈稿的拟募集金额。"
-        },
-        "proposed_sale_amount_inquiry_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        },
-        "sale_amount_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        },
-        "external_loan_amount_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        },
-        "guarantee_support": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b",
           "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
         }
       }
@@ -8228,7 +8459,7 @@
       "event_ids": [
         "SZSE_5000039"
       ],
-      "stage": "发售中",
+      "stage": "发售结束待成立",
       "updated_date": "2026-08-18",
       "issuer": null,
       "financial_advisor": "中国银河证券股份有限公司",
@@ -8525,7 +8756,7 @@
       "event_ids": [
         "SZSE_5000060"
       ],
-      "stage": "发售中",
+      "stage": "发售结束待成立",
       "updated_date": "2026-08-17",
       "issuer": null,
       "financial_advisor": "申万宏源证券承销保荐有限责任公司",
@@ -16339,190 +16570,6 @@
           "checked_at": "2026-10-15T13:14:26+08:00",
           "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000050",
           "display_reason": "已取得资料尚未明确本批次资产清单。"
-        }
-      }
-    },
-    {
-      "id": "SSE_APPLICANT_b80b031657254459b6d0010d6b2d5286",
-      "code": "",
-      "exchange": "上交所",
-      "name": "建信天津临港发展集团港口封闭式基础设施证券投资基金",
-      "short_name": "",
-      "manager": "建信基金管理有限责任公司",
-      "origin": "天津临港港务集团有限公司",
-      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286",
-      "event_ids": [
-        "SSE_b80b031657254459b6d0010d6b2d5286"
-      ],
-      "documents": [
-        {
-          "title": "1-2 基金合同草案.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260211_S1O6.pdf",
-          "date": "2026-02-11",
-          "official_file_type": "91",
-          "official_version": "1"
-        },
-        {
-          "title": "1-3 基金托管协议草案.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260211_0LZF.pdf",
-          "date": "2026-02-11",
-          "official_file_type": "92",
-          "official_version": "1"
-        },
-        {
-          "title": "1-4-1 招募说明书草案.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-          "date": "2026-02-24",
-          "official_file_type": "93",
-          "official_version": "1"
-        },
-        {
-          "title": "1-5 律师事务所对基金出具的法律意见书.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8RDH.pdf",
-          "date": "2026-02-24",
-          "official_file_type": "94",
-          "official_version": "1"
-        },
-        {
-          "title": "关于建信天津临港发展集团港口封闭式基础设施证券投资基金上市及建信天津临港发展集团港口基础设施1号资产支持专项计划资产支持证券挂牌转让申请受理反馈意见.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/b80b03_20260330_YBEY.pdf",
-          "date": "2026-03-30",
-          "official_file_type": "",
-          "official_version": ""
-        }
-      ],
-      "stage": "审核中",
-      "aliases": [],
-      "asset_type": "交通设施",
-      "product_type": "基础设施REITs",
-      "classification_source": "keyword",
-      "classification_confidence": "likely",
-      "classification_note": "名称关键词：港口",
-      "updated_date": "2026-03-30",
-      "issuer": null,
-      "financial_advisor": "国泰海通证券股份有限公司",
-      "proposed_sale_amount_application_cny_100m": 23.95,
-      "proposed_sale_amount_feedback_cny_100m": null,
-      "proposed_sale_amount_inquiry_cny_100m": null,
-      "sale_amount_cny_100m": null,
-      "external_loan_amount_cny_100m": null,
-      "project_return_forecast": "净现金流分派率/IRR2025年10月1日至2025年12月31日期间、2026年度模拟预测现金流分派率分别为4.96%（年化）、5.05%，IRR为6.31%",
-      "guarantee_support": null,
-      "underlying_assets": "位于天津市滨海新区天津港保税区的天津临港工业港区2、3号粮油码头工程项目（以下简称“2、3号粮油码头项目”）和天津临港经济区粮油物流中心一期工程项目（以下简称“粮油物流中心一期工程项目”）",
-      "research_field_sources": {
-        "project_return_forecast": [
-          {
-            "title": "1-4-1 招募说明书草案.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-            "published_at": "2026-02-24",
-            "page": 22,
-            "document_stage": "application",
-            "rule": "explicit_year_and_forecast_rate",
-            "reviewed_at": "2026-10-15T12:11:08+08:00",
-            "review_status": "passage_reviewed",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
-            "checked_at": "2026-10-15T13:14:26+08:00",
-            "scope": "首发披露，不含后续扩募"
-          }
-        ],
-        "proposed_sale_amount_application_cny_100m": [
-          {
-            "title": "1-4-1 招募说明书草案.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-            "published_at": "2026-02-24",
-            "page": 22,
-            "document_stage": "application",
-            "rule": "explicit_proposed_monetary_scale",
-            "reviewed_at": "2026-10-15T13:04:58+08:00",
-            "raw_amount": "23.95",
-            "raw_unit": "亿元",
-            "currency": "CNY",
-            "normalized_unit": "亿元",
-            "amount_nature": "预计或拟发售规模",
-            "source_method": "native_pdf_text",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
-            "review_status": "passage_reviewed",
-            "unit": "亿元",
-            "source_unit": "亿元",
-            "source_value": "23.95",
-            "checked_at": "2026-10-15T13:14:26+08:00",
-            "scope": "首发披露，不含后续扩募"
-          }
-        ],
-        "underlying_assets": [
-          {
-            "title": "1-4-1 招募说明书草案.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-            "published_at": "2026-02-24",
-            "page": 16,
-            "document_stage": "application",
-            "rule": "defined_named_initial_assets",
-            "reviewed_at": "2026-10-15T12:11:08+08:00",
-            "review_status": "passage_reviewed",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
-            "checked_at": "2026-10-15T13:14:26+08:00",
-            "scope": "首发披露，不含后续扩募"
-          }
-        ],
-        "financial_advisor": [
-          {
-            "title": "1-4-1 招募说明书草案.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-            "published_at": "2026-02-24",
-            "page": 4,
-            "document_stage": "application",
-            "rule": "explicit_adviser_row_or_definition",
-            "reviewed_at": "2026-10-15T13:04:58+08:00",
-            "source_method": "native_pdf_text",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
-            "review_status": "passage_reviewed",
-            "checked_at": "2026-10-15T13:14:26+08:00",
-            "scope": "首发披露，不含后续扩募"
-          }
-        ]
-      },
-      "field_availability": {
-        "issuer": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286",
-          "display_reason": "已核查资料未单列发行人。"
-        },
-        "proposed_sale_amount_feedback_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286",
-          "display_reason": "未取得明确标注反馈稿的拟募集金额。"
-        },
-        "proposed_sale_amount_inquiry_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        },
-        "sale_amount_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        },
-        "external_loan_amount_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        },
-        "guarantee_support": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
         }
       }
     },
@@ -36449,6 +36496,729 @@
   ],
   "events": [
     {
+      "id": "SZSE_5000079",
+      "source_id": "5000079",
+      "name": "华安晶澳科技新能源封闭式基础设施证券投资基金",
+      "exchange": "深交所",
+      "business_type": "首发",
+      "official_business_type": "首发",
+      "official_business_code": "21",
+      "fund_code": "",
+      "manager": "华安基金管理有限公司",
+      "origin": "晶澳太阳能投资（中国）有限公司;朝阳龙盛太阳能发电有限公司",
+      "official_status": "已问询",
+      "official_status_code": 30,
+      "accepted_date": "2026-09-16",
+      "updated_date": "2026-10-20",
+      "registered_date": "",
+      "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
+      "source_data_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000079",
+      "asset_type": "能源",
+      "official_asset_type": "光伏发电",
+      "product_type": "基础设施REITs",
+      "documents": [
+        {
+          "title": "关于华安晶澳科技新能源封闭式基础设施证券投资基金上市及华安资产晶澳科技新能源1号资产支持专项计划挂牌申请文件的审核问询函.pdf",
+          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_7A37CCFF1FD54172A58F9B9855003EE9.pdf",
+          "date": "2026-10-20",
+          "source_id": "451",
+          "official_document_type": 22
+        },
+        {
+          "title": "1-5 关于华安晶澳科技新能源封闭式基础设施证券投资基金注册的法律意见书.pdf",
+          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_AF69FEAFAF0B4B10994A7809AA34ECD7.pdf",
+          "date": "2026-09-16",
+          "source_id": "415",
+          "official_document_type": 1
+        },
+        {
+          "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
+          "date": "2026-09-16",
+          "source_id": "414",
+          "official_document_type": 1
+        },
+        {
+          "title": "1-3 华安晶澳科技新能源封闭式基础设施证券投资基金托管协议（草案）.pdf",
+          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_2C3AA36DA8184038ADC9E388B027E48B.pdf",
+          "date": "2026-09-16",
+          "source_id": "413",
+          "official_document_type": 1
+        },
+        {
+          "title": "1-2 华安晶澳科技新能源封闭式基础设施证券投资基金基金合同（草案）.pdf",
+          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_3793463F728F4840A9AC5EF3E0C0DD9D.pdf",
+          "date": "2026-09-16",
+          "source_id": "412",
+          "official_document_type": 1
+        }
+      ],
+      "underlying_assets": [
+        "康保县晶能新能源开发有限公司100MWp光伏扶贫电站项目（晶澳）（一期20MW）、朝阳兴华太阳能发电有限公司持有的朝阳县晶澳300兆瓦光伏平价上网项目"
+      ],
+      "asset_location": "",
+      "manager_location": "上海",
+      "special_plan_name": "华安资产晶澳科技新能源1号资产支持专项计划",
+      "special_plan_manager": "华安未来资产管理（上海）有限公司",
+      "timeline": [
+        {
+          "title": "已申报",
+          "date": "2026-09-10",
+          "official_status_code": 10
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-20",
+          "official_status_code": 30
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-20",
+          "official_status_code": 30
+        },
+        {
+          "title": "已受理",
+          "date": "2026-09-16",
+          "official_status_code": 20
+        }
+      ],
+      "classification_source": "official",
+      "fund_id": "SZSE_APPLICANT_5000079",
+      "linkage_method": "official_initial_filing",
+      "stage": "审核中",
+      "issuer": null,
+      "financial_advisor": "国泰海通证券股份有限公司",
+      "proposed_sale_amount_application_cny_100m": 13.864,
+      "proposed_sale_amount_feedback_cny_100m": null,
+      "proposed_sale_amount_inquiry_cny_100m": null,
+      "sale_amount_cny_100m": null,
+      "external_loan_amount_cny_100m": null,
+      "project_return_forecast": "预测净现金流分派率：2026年（年化）：9.37%；2027年度：10.33%",
+      "guarantee_support": null,
+      "research_field_sources": {
+        "financial_advisor": [
+          {
+            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
+            "published_at": "2026-09-16",
+            "page": 4,
+            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
+            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
+            "sha256_type": "whole_pdf",
+            "retention": "complete_pdf",
+            "text_method": "native_pdf_text",
+            "page_image": null,
+            "role": "财务顾问",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ],
+        "underlying_assets": [
+          {
+            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
+            "published_at": "2026-09-16",
+            "page": 4,
+            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
+            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
+            "sha256_type": "whole_pdf",
+            "retention": "complete_pdf",
+            "text_method": "native_pdf_text",
+            "page_image": null,
+            "scope": "本次首发/扩募项目正文，未关联其他申报批次",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ],
+        "proposed_sale_amount_application_cny_100m": [
+          {
+            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
+            "published_at": "2026-09-16",
+            "page": 4,
+            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
+            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
+            "sha256_type": "whole_pdf",
+            "retention": "complete_pdf",
+            "text_method": "native_pdf_text",
+            "page_image": null,
+            "unit": "亿元",
+            "source_unit": "亿元",
+            "source_value": "13.864",
+            "conversion": "原金额按单位换算为亿元",
+            "document_stage": "application",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
+            "published_at": "2026-09-16",
+            "page": 22,
+            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
+            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
+            "sha256_type": "whole_pdf",
+            "retention": "complete_pdf",
+            "text_method": "native_pdf_text",
+            "page_image": null,
+            "official_asset_type": "光伏发电",
+            "basis": "交易所项目类型与本项目PDF正文交叉核验",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
+            "published_at": "2026-09-16",
+            "page": 28,
+            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
+            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
+            "sha256_type": "whole_pdf",
+            "retention": "complete_pdf",
+            "text_method": "native_pdf_text",
+            "page_image": null,
+            "metric": "保留原文现金分派率/净现金流分派率及年份、年化口径",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ]
+      },
+      "field_availability": {
+        "issuer": {
+          "status": "unverified",
+          "original_status": "not_found_in_verified_public_text",
+          "reason": "已核验正文未独立明确列示基金发行人；不将基金管理人或原始权益人替代。",
+          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
+          "checked_at": "2026-10-15T13:11:48+08:00",
+          "display_reason": "已核查资料未单列发行人。"
+        },
+        "proposed_sale_amount_feedback_cny_100m": {
+          "status": "unverified",
+          "original_status": "not_found_in_verified_public_text",
+          "reason": "官方项目附件未标明可核验的反馈稿金额；注册稿不冒充反馈稿。",
+          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
+          "checked_at": "2026-10-15T13:11:48+08:00",
+          "display_reason": "未取得明确标注反馈稿的拟募集金额。"
+        },
+        "proposed_sale_amount_inquiry_cny_100m": {
+          "status": "unverified",
+          "original_status": "not_found_in_verified_public_text",
+          "reason": "未在已核验公开PDF正文中定位到本字段可直接使用的明确值；不以比例上限或其他批次替代。",
+          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
+          "checked_at": "2026-10-15T13:11:48+08:00",
+          "display_reason": "未在已核验公开PDF正文中定位到本字段可直接使用的明确值；不以比例上限或其他批次替代。"
+        },
+        "sale_amount_cny_100m": {
+          "status": "unverified",
+          "original_status": "not_found_in_verified_public_text",
+          "reason": "本申报尚无已成立基金代码及实际募集结果证据；拟募集金额不替代实际金额。",
+          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
+          "checked_at": "2026-10-15T13:11:48+08:00",
+          "display_reason": "本申报尚无已成立基金代码及实际募集结果证据；拟募集金额不替代实际金额。"
+        },
+        "external_loan_amount_cny_100m": {
+          "status": "unverified",
+          "original_status": "not_found_in_verified_public_text",
+          "reason": "未在已核验公开PDF正文中定位到本字段可直接使用的明确值；不以比例上限或其他批次替代。",
+          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
+          "checked_at": "2026-10-15T13:11:48+08:00",
+          "display_reason": "未在已核验公开PDF正文中定位到本字段可直接使用的明确值；不以比例上限或其他批次替代。"
+        },
+        "guarantee_support": {
+          "status": "unverified",
+          "original_status": "not_found_in_verified_public_text",
+          "reason": "未在已核验公开PDF正文中定位到本字段可直接使用的明确值；不以比例上限或其他批次替代。",
+          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
+          "checked_at": "2026-10-15T13:11:48+08:00",
+          "display_reason": "未在已核验公开PDF正文中定位到本字段可直接使用的明确值；不以比例上限或其他批次替代。"
+        }
+      }
+    },
+    {
+      "id": "SSE_b80b031657254459b6d0010d6b2d5286",
+      "source_id": "b80b031657254459b6d0010d6b2d5286",
+      "name": "建信天津临港发展集团港口封闭式基础设施证券投资基金",
+      "exchange": "上交所",
+      "business_type": "首发",
+      "official_business_type": "0",
+      "fund_code": "",
+      "manager": "建信基金管理有限责任公司",
+      "manager_short_name": "建信基金",
+      "origin": "天津临港港务集团有限公司",
+      "official_status": "已反馈",
+      "official_status_code": "2",
+      "official_sub_status": "",
+      "accepted_date": "2026-03-02",
+      "updated_date": "2026-10-20",
+      "registered_date": "",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286",
+      "asset_type": "交通设施",
+      "product_type": "基础设施REITs",
+      "documents": [
+        {
+          "title": "1-2 基金合同草案.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260211_S1O6.pdf",
+          "date": "2026-02-11",
+          "official_file_type": "91",
+          "official_version": "1"
+        },
+        {
+          "title": "1-2 基金合同草案.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/b80b03_20261020_DONQ.pdf",
+          "date": "2026-10-20",
+          "official_file_type": "91",
+          "official_version": "2"
+        },
+        {
+          "title": "1-3 基金托管协议草案.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260211_0LZF.pdf",
+          "date": "2026-02-11",
+          "official_file_type": "92",
+          "official_version": "1"
+        },
+        {
+          "title": "1-3 基金托管协议草案.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/b80b03_20261020_2XSL.pdf",
+          "date": "2026-10-20",
+          "official_file_type": "92",
+          "official_version": "2"
+        },
+        {
+          "title": "1-4-1 招募说明书草案.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+          "date": "2026-02-24",
+          "official_file_type": "93",
+          "official_version": "1"
+        },
+        {
+          "title": "1-4-1 招募说明书草案.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/b80b03_20261020_5YAH.pdf",
+          "date": "2026-10-20",
+          "official_file_type": "93",
+          "official_version": "2"
+        },
+        {
+          "title": "1-5 律师事务所对基金出具的法律意见书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8RDH.pdf",
+          "date": "2026-02-24",
+          "official_file_type": "94",
+          "official_version": "1"
+        },
+        {
+          "title": "1-5 律师事务所对基金出具的法律意见书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/b80b03_20261020_AN4G.pdf",
+          "date": "2026-10-20",
+          "official_file_type": "94",
+          "official_version": "2"
+        },
+        {
+          "title": "3-1 关于《关于建信天津临港发展集团港口封闭式基础设施证券投资基金上市及建信天津临港发展集团港口基础设施1号资产支持专项计划资产支持证券挂牌转让申请受理反馈意见》的答复.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/b80b03_20261020_0K5F.pdf",
+          "date": "2026-10-20",
+          "official_file_type": "",
+          "official_version": ""
+        },
+        {
+          "title": "关于建信天津临港发展集团港口封闭式基础设施证券投资基金上市及建信天津临港发展集团港口基础设施1号资产支持专项计划资产支持证券挂牌转让申请受理反馈意见.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/b80b03_20260330_YBEY.pdf",
+          "date": "2026-03-30",
+          "official_file_type": "",
+          "official_version": ""
+        }
+      ],
+      "underlying_assets": "位于天津市滨海新区天津港保税区的天津临港工业港区2、3号粮油码头工程项目（以下简称“2、3号粮油码头项目”）和天津临港经济区粮油物流中心一期工程项目（以下简称“粮油物流中心一期工程项目”）",
+      "planned_issue_amount_official": 5.0,
+      "planned_issue_amount_unit": "未展示（官方字段PLAN_ISSUE_AMOUNT，未纳入规模统计）",
+      "special_plan_name": "建信天津临港发展集团港口基础设施1号资产支持专项计划",
+      "special_plan_manager": "建信资本管理有限责任公司",
+      "official_registration_approval_no": "",
+      "official_no_objection_no": "",
+      "documents_checked": true,
+      "classification_source": "official",
+      "classification_confidence": "confirmed",
+      "classification_note": "名称关键词：港口",
+      "fund_id": "SSE_APPLICANT_b80b031657254459b6d0010d6b2d5286",
+      "linkage_method": "official_initial_filing",
+      "stage": "审核中",
+      "issuer": null,
+      "financial_advisor": "国泰海通证券股份有限公司",
+      "proposed_sale_amount_application_cny_100m": 23.95,
+      "proposed_sale_amount_feedback_cny_100m": null,
+      "proposed_sale_amount_inquiry_cny_100m": null,
+      "sale_amount_cny_100m": null,
+      "external_loan_amount_cny_100m": null,
+      "project_return_forecast": "净现金流分派率/IRR2025年10月1日至2025年12月31日期间、2026年度模拟预测现金流分派率分别为4.96%（年化）、5.05%，IRR为6.31%",
+      "guarantee_support": null,
+      "official_asset_type": "交通设施",
+      "classification_evidence": [
+        {
+          "title": "1-4-1 招募说明书草案.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+          "published_at": "2026-02-24",
+          "page": 22,
+          "excerpt": "不动产项目业态 交通基础设施-港口 基金投资标的 80%以上基金资产投资于不动产资产支持证券，并持",
+          "document_stage": "application",
+          "rule": "explicit_asset_use_table",
+          "reviewed_at": "2026-10-15T12:11:08+08:00",
+          "classification_basis": "官方披露资产用途转研究资产分类",
+          "review_status": "passage_reviewed",
+          "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
+          "checked_at": "2026-10-15T13:14:26+08:00"
+        }
+      ],
+      "research_field_sources": {
+        "financial_advisor": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+            "published_at": "2026-02-24",
+            "page": 4,
+            "document_stage": "application",
+            "rule": "explicit_adviser_row_or_definition",
+            "reviewed_at": "2026-10-15T13:04:58+08:00",
+            "source_method": "native_pdf_text",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
+            "review_status": "passage_reviewed",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ],
+        "proposed_sale_amount_application_cny_100m": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+            "published_at": "2026-02-24",
+            "page": 22,
+            "document_stage": "application",
+            "rule": "explicit_proposed_monetary_scale",
+            "reviewed_at": "2026-10-15T13:04:58+08:00",
+            "raw_amount": "23.95",
+            "raw_unit": "亿元",
+            "currency": "CNY",
+            "normalized_unit": "亿元",
+            "amount_nature": "预计或拟发售规模",
+            "source_method": "native_pdf_text",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
+            "review_status": "passage_reviewed",
+            "unit": "亿元",
+            "source_unit": "亿元",
+            "source_value": "23.95",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ],
+        "underlying_assets": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+            "published_at": "2026-02-24",
+            "page": 16,
+            "document_stage": "application",
+            "rule": "defined_named_initial_assets",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+            "published_at": "2026-02-24",
+            "page": 22,
+            "document_stage": "application",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 招募说明书草案.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+            "published_at": "2026-02-24",
+            "page": 22,
+            "document_stage": "application",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ]
+      },
+      "field_availability": {
+        "issuer": {
+          "status": "unverified",
+          "reason": "未找到单独标识发行人且可直接确认主体的披露，未将原始权益人或基金管理人自动代填发行人。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已核查资料未单列发行人。"
+        },
+        "proposed_sale_amount_feedback_cny_100m": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "未取得明确标注反馈稿的拟募集金额。"
+        },
+        "proposed_sale_amount_inquiry_cny_100m": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
+        },
+        "sale_amount_cny_100m": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
+        },
+        "external_loan_amount_cny_100m": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
+        },
+        "guarantee_support": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
+        }
+      }
+    },
+    {
+      "id": "SSE_a9ce5e95e078472998cc47ad30846c2b",
+      "source_id": "a9ce5e95e078472998cc47ad30846c2b",
+      "name": "国联安泰华城封闭式商业不动产证券投资基金",
+      "exchange": "上交所",
+      "business_type": "首发",
+      "official_business_type": "0",
+      "fund_code": "",
+      "manager": "国联安基金管理有限公司",
+      "manager_short_name": "国联安基金",
+      "origin": "山东大墉置业有限公司,潍坊泰华城商业发展有限公司",
+      "official_status": "已反馈",
+      "official_status_code": "2",
+      "official_sub_status": "",
+      "accepted_date": "2026-09-16",
+      "updated_date": "2026-10-20",
+      "registered_date": "",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b",
+      "asset_type": "消费",
+      "product_type": "商业不动产REITs",
+      "documents": [
+        {
+          "title": "1-2 国联安泰华城封闭式商业不动产证券投资基金基金合同（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260914_S7C3.pdf",
+          "date": "2026-09-14",
+          "official_file_type": "91",
+          "official_version": "1"
+        },
+        {
+          "title": "1-3 国联安泰华城封闭式商业不动产证券投资基金托管协议（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260914_N7F9.pdf",
+          "date": "2026-09-14",
+          "official_file_type": "92",
+          "official_version": "1"
+        },
+        {
+          "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+          "date": "2026-09-16",
+          "official_file_type": "93",
+          "official_version": "1"
+        },
+        {
+          "title": "1-5 国联安泰华城封闭式商业不动产证券投资基金法律意见书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260914_WEQH.pdf",
+          "date": "2026-09-14",
+          "official_file_type": "94",
+          "official_version": "1"
+        },
+        {
+          "title": "关于国联安泰华城封闭式商业不动产证券投资基金上市及太保资产-泰华城1号商业不动产资产支持专项计划资产支持证券挂牌转让申请受理反馈意见.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/a9ce5e_20261020_6LBZ.pdf",
+          "date": "2026-10-20",
+          "official_file_type": "",
+          "official_version": ""
+        }
+      ],
+      "underlying_assets": "（1）位于山东省潍坊市奎文区东风东街的新天地项目、新天地接建项目（合称“潍坊泰华城项目”）；（2）位于山东省青州市的青州泰华城购物中心项目（简称“青州泰华城项目”）",
+      "planned_issue_amount_official": 20.45,
+      "planned_issue_amount_unit": "未展示（官方字段PLAN_ISSUE_AMOUNT，未纳入规模统计）",
+      "special_plan_name": "太保资产-泰华城1号商业不动产资产支持专项计划",
+      "special_plan_manager": "太平洋资产管理有限责任公司",
+      "official_registration_approval_no": "",
+      "official_no_objection_no": "",
+      "documents_checked": true,
+      "classification_source": "official",
+      "classification_confidence": "confirmed",
+      "classification_note": "名称无明确资产关键词",
+      "fund_id": "SSE_APPLICANT_a9ce5e95e078472998cc47ad30846c2b",
+      "linkage_method": "official_initial_filing",
+      "stage": "审核中",
+      "issuer": null,
+      "financial_advisor": "中国银河证券股份有限公司",
+      "proposed_sale_amount_application_cny_100m": 20.45,
+      "proposed_sale_amount_feedback_cny_100m": null,
+      "proposed_sale_amount_inquiry_cny_100m": null,
+      "sale_amount_cny_100m": null,
+      "external_loan_amount_cny_100m": null,
+      "project_return_forecast": "净现金流分派率自2026年4月1日（假设基金成立日）至2026年12月31日止期间预测数、2027年度预计年化分派率为4.64%、5.40%",
+      "guarantee_support": null,
+      "official_asset_type": "消费",
+      "classification_evidence": [
+        {
+          "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+          "published_at": "2026-09-16",
+          "page": 28,
+          "excerpt": "不动产项目业态 商业零售（购物中心）",
+          "document_stage": "application",
+          "rule": "explicit_asset_use_table",
+          "reviewed_at": "2026-10-15T12:11:08+08:00",
+          "classification_basis": "官方披露资产用途转研究资产分类",
+          "review_status": "passage_reviewed",
+          "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
+          "checked_at": "2026-10-15T13:14:26+08:00"
+        }
+      ],
+      "research_field_sources": {
+        "financial_advisor": [
+          {
+            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+            "published_at": "2026-09-16",
+            "page": 4,
+            "document_stage": "application",
+            "rule": "explicit_adviser_row_or_definition",
+            "reviewed_at": "2026-10-15T13:04:58+08:00",
+            "source_method": "native_pdf_text",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
+            "review_status": "passage_reviewed",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ],
+        "proposed_sale_amount_application_cny_100m": [
+          {
+            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+            "published_at": "2026-09-16",
+            "page": 29,
+            "document_stage": "application",
+            "rule": "explicit_proposed_monetary_scale",
+            "reviewed_at": "2026-10-15T13:04:58+08:00",
+            "raw_amount": "20.45",
+            "raw_unit": "亿元",
+            "currency": "CNY",
+            "normalized_unit": "亿元",
+            "amount_nature": "预计或拟发售规模",
+            "source_method": "native_pdf_text",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
+            "review_status": "passage_reviewed",
+            "unit": "亿元",
+            "source_unit": "亿元",
+            "source_value": "20.45",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ],
+        "underlying_assets": [
+          {
+            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+            "published_at": "2026-09-16",
+            "page": 4,
+            "document_stage": "application",
+            "rule": "named_underlying_project_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ],
+        "project_return_forecast": [
+          {
+            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+            "published_at": "2026-09-16",
+            "page": 29,
+            "document_stage": "application",
+            "rule": "explicit_year_and_forecast_rate",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+            "published_at": "2026-09-16",
+            "page": 28,
+            "document_stage": "application",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:08+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ]
+      },
+      "field_availability": {
+        "issuer": {
+          "status": "unverified",
+          "reason": "未找到单独标识发行人且可直接确认主体的披露，未将原始权益人或基金管理人自动代填发行人。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已核查资料未单列发行人。"
+        },
+        "proposed_sale_amount_feedback_cny_100m": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "未取得明确标注反馈稿的拟募集金额。"
+        },
+        "proposed_sale_amount_inquiry_cny_100m": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
+        },
+        "sale_amount_cny_100m": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
+        },
+        "external_loan_amount_cny_100m": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
+        },
+        "guarantee_support": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
+        }
+      }
+    },
+    {
       "id": "SZSE_5000082",
       "source_id": "5000082",
       "name": "国泰海通鹏瑞利封闭式商业不动产证券投资基金",
@@ -36520,19 +37290,19 @@
           "official_status_code": 10
         },
         {
-          "title": "已问询",
-          "date": "2026-10-19",
-          "official_status_code": 30
-        },
-        {
-          "title": "已问询",
-          "date": "2026-10-19",
-          "official_status_code": 30
-        },
-        {
           "title": "已受理",
           "date": "2026-09-16",
           "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-19",
+          "official_status_code": 30
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-19",
+          "official_status_code": 30
         }
       ],
       "classification_source": "official",
@@ -36765,14 +37535,14 @@
           "official_status_code": 10
         },
         {
-          "title": "已问询",
-          "date": "2026-05-27",
-          "official_status_code": 30
-        },
-        {
           "title": "已受理",
           "date": "2026-04-30",
           "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2026-05-27",
+          "official_status_code": 30
         },
         {
           "title": "已问询",
@@ -36999,19 +37769,19 @@
       "special_plan_manager": "深创投红土资产管理（深圳）有限公司",
       "timeline": [
         {
-          "title": "已问询",
-          "date": "2026-04-03",
-          "official_status_code": 30
-        },
-        {
-          "title": "已问询",
-          "date": "2026-04-03",
-          "official_status_code": 30
-        },
-        {
           "title": "已受理",
           "date": "2026-03-13",
           "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2026-04-03",
+          "official_status_code": 30
+        },
+        {
+          "title": "已问询",
+          "date": "2026-04-03",
+          "official_status_code": 30
         },
         {
           "title": "已申报",
@@ -38212,24 +38982,24 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2026-09-10",
-          "official_status_code": 20
-        },
-        {
-          "title": "已问询",
-          "date": "2026-10-13",
-          "official_status_code": 30
-        },
-        {
-          "title": "已问询",
-          "date": "2026-10-13",
-          "official_status_code": 30
-        },
-        {
           "title": "已申报",
           "date": "2026-09-07",
           "official_status_code": 10
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-13",
+          "official_status_code": 30
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-13",
+          "official_status_code": 30
+        },
+        {
+          "title": "已受理",
+          "date": "2026-09-10",
+          "official_status_code": 20
         }
       ],
       "classification_source": "official",
@@ -39026,19 +39796,19 @@
       "special_plan_manager": "汇添富资本管理有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2026-09-24",
-          "official_status_code": 20
-        },
-        {
-          "title": "已受理",
-          "date": "2026-09-24",
-          "official_status_code": 20
-        },
-        {
           "title": "已申报",
           "date": "2026-09-23",
           "official_status_code": 10
+        },
+        {
+          "title": "已受理",
+          "date": "2026-09-24",
+          "official_status_code": 20
+        },
+        {
+          "title": "已受理",
+          "date": "2026-09-24",
+          "official_status_code": 20
         }
       ],
       "classification_source": "official",
@@ -39252,14 +40022,14 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2026-09-22",
-          "official_status_code": 10
-        },
-        {
           "title": "已受理",
           "date": "2026-09-24",
           "official_status_code": 20
+        },
+        {
+          "title": "已申报",
+          "date": "2026-09-22",
+          "official_status_code": 10
         },
         {
           "title": "已受理",
@@ -39713,19 +40483,19 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
+          "title": "已受理",
+          "date": "2026-09-24",
+          "official_status_code": 20
+        },
+        {
+          "title": "已受理",
+          "date": "2026-09-24",
+          "official_status_code": 20
+        },
+        {
           "title": "已申报",
           "date": "2026-09-21",
           "official_status_code": 10
-        },
-        {
-          "title": "已受理",
-          "date": "2026-09-24",
-          "official_status_code": 20
-        },
-        {
-          "title": "已受理",
-          "date": "2026-09-24",
-          "official_status_code": 20
         }
       ],
       "classification_source": "official",
@@ -39975,12 +40745,12 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "注册结果",
-          "date": "2026-09-20",
-          "official_status_code": 70
+          "title": "已申报",
+          "date": "2026-05-06",
+          "official_status_code": 10
         },
         {
-          "title": "注册生效",
+          "title": "注册结果",
           "date": "2026-09-20",
           "official_status_code": 70
         },
@@ -39988,11 +40758,6 @@
           "title": "已受理",
           "date": "2026-05-12",
           "official_status_code": 20
-        },
-        {
-          "title": "已申报",
-          "date": "2026-05-06",
-          "official_status_code": 10
         },
         {
           "title": "审核意见",
@@ -40003,6 +40768,11 @@
           "title": "已问询",
           "date": "2026-06-09",
           "official_status_code": 30
+        },
+        {
+          "title": "注册生效",
+          "date": "2026-09-20",
+          "official_status_code": 70
         }
       ],
       "classification_source": "official",
@@ -40250,6 +41020,26 @@
       "special_plan_manager": "招商证券资产管理有限公司",
       "timeline": [
         {
+          "title": "已问询",
+          "date": "2026-07-07",
+          "official_status_code": 30
+        },
+        {
+          "title": "注册结果",
+          "date": "2026-09-20",
+          "official_status_code": 70
+        },
+        {
+          "title": "已申报",
+          "date": "2026-06-11",
+          "official_status_code": 10
+        },
+        {
+          "title": "审核意见",
+          "date": "2026-09-11",
+          "official_status_code": 40
+        },
+        {
           "title": "已受理",
           "date": "2026-06-15",
           "official_status_code": 20
@@ -40258,26 +41048,6 @@
           "title": "注册生效",
           "date": "2026-09-20",
           "official_status_code": 70
-        },
-        {
-          "title": "注册结果",
-          "date": "2026-09-20",
-          "official_status_code": 70
-        },
-        {
-          "title": "已问询",
-          "date": "2026-07-07",
-          "official_status_code": 30
-        },
-        {
-          "title": "审核意见",
-          "date": "2026-09-11",
-          "official_status_code": 40
-        },
-        {
-          "title": "已申报",
-          "date": "2026-06-11",
-          "official_status_code": 10
         }
       ],
       "classification_source": "official",
@@ -40794,7 +41564,7 @@
       "classification_note": "名称无明确资产关键词",
       "fund_id": "SSE_FUND_508081",
       "linkage_method": "official_fund_code",
-      "stage": "获批待发行",
+      "stage": "成立待上市",
       "issuer": null,
       "financial_advisor": "招商证券股份有限公司",
       "proposed_sale_amount_application_cny_100m": 31.57,
@@ -41184,232 +41954,6 @@
       }
     },
     {
-      "id": "SZSE_5000079",
-      "source_id": "5000079",
-      "name": "华安晶澳科技新能源封闭式基础设施证券投资基金",
-      "exchange": "深交所",
-      "business_type": "首发",
-      "official_business_type": "首发",
-      "official_business_code": "21",
-      "fund_code": "",
-      "manager": "华安基金管理有限公司",
-      "origin": "晶澳太阳能投资（中国）有限公司;朝阳龙盛太阳能发电有限公司",
-      "official_status": "已受理",
-      "official_status_code": 20,
-      "accepted_date": "2026-09-16",
-      "updated_date": "2026-09-18",
-      "registered_date": "",
-      "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
-      "source_data_url": "https://reits.szse.cn/api/reits/projectrends/details?id=5000079",
-      "asset_type": "能源",
-      "official_asset_type": "光伏发电",
-      "product_type": "基础设施REITs",
-      "documents": [
-        {
-          "title": "1-5 关于华安晶澳科技新能源封闭式基础设施证券投资基金注册的法律意见书.pdf",
-          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_AF69FEAFAF0B4B10994A7809AA34ECD7.pdf",
-          "date": "2026-09-16",
-          "source_id": "415",
-          "official_document_type": 1
-        },
-        {
-          "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
-          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
-          "date": "2026-09-16",
-          "source_id": "414",
-          "official_document_type": 1
-        },
-        {
-          "title": "1-3 华安晶澳科技新能源封闭式基础设施证券投资基金托管协议（草案）.pdf",
-          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_2C3AA36DA8184038ADC9E388B027E48B.pdf",
-          "date": "2026-09-16",
-          "source_id": "413",
-          "official_document_type": 1
-        },
-        {
-          "title": "1-2 华安晶澳科技新能源封闭式基础设施证券投资基金基金合同（草案）.pdf",
-          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_3793463F728F4840A9AC5EF3E0C0DD9D.pdf",
-          "date": "2026-09-16",
-          "source_id": "412",
-          "official_document_type": 1
-        }
-      ],
-      "underlying_assets": [
-        "康保县晶能新能源开发有限公司100MWp光伏扶贫电站项目（晶澳）（一期20MW）、朝阳兴华太阳能发电有限公司持有的朝阳县晶澳300兆瓦光伏平价上网项目"
-      ],
-      "asset_location": "",
-      "manager_location": "上海",
-      "special_plan_name": "华安资产晶澳科技新能源1号资产支持专项计划",
-      "special_plan_manager": "华安未来资产管理（上海）有限公司",
-      "timeline": [
-        {
-          "title": "已受理",
-          "date": "2026-09-16",
-          "official_status_code": 20
-        },
-        {
-          "title": "已受理",
-          "date": "2026-09-16",
-          "official_status_code": 20
-        },
-        {
-          "title": "已申报",
-          "date": "2026-09-10",
-          "official_status_code": 10
-        }
-      ],
-      "classification_source": "official",
-      "fund_id": "SZSE_APPLICANT_5000079",
-      "linkage_method": "official_initial_filing",
-      "stage": "已受理",
-      "issuer": null,
-      "financial_advisor": "国泰海通证券股份有限公司",
-      "proposed_sale_amount_application_cny_100m": 13.864,
-      "proposed_sale_amount_feedback_cny_100m": null,
-      "proposed_sale_amount_inquiry_cny_100m": null,
-      "sale_amount_cny_100m": null,
-      "external_loan_amount_cny_100m": null,
-      "project_return_forecast": "预测净现金流分派率：2026年（年化）：9.37%；2027年度：10.33%",
-      "guarantee_support": null,
-      "research_field_sources": {
-        "financial_advisor": [
-          {
-            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
-            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
-            "published_at": "2026-09-16",
-            "page": 4,
-            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
-            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
-            "sha256_type": "whole_pdf",
-            "retention": "complete_pdf",
-            "text_method": "native_pdf_text",
-            "page_image": null,
-            "role": "财务顾问",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ],
-        "underlying_assets": [
-          {
-            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
-            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
-            "published_at": "2026-09-16",
-            "page": 4,
-            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
-            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
-            "sha256_type": "whole_pdf",
-            "retention": "complete_pdf",
-            "text_method": "native_pdf_text",
-            "page_image": null,
-            "scope": "本次首发/扩募项目正文，未关联其他申报批次",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ],
-        "proposed_sale_amount_application_cny_100m": [
-          {
-            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
-            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
-            "published_at": "2026-09-16",
-            "page": 4,
-            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
-            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
-            "sha256_type": "whole_pdf",
-            "retention": "complete_pdf",
-            "text_method": "native_pdf_text",
-            "page_image": null,
-            "unit": "亿元",
-            "source_unit": "亿元",
-            "source_value": "13.864",
-            "conversion": "原金额按单位换算为亿元",
-            "document_stage": "application",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ],
-        "asset_type": [
-          {
-            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
-            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
-            "published_at": "2026-09-16",
-            "page": 22,
-            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
-            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
-            "sha256_type": "whole_pdf",
-            "retention": "complete_pdf",
-            "text_method": "native_pdf_text",
-            "page_image": null,
-            "official_asset_type": "光伏发电",
-            "basis": "交易所项目类型与本项目PDF正文交叉核验",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ],
-        "project_return_forecast": [
-          {
-            "title": "1-4 华安晶澳科技新能源封闭式基础设施证券投资基金招募说明书（草案）.pdf",
-            "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EA6DE96716714CA0A9EAD545B2D0701D.pdf",
-            "published_at": "2026-09-16",
-            "page": 28,
-            "raw_file": "data/raw/enrichment/public_szse/20261015T113756/pdf/de9e023bc377426fc1c712af.pdf",
-            "sha256": "d198fadd830b6beaac7733d6f3801c2c79da54c7bb2e611057a032e0f6a8881c",
-            "sha256_type": "whole_pdf",
-            "retention": "complete_pdf",
-            "text_method": "native_pdf_text",
-            "page_image": null,
-            "metric": "保留原文现金分派率/净现金流分派率及年份、年化口径",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ]
-      },
-      "field_availability": {
-        "issuer": {
-          "status": "unverified",
-          "original_status": "not_found_in_verified_public_text",
-          "reason": "已核验正文未独立明确列示基金发行人；不将基金管理人或原始权益人替代。",
-          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
-          "checked_at": "2026-10-15T13:11:48+08:00",
-          "display_reason": "已核查资料未单列发行人。"
-        },
-        "proposed_sale_amount_feedback_cny_100m": {
-          "status": "unverified",
-          "original_status": "not_found_in_verified_public_text",
-          "reason": "官方项目附件未标明可核验的反馈稿金额；注册稿不冒充反馈稿。",
-          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
-          "checked_at": "2026-10-15T13:11:48+08:00",
-          "display_reason": "未取得明确标注反馈稿的拟募集金额。"
-        },
-        "proposed_sale_amount_inquiry_cny_100m": {
-          "status": "unverified",
-          "original_status": "not_found_in_verified_public_text",
-          "reason": "未在已核验公开PDF正文中定位到本字段可直接使用的明确值；不以比例上限或其他批次替代。",
-          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
-          "checked_at": "2026-10-15T13:11:48+08:00",
-          "display_reason": "未在已核验公开PDF正文中定位到本字段可直接使用的明确值；不以比例上限或其他批次替代。"
-        },
-        "sale_amount_cny_100m": {
-          "status": "unverified",
-          "original_status": "not_found_in_verified_public_text",
-          "reason": "本申报尚无已成立基金代码及实际募集结果证据；拟募集金额不替代实际金额。",
-          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
-          "checked_at": "2026-10-15T13:11:48+08:00",
-          "display_reason": "本申报尚无已成立基金代码及实际募集结果证据；拟募集金额不替代实际金额。"
-        },
-        "external_loan_amount_cny_100m": {
-          "status": "unverified",
-          "original_status": "not_found_in_verified_public_text",
-          "reason": "未在已核验公开PDF正文中定位到本字段可直接使用的明确值；不以比例上限或其他批次替代。",
-          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
-          "checked_at": "2026-10-15T13:11:48+08:00",
-          "display_reason": "未在已核验公开PDF正文中定位到本字段可直接使用的明确值；不以比例上限或其他批次替代。"
-        },
-        "guarantee_support": {
-          "status": "unverified",
-          "original_status": "not_found_in_verified_public_text",
-          "reason": "未在已核验公开PDF正文中定位到本字段可直接使用的明确值；不以比例上限或其他批次替代。",
-          "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079",
-          "checked_at": "2026-10-15T13:11:48+08:00",
-          "display_reason": "未在已核验公开PDF正文中定位到本字段可直接使用的明确值；不以比例上限或其他批次替代。"
-        }
-      }
-    },
-    {
       "id": "SZSE_5000078",
       "source_id": "5000078",
       "name": "中金中国绿发封闭式商业不动产证券投资基金",
@@ -41476,14 +42020,14 @@
       "special_plan_manager": "中国国际金融股份有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2026-08-21",
-          "official_status_code": 10
-        },
-        {
           "title": "已问询",
           "date": "2026-09-18",
           "official_status_code": 30
+        },
+        {
+          "title": "已申报",
+          "date": "2026-08-21",
+          "official_status_code": 10
         },
         {
           "title": "已受理",
@@ -41636,224 +42180,6 @@
           "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000078",
           "checked_at": "2026-10-15T13:11:48+08:00",
           "display_reason": "未在已核验公开PDF正文中定位到本字段可直接使用的明确值；不以比例上限或其他批次替代。"
-        }
-      }
-    },
-    {
-      "id": "SSE_a9ce5e95e078472998cc47ad30846c2b",
-      "source_id": "a9ce5e95e078472998cc47ad30846c2b",
-      "name": "国联安泰华城封闭式商业不动产证券投资基金",
-      "exchange": "上交所",
-      "business_type": "首发",
-      "official_business_type": "0",
-      "fund_code": "",
-      "manager": "国联安基金管理有限公司",
-      "manager_short_name": "国联安基金",
-      "origin": "山东大墉置业有限公司,潍坊泰华城商业发展有限公司",
-      "official_status": "已受理",
-      "official_status_code": "1",
-      "official_sub_status": "",
-      "accepted_date": "2026-09-16",
-      "updated_date": "2026-09-16",
-      "registered_date": "",
-      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b",
-      "asset_type": "消费",
-      "product_type": "商业不动产REITs",
-      "documents": [
-        {
-          "title": "1-2 国联安泰华城封闭式商业不动产证券投资基金基金合同（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260914_S7C3.pdf",
-          "date": "2026-09-14",
-          "official_file_type": "91",
-          "official_version": "1"
-        },
-        {
-          "title": "1-3 国联安泰华城封闭式商业不动产证券投资基金托管协议（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260914_N7F9.pdf",
-          "date": "2026-09-14",
-          "official_file_type": "92",
-          "official_version": "1"
-        },
-        {
-          "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-          "date": "2026-09-16",
-          "official_file_type": "93",
-          "official_version": "1"
-        },
-        {
-          "title": "1-5 国联安泰华城封闭式商业不动产证券投资基金法律意见书.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260914_WEQH.pdf",
-          "date": "2026-09-14",
-          "official_file_type": "94",
-          "official_version": "1"
-        }
-      ],
-      "underlying_assets": "（1）位于山东省潍坊市奎文区东风东街的新天地项目、新天地接建项目（合称“潍坊泰华城项目”）；（2）位于山东省青州市的青州泰华城购物中心项目（简称“青州泰华城项目”）",
-      "planned_issue_amount_official": 20.45,
-      "planned_issue_amount_unit": "未展示（官方字段PLAN_ISSUE_AMOUNT，未纳入规模统计）",
-      "special_plan_name": "太保资产-泰华城1号商业不动产资产支持专项计划",
-      "special_plan_manager": "太平洋资产管理有限责任公司",
-      "official_registration_approval_no": "",
-      "official_no_objection_no": "",
-      "documents_checked": true,
-      "classification_source": "official",
-      "classification_confidence": "confirmed",
-      "classification_note": "名称无明确资产关键词",
-      "fund_id": "SSE_APPLICANT_a9ce5e95e078472998cc47ad30846c2b",
-      "linkage_method": "official_initial_filing",
-      "stage": "已受理",
-      "issuer": null,
-      "financial_advisor": "中国银河证券股份有限公司",
-      "proposed_sale_amount_application_cny_100m": 20.45,
-      "proposed_sale_amount_feedback_cny_100m": null,
-      "proposed_sale_amount_inquiry_cny_100m": null,
-      "sale_amount_cny_100m": null,
-      "external_loan_amount_cny_100m": null,
-      "project_return_forecast": "净现金流分派率自2026年4月1日（假设基金成立日）至2026年12月31日止期间预测数、2027年度预计年化分派率为4.64%、5.40%",
-      "guarantee_support": null,
-      "official_asset_type": "消费",
-      "classification_evidence": [
-        {
-          "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-          "published_at": "2026-09-16",
-          "page": 28,
-          "excerpt": "不动产项目业态 商业零售（购物中心）",
-          "document_stage": "application",
-          "rule": "explicit_asset_use_table",
-          "reviewed_at": "2026-10-15T12:11:08+08:00",
-          "classification_basis": "官方披露资产用途转研究资产分类",
-          "review_status": "passage_reviewed",
-          "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
-          "checked_at": "2026-10-15T13:14:26+08:00"
-        }
-      ],
-      "research_field_sources": {
-        "financial_advisor": [
-          {
-            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-            "published_at": "2026-09-16",
-            "page": 4,
-            "document_stage": "application",
-            "rule": "explicit_adviser_row_or_definition",
-            "reviewed_at": "2026-10-15T13:04:58+08:00",
-            "source_method": "native_pdf_text",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
-            "review_status": "passage_reviewed",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ],
-        "proposed_sale_amount_application_cny_100m": [
-          {
-            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-            "published_at": "2026-09-16",
-            "page": 29,
-            "document_stage": "application",
-            "rule": "explicit_proposed_monetary_scale",
-            "reviewed_at": "2026-10-15T13:04:58+08:00",
-            "raw_amount": "20.45",
-            "raw_unit": "亿元",
-            "currency": "CNY",
-            "normalized_unit": "亿元",
-            "amount_nature": "预计或拟发售规模",
-            "source_method": "native_pdf_text",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
-            "review_status": "passage_reviewed",
-            "unit": "亿元",
-            "source_unit": "亿元",
-            "source_value": "20.45",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ],
-        "underlying_assets": [
-          {
-            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-            "published_at": "2026-09-16",
-            "page": 4,
-            "document_stage": "application",
-            "rule": "named_underlying_project_table",
-            "reviewed_at": "2026-10-15T12:11:08+08:00",
-            "review_status": "passage_reviewed",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ],
-        "project_return_forecast": [
-          {
-            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-            "published_at": "2026-09-16",
-            "page": 29,
-            "document_stage": "application",
-            "rule": "explicit_year_and_forecast_rate",
-            "reviewed_at": "2026-10-15T12:11:08+08:00",
-            "review_status": "passage_reviewed",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ],
-        "asset_type": [
-          {
-            "title": "1-4-1 国联安泰华城封闭式商业不动产证券投资基金（REITs）招募说明书（草案）.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-            "published_at": "2026-09-16",
-            "page": 28,
-            "document_stage": "application",
-            "rule": "explicit_asset_use_table",
-            "reviewed_at": "2026-10-15T12:11:08+08:00",
-            "classification_basis": "官方披露资产用途转研究资产分类",
-            "review_status": "passage_reviewed",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/37136504e1dee830b889389e.json",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ]
-      },
-      "field_availability": {
-        "issuer": {
-          "status": "unverified",
-          "reason": "未找到单独标识发行人且可直接确认主体的披露，未将原始权益人或基金管理人自动代填发行人。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已核查资料未单列发行人。"
-        },
-        "proposed_sale_amount_feedback_cny_100m": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "未取得明确标注反馈稿的拟募集金额。"
-        },
-        "proposed_sale_amount_inquiry_cny_100m": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
-        },
-        "sale_amount_cny_100m": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
-        },
-        "external_loan_amount_cny_100m": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
-        },
-        "guarantee_support": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/a9ce5e_20260916_0FUU.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
         }
       }
     },
@@ -42693,24 +43019,9 @@
       "special_plan_manager": "中国国际金融股份有限公司",
       "timeline": [
         {
-          "title": "审核意见",
-          "date": "2026-08-28",
-          "official_status_code": 40
-        },
-        {
-          "title": "注册生效",
-          "date": "2026-09-03",
-          "official_status_code": 70
-        },
-        {
-          "title": "注册结果",
-          "date": "2026-09-03",
-          "official_status_code": 70
-        },
-        {
-          "title": "已申报",
-          "date": "2026-04-29",
-          "official_status_code": 10
+          "title": "已问询",
+          "date": "2026-05-28",
+          "official_status_code": 30
         },
         {
           "title": "已受理",
@@ -42718,9 +43029,24 @@
           "official_status_code": 20
         },
         {
-          "title": "已问询",
-          "date": "2026-05-28",
-          "official_status_code": 30
+          "title": "审核意见",
+          "date": "2026-08-28",
+          "official_status_code": 40
+        },
+        {
+          "title": "注册结果",
+          "date": "2026-09-03",
+          "official_status_code": 70
+        },
+        {
+          "title": "注册生效",
+          "date": "2026-09-03",
+          "official_status_code": 70
+        },
+        {
+          "title": "已申报",
+          "date": "2026-04-29",
+          "official_status_code": 10
         }
       ],
       "fund_link_evidence": [
@@ -43053,11 +43379,6 @@
           "official_status_code": 20
         },
         {
-          "title": "注册生效",
-          "date": "2026-09-03",
-          "official_status_code": 70
-        },
-        {
           "title": "已申报",
           "date": "2026-04-27",
           "official_status_code": 10
@@ -43069,6 +43390,11 @@
         },
         {
           "title": "注册结果",
+          "date": "2026-09-03",
+          "official_status_code": 70
+        },
+        {
+          "title": "注册生效",
           "date": "2026-09-03",
           "official_status_code": 70
         },
@@ -43411,14 +43737,14 @@
       "special_plan_manager": "银华长安资本管理（北京）有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2026-04-23",
-          "official_status_code": 10
-        },
-        {
           "title": "审核意见",
           "date": "2026-08-28",
           "official_status_code": 40
+        },
+        {
+          "title": "已申报",
+          "date": "2026-04-23",
+          "official_status_code": 10
         },
         {
           "title": "注册生效",
@@ -43431,14 +43757,14 @@
           "official_status_code": 20
         },
         {
-          "title": "已问询",
-          "date": "2026-05-26",
-          "official_status_code": 30
-        },
-        {
           "title": "注册结果",
           "date": "2026-09-03",
           "official_status_code": 70
+        },
+        {
+          "title": "已问询",
+          "date": "2026-05-26",
+          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -43710,16 +44036,6 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已问询",
-          "date": "2025-10-29",
-          "official_status_code": 30
-        },
-        {
-          "title": "终止",
-          "date": "2026-09-04",
-          "official_status_code": 80
-        },
-        {
           "title": "已申报",
           "date": "2025-09-30",
           "official_status_code": 10
@@ -43733,6 +44049,16 @@
           "title": "已受理",
           "date": "2025-10-13",
           "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2025-10-29",
+          "official_status_code": 30
+        },
+        {
+          "title": "终止",
+          "date": "2026-09-04",
+          "official_status_code": 80
         }
       ],
       "fund_link_evidence": [
@@ -44704,24 +45030,24 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2026-07-28",
-          "official_status_code": 10
-        },
-        {
-          "title": "已问询",
-          "date": "2026-08-21",
-          "official_status_code": 30
-        },
-        {
-          "title": "已问询",
-          "date": "2026-08-21",
-          "official_status_code": 30
-        },
-        {
           "title": "已受理",
           "date": "2026-07-29",
           "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2026-08-21",
+          "official_status_code": 30
+        },
+        {
+          "title": "已问询",
+          "date": "2026-08-21",
+          "official_status_code": 30
+        },
+        {
+          "title": "已申报",
+          "date": "2026-07-28",
+          "official_status_code": 10
         }
       ],
       "classification_source": "official",
@@ -44972,6 +45298,21 @@
       "special_plan_manager": "平安证券股份有限公司",
       "timeline": [
         {
+          "title": "已申报",
+          "date": "2025-11-25",
+          "official_status_code": 10
+        },
+        {
+          "title": "注册结果",
+          "date": "2026-08-13",
+          "official_status_code": 70
+        },
+        {
+          "title": "已受理",
+          "date": "2025-12-04",
+          "official_status_code": 20
+        },
+        {
           "title": "审核意见",
           "date": "2026-07-22",
           "official_status_code": 40
@@ -44982,22 +45323,7 @@
           "official_status_code": 30
         },
         {
-          "title": "已申报",
-          "date": "2025-11-25",
-          "official_status_code": 10
-        },
-        {
-          "title": "已受理",
-          "date": "2025-12-04",
-          "official_status_code": 20
-        },
-        {
           "title": "注册生效",
-          "date": "2026-08-13",
-          "official_status_code": 70
-        },
-        {
-          "title": "注册结果",
           "date": "2026-08-13",
           "official_status_code": 70
         }
@@ -45012,7 +45338,7 @@
       "classification_source": "official",
       "fund_id": "SZSE_APPLICANT_5000039",
       "linkage_method": "official_fund_code",
-      "stage": "发售中",
+      "stage": "发售结束待成立",
       "issuer": null,
       "financial_advisor": "中国银河证券股份有限公司",
       "proposed_sale_amount_application_cny_100m": null,
@@ -45294,19 +45620,9 @@
       "special_plan_manager": "华泰证券（上海）资产管理有限公司",
       "timeline": [
         {
-          "title": "注册生效",
-          "date": "2026-08-13",
-          "official_status_code": 70
-        },
-        {
           "title": "审核意见",
           "date": "2026-07-22",
           "official_status_code": 40
-        },
-        {
-          "title": "已申报",
-          "date": "2026-02-03",
-          "official_status_code": 10
         },
         {
           "title": "已受理",
@@ -45322,6 +45638,16 @@
           "title": "已问询",
           "date": "2026-02-27",
           "official_status_code": 30
+        },
+        {
+          "title": "注册生效",
+          "date": "2026-08-13",
+          "official_status_code": 70
+        },
+        {
+          "title": "已申报",
+          "date": "2026-02-03",
+          "official_status_code": 10
         }
       ],
       "fund_link_evidence": [
@@ -45334,7 +45660,7 @@
       "classification_source": "official",
       "fund_id": "SZSE_APPLICANT_5000060",
       "linkage_method": "official_fund_code",
-      "stage": "发售中",
+      "stage": "发售结束待成立",
       "issuer": null,
       "financial_advisor": "申万宏源证券承销保荐有限责任公司",
       "proposed_sale_amount_application_cny_100m": 13.2,
@@ -46529,11 +46855,6 @@
           "official_status_code": 30
         },
         {
-          "title": "已问询",
-          "date": "2026-08-10",
-          "official_status_code": 30
-        },
-        {
           "title": "已受理",
           "date": "2026-07-16",
           "official_status_code": 20
@@ -46542,6 +46863,11 @@
           "title": "已申报",
           "date": "2026-07-09",
           "official_status_code": 10
+        },
+        {
+          "title": "已问询",
+          "date": "2026-08-10",
+          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -46762,11 +47088,6 @@
       "special_plan_manager": "瑞元资本管理有限公司",
       "timeline": [
         {
-          "title": "已问询",
-          "date": "2026-07-22",
-          "official_status_code": 30
-        },
-        {
           "title": "已受理",
           "date": "2026-06-26",
           "official_status_code": 20
@@ -46780,6 +47101,11 @@
           "title": "已申报",
           "date": "2026-06-22",
           "official_status_code": 10
+        },
+        {
+          "title": "已问询",
+          "date": "2026-07-22",
+          "official_status_code": 30
         }
       ],
       "classification_source": "official",
@@ -46993,6 +47319,16 @@
       "special_plan_manager": "博时资本管理有限公司",
       "timeline": [
         {
+          "title": "已问询",
+          "date": "2026-07-15",
+          "official_status_code": 30
+        },
+        {
+          "title": "已问询",
+          "date": "2026-07-15",
+          "official_status_code": 30
+        },
+        {
           "title": "已受理",
           "date": "2026-06-22",
           "official_status_code": 20
@@ -47001,16 +47337,6 @@
           "title": "已申报",
           "date": "2026-06-12",
           "official_status_code": 10
-        },
-        {
-          "title": "已问询",
-          "date": "2026-07-15",
-          "official_status_code": 30
-        },
-        {
-          "title": "已问询",
-          "date": "2026-07-15",
-          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -47992,6 +48318,16 @@
       "special_plan_manager": "第一创业证券股份有限公司",
       "timeline": [
         {
+          "title": "注册生效",
+          "date": "2026-05-18",
+          "official_status_code": 70
+        },
+        {
+          "title": "已申报",
+          "date": "2026-03-30",
+          "official_status_code": 10
+        },
+        {
           "title": "已问询",
           "date": "2026-04-17",
           "official_status_code": 30
@@ -48002,24 +48338,14 @@
           "official_status_code": 40
         },
         {
-          "title": "已申报",
-          "date": "2026-03-30",
-          "official_status_code": 10
+          "title": "注册结果",
+          "date": "2026-05-18",
+          "official_status_code": 70
         },
         {
           "title": "已受理",
           "date": "2026-04-02",
           "official_status_code": 20
-        },
-        {
-          "title": "注册生效",
-          "date": "2026-05-18",
-          "official_status_code": 70
-        },
-        {
-          "title": "注册结果",
-          "date": "2026-05-18",
-          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -48618,14 +48944,14 @@
           "official_status_code": 30
         },
         {
-          "title": "已申报",
-          "date": "2026-05-08",
-          "official_status_code": 10
-        },
-        {
           "title": "已受理",
           "date": "2026-05-12",
           "official_status_code": 20
+        },
+        {
+          "title": "已申报",
+          "date": "2026-05-08",
+          "official_status_code": 10
         },
         {
           "title": "已问询",
@@ -52474,14 +52800,14 @@
       "special_plan_manager": "中航证券有限公司",
       "timeline": [
         {
+          "title": "已问询",
+          "date": "2025-09-03",
+          "official_status_code": 30
+        },
+        {
           "title": "终止(撤回)",
           "date": "2026-03-31",
           "official_status_code": 95
-        },
-        {
-          "title": "终止",
-          "date": "2026-03-31",
-          "official_status_code": 80
         },
         {
           "title": "已受理",
@@ -52489,14 +52815,14 @@
           "official_status_code": 20
         },
         {
+          "title": "终止",
+          "date": "2026-03-31",
+          "official_status_code": 80
+        },
+        {
           "title": "已申报",
           "date": "2025-07-22",
           "official_status_code": 10
-        },
-        {
-          "title": "已问询",
-          "date": "2025-09-03",
-          "official_status_code": 30
         }
       ],
       "classification_source": "official",
@@ -52619,231 +52945,6 @@
           "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000050",
           "checked_at": "2026-10-15T13:11:48+08:00",
           "display_reason": "未在已核验公开PDF正文中定位到本字段可直接使用的明确值；不以比例上限或其他批次替代。"
-        }
-      }
-    },
-    {
-      "id": "SSE_b80b031657254459b6d0010d6b2d5286",
-      "source_id": "b80b031657254459b6d0010d6b2d5286",
-      "name": "建信天津临港发展集团港口封闭式基础设施证券投资基金",
-      "exchange": "上交所",
-      "business_type": "首发",
-      "official_business_type": "0",
-      "fund_code": "",
-      "manager": "建信基金管理有限责任公司",
-      "manager_short_name": "建信基金",
-      "origin": "天津临港港务集团有限公司",
-      "official_status": "已反馈",
-      "official_status_code": "2",
-      "official_sub_status": "",
-      "accepted_date": "2026-03-02",
-      "updated_date": "2026-03-30",
-      "registered_date": "",
-      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286",
-      "asset_type": "交通设施",
-      "product_type": "基础设施REITs",
-      "documents": [
-        {
-          "title": "1-2 基金合同草案.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260211_S1O6.pdf",
-          "date": "2026-02-11",
-          "official_file_type": "91",
-          "official_version": "1"
-        },
-        {
-          "title": "1-3 基金托管协议草案.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260211_0LZF.pdf",
-          "date": "2026-02-11",
-          "official_file_type": "92",
-          "official_version": "1"
-        },
-        {
-          "title": "1-4-1 招募说明书草案.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-          "date": "2026-02-24",
-          "official_file_type": "93",
-          "official_version": "1"
-        },
-        {
-          "title": "1-5 律师事务所对基金出具的法律意见书.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8RDH.pdf",
-          "date": "2026-02-24",
-          "official_file_type": "94",
-          "official_version": "1"
-        },
-        {
-          "title": "关于建信天津临港发展集团港口封闭式基础设施证券投资基金上市及建信天津临港发展集团港口基础设施1号资产支持专项计划资产支持证券挂牌转让申请受理反馈意见.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/b80b03_20260330_YBEY.pdf",
-          "date": "2026-03-30",
-          "official_file_type": "",
-          "official_version": ""
-        }
-      ],
-      "underlying_assets": "位于天津市滨海新区天津港保税区的天津临港工业港区2、3号粮油码头工程项目（以下简称“2、3号粮油码头项目”）和天津临港经济区粮油物流中心一期工程项目（以下简称“粮油物流中心一期工程项目”）",
-      "planned_issue_amount_official": 10.0,
-      "planned_issue_amount_unit": "未展示（官方字段PLAN_ISSUE_AMOUNT，未纳入规模统计）",
-      "special_plan_name": "建信天津临港发展集团港口基础设施1号资产支持专项计划",
-      "special_plan_manager": "建信资本管理有限责任公司",
-      "official_registration_approval_no": "",
-      "official_no_objection_no": "",
-      "documents_checked": true,
-      "classification_source": "official",
-      "classification_confidence": "confirmed",
-      "classification_note": "名称关键词：港口",
-      "fund_id": "SSE_APPLICANT_b80b031657254459b6d0010d6b2d5286",
-      "linkage_method": "official_initial_filing",
-      "stage": "审核中",
-      "issuer": null,
-      "financial_advisor": "国泰海通证券股份有限公司",
-      "proposed_sale_amount_application_cny_100m": 23.95,
-      "proposed_sale_amount_feedback_cny_100m": null,
-      "proposed_sale_amount_inquiry_cny_100m": null,
-      "sale_amount_cny_100m": null,
-      "external_loan_amount_cny_100m": null,
-      "project_return_forecast": "净现金流分派率/IRR2025年10月1日至2025年12月31日期间、2026年度模拟预测现金流分派率分别为4.96%（年化）、5.05%，IRR为6.31%",
-      "guarantee_support": null,
-      "official_asset_type": "交通设施",
-      "classification_evidence": [
-        {
-          "title": "1-4-1 招募说明书草案.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-          "published_at": "2026-02-24",
-          "page": 22,
-          "excerpt": "不动产项目业态 交通基础设施-港口 基金投资标的 80%以上基金资产投资于不动产资产支持证券，并持",
-          "document_stage": "application",
-          "rule": "explicit_asset_use_table",
-          "reviewed_at": "2026-10-15T12:11:08+08:00",
-          "classification_basis": "官方披露资产用途转研究资产分类",
-          "review_status": "passage_reviewed",
-          "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
-          "checked_at": "2026-10-15T13:14:26+08:00"
-        }
-      ],
-      "research_field_sources": {
-        "financial_advisor": [
-          {
-            "title": "1-4-1 招募说明书草案.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-            "published_at": "2026-02-24",
-            "page": 4,
-            "document_stage": "application",
-            "rule": "explicit_adviser_row_or_definition",
-            "reviewed_at": "2026-10-15T13:04:58+08:00",
-            "source_method": "native_pdf_text",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
-            "review_status": "passage_reviewed",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ],
-        "proposed_sale_amount_application_cny_100m": [
-          {
-            "title": "1-4-1 招募说明书草案.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-            "published_at": "2026-02-24",
-            "page": 22,
-            "document_stage": "application",
-            "rule": "explicit_proposed_monetary_scale",
-            "reviewed_at": "2026-10-15T13:04:58+08:00",
-            "raw_amount": "23.95",
-            "raw_unit": "亿元",
-            "currency": "CNY",
-            "normalized_unit": "亿元",
-            "amount_nature": "预计或拟发售规模",
-            "source_method": "native_pdf_text",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
-            "review_status": "passage_reviewed",
-            "unit": "亿元",
-            "source_unit": "亿元",
-            "source_value": "23.95",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ],
-        "underlying_assets": [
-          {
-            "title": "1-4-1 招募说明书草案.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-            "published_at": "2026-02-24",
-            "page": 16,
-            "document_stage": "application",
-            "rule": "defined_named_initial_assets",
-            "reviewed_at": "2026-10-15T12:11:08+08:00",
-            "review_status": "passage_reviewed",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ],
-        "project_return_forecast": [
-          {
-            "title": "1-4-1 招募说明书草案.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-            "published_at": "2026-02-24",
-            "page": 22,
-            "document_stage": "application",
-            "rule": "explicit_year_and_forecast_rate",
-            "reviewed_at": "2026-10-15T12:11:08+08:00",
-            "review_status": "passage_reviewed",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ],
-        "asset_type": [
-          {
-            "title": "1-4-1 招募说明书草案.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-            "published_at": "2026-02-24",
-            "page": 22,
-            "document_stage": "application",
-            "rule": "explicit_asset_use_table",
-            "reviewed_at": "2026-10-15T12:11:08+08:00",
-            "classification_basis": "官方披露资产用途转研究资产分类",
-            "review_status": "passage_reviewed",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/dbae75732ba580f2a41a968b.json",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ]
-      },
-      "field_availability": {
-        "issuer": {
-          "status": "unverified",
-          "reason": "未找到单独标识发行人且可直接确认主体的披露，未将原始权益人或基金管理人自动代填发行人。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已核查资料未单列发行人。"
-        },
-        "proposed_sale_amount_feedback_cny_100m": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "未取得明确标注反馈稿的拟募集金额。"
-        },
-        "proposed_sale_amount_inquiry_cny_100m": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
-        },
-        "sale_amount_cny_100m": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
-        },
-        "external_loan_amount_cny_100m": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
-        },
-        "guarantee_support": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202602/b80b03_20260224_8ALG.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
         }
       }
     },
@@ -53609,21 +53710,6 @@
       "special_plan_manager": "中航证券有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2026-01-07",
-          "official_status_code": 20
-        },
-        {
-          "title": "已问询",
-          "date": "2026-01-28",
-          "official_status_code": 30
-        },
-        {
-          "title": "已申报",
-          "date": "2025-12-30",
-          "official_status_code": 10
-        },
-        {
           "title": "注册生效",
           "date": "2026-03-23",
           "official_status_code": 70
@@ -53637,6 +53723,21 @@
           "title": "审核意见",
           "date": "2026-03-13",
           "official_status_code": 40
+        },
+        {
+          "title": "已申报",
+          "date": "2025-12-30",
+          "official_status_code": 10
+        },
+        {
+          "title": "已受理",
+          "date": "2026-01-07",
+          "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2026-01-28",
+          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -54525,9 +54626,9 @@
       "special_plan_manager": "中国国际金融股份有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2025-12-30",
-          "official_status_code": 20
+          "title": "已申报",
+          "date": "2025-12-26",
+          "official_status_code": 10
         },
         {
           "title": "已问询",
@@ -54535,9 +54636,9 @@
           "official_status_code": 30
         },
         {
-          "title": "已申报",
-          "date": "2025-12-26",
-          "official_status_code": 10
+          "title": "已受理",
+          "date": "2025-12-30",
+          "official_status_code": 20
         },
         {
           "title": "已问询",
@@ -54757,9 +54858,9 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2024-03-01",
-          "official_status_code": 20
+          "title": "终止(撤回)",
+          "date": "2026-01-23",
+          "official_status_code": 95
         },
         {
           "title": "已申报",
@@ -54767,14 +54868,14 @@
           "official_status_code": 10
         },
         {
-          "title": "终止(撤回)",
-          "date": "2026-01-23",
-          "official_status_code": 95
-        },
-        {
           "title": "终止",
           "date": "2026-01-23",
           "official_status_code": 80
+        },
+        {
+          "title": "已受理",
+          "date": "2024-03-01",
+          "official_status_code": 20
         },
         {
           "title": "已问询",
@@ -54962,6 +55063,16 @@
       "special_plan_manager": "建信资本管理有限责任公司",
       "timeline": [
         {
+          "title": "终止(撤回)",
+          "date": "2026-01-23",
+          "official_status_code": 95
+        },
+        {
+          "title": "终止",
+          "date": "2026-01-23",
+          "official_status_code": 80
+        },
+        {
           "title": "已受理",
           "date": "2023-09-04",
           "official_status_code": 20
@@ -54972,19 +55083,9 @@
           "official_status_code": 10
         },
         {
-          "title": "终止(撤回)",
-          "date": "2026-01-23",
-          "official_status_code": 95
-        },
-        {
           "title": "已问询",
           "date": "2023-10-22",
           "official_status_code": 30
-        },
-        {
-          "title": "终止",
-          "date": "2026-01-23",
-          "official_status_code": 80
         }
       ],
       "classification_source": "official",
@@ -56214,9 +56315,14 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2025-06-25",
-          "official_status_code": 10
+          "title": "注册结果",
+          "date": "2025-09-22",
+          "official_status_code": 70
+        },
+        {
+          "title": "已受理",
+          "date": "2025-06-26",
+          "official_status_code": 20
         },
         {
           "title": "已问询",
@@ -56229,19 +56335,14 @@
           "official_status_code": 40
         },
         {
-          "title": "已受理",
-          "date": "2025-06-26",
-          "official_status_code": 20
-        },
-        {
-          "title": "注册结果",
-          "date": "2025-09-22",
-          "official_status_code": 70
-        },
-        {
           "title": "注册生效",
           "date": "2025-09-22",
           "official_status_code": 70
+        },
+        {
+          "title": "已申报",
+          "date": "2025-06-25",
+          "official_status_code": 10
         }
       ],
       "fund_link_evidence": [
@@ -56555,16 +56656,6 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2025-06-26",
-          "official_status_code": 10
-        },
-        {
-          "title": "注册结果",
-          "date": "2025-09-22",
-          "official_status_code": 70
-        },
-        {
           "title": "已受理",
           "date": "2025-06-30",
           "official_status_code": 20
@@ -56575,14 +56666,24 @@
           "official_status_code": 40
         },
         {
-          "title": "已问询",
-          "date": "2025-07-17",
-          "official_status_code": 30
+          "title": "注册结果",
+          "date": "2025-09-22",
+          "official_status_code": 70
+        },
+        {
+          "title": "已申报",
+          "date": "2025-06-26",
+          "official_status_code": 10
         },
         {
           "title": "注册生效",
           "date": "2025-09-22",
           "official_status_code": 70
+        },
+        {
+          "title": "已问询",
+          "date": "2025-07-17",
+          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -58620,9 +58721,14 @@
       "special_plan_manager": "南方资本管理有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2025-03-21",
-          "official_status_code": 20
+          "title": "已申报",
+          "date": "2025-03-10",
+          "official_status_code": 10
+        },
+        {
+          "title": "审核意见",
+          "date": "2025-06-10",
+          "official_status_code": 40
         },
         {
           "title": "注册结果",
@@ -58635,19 +58741,14 @@
           "official_status_code": 70
         },
         {
-          "title": "审核意见",
-          "date": "2025-06-10",
-          "official_status_code": 40
+          "title": "已受理",
+          "date": "2025-03-21",
+          "official_status_code": 20
         },
         {
           "title": "已问询",
           "date": "2025-04-11",
           "official_status_code": 30
-        },
-        {
-          "title": "已申报",
-          "date": "2025-03-10",
-          "official_status_code": 10
         }
       ],
       "fund_link_evidence": [
@@ -59180,24 +59281,14 @@
       "special_plan_manager": "中国国际金融股份有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2025-02-25",
-          "official_status_code": 10
-        },
-        {
-          "title": "注册生效",
-          "date": "2025-05-30",
-          "official_status_code": 70
-        },
-        {
           "title": "注册结果",
           "date": "2025-05-30",
           "official_status_code": 70
         },
         {
-          "title": "已受理",
-          "date": "2025-03-04",
-          "official_status_code": 20
+          "title": "审核意见",
+          "date": "2025-05-19",
+          "official_status_code": 40
         },
         {
           "title": "已问询",
@@ -59205,9 +59296,19 @@
           "official_status_code": 30
         },
         {
-          "title": "审核意见",
-          "date": "2025-05-19",
-          "official_status_code": 40
+          "title": "已申报",
+          "date": "2025-02-25",
+          "official_status_code": 10
+        },
+        {
+          "title": "已受理",
+          "date": "2025-03-04",
+          "official_status_code": 20
+        },
+        {
+          "title": "注册生效",
+          "date": "2025-05-30",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -60718,19 +60819,9 @@
           "official_status_code": 10
         },
         {
-          "title": "审核意见",
-          "date": "2025-02-24",
-          "official_status_code": 40
-        },
-        {
           "title": "已受理",
           "date": "2024-09-24",
           "official_status_code": 20
-        },
-        {
-          "title": "已问询",
-          "date": "2024-10-16",
-          "official_status_code": 30
         },
         {
           "title": "注册结果",
@@ -60741,6 +60832,16 @@
           "title": "注册生效",
           "date": "2025-03-04",
           "official_status_code": 70
+        },
+        {
+          "title": "审核意见",
+          "date": "2025-02-24",
+          "official_status_code": 40
+        },
+        {
+          "title": "已问询",
+          "date": "2024-10-16",
+          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -61273,19 +61374,14 @@
       "special_plan_manager": "易方达资产管理有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2024-09-26",
-          "official_status_code": 20
+          "title": "已问询",
+          "date": "2024-10-16",
+          "official_status_code": 30
         },
         {
           "title": "注册结果",
           "date": "2024-12-24",
           "official_status_code": 70
-        },
-        {
-          "title": "已申报",
-          "date": "2024-09-24",
-          "official_status_code": 10
         },
         {
           "title": "注册生效",
@@ -61298,9 +61394,14 @@
           "official_status_code": 40
         },
         {
-          "title": "已问询",
-          "date": "2024-10-16",
-          "official_status_code": 30
+          "title": "已申报",
+          "date": "2024-09-24",
+          "official_status_code": 10
+        },
+        {
+          "title": "已受理",
+          "date": "2024-09-26",
+          "official_status_code": 20
         }
       ],
       "fund_link_evidence": [
@@ -62772,19 +62873,9 @@
       "special_plan_manager": "工银瑞信投资管理有限公司",
       "timeline": [
         {
-          "title": "审核意见",
-          "date": "2024-10-30",
-          "official_status_code": 40
-        },
-        {
-          "title": "注册结果",
-          "date": "2024-11-06",
-          "official_status_code": 70
-        },
-        {
-          "title": "已申报",
-          "date": "2024-06-26",
-          "official_status_code": 10
+          "title": "已受理",
+          "date": "2024-06-27",
+          "official_status_code": 20
         },
         {
           "title": "已问询",
@@ -62792,14 +62883,24 @@
           "official_status_code": 30
         },
         {
-          "title": "已受理",
-          "date": "2024-06-27",
-          "official_status_code": 20
+          "title": "注册结果",
+          "date": "2024-11-06",
+          "official_status_code": 70
+        },
+        {
+          "title": "审核意见",
+          "date": "2024-10-30",
+          "official_status_code": 40
         },
         {
           "title": "注册生效",
           "date": "2024-11-06",
           "official_status_code": 70
+        },
+        {
+          "title": "已申报",
+          "date": "2024-06-26",
+          "official_status_code": 10
         }
       ],
       "fund_link_evidence": [
@@ -63122,9 +63223,14 @@
       "special_plan_manager": "广发证券资产管理（广东）有限公司",
       "timeline": [
         {
-          "title": "已问询",
-          "date": "2024-08-26",
-          "official_status_code": 30
+          "title": "注册结果",
+          "date": "2024-11-06",
+          "official_status_code": 70
+        },
+        {
+          "title": "审核意见",
+          "date": "2024-10-30",
+          "official_status_code": 40
         },
         {
           "title": "注册生效",
@@ -63142,14 +63248,9 @@
           "official_status_code": 10
         },
         {
-          "title": "审核意见",
-          "date": "2024-10-30",
-          "official_status_code": 40
-        },
-        {
-          "title": "注册结果",
-          "date": "2024-11-06",
-          "official_status_code": 70
+          "title": "已问询",
+          "date": "2024-08-26",
+          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -63465,19 +63566,9 @@
       "special_plan_manager": "银华长安资本管理（北京）有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2024-06-12",
-          "official_status_code": 20
-        },
-        {
-          "title": "已申报",
-          "date": "2024-06-07",
-          "official_status_code": 10
-        },
-        {
-          "title": "已问询",
-          "date": "2024-07-02",
-          "official_status_code": 30
+          "title": "注册结果",
+          "date": "2024-09-13",
+          "official_status_code": 70
         },
         {
           "title": "注册生效",
@@ -63490,9 +63581,19 @@
           "official_status_code": 40
         },
         {
-          "title": "注册结果",
-          "date": "2024-09-13",
-          "official_status_code": 70
+          "title": "已受理",
+          "date": "2024-06-12",
+          "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2024-07-02",
+          "official_status_code": 30
+        },
+        {
+          "title": "已申报",
+          "date": "2024-06-07",
+          "official_status_code": 10
         }
       ],
       "fund_link_evidence": [
@@ -64239,19 +64340,14 @@
           "official_status_code": 70
         },
         {
-          "title": "已问询",
-          "date": "2024-06-25",
-          "official_status_code": 30
-        },
-        {
-          "title": "注册结果",
-          "date": "2024-08-30",
-          "official_status_code": 70
-        },
-        {
           "title": "已申报",
           "date": "2024-05-27",
           "official_status_code": 10
+        },
+        {
+          "title": "已受理",
+          "date": "2024-05-30",
+          "official_status_code": 20
         },
         {
           "title": "审议会议",
@@ -64259,9 +64355,14 @@
           "official_status_code": 40
         },
         {
-          "title": "已受理",
-          "date": "2024-05-30",
-          "official_status_code": 20
+          "title": "注册结果",
+          "date": "2024-08-30",
+          "official_status_code": 70
+        },
+        {
+          "title": "已问询",
+          "date": "2024-06-25",
+          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -64813,9 +64914,9 @@
           "official_status_code": 30
         },
         {
-          "title": "注册结果",
-          "date": "2024-08-02",
-          "official_status_code": 70
+          "title": "审议会议",
+          "date": "2024-08-01",
+          "official_status_code": 40
         },
         {
           "title": "已受理",
@@ -64823,12 +64924,12 @@
           "official_status_code": 20
         },
         {
-          "title": "审议会议",
-          "date": "2024-08-01",
-          "official_status_code": 40
+          "title": "注册生效",
+          "date": "2024-08-02",
+          "official_status_code": 70
         },
         {
-          "title": "注册生效",
+          "title": "注册结果",
           "date": "2024-08-02",
           "official_status_code": 70
         }
@@ -66293,7 +66394,17 @@
           "official_status_code": 30
         },
         {
+          "title": "已受理",
+          "date": "2023-11-17",
+          "official_status_code": 20
+        },
+        {
           "title": "注册结果",
+          "date": "2024-05-23",
+          "official_status_code": 70
+        },
+        {
+          "title": "注册生效",
           "date": "2024-05-23",
           "official_status_code": 70
         },
@@ -66301,16 +66412,6 @@
           "title": "审议会议",
           "date": "2024-05-07",
           "official_status_code": 40
-        },
-        {
-          "title": "已受理",
-          "date": "2023-11-17",
-          "official_status_code": 20
-        },
-        {
-          "title": "注册生效",
-          "date": "2024-05-23",
-          "official_status_code": 70
         },
         {
           "title": "已申报",
@@ -67032,6 +67133,26 @@
       "special_plan_manager": "华泰证券(上海）资产管理有限公司",
       "timeline": [
         {
+          "title": "已申报",
+          "date": "2023-12-07",
+          "official_status_code": 10
+        },
+        {
+          "title": "审议会议",
+          "date": "2024-05-02",
+          "official_status_code": 40
+        },
+        {
+          "title": "已受理",
+          "date": "2023-12-08",
+          "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2024-01-22",
+          "official_status_code": 30
+        },
+        {
           "title": "注册结果",
           "date": "2024-05-11",
           "official_status_code": 70
@@ -67040,26 +67161,6 @@
           "title": "注册生效",
           "date": "2024-05-11",
           "official_status_code": 70
-        },
-        {
-          "title": "已问询",
-          "date": "2024-01-22",
-          "official_status_code": 30
-        },
-        {
-          "title": "已申报",
-          "date": "2023-12-07",
-          "official_status_code": 10
-        },
-        {
-          "title": "已受理",
-          "date": "2023-12-08",
-          "official_status_code": 20
-        },
-        {
-          "title": "审议会议",
-          "date": "2024-05-02",
-          "official_status_code": 40
         }
       ],
       "fund_link_evidence": [
@@ -67321,24 +67422,9 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2023-12-07",
-          "official_status_code": 10
-        },
-        {
-          "title": "注册生效",
-          "date": "2024-04-02",
-          "official_status_code": 70
-        },
-        {
           "title": "注册结果",
           "date": "2024-04-02",
           "official_status_code": 70
-        },
-        {
-          "title": "审议会议",
-          "date": "2024-03-26",
-          "official_status_code": 40
         },
         {
           "title": "已问询",
@@ -67346,9 +67432,24 @@
           "official_status_code": 30
         },
         {
+          "title": "已申报",
+          "date": "2023-12-07",
+          "official_status_code": 10
+        },
+        {
           "title": "已受理",
           "date": "2023-12-08",
           "official_status_code": 20
+        },
+        {
+          "title": "审议会议",
+          "date": "2024-03-26",
+          "official_status_code": 40
+        },
+        {
+          "title": "注册生效",
+          "date": "2024-04-02",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -67654,11 +67755,6 @@
       "special_plan_manager": "易方达资产管理有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2023-06-14",
-          "official_status_code": 20
-        },
-        {
           "title": "已申报",
           "date": "2023-06-14",
           "official_status_code": 10
@@ -67669,11 +67765,6 @@
           "official_status_code": 30
         },
         {
-          "title": "注册结果",
-          "date": "2024-04-02",
-          "official_status_code": 70
-        },
-        {
           "title": "注册生效",
           "date": "2024-04-02",
           "official_status_code": 70
@@ -67682,6 +67773,16 @@
           "title": "审议会议",
           "date": "2024-03-26",
           "official_status_code": 40
+        },
+        {
+          "title": "注册结果",
+          "date": "2024-04-02",
+          "official_status_code": 70
+        },
+        {
+          "title": "已受理",
+          "date": "2023-06-14",
+          "official_status_code": 20
         }
       ],
       "fund_link_evidence": [
@@ -69130,9 +69231,9 @@
       "special_plan_manager": "中国国际金融股份有限公司",
       "timeline": [
         {
-          "title": "已受理",
+          "title": "已申报",
           "date": "2023-10-26",
-          "official_status_code": 20
+          "official_status_code": 10
         },
         {
           "title": "注册结果",
@@ -69140,14 +69241,9 @@
           "official_status_code": 70
         },
         {
-          "title": "注册生效",
-          "date": "2023-11-24",
-          "official_status_code": 70
-        },
-        {
-          "title": "审议会议",
-          "date": "2023-11-24",
-          "official_status_code": 40
+          "title": "已受理",
+          "date": "2023-10-26",
+          "official_status_code": 20
         },
         {
           "title": "已问询",
@@ -69155,9 +69251,14 @@
           "official_status_code": 30
         },
         {
-          "title": "已申报",
-          "date": "2023-10-26",
-          "official_status_code": 10
+          "title": "审议会议",
+          "date": "2023-11-24",
+          "official_status_code": 40
+        },
+        {
+          "title": "注册生效",
+          "date": "2023-11-24",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -69465,6 +69566,11 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
+          "title": "注册生效",
+          "date": "2023-11-24",
+          "official_status_code": 70
+        },
+        {
           "title": "已受理",
           "date": "2023-10-26",
           "official_status_code": 20
@@ -69473,11 +69579,6 @@
           "title": "注册结果",
           "date": "2023-11-24",
           "official_status_code": 70
-        },
-        {
-          "title": "审议会议",
-          "date": "2023-11-24",
-          "official_status_code": 40
         },
         {
           "title": "已申报",
@@ -69490,9 +69591,9 @@
           "official_status_code": 30
         },
         {
-          "title": "注册生效",
+          "title": "审议会议",
           "date": "2023-11-24",
-          "official_status_code": 70
+          "official_status_code": 40
         }
       ],
       "fund_link_evidence": [
@@ -70675,24 +70776,14 @@
       "special_plan_manager": "博时资本管理有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2022-09-28",
-          "official_status_code": 10
-        },
-        {
           "title": "注册结果",
           "date": "2023-03-31",
           "official_status_code": 70
         },
         {
-          "title": "注册生效",
-          "date": "2023-03-31",
-          "official_status_code": 70
-        },
-        {
-          "title": "审议会议",
-          "date": "2023-03-13",
-          "official_status_code": 40
+          "title": "已申报",
+          "date": "2022-09-28",
+          "official_status_code": 10
         },
         {
           "title": "已问询",
@@ -70703,6 +70794,16 @@
           "title": "已受理",
           "date": "2022-09-29",
           "official_status_code": 20
+        },
+        {
+          "title": "审议会议",
+          "date": "2023-03-13",
+          "official_status_code": 40
+        },
+        {
+          "title": "注册生效",
+          "date": "2023-03-31",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -71000,19 +71101,19 @@
       "special_plan_manager": "深创投红土资产管理（深圳）有限公司",
       "timeline": [
         {
-          "title": "审议会议",
-          "date": "2023-03-13",
-          "official_status_code": 40
-        },
-        {
-          "title": "已问询",
-          "date": "2022-12-07",
-          "official_status_code": 30
-        },
-        {
           "title": "已受理",
           "date": "2022-09-29",
           "official_status_code": 20
+        },
+        {
+          "title": "已申报",
+          "date": "2022-09-28",
+          "official_status_code": 10
+        },
+        {
+          "title": "审议会议",
+          "date": "2023-03-13",
+          "official_status_code": 40
         },
         {
           "title": "注册结果",
@@ -71020,9 +71121,9 @@
           "official_status_code": 70
         },
         {
-          "title": "已申报",
-          "date": "2022-09-28",
-          "official_status_code": 10
+          "title": "已问询",
+          "date": "2022-12-07",
+          "official_status_code": 30
         },
         {
           "title": "注册生效",
@@ -72380,14 +72481,9 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "审议会议",
-          "date": "2022-11-21",
-          "official_status_code": 40
-        },
-        {
-          "title": "已申报",
-          "date": "2022-09-14",
-          "official_status_code": 10
+          "title": "注册生效",
+          "date": "2022-11-25",
+          "official_status_code": 70
         },
         {
           "title": "已问询",
@@ -72395,9 +72491,14 @@
           "official_status_code": 30
         },
         {
-          "title": "注册生效",
-          "date": "2022-11-25",
-          "official_status_code": 70
+          "title": "已受理",
+          "date": "2022-09-14",
+          "official_status_code": 20
+        },
+        {
+          "title": "已申报",
+          "date": "2022-09-14",
+          "official_status_code": 10
         },
         {
           "title": "注册结果",
@@ -72405,9 +72506,9 @@
           "official_status_code": 70
         },
         {
-          "title": "已受理",
-          "date": "2022-09-14",
-          "official_status_code": 20
+          "title": "审议会议",
+          "date": "2022-11-21",
+          "official_status_code": 40
         }
       ],
       "fund_link_evidence": [
@@ -73602,16 +73703,6 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已问询",
-          "date": "2022-08-16",
-          "official_status_code": 30
-        },
-        {
-          "title": "已申报",
-          "date": "2022-07-21",
-          "official_status_code": 10
-        },
-        {
           "title": "已受理",
           "date": "2022-07-22",
           "official_status_code": 20
@@ -73630,6 +73721,16 @@
           "title": "注册结果",
           "date": "2022-08-29",
           "official_status_code": 70
+        },
+        {
+          "title": "已问询",
+          "date": "2022-08-16",
+          "official_status_code": 30
+        },
+        {
+          "title": "已申报",
+          "date": "2022-07-21",
+          "official_status_code": 10
         }
       ],
       "fund_link_evidence": [
@@ -74340,14 +74441,19 @@
       "special_plan_manager": "深创投红土资产管理（深圳）有限公司",
       "timeline": [
         {
+          "title": "审议会议",
+          "date": "2022-07-11",
+          "official_status_code": 40
+        },
+        {
+          "title": "注册结果",
+          "date": "2022-07-27",
+          "official_status_code": 70
+        },
+        {
           "title": "已申报",
           "date": "2022-05-27",
           "official_status_code": 10
-        },
-        {
-          "title": "已问询",
-          "date": "2022-06-17",
-          "official_status_code": 30
         },
         {
           "title": "已受理",
@@ -74355,17 +74461,12 @@
           "official_status_code": 20
         },
         {
+          "title": "已问询",
+          "date": "2022-06-17",
+          "official_status_code": 30
+        },
+        {
           "title": "注册生效",
-          "date": "2022-07-27",
-          "official_status_code": 70
-        },
-        {
-          "title": "审议会议",
-          "date": "2022-07-11",
-          "official_status_code": 40
-        },
-        {
-          "title": "注册结果",
           "date": "2022-07-27",
           "official_status_code": 70
         }
@@ -74846,19 +74947,19 @@
       "special_plan_manager": "国信证券股份有限公司",
       "timeline": [
         {
-          "title": "注册生效",
-          "date": "2022-06-21",
-          "official_status_code": 70
-        },
-        {
-          "title": "审议会议",
-          "date": "2022-06-20",
-          "official_status_code": 40
-        },
-        {
           "title": "已申报",
           "date": "2021-12-30",
           "official_status_code": 10
+        },
+        {
+          "title": "已问询",
+          "date": "2022-03-29",
+          "official_status_code": 30
+        },
+        {
+          "title": "注册生效",
+          "date": "2022-06-21",
+          "official_status_code": 70
         },
         {
           "title": "已受理",
@@ -74866,14 +74967,14 @@
           "official_status_code": 20
         },
         {
+          "title": "审议会议",
+          "date": "2022-06-20",
+          "official_status_code": 40
+        },
+        {
           "title": "注册结果",
           "date": "2022-06-21",
           "official_status_code": 70
-        },
-        {
-          "title": "已问询",
-          "date": "2022-03-29",
-          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -75578,19 +75679,9 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "注册结果",
-          "date": "2021-11-12",
-          "official_status_code": 70
-        },
-        {
           "title": "注册生效",
           "date": "2021-11-12",
           "official_status_code": 70
-        },
-        {
-          "title": "已受理",
-          "date": "2021-10-15",
-          "official_status_code": 20
         },
         {
           "title": "已申报",
@@ -75598,9 +75689,19 @@
           "official_status_code": 10
         },
         {
+          "title": "已受理",
+          "date": "2021-10-15",
+          "official_status_code": 20
+        },
+        {
           "title": "审议会议",
           "date": "2021-11-04",
           "official_status_code": 40
+        },
+        {
+          "title": "注册结果",
+          "date": "2021-11-12",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -76023,14 +76124,19 @@
       "special_plan_manager": "深创投红土资产管理（深圳）有限公司",
       "timeline": [
         {
-          "title": "审议会议",
-          "date": "2021-05-14",
-          "official_status_code": 40
+          "title": "已受理",
+          "date": "2021-05-06",
+          "official_status_code": 20
         },
         {
           "title": "注册生效",
           "date": "2021-05-17",
           "official_status_code": 70
+        },
+        {
+          "title": "审议会议",
+          "date": "2021-05-14",
+          "official_status_code": 40
         },
         {
           "title": "注册结果",
@@ -76041,11 +76147,6 @@
           "title": "已申报",
           "date": "2021-04-28",
           "official_status_code": 10
-        },
-        {
-          "title": "已受理",
-          "date": "2021-05-06",
-          "official_status_code": 20
         }
       ],
       "fund_link_evidence": [
@@ -76317,9 +76418,9 @@
       "special_plan_manager": "平安证券股份有限公司",
       "timeline": [
         {
-          "title": "注册结果",
-          "date": "2021-05-17",
-          "official_status_code": 70
+          "title": "已申报",
+          "date": "2021-04-28",
+          "official_status_code": 10
         },
         {
           "title": "已受理",
@@ -76327,14 +76428,14 @@
           "official_status_code": 20
         },
         {
-          "title": "已申报",
-          "date": "2021-04-28",
-          "official_status_code": 10
-        },
-        {
           "title": "审议会议",
           "date": "2021-05-14",
           "official_status_code": 40
+        },
+        {
+          "title": "注册结果",
+          "date": "2021-05-17",
+          "official_status_code": 70
         },
         {
           "title": "注册生效",
@@ -76600,24 +76701,14 @@
       "special_plan_manager": "博时资本管理有限公司",
       "timeline": [
         {
-          "title": "审议会议",
-          "date": "2021-05-14",
-          "official_status_code": 40
-        },
-        {
-          "title": "已受理",
-          "date": "2021-04-23",
-          "official_status_code": 20
-        },
-        {
-          "title": "已问询",
-          "date": "2021-04-27",
-          "official_status_code": 30
-        },
-        {
           "title": "注册生效",
           "date": "2021-05-17",
           "official_status_code": 70
+        },
+        {
+          "title": "审议会议",
+          "date": "2021-05-14",
+          "official_status_code": 40
         },
         {
           "title": "已申报",
@@ -76625,9 +76716,19 @@
           "official_status_code": 10
         },
         {
+          "title": "已问询",
+          "date": "2021-04-27",
+          "official_status_code": 30
+        },
+        {
           "title": "注册结果",
           "date": "2021-05-17",
           "official_status_code": 70
+        },
+        {
+          "title": "已受理",
+          "date": "2021-04-23",
+          "official_status_code": 20
         }
       ],
       "fund_link_evidence": [
@@ -76887,19 +76988,9 @@
       "special_plan_manager": "中航证券有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2021-04-21",
-          "official_status_code": 10
-        },
-        {
           "title": "审议会议",
           "date": "2021-05-14",
           "official_status_code": 40
-        },
-        {
-          "title": "已受理",
-          "date": "2021-04-23",
-          "official_status_code": 20
         },
         {
           "title": "注册结果",
@@ -76910,6 +77001,16 @@
           "title": "注册生效",
           "date": "2021-05-17",
           "official_status_code": 70
+        },
+        {
+          "title": "已受理",
+          "date": "2021-04-23",
+          "official_status_code": 20
+        },
+        {
+          "title": "已申报",
+          "date": "2021-04-21",
+          "official_status_code": 10
         }
       ],
       "fund_link_evidence": [
@@ -78223,12 +78324,12 @@
         "core": false
       }
     ],
-    "updated_at": "2026-10-20T08:40:49+08:00"
+    "updated_at": "2026-10-21T08:10:40+08:00"
   },
   "refresh_batch": {
-    "id": "39348334252-1",
-    "date": "2026-10-20",
-    "started_at": "2026-10-20T08:33:36+08:00",
-    "completed_at": "2026-10-20T08:40:50+08:00"
+    "id": "39518899272-1",
+    "date": "2026-10-21",
+    "started_at": "2026-10-21T08:03:24+08:00",
+    "completed_at": "2026-10-21T08:10:41+08:00"
   }
 }
