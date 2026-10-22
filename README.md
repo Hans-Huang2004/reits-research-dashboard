@@ -127,13 +127,11 @@ python3 scripts/classify_snapshot.py
 ## 验证
 
 ```bash
-python3 -m unittest discover -s tests -v
-node --check assets/app.js
-python3 scripts/validate_data.py data/institutional.json
+python3 scripts/check_project.py
 python3 scripts/build_static.py
 ```
 
-Node 只用于 JavaScript 语法检查，查看页面和采集数据不需要安装 Node。
+共享检查入口需要Python与Node，执行后端和前端回归、脚本语法、数据完整性及联合批次校验。查看页面和采集数据不需要安装Node。
 
 ## 公募REITs与研究字段
 

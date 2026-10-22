@@ -31,6 +31,9 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
       - name: Record exact publication commit
         id: source
         run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
@@ -47,11 +50,7 @@ jobs:
       - name: Validate and build
         if: steps.publication.outputs.due == 'true'
         run: |
-          python -m unittest discover -s tests -q
-          python scripts/validate_data.py data/institutional.json
-          python scripts/validate_public_data.py data/public_reits.json
-          python scripts/validate_ndrc_data.py data/ndrc_recommendations.json --public-input data/public_reits.json --allow-stale-public
-          python scripts/project_updates.py --check
+          python scripts/check_project.py
           python scripts/build_static.py
       - uses: actions/configure-pages@v5
         if: steps.publication.outputs.due == 'true'

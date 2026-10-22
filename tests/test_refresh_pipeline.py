@@ -64,10 +64,18 @@ class PipelineRegressionTests(unittest.TestCase):
     def test_live_verification_reads_both_populations_and_detects_stale_body(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp); (root / 'data').mkdir()
+            batch = {'id': 'batch-a', 'date': '2026-10-17',
+                     'started_at': '2026-10-17T07:30:00+08:00',
+                     'completed_at': '2026-10-17T07:45:00+08:00'}
             for name in FILES:
-                data = {'date': '2026-10-17', 'refresh_batch': {'id': 'batch-a'}}
+                data = {'date': batch['date'], 'refresh_batch': batch,
+                        'coverage': {'complete': True}}
                 if name == 'refresh_status.json':
-                    data.update(batch_id='batch-a', status='complete')
+                    data = {'batch_id': batch['id'], 'date': batch['date'], 'status': 'complete',
+                            'attempt_ok': True, 'started_at': batch['started_at'],
+                            'completed_at': batch['completed_at'],
+                            'last_successful_at': batch['completed_at'],
+                            'last_attempt_at': batch['started_at']}
                 (root / 'data' / name).write_text(json.dumps(data))
             requests = []
             def fetch(name, sha):
@@ -79,6 +87,14 @@ class PipelineRegressionTests(unittest.TestCase):
             self.assertIn('public_reits.json.gz', requests)
             with self.assertRaisesRegex(ValueError, 'differs'):
                 check_site(root, 'https://example.com/', lambda name, sha: b'{}')
+            public_path = root / 'data/public_reits.json'
+            mixed = json.loads(public_path.read_text())
+            mixed['refresh_batch']['id'] = 'unpublished-batch'
+            public_path.write_text(json.dumps(mixed))
+            requests.clear()
+            with self.assertRaisesRegex(ValueError, 'same complete refresh_batch'):
+                check_site(root, 'https://example.com/', fetch)
+            self.assertEqual(requests, [], 'A mixed local pair must fail before any network requests')
 
 
 if __name__ == '__main__':

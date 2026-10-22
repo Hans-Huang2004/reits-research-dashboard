@@ -4,9 +4,11 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from collectors.public_reits import build_snapshot
 from scripts.refresh_all import publish_candidates, refresh_due, record_failed_attempt
+from scripts import refresh_all
 from tests.test_public_library import event, fund
 
 
@@ -86,6 +88,57 @@ class CombinedRefreshTests(unittest.TestCase):
             self.assertEqual(public['enrichment']['checked_at'], '2026-10-10T09:00:00+08:00')
             self.assertFalse(refresh_due(institutional, public, status, self.now))
             self.assertNotEqual(audit['source_snapshot_sha256']['public'], audit['output_sha256']['public'])
+
+    def test_installation_failure_restores_the_previous_release_byte_for_byte(self):
+        for failed_name in ('public_reits.json', 'refresh_status.json'):
+            with self.subTest(failed_name=failed_name), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                candidates = {}
+                for key, snapshot in [('institutional', self.institutional), ('public', self.public)]:
+                    candidates[key] = root / (key + '_candidate.json')
+                    candidates[key].write_text(json.dumps(snapshot))
+                output = root / 'output'
+                output.mkdir()
+                previous = {
+                    'institutional.json': b'previous institutional bytes\n',
+                    'public_reits.json': b'previous public bytes\n',
+                    'refresh_status.json': b'previous status bytes\n',
+                }
+                for name, content in previous.items():
+                    (output / name).write_bytes(content)
+                replace = refresh_all.os.replace
+
+                def fail_install(source, destination):
+                    if Path(destination) == output / failed_name:
+                        raise OSError('injected installation failure')
+                    return replace(source, destination)
+
+                with patch('scripts.refresh_all.os.replace', side_effect=fail_install):
+                    with self.assertRaisesRegex(OSError, 'injected installation failure'):
+                        publish_candidates(candidates, output, 'new-batch', self.now.isoformat(), self.now)
+                for name, content in previous.items():
+                    self.assertEqual((output / name).read_bytes(), content)
+                self.assertEqual(sorted(path.name for path in output.iterdir()), sorted(previous))
+
+    def test_failed_first_install_leaves_no_partial_release(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            candidates = {}
+            for key, snapshot in [('institutional', self.institutional), ('public', self.public)]:
+                candidates[key] = root / (key + '_candidate.json')
+                candidates[key].write_text(json.dumps(snapshot))
+            output = root / 'output'
+            replace = refresh_all.os.replace
+
+            def fail_second(source, destination):
+                if Path(destination) == output / 'public_reits.json':
+                    raise OSError('second install failed')
+                return replace(source, destination)
+
+            with patch('scripts.refresh_all.os.replace', side_effect=fail_second):
+                with self.assertRaisesRegex(OSError, 'second install failed'):
+                    publish_candidates(candidates, output, 'new-batch', self.now.isoformat(), self.now)
+            self.assertEqual(list(output.iterdir()), [])
 
 
 if __name__ == '__main__':

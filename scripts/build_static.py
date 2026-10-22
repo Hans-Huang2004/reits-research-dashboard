@@ -12,6 +12,8 @@ if str(ROOT) not in sys.path:
 
 def main():
     root = Path(__file__).resolve().parents[1]
+    from scripts.validate_release import validate_release
+    validate_release(root)
     from scripts.project_updates import validate
     validate(json.loads((root / 'data/project_updates.json').read_text(encoding='utf-8')))
     target = root / 'dist'

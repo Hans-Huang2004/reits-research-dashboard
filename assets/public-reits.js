@@ -2,8 +2,8 @@
 'use strict';
 import { REFRESH_SCHEDULE, refreshWarning } from './refresh-health.js?v=20261017-refresh-2';
 import { closeFilterMenu, syncFilterSelects } from './filter-select.js?v=20261014-filter-menu-1';
-import { PUBLIC_FIELDS, getPublicField, formatProjectField, projectFieldCellText } from './project-fields.js?v=20261017-refresh-2';
-import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-origin-2';
+import { PUBLIC_FIELDS, getPublicField, formatProjectField, projectFieldCellText } from './project-fields.js?v=20261022-consistency-1';
+import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261022-consistency-1';
 import { initializeNdrcRecommendations, setNdrcRecommendationsActive, loadNdrcRecommendations, renderNdrcRecommendations, renderNdrcMetadata, exportNdrcCSV, openNdrcRecommendation, ndrcReverseLinksHTML } from './ndrc-recommendations.js?v=20261019-source-guide-1';
 
 const DATA_URL = new URL('../data/public_reits.json', import.meta.url);

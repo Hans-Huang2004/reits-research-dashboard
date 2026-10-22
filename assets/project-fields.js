@@ -1,6 +1,6 @@
 /* Shared field meaning and formatting for the project tables, details and exports. */
 import { PUBLIC_FIELDS, INSTITUTIONAL_FIELDS } from './project-field-catalog.js?v=20261016-subject-roles-1';
-import { missingFieldText } from './field-evidence.js?v=20261015-origin-2';
+import { missingFieldText } from './field-evidence.js?v=20261022-consistency-1';
 export { PUBLIC_FIELDS, INSTITUTIONAL_FIELDS };
 
 const exists = value => value !== null && value !== undefined && value !== '';
@@ -42,7 +42,7 @@ export function getInstitutionalField(record, key, context = {}) {
     case 'status': return typeof context.statusLabel === 'function' ? context.statusLabel(record.status) : scalar(context.statusLabel || record.official_status || record.status);
     case 'exchange': return scalar(record.ex || record.exchange);
     case 'declared_amount_cny_100m': return exists(record.declared_amount_cny_100m) ? record.declared_amount_cny_100m : scalar(record.amt);
-    case 'asset_type': return scalar(record.research_field_sources?.asset_type?.length && record.asset_type ? record.asset_type : context.classification?.psub || record.psub || record.asset_type);
+    case 'asset_type': return scalar(context.classification?.psub || (record.research_field_sources?.asset_type?.length && record.asset_type ? record.asset_type : record.psub || record.asset_type));
     case 'underlying_assets': return scalar(record.underlying_assets);
     case 'origin': return scalar(record.origin);
     case 'manager': return scalar(record.writer || record.mgr || record.manager);

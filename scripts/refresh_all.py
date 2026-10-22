@@ -10,6 +10,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -36,6 +37,35 @@ def write(path, value):
     temp = path.with_suffix(path.suffix + ".tmp")
     temp.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     temp.replace(path)
+
+
+def replace_release_files(output_dir, files):
+    """Stage the whole release and restore replaced files if installation fails."""
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix=".release-", dir=output_dir) as directory:
+        staging = Path(directory)
+        backups = staging / "previous"
+        backups.mkdir()
+        existed = {}
+        for name, value in files.items():
+            write(staging / name, value)
+            destination = output_dir / name
+            existed[name] = destination.exists()
+            if existed[name]:
+                shutil.copy2(destination, backups / name)
+        replaced = []
+        try:
+            for name in files:
+                os.replace(staging / name, output_dir / name)
+                replaced.append(name)
+        except OSError:
+            for name in reversed(replaced):
+                if existed[name]:
+                    os.replace(backups / name, output_dir / name)
+                else:
+                    (output_dir / name).unlink()
+            raise
 
 
 def record_failed_attempt(output_dir, batch_id, started_at, error, now=None):
@@ -92,9 +122,10 @@ def publish_candidates(candidates, output_dir, batch_id, started_at, now=None):
               "started_at": started_at, "completed_at": batch["completed_at"], "validation": validation,
               "last_successful_at": batch["completed_at"], "last_attempt_at": started_at,
               "disclosure_checked_at": {key: value.get("enrichment", {}).get("checked_at") for key, value in snapshots.items()}}
-    for key, snapshot in snapshots.items():
-        write(output_dir / FILES[key], snapshot)
-    write(output_dir / "refresh_status.json", status)
+    replace_release_files(output_dir, {
+        **{FILES[key]: snapshot for key, snapshot in snapshots.items()},
+        "refresh_status.json": status,
+    })
     return {"batch": batch, "validation": validation, "source_snapshot_sha256": source_hashes,
             "output_sha256": {key: hashlib.sha256((output_dir / name).read_bytes()).hexdigest() for key, name in FILES.items()},
             "transformation": "Add shared refresh_batch metadata after both snapshots pass validation; preserve research disclosure dates"}

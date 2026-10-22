@@ -9,11 +9,17 @@ import time
 from datetime import datetime, timezone
 from urllib.request import Request, urlopen
 
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+from scripts.validate_release import validate_release
+
 FILES = ('refresh_status.json', 'institutional.json', 'public_reits.json',
          'ndrc_recommendations.json', 'ndrc_refresh_status.json', 'project_updates.json')
 
 
 def check_site(root, site_url, fetch=None):
+    release = validate_release(root)
     def download(name, expected_hash):
         request = Request(site_url.rstrip('/') + '/data/' + name + '?release=' + expected_hash[:20],
                           headers={'Cache-Control': 'no-cache'})
@@ -33,14 +39,9 @@ def check_site(root, site_url, fetch=None):
         if actual != expected:
             raise ValueError('Published content differs from the built commit: ' + name)
         results.append({'file': remote_name, 'sha256_uncompressed': digest, 'bytes': len(actual)})
-    status = json.loads((Path(root) / 'data/refresh_status.json').read_text())
-    batch = status['batch_id']
-    for name in ('institutional.json', 'public_reits.json'):
-        snapshot = json.loads((Path(root) / 'data' / name).read_text())
-        if snapshot.get('refresh_batch', {}).get('id') != batch or snapshot['date'] != status['date']:
-            raise ValueError('Published pair does not share the declared batch/date')
     return {'ok': True, 'verified_at': datetime.now(timezone.utc).isoformat(),
-            'batch_id': batch, 'date': status['date'], 'status': status['status'], 'files': results}
+            'batch_id': release['batch_id'], 'date': release['date'],
+            'status': release['status'], 'files': results}
 
 
 def main():

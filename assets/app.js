@@ -2,11 +2,11 @@
 'use strict';
 import { REFRESH_SCHEDULE, refreshWarning } from './refresh-health.js?v=20261017-refresh-2';
 import { enhanceFilterSelects, syncFilterSelects, closeFilterMenu } from './filter-select.js?v=20261014-filter-menu-1';
-import { initializePublicReits, setPublicModuleActive, openPublicRecord } from './public-reits.js?v=20261019-source-guide-1';
+import { initializePublicReits, setPublicModuleActive, openPublicRecord } from './public-reits.js?v=20261022-consistency-1';
 import { initializeProjectUpdates, setUpdatesModuleActive } from './project-updates.js?v=20261019-source-guide-1';
-import { INSTITUTIONAL_FIELDS, getInstitutionalField, projectFieldCellText } from './project-fields.js?v=20261017-refresh-2';
+import { INSTITUTIONAL_FIELDS, getInstitutionalField, projectFieldCellText } from './project-fields.js?v=20261022-consistency-1';
 import { initializeDataSources, setDataSourcesActive, openDataSourcesSection } from './data-sources.js?v=20261019-source-guide-1';
-import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261015-disclosures-1';
+import { fieldEvidenceHTML, fieldEvidenceText } from './field-evidence.js?v=20261022-consistency-1';
 
 const DATA_URL = new URL('../data/institutional.json', import.meta.url);
 const STORAGE_PREFIX = `reits:${DATA_URL.pathname}:v1`;
