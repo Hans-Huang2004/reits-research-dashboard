@@ -1,0 +1,41 @@
+[
+  {
+    "url": "https://www.sse.com.cn/xhtml/reits/js/search/search_info.js",
+    "params": {},
+    "request_url": "https://www.sse.com.cn/xhtml/reits/js/search/search_info.js",
+    "response_url": "https://www.sse.com.cn/xhtml/reits/js/search/search_info.js",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-23T08:07:17+08:00",
+    "file": "filing_script_94ffe036f5e8.bin",
+    "sha256": "e073b520df26fc2b2d0afc6f1f45e543201aeadab11a8c996cc4f93876dd9340",
+    "bytes": 17641,
+    "content_type": "application/javascript",
+    "status": "ok"
+  },
+  {
+    "url": "https://www.sse.com.cn/xhtml/reits/js/search/search_issuanceInfo_2026.js",
+    "params": {},
+    "request_url": "https://www.sse.com.cn/xhtml/reits/js/search/search_issuanceInfo_2026.js",
+    "response_url": "https://www.sse.com.cn/xhtml/reits/js/search/search_issuanceInfo_2026.js",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-23T08:07:18+08:00",
+    "file": "issuance_script_a0c744f518d6.bin",
+    "sha256": "cd6b93d0305e4b76eb14d56b8055b7ccdd1829d5930d444c05144f37b0f96135",
+    "bytes": 12742,
+    "content_type": "application/javascript",
+    "status": "ok"
+  },
+  {
+    "url": "https://etf.sse.com.cn/xhtml/js/fundlist.js",
+    "params": {},
+    "request_url": "https://etf.sse.com.cn/xhtml/js/fundlist.js",
+    "response_url": "https://etf.sse.com.cn/xhtml/js/fundlist.js",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-23T08:07:20+08:00",
+    "file": "fundlist_script_1fe26fc2e3c8.bin",
+    "sha256": "a8537fdf37f79db4125ff8f27fa382cffeda07324de1c65c79f9716d5b590b86",
+    "bytes": 52579,
+    "content_type": "application/javascript",
+    "status": "ok"
+  }
+]

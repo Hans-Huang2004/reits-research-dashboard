@@ -1,0 +1,6 @@
+{
+  "batch_id": "39875955565-1",
+  "failed_at": "2026-10-23T08:08:53+08:00",
+  "error": "{\"institutional\": \"Command '['/opt/hostedtoolcache/Python/3.11.17/x64/bin/python', '-m', 'collectors.institutional', '--output', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/39875955565-1/collected/institutional.json', '--archive-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/39875955565-1/institutional_snapshots', '--verify-links', '--raw-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39875955565-1/institutional']' returned non-zero exit status 1.\", \"public\": \"Command '['/opt/hostedtoolcache/Python/3.11.17/x64/bin/python', '-m', 'collectors.public_reits', '--output', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/39875955565-1/collected/public_reits.json', '--work-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/39875955565-1/public', '--raw-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39875955565-1/public']' returned non-zero exit status 1.\"}",
+  "policy": "Do not commit or deploy a partial collection"
+}

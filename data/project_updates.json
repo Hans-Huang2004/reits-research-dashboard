@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-22T17:04:47+08:00",
-  "as_of_date": "2026-10-22",
+  "generated_at": "2026-10-23T08:08:53+08:00",
+  "as_of_date": "2026-10-23",
   "sources": {
     "public": {
       "label": "公募REITs",
@@ -258,8 +258,8 @@
           "ok": true
         }
       },
-      "status": "complete",
-      "error": null,
+      "status": "failed",
+      "error": "{\"institutional\": \"Command '['/opt/hostedtoolcache/Python/3.11.17/x64/bin/python', '-m', 'collectors.institutional', '--output', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/39875955565-1/collected/institutional.json', '--archive-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/39875955565-1/institutional_snapshots', '--verify-links', '--raw-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39875955565-1/institutional']' returned non-zero exit status 1.\", \"public\": \"Command '['/opt/hostedtoolcache/Python/3.11.17/x64/bin/python', '-m', 'collectors.public_reits', '--output', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/39875955565-1/collected/public_reits.json', '--work-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/39875955565-1/public', '--raw-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39875955565-1/public']' returned non-zero exit status 1.\"}",
       "last_successful_at": "2026-10-22T08:15:39+08:00",
       "revision_status": "官方来源当前完整快照；来源未统一提供初值或修订标识",
       "expected_latest_date": null,
@@ -273,7 +273,8 @@
         "verified_local_files": 663,
         "missing_local_files": 0,
         "status": "verified"
-      }
+      },
+      "last_attempted_at": "2026-10-23T08:08:53+08:00"
     },
     "institutional": {
       "label": "机构间REITs",
@@ -346,8 +347,8 @@
           "list_endpoint": "https://bond.szse.cn/api/report/ShowReport/data"
         }
       },
-      "status": "complete",
-      "error": null,
+      "status": "failed",
+      "error": "{\"institutional\": \"Command '['/opt/hostedtoolcache/Python/3.11.17/x64/bin/python', '-m', 'collectors.institutional', '--output', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/39875955565-1/collected/institutional.json', '--archive-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/39875955565-1/institutional_snapshots', '--verify-links', '--raw-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39875955565-1/institutional']' returned non-zero exit status 1.\", \"public\": \"Command '['/opt/hostedtoolcache/Python/3.11.17/x64/bin/python', '-m', 'collectors.public_reits', '--output', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/39875955565-1/collected/public_reits.json', '--work-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/39875955565-1/public', '--raw-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39875955565-1/public']' returned non-zero exit status 1.\"}",
       "last_successful_at": "2026-10-22T08:09:24+08:00",
       "revision_status": "官方来源当前完整快照；来源未统一提供初值或修订标识",
       "expected_latest_date": null,
@@ -361,7 +362,8 @@
         "verified_local_files": 663,
         "missing_local_files": 0,
         "status": "verified"
-      }
+      },
+      "last_attempted_at": "2026-10-23T08:08:53+08:00"
     },
     "ndrc": {
       "label": "国家发改委推荐",
