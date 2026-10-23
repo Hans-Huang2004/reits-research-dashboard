@@ -637,6 +637,16 @@
       "sequence": 66,
       "first_retained_at": "2026-10-22T17:04:47+08:00",
       "current_path": "data/ndrc_recommendations.json"
+    },
+    {
+      "population": "ndrc",
+      "path": "snapshots/ndrc/20261023-095941-502732.json",
+      "retained_path": "workpapers/project_updates/inputs/ndrc/23795aef085fbb939e7f5549e08b0b992ddfa162a9d52f6240e7a625a7626a41.json",
+      "sha256": "23795aef085fbb939e7f5549e08b0b992ddfa162a9d52f6240e7a625a7626a41",
+      "collected_at": "2026-10-23T09:59:41+08:00",
+      "sequence": 67,
+      "first_retained_at": "2026-10-23T09:59:47+08:00",
+      "current_path": "data/ndrc_recommendations.json"
     }
   ],
   "rejected_inputs": []
