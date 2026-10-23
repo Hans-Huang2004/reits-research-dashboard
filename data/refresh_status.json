@@ -1,15 +1,15 @@
 {
-  "status": "failed",
-  "attempt_ok": false,
-  "date": "2026-10-22",
-  "batch_id": "39697855308-1",
-  "started_at": "2026-10-22T08:08:45+08:00",
-  "completed_at": "2026-10-22T08:15:39+08:00",
+  "status": "complete",
+  "attempt_ok": true,
+  "date": "2026-10-23",
+  "batch_id": "39901463447-1",
+  "started_at": "2026-10-23T12:39:33+08:00",
+  "completed_at": "2026-10-23T12:47:15+08:00",
   "validation": {
     "institutional": {
-      "count": 132,
+      "count": 133,
       "SSE": 110,
-      "SZSE": 22
+      "SZSE": 23
     },
     "public": {
       "ok": true,
@@ -26,14 +26,10 @@
       "unlinked_events": 0
     }
   },
-  "last_successful_at": "2026-10-22T08:15:39+08:00",
-  "last_attempt_at": "2026-10-23T08:05:41+08:00",
+  "last_successful_at": "2026-10-23T12:47:15+08:00",
+  "last_attempt_at": "2026-10-23T12:39:33+08:00",
   "disclosure_checked_at": {
     "institutional": "2026-10-15T13:14:26+08:00",
     "public": "2026-10-15T13:14:26+08:00"
-  },
-  "last_attempt_batch_id": "39875955565-1",
-  "failed_at": "2026-10-23T08:08:53+08:00",
-  "error": "{\"institutional\": \"Command '['/opt/hostedtoolcache/Python/3.11.17/x64/bin/python', '-m', 'collectors.institutional', '--output', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/39875955565-1/collected/institutional.json', '--archive-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/39875955565-1/institutional_snapshots', '--verify-links', '--raw-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39875955565-1/institutional']' returned non-zero exit status 1.\", \"public\": \"Command '['/opt/hostedtoolcache/Python/3.11.17/x64/bin/python', '-m', 'collectors.public_reits', '--output', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/39875955565-1/collected/public_reits.json', '--work-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/39875955565-1/public', '--raw-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/39875955565-1/public']' returned non-zero exit status 1.\"}",
-  "policy": "Retain the last complete public and institutional snapshots"
+  }
 }
