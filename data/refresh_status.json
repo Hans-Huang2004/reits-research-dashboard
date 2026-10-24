@@ -1,14 +1,14 @@
 {
   "status": "complete",
   "attempt_ok": true,
-  "date": "2026-10-23",
-  "batch_id": "39901463447-1",
-  "started_at": "2026-10-23T12:39:33+08:00",
-  "completed_at": "2026-10-23T12:47:15+08:00",
+  "date": "2026-10-24",
+  "batch_id": "40042459040-1",
+  "started_at": "2026-10-24T07:57:17+08:00",
+  "completed_at": "2026-10-24T08:04:22+08:00",
   "validation": {
     "institutional": {
-      "count": 133,
-      "SSE": 110,
+      "count": 134,
+      "SSE": 111,
       "SZSE": 23
     },
     "public": {
@@ -26,8 +26,8 @@
       "unlinked_events": 0
     }
   },
-  "last_successful_at": "2026-10-23T12:47:15+08:00",
-  "last_attempt_at": "2026-10-23T12:39:33+08:00",
+  "last_successful_at": "2026-10-24T08:04:22+08:00",
+  "last_attempt_at": "2026-10-24T07:57:17+08:00",
   "disclosure_checked_at": {
     "institutional": "2026-10-15T13:14:26+08:00",
     "public": "2026-10-15T13:14:26+08:00"

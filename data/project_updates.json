@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-23T12:48:03+08:00",
-  "as_of_date": "2026-10-23",
+  "generated_at": "2026-10-24T08:04:23+08:00",
+  "as_of_date": "2026-10-24",
   "sources": {
     "public": {
       "label": "公募REITs",
-      "checked_at": "2026-10-23T12:47:15+08:00",
-      "collected_at": "2026-10-23T12:47:15+08:00",
+      "checked_at": "2026-10-24T08:04:22+08:00",
+      "collected_at": "2026-10-24T08:04:22+08:00",
       "latest_official_date": "2026-10-23",
       "coverage_start": "2026-10-15T10:55:37+08:00",
       "complete": true,
@@ -17,20 +17,20 @@
         "https://reits.szse.cn/"
       ],
       "snapshot_path": "data/public_reits.json",
-      "snapshot_sha256": "4383bcbb9cdca6b3649126e0472e395e3f4fc0f4d8d9158f8604edf798f5fec4",
+      "snapshot_sha256": "e623481baddd8414b402d2c7ac8e3e6ca871afd13f321addeb52ffaf5a523d0a",
       "raw_versions": [],
       "source_versions": [],
       "refresh_batch": {
-        "id": "39901463447-1",
-        "date": "2026-10-23",
-        "started_at": "2026-10-23T12:39:33+08:00",
-        "completed_at": "2026-10-23T12:47:15+08:00"
+        "id": "40042459040-1",
+        "date": "2026-10-24",
+        "started_at": "2026-10-24T07:57:17+08:00",
+        "completed_at": "2026-10-24T08:04:22+08:00"
       },
       "source_status": {
         "SSE": {
           "exchange": "上交所",
-          "collected_at": "2026-10-23T12:42:38+08:00",
-          "as_of_date": "2026-10-23",
+          "collected_at": "2026-10-24T08:00:08+08:00",
+          "as_of_date": "2026-10-24",
           "complete": true,
           "checks": [
             {
@@ -68,8 +68,8 @@
             "REITS_TYPE=1按官方脚本标为扩募；保留原始申报类型，未独立推断新购入",
             "仅对已核实基金代码、唯一已注册扩募申报及唯一已上市扩募批次匹配完成日期；其余保留未匹配状态"
           ],
-          "collection_finished_at": "2026-10-23T12:46:05+08:00",
-          "normalization_updated_at": "2026-10-23T12:46:05+08:00",
+          "collection_finished_at": "2026-10-24T08:03:05+08:00",
+          "normalization_updated_at": "2026-10-24T08:03:05+08:00",
           "reviewed_linked_events": 12,
           "linked_events": 81,
           "completed_expansions": 8,
@@ -78,7 +78,7 @@
         "SZSE": {
           "exchange": "深交所",
           "status": "complete",
-          "collected_at": "2026-10-23T12:47:15+08:00",
+          "collected_at": "2026-10-24T08:04:22+08:00",
           "latest_project_update": "2026-10-22",
           "fund_report_date": "2026-10-23",
           "listed_fund_count": 29,
@@ -245,8 +245,8 @@
           "freshness": {
             "series": "深交所公募REITs基金名录",
             "latest_available_date": "2026-10-23",
-            "expected_date": "2026-10-23",
-            "lagging": false
+            "expected_date": "2026-10-24",
+            "lagging": true
           },
           "limitations": [
             "基金合同生效日及首发募集金额未从公告正文提取；公告发布日期另列，不替代生效日。",
@@ -259,56 +259,56 @@
       },
       "status": "complete",
       "error": null,
-      "last_successful_at": "2026-10-23T12:47:15+08:00",
+      "last_successful_at": "2026-10-24T08:04:22+08:00",
       "revision_status": "官方来源当前完整快照；来源未统一提供初值或修订标识",
       "expected_latest_date": null,
       "is_lagging": null,
       "freshness_reason": "交易所及推荐名单不定期更新；完整成功核查时间和最新公开业务日期分别展示",
       "source_manifest_paths": [
-        "data/source_manifest/daily_refresh/39901463447-1.json"
+        "data/source_manifest/daily_refresh/40042459040-1.json"
       ],
       "raw_retention": {
-        "referenced_files": 665,
-        "verified_local_files": 665,
+        "referenced_files": 666,
+        "verified_local_files": 666,
         "missing_local_files": 0,
         "status": "verified"
       }
     },
     "institutional": {
       "label": "机构间REITs",
-      "checked_at": "2026-10-23T12:40:11+08:00",
-      "collected_at": "2026-10-23T12:40:11+08:00",
-      "latest_official_date": "2026-10-22",
+      "checked_at": "2026-10-24T07:57:56+08:00",
+      "collected_at": "2026-10-24T07:57:56+08:00",
+      "latest_official_date": "2026-10-23",
       "coverage_start": "2026-10-14T16:18:03+08:00",
       "complete": true,
-      "record_count": 133,
+      "record_count": 134,
       "source_url": "https://bond.sse.com.cn/bridge/information/",
       "source_urls": [
         "https://bond.sse.com.cn/bridge/information/",
         "https://bond.szse.cn/disclosure/progressinfo/index.html"
       ],
       "snapshot_path": "data/institutional.json",
-      "snapshot_sha256": "7868af12680004fb84497dd763a8eb715b546e91c127d2c00ba48982870de537",
+      "snapshot_sha256": "f1dd33ad5da6514af0a19cfc5de547ad85e9da668f5b75712feabb72c4da604a",
       "raw_versions": [],
       "source_versions": [],
       "refresh_batch": {
-        "id": "39901463447-1",
-        "date": "2026-10-23",
-        "started_at": "2026-10-23T12:39:33+08:00",
-        "completed_at": "2026-10-23T12:47:15+08:00"
+        "id": "40042459040-1",
+        "date": "2026-10-24",
+        "started_at": "2026-10-24T07:57:17+08:00",
+        "completed_at": "2026-10-24T08:04:22+08:00"
       },
       "source_status": {
         "SSE": {
           "ok": true,
-          "total": 110,
+          "total": 111,
           "queries": [
             {
               "keyword": "持有型不动产",
-              "advertised_total": 104,
-              "raw_count": 104,
+              "advertised_total": 105,
+              "raw_count": 105,
               "pages": 2,
               "actual_page_size": 100,
-              "unique_count": 104
+              "unique_count": 105
             },
             {
               "keyword": "机构间REIT",
@@ -347,17 +347,17 @@
       },
       "status": "complete",
       "error": null,
-      "last_successful_at": "2026-10-23T12:40:11+08:00",
+      "last_successful_at": "2026-10-24T07:57:56+08:00",
       "revision_status": "官方来源当前完整快照；来源未统一提供初值或修订标识",
       "expected_latest_date": null,
       "is_lagging": null,
       "freshness_reason": "交易所及推荐名单不定期更新；完整成功核查时间和最新公开业务日期分别展示",
       "source_manifest_paths": [
-        "data/source_manifest/daily_refresh/39901463447-1.json"
+        "data/source_manifest/daily_refresh/40042459040-1.json"
       ],
       "raw_retention": {
-        "referenced_files": 665,
-        "verified_local_files": 665,
+        "referenced_files": 666,
+        "verified_local_files": 666,
         "missing_local_files": 0,
         "status": "verified"
       }
@@ -488,7 +488,7 @@
       "expected_latest_date": null,
       "is_lagging": null,
       "freshness_reason": "交易所及推荐名单不定期更新；完整成功核查时间和最新公开业务日期分别展示",
-      "matching_public_current": true,
+      "matching_public_current": false,
       "matching_public_sha256": "4383bcbb9cdca6b3649126e0472e395e3f4fc0f4d8d9158f8604edf798f5fec4",
       "source_manifest_paths": [
         "data/source_manifest/ndrc/20261023-124757-778325.json"
@@ -502,6 +502,216 @@
     }
   },
   "events": [
+    {
+      "population": "institutional",
+      "population_label": "机构间REITs",
+      "entity_id": "SSE_213e64e05b2a4db8a98568e1740b5101",
+      "entity_kind": "filing",
+      "project_name": "国金资管-铜陵长江公铁大桥不动产资产支持专项计划（机构间REIT）",
+      "exchange": "上交所",
+      "asset_type": "交通设施",
+      "business_type": "首发",
+      "manager": "国金证券资产管理有限公司",
+      "origin": "铜陵市综合交通投资集团有限公司",
+      "fund_id": "",
+      "fund_code": "",
+      "related_entity_ids": [],
+      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=213e64e05b2a4db8a98568e1740b5101",
+      "event_type": "status_change",
+      "title": "审核状态更新",
+      "before": {
+        "status": "已受理"
+      },
+      "after": {
+        "status": "已反馈"
+      },
+      "official_date": "2026-10-23",
+      "detected_at": "2026-10-24T07:57:56+08:00",
+      "event_date": "2026-10-23",
+      "is_incremental": true,
+      "discovery_type": "observed",
+      "is_baseline": false,
+      "documents": [],
+      "changes": [
+        {
+          "field": "status",
+          "label": "审核状态",
+          "before": "已受理",
+          "after": "已反馈"
+        }
+      ],
+      "source_version": {
+        "path": "workpapers/daily_refresh/40042459040-1/collected/institutional.json",
+        "sha256": "97c64a858642b84d6c1be3136d095e0a348646d834a8cf58cad133b7e9927846",
+        "collected_at": "2026-10-24T07:57:56+08:00",
+        "retained_path": "workpapers/project_updates/inputs/institutional/97c64a858642b84d6c1be3136d095e0a348646d834a8cf58cad133b7e9927846.json"
+      },
+      "batch_key": "institutional|SSE_213e64e05b2a4db8a98568e1740b5101|2026-10-23",
+      "id": "UPDATE_ea2ba8a9c3d11d2e186654d5",
+      "previous_source_version": {
+        "path": "data/institutional.json",
+        "sha256": "7868af12680004fb84497dd763a8eb715b546e91c127d2c00ba48982870de537",
+        "collected_at": "2026-10-23T12:40:11+08:00",
+        "retained_path": "workpapers/project_updates/inputs/institutional/7868af12680004fb84497dd763a8eb715b546e91c127d2c00ba48982870de537.json"
+      },
+      "occurrence": 1
+    },
+    {
+      "population": "institutional",
+      "population_label": "机构间REITs",
+      "entity_id": "SSE_985324c17575494897af9b1b09bd780b",
+      "entity_kind": "filing",
+      "project_name": "国泰海通资管-上实城开租赁住房持有型不动产资产支持专项计划",
+      "exchange": "上交所",
+      "asset_type": "租赁住房",
+      "business_type": "首发",
+      "manager": "上海国泰海通证券资产管理有限公司",
+      "origin": "上海城开（集团）有限公司",
+      "fund_id": "",
+      "fund_code": "",
+      "related_entity_ids": [],
+      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=985324c17575494897af9b1b09bd780b",
+      "event_type": "status_change",
+      "title": "审核状态更新",
+      "before": {
+        "status": "已反馈"
+      },
+      "after": {
+        "status": "通过"
+      },
+      "official_date": "2026-10-23",
+      "detected_at": "2026-10-24T07:57:56+08:00",
+      "event_date": "2026-10-23",
+      "is_incremental": true,
+      "discovery_type": "observed",
+      "is_baseline": false,
+      "documents": [],
+      "changes": [
+        {
+          "field": "status",
+          "label": "审核状态",
+          "before": "已反馈",
+          "after": "通过"
+        }
+      ],
+      "source_version": {
+        "path": "workpapers/daily_refresh/40042459040-1/collected/institutional.json",
+        "sha256": "97c64a858642b84d6c1be3136d095e0a348646d834a8cf58cad133b7e9927846",
+        "collected_at": "2026-10-24T07:57:56+08:00",
+        "retained_path": "workpapers/project_updates/inputs/institutional/97c64a858642b84d6c1be3136d095e0a348646d834a8cf58cad133b7e9927846.json"
+      },
+      "batch_key": "institutional|SSE_985324c17575494897af9b1b09bd780b|2026-10-23",
+      "id": "UPDATE_a4df2e93b6f998d71e68c7d0",
+      "previous_source_version": {
+        "path": "data/institutional.json",
+        "sha256": "7868af12680004fb84497dd763a8eb715b546e91c127d2c00ba48982870de537",
+        "collected_at": "2026-10-23T12:40:11+08:00",
+        "retained_path": "workpapers/project_updates/inputs/institutional/7868af12680004fb84497dd763a8eb715b546e91c127d2c00ba48982870de537.json"
+      },
+      "occurrence": 1
+    },
+    {
+      "population": "institutional",
+      "population_label": "机构间REITs",
+      "entity_id": "SSE_99ad63b648ac49cba77567407e2aeef7",
+      "entity_kind": "filing",
+      "project_name": "富国资产-首创水务持有型不动产资产支持专项计划（2026年第一次扩募并新购入基础设施项目）",
+      "exchange": "上交所",
+      "asset_type": "市政生态",
+      "business_type": "扩募",
+      "manager": "富国资产管理（上海）有限公司",
+      "origin": "北京首创生态环保集团股份有限公司,石河子泽众水务有限公司",
+      "fund_id": "",
+      "fund_code": "",
+      "related_entity_ids": [],
+      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=99ad63b648ac49cba77567407e2aeef7",
+      "event_type": "revision",
+      "title": "资料修订",
+      "before": {
+        "amt": 9.61
+      },
+      "after": {
+        "amt": 9.03
+      },
+      "official_date": "2026-10-23",
+      "detected_at": "2026-10-24T07:57:56+08:00",
+      "event_date": "2026-10-23",
+      "is_incremental": true,
+      "discovery_type": "observed",
+      "is_baseline": false,
+      "documents": [],
+      "changes": [
+        {
+          "field": "amt",
+          "label": "申报金额（亿元）",
+          "before": 9.61,
+          "after": 9.03
+        }
+      ],
+      "source_version": {
+        "path": "workpapers/daily_refresh/40042459040-1/collected/institutional.json",
+        "sha256": "97c64a858642b84d6c1be3136d095e0a348646d834a8cf58cad133b7e9927846",
+        "collected_at": "2026-10-24T07:57:56+08:00",
+        "retained_path": "workpapers/project_updates/inputs/institutional/97c64a858642b84d6c1be3136d095e0a348646d834a8cf58cad133b7e9927846.json"
+      },
+      "batch_key": "institutional|SSE_99ad63b648ac49cba77567407e2aeef7|2026-10-23",
+      "id": "UPDATE_7ba8222c3d264941cd37493e",
+      "previous_source_version": {
+        "path": "data/institutional.json",
+        "sha256": "7868af12680004fb84497dd763a8eb715b546e91c127d2c00ba48982870de537",
+        "collected_at": "2026-10-23T12:40:11+08:00",
+        "retained_path": "workpapers/project_updates/inputs/institutional/7868af12680004fb84497dd763a8eb715b546e91c127d2c00ba48982870de537.json"
+      },
+      "occurrence": 1
+    },
+    {
+      "population": "institutional",
+      "population_label": "机构间REITs",
+      "entity_id": "SSE_eab6125fa55448c1b04a9ec2cd3c1340",
+      "entity_kind": "filing",
+      "project_name": "东兴证券-兰州热力集团有限公司持有型不动产资产支持专项计划",
+      "exchange": "上交所",
+      "asset_type": "能源",
+      "business_type": "首发",
+      "manager": "东兴证券股份有限公司",
+      "origin": "兰州热力集团有限公司",
+      "fund_id": "",
+      "fund_code": "",
+      "related_entity_ids": [],
+      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=eab6125fa55448c1b04a9ec2cd3c1340",
+      "event_type": "milestone",
+      "title": "新增受理项目",
+      "before": {
+        "accepted_date": null
+      },
+      "after": {
+        "accepted_date": "2026-10-23"
+      },
+      "official_date": "2026-10-23",
+      "detected_at": "2026-10-24T07:57:56+08:00",
+      "event_date": "2026-10-23",
+      "is_incremental": true,
+      "discovery_type": "observed",
+      "is_baseline": false,
+      "documents": [],
+      "changes": [
+        {
+          "field": "accepted_date",
+          "label": "受理日期",
+          "before": null,
+          "after": "2026-10-23"
+        }
+      ],
+      "source_version": {
+        "path": "workpapers/daily_refresh/40042459040-1/collected/institutional.json",
+        "sha256": "97c64a858642b84d6c1be3136d095e0a348646d834a8cf58cad133b7e9927846",
+        "collected_at": "2026-10-24T07:57:56+08:00",
+        "retained_path": "workpapers/project_updates/inputs/institutional/97c64a858642b84d6c1be3136d095e0a348646d834a8cf58cad133b7e9927846.json"
+      },
+      "batch_key": "institutional|SSE_eab6125fa55448c1b04a9ec2cd3c1340|2026-10-23",
+      "id": "UPDATE_6b52d5b22ea4cb3c75d8608a",
+      "previous_source_version": null
+    },
     {
       "population": "public",
       "population_label": "公募REITs",
@@ -95236,7 +95446,7 @@
       "fund_id": "",
       "fund_code": "",
       "related_entity_ids": [],
-      "status": "已受理",
+      "status": "已反馈",
       "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=213e64e05b2a4db8a98568e1740b5101"
     },
     {
@@ -96324,7 +96534,7 @@
       "fund_id": "",
       "fund_code": "",
       "related_entity_ids": [],
-      "status": "已反馈",
+      "status": "通过",
       "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=985324c17575494897af9b1b09bd780b"
     },
     {
@@ -96774,6 +96984,22 @@
       "related_entity_ids": [],
       "status": "终止",
       "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=e8bd42e5d15a4b2c91de12e7eb03c44f"
+    },
+    {
+      "id": "SSE_eab6125fa55448c1b04a9ec2cd3c1340",
+      "population": "institutional",
+      "entity_kind": "filing",
+      "project_name": "东兴证券-兰州热力集团有限公司持有型不动产资产支持专项计划",
+      "exchange": "上交所",
+      "asset_type": "能源",
+      "business_type": "首发",
+      "manager": "东兴证券股份有限公司",
+      "origin": "兰州热力集团有限公司",
+      "fund_id": "",
+      "fund_code": "",
+      "related_entity_ids": [],
+      "status": "已受理",
+      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=eab6125fa55448c1b04a9ec2cd3c1340"
     },
     {
       "id": "SSE_ee369312e63f4e2fa74f6f0ff8a54f3c",
@@ -105517,14 +105743,14 @@
     "baseline_at": "2026-10-14T16:18:03+08:00",
     "populations": {
       "public": {
-        "input_versions": 24,
+        "input_versions": 26,
         "baseline_at": "2026-10-15T10:55:37+08:00",
         "current_entities": 304
       },
       "institutional": {
-        "input_versions": 23,
+        "input_versions": 25,
         "baseline_at": "2026-10-14T16:18:03+08:00",
-        "current_entities": 133
+        "current_entities": 134
       },
       "ndrc": {
         "input_versions": 26,
@@ -105532,21 +105758,21 @@
         "current_entities": 137
       }
     },
-    "event_count": 1729,
-    "incremental_event_count": 206,
+    "event_count": 1733,
+    "incremental_event_count": 210,
     "undated_event_count": 0,
-    "observed_event_count": 206,
+    "observed_event_count": 210,
     "baseline_event_count": 1523,
     "event_counts_by_population": {
+      "institutional": 175,
       "public": 1421,
-      "institutional": 171,
       "ndrc": 137
     },
     "event_counts_by_type": {
+      "status_change": 22,
+      "revision": 8,
+      "milestone": 1050,
       "documents_added": 516,
-      "milestone": 1049,
-      "status_change": 20,
-      "revision": 7,
       "recommendation": 137
     },
     "missing_entities": [],
@@ -105695,25 +105921,25 @@
     "transformation_version": "official-date-archive-v2",
     "document_revisions": [],
     "rejected_inputs": [],
-    "retained_input_count": 73,
+    "retained_input_count": 77,
     "raw_retention": {
       "public": {
-        "referenced_files": 665,
-        "verified_local_files": 665,
+        "referenced_files": 666,
+        "verified_local_files": 666,
         "missing_local_paths": [],
         "mismatched_paths": [],
         "source_manifest_paths": [
-          "data/source_manifest/daily_refresh/39901463447-1.json"
+          "data/source_manifest/daily_refresh/40042459040-1.json"
         ],
         "treatment": "Original Raw hashes verified against source manifests"
       },
       "institutional": {
-        "referenced_files": 665,
-        "verified_local_files": 665,
+        "referenced_files": 666,
+        "verified_local_files": 666,
         "missing_local_paths": [],
         "mismatched_paths": [],
         "source_manifest_paths": [
-          "data/source_manifest/daily_refresh/39901463447-1.json"
+          "data/source_manifest/daily_refresh/40042459040-1.json"
         ],
         "treatment": "Original Raw hashes verified against source manifests"
       },
@@ -105728,7 +105954,7 @@
         "treatment": "Original Raw hashes verified against source manifests"
       }
     },
-    "audit_path": "workpapers/project_updates/runs/0f04a88e8295ebd529ae/audit.json",
+    "audit_path": "workpapers/project_updates/runs/e2b77f993c22fa4f1142/audit.json",
     "input_index_path": "workpapers/project_updates/input_index.json"
   }
 }
