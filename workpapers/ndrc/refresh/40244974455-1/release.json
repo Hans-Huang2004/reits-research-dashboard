@@ -1,0 +1,51 @@
+{
+  "status": "complete",
+  "attempt_ok": true,
+  "date": "2026-10-26",
+  "batch_id": "40244974455-1",
+  "last_attempt_at": "2026-10-26T07:37:00+08:00",
+  "completed_at": "2026-10-26T07:37:06+08:00",
+  "last_successful_at": "2026-10-26T07:37:06+08:00",
+  "public_snapshot_sha256": "26b10c8073693260197d94a19bb590535fa3e5d74a6a2e9efcb80502a0b03647",
+  "review_config_sha256": "69b571210e1494cbc8267f78390b35f1b0e14405c8516ddcdeec149b7844d576",
+  "implementation_sha256": "80df48c9a595d870e63ccec78a24c7b010e808f97b5ef5ec18d18519194ca529",
+  "snapshot_sha256": "e02d667b689b028ce33c836f51fad2635511584e870b2dda72b60827a04a71c8",
+  "validation": {
+    "ok": true,
+    "items": 137,
+    "official_total": 137,
+    "pages": 3,
+    "identities_unique": true,
+    "raw_to_normalized_count_difference": 0,
+    "derived_not_official_ids": true,
+    "match_statuses": {
+      "confirmed": 128,
+      "unmatched": 9
+    },
+    "relations": 128,
+    "business_types": {
+      "新购入": 16,
+      "首发": 113,
+      "待核实": 8
+    },
+    "earliest_recommended_date": "2020-12-30",
+    "latest_recommended_date": "2026-09-10",
+    "negative_acceptance_intervals": 16
+  },
+  "latest_recommended_date": "2026-09-10",
+  "command": [
+    "/opt/hostedtoolcache/Python/3.11.17/x64/bin/python",
+    "-m",
+    "collectors.ndrc_recommendations",
+    "--output",
+    "/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/ndrc/refresh/40244974455-1/ndrc_candidate.json",
+    "--public-input",
+    "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/public_reits.json",
+    "--raw-dir",
+    "/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/ndrc/refresh/40244974455-1",
+    "--work-dir",
+    "/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/ndrc/refresh/40244974455-1/collection"
+  ],
+  "raw_dir": "data/raw/ndrc/refresh/40244974455-1",
+  "work_dir": "workpapers/ndrc/refresh/40244974455-1"
+}
