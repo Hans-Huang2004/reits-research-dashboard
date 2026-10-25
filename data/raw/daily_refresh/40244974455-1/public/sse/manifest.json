@@ -1,0 +1,3052 @@
+[
+  {
+    "url": "https://www.sse.com.cn/xhtml/reits/js/search/search_info.js",
+    "params": {},
+    "request_url": "https://www.sse.com.cn/xhtml/reits/js/search/search_info.js",
+    "response_url": "https://www.sse.com.cn/xhtml/reits/js/search/search_info.js",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:08+08:00",
+    "file": "filing_script_94ffe036f5e8.bin",
+    "sha256": "e073b520df26fc2b2d0afc6f1f45e543201aeadab11a8c996cc4f93876dd9340",
+    "bytes": 17641,
+    "content_type": "application/javascript",
+    "status": "ok"
+  },
+  {
+    "url": "https://www.sse.com.cn/xhtml/reits/js/search/search_issuanceInfo_2026.js",
+    "params": {},
+    "request_url": "https://www.sse.com.cn/xhtml/reits/js/search/search_issuanceInfo_2026.js",
+    "response_url": "https://www.sse.com.cn/xhtml/reits/js/search/search_issuanceInfo_2026.js",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:09+08:00",
+    "file": "issuance_script_a0c744f518d6.bin",
+    "sha256": "cd6b93d0305e4b76eb14d56b8055b7ccdd1829d5930d444c05144f37b0f96135",
+    "bytes": 12742,
+    "content_type": "application/javascript",
+    "status": "ok"
+  },
+  {
+    "url": "https://etf.sse.com.cn/xhtml/js/fundlist.js",
+    "params": {},
+    "request_url": "https://etf.sse.com.cn/xhtml/js/fundlist.js",
+    "response_url": "https://etf.sse.com.cn/xhtml/js/fundlist.js",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:10+08:00",
+    "file": "fundlist_script_1fe26fc2e3c8.bin",
+    "sha256": "a8537fdf37f79db4125ff8f27fa382cffeda07324de1c65c79f9716d5b590b86",
+    "bytes": 52579,
+    "content_type": "application/javascript",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_XMLB",
+      "isPagination": "true",
+      "pageHelp.pageSize": 100,
+      "pageHelp.cacheSize": 1,
+      "pageHelp.pageNo": 1,
+      "pageHelp.beginPage": 1,
+      "pageHelp.endPage": 1,
+      "bond_type": 4
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_XMLB&isPagination=true&pageHelp.pageSize=100&pageHelp.cacheSize=1&pageHelp.pageNo=1&pageHelp.beginPage=1&pageHelp.endPage=1&bond_type=4",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_XMLB&isPagination=true&pageHelp.pageSize=100&pageHelp.cacheSize=1&pageHelp.pageNo=1&pageHelp.beginPage=1&pageHelp.endPage=1&bond_type=4",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:12+08:00",
+    "file": "ZQ_XMLB_p1_69120770dda6.json",
+    "sha256": "b35764df97bdf60a357712361b19eebba473deb76e3ac57f67b5d7bf6d0c770c",
+    "bytes": 154253,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_XMLB",
+      "isPagination": "true",
+      "pageHelp.pageSize": 100,
+      "pageHelp.cacheSize": 1,
+      "pageHelp.pageNo": 2,
+      "pageHelp.beginPage": 2,
+      "pageHelp.endPage": 2,
+      "bond_type": 4
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_XMLB&isPagination=true&pageHelp.pageSize=100&pageHelp.cacheSize=1&pageHelp.pageNo=2&pageHelp.beginPage=2&pageHelp.endPage=2&bond_type=4",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_XMLB&isPagination=true&pageHelp.pageSize=100&pageHelp.cacheSize=1&pageHelp.pageNo=2&pageHelp.beginPage=2&pageHelp.endPage=2&bond_type=4",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:13+08:00",
+    "file": "ZQ_XMLB_p2_b67fae1b381a.json",
+    "sha256": "579d82a70c594079f41eb7824176b6b051c64241a48db873d784f2d51920b2c7",
+    "bytes": 3447,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "REITS_FXYKM",
+      "isPagination": "true",
+      "pageHelp.pageSize": 100,
+      "pageHelp.cacheSize": 1,
+      "pageHelp.pageNo": 1,
+      "pageHelp.beginPage": 1,
+      "pageHelp.endPage": 1
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=REITS_FXYKM&isPagination=true&pageHelp.pageSize=100&pageHelp.cacheSize=1&pageHelp.pageNo=1&pageHelp.beginPage=1&pageHelp.endPage=1",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=REITS_FXYKM&isPagination=true&pageHelp.pageSize=100&pageHelp.cacheSize=1&pageHelp.pageNo=1&pageHelp.beginPage=1&pageHelp.endPage=1",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:14+08:00",
+    "file": "REITS_FXYKM_p1_222ea0c7f136.json",
+    "sha256": "1b3bafedca4ee89082f8a15a83a0f0447c248ae50cccaf5b3b6ae35c3a31413f",
+    "bytes": 38086,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_L",
+      "isPagination": "true",
+      "pageHelp.pageSize": 100,
+      "pageHelp.cacheSize": 1,
+      "pageHelp.pageNo": 1,
+      "pageHelp.beginPage": 1,
+      "pageHelp.endPage": 1,
+      "CATEGORY": "F600"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_L&isPagination=true&pageHelp.pageSize=100&pageHelp.cacheSize=1&pageHelp.pageNo=1&pageHelp.beginPage=1&pageHelp.endPage=1&CATEGORY=F600",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_L&isPagination=true&pageHelp.pageSize=100&pageHelp.cacheSize=1&pageHelp.pageNo=1&pageHelp.beginPage=1&pageHelp.endPage=1&CATEGORY=F600",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:16+08:00",
+    "file": "COMMON_JJZWZ_JJLB_L_p1_754c94c4a699.json",
+    "sha256": "bf7f73419c7a9fb6baea82c515ece63bbfc2b926c2263fa06bdf5dfd3965d29c",
+    "bytes": 33302,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508000"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508000",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508000",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:16+08:00",
+    "file": "fund_508000_a4f7d97056cd.json",
+    "sha256": "ee5b26083184f1cd8042e12931c91acc9db2ff7c7abc24a28732bd91e7e12633",
+    "bytes": 915,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508001"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508001",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508001",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:17+08:00",
+    "file": "fund_508001_1731a632cb08.json",
+    "sha256": "48402661786852bbdb728e5a088cbb67938a2a54df0f5a070b5643b4407f5de5",
+    "bytes": 951,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508002"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508002",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508002",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:18+08:00",
+    "file": "fund_508002_58321dd94ed3.json",
+    "sha256": "2bea3a4a6764cacdbdee8dfb584450f3da2449a565c5e4d27591868e2086794f",
+    "bytes": 919,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508003"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508003",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508003",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:20+08:00",
+    "file": "fund_508003_63161a2fe0af.json",
+    "sha256": "a61f2e30416e3a4d77ddfbc8be1ab0e19792fc33f17a258752f0505c7fd3dd6f",
+    "bytes": 931,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508005"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508005",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508005",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:21+08:00",
+    "file": "fund_508005_ba6b008182ab.json",
+    "sha256": "acda528ce5c7523467153304fe9e67f2dce36193809959ae1359127df6e53de8",
+    "bytes": 916,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508006"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508006",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508006",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:22+08:00",
+    "file": "fund_508006_37db0367a763.json",
+    "sha256": "8a2f58c91b6fa1667ebb8c729f0974903990b6236eaa0f0f97a7654d04642318",
+    "bytes": 912,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508007"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508007",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508007",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:22+08:00",
+    "file": "fund_508007_3f04ffc55a10.json",
+    "sha256": "23e1191061419c80ea9b790d3a098258d1ee0438743ff5e15d1f14bf0d5c10f6",
+    "bytes": 922,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508008"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508008",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508008",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:24+08:00",
+    "file": "fund_508008_d222a36ad5a0.json",
+    "sha256": "00b956811ea9396bf8dce1fd844ff0a4a43b8c93e3c312737da7c460ac97cc4e",
+    "bytes": 930,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508009"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508009",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508009",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:24+08:00",
+    "file": "fund_508009_d0a1aacad395.json",
+    "sha256": "237c4285ff54e9e61ce5c7059855d28c04e619411a1bdf696ae4211ff66aaf37",
+    "bytes": 924,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508010"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508010",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508010",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:25+08:00",
+    "file": "fund_508010_0601898c48ef.json",
+    "sha256": "5fa617633c58bbd9c1fd30f631ca630c562243ab789ffc4b1e231dfea569d431",
+    "bytes": 931,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508011"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508011",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508011",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:27+08:00",
+    "file": "fund_508011_5bc022bbe250.json",
+    "sha256": "4f7ea84d5b32a85a99a69f5cf5dc7f68730ffdeba78b8766e15a8f16c21f23d9",
+    "bytes": 910,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508012"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508012",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508012",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:28+08:00",
+    "file": "fund_508012_a25710aed7fe.json",
+    "sha256": "bd5ce35e777f49f6e853b3f40146a2398de0c9f9bff0fdcbfcd248ac70984791",
+    "bytes": 927,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508015"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508015",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508015",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:29+08:00",
+    "file": "fund_508015_bc023d5a2956.json",
+    "sha256": "d4b2238a9ec8b7e9221006599b3661057e080b0d6828c15e808886df7d8fca0b",
+    "bytes": 940,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508016"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508016",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508016",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:30+08:00",
+    "file": "fund_508016_96263bfe7e09.json",
+    "sha256": "6c3507d4dc0b21704cc9d75a16de84b1bd95b01bba5c9df708145003f8f6928e",
+    "bytes": 919,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508017"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508017",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508017",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:31+08:00",
+    "file": "fund_508017_89c9c2cab4ba.json",
+    "sha256": "54477bc1e18c2f1a158a39dd46a64509ef18147d949ab9fbfd6225cd1129aa4f",
+    "bytes": 907,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508018"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508018",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508018",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:32+08:00",
+    "file": "fund_508018_cf30f8b9ac74.json",
+    "sha256": "6b98e5343cef38776da3b5a0f3baee0bd91d8ff4b87cd049f94dfdbcd40f4517",
+    "bytes": 930,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508019"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508019",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508019",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:33+08:00",
+    "file": "fund_508019_611e6c0c16d2.json",
+    "sha256": "d31ebcfb8cd6bf4985ee4ae9b5a88d156473372b732c21bc4f1a7034c2d68693",
+    "bytes": 921,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508020"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508020",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508020",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:34+08:00",
+    "file": "fund_508020_892a045d4ce3.json",
+    "sha256": "2e3459b75a6f101b39dbe76f4aa76378d5e96c496f0d9244477e2735ce470511",
+    "bytes": 955,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508021"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508021",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508021",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:35+08:00",
+    "file": "fund_508021_2c5ee2648623.json",
+    "sha256": "576edb183c0492ae29ca6806f102852e0a579ead7df326717ba2ed9e7d967a4b",
+    "bytes": 969,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508022"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508022",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508022",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:36+08:00",
+    "file": "fund_508022_157cc24e9a03.json",
+    "sha256": "dce42cf87fc3e3b3a10d84915c65162e645004135309f609d81d41056397806f",
+    "bytes": 925,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508026"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508026",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508026",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:37+08:00",
+    "file": "fund_508026_2f703cc3871f.json",
+    "sha256": "8d6992720438c47eaeb6f01943d4f3e515436422f79b0bdfd9794caff6879ca0",
+    "bytes": 922,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508027"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508027",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508027",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:38+08:00",
+    "file": "fund_508027_d023e98bee36.json",
+    "sha256": "9a9ed8b0b56f219ddaff43565d4832cf4e9fb7de7aad635b5e2fb671889e0cf5",
+    "bytes": 927,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508028"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508028",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508028",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:39+08:00",
+    "file": "fund_508028_5453c4fbf42e.json",
+    "sha256": "9394102358104a817cd6452b7a546335a1e444edd760f664c799a426ed74b257",
+    "bytes": 934,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508029"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508029",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508029",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:40+08:00",
+    "file": "fund_508029_489a11e3fea2.json",
+    "sha256": "730e0d1ba089788e1131055868ff050acd714c4c3188c081d2a3cd6948d6fa79",
+    "bytes": 936,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508030"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508030",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508030",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:41+08:00",
+    "file": "fund_508030_b6c1105c7235.json",
+    "sha256": "a2358eb33adb69317f714f7a069deaa8871b2414231007d89a1caf71e4293651",
+    "bytes": 925,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508031"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508031",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508031",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:42+08:00",
+    "file": "fund_508031_7b2e6798596e.json",
+    "sha256": "4164588dcbc90d062f0a8e145e24ef49736702403f5b36c11dcf6ee89977d64d",
+    "bytes": 952,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508033"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508033",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508033",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:43+08:00",
+    "file": "fund_508033_0345e69ef043.json",
+    "sha256": "1ca49e951cd02a13f68c7ecc86643f11cc76a09d1552a8522a9cf6ab99c1aef1",
+    "bytes": 929,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508036"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508036",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508036",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:44+08:00",
+    "file": "fund_508036_e77eea481dfe.json",
+    "sha256": "12366da50a5f1fa1a1630a4fc6217a48d006d4171e1db90ee21e5b541a1cc5af",
+    "bytes": 894,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508038"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508038",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508038",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:45+08:00",
+    "file": "fund_508038_15f5acf1f29e.json",
+    "sha256": "43ddd9e320ffdc4927a117b1ffc5d94894fdea8d4bee1cc9a50be0a8dafaac7f",
+    "bytes": 901,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508039"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508039",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508039",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:46+08:00",
+    "file": "fund_508039_7e10fad3a135.json",
+    "sha256": "3a93cc4521beb97d386a142cc357dd4ae8673247a1127d0a8e5680175af8101b",
+    "bytes": 928,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508047"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508047",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508047",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:47+08:00",
+    "file": "fund_508047_f2f769629e4e.json",
+    "sha256": "5bab5f30ced8cb122868ce0fc15bbc4d8ae1f2db6ea2b9782738ed9bade3bdb4",
+    "bytes": 934,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508048"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508048",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508048",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:48+08:00",
+    "file": "fund_508048_7678283ac9e0.json",
+    "sha256": "0033241e296054a21d76c9ee8d3eaade6b164ea517f9047dc615b2a1e677744d",
+    "bytes": 928,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508050"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508050",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508050",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:49+08:00",
+    "file": "fund_508050_06dd2b9766cc.json",
+    "sha256": "f2fa0ee62d77d83c8067dc8c2cdb1aaf2e6b1206402d35069694f36018bfa8f6",
+    "bytes": 925,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508055"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508055",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508055",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:50+08:00",
+    "file": "fund_508055_6fcca83d339e.json",
+    "sha256": "23fe89ccfe72fec13f638df6684bcc269003b7710a5adaa504fe199adcf60683",
+    "bytes": 940,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508056"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508056",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508056",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:51+08:00",
+    "file": "fund_508056_2b1924193f18.json",
+    "sha256": "6bb1ca1c3d084c9df24e1639f8efef15ba273bce3d402305b8e63115fba712da",
+    "bytes": 921,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508058"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508058",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508058",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:52+08:00",
+    "file": "fund_508058_ee8b864a5e03.json",
+    "sha256": "7e5bcb5e90096b0e65f7db81f1a5a73562f93b360d11f79f334dc7563b703252",
+    "bytes": 933,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508059"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508059",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508059",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:53+08:00",
+    "file": "fund_508059_94d5f12501f0.json",
+    "sha256": "a35ac67ab47829f929e215f6aa8e20e78904b0fce33c8585b674a3627168c30e",
+    "bytes": 949,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508060"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508060",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508060",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:54+08:00",
+    "file": "fund_508060_cf2cd693a189.json",
+    "sha256": "f00b13d0e887e7a2080f4a6092726ec0f0448eb116caaecfe021cce7a1f8fb7c",
+    "bytes": 928,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508066"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508066",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508066",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:55+08:00",
+    "file": "fund_508066_1b6ae9bac634.json",
+    "sha256": "63ad73192353cc454fe56869915a699e49c519b11ca0e52f41ee0bd4fbe9c152",
+    "bytes": 972,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508068"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508068",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508068",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:56+08:00",
+    "file": "fund_508068_1621811bf606.json",
+    "sha256": "1be8d384cce5ec250afbce49f7556e87858f20511ede287ae4fedc5e337564f0",
+    "bytes": 939,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508069"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508069",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508069",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:57+08:00",
+    "file": "fund_508069_e201e45d896d.json",
+    "sha256": "ff8fc812a3b3fc6179772f7f9d028c34b3a5afce40e46a1f493f237d5556b050",
+    "bytes": 925,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508077"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508077",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508077",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:58+08:00",
+    "file": "fund_508077_37d930152cb8.json",
+    "sha256": "00de0d6d76d6afaeb2b4dd579881a0b435792e527e93bfc5ca903d7ecbd746c9",
+    "bytes": 942,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508078"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508078",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508078",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:32:59+08:00",
+    "file": "fund_508078_0b740ae56419.json",
+    "sha256": "13c49cddbfef5910378be4ba235f7d56f68f57b5e124950c37ca4c67026d41d5",
+    "bytes": 925,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508080"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508080",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508080",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:00+08:00",
+    "file": "fund_508080_0533124d1869.json",
+    "sha256": "0edfb972c58261731a806bbbc26e9c9cdae1b1ee1c4093376c20aa969c9fe3a7",
+    "bytes": 928,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508081"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508081",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508081",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:01+08:00",
+    "file": "fund_508081_63a4a923c60f.json",
+    "sha256": "1f8ad04874e9844d4f47e47e6cb6b172e3668d2e2b788ea41f61f1fa09b91f0c",
+    "bytes": 910,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508082"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508082",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508082",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:02+08:00",
+    "file": "fund_508082_29e4d0142884.json",
+    "sha256": "07ab9a49bd1ef7373175b329ed0ab5b41800560b09b752b5fa34f1d0ecd13d9b",
+    "bytes": 934,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508084"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508084",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508084",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:03+08:00",
+    "file": "fund_508084_28046fc34982.json",
+    "sha256": "fb7821d27f0dd6cc3ad2d595068721277205489e794ee98cbd6f1bad98e9ebe2",
+    "bytes": 943,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508085"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508085",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508085",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:04+08:00",
+    "file": "fund_508085_e17a30e82044.json",
+    "sha256": "8ac9e29f8d01ead5e51640ba16860a9284f6650afd9c83974ea449603eee102e",
+    "bytes": 949,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508086"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508086",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508086",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:05+08:00",
+    "file": "fund_508086_2a5f9fa41185.json",
+    "sha256": "a43ea575b623542d745633b96efd1606e55676d3b9038f30ebf6006d1d933a11",
+    "bytes": 955,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508087"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508087",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508087",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:06+08:00",
+    "file": "fund_508087_ca1e7382c5a4.json",
+    "sha256": "602829601a03b8a9f4c41b5df351297b6613cd686a43a69c9266752fe79aecf6",
+    "bytes": 949,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508088"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508088",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508088",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:07+08:00",
+    "file": "fund_508088_fb6f745a149c.json",
+    "sha256": "cbf05a814a5f4d5a86a1b4fa4425c9bce66a8523e77e5f7214da92dd4f15f046",
+    "bytes": 966,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508089"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508089",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508089",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:08+08:00",
+    "file": "fund_508089_26b2d5cb2287.json",
+    "sha256": "289545189dd33c72e29ab766848cf5a21fd70d74847bc03838e5f13b70cc2775",
+    "bytes": 928,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508090"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508090",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508090",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:09+08:00",
+    "file": "fund_508090_8762b8a58f46.json",
+    "sha256": "c6bb132db300bcd961593ea010b67f03f3f8bab28aa7ad79276d22af0c60e85e",
+    "bytes": 922,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508091"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508091",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508091",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:10+08:00",
+    "file": "fund_508091_08d654e77904.json",
+    "sha256": "0380fe8bd87fc09d3484c03c100a81fe8bda16da5b01fefdfd952f8d10a86e7f",
+    "bytes": 916,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508092"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508092",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508092",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:11+08:00",
+    "file": "fund_508092_d595bdfd1947.json",
+    "sha256": "a2b0cdf47deac67456f565be7269ba40783910cb199bcdc10cce6af2147974e1",
+    "bytes": 931,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508093"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508093",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508093",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:12+08:00",
+    "file": "fund_508093_c7a09edffeb2.json",
+    "sha256": "78e103b25527647aa12838ac2fe39b0ca5fafc92a86fed2299e81e037630b119",
+    "bytes": 937,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508095"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508095",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508095",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:13+08:00",
+    "file": "fund_508095_e30011b36d0b.json",
+    "sha256": "51ea02936d0cb0a87b1027b4fc4d00b37465a74d1fc09a318af3210fd268a77e",
+    "bytes": 952,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508096"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508096",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508096",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:14+08:00",
+    "file": "fund_508096_51748389dbab.json",
+    "sha256": "00993d168ed43bbef64298d3237e10c98ec7e2982a4890ae654513a3b8c739cb",
+    "bytes": 915,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508097"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508097",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508097",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:15+08:00",
+    "file": "fund_508097_696e8f1b3c59.json",
+    "sha256": "e06845c5dac0e1e12aa2803f149be618d91aa2236e8679c6707a68c56c99e787",
+    "bytes": 948,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508098"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508098",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508098",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:16+08:00",
+    "file": "fund_508098_2e6dac88d673.json",
+    "sha256": "1ae11adf52013d234cab6c732cc240dd3f317d05587329d587021f56299948bd",
+    "bytes": 922,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508099"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508099",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508099",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:17+08:00",
+    "file": "fund_508099_5979d1cd3ccf.json",
+    "sha256": "1a0d1e230339116391e3a771024f3413fe1773c263fca8f49c3a8034a5728796",
+    "bytes": 930,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508600"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508600",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508600",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:18+08:00",
+    "file": "fund_508600_672b0196c364.json",
+    "sha256": "a53d3ead4e282aebca86da8c70935b596598ab3bd454b4230d3852fb899ff34c",
+    "bytes": 943,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508601"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508601",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508601",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:19+08:00",
+    "file": "fund_508601_3ca40a689452.json",
+    "sha256": "4db4cb71562602c496bdd077c80db545238e051c8cfe1bf9df4819aaa373dfa8",
+    "bytes": 934,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508602"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508602",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508602",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:20+08:00",
+    "file": "fund_508602_cf46e74d0186.json",
+    "sha256": "71b7bc9b7a091de04f29a3f25b3a3377c2894f6b6e3dd70097e73c73c7f45de1",
+    "bytes": 940,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508603"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508603",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508603",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:21+08:00",
+    "file": "fund_508603_dbe4a2aa0cd3.json",
+    "sha256": "6b83c3d43438d0242bc11328e6c9eddde5393721f30b9a2aff6f5a7c6f5872e1",
+    "bytes": 925,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508605"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508605",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508605",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:22+08:00",
+    "file": "fund_508605_58a44ba1352b.json",
+    "sha256": "e6c9a57fe9c76959ec2c9a6ec4488aa4010fd8e4293cbd21a41aea9d25fbfb5b",
+    "bytes": 898,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508606"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508606",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508606",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:23+08:00",
+    "file": "fund_508606_f1985d019404.json",
+    "sha256": "a9c35d90285069ec044a6878f77ff16a8ae09c46c0a487db365ef711e714966f",
+    "bytes": 889,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508607"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508607",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508607",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:24+08:00",
+    "file": "fund_508607_a51c84a7036b.json",
+    "sha256": "11d0b3e7572f16dfc835783602e00189d5247017061024373aaf36f03e6d81f7",
+    "bytes": 910,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508609"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508609",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508609",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:25+08:00",
+    "file": "fund_508609_df449bc13614.json",
+    "sha256": "71f36a6d54544504428260954b8e630b47a6007e226ec1bac9305b9290e23648",
+    "bytes": 894,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonQuery.do",
+    "params": {
+      "sqlId": "COMMON_JJZWZ_JJLB_JJXQ_JBXX_C",
+      "isPagination": "false",
+      "FUND_CODE": "508610"
+    },
+    "request_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508610",
+    "response_url": "https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_JJZWZ_JJLB_JJXQ_JBXX_C&isPagination=false&FUND_CODE=508610",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:26+08:00",
+    "file": "fund_508610_500b2b4993f6.json",
+    "sha256": "5767cf8537c55c5821c4e805fce800418cf729014b342b4022b8b352128983bc",
+    "bytes": 892,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "cdb91b06f7bd4b88a382d391bfdf687e"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=cdb91b06f7bd4b88a382d391bfdf687e",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=cdb91b06f7bd4b88a382d391bfdf687e",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:27+08:00",
+    "file": "filing_documents_cdb91b06f7bd4b88a382d391bfdf687e_87925acb0a46.json",
+    "sha256": "6be4f20931907000449c243bfda31fd3f7aa2a545de05b7b4b63357758376cb4",
+    "bytes": 3221,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "a9ce5e95e078472998cc47ad30846c2b"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=a9ce5e95e078472998cc47ad30846c2b",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=a9ce5e95e078472998cc47ad30846c2b",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:28+08:00",
+    "file": "filing_documents_a9ce5e95e078472998cc47ad30846c2b_b3ebd1448bd1.json",
+    "sha256": "093c7e23a2b5ccbb0387cdae42ea814c6d00ed643f209a641e5f119f4f08d2c0",
+    "bytes": 3379,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "b80b031657254459b6d0010d6b2d5286"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=b80b031657254459b6d0010d6b2d5286",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=b80b031657254459b6d0010d6b2d5286",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:29+08:00",
+    "file": "filing_documents_b80b031657254459b6d0010d6b2d5286_e42699cceacf.json",
+    "sha256": "518145aa276ae28f35418a81e3f375e00f4ac9bdee97ca79e5eb8db141edccdd",
+    "bytes": 5526,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "72c49c7e1ec847fea999460058302391"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=72c49c7e1ec847fea999460058302391",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=72c49c7e1ec847fea999460058302391",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:30+08:00",
+    "file": "filing_documents_72c49c7e1ec847fea999460058302391_1da5119927ec.json",
+    "sha256": "a20f2c39528548ea4ac6178bb3b93b249ac8363545d06a5a67cf4502fdf0ad2e",
+    "bytes": 3731,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "894cbcc4623047c385444030dd83f921"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=894cbcc4623047c385444030dd83f921",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=894cbcc4623047c385444030dd83f921",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:31+08:00",
+    "file": "filing_documents_894cbcc4623047c385444030dd83f921_9a68dea61e1f.json",
+    "sha256": "735f92a8bbb467a4f798065757d958a02ecf866205737a4bf62d49ee082ab3b4",
+    "bytes": 3465,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "73c7577e4b3847aab5331d0379e15eff"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=73c7577e4b3847aab5331d0379e15eff",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=73c7577e4b3847aab5331d0379e15eff",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:32+08:00",
+    "file": "filing_documents_73c7577e4b3847aab5331d0379e15eff_c9c1d2ae50fe.json",
+    "sha256": "9752795b702e3fe41aec28ec6b6a5ba70210f4e681b58cc13f0e1c9a3421d5db",
+    "bytes": 7020,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "f461bff4962247f4a1dac82dea874c42"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=f461bff4962247f4a1dac82dea874c42",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=f461bff4962247f4a1dac82dea874c42",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:33+08:00",
+    "file": "filing_documents_f461bff4962247f4a1dac82dea874c42_dba800ee0275.json",
+    "sha256": "aa759bfd52d959e521dbbfeed57da8e98b3b21a8e9b027d187b7208aa1cccf83",
+    "bytes": 6618,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "84f8eff955614871a2e88d91891828a1"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=84f8eff955614871a2e88d91891828a1",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=84f8eff955614871a2e88d91891828a1",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:34+08:00",
+    "file": "filing_documents_84f8eff955614871a2e88d91891828a1_e58ebdd32d0b.json",
+    "sha256": "704390bb5fb743c7c03de38f2a7fded90e7b300abdf5e5951fd630aa2116d2fd",
+    "bytes": 6834,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "9c0e79ff1731437c8cb7571366675723"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=9c0e79ff1731437c8cb7571366675723",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=9c0e79ff1731437c8cb7571366675723",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:35+08:00",
+    "file": "filing_documents_9c0e79ff1731437c8cb7571366675723_5cc4b9c8f344.json",
+    "sha256": "9d2bd7bd71cae022622e0e49ab5fae1585b8829ad5bd38745c79490d49ff30cd",
+    "bytes": 8560,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "39be963ffbaf493ba0744506b3f451e2"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=39be963ffbaf493ba0744506b3f451e2",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=39be963ffbaf493ba0744506b3f451e2",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:36+08:00",
+    "file": "filing_documents_39be963ffbaf493ba0744506b3f451e2_72cdc4e6e6ff.json",
+    "sha256": "bb246186496771f29c0684088592170810918c2a71665bfe736a2c1f991e046e",
+    "bytes": 3419,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "24e84189f68749109b5302f5e1e6ad29"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=24e84189f68749109b5302f5e1e6ad29",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=24e84189f68749109b5302f5e1e6ad29",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:37+08:00",
+    "file": "filing_documents_24e84189f68749109b5302f5e1e6ad29_0dbfd2ca7ea2.json",
+    "sha256": "3b622883c88758c803b5b9ef387006c1e47b33db755a2d89a7a52eba238eb74e",
+    "bytes": 7192,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "c330717c560146148c72a9a3bdeb4de8"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=c330717c560146148c72a9a3bdeb4de8",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=c330717c560146148c72a9a3bdeb4de8",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:38+08:00",
+    "file": "filing_documents_c330717c560146148c72a9a3bdeb4de8_e03e7211d542.json",
+    "sha256": "6225e25f4fe5acd38043a24d566cb9b8d888d57d6a20d889dc1ea7acb6d6a53a",
+    "bytes": 3055,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "0c134614a72047339c77d9e3049f03fc"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=0c134614a72047339c77d9e3049f03fc",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=0c134614a72047339c77d9e3049f03fc",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:39+08:00",
+    "file": "filing_documents_0c134614a72047339c77d9e3049f03fc_98e1f2f4314f.json",
+    "sha256": "913035bdc9d48bb9f4d41f14e47a91b97c8d20130dcc9e5c7c74bf9a60c0a124",
+    "bytes": 9412,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "2b6853bdbec648e0821425c40f6d5b45"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=2b6853bdbec648e0821425c40f6d5b45",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=2b6853bdbec648e0821425c40f6d5b45",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:40+08:00",
+    "file": "filing_documents_2b6853bdbec648e0821425c40f6d5b45_622d00091b14.json",
+    "sha256": "71eb534d17a19986a657801149a2fccd1eb9e135105548669cc68370a5517a2d",
+    "bytes": 3321,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "2442d7bd13474f31972b8605ceebefdb"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=2442d7bd13474f31972b8605ceebefdb",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=2442d7bd13474f31972b8605ceebefdb",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:41+08:00",
+    "file": "filing_documents_2442d7bd13474f31972b8605ceebefdb_3146bdef7ee8.json",
+    "sha256": "a415cb90943906480ccca0244521ce1fcbd68e30ea79e711bd33097274ea94a9",
+    "bytes": 3361,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "a1b8c90b144d41c2bbde49c4c0a2f96f"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=a1b8c90b144d41c2bbde49c4c0a2f96f",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=a1b8c90b144d41c2bbde49c4c0a2f96f",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:42+08:00",
+    "file": "filing_documents_a1b8c90b144d41c2bbde49c4c0a2f96f_29e3a0dd8cdb.json",
+    "sha256": "85935adcc155fb29e3d54714ebeac167acd49cd33d2a2260e073eebfd21d9841",
+    "bytes": 3505,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "620f9db7cc1f48b1b6531c5af02e8b34"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=620f9db7cc1f48b1b6531c5af02e8b34",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=620f9db7cc1f48b1b6531c5af02e8b34",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:43+08:00",
+    "file": "filing_documents_620f9db7cc1f48b1b6531c5af02e8b34_64b377844ab1.json",
+    "sha256": "305819b156e099b3cbe28def02032ac9282ea145c4a1974d41dba8f6fc9e2696",
+    "bytes": 7788,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "888e50b307b74902bef134005d5c8716"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=888e50b307b74902bef134005d5c8716",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=888e50b307b74902bef134005d5c8716",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:44+08:00",
+    "file": "filing_documents_888e50b307b74902bef134005d5c8716_419e24bab77b.json",
+    "sha256": "da6f0cf23f466ce5bf0ccc890dac86eede7089181b0f974468009e376d6b43b2",
+    "bytes": 6768,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "80657bb8e3a84783a3b6a2a7c311654f"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=80657bb8e3a84783a3b6a2a7c311654f",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=80657bb8e3a84783a3b6a2a7c311654f",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:45+08:00",
+    "file": "filing_documents_80657bb8e3a84783a3b6a2a7c311654f_69ae1c574134.json",
+    "sha256": "2dd014ea5328f1aaaf402ff4c43c4b5eadda6d11fcf61414bf206f120d3da285",
+    "bytes": 12234,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "567e0ce118814458b930c6cdebd8a43b"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=567e0ce118814458b930c6cdebd8a43b",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=567e0ce118814458b930c6cdebd8a43b",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:46+08:00",
+    "file": "filing_documents_567e0ce118814458b930c6cdebd8a43b_cb823d52b5ad.json",
+    "sha256": "251d328ea78c81b7c6d7e356908c4b24f9df32ae9ce22bb7b55560be8ef0b952",
+    "bytes": 8910,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "762ec541a8a446018b6b854353629e7d"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=762ec541a8a446018b6b854353629e7d",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=762ec541a8a446018b6b854353629e7d",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:47+08:00",
+    "file": "filing_documents_762ec541a8a446018b6b854353629e7d_543e6ea47e22.json",
+    "sha256": "aa9e3bc548069038b8690e44d07c8bfb026b45b38ebb11fdbc139f01434ce281",
+    "bytes": 3621,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "1cac0428e57a4c65b9dadaa89549741b"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=1cac0428e57a4c65b9dadaa89549741b",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=1cac0428e57a4c65b9dadaa89549741b",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:48+08:00",
+    "file": "filing_documents_1cac0428e57a4c65b9dadaa89549741b_2db08f4f1c3f.json",
+    "sha256": "c78612334e8544a5fe1ab792239cac8a42bd54ca70de71f42f186c18c9fb9181",
+    "bytes": 6240,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "86ca5c30686342a3b403248a49578a6a"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=86ca5c30686342a3b403248a49578a6a",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=86ca5c30686342a3b403248a49578a6a",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:49+08:00",
+    "file": "filing_documents_86ca5c30686342a3b403248a49578a6a_2f3cf0089021.json",
+    "sha256": "c4d7decb1a8e631f507ff42bdfd51a23fb3ff4d4ca6cb938ab6530b0fab5ffee",
+    "bytes": 9094,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "294417b17ff34e6e939763427f15a767"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=294417b17ff34e6e939763427f15a767",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=294417b17ff34e6e939763427f15a767",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:50+08:00",
+    "file": "filing_documents_294417b17ff34e6e939763427f15a767_31c11187109c.json",
+    "sha256": "ab23bbff221e463804c1b6203ca12d7f128de427f5ed07c242e4bddee71b8f09",
+    "bytes": 3385,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "4440fa26ec24475d9318be11d1151ef9"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=4440fa26ec24475d9318be11d1151ef9",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=4440fa26ec24475d9318be11d1151ef9",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:51+08:00",
+    "file": "filing_documents_4440fa26ec24475d9318be11d1151ef9_c5247afec97f.json",
+    "sha256": "ba997d90c727eeec7844436332e8cd18f01272762b3a6ec1b9db7f5509251688",
+    "bytes": 7076,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "98519f6baf014a13a59dac8cb52f35e8"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=98519f6baf014a13a59dac8cb52f35e8",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=98519f6baf014a13a59dac8cb52f35e8",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:52+08:00",
+    "file": "filing_documents_98519f6baf014a13a59dac8cb52f35e8_b8054b3a808a.json",
+    "sha256": "8d1ae32b70bc8645991cb46fb59708be0df6ab3c8a1b15aa4d670e37ed75b491",
+    "bytes": 7960,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "6fa0b7c2f77944549b2ada7b1339be34"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=6fa0b7c2f77944549b2ada7b1339be34",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=6fa0b7c2f77944549b2ada7b1339be34",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:53+08:00",
+    "file": "filing_documents_6fa0b7c2f77944549b2ada7b1339be34_9a1b15c6ba0a.json",
+    "sha256": "60abdb5ac988b381982071bd2b4f92900d0ec6ea7c048474c994a41186b49d56",
+    "bytes": 7950,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "3214c881b4ed492f8eb28966d291acf8"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=3214c881b4ed492f8eb28966d291acf8",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=3214c881b4ed492f8eb28966d291acf8",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:54+08:00",
+    "file": "filing_documents_3214c881b4ed492f8eb28966d291acf8_5b9a1c89c53b.json",
+    "sha256": "574a38f655e6c091460bd1503877b4f2094ae485919d56974dde73a5fc39b25e",
+    "bytes": 8886,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "d1e2d169bad04e489952ab042b62c577"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=d1e2d169bad04e489952ab042b62c577",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=d1e2d169bad04e489952ab042b62c577",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:55+08:00",
+    "file": "filing_documents_d1e2d169bad04e489952ab042b62c577_d06cf56561db.json",
+    "sha256": "e7151ec44ad2b186cd9e4f07df2cc9fd3e7e286a9eac604a291877705347ed4b",
+    "bytes": 10584,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "7c28dbd738914f278d7b55b510cf44e9"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=7c28dbd738914f278d7b55b510cf44e9",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=7c28dbd738914f278d7b55b510cf44e9",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:56+08:00",
+    "file": "filing_documents_7c28dbd738914f278d7b55b510cf44e9_b3716c86224d.json",
+    "sha256": "abbb261becc02ae735f3c2e0437a14057cb721043d06725b5dbf802be268856e",
+    "bytes": 3309,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "ca83f8b53ee34cb0b2ee8bede1007452"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=ca83f8b53ee34cb0b2ee8bede1007452",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=ca83f8b53ee34cb0b2ee8bede1007452",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:57+08:00",
+    "file": "filing_documents_ca83f8b53ee34cb0b2ee8bede1007452_42b7a9fe5d8b.json",
+    "sha256": "5cbc9607886bc5af660204cd2b8ca86301ef1d803b37e61af7d6d66cd98db27e",
+    "bytes": 10804,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "54b56d3cc1cc46b29da3d05a5efe7bf0"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=54b56d3cc1cc46b29da3d05a5efe7bf0",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=54b56d3cc1cc46b29da3d05a5efe7bf0",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:58+08:00",
+    "file": "filing_documents_54b56d3cc1cc46b29da3d05a5efe7bf0_75eb8eaa9f56.json",
+    "sha256": "0fc2b66c4c19e132bfc88201d5bf41dbd51d6003ebbd9ae38e0a8a5b509e8cf7",
+    "bytes": 10230,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "f73619d5cf6a45a883283047e5886e8d"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=f73619d5cf6a45a883283047e5886e8d",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=f73619d5cf6a45a883283047e5886e8d",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:33:59+08:00",
+    "file": "filing_documents_f73619d5cf6a45a883283047e5886e8d_53b8fe377a0f.json",
+    "sha256": "badc6369160e037d616a93fc9f3a7653e939e359a2d6482c30bf591f7eb52113",
+    "bytes": 10234,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "659a67730bd24417a9e3b98780589f73"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=659a67730bd24417a9e3b98780589f73",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=659a67730bd24417a9e3b98780589f73",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:00+08:00",
+    "file": "filing_documents_659a67730bd24417a9e3b98780589f73_80c729aea720.json",
+    "sha256": "f9b626c25a76448b4b5aa5616f14380b2e52672721e71218355ac432e7a7d4bc",
+    "bytes": 11140,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "2b703424eb68448aafc7bd18f08e9a69"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=2b703424eb68448aafc7bd18f08e9a69",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=2b703424eb68448aafc7bd18f08e9a69",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:01+08:00",
+    "file": "filing_documents_2b703424eb68448aafc7bd18f08e9a69_e575810f597e.json",
+    "sha256": "3f0601cc80b37987221b1e81e96f9f0f7ad5639ad179021a5346b379afc624ca",
+    "bytes": 6792,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "66b8e916901a4ad19167e5dd158606ac"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=66b8e916901a4ad19167e5dd158606ac",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=66b8e916901a4ad19167e5dd158606ac",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:02+08:00",
+    "file": "filing_documents_66b8e916901a4ad19167e5dd158606ac_fb2fd8ba842c.json",
+    "sha256": "1737fceab2824450f20bb7c0a8fc34270527327fbba7cecd47bdd870ee9a5c2f",
+    "bytes": 8974,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "580477e00d3c436e943190c8c23be567"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=580477e00d3c436e943190c8c23be567",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=580477e00d3c436e943190c8c23be567",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:03+08:00",
+    "file": "filing_documents_580477e00d3c436e943190c8c23be567_c38ffad04892.json",
+    "sha256": "15ba0c6b90cb560e77db9cc733fde0dfe643430701a97de5088c0c1ee2785c78",
+    "bytes": 10990,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "9709dd8e44ed4697bfb8a2cc24626dd5"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=9709dd8e44ed4697bfb8a2cc24626dd5",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=9709dd8e44ed4697bfb8a2cc24626dd5",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:04+08:00",
+    "file": "filing_documents_9709dd8e44ed4697bfb8a2cc24626dd5_6ae82d7fd1d0.json",
+    "sha256": "e28f060697d2937ef96ca74b5e97f84932d391f0b5994fb8a3a528d1fa8531e6",
+    "bytes": 9698,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "437d1732bc7f4fd293d5969f10f8655c"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=437d1732bc7f4fd293d5969f10f8655c",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=437d1732bc7f4fd293d5969f10f8655c",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:05+08:00",
+    "file": "filing_documents_437d1732bc7f4fd293d5969f10f8655c_eb53af40000c.json",
+    "sha256": "2429466372f5f65f7156ed81e682423904352b5d83c3a7cce6f5cdee03d50d9e",
+    "bytes": 10540,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "21837"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21837",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21837",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:06+08:00",
+    "file": "filing_documents_21837_0cc43e0ad17a.json",
+    "sha256": "5aed2f060e63b0103e872420c381f77788d2432166d14fed9ab6a47a4512eeb2",
+    "bytes": 3673,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "41702"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=41702",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=41702",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:07+08:00",
+    "file": "filing_documents_41702_ca4dd80dcde1.json",
+    "sha256": "ff74dd7e89d0b8f8a3a07c31b15ca40a8046524df0db7aa4fd6910b22e12b830",
+    "bytes": 2979,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "b20df5ca80084efaad2e52f1d590dc21"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=b20df5ca80084efaad2e52f1d590dc21",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=b20df5ca80084efaad2e52f1d590dc21",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:08+08:00",
+    "file": "filing_documents_b20df5ca80084efaad2e52f1d590dc21_c67291d5b5c5.json",
+    "sha256": "8923d87c1aaa01121f706f62463d0ef782ec3bc47d2c4530c4e335092e0789fc",
+    "bytes": 3295,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "584b3368094645ea8c90eebb375c02df"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=584b3368094645ea8c90eebb375c02df",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=584b3368094645ea8c90eebb375c02df",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:09+08:00",
+    "file": "filing_documents_584b3368094645ea8c90eebb375c02df_549b98d14108.json",
+    "sha256": "315fff97789e03bc9cc03c758e2460ebfdceedef1f971840ce09c0fb7d2a2a6a",
+    "bytes": 9226,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "51470"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=51470",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=51470",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:10+08:00",
+    "file": "filing_documents_51470_04e57020fd28.json",
+    "sha256": "78fd35c7d2438ffc0594910bd8b32e6cd6d48f23eef73f5c28d6704a97b43bdd",
+    "bytes": 8868,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "51076"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=51076",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=51076",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:11+08:00",
+    "file": "filing_documents_51076_c70804ddaefc.json",
+    "sha256": "38a35deefbea0044839e40a38839ff45b205f4555728f678cf0553ebe0033fbf",
+    "bytes": 9016,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "e3fa97711afa4d9baddfb472c7282f85"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=e3fa97711afa4d9baddfb472c7282f85",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=e3fa97711afa4d9baddfb472c7282f85",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:12+08:00",
+    "file": "filing_documents_e3fa97711afa4d9baddfb472c7282f85_353d07df1e62.json",
+    "sha256": "156596abd81272ae47aef297e2760245855560bb449f3bee6e2c0152515488cc",
+    "bytes": 11926,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "3dfc6f28af2e4c31b1a2e267ca5e0ce7"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=3dfc6f28af2e4c31b1a2e267ca5e0ce7",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=3dfc6f28af2e4c31b1a2e267ca5e0ce7",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:13+08:00",
+    "file": "filing_documents_3dfc6f28af2e4c31b1a2e267ca5e0ce7_166085dfac3d.json",
+    "sha256": "21858facb5f77d6adbdf9747f60d20b929eb776baa3d087bb2d42164bf031013",
+    "bytes": 10478,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "b5e45b19fd044a1ea49847f6dbd5ea0c"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=b5e45b19fd044a1ea49847f6dbd5ea0c",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=b5e45b19fd044a1ea49847f6dbd5ea0c",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:14+08:00",
+    "file": "filing_documents_b5e45b19fd044a1ea49847f6dbd5ea0c_f73d3bb86da4.json",
+    "sha256": "e9b7a5d47b385d508d1b22e99323b3b02cc9cba4927af6e6b165cb47e70d5f63",
+    "bytes": 10806,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "43246"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=43246",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=43246",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:15+08:00",
+    "file": "filing_documents_43246_7984a9d4556f.json",
+    "sha256": "97d8c91b314125056872350388e24d5bb8c82b8cf69623684c47824376ab4c1c",
+    "bytes": 9126,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "ea0d40078cc147768bdd9741b498f6ea"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=ea0d40078cc147768bdd9741b498f6ea",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=ea0d40078cc147768bdd9741b498f6ea",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:16+08:00",
+    "file": "filing_documents_ea0d40078cc147768bdd9741b498f6ea_f85559114d95.json",
+    "sha256": "c4695c6a34c82ab2f58b6d88cb4aa088a67e8b5dc13325a4c27f98c3266e810e",
+    "bytes": 7850,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "53112"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=53112",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=53112",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:17+08:00",
+    "file": "filing_documents_53112_2e5d0b95c28f.json",
+    "sha256": "8884c44fa28bcc40714965dad72e0e7300c6067af1fbeb3843f9c1ea69d191b9",
+    "bytes": 8208,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "a8de32e372144dbf96afee47f278bb2f"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=a8de32e372144dbf96afee47f278bb2f",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=a8de32e372144dbf96afee47f278bb2f",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:18+08:00",
+    "file": "filing_documents_a8de32e372144dbf96afee47f278bb2f_d8c1197af293.json",
+    "sha256": "ac433d4341f3567199cc70758a9d3c7602ccf2c606db97709250b01069e79ff8",
+    "bytes": 8438,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "52344"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=52344",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=52344",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:19+08:00",
+    "file": "filing_documents_52344_0aa53ca44756.json",
+    "sha256": "12778af9d552523715b6fa6e03c887e7b9359c2d886ba95fc9947d9a6dcbc995",
+    "bytes": 9742,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "53773"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=53773",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=53773",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:20+08:00",
+    "file": "filing_documents_53773_e649fe4e5125.json",
+    "sha256": "5433eb152741f4c2b3ff3ceb3fb188f0f0b133c31c4e039be4ac8389fa7a660e",
+    "bytes": 8816,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "49865"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=49865",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=49865",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:21+08:00",
+    "file": "filing_documents_49865_7b7e1c98404e.json",
+    "sha256": "598d926e0481942492c720711d85c9960fe262fafa90b7690340782868fec5e0",
+    "bytes": 8444,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "50692"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=50692",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=50692",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:22+08:00",
+    "file": "filing_documents_50692_b98347651ba9.json",
+    "sha256": "c7dc6e0c961d61c370078e60d95f2c315d7d0ec8f3ee95b08d6b1666dc29f08c",
+    "bytes": 9316,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "45217"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=45217",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=45217",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:23+08:00",
+    "file": "filing_documents_45217_86b3e8eb79b8.json",
+    "sha256": "515c8d1e3662efb608c45dc1814bdf8a748315534a477035e9d51246c7d74242",
+    "bytes": 9140,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "53010"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=53010",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=53010",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:24+08:00",
+    "file": "filing_documents_53010_80eb592eded0.json",
+    "sha256": "f1deb2462dcafc742c822bf1ea8cc7d0bd9827151b80f8e5d86ef65a2552e0a3",
+    "bytes": 8890,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "41693"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=41693",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=41693",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:25+08:00",
+    "file": "filing_documents_41693_5eb70ebcf2eb.json",
+    "sha256": "182eac4f62a91d368f7b0033de41299035f8b858251207b0ec43a2546def5305",
+    "bytes": 8848,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "49835"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=49835",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=49835",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:26+08:00",
+    "file": "filing_documents_49835_f6d48a27ee33.json",
+    "sha256": "1ae0bcc94ae7512b0bbc9bff581512f560c3949a5c77587c1e1c936d79ed3a27",
+    "bytes": 8788,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "49603"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=49603",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=49603",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:27+08:00",
+    "file": "filing_documents_49603_634fc21d91d8.json",
+    "sha256": "914b05c5c46b18e814e2546b159855d53a5bb48042e4cdf85f81d5c5385c5338",
+    "bytes": 8756,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "49494"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=49494",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=49494",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:28+08:00",
+    "file": "filing_documents_49494_56f2bd8844a3.json",
+    "sha256": "39909e1b155866cb23c9b12882c43d2339f71ab8b34655f67d063ded434f0cd5",
+    "bytes": 8330,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "49646"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=49646",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=49646",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:29+08:00",
+    "file": "filing_documents_49646_423888ee3bc8.json",
+    "sha256": "815362b996088d64e73227c1f660df431658ed7eab497e30cd273d67fcd0ace5",
+    "bytes": 8978,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "42815"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=42815",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=42815",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:30+08:00",
+    "file": "filing_documents_42815_33f8f6bdc817.json",
+    "sha256": "4098d759e4a3920a613a5f66c5fa7fde217e30b719c8ad7b755e102446a6306f",
+    "bytes": 8296,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "45292"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=45292",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=45292",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:31+08:00",
+    "file": "filing_documents_45292_3f498ecf566a.json",
+    "sha256": "582e32aaab15bcae75ab9ba10220740d417834630afb491bd000c7e545b6b2bb",
+    "bytes": 7208,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "36118"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=36118",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=36118",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:32+08:00",
+    "file": "filing_documents_36118_5d7fed705ed4.json",
+    "sha256": "10fd137f081039e6ebc24447de6659afcb04b732d24f669a3a0f63e65f087ee3",
+    "bytes": 8730,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "41680"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=41680",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=41680",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:33+08:00",
+    "file": "filing_documents_41680_a15fa1fc9ee4.json",
+    "sha256": "5dead64f9f7f1dfa453c791ed51a407c9f1e6b3d5956a206454961ec579806a5",
+    "bytes": 8796,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "35699"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=35699",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=35699",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:34+08:00",
+    "file": "filing_documents_35699_37e2fa371ec5.json",
+    "sha256": "aadc5f20cea32a0e20a8ce7e7826c29a85cf24a3038c25001dac980706715a9f",
+    "bytes": 8838,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "34944"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=34944",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=34944",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:35+08:00",
+    "file": "filing_documents_34944_a30c1c9486ef.json",
+    "sha256": "d08232e455f25ac7c7b280d6983c606563234d7a1d5b6cdc065a9d7e0008a2de",
+    "bytes": 9188,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "40701"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=40701",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=40701",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:36+08:00",
+    "file": "filing_documents_40701_6e862215f3b1.json",
+    "sha256": "e2d2b65c70191aace75f9331d5f53af1c87c66da3d9b06060db725ca7e53ef0b",
+    "bytes": 8822,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "37877"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=37877",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=37877",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:37+08:00",
+    "file": "filing_documents_37877_e75c0562ecd9.json",
+    "sha256": "7a0d7d8f0248f2eb61e371c32d550a2dfeee4ff088bb4a4760855a8e8cca8fd4",
+    "bytes": 8508,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "37050"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=37050",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=37050",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:38+08:00",
+    "file": "filing_documents_37050_d2d6cd00db46.json",
+    "sha256": "413ea2132a1c60f8bed29d84794e901bd251e18e8eb6524fcd239ce25e4645ae",
+    "bytes": 8202,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "38352"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=38352",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=38352",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:39+08:00",
+    "file": "filing_documents_38352_3af6886d518a.json",
+    "sha256": "2a2ea9cc2f7c7e5b7c1ca0cce28f91cefe9ebfd193ce0198efa480e4ed46c52f",
+    "bytes": 7462,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "29078"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=29078",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=29078",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:40+08:00",
+    "file": "filing_documents_29078_c23da76ef747.json",
+    "sha256": "553c3164c8df30b58a24794723afb74e2a4815779690fab22f8891848be17f96",
+    "bytes": 9116,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "34403"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=34403",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=34403",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:41+08:00",
+    "file": "filing_documents_34403_a227fc601734.json",
+    "sha256": "6d5c249c6b5663ee0ca6bbc9a78c18ed97a611bace356928027692c3ab2cadce",
+    "bytes": 7372,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "36405"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=36405",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=36405",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:42+08:00",
+    "file": "filing_documents_36405_b3665d8c5e63.json",
+    "sha256": "8e0ddc4741115597fceeb59f7ed2af74ea3aae4b7ebc66128a47425a181c9a78",
+    "bytes": 9032,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "33670"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=33670",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=33670",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:43+08:00",
+    "file": "filing_documents_33670_a8de4f867bbd.json",
+    "sha256": "0ba441178f495d0faf1b1ac95a830773e98fc7f7d1655b4fb6a009d8c78d1348",
+    "bytes": 8778,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "36009"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=36009",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=36009",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:44+08:00",
+    "file": "filing_documents_36009_5c46b6ec337f.json",
+    "sha256": "5976dfd016379277b85cfd15124b93deb877c19e4d2e86d80a568c806f3ecc5c",
+    "bytes": 8350,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "35723"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=35723",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=35723",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:45+08:00",
+    "file": "filing_documents_35723_76663b85debb.json",
+    "sha256": "879274cd9a39beea95b6a6a2eda3d67a46311ec39a6b7efafee1d9042b810114",
+    "bytes": 7536,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "36024"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=36024",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=36024",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:47+08:00",
+    "file": "filing_documents_36024_a759b6c31af3.json",
+    "sha256": "df9f0133ed3ac4e2d0d7148382103974a682694e3a37cd65885fa5606893a4f3",
+    "bytes": 9158,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "22897"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=22897",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=22897",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:47+08:00",
+    "file": "filing_documents_22897_edaba1043ea0.json",
+    "sha256": "8832daafe79116dcc4db40010ae42c7ed326630b0ea8ebc19dea0e8e6aac04a3",
+    "bytes": 8808,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "22255"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=22255",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=22255",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:49+08:00",
+    "file": "filing_documents_22255_07e2d7227d6b.json",
+    "sha256": "4f46100d6ffc232911ebd2d8d2e1c6792a1d091e49d76d53ea8d8fb1b101e8b8",
+    "bytes": 8624,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "21625"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21625",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21625",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:49+08:00",
+    "file": "filing_documents_21625_4a1648470818.json",
+    "sha256": "02b2d87cffc83f31c0c35d0200ae7ec74904659a173d82d16320ff41d6c418d4",
+    "bytes": 9056,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "21839"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21839",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21839",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:50+08:00",
+    "file": "filing_documents_21839_c15d03d6de4e.json",
+    "sha256": "47a47dabcd728721a6927c60a487ce2a5c8f2ad378f9be7eb3d9e02e118565e9",
+    "bytes": 8322,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "22908"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=22908",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=22908",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:51+08:00",
+    "file": "filing_documents_22908_05ac02ad4321.json",
+    "sha256": "cc6b511bc39426cea1a5fd39d33483f600bccbd6071bce23b814d0ca3232de80",
+    "bytes": 8692,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "22863"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=22863",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=22863",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:53+08:00",
+    "file": "filing_documents_22863_c3ffa9d0f8d1.json",
+    "sha256": "4183546ce7cec59bbff6470c4da075e66884b1d1e751c4a1436834584df33f70",
+    "bytes": 8258,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "22546"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=22546",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=22546",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:53+08:00",
+    "file": "filing_documents_22546_28ea9d79575d.json",
+    "sha256": "7ecd19b5129a2b7a81603d7c357c11b4a32004a227b49efd4f5cc4e68ba6e291",
+    "bytes": 4709,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "21754"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21754",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21754",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:54+08:00",
+    "file": "filing_documents_21754_6d4c97246be2.json",
+    "sha256": "ef929b5694bd908dcc9808ec8e4405f8339791fb482684a91cfe4f262b46dff9",
+    "bytes": 8614,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "21525"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21525",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21525",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:55+08:00",
+    "file": "filing_documents_21525_1abd6f8320bd.json",
+    "sha256": "18f3316f88ad7b95228dbdabeb18f1e22d1d1ceca9208134fd3067e60ffec446",
+    "bytes": 8692,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "20413"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=20413",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=20413",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:56+08:00",
+    "file": "filing_documents_20413_97b46fbc432d.json",
+    "sha256": "2d973342974f524304206d669981f8defa3aea4341c6de578fa52ba52d3bbf55",
+    "bytes": 8958,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "21292"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21292",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=21292",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:57+08:00",
+    "file": "filing_documents_21292_d00f713736f3.json",
+    "sha256": "3398938c626955bf6c3bc7bb13841f4f1e5903bbdbd5f264f29cbae9e91068b4",
+    "bytes": 9032,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "18458"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=18458",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=18458",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:34:59+08:00",
+    "file": "filing_documents_18458_d0f0480ce28b.json",
+    "sha256": "f97afe5ee48975543814fddb08873bdd67a13eaf80df6f97139ee2c9e311eb3f",
+    "bytes": 9054,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "20763"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=20763",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=20763",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:35:00+08:00",
+    "file": "filing_documents_20763_7efb6f816dce.json",
+    "sha256": "3e5cbfa48a676ec804696acb048112b87cbed55608ddb8d2dce3ee8f002955aa",
+    "bytes": 5009,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "20516"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=20516",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=20516",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:35:01+08:00",
+    "file": "filing_documents_20516_983bb9e4bac6.json",
+    "sha256": "e095d53235a140126ea83fd1dfb7f667ac4ada73512263ee12ee6e9821e87e40",
+    "bytes": 6684,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "16964"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16964",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16964",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:35:01+08:00",
+    "file": "filing_documents_16964_faaba25d3a12.json",
+    "sha256": "ad9526fd6c91888642dc3b8ebca2f2df4a22d5e237122367ba6c1eab297c4a43",
+    "bytes": 7634,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "18740"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=18740",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=18740",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:35:02+08:00",
+    "file": "filing_documents_18740_6336a2357ef8.json",
+    "sha256": "f09d2e986b8108f59bd7b724401ce3911d701d6d7ee2826802aeac7aecad2786",
+    "bytes": 7736,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "18465"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=18465",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=18465",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:35:03+08:00",
+    "file": "filing_documents_18465_a646ddfa6442.json",
+    "sha256": "901a3a0d44aa056468a8ec18ead6b36960858c7c3f7e9a237de6afe1172bd067",
+    "bytes": 2213,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "16943"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16943",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16943",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:35:04+08:00",
+    "file": "filing_documents_16943_1a15a8714ccd.json",
+    "sha256": "0264b5b91e855b369e2ae0296b532372896a5323b9bbe84746a09320e61d0983",
+    "bytes": 2639,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "16989"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16989",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16989",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:35:05+08:00",
+    "file": "filing_documents_16989_7e98c24ffd94.json",
+    "sha256": "a586d524afe1d21115acdfda43de0aaba4c53cacaff41f8fc278e6aed0a073fc",
+    "bytes": 2691,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "16980"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16980",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16980",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:35:06+08:00",
+    "file": "filing_documents_16980_f058e1de2279.json",
+    "sha256": "e75509fda975fa3afc6e1230da00f6b0f7576054c56dcaf2607d8097fe11f7d1",
+    "bytes": 2683,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "16983"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16983",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16983",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:35:07+08:00",
+    "file": "filing_documents_16983_717c5997c0e9.json",
+    "sha256": "fda30c2f0f85c692c50636aa4bc77a554536a27a6b2294975e37d8ea11f67d87",
+    "bytes": 2655,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  },
+  {
+    "url": "https://query.sse.com.cn/commonSoaQuery.do",
+    "params": {
+      "sqlId": "ZQ_GGJG",
+      "isPagination": "false",
+      "audit_id": "16990"
+    },
+    "request_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16990",
+    "response_url": "https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_GGJG&isPagination=false&audit_id=16990",
+    "referer": "https://www.sse.com.cn/reits/home/",
+    "retrieved_at": "2026-10-26T07:35:08+08:00",
+    "file": "filing_documents_16990_113a91fa11ea.json",
+    "sha256": "315297818cd0d2241819b2f42d13c898b6fe324b5848e91c680cf1956b1b3425",
+    "bytes": 2409,
+    "content_type": "application/json;charset=UTF-8",
+    "status": "ok"
+  }
+]
