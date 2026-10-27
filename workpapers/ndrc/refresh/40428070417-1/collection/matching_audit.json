@@ -1,0 +1,761 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-27T08:51:13+08:00",
+  "input_recommendations_sha256": "3b4aa01563e5fb5a641819f2ccbfc2f31545c93284fe327cbdd9d7a7a7c5f408",
+  "input_public_snapshot_sha256": "6eeedb2a8638630d91fc5c63ee70c325b2ee6d2fbc934720e0051597758653bf",
+  "review_config_sha256": "c96f88549100f72e661219eae7b4a632e8667f9616dae603660ecdedfd466af9",
+  "extra_events_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "recommendation_count": 137,
+  "unique_recommendation_count": 137,
+  "exchange_event_count": 160,
+  "exchange_business_types": {
+    "首发": 144,
+    "扩募": 16
+  },
+  "match_status_counts": {
+    "confirmed": 128,
+    "unmatched": 9
+  },
+  "review_status_counts": {
+    "reviewed": 137
+  },
+  "confirmed_relation_count": 128,
+  "confirmation_basis_counts": {
+    "official_document_asset_and_batch_review": 15,
+    "official_project_identity_review": 111,
+    "user_confirmed_association": 2
+  },
+  "confirmed_exchange_event_count": 128,
+  "chronology_exceptions": [
+    {
+      "recommendation_id": "NDRC_bf7a8a0c621b7578ba00",
+      "exchange_event_id": "SSE_9709dd8e44ed4697bfb8a2cc24626dd5",
+      "event_name": "中金厦门安居保障性租赁住房封闭式基础设施证券投资基金",
+      "exchange": "上交所",
+      "fund_id": "SSE_FUND_508058",
+      "fund_name": "中金厦门安居保障性租赁住房封闭式基础设施证券投资基金",
+      "fund_code": "508058",
+      "business_type": "扩募",
+      "accepted_date": "2025-05-09",
+      "current_stage": "已完成",
+      "official_status": "注册生效",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=9709dd8e44ed4697bfb8a2cc24626dd5",
+      "evidence_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=9709dd8e44ed4697bfb8a2cc24626dd5",
+        "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202504/9709dd_20250428_XMTV.pdf"
+      ],
+      "evidence": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "title": "国家发展改革委推荐项目名单",
+          "asset_anchor": "厦门安居租赁住房思明区林边公寓等新购入项目",
+          "note": "推荐日期2025-12-17，主申报地方或中央企业厦门市。"
+        },
+        {
+          "url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=9709dd8e44ed4697bfb8a2cc24626dd5",
+          "title": "交易所具体申报项目信息",
+          "note": "申报业务为扩募，官方受理日期2025-05-09。"
+        },
+        {
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202504/9709dd_20250428_XMTV.pdf",
+          "title": "1-4-1 中金厦门安居保障性租赁住房封闭式基础设施证券投资基金2025年度第一次扩募并新购入基础设施项目招募说明书（草案）.pdf",
+          "page": 177,
+          "asset_anchor": "林边",
+          "note": "官方文件列示本次申报相关的项目主体或基础设施资产。"
+        }
+      ],
+      "method": "official_document_asset_and_batch_review",
+      "note": "官方扩募文件第177页列示“林边”相关主体或资产；已核对推荐项目主体、资产类别与该次申报批次。",
+      "days_to_acceptance": null,
+      "chronology_status": "acceptance_precedes_recommendation",
+      "chronology_note": "推荐名单日期为2025-12-17，交易所列表受理日期为2025-05-09。资产及申报批次已核对，日期先后原因未见官方说明；不计入推荐至受理提前量。",
+      "reviewed_at": "2026-10-16T10:58:50+08:00"
+    },
+    {
+      "recommendation_id": "NDRC_c4e11e81e63cee2f9778",
+      "exchange_event_id": "SSE_51470",
+      "event_name": "华夏基金华润有巢租赁住房封闭式基础设施证券投资基金",
+      "exchange": "上交所",
+      "fund_id": "SSE_FUND_508077",
+      "fund_name": "华夏基金华润有巢租赁住房封闭式基础设施证券投资基金",
+      "fund_code": "508077",
+      "business_type": "扩募",
+      "accepted_date": "2024-11-11",
+      "current_stage": "已完成",
+      "official_status": "注册生效",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=51470",
+      "evidence_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=51470",
+        "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202411/051470_20241111_LK7S.pdf"
+      ],
+      "evidence": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "title": "国家发展改革委推荐项目名单",
+          "asset_anchor": "华润有巢租赁住房有巢马桥新购入项目",
+          "note": "推荐日期2025-09-14，主申报地方或中央企业上海市。"
+        },
+        {
+          "url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=51470",
+          "title": "交易所具体申报项目信息",
+          "note": "申报业务为扩募，官方受理日期2024-11-11。"
+        },
+        {
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202411/051470_20241111_LK7S.pdf",
+          "title": "5-1 华夏基金华润有巢租赁住房封闭式基础设施证券投资基金2024年度第一次扩募并新购入基础设施项目招募说明书（草案）.pdf",
+          "page": 10,
+          "asset_anchor": "马桥",
+          "note": "官方文件列示本次申报相关的项目主体或基础设施资产。"
+        }
+      ],
+      "method": "official_document_asset_and_batch_review",
+      "note": "官方扩募文件第10页列示“马桥”相关主体或资产；已核对推荐项目主体、资产类别与该次申报批次。",
+      "days_to_acceptance": null,
+      "chronology_status": "acceptance_precedes_recommendation",
+      "chronology_note": "推荐名单日期为2025-09-14，交易所列表受理日期为2024-11-11。资产及申报批次已核对，日期先后原因未见官方说明；不计入推荐至受理提前量。",
+      "reviewed_at": "2026-10-16T10:58:50+08:00"
+    },
+    {
+      "recommendation_id": "NDRC_7a4240f3c3d7e91f848e",
+      "exchange_event_id": "SSE_e3fa97711afa4d9baddfb472c7282f85",
+      "event_name": "国泰君安东久新经济产业园封闭式基础设施证券投资基金",
+      "exchange": "上交所",
+      "fund_id": "SSE_FUND_508088",
+      "fund_name": "国泰海通东久新经济产业园封闭式基础设施证券投资基金",
+      "fund_code": "508088",
+      "business_type": "扩募",
+      "accepted_date": "2025-03-31",
+      "current_stage": "已完成",
+      "official_status": "注册生效",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=e3fa97711afa4d9baddfb472c7282f85",
+      "evidence_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=e3fa97711afa4d9baddfb472c7282f85",
+        "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202503/e3fa97_20250327_8E8F.pdf"
+      ],
+      "evidence": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "title": "国家发展改革委推荐项目名单",
+          "asset_anchor": "东久新经济产业园南通智造园及重庆智造园一期新购入项目",
+          "note": "推荐日期2025-07-25，主申报地方或中央企业重庆市。"
+        },
+        {
+          "url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=e3fa97711afa4d9baddfb472c7282f85",
+          "title": "交易所具体申报项目信息",
+          "note": "申报业务为扩募，官方受理日期2025-03-31。"
+        },
+        {
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202503/e3fa97_20250327_8E8F.pdf",
+          "title": "1-4-1 国泰君安东久新经济产业园封闭式基础设施证券投资基金2025年度第一次扩募并新购入基础设施项目招募说明书（草案）.pdf",
+          "page": 20,
+          "asset_anchor": "南通",
+          "note": "官方文件列示本次申报相关的项目主体或基础设施资产。"
+        }
+      ],
+      "method": "official_document_asset_and_batch_review",
+      "note": "官方扩募文件第20页列示“南通”相关主体或资产；已核对推荐项目主体、资产类别与该次申报批次。",
+      "days_to_acceptance": null,
+      "chronology_status": "acceptance_precedes_recommendation",
+      "chronology_note": "推荐名单日期为2025-07-25，交易所列表受理日期为2025-03-31。资产及申报批次已核对，日期先后原因未见官方说明；不计入推荐至受理提前量。",
+      "reviewed_at": "2026-10-16T10:58:50+08:00"
+    },
+    {
+      "recommendation_id": "NDRC_494cc8475a87a2d09dbd",
+      "exchange_event_id": "SSE_43246",
+      "event_name": "中航京能光伏封闭式基础设施证券投资基金",
+      "exchange": "上交所",
+      "fund_id": "SSE_FUND_508096",
+      "fund_name": "中航京能国际能源封闭式基础设施证券投资基金",
+      "fund_code": "508096",
+      "business_type": "扩募",
+      "accepted_date": "2024-04-01",
+      "current_stage": "已完成",
+      "official_status": "注册生效",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=43246",
+      "evidence_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=43246",
+        "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202404/043246_20240401_PG9C.pdf"
+      ],
+      "evidence": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "title": "国家发展改革委推荐项目名单",
+          "asset_anchor": "京能光伏保山苏家河口水电站等新购入项目",
+          "note": "推荐日期2025-06-16，主申报地方或中央企业云南省。"
+        },
+        {
+          "url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=43246",
+          "title": "交易所具体申报项目信息",
+          "note": "申报业务为扩募，官方受理日期2024-04-01。"
+        },
+        {
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202404/043246_20240401_PG9C.pdf",
+          "title": "4-1 中航京能光伏封闭式基础设施证券投资基金2024年度第一次扩募并新购入基础设施项目招募说明书（草案）.pdf",
+          "page": 36,
+          "asset_anchor": "保山",
+          "note": "官方文件列示本次申报相关的项目主体或基础设施资产。"
+        }
+      ],
+      "method": "official_document_asset_and_batch_review",
+      "note": "官方扩募文件第36页列示“保山”相关主体或资产；已核对推荐项目主体、资产类别与该次申报批次。",
+      "days_to_acceptance": null,
+      "chronology_status": "acceptance_precedes_recommendation",
+      "chronology_note": "推荐名单日期为2025-06-16，交易所列表受理日期为2024-04-01。资产及申报批次已核对，日期先后原因未见官方说明；不计入推荐至受理提前量。",
+      "reviewed_at": "2026-10-16T10:58:50+08:00"
+    },
+    {
+      "recommendation_id": "NDRC_1d704a91111ced51e624",
+      "exchange_event_id": "SSE_52344",
+      "event_name": "国泰君安临港创新智造产业园封闭式基础设施证券投资基金",
+      "exchange": "上交所",
+      "fund_id": "SSE_FUND_508021",
+      "fund_name": "国泰海通临港创新智造产业园封闭式基础设施证券投资基金",
+      "fund_code": "508021",
+      "business_type": "扩募",
+      "accepted_date": "2024-11-19",
+      "current_stage": "已完成",
+      "official_status": "注册生效",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=52344",
+      "evidence_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=52344",
+        "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202411/052344_20241119_HTAW.pdf"
+      ],
+      "evidence": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "title": "国家发展改革委推荐项目名单",
+          "asset_anchor": "临港创新产业园漕河泾科技绿洲康桥园区新购入项目",
+          "note": "推荐日期2025-03-26，主申报地方或中央企业上海市。"
+        },
+        {
+          "url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=52344",
+          "title": "交易所具体申报项目信息",
+          "note": "申报业务为扩募，官方受理日期2024-11-19。"
+        },
+        {
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202411/052344_20241119_HTAW.pdf",
+          "title": "4-1 国泰君安临港创新智造产业园封闭式基础设施证券投资基金2024年度第一次扩募并新购入基础设施项目招募说明书（草案）.pdf",
+          "page": 7,
+          "asset_anchor": "康桥",
+          "note": "官方文件列示本次申报相关的项目主体或基础设施资产。"
+        }
+      ],
+      "method": "official_document_asset_and_batch_review",
+      "note": "官方扩募文件第7页列示“康桥”相关主体或资产；已核对推荐项目主体、资产类别与该次申报批次。",
+      "days_to_acceptance": null,
+      "chronology_status": "acceptance_precedes_recommendation",
+      "chronology_note": "推荐名单日期为2025-03-26，交易所列表受理日期为2024-11-19。资产及申报批次已核对，日期先后原因未见官方说明；不计入推荐至受理提前量。",
+      "reviewed_at": "2026-10-16T10:58:50+08:00"
+    },
+    {
+      "recommendation_id": "NDRC_0f785eccb0ee381c025b",
+      "exchange_event_id": "SSE_45217",
+      "event_name": "华夏北京保障房中心租赁住房封闭式基础设施证券投资基金",
+      "exchange": "上交所",
+      "fund_id": "SSE_FUND_508068",
+      "fund_name": "华夏北京保障房中心租赁住房封闭式基础设施证券投资基金",
+      "fund_code": "508068",
+      "business_type": "扩募",
+      "accepted_date": "2024-09-24",
+      "current_stage": "已完成",
+      "official_status": "注册生效",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=45217",
+      "evidence_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=45217",
+        "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202409/045217_20240924_R6CP.pdf"
+      ],
+      "evidence": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "title": "国家发展改革委推荐项目名单",
+          "asset_anchor": "北京保障房中心租赁住房朗悦嘉园等新购入项目",
+          "note": "推荐日期2025-01-20，主申报地方或中央企业北京市。"
+        },
+        {
+          "url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=45217",
+          "title": "交易所具体申报项目信息",
+          "note": "申报业务为扩募，官方受理日期2024-09-24。"
+        },
+        {
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202409/045217_20240924_R6CP.pdf",
+          "title": "4-1 华夏北京保障房中心租赁住房封闭式基础设施证券投资基金2024年度第一次扩募并新购入基础设施项目招募说明书（草案）.pdf",
+          "page": 117,
+          "asset_anchor": "朗悦",
+          "note": "官方文件列示本次申报相关的项目主体或基础设施资产。"
+        }
+      ],
+      "method": "official_document_asset_and_batch_review",
+      "note": "官方扩募文件第117页列示“朗悦”相关主体或资产；已核对推荐项目主体、资产类别与该次申报批次。",
+      "days_to_acceptance": null,
+      "chronology_status": "acceptance_precedes_recommendation",
+      "chronology_note": "推荐名单日期为2025-01-20，交易所列表受理日期为2024-09-24。资产及申报批次已核对，日期先后原因未见官方说明；不计入推荐至受理提前量。",
+      "reviewed_at": "2026-10-16T10:58:50+08:00"
+    },
+    {
+      "recommendation_id": "NDRC_ed0564c2adeec02522a1",
+      "exchange_event_id": "SSE_35723",
+      "event_name": "华夏金茂购物中心封闭式基础设施证券投资基金",
+      "exchange": "上交所",
+      "fund_id": "SSE_FUND_508017",
+      "fund_name": "华夏金茂消费封闭式基础设施证券投资基金",
+      "fund_code": "508017",
+      "business_type": "首发",
+      "accepted_date": "2023-10-26",
+      "current_stage": "已上市",
+      "official_status": "注册生效",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=35723",
+      "evidence_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=35723",
+        "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202310/035723_20231026_AMIX.pdf"
+      ],
+      "evidence": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "title": "国家发展改革委推荐项目名单",
+          "asset_anchor": "金茂消费基础设施项目",
+          "note": "推荐日期2023-11-09，主申报地方或中央企业湖南省。"
+        },
+        {
+          "url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=35723",
+          "title": "交易所具体申报项目信息",
+          "note": "申报业务为首发，官方受理日期2023-10-26。"
+        },
+        {
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202310/035723_20231026_AMIX.pdf",
+          "title": "4-1 华夏金茂购物中心封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+          "page": 26,
+          "asset_anchor": "览秀",
+          "note": "官方文件列示本次申报相关的项目主体或基础设施资产。"
+        }
+      ],
+      "method": "official_project_identity_review",
+      "note": "官方首发文件第26页列示“览秀”相关主体或资产；已核对推荐项目主体、资产类别与该次申报批次。",
+      "days_to_acceptance": null,
+      "chronology_status": "acceptance_precedes_recommendation",
+      "chronology_note": "推荐名单日期为2023-11-09，交易所列表受理日期为2023-10-26。资产及申报批次已核对，日期先后原因未见官方说明；不计入推荐至受理提前量。",
+      "reviewed_at": "2026-10-16T10:58:50+08:00"
+    },
+    {
+      "recommendation_id": "NDRC_48edd723d5309e9897bb",
+      "exchange_event_id": "SZSE_5000024",
+      "event_name": "华夏华润商业资产封闭式基础设施证券投资基金",
+      "exchange": "深交所",
+      "fund_id": "SZSE_FUND_180601",
+      "fund_name": "华夏华润商业资产封闭式基础设施证券投资基金",
+      "fund_code": "180601",
+      "business_type": "首发",
+      "accepted_date": "2023-10-26",
+      "current_stage": "已上市",
+      "official_status": "注册生效",
+      "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000024",
+      "evidence_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000024",
+        "https://disc.static.szse.cn/download/disc/disk03/finalpage/2024-01-19/c46a834c-fcb6-44b8-a1bb-342e48aa1a36.PDF"
+      ],
+      "evidence": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "title": "国家发展改革委推荐项目名单",
+          "asset_anchor": "华润消费基础设施项目",
+          "note": "推荐日期2023-11-09，主申报地方或中央企业青岛市。"
+        },
+        {
+          "url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000024",
+          "title": "交易所具体申报项目信息",
+          "note": "申报业务为首发，官方受理日期2023-10-26。"
+        },
+        {
+          "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2024-01-19/c46a834c-fcb6-44b8-a1bb-342e48aa1a36.PDF",
+          "title": "华夏华润商业REIT：华夏华润商业资产封闭式基础设施证券投资基金招募说明书",
+          "page": 182,
+          "asset_anchor": "青岛",
+          "note": "官方文件列示本次申报相关的项目主体或基础设施资产。"
+        }
+      ],
+      "method": "official_project_identity_review",
+      "note": "官方首发文件第182页列示“青岛”相关主体或资产；已核对推荐项目主体、资产类别与该次申报批次。",
+      "days_to_acceptance": null,
+      "chronology_status": "acceptance_precedes_recommendation",
+      "chronology_note": "推荐名单日期为2023-11-09，交易所列表受理日期为2023-10-26。资产及申报批次已核对，日期先后原因未见官方说明；不计入推荐至受理提前量。",
+      "reviewed_at": "2026-10-16T10:58:50+08:00"
+    },
+    {
+      "recommendation_id": "NDRC_18d17ca14a17679e2539",
+      "exchange_event_id": "SSE_36009",
+      "event_name": "嘉实物美消费封闭式基础设施证券投资基金",
+      "exchange": "上交所",
+      "fund_id": "SSE_FUND_508011",
+      "fund_name": "嘉实物美消费封闭式基础设施证券投资基金",
+      "fund_code": "508011",
+      "business_type": "首发",
+      "accepted_date": "2023-10-26",
+      "current_stage": "已上市",
+      "official_status": "注册生效",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=36009",
+      "evidence_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=36009",
+        "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202310/036009_20231026_6K1Y.pdf"
+      ],
+      "evidence": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "title": "国家发展改革委推荐项目名单",
+          "asset_anchor": "物美消费基础设施项目",
+          "note": "推荐日期2023-11-09，主申报地方或中央企业北京市。"
+        },
+        {
+          "url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=36009",
+          "title": "交易所具体申报项目信息",
+          "note": "申报业务为首发，官方受理日期2023-10-26。"
+        },
+        {
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202310/036009_20231026_6K1Y.pdf",
+          "title": "4-1 嘉实物美消费封闭式基础设施证券投资基金招募说明书草案.pdf",
+          "page": 10,
+          "asset_anchor": "物美",
+          "note": "官方文件列示本次申报相关的项目主体或基础设施资产。"
+        }
+      ],
+      "method": "official_project_identity_review",
+      "note": "官方首发文件第10页列示“物美”相关主体或资产；已核对推荐项目主体、资产类别与该次申报批次。",
+      "days_to_acceptance": null,
+      "chronology_status": "acceptance_precedes_recommendation",
+      "chronology_note": "推荐名单日期为2023-11-09，交易所列表受理日期为2023-10-26。资产及申报批次已核对，日期先后原因未见官方说明；不计入推荐至受理提前量。",
+      "reviewed_at": "2026-10-16T10:58:50+08:00"
+    },
+    {
+      "recommendation_id": "NDRC_0982a3c318dccdd99706",
+      "exchange_event_id": "SZSE_5000026",
+      "event_name": "中金印力消费基础设施封闭式基础设施证券投资基金",
+      "exchange": "深交所",
+      "fund_id": "SZSE_FUND_180602",
+      "fund_name": "中金印力消费基础设施封闭式基础设施证券投资基金",
+      "fund_code": "180602",
+      "business_type": "首发",
+      "accepted_date": "2023-10-26",
+      "current_stage": "已上市",
+      "official_status": "注册生效",
+      "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000026",
+      "evidence_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000026",
+        "https://disc.static.szse.cn/download/disc/disk03/finalpage/2024-03-20/7e339728-03a1-4635-b24a-05f48bd3a1fb.PDF"
+      ],
+      "evidence": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "title": "国家发展改革委推荐项目名单",
+          "asset_anchor": "印力消费基础设施项目",
+          "note": "推荐日期2023-11-09，主申报地方或中央企业浙江省。"
+        },
+        {
+          "url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000026",
+          "title": "交易所具体申报项目信息",
+          "note": "申报业务为首发，官方受理日期2023-10-26。"
+        },
+        {
+          "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2024-03-20/7e339728-03a1-4635-b24a-05f48bd3a1fb.PDF",
+          "title": "中金印力消费REIT：中金印力消费基础设施封闭式基础设施证券投资基金招募说明书",
+          "page": 29,
+          "asset_anchor": "印力",
+          "note": "官方文件列示本次申报相关的项目主体或基础设施资产。"
+        }
+      ],
+      "method": "official_project_identity_review",
+      "note": "官方首发文件第29页列示“印力”相关主体或资产；已核对推荐项目主体、资产类别与该次申报批次。",
+      "days_to_acceptance": null,
+      "chronology_status": "acceptance_precedes_recommendation",
+      "chronology_note": "推荐名单日期为2023-11-09，交易所列表受理日期为2023-10-26。资产及申报批次已核对，日期先后原因未见官方说明；不计入推荐至受理提前量。",
+      "reviewed_at": "2026-10-16T10:58:50+08:00"
+    },
+    {
+      "recommendation_id": "NDRC_fe5df17c40541daddfc8",
+      "exchange_event_id": "SZSE_5000019",
+      "event_name": "博时招商蛇口产业园封闭式基础设施证券投资基金",
+      "exchange": "深交所",
+      "fund_id": "SZSE_FUND_180101",
+      "fund_name": "博时招商蛇口产业园封闭式基础设施证券投资基金",
+      "fund_code": "180101",
+      "business_type": "扩募",
+      "accepted_date": "2022-09-29",
+      "current_stage": "已完成",
+      "official_status": "注册生效",
+      "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000019",
+      "evidence_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000019",
+        "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_AD88989CF6254089BFCC578D274999CB.pdf"
+      ],
+      "evidence": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "title": "国家发展改革委推荐项目名单",
+          "asset_anchor": "招商蛇口产业园光明科技园新购入项目",
+          "note": "推荐日期2023-03-09，主申报地方或中央企业深圳市。"
+        },
+        {
+          "url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000019",
+          "title": "交易所具体申报项目信息",
+          "note": "申报业务为扩募，官方受理日期2022-09-29。"
+        },
+        {
+          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_AD88989CF6254089BFCC578D274999CB.pdf",
+          "title": "1-4 博时招商蛇口产业园封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+          "page": 17,
+          "asset_anchor": "光明",
+          "note": "官方文件列示本次申报相关的项目主体或基础设施资产。"
+        }
+      ],
+      "method": "official_document_asset_and_batch_review",
+      "note": "官方扩募文件第17页列示“光明”相关主体或资产；已核对推荐项目主体、资产类别与该次申报批次。",
+      "days_to_acceptance": null,
+      "chronology_status": "acceptance_precedes_recommendation",
+      "chronology_note": "推荐名单日期为2023-03-09，交易所列表受理日期为2022-09-29。资产及申报批次已核对，日期先后原因未见官方说明；不计入推荐至受理提前量。",
+      "reviewed_at": "2026-10-16T10:58:50+08:00"
+    },
+    {
+      "recommendation_id": "NDRC_f3ecf8fe16c28a1c11fa",
+      "exchange_event_id": "SSE_21839",
+      "event_name": "华安张江光大园封闭式基础设施证券投资基金",
+      "exchange": "上交所",
+      "fund_id": "SSE_FUND_508000",
+      "fund_name": "华安张江产业园封闭式基础设施证券投资基金",
+      "fund_code": "508000",
+      "business_type": "扩募",
+      "accepted_date": "2022-09-29",
+      "current_stage": "已完成",
+      "official_status": "注册生效",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=21839",
+      "evidence_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=21839",
+        "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202209/021839_20220929_6QPG.pdf"
+      ],
+      "evidence": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "title": "国家发展改革委推荐项目名单",
+          "asset_anchor": "张江光大园张润大厦新购入项目",
+          "note": "推荐日期2023-03-09，主申报地方或中央企业上海市。"
+        },
+        {
+          "url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=21839",
+          "title": "交易所具体申报项目信息",
+          "note": "申报业务为扩募，官方受理日期2022-09-29。"
+        },
+        {
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202209/021839_20220929_6QPG.pdf",
+          "title": "4-1 华安张江光大园基金2022年度第一次扩募并新购入基础设施项目招募说明书（草案）.pdf",
+          "page": 15,
+          "asset_anchor": "张润",
+          "note": "官方文件列示本次申报相关的项目主体或基础设施资产。"
+        }
+      ],
+      "method": "official_document_asset_and_batch_review",
+      "note": "官方扩募文件第15页列示“张润”相关主体或资产；已核对推荐项目主体、资产类别与该次申报批次。",
+      "days_to_acceptance": null,
+      "chronology_status": "acceptance_precedes_recommendation",
+      "chronology_note": "推荐名单日期为2023-03-09，交易所列表受理日期为2022-09-29。资产及申报批次已核对，日期先后原因未见官方说明；不计入推荐至受理提前量。",
+      "reviewed_at": "2026-10-16T10:58:50+08:00"
+    },
+    {
+      "recommendation_id": "NDRC_80b95907de31fe4fdb3c",
+      "exchange_event_id": "SZSE_5000017",
+      "event_name": "红土创新盐田港仓储物流封闭式基础设施证券投资基金",
+      "exchange": "深交所",
+      "fund_id": "SZSE_FUND_180301",
+      "fund_name": "红土创新盐田港仓储物流封闭式基础设施证券投资基金",
+      "fund_code": "180301",
+      "business_type": "扩募",
+      "accepted_date": "2022-09-29",
+      "current_stage": "已完成",
+      "official_status": "注册生效",
+      "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000017",
+      "evidence_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000017",
+        "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EBBAB3E77A4947EE907913ECFA7D747D.pdf"
+      ],
+      "evidence": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "title": "国家发展改革委推荐项目名单",
+          "asset_anchor": "红土盐田港世纪物流园新购入项目",
+          "note": "推荐日期2023-03-09，主申报地方或中央企业深圳市。"
+        },
+        {
+          "url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000017",
+          "title": "交易所具体申报项目信息",
+          "note": "申报业务为扩募，官方受理日期2022-09-29。"
+        },
+        {
+          "url": "https://reportdocs.static.szse.cn/UpFiles/reitsinfodisc/REITS_EBBAB3E77A4947EE907913ECFA7D747D.pdf",
+          "title": "1-4 红土创新盐田港仓储物流封闭式基础设施证券投资基金2023年度扩募并新购入基础设施项目招募说明书（草案）.pdf",
+          "page": 17,
+          "asset_anchor": "世纪",
+          "note": "官方文件列示本次申报相关的项目主体或基础设施资产。"
+        }
+      ],
+      "method": "official_document_asset_and_batch_review",
+      "note": "官方扩募文件第17页列示“世纪”相关主体或资产；已核对推荐项目主体、资产类别与该次申报批次。",
+      "days_to_acceptance": null,
+      "chronology_status": "acceptance_precedes_recommendation",
+      "chronology_note": "推荐名单日期为2023-03-09，交易所列表受理日期为2022-09-29。资产及申报批次已核对，日期先后原因未见官方说明；不计入推荐至受理提前量。",
+      "reviewed_at": "2026-10-16T10:58:50+08:00"
+    },
+    {
+      "recommendation_id": "NDRC_2dedccc377bc0807a56f",
+      "exchange_event_id": "SSE_21625",
+      "event_name": "中金普洛斯仓储物流封闭式基础设施证券投资基金",
+      "exchange": "上交所",
+      "fund_id": "SSE_FUND_508056",
+      "fund_name": "中金普洛斯仓储物流封闭式基础设施证券投资基金",
+      "fund_code": "508056",
+      "business_type": "扩募",
+      "accepted_date": "2022-09-29",
+      "current_stage": "已完成",
+      "official_status": "注册生效",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=21625",
+      "evidence_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=21625",
+        "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202209/021625_20220929_CGVY.pdf"
+      ],
+      "evidence": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "title": "国家发展改革委推荐项目名单",
+          "asset_anchor": "普洛斯仓储物流园青岛前湾港国际物流园等新购入项目",
+          "note": "推荐日期2023-03-09，主申报地方或中央企业北京市。"
+        },
+        {
+          "url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=21625",
+          "title": "交易所具体申报项目信息",
+          "note": "申报业务为扩募，官方受理日期2022-09-29。"
+        },
+        {
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202209/021625_20220929_CGVY.pdf",
+          "title": "4-1 中金普洛斯仓储物流封闭式基础设施证券投资基金2022年度第一次扩募并新购入基础设施项目招募说明书（草案）.pdf",
+          "page": 26,
+          "asset_anchor": "前湾",
+          "note": "官方文件列示本次申报相关的项目主体或基础设施资产。"
+        }
+      ],
+      "method": "official_document_asset_and_batch_review",
+      "note": "官方扩募文件第26页列示“前湾”相关主体或资产；已核对推荐项目主体、资产类别与该次申报批次。",
+      "days_to_acceptance": null,
+      "chronology_status": "acceptance_precedes_recommendation",
+      "chronology_note": "推荐名单日期为2023-03-09，交易所列表受理日期为2022-09-29。资产及申报批次已核对，日期先后原因未见官方说明；不计入推荐至受理提前量。",
+      "reviewed_at": "2026-10-16T10:58:50+08:00"
+    },
+    {
+      "recommendation_id": "NDRC_f125072053ecfa730aab",
+      "exchange_event_id": "SSE_20763",
+      "event_name": "华夏北京保障房中心租赁住房封闭式基础设施证券投资基金",
+      "exchange": "上交所",
+      "fund_id": "SSE_FUND_508068",
+      "fund_name": "华夏北京保障房中心租赁住房封闭式基础设施证券投资基金",
+      "fund_code": "508068",
+      "business_type": "首发",
+      "accepted_date": "2022-07-29",
+      "current_stage": "已上市",
+      "official_status": "注册生效",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=20763",
+      "evidence_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=20763",
+        "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202207/020763_20220729_RVBV.pdf"
+      ],
+      "evidence": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "title": "国家发展改革委推荐项目名单",
+          "asset_anchor": "北京保障房中心租赁住房项目",
+          "note": "推荐日期2022-08-05，主申报地方或中央企业北京市。"
+        },
+        {
+          "url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=20763",
+          "title": "交易所具体申报项目信息",
+          "note": "申报业务为首发，官方受理日期2022-07-29。"
+        },
+        {
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202207/020763_20220729_RVBV.pdf",
+          "title": "4-1 华夏北京保障房中心租赁住房封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+          "page": 26,
+          "asset_anchor": "保障房",
+          "note": "官方文件列示本次申报相关的项目主体或基础设施资产。"
+        }
+      ],
+      "method": "official_project_identity_review",
+      "note": "官方首发文件第26页列示“保障房”相关主体或资产；已核对推荐项目主体、资产类别与该次申报批次。",
+      "days_to_acceptance": null,
+      "chronology_status": "acceptance_precedes_recommendation",
+      "chronology_note": "推荐名单日期为2022-08-05，交易所列表受理日期为2022-07-29。资产及申报批次已核对，日期先后原因未见官方说明；不计入推荐至受理提前量。",
+      "reviewed_at": "2026-10-16T10:58:50+08:00"
+    },
+    {
+      "recommendation_id": "NDRC_aae440b7e823290d6f76",
+      "exchange_event_id": "SSE_20516",
+      "event_name": "中金厦门安居保障性租赁住房封闭式基础设施证券投资基金",
+      "exchange": "上交所",
+      "fund_id": "SSE_FUND_508058",
+      "fund_name": "中金厦门安居保障性租赁住房封闭式基础设施证券投资基金",
+      "fund_code": "508058",
+      "business_type": "首发",
+      "accepted_date": "2022-05-30",
+      "current_stage": "已上市",
+      "official_status": "注册生效",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=20516",
+      "evidence_urls": [
+        "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=20516",
+        "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202205/020516_20220530_GIDE.pdf"
+      ],
+      "evidence": [
+        {
+          "url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+          "title": "国家发展改革委推荐项目名单",
+          "asset_anchor": "厦门安居集团保障性租赁住房项目",
+          "note": "推荐日期2022-06-17，主申报地方或中央企业厦门市。"
+        },
+        {
+          "url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=20516",
+          "title": "交易所具体申报项目信息",
+          "note": "申报业务为首发，官方受理日期2022-05-30。"
+        },
+        {
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202205/020516_20220530_GIDE.pdf",
+          "title": "4-1中金厦门安居保障性租赁住房封闭式基础设施证券投资基金招募说明书（草案）.pdf",
+          "page": 20,
+          "asset_anchor": "安居",
+          "note": "官方文件列示本次申报相关的项目主体或基础设施资产。"
+        }
+      ],
+      "method": "official_project_identity_review",
+      "note": "官方首发文件第20页列示“安居”相关主体或资产；已核对推荐项目主体、资产类别与该次申报批次。",
+      "days_to_acceptance": null,
+      "chronology_status": "acceptance_precedes_recommendation",
+      "chronology_note": "推荐名单日期为2022-06-17，交易所列表受理日期为2022-05-30。资产及申报批次已核对，日期先后原因未见官方说明；不计入推荐至受理提前量。",
+      "reviewed_at": "2026-10-16T10:58:50+08:00"
+    }
+  ],
+  "unused_review_ids": [],
+  "checks": {
+    "unique_recommendation_ids": true,
+    "exact_reviewed_recommendation_identity": true,
+    "official_asset_sources_for_every_relation": true,
+    "explicit_provenance_for_user_confirmations": true,
+    "separate_initial_expansion_acquisition": true,
+    "negative_intervals_excluded_from_lead_time": true
+  },
+  "definition": "推荐记录与交易所具体申报事件多对多关联；名称相似仅生成候选；新购入单独保留；提前量只计算非负的推荐日至正式受理日间隔。"
+}

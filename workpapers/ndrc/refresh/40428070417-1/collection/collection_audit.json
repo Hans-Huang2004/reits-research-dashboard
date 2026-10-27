@@ -1,0 +1,146 @@
+{
+  "generated_at": "2026-10-27T08:51:13+08:00",
+  "source_collected_at": "2026-10-27T08:51:10+08:00",
+  "coverage": {
+    "official_total": 137,
+    "pages": 3,
+    "page_size": 50,
+    "raw_row_count": 137,
+    "complete": true,
+    "pages_checked": [
+      {
+        "page_num": 1,
+        "row_count": 50
+      },
+      {
+        "page_num": 2,
+        "row_count": 50
+      },
+      {
+        "page_num": 3,
+        "row_count": 37
+      }
+    ],
+    "item_count": 137,
+    "earliest_recommended_date": "2020-12-30",
+    "latest_recommended_date": "2026-09-10",
+    "population": "国家发展改革委向中国证监会推荐的基础设施REITs项目公开名单",
+    "amount_unit": "亿元",
+    "amount_basis": "拟发售基金总额；不是实际发行金额",
+    "applicant_basis": "主申报地方／中央企业；不是资产所在地"
+  },
+  "freshness": [
+    {
+      "series": "国家发展改革委向中国证监会推荐基础设施REITs项目名单",
+      "source": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+      "latest_available_date": "2026-09-10",
+      "checked_at": "2026-10-27T08:51:10+08:00",
+      "expected_latest_date": null,
+      "update_frequency": "不定期公开；未披露固定发布日程",
+      "is_lagging": null,
+      "days_since_latest_record": 47,
+      "reason": "公开接口全量查询返回的最新推荐日期；页面未披露固定更新频率，无法据固定日程判断滞后",
+      "treatment": "保留全量最新公开名单，并展示采集时点和最新推荐日期",
+      "revision_status": "公开名单当前版本；未披露初值或修订标识"
+    }
+  ],
+  "quality": {
+    "duplicate_ids": [],
+    "missing_required_fields": [],
+    "raw_to_normalized_count_difference": 0,
+    "raw_amount_checksum_yi": "3400.815",
+    "normalized_amount_checksum_yi": "3400.815",
+    "raw_to_normalized_amount_difference_yi": "0.000",
+    "amount_checksum_note": "逐笔金额校验和，仅用于Raw与计算层勾稽；跨首发和新购入批次，不作为市场规模",
+    "freshness": [
+      {
+        "series": "国家发展改革委向中国证监会推荐基础设施REITs项目名单",
+        "source": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+        "latest_available_date": "2026-09-10",
+        "checked_at": "2026-10-27T08:51:10+08:00",
+        "expected_latest_date": null,
+        "update_frequency": "不定期公开；未披露固定发布日程",
+        "is_lagging": null,
+        "days_since_latest_record": 47,
+        "reason": "公开接口全量查询返回的最新推荐日期；页面未披露固定更新频率，无法据固定日程判断滞后",
+        "treatment": "保留全量最新公开名单，并展示采集时点和最新推荐日期",
+        "revision_status": "公开名单当前版本；未披露初值或修订标识"
+      }
+    ],
+    "identity_basis": "derived_sha256_exact_name_applicant_date",
+    "identity_note": "源接口无官方项目ID；派生ID由项目名称、主申报地方／中央企业及推荐日期生成；行业和金额变化不改变ID",
+    "unmatched_is_not_forecast": "未匹配表示当前交易所来源尚未找到已确认对应记录"
+  },
+  "changes": {
+    "baseline": false,
+    "new_ids": [],
+    "changed_ids": [],
+    "field_changes": [],
+    "missing_ids": []
+  },
+  "raw_manifest": [
+    {
+      "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
+      "method": "POST",
+      "params": {
+        "pageSize": 50,
+        "pageNum": 1,
+        "reitsProName": "",
+        "industry": "",
+        "mainDeclareUnit": "",
+        "startFundMoney": "",
+        "endFundMoney": "",
+        "reportRecommendStartTime": "",
+        "reportRecommendEndTime": ""
+      },
+      "retrieved_at": "2026-10-27T08:51:11+08:00",
+      "status": 200,
+      "tls_verified": true,
+      "raw_path": "data/raw/ndrc/refresh/40428070417-1/page0001.json",
+      "sha256": "08ac65d4f213c963488adb3f08eeb9876554c890806ccbfa31bb4407e8456028",
+      "bytes": 9326
+    },
+    {
+      "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
+      "method": "POST",
+      "params": {
+        "pageSize": 50,
+        "pageNum": 2,
+        "reitsProName": "",
+        "industry": "",
+        "mainDeclareUnit": "",
+        "startFundMoney": "",
+        "endFundMoney": "",
+        "reportRecommendStartTime": "",
+        "reportRecommendEndTime": ""
+      },
+      "retrieved_at": "2026-10-27T08:51:12+08:00",
+      "status": 200,
+      "tls_verified": true,
+      "raw_path": "data/raw/ndrc/refresh/40428070417-1/page0002.json",
+      "sha256": "2c291b2f60a092a0f9e19ce1e3d92e168eb8d8e288f9651a1ece87d0c2ac05fa",
+      "bytes": 9215
+    },
+    {
+      "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
+      "method": "POST",
+      "params": {
+        "pageSize": 50,
+        "pageNum": 3,
+        "reitsProName": "",
+        "industry": "",
+        "mainDeclareUnit": "",
+        "startFundMoney": "",
+        "endFundMoney": "",
+        "reportRecommendStartTime": "",
+        "reportRecommendEndTime": ""
+      },
+      "retrieved_at": "2026-10-27T08:51:13+08:00",
+      "status": 200,
+      "tls_verified": true,
+      "raw_path": "data/raw/ndrc/refresh/40428070417-1/page0003.json",
+      "sha256": "9ac316820af4047d1741055d9c630eaa76d89f74779cee94827ea9d3a7a49c3a",
+      "bytes": 7104
+    }
+  ]
+}
