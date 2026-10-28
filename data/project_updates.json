@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-27T08:51:14+08:00",
-  "as_of_date": "2026-10-27",
+  "generated_at": "2026-10-28T08:48:45+08:00",
+  "as_of_date": "2026-10-28",
   "sources": {
     "public": {
       "label": "公募REITs",
-      "checked_at": "2026-10-27T08:50:10+08:00",
-      "collected_at": "2026-10-27T08:50:10+08:00",
-      "latest_official_date": "2026-10-27",
+      "checked_at": "2026-10-28T08:48:44+08:00",
+      "collected_at": "2026-10-28T08:48:44+08:00",
+      "latest_official_date": "2026-10-28",
       "coverage_start": "2026-10-15T10:55:37+08:00",
       "complete": true,
       "record_count": 160,
@@ -17,20 +17,20 @@
         "https://reits.szse.cn/"
       ],
       "snapshot_path": "data/public_reits.json",
-      "snapshot_sha256": "ff2e9d4fad1e1e2dad16de5c6a74e2b4eab19a84c4f082fb6a9b1c4438cecf78",
+      "snapshot_sha256": "fa0f8fb384b049ad894a7c2e1a0d7430d7640b4a15559fe3bc953a33391415f1",
       "raw_versions": [],
       "source_versions": [],
       "refresh_batch": {
-        "id": "40428070417-1",
-        "date": "2026-10-27",
-        "started_at": "2026-10-27T08:42:28+08:00",
-        "completed_at": "2026-10-27T08:50:10+08:00"
+        "id": "40610283946-1",
+        "date": "2026-10-28",
+        "started_at": "2026-10-28T08:41:05+08:00",
+        "completed_at": "2026-10-28T08:48:45+08:00"
       },
       "source_status": {
         "SSE": {
           "exchange": "上交所",
-          "collected_at": "2026-10-27T08:45:38+08:00",
-          "as_of_date": "2026-10-27",
+          "collected_at": "2026-10-28T08:44:04+08:00",
+          "as_of_date": "2026-10-28",
           "complete": true,
           "checks": [
             {
@@ -49,8 +49,8 @@
             },
             {
               "sql_id": "COMMON_JJZWZ_JJLB_L",
-              "advertised_total": 61,
-              "collected_rows": 61,
+              "advertised_total": 62,
+              "collected_rows": 62,
               "pages": 1,
               "complete": true
             }
@@ -68,8 +68,8 @@
             "REITS_TYPE=1按官方脚本标为扩募；保留原始申报类型，未独立推断新购入",
             "仅对已核实基金代码、唯一已注册扩募申报及唯一已上市扩募批次匹配完成日期；其余保留未匹配状态"
           ],
-          "collection_finished_at": "2026-10-27T08:49:02+08:00",
-          "normalization_updated_at": "2026-10-27T08:49:02+08:00",
+          "collection_finished_at": "2026-10-28T08:47:36+08:00",
+          "normalization_updated_at": "2026-10-28T08:47:36+08:00",
           "reviewed_linked_events": 12,
           "linked_events": 81,
           "completed_expansions": 8,
@@ -78,17 +78,14 @@
         "SZSE": {
           "exchange": "深交所",
           "status": "complete",
-          "collected_at": "2026-10-27T08:50:10+08:00",
+          "collected_at": "2026-10-28T08:48:44+08:00",
           "latest_project_update": "2026-10-22",
-          "fund_report_date": "2026-10-27",
-          "listed_fund_count": 29,
-          "issued_fund_count": 31,
+          "fund_report_date": "2026-10-28",
+          "listed_fund_count": 30,
+          "issued_fund_count": 33,
           "disclosed_fund_count": 33,
-          "offering_only_fund_count": 2,
-          "offering_only_codes": [
-            "180107",
-            "181002"
-          ],
+          "offering_only_fund_count": 0,
+          "offering_only_codes": [],
           "offering_identity_checks": {
             "matched_announcement_count": 28,
             "matched_fund_codes": [
@@ -171,8 +168,9 @@
             "identity_rule": "唯一首发项目全名精确匹配；发售公告不证明合同生效"
           },
           "issued_pending_listing_codes": [
+            "180107",
             "180307",
-            "180702"
+            "181002"
           ],
           "event_count": 58,
           "detail_success_count": 58,
@@ -199,16 +197,16 @@
               }
             ],
             "listed_funds": {
-              "advertised_total": 29,
-              "raw_count": 29,
+              "advertised_total": 30,
+              "raw_count": 30,
               "pages": 2,
-              "report_date": "2026-10-27"
+              "report_date": "2026-10-28"
             },
             "effective_announcements": {
               "keyword": "基金合同生效",
               "stock": null,
-              "advertised_total": 31,
-              "raw_count": 31,
+              "advertised_total": 33,
+              "raw_count": 33,
               "pages": 1
             },
             "listing_announcements": {
@@ -244,8 +242,8 @@
           },
           "freshness": {
             "series": "深交所公募REITs基金名录",
-            "latest_available_date": "2026-10-27",
-            "expected_date": "2026-10-27",
+            "latest_available_date": "2026-10-28",
+            "expected_date": "2026-10-28",
             "lagging": false
           },
           "limitations": [
@@ -259,13 +257,13 @@
       },
       "status": "complete",
       "error": null,
-      "last_successful_at": "2026-10-27T08:50:10+08:00",
+      "last_successful_at": "2026-10-28T08:48:44+08:00",
       "revision_status": "官方来源当前完整快照；来源未统一提供初值或修订标识",
       "expected_latest_date": null,
       "is_lagging": null,
       "freshness_reason": "交易所及推荐名单不定期更新；完整成功核查时间和最新公开业务日期分别展示",
       "source_manifest_paths": [
-        "data/source_manifest/daily_refresh/40428070417-1.json"
+        "data/source_manifest/daily_refresh/40610283946-1.json"
       ],
       "raw_retention": {
         "referenced_files": 666,
@@ -276,9 +274,9 @@
     },
     "institutional": {
       "label": "机构间REITs",
-      "checked_at": "2026-10-27T08:43:08+08:00",
-      "collected_at": "2026-10-27T08:43:08+08:00",
-      "latest_official_date": "2026-10-26",
+      "checked_at": "2026-10-28T08:41:43+08:00",
+      "collected_at": "2026-10-28T08:41:43+08:00",
+      "latest_official_date": "2026-10-27",
       "coverage_start": "2026-10-14T16:18:03+08:00",
       "complete": true,
       "record_count": 134,
@@ -288,14 +286,14 @@
         "https://bond.szse.cn/disclosure/progressinfo/index.html"
       ],
       "snapshot_path": "data/institutional.json",
-      "snapshot_sha256": "a9cdc1a5aeb0edf2c79cb03e71c37b81685b4227fb71e4826ec8db79b9f71866",
+      "snapshot_sha256": "11adff4a492e07e1ee57fc0e0156800e256ee44fca9580d1713170e14e3eb654",
       "raw_versions": [],
       "source_versions": [],
       "refresh_batch": {
-        "id": "40428070417-1",
-        "date": "2026-10-27",
-        "started_at": "2026-10-27T08:42:28+08:00",
-        "completed_at": "2026-10-27T08:50:10+08:00"
+        "id": "40610283946-1",
+        "date": "2026-10-28",
+        "started_at": "2026-10-28T08:41:05+08:00",
+        "completed_at": "2026-10-28T08:48:45+08:00"
       },
       "source_status": {
         "SSE": {
@@ -347,13 +345,13 @@
       },
       "status": "complete",
       "error": null,
-      "last_successful_at": "2026-10-27T08:43:08+08:00",
+      "last_successful_at": "2026-10-28T08:41:43+08:00",
       "revision_status": "官方来源当前完整快照；来源未统一提供初值或修订标识",
       "expected_latest_date": null,
       "is_lagging": null,
       "freshness_reason": "交易所及推荐名单不定期更新；完整成功核查时间和最新公开业务日期分别展示",
       "source_manifest_paths": [
-        "data/source_manifest/daily_refresh/40428070417-1.json"
+        "data/source_manifest/daily_refresh/40610283946-1.json"
       ],
       "raw_retention": {
         "referenced_files": 666,
@@ -488,7 +486,7 @@
       "expected_latest_date": null,
       "is_lagging": null,
       "freshness_reason": "交易所及推荐名单不定期更新；完整成功核查时间和最新公开业务日期分别展示",
-      "matching_public_current": true,
+      "matching_public_current": false,
       "matching_public_sha256": "ff2e9d4fad1e1e2dad16de5c6a74e2b4eab19a84c4f082fb6a9b1c4438cecf78",
       "source_manifest_paths": [
         "data/source_manifest/ndrc/20261027-085110-064153.json"
@@ -502,6 +500,418 @@
     }
   },
   "events": [
+    {
+      "population": "public",
+      "population_label": "公募REITs",
+      "entity_id": "SZSE_APPLICANT_5000039",
+      "entity_kind": "fund",
+      "project_name": "平安西安高科产业园封闭式基础设施证券投资基金",
+      "exchange": "深交所",
+      "asset_type": "产业园",
+      "business_type": "首发",
+      "manager": "平安基金管理有限公司",
+      "origin": "西安高新区基础设施配套建设开发有限责任公司",
+      "fund_id": "SZSE_APPLICANT_5000039",
+      "fund_code": "180107",
+      "related_entity_ids": [
+        "NDRC_000a75edc02b24bcd01c",
+        "SZSE_5000039"
+      ],
+      "source_url": "https://reits.szse.cn/disclosure/index.html?stock=180107",
+      "event_type": "documents_added",
+      "title": "新增披露文件",
+      "before": {
+        "documents": null
+      },
+      "after": {
+        "documents": [
+          "平安西安高科产业园REIT：关于平安西安高科产业园封闭式基础设施证券投资基金基金合同生效公告"
+        ]
+      },
+      "official_date": "2026-10-28",
+      "detected_at": "2026-10-28T08:48:44+08:00",
+      "event_date": "2026-10-28",
+      "is_incremental": true,
+      "discovery_type": "observed",
+      "is_baseline": false,
+      "documents": [
+        {
+          "title": "平安西安高科产业园REIT：关于平安西安高科产业园封闭式基础设施证券投资基金基金合同生效公告",
+          "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-10-28/3b1eedd3-427f-485a-b9c8-81fae88fbda9.PDF",
+          "date": "2026-10-28",
+          "source_id": "1225632416"
+        }
+      ],
+      "changes": [
+        {
+          "field": "documents",
+          "label": "披露文件",
+          "before": null,
+          "after": [
+            "平安西安高科产业园REIT：关于平安西安高科产业园封闭式基础设施证券投资基金基金合同生效公告"
+          ]
+        }
+      ],
+      "source_version": {
+        "path": "snapshots/public/20261028-084358.json",
+        "sha256": "f079b8bcc384cb6da0673d5ef93e874cedb941ff5b430dd689d287b055900c2f",
+        "collected_at": "2026-10-28T08:48:44+08:00",
+        "retained_path": "workpapers/project_updates/inputs/public/f079b8bcc384cb6da0673d5ef93e874cedb941ff5b430dd689d287b055900c2f.json"
+      },
+      "batch_key": "public|SZSE_APPLICANT_5000039|2026-10-28",
+      "id": "UPDATE_fef82929056c03fd959fa77b",
+      "first_detected_at": "2026-10-28T08:48:44+08:00",
+      "previous_source_version": {
+        "path": "data/public_reits.json",
+        "sha256": "ff2e9d4fad1e1e2dad16de5c6a74e2b4eab19a84c4f082fb6a9b1c4438cecf78",
+        "collected_at": "2026-10-27T08:50:10+08:00",
+        "retained_path": "workpapers/project_updates/inputs/public/ff2e9d4fad1e1e2dad16de5c6a74e2b4eab19a84c4f082fb6a9b1c4438cecf78.json"
+      }
+    },
+    {
+      "population": "public",
+      "population_label": "公募REITs",
+      "entity_id": "SZSE_APPLICANT_5000060",
+      "entity_kind": "fund",
+      "project_name": "华泰紫金华住安住封闭式商业不动产证券投资基金",
+      "exchange": "深交所",
+      "asset_type": "文旅类",
+      "business_type": "首发",
+      "manager": "华泰证券（上海）资产管理有限公司",
+      "origin": "上海安住此间商务信息咨询有限公司",
+      "fund_id": "SZSE_APPLICANT_5000060",
+      "fund_code": "181002",
+      "related_entity_ids": [
+        "SZSE_5000060"
+      ],
+      "source_url": "https://reits.szse.cn/disclosure/index.html?stock=181002",
+      "event_type": "milestone",
+      "title": "成立公告",
+      "before": {
+        "establishment_announcement_date": null
+      },
+      "after": {
+        "establishment_announcement_date": "2026-10-28"
+      },
+      "official_date": "2026-10-28",
+      "detected_at": "2026-10-28T08:48:44+08:00",
+      "event_date": "2026-10-28",
+      "is_incremental": true,
+      "discovery_type": "observed",
+      "is_baseline": false,
+      "documents": [],
+      "changes": [
+        {
+          "field": "establishment_announcement_date",
+          "label": "成立公告日期",
+          "before": null,
+          "after": "2026-10-28"
+        }
+      ],
+      "source_version": {
+        "path": "snapshots/public/20261028-084358.json",
+        "sha256": "f079b8bcc384cb6da0673d5ef93e874cedb941ff5b430dd689d287b055900c2f",
+        "collected_at": "2026-10-28T08:48:44+08:00",
+        "retained_path": "workpapers/project_updates/inputs/public/f079b8bcc384cb6da0673d5ef93e874cedb941ff5b430dd689d287b055900c2f.json"
+      },
+      "batch_key": "public|SZSE_APPLICANT_5000060|2026-10-28",
+      "id": "UPDATE_bc4105953efcd6f49ba367bf",
+      "previous_source_version": {
+        "path": "data/public_reits.json",
+        "sha256": "ff2e9d4fad1e1e2dad16de5c6a74e2b4eab19a84c4f082fb6a9b1c4438cecf78",
+        "collected_at": "2026-10-27T08:50:10+08:00",
+        "retained_path": "workpapers/project_updates/inputs/public/ff2e9d4fad1e1e2dad16de5c6a74e2b4eab19a84c4f082fb6a9b1c4438cecf78.json"
+      }
+    },
+    {
+      "population": "public",
+      "population_label": "公募REITs",
+      "entity_id": "SZSE_APPLICANT_5000060",
+      "entity_kind": "fund",
+      "project_name": "华泰紫金华住安住封闭式商业不动产证券投资基金",
+      "exchange": "深交所",
+      "asset_type": "文旅类",
+      "business_type": "首发",
+      "manager": "华泰证券（上海）资产管理有限公司",
+      "origin": "上海安住此间商务信息咨询有限公司",
+      "fund_id": "SZSE_APPLICANT_5000060",
+      "fund_code": "181002",
+      "related_entity_ids": [
+        "SZSE_5000060"
+      ],
+      "source_url": "https://reits.szse.cn/disclosure/index.html?stock=181002",
+      "event_type": "documents_added",
+      "title": "新增披露文件",
+      "before": {
+        "documents": null
+      },
+      "after": {
+        "documents": [
+          "华泰华住安住REIT：华泰紫金华住安住封闭式商业不动产证券投资基金基金合同生效公告"
+        ]
+      },
+      "official_date": "2026-10-28",
+      "detected_at": "2026-10-28T08:48:44+08:00",
+      "event_date": "2026-10-28",
+      "is_incremental": true,
+      "discovery_type": "observed",
+      "is_baseline": false,
+      "documents": [
+        {
+          "title": "华泰华住安住REIT：华泰紫金华住安住封闭式商业不动产证券投资基金基金合同生效公告",
+          "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-10-28/93c58b9c-89ac-4158-b14f-ca0cdd3bdc68.PDF",
+          "date": "2026-10-28",
+          "source_id": "1225631093"
+        }
+      ],
+      "changes": [
+        {
+          "field": "documents",
+          "label": "披露文件",
+          "before": null,
+          "after": [
+            "华泰华住安住REIT：华泰紫金华住安住封闭式商业不动产证券投资基金基金合同生效公告"
+          ]
+        }
+      ],
+      "source_version": {
+        "path": "snapshots/public/20261028-084358.json",
+        "sha256": "f079b8bcc384cb6da0673d5ef93e874cedb941ff5b430dd689d287b055900c2f",
+        "collected_at": "2026-10-28T08:48:44+08:00",
+        "retained_path": "workpapers/project_updates/inputs/public/f079b8bcc384cb6da0673d5ef93e874cedb941ff5b430dd689d287b055900c2f.json"
+      },
+      "batch_key": "public|SZSE_APPLICANT_5000060|2026-10-28",
+      "id": "UPDATE_701c22119eeea51b4fd1e7bf",
+      "first_detected_at": "2026-10-28T08:48:44+08:00",
+      "previous_source_version": {
+        "path": "data/public_reits.json",
+        "sha256": "ff2e9d4fad1e1e2dad16de5c6a74e2b4eab19a84c4f082fb6a9b1c4438cecf78",
+        "collected_at": "2026-10-27T08:50:10+08:00",
+        "retained_path": "workpapers/project_updates/inputs/public/ff2e9d4fad1e1e2dad16de5c6a74e2b4eab19a84c4f082fb6a9b1c4438cecf78.json"
+      }
+    },
+    {
+      "population": "public",
+      "population_label": "公募REITs",
+      "entity_id": "SSE_FUND_508095",
+      "entity_kind": "fund",
+      "project_name": "国泰海通中国建筑租赁住房封闭式基础设施证券投资基金",
+      "exchange": "上交所",
+      "asset_type": "租赁住房",
+      "business_type": "首发",
+      "manager": "上海国泰海通证券资产管理有限公司",
+      "origin": "中建资本管理（上海）有限公司",
+      "fund_id": "SSE_FUND_508095",
+      "fund_code": "508095",
+      "related_entity_ids": [
+        "NDRC_42bf91f03da850049e44",
+        "SSE_567e0ce118814458b930c6cdebd8a43b"
+      ],
+      "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508095&category=F600",
+      "event_type": "milestone",
+      "title": "上市",
+      "before": {
+        "listing_date": null
+      },
+      "after": {
+        "listing_date": "2026-10-28"
+      },
+      "official_date": "2026-10-28",
+      "detected_at": "2026-10-28T08:48:44+08:00",
+      "event_date": "2026-10-28",
+      "is_incremental": true,
+      "discovery_type": "observed",
+      "is_baseline": false,
+      "documents": [],
+      "changes": [
+        {
+          "field": "listing_date",
+          "label": "上市日期",
+          "before": null,
+          "after": "2026-10-28"
+        }
+      ],
+      "source_version": {
+        "path": "snapshots/public/20261028-084358.json",
+        "sha256": "f079b8bcc384cb6da0673d5ef93e874cedb941ff5b430dd689d287b055900c2f",
+        "collected_at": "2026-10-28T08:48:44+08:00",
+        "retained_path": "workpapers/project_updates/inputs/public/f079b8bcc384cb6da0673d5ef93e874cedb941ff5b430dd689d287b055900c2f.json"
+      },
+      "batch_key": "public|SSE_FUND_508095|2026-10-28",
+      "id": "UPDATE_3750fe8e1851dd22efaf1c7d",
+      "previous_source_version": {
+        "path": "data/public_reits.json",
+        "sha256": "ff2e9d4fad1e1e2dad16de5c6a74e2b4eab19a84c4f082fb6a9b1c4438cecf78",
+        "collected_at": "2026-10-27T08:50:10+08:00",
+        "retained_path": "workpapers/project_updates/inputs/public/ff2e9d4fad1e1e2dad16de5c6a74e2b4eab19a84c4f082fb6a9b1c4438cecf78.json"
+      }
+    },
+    {
+      "population": "public",
+      "population_label": "公募REITs",
+      "entity_id": "SZSE_APPLICANT_5000055",
+      "entity_kind": "fund",
+      "project_name": "银华粤海水务水利封闭式基础设施证券投资基金",
+      "exchange": "深交所",
+      "asset_type": "市政生态",
+      "business_type": "首发",
+      "manager": "银华基金管理股份有限公司",
+      "origin": "广东粤海飞来峡水力发电有限公司",
+      "fund_id": "SZSE_APPLICANT_5000055",
+      "fund_code": "180702",
+      "related_entity_ids": [
+        "NDRC_88b543bb436149aaef76",
+        "SZSE_5000055"
+      ],
+      "source_url": "https://reits.szse.cn/disclosure/index.html?stock=180702",
+      "event_type": "milestone",
+      "title": "上市",
+      "before": {
+        "listing_date": null
+      },
+      "after": {
+        "listing_date": "2026-10-28"
+      },
+      "official_date": "2026-10-28",
+      "detected_at": "2026-10-28T08:48:44+08:00",
+      "event_date": "2026-10-28",
+      "is_incremental": true,
+      "discovery_type": "observed",
+      "is_baseline": false,
+      "documents": [],
+      "changes": [
+        {
+          "field": "listing_date",
+          "label": "上市日期",
+          "before": null,
+          "after": "2026-10-28"
+        }
+      ],
+      "source_version": {
+        "path": "snapshots/public/20261028-084358.json",
+        "sha256": "f079b8bcc384cb6da0673d5ef93e874cedb941ff5b430dd689d287b055900c2f",
+        "collected_at": "2026-10-28T08:48:44+08:00",
+        "retained_path": "workpapers/project_updates/inputs/public/f079b8bcc384cb6da0673d5ef93e874cedb941ff5b430dd689d287b055900c2f.json"
+      },
+      "batch_key": "public|SZSE_APPLICANT_5000055|2026-10-28",
+      "id": "UPDATE_348da72bc5c7a3f5f985df09",
+      "previous_source_version": {
+        "path": "data/public_reits.json",
+        "sha256": "ff2e9d4fad1e1e2dad16de5c6a74e2b4eab19a84c4f082fb6a9b1c4438cecf78",
+        "collected_at": "2026-10-27T08:50:10+08:00",
+        "retained_path": "workpapers/project_updates/inputs/public/ff2e9d4fad1e1e2dad16de5c6a74e2b4eab19a84c4f082fb6a9b1c4438cecf78.json"
+      }
+    },
+    {
+      "population": "public",
+      "population_label": "公募REITs",
+      "entity_id": "SZSE_APPLICANT_5000039",
+      "entity_kind": "fund",
+      "project_name": "平安西安高科产业园封闭式基础设施证券投资基金",
+      "exchange": "深交所",
+      "asset_type": "产业园",
+      "business_type": "首发",
+      "manager": "平安基金管理有限公司",
+      "origin": "西安高新区基础设施配套建设开发有限责任公司",
+      "fund_id": "SZSE_APPLICANT_5000039",
+      "fund_code": "180107",
+      "related_entity_ids": [
+        "NDRC_000a75edc02b24bcd01c",
+        "SZSE_5000039"
+      ],
+      "source_url": "https://reits.szse.cn/disclosure/index.html?stock=180107",
+      "event_type": "milestone",
+      "title": "成立公告",
+      "before": {
+        "establishment_announcement_date": null
+      },
+      "after": {
+        "establishment_announcement_date": "2026-10-28"
+      },
+      "official_date": "2026-10-28",
+      "detected_at": "2026-10-28T08:48:44+08:00",
+      "event_date": "2026-10-28",
+      "is_incremental": true,
+      "discovery_type": "observed",
+      "is_baseline": false,
+      "documents": [],
+      "changes": [
+        {
+          "field": "establishment_announcement_date",
+          "label": "成立公告日期",
+          "before": null,
+          "after": "2026-10-28"
+        }
+      ],
+      "source_version": {
+        "path": "snapshots/public/20261028-084358.json",
+        "sha256": "f079b8bcc384cb6da0673d5ef93e874cedb941ff5b430dd689d287b055900c2f",
+        "collected_at": "2026-10-28T08:48:44+08:00",
+        "retained_path": "workpapers/project_updates/inputs/public/f079b8bcc384cb6da0673d5ef93e874cedb941ff5b430dd689d287b055900c2f.json"
+      },
+      "batch_key": "public|SZSE_APPLICANT_5000039|2026-10-28",
+      "id": "UPDATE_3045ef97dc840cda4b639906",
+      "previous_source_version": {
+        "path": "data/public_reits.json",
+        "sha256": "ff2e9d4fad1e1e2dad16de5c6a74e2b4eab19a84c4f082fb6a9b1c4438cecf78",
+        "collected_at": "2026-10-27T08:50:10+08:00",
+        "retained_path": "workpapers/project_updates/inputs/public/ff2e9d4fad1e1e2dad16de5c6a74e2b4eab19a84c4f082fb6a9b1c4438cecf78.json"
+      }
+    },
+    {
+      "population": "institutional",
+      "population_label": "机构间REITs",
+      "entity_id": "SZSE_99AA60238C3B4E2487F17211D0D528DB",
+      "entity_kind": "filing",
+      "project_name": "成都产投持有型不动产资产支持专项计划",
+      "exchange": "深交所",
+      "asset_type": "待分类",
+      "business_type": "首发",
+      "manager": "中国国际金融股份有限公司",
+      "origin": "成都产业功能区投资运营集团有限公司",
+      "fund_id": "",
+      "fund_code": "",
+      "related_entity_ids": [],
+      "source_url": "https://bond.szse.cn/disclosure/progressinfo/index.html?CATALOGID=xmjdxx_xq&TABKEY=tab1&xmbh=99AA60238C3B4E2487F17211D0D528DB&type=2",
+      "event_type": "status_change",
+      "title": "审核状态更新",
+      "before": {
+        "status": "已反馈"
+      },
+      "after": {
+        "status": "通过"
+      },
+      "official_date": "2026-10-27",
+      "detected_at": "2026-10-28T08:41:43+08:00",
+      "event_date": "2026-10-27",
+      "is_incremental": true,
+      "discovery_type": "observed",
+      "is_baseline": false,
+      "documents": [],
+      "changes": [
+        {
+          "field": "status",
+          "label": "审核状态",
+          "before": "已反馈",
+          "after": "通过"
+        }
+      ],
+      "source_version": {
+        "path": "workpapers/daily_refresh/40610283946-1/collected/institutional.json",
+        "sha256": "47df1f38710603b5c28585579c2eb2db5f650a00b3276eb8805854fc7ff77f98",
+        "collected_at": "2026-10-28T08:41:43+08:00",
+        "retained_path": "workpapers/project_updates/inputs/institutional/47df1f38710603b5c28585579c2eb2db5f650a00b3276eb8805854fc7ff77f98.json"
+      },
+      "batch_key": "institutional|SZSE_99AA60238C3B4E2487F17211D0D528DB|2026-10-27",
+      "id": "UPDATE_b6aa28ed5689373a044cf0ac",
+      "previous_source_version": {
+        "path": "data/institutional.json",
+        "sha256": "a9cdc1a5aeb0edf2c79cb03e71c37b81685b4227fb71e4826ec8db79b9f71866",
+        "collected_at": "2026-10-27T08:43:08+08:00",
+        "retained_path": "workpapers/project_updates/inputs/institutional/a9cdc1a5aeb0edf2c79cb03e71c37b81685b4227fb71e4826ec8db79b9f71866.json"
+      },
+      "occurrence": 1
+    },
     {
       "population": "public",
       "population_label": "公募REITs",
@@ -97573,7 +97983,7 @@
       "fund_id": "",
       "fund_code": "",
       "related_entity_ids": [],
-      "status": "已反馈",
+      "status": "通过",
       "source_url": "https://bond.szse.cn/disclosure/progressinfo/index.html?CATALOGID=xmjdxx_xq&TABKEY=tab1&xmbh=99AA60238C3B4E2487F17211D0D528DB&type=2"
     },
     {
@@ -103423,7 +103833,7 @@
         "SSE_567e0ce118814458b930c6cdebd8a43b",
         "NDRC_42bf91f03da850049e44"
       ],
-      "status": "成立待上市",
+      "status": "已上市",
       "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508095&category=F600"
     },
     {
@@ -103665,7 +104075,7 @@
       "related_entity_ids": [
         "SSE_620f9db7cc1f48b1b6531c5af02e8b34"
       ],
-      "status": "发行中",
+      "status": "发售结束待成立核验",
       "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508610&category=F600"
     },
     {
@@ -105073,7 +105483,7 @@
         "SZSE_5000039",
         "NDRC_000a75edc02b24bcd01c"
       ],
-      "status": "发售结束待成立",
+      "status": "成立待上市",
       "source_url": "https://reits.szse.cn/disclosure/index.html?stock=180107"
     },
     {
@@ -105130,7 +105540,7 @@
         "SZSE_5000055",
         "NDRC_88b543bb436149aaef76"
       ],
-      "status": "成立待上市",
+      "status": "已上市",
       "source_url": "https://reits.szse.cn/disclosure/index.html?stock=180702"
     },
     {
@@ -105166,7 +105576,7 @@
       "related_entity_ids": [
         "SZSE_5000060"
       ],
-      "status": "发售结束待成立",
+      "status": "成立待上市",
       "source_url": "https://reits.szse.cn/disclosure/index.html?stock=181002"
     },
     {
@@ -106030,12 +106440,12 @@
     "baseline_at": "2026-10-14T16:18:03+08:00",
     "populations": {
       "public": {
-        "input_versions": 32,
+        "input_versions": 34,
         "baseline_at": "2026-10-15T10:55:37+08:00",
         "current_entities": 304
       },
       "institutional": {
-        "input_versions": 31,
+        "input_versions": 33,
         "baseline_at": "2026-10-14T16:18:03+08:00",
         "current_entities": 134
       },
@@ -106045,20 +106455,20 @@
         "current_entities": 137
       }
     },
-    "event_count": 1738,
-    "incremental_event_count": 215,
+    "event_count": 1745,
+    "incremental_event_count": 222,
     "undated_event_count": 0,
-    "observed_event_count": 215,
+    "observed_event_count": 222,
     "baseline_event_count": 1523,
     "event_counts_by_population": {
-      "public": 1424,
-      "institutional": 177,
+      "public": 1430,
+      "institutional": 178,
       "ndrc": 137
     },
     "event_counts_by_type": {
-      "documents_added": 517,
-      "milestone": 1052,
-      "status_change": 24,
+      "documents_added": 519,
+      "milestone": 1056,
+      "status_change": 25,
       "revision": 8,
       "recommendation": 137
     },
@@ -106208,7 +106618,7 @@
     "transformation_version": "official-date-archive-v2",
     "document_revisions": [],
     "rejected_inputs": [],
-    "retained_input_count": 93,
+    "retained_input_count": 97,
     "raw_retention": {
       "public": {
         "referenced_files": 666,
@@ -106216,7 +106626,7 @@
         "missing_local_paths": [],
         "mismatched_paths": [],
         "source_manifest_paths": [
-          "data/source_manifest/daily_refresh/40428070417-1.json"
+          "data/source_manifest/daily_refresh/40610283946-1.json"
         ],
         "treatment": "Original Raw hashes verified against source manifests"
       },
@@ -106226,7 +106636,7 @@
         "missing_local_paths": [],
         "mismatched_paths": [],
         "source_manifest_paths": [
-          "data/source_manifest/daily_refresh/40428070417-1.json"
+          "data/source_manifest/daily_refresh/40610283946-1.json"
         ],
         "treatment": "Original Raw hashes verified against source manifests"
       },
@@ -106241,7 +106651,7 @@
         "treatment": "Original Raw hashes verified against source manifests"
       }
     },
-    "audit_path": "workpapers/project_updates/runs/3ffca61c1366f9129e00/audit.json",
+    "audit_path": "workpapers/project_updates/runs/c3f99429256e6a55edb9/audit.json",
     "input_index_path": "workpapers/project_updates/input_index.json"
   }
 }

@@ -1,10 +1,10 @@
 {
   "status": "complete",
   "attempt_ok": true,
-  "date": "2026-10-27",
-  "batch_id": "40428070417-1",
-  "started_at": "2026-10-27T08:42:28+08:00",
-  "completed_at": "2026-10-27T08:50:10+08:00",
+  "date": "2026-10-28",
+  "batch_id": "40610283946-1",
+  "started_at": "2026-10-28T08:41:05+08:00",
+  "completed_at": "2026-10-28T08:48:45+08:00",
   "validation": {
     "institutional": {
       "count": 134,
@@ -14,7 +14,7 @@
     "public": {
       "ok": true,
       "funds": 144,
-      "issued_funds": 98,
+      "issued_funds": 100,
       "filings": 160,
       "business_types": {
         "首发": 144,
@@ -26,8 +26,8 @@
       "unlinked_events": 0
     }
   },
-  "last_successful_at": "2026-10-27T08:50:10+08:00",
-  "last_attempt_at": "2026-10-27T08:42:28+08:00",
+  "last_successful_at": "2026-10-28T08:48:45+08:00",
+  "last_attempt_at": "2026-10-28T08:41:05+08:00",
   "disclosure_checked_at": {
     "institutional": "2026-10-15T13:14:26+08:00",
     "public": "2026-10-15T13:14:26+08:00"
