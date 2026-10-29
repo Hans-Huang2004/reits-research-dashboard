@@ -1,36 +1,37 @@
 {
   "status": "complete",
   "attempt_ok": true,
-  "date": "2026-10-28",
-  "batch_id": "40610283946-1",
-  "last_attempt_at": "2026-10-28T08:49:38+08:00",
-  "completed_at": "2026-10-28T08:49:44+08:00",
-  "last_successful_at": "2026-10-28T08:49:44+08:00",
+  "date": "2026-10-29",
+  "batch_id": "40809102144-1",
+  "last_attempt_at": "2026-10-29T10:54:51+08:00",
+  "completed_at": "2026-10-29T10:54:58+08:00",
+  "last_successful_at": "2026-10-29T10:54:58+08:00",
   "public_snapshot_sha256": "fa0f8fb384b049ad894a7c2e1a0d7430d7640b4a15559fe3bc953a33391415f1",
   "review_config_sha256": "69b571210e1494cbc8267f78390b35f1b0e14405c8516ddcdeec149b7844d576",
   "implementation_sha256": "80df48c9a595d870e63ccec78a24c7b010e808f97b5ef5ec18d18519194ca529",
-  "snapshot_sha256": "6f5583042872edb4b0ff242829bdcd19139045b9982f52c90720612cde9f1e08",
+  "snapshot_sha256": "b313050819ad0d1aba2739cf729c07c60114d39caeb307a46aef06fd16ecdb0e",
   "validation": {
     "ok": true,
-    "items": 137,
-    "official_total": 137,
+    "items": 138,
+    "official_total": 138,
     "pages": 3,
     "identities_unique": true,
     "raw_to_normalized_count_difference": 0,
     "derived_not_official_ids": true,
     "match_statuses": {
+      "candidate": 1,
       "confirmed": 128,
       "unmatched": 9
     },
     "relations": 128,
     "business_types": {
-      "新购入": 16,
+      "新购入": 17,
       "首发": 113,
       "待核实": 8
     },
     "earliest_recommended_date": "2020-12-30",
-    "latest_recommended_date": "2026-09-10",
+    "latest_recommended_date": "2026-10-20",
     "negative_acceptance_intervals": 16
   },
-  "latest_recommended_date": "2026-09-10"
+  "latest_recommended_date": "2026-10-20"
 }

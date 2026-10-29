@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-29T09:13:32+08:00",
+  "generated_at": "2026-10-29T10:54:58+08:00",
   "as_of_date": "2026-10-29",
   "sources": {
     "public": {
@@ -364,32 +364,32 @@
     },
     "ndrc": {
       "label": "国家发改委推荐",
-      "checked_at": "2026-10-28T08:49:38+08:00",
-      "collected_at": "2026-10-28T08:49:38+08:00",
-      "latest_official_date": "2026-09-10",
+      "checked_at": "2026-10-29T10:54:51+08:00",
+      "collected_at": "2026-10-29T10:54:51+08:00",
+      "latest_official_date": "2026-10-20",
       "coverage_start": "2026-10-16T10:50:20+08:00",
       "complete": true,
-      "record_count": 137,
+      "record_count": 138,
       "source_url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
       "source_urls": [
         "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list"
       ],
       "snapshot_path": "data/ndrc_recommendations.json",
-      "snapshot_sha256": "6f5583042872edb4b0ff242829bdcd19139045b9982f52c90720612cde9f1e08",
+      "snapshot_sha256": "b313050819ad0d1aba2739cf729c07c60114d39caeb307a46aef06fd16ecdb0e",
       "raw_versions": [
         {
-          "raw_path": "data/raw/ndrc/refresh/40610283946-1/page0001.json",
-          "sha256": "08ac65d4f213c963488adb3f08eeb9876554c890806ccbfa31bb4407e8456028",
+          "raw_path": "data/raw/ndrc/refresh/40809102144-1/page0001.json",
+          "sha256": "b9712cee1a4f030fd2556feb81305ae94614ec98b94551ca91a25313088b369f",
           "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList"
         },
         {
-          "raw_path": "data/raw/ndrc/refresh/40610283946-1/page0002.json",
-          "sha256": "2c291b2f60a092a0f9e19ce1e3d92e168eb8d8e288f9651a1ece87d0c2ac05fa",
+          "raw_path": "data/raw/ndrc/refresh/40809102144-1/page0002.json",
+          "sha256": "d4d033142754e2eabd876a9235ad453ea8e539aca2af0e24cfb67dc150a8f3ae",
           "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList"
         },
         {
-          "raw_path": "data/raw/ndrc/refresh/40610283946-1/page0003.json",
-          "sha256": "9ac316820af4047d1741055d9c630eaa76d89f74779cee94827ea9d3a7a49c3a",
+          "raw_path": "data/raw/ndrc/refresh/40809102144-1/page0003.json",
+          "sha256": "8046de1fd8652f8f111de35273960177e92316a64c00f2c50f669b904bb86a8e",
           "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList"
         }
       ],
@@ -408,12 +408,12 @@
             "reportRecommendStartTime": "",
             "reportRecommendEndTime": ""
           },
-          "retrieved_at": "2026-10-28T08:49:40+08:00",
+          "retrieved_at": "2026-10-29T10:54:53+08:00",
           "status": 200,
           "tls_verified": true,
-          "raw_path": "data/raw/ndrc/refresh/40610283946-1/page0001.json",
-          "sha256": "08ac65d4f213c963488adb3f08eeb9876554c890806ccbfa31bb4407e8456028",
-          "bytes": 9326
+          "raw_path": "data/raw/ndrc/refresh/40809102144-1/page0001.json",
+          "sha256": "b9712cee1a4f030fd2556feb81305ae94614ec98b94551ca91a25313088b369f",
+          "bytes": 9329
         },
         {
           "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
@@ -429,12 +429,12 @@
             "reportRecommendStartTime": "",
             "reportRecommendEndTime": ""
           },
-          "retrieved_at": "2026-10-28T08:49:42+08:00",
+          "retrieved_at": "2026-10-29T10:54:55+08:00",
           "status": 200,
           "tls_verified": true,
-          "raw_path": "data/raw/ndrc/refresh/40610283946-1/page0002.json",
-          "sha256": "2c291b2f60a092a0f9e19ce1e3d92e168eb8d8e288f9651a1ece87d0c2ac05fa",
-          "bytes": 9215
+          "raw_path": "data/raw/ndrc/refresh/40809102144-1/page0002.json",
+          "sha256": "d4d033142754e2eabd876a9235ad453ea8e539aca2af0e24cfb67dc150a8f3ae",
+          "bytes": 9200
         },
         {
           "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
@@ -450,12 +450,12 @@
             "reportRecommendStartTime": "",
             "reportRecommendEndTime": ""
           },
-          "retrieved_at": "2026-10-28T08:49:43+08:00",
+          "retrieved_at": "2026-10-29T10:54:57+08:00",
           "status": 200,
           "tls_verified": true,
-          "raw_path": "data/raw/ndrc/refresh/40610283946-1/page0003.json",
-          "sha256": "9ac316820af4047d1741055d9c630eaa76d89f74779cee94827ea9d3a7a49c3a",
-          "bytes": 7104
+          "raw_path": "data/raw/ndrc/refresh/40809102144-1/page0003.json",
+          "sha256": "8046de1fd8652f8f111de35273960177e92316a64c00f2c50f669b904bb86a8e",
+          "bytes": 7293
         },
         {
           "path": "data/public_reits.json",
@@ -474,8 +474,8 @@
         "NDRC": {
           "ok": true,
           "complete": true,
-          "updated_at": "2026-10-28T08:49:38+08:00",
-          "latest_recommended_date": "2026-09-10",
+          "updated_at": "2026-10-29T10:54:51+08:00",
+          "latest_recommended_date": "2026-10-20",
           "source_url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
           "api_url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
           "tls_verified": true
@@ -483,7 +483,7 @@
       },
       "status": "complete",
       "error": null,
-      "last_successful_at": "2026-10-28T08:49:38+08:00",
+      "last_successful_at": "2026-10-29T10:54:51+08:00",
       "revision_status": "官方来源当前完整快照；来源未统一提供初值或修订标识",
       "expected_latest_date": null,
       "is_lagging": null,
@@ -491,7 +491,7 @@
       "matching_public_current": true,
       "matching_public_sha256": "fa0f8fb384b049ad894a7c2e1a0d7430d7640b4a15559fe3bc953a33391415f1",
       "source_manifest_paths": [
-        "data/source_manifest/ndrc/20261028-084938-662022.json"
+        "data/source_manifest/ndrc/20261029-105451-854069.json"
       ],
       "raw_retention": {
         "referenced_files": 3,
@@ -2096,6 +2096,54 @@
         "retained_path": "workpapers/project_updates/inputs/institutional/3b9c447cf97021d12abceb5436fafa610956b95b5918f4d297d807496f8ba8e0.json"
       },
       "occurrence": 1
+    },
+    {
+      "population": "ndrc",
+      "population_label": "国家发改委推荐",
+      "entity_id": "NDRC_5045fd13e25a7751d9ad",
+      "entity_kind": "recommendation",
+      "project_name": "万国数据中心新购入项目",
+      "exchange": "",
+      "asset_type": "新型基础设施",
+      "business_type": "新购入",
+      "manager": "",
+      "origin": "河北省",
+      "fund_id": "",
+      "fund_code": "",
+      "related_entity_ids": [],
+      "source_url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
+      "event_type": "recommendation",
+      "title": "新增国家发改委推荐项目",
+      "before": {
+        "recommended_date": null
+      },
+      "after": {
+        "recommended_date": "2026-10-20"
+      },
+      "official_date": "2026-10-20",
+      "detected_at": "2026-10-29T10:54:51+08:00",
+      "event_date": "2026-10-20",
+      "is_incremental": true,
+      "discovery_type": "observed",
+      "is_baseline": false,
+      "documents": [],
+      "changes": [
+        {
+          "field": "recommended_date",
+          "label": "推荐日期",
+          "before": null,
+          "after": "2026-10-20"
+        }
+      ],
+      "source_version": {
+        "path": "data/ndrc_recommendations.json",
+        "sha256": "b313050819ad0d1aba2739cf729c07c60114d39caeb307a46aef06fd16ecdb0e",
+        "collected_at": "2026-10-29T10:54:51+08:00",
+        "retained_path": "workpapers/project_updates/inputs/ndrc/b313050819ad0d1aba2739cf729c07c60114d39caeb307a46aef06fd16ecdb0e.json"
+      },
+      "batch_key": "ndrc|NDRC_5045fd13e25a7751d9ad|2026-10-20",
+      "id": "UPDATE_984c519c2a1a9d247c22aff8",
+      "previous_source_version": null
     },
     {
       "population": "institutional",
@@ -99017,6 +99065,22 @@
       "source_url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list"
     },
     {
+      "id": "NDRC_5045fd13e25a7751d9ad",
+      "population": "ndrc",
+      "entity_kind": "recommendation",
+      "project_name": "万国数据中心新购入项目",
+      "exchange": "",
+      "asset_type": "新型基础设施",
+      "business_type": "新购入",
+      "manager": "",
+      "origin": "河北省",
+      "fund_id": "",
+      "fund_code": "",
+      "related_entity_ids": [],
+      "status": "已推荐",
+      "source_url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list"
+    },
+    {
       "id": "NDRC_516f47b9fcb0ac98c2d0",
       "population": "ndrc",
       "entity_kind": "recommendation",
@@ -106452,27 +106516,27 @@
         "current_entities": 134
       },
       "ndrc": {
-        "input_versions": 31,
+        "input_versions": 32,
         "baseline_at": "2026-10-16T10:50:20+08:00",
-        "current_entities": 137
+        "current_entities": 138
       }
     },
-    "event_count": 1745,
-    "incremental_event_count": 222,
+    "event_count": 1746,
+    "incremental_event_count": 223,
     "undated_event_count": 0,
-    "observed_event_count": 222,
+    "observed_event_count": 223,
     "baseline_event_count": 1523,
     "event_counts_by_population": {
       "public": 1430,
       "institutional": 178,
-      "ndrc": 137
+      "ndrc": 138
     },
     "event_counts_by_type": {
       "documents_added": 519,
       "milestone": 1056,
       "status_change": 25,
       "revision": 8,
-      "recommendation": 137
+      "recommendation": 138
     },
     "missing_entities": [],
     "metadata_revisions": [
@@ -106620,7 +106684,7 @@
     "transformation_version": "official-date-archive-v2",
     "document_revisions": [],
     "rejected_inputs": [],
-    "retained_input_count": 98,
+    "retained_input_count": 99,
     "raw_retention": {
       "public": {
         "referenced_files": 666,
@@ -106648,12 +106712,12 @@
         "missing_local_paths": [],
         "mismatched_paths": [],
         "source_manifest_paths": [
-          "data/source_manifest/ndrc/20261028-084938-662022.json"
+          "data/source_manifest/ndrc/20261029-105451-854069.json"
         ],
         "treatment": "Original Raw hashes verified against source manifests"
       }
     },
-    "audit_path": "workpapers/project_updates/runs/6eeb1679dbb68630d236/audit.json",
+    "audit_path": "workpapers/project_updates/runs/d4f11ded741c8a7c1a96/audit.json",
     "input_index_path": "workpapers/project_updates/input_index.json"
   }
 }
