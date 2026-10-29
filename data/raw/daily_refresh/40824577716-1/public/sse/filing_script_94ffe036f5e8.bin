@@ -1,0 +1,363 @@
+var sitePageSize = 25;
+var contentLink3 = function (data) {
+  var listArray = data.SHORT_NAME.split(",");
+  var retu = '';
+  for (var i = 0; i < listArray.length; i++) {
+    retu += listArray[i] + '<br/>'
+  }
+  return retu;
+}
+var status_transfer = function (data) {
+  if (data.AUDIT_STATUS == "0") {
+    return "已申报";
+  } else if (data.AUDIT_STATUS == "1") {
+    return "已受理";
+  } else if (data.AUDIT_STATUS == "2") {
+    return "已反馈";
+  } else if (data.AUDIT_STATUS == "3") {
+    return "已接收反馈意见";
+  } else if (data.AUDIT_STATUS == "4") {
+    return "通过";
+  } else if (data.AUDIT_STATUS == "5") {
+    return "未通过";
+  } else if (data.AUDIT_STATUS == "8") {
+    return "终止";
+  } else if (data.AUDIT_SUB_STATUS == "901") {
+    return "承销商/管理人超期中止";
+  } else if (data.AUDIT_STATUS == "9") {
+    return "中止";
+  } else if (data.AUDIT_STATUS == "10") {
+    return "已回复交易所意见";
+  } else if (data.AUDIT_STATUS == "11") {
+    return "提交注册";
+  } else if (data.AUDIT_STATUS == "12") {
+    return "注册生效";
+  } else {
+    return "-";
+  }
+}
+
+// REITs项目类型转换
+var type_transfer = function (data) {
+  if (data == "0") {
+    return "首次发售";
+  } else if (data == "1") {
+    return "扩募发售";
+  } else {
+    return "-";
+  }
+}
+
+// 资产类型类型转换
+var asset_type_transfer = function (data) {
+  if (data == "0") {
+    return "商业不动产";
+  } else if (data == "1") {
+    return "基础设施";
+  } else {
+    return "-";
+  }
+}
+
+var listinfo = $('.js_home_list');
+if (listinfo.length) { // 首页展示五条
+  ajaxFun({
+    url: sseQueryURL + 'commonSoaQuery.do',
+    datas: {
+      'isPagination': true,
+      'bond_type': 4,
+      'sqlId': 'ZQ_XMLB',
+      'pageHelp.pageSize': 5,
+      'pageHelp.cacheSize': 1
+    }
+  }, function (datas) {
+    var htmlStr = [];
+    htmlStr.push('<div class="table-responsive table-normal"><table class="table"><thead><tr><th>编号</th><th><div class="align-left">公募REITs名称</div></th><th><div>管理人</div></th><th><div>项目状态</div></th><th>更新日期</th></tr></thead>');
+    if (datas.result && datas.result.length) {
+
+      htmlStr.push('<tbody>');
+      for (var i = 0; i < datas.result.length; i++) {
+        var obj = datas.result[i];
+        htmlStr.push('<tr><td><div class="align-center">' + (i + 1) + '</div></td><td><a href="/reits/info/index_detail.shtml?audit_id=' + obj.BOND_NUM + '"><div class="align-left name">' + obj.AUDIT_NAME + '</div></a></td><td><div class="nowrap">' + obj.SHORT_NAME + '</div></td><td><div class="nowrap">' + status_transfer(obj) + '</div></td><td><div class="nowrap align-center">' + obj.PUBLISH_DATE + '</div></td></tr>');
+      }
+      htmlStr.push('</tbody>');
+    } else {
+      htmlStr.push('<tbody><tr><td colspan="4"><div class="align-left">暂无数据</div></td></tr></tbody>')
+    }
+    htmlStr.push('</table></div>');
+    listinfo.html(htmlStr.join(''));
+  })
+}
+var contentlist = $('.js_content_list');
+if (contentlist.length) { // 内容页列表
+  $('.js_rank').css('display', 'none');
+  $('.seach-mobile').attr('href', 'javascript:void(0);');
+  contentlist.parent().after('<div style="display:none;"><div class="pagination hide-mobile"></div><div class="hide-pc mobile-page"></div></div>');
+
+  function showData(page) {
+    page = Page.check(page, 'showData');
+    if (page != null) {
+      showloading();
+      ajaxFun({
+        url: sseQueryURL + 'commonSoaQuery.do',
+        datas: {
+          'isPagination': true,
+          'bond_type': 4,
+          'sqlId': 'ZQ_XMLB',
+          'pageHelp.pageSize': sitePageSize,
+          'status': $('.js_status dd.active').attr('status'),
+          'pageHelp.cacheSize': 1,
+          'pageHelp.pageNo': page,
+          'pageHelp.beginPage': page
+        }
+      }, function (datas) {
+        var htmlStr = [];
+        htmlStr.push('<thead><tr><th>编号</th><th>公募REITs名称</th><th>资产类型</th><th>申报类型</th><th>管理人</th><th>项目状态</th><th>更新日期</th><th>受理日期</th></tr></thead>');
+        if (datas.result && datas.result.length) {
+          htmlStr.push('<tbody>');
+          for (var i = 0; i < datas.result.length; i++) {
+            var obj = datas.result[i];
+            htmlStr.push('<tr><td><div class="align-center">' + ((page - 1) * sitePageSize + i + 1) + 
+            '</div></td><td><a href="/reits/info/index_detail.shtml?audit_id=' + obj.BOND_NUM + 
+            '"><div class="align-left name">' + obj.AUDIT_NAME + 
+            '</div></a></td><td><div class="nowrap">' + asset_type_transfer(obj.REITS_ASSET_TYPE) + 
+            '</div></td><td><div class="nowrap">' + type_transfer(obj.REITS_TYPE) + 
+            '</div></td><td><div class="nowrap">' + contentLink3(obj) + 
+            '</div></td><td><div class="nowrap">' + status_transfer(obj) + 
+            '</div></td><td><div class="nowrap">' + obj.PUBLISH_DATE + 
+            '</div></td><td><div class="nowrap">' + obj.ACCEPT_DATE + '</div></td></tr>');
+          }
+          htmlStr.push('</tbody>');
+        } else {
+          htmlStr.push('<tbody><tr><td colspan="7"><div class="align-left">暂无数据</div></td></tr></tbody>')
+        }
+        contentlist.html(htmlStr.join(''));
+        hideloading();
+        try {
+          $('.seach-mobile .js_date').html(datas.pageHelp.total);
+          Page.createPage('.pagination', datas.pageHelp.total, page, 'showData', sitePageSize);
+        } catch (e) {
+          $('.pagination').parent().hide();
+        }
+      })
+    }
+  }
+  showData(1);
+
+  $('.seach-mobile').on('click', function () {
+    closeSel();
+  })
+
+  $('.js_status dd').on('click', function () {
+    if (!$(this).hasClass('active')) {
+      $(this).addClass('active').siblings().removeClass('active');
+      showData(1);
+    }
+  })
+
+  $('.js_rank dd').on('click', function () {
+    if (!$(this).hasClass('active')) {
+      $(this).addClass('active').siblings().removeClass('active');
+      showData(1);
+    }
+  })
+}
+
+var binfo = $('.js_basicinformation'); //基本信息
+if (binfo.length) {
+  ajaxFun({
+    url: sseQueryURL + 'commonSoaQuery.do',
+    datas: {
+      'isPagination': false,
+      'audit_id': getValue('audit_id'),
+      'sqlId': 'ZQ_XMLB'
+    }
+  }, function (datas) {
+    var htmlStr = [];
+    if (datas.result && datas.result.length) {
+      var data = datas.result[0];
+
+      function oneOrMore() {
+        var _name = arguments[0];
+        if (_name) {
+          return _name.split(',').join(arguments[1] || '<br/>');
+        } else {
+          return '-';
+        }
+      }
+      $('.js_title .title1 > h1').html(data.AUDIT_NAME);
+      htmlStr.push('<tbody>');
+      htmlStr.push('<tr><th>公募REITs名称</th><td><div class="align-left">' + data.AUDIT_NAME + '</div></td></tr>');
+      htmlStr.push('<tr><th>资产类型</th><td><div class="align-left">' + asset_type_transfer(data.REITS_ASSET_TYPE) + '</div></td></tr>');
+      //htmlStr.push('<tr><th>拟募集份额<br class="hide-pc"><small>（单位：亿份）</small></th><td><div class="align-left">' + data.PLAN_ISSUE_AMOUNT + '</div></td></tr>');
+      htmlStr.push('<tr><th>发起人<br class="hide-pc"><small>（原始权益人）</small></th><td><div class="align-left">' + data.FULL_NAME + '</div></td></tr>');
+      htmlStr.push('<tr><th>管理人</th><td><div class="align-left">' + data.WRITER_NAME + '</div></td></tr>');
+      htmlStr.push('<tr><th>专项计划名称</th><td><div class="align-left">' + oneOrMore(data.PRIORITY_NAME) + '</div></td></tr>');
+      htmlStr.push('<tr><th>专项计划管理人</th><td><div class="align-left">' + oneOrMore(data.PRIORITY_MANAGER) + '</div></td></tr>');
+      // htmlStr.push('<tr><th>ABS无异议函文号</th><td><div class="align-left">' + oneOrMore(data.WEN_HAO) + '</div></td></tr>');
+      htmlStr.push('<tr><th>无异议函文号</th><td><div class="align-left">' + oneOrMore(data.WEN_HAO) + '</div></td></tr>');
+      // htmlStr.push('<tr><th>基金注册批复文号</th><td><div class="align-left">' + oneOrMore(data.REG_APRV_WEN_HAO) + '</div></td></tr>');
+      htmlStr.push('<tr><th>项目状态</th><td><div class="align-left">' + status_transfer(data) + '</div></td></tr>');
+      htmlStr.push('<tr><th>更新日期</th><td><div class="align-left">' + data.PUBLISH_DATE + '</div></td></tr>');
+      htmlStr.push('<tr><th>受理日期</th><td><div class="align-left">' + data.ACCEPT_DATE + '</div></td></tr>');
+    } else {
+      htmlStr.push('<tr><th>公募REITs名称</th><td><div class="align-left">-</div></td></tr>');
+      htmlStr.push('<tr><th>资产类型</th><td><div class="align-left">-</div></td></tr>');
+      //htmlStr.push('<tr><th>拟募集份额<br class="hide-pc"><small>（单位：亿份）</small></th><td><div class="align-left">-</div></td></tr>');
+      htmlStr.push('<tr><th>发起人<br class="hide-pc"><small>（原始权益人）</small></th><td><div class="align-left">-</div></td></tr>');
+      htmlStr.push('<tr><th>管理人</th><td><div class="align-left">-</div></td></tr>');
+      htmlStr.push('<tr><th>专项计划名称</th><td><div class="align-left">-</div></td></tr>');
+      htmlStr.push('<tr><th>专项计划管理人</th><td><div class="align-left">-</div></td></tr>');
+      // htmlStr.push('<tr><th>ABS无异议函文号</th><td><div class="align-left">-</div></td></tr>');
+      htmlStr.push('<tr><th>无异议函文号</th><td><div class="align-left">-</div></td></tr>');
+      // htmlStr.push('<tr><th>基金注册批复文号</th><td><div class="align-left">-</div></td></tr>');
+      htmlStr.push('<tr><th>项目状态</th><td><div class="align-left">-</div></td></tr>');
+      htmlStr.push('<tr><th>更新日期</th><td><div class="align-left">-</div></td></tr>');
+      htmlStr.push('<tr><th>受理日期</th><td><div class="align-left">-</div></td></tr>');
+      htmlStr.push('</tbody>');
+    }
+    binfo.html(htmlStr.join(''));
+  })
+}
+
+var infofile = $('.js_infofile'); //披露文件
+var callback = $('.js_callback'); // 反馈意见及回复
+if (infofile.length || callback.length) {
+  ajaxFun({
+    url: sseQueryURL + 'commonSoaQuery.do',
+    datas: {
+      'isPagination': false,
+      'audit_id': getValue('audit_id'),
+      'sqlId': 'ZQ_GGJG'
+    }
+  }, function (datas) {
+    var htmlStr = []; // 反馈意见及回复
+    htmlStr.push('<thead><tr><th>序号</th><th><div class="align-center">文件名称</div></th><th><div class="align-center">更新日期</div></th></tr></thead><tbody>');
+    if (datas.result && datas.result.length) {
+      var len = datas.result.length;
+      var NUM = 0;//序号
+      for (var i = 0; i < len; i++) {
+        if(datas.result[i].MAIN_TYPE == '' && datas.result[i].FILE_TYPE == ''){ // 反馈意见及回复
+          htmlStr.push('<tr><td>' + (++ NUM) + '</td><td><div class="align-center nowrap"><a href="' + filepath + datas.result[i].FILE_PATH + '"  target="_blank">' + datas.result[i].FILE_TITLE + '</a></div></td><td><div class="align-center nowrap">' + datas.result[i].FILE_TIME + '</div></td></tr>');
+        } else { // 披露文件
+          var vHtml = "";
+          var idname = datas.result[i].FILE_TYPE;
+          var versions = datas.result[i].FILE_VERSION;
+          vHtml += "<a href='" + filepath + datas.result[i].FILE_PATH + "'  target='_blank'>" + datas.result[i].FILE_TIME + "</a><br>";
+          var _td = $("#" + idname).find('td');
+          if (versions == "1") {
+            _td.eq(1).html() == '-' ? _td.eq(1).html('') : ''
+            _td.eq(1).append(vHtml);
+          } else if (versions == "2") {
+            _td.eq(2).html() == '-' ? _td.eq(2).html('') : ''
+            _td.eq(2).append(vHtml);
+          } else if (versions == "3") {
+            _td.eq(3).html() == '-' ? _td.eq(3).html('') : ''
+            _td.eq(3).append(vHtml);
+          }
+        }
+      }
+      if(NUM == 0){
+        htmlStr.push('<tr><td colspan="3"><div class="align-left">暂无数据<div></td></tr>');
+      }
+      htmlStr.push('</tbody>');
+      callback.html(htmlStr.join(''));
+    } else {
+      htmlStr.push('<tr><td colspan="3"><div class="align-left">暂无数据<div></td></tr></tbody>');
+      callback.html(htmlStr.join(''));
+    }
+  })
+}
+
+//信息披露
+var $homeinfolist = $('.js_home_infolist');
+if ($homeinfolist.length > 0) {
+  ajaxFun({
+    url: sseQueryURL + 'commonSoaQuery.do',
+    datas: {
+      'sqlId': 'REITS_BULLETIN',
+      'isPagination': true,
+      'fundCode': '',
+      'startDate': changeFormatDate(get_systemDate_global(), 0, -1, 0),
+      'endDate': changeFormatDate(get_systemDate_global(), 1, 0, 0),
+      'pageHelp.pageSize': 5,
+      'pageHelp.cacheSize': 1,
+      'pageHelp.pageNo': 1,
+      'pageHelp.beginPage': 1,
+      'pageHelp.endPage': 5
+    }
+  }, function (results) {
+    var res = results.result;
+    // var htmlStr = ['<thead><tr><th>公募REITs代码</th><th>公募REITs简称</th><th>公告标题</th><th>披露日期</th></tr></thead><tbody>'];
+    var htmlStr = ['<thead><tr><th>公募REITs代码</th><th>扩位简称</th><th>公告标题</th><th>披露日期</th></tr></thead><tbody>'];
+    if (res && res.length) {
+      for (var i = 0; i < res.length; i++) {
+        // htmlStr.push('<tr><td class="nowrap">' + res[i].securityCode + '</td><td class="nowrap">' + res[i].fundAbbr + '</td><td><div class="align-left"><a target="_blank" href="' + res[i].url + '">' + res[i].title + '</a></div></td><td class="nowrap">' + res[i].sseDate + '</td></tr>');
+        htmlStr.push('<tr><td class="nowrap">' + res[i].securityCode + '</td><td class="nowrap">' + (res[i].fundExtAbbr ? res[i].fundExtAbbr : '-')  + '</td><td><div class="align-left name"><a target="_blank" href="' + res[i].url + '">' + res[i].title + '</a></div></td><td class="nowrap">' + res[i].sseDate + '</td></tr>');
+      }
+    } else {
+      htmlStr.push('<tr><td colspan="50"><div class="align-left">暂无数据<div></td></tr>');
+    }
+    htmlStr.push('</tbody>');
+    $homeinfolist.html(htmlStr.join(''));
+  })
+}
+
+var $homehq = $('.js_home_hq'); //chg_rate  涨幅     volume  成交   chg_rate, ASE  跌幅
+if ($homehq.length > 0) {
+  function showHq() {
+    hqAjaxFun({
+      url: hq_queryUrl + 'v1/sh1/list/exchange/reits',
+      datas: {
+        select: 'code,name,last,chg_rate,change,volume,amount,prev_close,cpxxextendname', //,open,high,low,amp_rate
+        begin: 0,
+        end: 5,
+        order: arguments[0]
+      }
+    }, function (results) {
+      var listData = results.list;
+      var htmlStr = ['<thead><tr><th>序号</th><th>代码</th><th>扩位简称</th><th><div class="align-right">最新</div></th><th><div class="align-right">涨跌幅</div></th><th><div class="align-right">涨跌</div></th><th><div class="align-right">成交量<small>（手）</small></div></th><th><div class="align-right">成交额<small>（万元）</small></div></th></thead><tbody>']; //<th>前收</th><th>开盘</th><th>最高</th><th>最低</th><th>振幅</th>
+      if (listData && listData.length > 0) {
+        for (var i = 0; i < listData.length; i++) {
+          var data = listData[i];
+          htmlStr.push('<tr><td>' + (i + 1) + '</td>');
+          htmlStr.push('<td><a href="/reits/assortment/prices/detail/price/?code=' + data[0] + '&name=' + data[8] + '">' + data[0] + '</a></td>');
+          htmlStr.push('<td><div class="nowrap">' + data[8] + '</div></td>');
+          htmlStr.push('<td><div class="align-right' + (data[2] == data[7] ? '' : data[2] > data[7] ? ' up' : ' down') + '">' + data[2] + '</div></td>');
+          htmlStr.push('<td><div class="align-right' + (data[3] == 0 ? '' : data[3] > 0 ? ' up' : ' down') + '">' + data[3].toFixed(2) + '%</div></td>');
+          htmlStr.push('<td><div class="align-right' + (data[3] == 0 ? '' : data[3] > 0 ? ' up' : ' down') + '">' + data[4].toFixed(3) + '</div></td>');
+          htmlStr.push('<td><div class="align-right">' + (data[5] / 100).toFixed(0) + '</div></td>');
+          htmlStr.push('<td><div class="align-right">' + (data[6] / 10000).toFixed(2) + '</div></td>');
+          // htmlStr.push('<td><div class="align-right">' + data[7] + '</div></td>');
+          // htmlStr.push('<td><div class="align-right">' + data[8] + '</div></td>');
+          // htmlStr.push('<td><div class="down' + (data[9] == data[7] ? '' : data[9] > data[7] ? 'up' : ' down') + '">' + data[9] + '</div></td>');
+          // htmlStr.push('<td><div class="align-right">' + data[10] + '</div></td>');
+          // htmlStr.push('<td><div class="align-right">' + data[11] + '%</div></td></tr>')
+        }
+      } else {
+        htmlStr.push('<tr><td colspan="50"><div class="align-left">暂无数据<div></td></tr>');
+      }
+      htmlStr.push('</tbody>');
+      $homehq.html(htmlStr.join(''))
+    }, function () {
+      $homehq.html('<thead><tr><th>序号</th><th>代码</th><th>扩位简称</th><th>最新</th><th>涨跌幅</th><th>涨跌</th><th>成交量<small>（手）</small></th><th>成交额<small>（万元）</small></th><th>前收</th><th>开盘</th><th>最高</th><th>最低</th><th>振幅</th></thead><tbody><tr><td colspan="50"><div class="align-left">暂无数据<div></td></tr></tbody>')
+    });
+  }
+
+  var $ddactive = $('.js_home_hqc .tab dd.active');
+  if ($ddactive.length > 0) {
+    showHq($.trim($ddactive.attr('id')))
+  } else {
+    var $dd0active = $('.js_home_hqc .tab dd').eq(0);
+    $dd0active.addClass('active');
+    showHq($.trim($dd0active.attr('id')))
+  }
+
+  $('.js_home_hqc .tab dd').on('click', function () {
+    $(this).addClass('active').siblings().removeClass('active');
+    var _id = $.trim($(this).attr('id'));
+    if (_id) {
+      showHq(_id.replace('#', ''));
+    }
+  })
+}
