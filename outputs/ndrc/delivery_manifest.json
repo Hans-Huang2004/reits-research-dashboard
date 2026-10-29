@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-29T10:55:15+08:00",
+  "generated_at": "2026-10-29T13:49:25+08:00",
   "data_date": "2026-10-29",
-  "collected_at": "2026-10-29T10:54:51+08:00",
+  "collected_at": "2026-10-29T13:49:18+08:00",
   "version": 1,
   "snapshot_path": "data/ndrc_recommendations.json",
-  "snapshot_sha256": "b313050819ad0d1aba2739cf729c07c60114d39caeb307a46aef06fd16ecdb0e",
+  "snapshot_sha256": "465d32f4ceff3a007dfbf7132fd36da83e77e33dac94cd9e1076c62dd10275f5",
   "public_input_path": "data/public_reits.json",
-  "public_input_sha256": "fa0f8fb384b049ad894a7c2e1a0d7430d7640b4a15559fe3bc953a33391415f1",
+  "public_input_sha256": "677d7676d95f0ed90d5672a37a600e79daaf721bc7b09a4d4f87cd275a9e7b97",
   "source_versions": [
     {
       "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
@@ -22,10 +22,10 @@
         "reportRecommendStartTime": "",
         "reportRecommendEndTime": ""
       },
-      "retrieved_at": "2026-10-29T10:54:53+08:00",
+      "retrieved_at": "2026-10-29T13:49:20+08:00",
       "status": 200,
       "tls_verified": true,
-      "raw_path": "data/raw/ndrc/refresh/40809102144-1/page0001.json",
+      "raw_path": "data/raw/ndrc/refresh/40824761358-1/page0001.json",
       "sha256": "b9712cee1a4f030fd2556feb81305ae94614ec98b94551ca91a25313088b369f",
       "bytes": 9329
     },
@@ -43,10 +43,10 @@
         "reportRecommendStartTime": "",
         "reportRecommendEndTime": ""
       },
-      "retrieved_at": "2026-10-29T10:54:55+08:00",
+      "retrieved_at": "2026-10-29T13:49:22+08:00",
       "status": 200,
       "tls_verified": true,
-      "raw_path": "data/raw/ndrc/refresh/40809102144-1/page0002.json",
+      "raw_path": "data/raw/ndrc/refresh/40824761358-1/page0002.json",
       "sha256": "d4d033142754e2eabd876a9235ad453ea8e539aca2af0e24cfb67dc150a8f3ae",
       "bytes": 9200
     },
@@ -64,18 +64,18 @@
         "reportRecommendStartTime": "",
         "reportRecommendEndTime": ""
       },
-      "retrieved_at": "2026-10-29T10:54:57+08:00",
+      "retrieved_at": "2026-10-29T13:49:24+08:00",
       "status": 200,
       "tls_verified": true,
-      "raw_path": "data/raw/ndrc/refresh/40809102144-1/page0003.json",
+      "raw_path": "data/raw/ndrc/refresh/40824761358-1/page0003.json",
       "sha256": "8046de1fd8652f8f111de35273960177e92316a64c00f2c50f669b904bb86a8e",
       "bytes": 7293
     },
     {
       "path": "data/public_reits.json",
-      "sha256": "fa0f8fb384b049ad894a7c2e1a0d7430d7640b4a15559fe3bc953a33391415f1",
-      "date": "2026-10-28",
-      "updated_at": "2026-10-28T08:43:58+08:00"
+      "sha256": "677d7676d95f0ed90d5672a37a600e79daaf721bc7b09a4d4f87cd275a9e7b97",
+      "date": "2026-10-29",
+      "updated_at": "2026-10-29T13:42:40+08:00"
     },
     {
       "kind": "reviewed_matching_config",
@@ -107,14 +107,14 @@
     "negative_acceptance_intervals": 16
   },
   "source_manifest": {
-    "path": "data/source_manifest/ndrc/20261029-105451-854069.json",
-    "sha256": "972889fab4cdd19845d8f4e600b15387d666361537b95da832dcb69e136a6afe"
+    "path": "data/source_manifest/ndrc/20261029-134918-635484.json",
+    "sha256": "a443f8806e7f936bcca4520d466cc9882a0ff7e4a6eb02843a0b69ed26d83109"
   },
   "reviewed_workpaper": {
-    "path": "workpapers/ndrc/refresh/40809102144-1/collection/collection_reviewed_snapshot.json",
-    "sha256": "b313050819ad0d1aba2739cf729c07c60114d39caeb307a46aef06fd16ecdb0e"
+    "path": "workpapers/ndrc/refresh/40824761358-1/collection/collection_reviewed_snapshot.json",
+    "sha256": "465d32f4ceff3a007dfbf7132fd36da83e77e33dac94cd9e1076c62dd10275f5"
   },
-  "matching_audit_workpaper": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/ndrc/refresh/40809102144-1/collection/matching_audit.json",
+  "matching_audit_workpaper": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/ndrc/refresh/40824761358-1/collection/matching_audit.json",
   "outputs": [
     {
       "path": "outputs/ndrc/全部推荐及历史匹配_2026-10-29.csv",
