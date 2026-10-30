@@ -1,0 +1,387 @@
+// 特殊字符
+var specialChars = /[`~!@#$%^&*()_+<>?:"{}=.\/;'[\]]/g;
+
+// 发售与扩募
+var $reitsIssueList = $('.js_reitszqfxkm');
+
+if ($reitsIssueList.length) {
+  var $reitsIssueAKW = $('.js_reitsa_keyword');
+  $reitsIssueAKW.find('em.em-close').remove();
+  $reitsIssueAKW.find('.seach-mobile').attr('href', 'javascript:void(0);');
+  $reitsIssueList.parent().after('<div style="display:none;"><div class="pagination hide-mobile"></div><div class="hide-pc mobile-page"></div></div>');
+
+  // 发行阶段选项
+  var fundStageOption = [
+    { value: '', name: '全部'},
+    { value: '1', name: '首次发售' },
+    { value: '2', name: '扩募发售' }
+  ];
+
+  // 创建映射对象
+  var fundStageMap = fundStageOption.reduce(function(map, opt) {
+    map[opt.value] = opt.value === '' ? '' : opt.name;
+    return map;
+  }, {});
+
+  var fundTypeMap = {
+    '1': '定向扩募',
+    '2': '公开扩募',
+  };
+
+  // 设置标签文本为“发行阶段”
+  var $selectLabel = $reitsIssueAKW.find('.input-block label[for="select"]').parent();
+  $selectLabel.find('label[for="select"]').text('发行阶段');
+
+  // 设置时间提示词
+  $reitsIssueAKW.find('.input-block label[for="time"]').attr("class", "label_pc_show").text('日期');
+
+  // 构建下拉 HTML
+  var selectHtm = '';
+  $.each(fundStageOption, function (i, opt) {
+    selectHtm += '<option value="' + opt.value + '">' + opt.name + '</option>';
+  });
+
+  // 渲染 bootstrap-select
+  bootstrapSelect({
+    method: function () {
+      $(".reits_select")
+        .attr('title', "发行阶段")
+        .html(selectHtm)
+        .selectpicker("refresh")
+        .selectpicker("render");
+    }
+  });
+
+  // 全局参数对象
+  var issueObjkw = {
+    fundCode: '',
+    startDate: '',
+    endDate: '',
+    fundStage: ''
+  };
+
+  // 校验函数
+  function checkIssueParams(isMobile, $ele) {
+    var code = $.trim($reitsIssueAKW.find('#inputCode').val());
+    var startDate = $.trim($reitsIssueAKW.find('span.start input.calendarsection').val());
+    var endDate = $.trim($reitsIssueAKW.find('span.end input.calendarsection').val());
+    var fundStage = $.trim($reitsIssueAKW.find('.reits_select option:selected').val());
+
+    if (code == '' && startDate == '' && endDate == '' && fundStage == '') {
+      alert('请输入代码/扩位简称、发行阶段或日期');
+      return false;
+    }
+
+    if (code != '' && !reg_num.test(code)) {
+      alert("请根据智能提示选择证券代码后查询");
+      return false;
+    }
+
+    if (startDate && endDate) {
+      // get_num='/[^0-9]/gi'匹配所有不为数字的字符
+      if (startDate.replace(get_num, '') > endDate.replace(get_num, '')) {
+        alert('开始日期不能大于截至日期');
+        if (isMobile && $ele) {
+          $ele.val('');
+        }
+        return false;
+      }
+    } else if ((startDate && !endDate) || (!startDate && endDate)) { 
+      alert('请输入完整的日期范围');
+      if (isMobile && $ele) {
+        $ele.val('');
+      }
+      return false;
+    }
+
+
+    issueObjkw = {
+      fundCode: code,
+      startDate: startDate,
+      endDate: endDate,
+      fundStage: fundStage
+    };
+    return true;
+  }
+
+  // 移动端日期变更回调
+  getDataByChangeDate(function ($ele) {
+    if (checkIssueParams(true, $ele)) {
+      showReitsIssue(1)
+    }
+  });
+
+  // 数据加载函数
+  function showReitsIssue(page) {
+    page = Page.check(page, 'showReitsIssue');
+    if (page == null) return;
+
+    showloading();
+
+    ajaxFun({
+      url: sseQueryURL + 'commonSoaQuery.do',
+      datas: {
+        sqlId: 'REITS_FXYKM',
+        isPagination: true,
+        fundCode: issueObjkw.fundCode,
+        startDate: issueObjkw.startDate,
+        endDate: issueObjkw.endDate,
+        fundStage: issueObjkw.fundStage,
+        'pageHelp.pageSize': 25,
+        'pageHelp.pageNo': page
+      }
+    }, function (results) {
+      hideloading();
+
+      var res = results.result;
+      var htmlStr = [
+        '<thead><tr>',
+        '<th class="nowrap">代码</th>',
+        '<th class="name">扩位简称</th>',
+        '<th class="nowrap">发行阶段</th>',
+        '<th class="nowrap">扩募类型</th>',
+        '<th class="nowrap">发行起始日期</th>',
+        '<th class="nowrap">发行终止日期</th>',
+        '<th class="nowrap">上市日期</th>',
+        '<th class="text-right">价格（元）</th>',
+        '<th class="text-right">份数（亿份）</th>',
+        '</tr></thead><tbody>'
+      ];
+
+      if (res && res.length) {
+        for (var i = 0; i < res.length; i++) {
+          var v = res[i];
+          htmlStr.push(
+            '<tr>',
+            '<td class="nowrap">' + (v.fundCode || '-') + '</td>',//代码
+            '<td class="name">' + (v.fundExpansionAbbr || '-') + '</td>',//扩为简称
+            '<td class="nowrap">' + (fundStageMap[v.fundStage] || '-') + '</td>',//发行阶段
+            '<td class="nowrap">' + (fundTypeMap[v.fundType] || '-') + '</td>',//扩募类型
+            '<td class="nowrap">' + (v.startDate || '-') + '</td>',//发行起始日期
+            '<td class="nowrap">' + (v.endDate || '-') + '</td>',//发行终止日期
+            '<td class="nowrap">' + (v.listingDate || '-') + '</td>',//上市日期
+            '<td class="text-right">' + (v.salePrice ? v.salePrice : '-') + '</td>',//价格（元）
+            '<td class="text-right">' + (v.saleCopies || '-') + '</td>',//份数（亿份）
+            '</tr>'
+          );
+        }
+      } else {
+        htmlStr.push('<tr><td colspan="9"><div class="align-left">暂无数据</div></td></tr>');
+      }
+      htmlStr.push('</tbody>');
+
+      $reitsIssueList.html(htmlStr.join(''));
+      $reitsIssueAKW.find('.seach-mobile .js_date').html(results.pageHelp.total);
+      Page.createPage('.pagination', results.pageHelp.total, page, 'showReitsIssue', 25);
+      //搜索代码添加cookie
+      popularize.saveCpyIntoCookie($("#inputCode").val().trim(), $("#inputCode"), 1);
+    }, function (error) {
+      hideloading();
+    });
+  }
+
+  // PC 搜索
+  $reitsIssueAKW.find('.search').on('click', function () {
+    if (checkIssueParams()) {
+      showReitsIssue(1);
+    }
+  });
+
+  // 移动端执行
+  $reitsIssueAKW.find('.seach-mobile').on('click', function () {
+    closeSel();
+  });
+
+  // 输入框实时校验（移动端）
+  $('#inputCode').on('input propertychange', function () {
+    if ($('body').width() < 1000) {
+      var _code = $(this).val();
+      if (_code && !reg_num.test(_code)) {
+        $(this).addClass('inputcode-info').next().html('<i>*</i>请根据智能提示选择证券代码后查询').show();
+      } else {
+        issueObjkw.fundCode = _code;
+        $(this).removeClass('inputcode-info').next().html('');
+        showReitsIssue(1);
+      }
+    }
+  });
+  
+  // 移动端联想菜单点击事件
+  $reitsIssueAKW.on('click', '#js_autocomplete li a', function(e) {
+    if ($('body').width() < 1000) {
+      var fundCode = $(this).attr('id');
+      
+      if (fundCode && reg_num.test(fundCode)) {
+        issueObjkw.fundCode = fundCode;
+        $('#inputCode').val(fundCode).removeClass('inputcode-info').next().html('');
+        showReitsIssue(1);
+      }
+    }
+  });
+
+  // 下拉框变更（移动端）
+  $('.reits_select').on("changed.bs.select", function () {
+    if ($('body').width() < 1000) {
+      issueObjkw.fundStage = $(this).val();
+      showReitsIssue(1);
+    }
+  });
+
+  // 初始化：设置默认日期
+  var $startInput = $reitsIssueAKW.find('span.start input.calendarsection');
+  var $endInput = $reitsIssueAKW.find('span.end input.calendarsection');
+  
+  if (!$startInput.val() || !$endInput.val()) {
+    var tenYearsAgo = changeFormatDate(get_systemDate_global(), 0, 0, -10);
+    var today = get_systemDate_global();
+    
+    $startInput.val(tenYearsAgo);
+    $endInput.val(today);
+    
+    issueObjkw.startDate = tenYearsAgo;
+    issueObjkw.endDate = today;
+  }
+  // 初始化加载
+  showReitsIssue(1);
+}
+// 发售与扩募
+
+
+// 产品净值
+var $reitsNetvalueList = $('.js_reitszqfxjz');
+
+if ($reitsNetvalueList.length) {
+  var $reitsNetvalueAKW = $('.js_reitsa_keyword');
+  $reitsNetvalueAKW.find('em.em-close').remove();
+  $reitsNetvalueAKW.find('.seach-mobile').attr('href', 'javascript:void(0);')
+  $reitsNetvalueList.parent().after('<div style="display:none;"><div class="pagination hide-mobile"></div><div class="hide-pc mobile-page"></div></div>');
+
+  // 全局查询参数对象
+  var netvalueObjkw = {
+    fundCode: '',
+  };
+
+  // 校验参数函数
+  function checkNetvalueParams() {
+    var code = $.trim($reitsNetvalueAKW.find('#inputCode').val());
+
+    if (code == '') {
+      alert('请输入代码/扩位简称');
+      return false;
+    }
+
+    if (!reg_num.test(code)) {
+      alert("请根据智能提示选择证券代码后查询");
+      return false;
+    }
+
+    netvalueObjkw.fundCode = code;
+    return true;
+  }
+
+  // 获取净值列表
+  function showReitsNetvalue(page) {
+    page = Page.check(page, 'showReitsNetvalue');
+    if (page == null) return;
+
+    showloading();
+
+    ajaxFun({
+      url: sseQueryURL + 'commonSoaQuery.do',
+      datas: {
+        sqlId: 'REITS_JZ',
+        isPagination: true,
+        fundCode: netvalueObjkw.fundCode,
+        'pageHelp.pageSize': 25,
+        'pageHelp.pageNo': page
+      }
+    }, function (results) {
+      hideloading();
+
+      var res = results.result;
+      var htmlStr = [
+        '<thead><tr>',
+        '<th class="text-nowrap">代码</th>',
+        '<th class="text-nowrap">扩位简称</th>',
+        '<th class="text-nowrap">估值日期</th>',
+        '<th class="text-right">单位净值（元）</th>',
+        '</tr></thead><tbody>'
+      ];
+
+      if (res && res.length) {
+        for (var i = 0; i < res.length; i++) {
+          htmlStr.push(
+            '<tr>',
+            '<td class="text-nowrap">' + (res[i].fundCode || '-') + '</td>',
+            '<td class="text-nowrap">' + (res[i].secNameFull || '-') + '</td>',
+            '<td class="text-nowrap">' + (res[i].appraiseDate || '-') + '</td>',
+            '<td class="text-right">' + (res[i].fundUnitnetWorth ? res[i].fundUnitnetWorth.toFixed(3) : '0.000') + '</td>',
+            '</tr>'
+          );
+        }
+      } else {
+        htmlStr.push('<tr><td colspan="4"><div class="align-left">暂无数据</div></td></tr>');
+      }
+      htmlStr.push('</tbody>');
+
+      $reitsNetvalueList.html(htmlStr.join(''));
+
+      //$reitsNetvalueAKW.find('.seach-mobile').text('查看');
+      $reitsNetvalueAKW.find('.seach-mobile .js_date').html(results.pageHelp.total);
+      Page.createPage('.pagination', results.pageHelp.total, page, 'showReitsNetvalue', 25);
+      //搜索代码添加cookie
+      popularize.saveCpyIntoCookie($("#inputCode").val().trim(), $("#inputCode"), 1);
+    }, function (error) {
+      hideloading();
+    });
+  }
+
+  // PC 端搜索按钮
+  $reitsNetvalueAKW.find('.search').on('click', function () {
+    if (checkNetvalueParams()) {
+      showReitsNetvalue(1);
+    }
+  });
+
+  // 移动端搜索按钮（如有）
+  $reitsNetvalueAKW.find('.seach-mobile').on('click', function () {
+    if (checkNetvalueParams()) {
+      showReitsNetvalue(1);
+      // 如果有 closeSel 函数，可调用关闭筛选框
+      closeSel();
+    }
+  });
+
+  // 输入框实时校验（移动端）
+  $('#inputCode').on('input propertychange', function () {
+    if ($('body').width() < 1000) {
+      var _code = $(this).val();
+      if (_code && !reg_num.test(_code)) {
+        $(this).addClass('inputcode-info').next().html('<i>*</i>请根据智能提示选择证券代码后查询').show();
+      } else {
+        netvalueObjkw.fundCode = _code;
+        $(this).removeClass('inputcode-info').next().html('');
+        showReitsNetvalue(1);
+      }
+    }
+  });
+
+  // 移动端联想菜单点击事件
+  $reitsNetvalueAKW.on('click', '#js_autocomplete li a', function(e) {
+    if ($('body').width() < 1000) {
+      var fundCode = $(this).attr('id');
+      
+      if (fundCode && reg_num.test(fundCode)) {
+        netvalueObjkw.fundCode = fundCode;
+        $('#inputCode').val(fundCode).removeClass('inputcode-info').next().html('');
+        showReitsNetvalue(1);
+      } else {
+        $(this).addClass('inputcode-info').next().html('<i>*</i>请根据智能提示选择证券代码后查询').show();
+      }
+    }
+  });
+
+  // 页面初始化加载
+  showReitsNetvalue(1);
+}
+// END 产品净值
