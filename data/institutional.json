@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "date": "2026-10-30",
-  "updated_at": "2026-10-30T09:18:17+08:00",
+  "date": "2026-10-31",
+  "updated_at": "2026-10-31T13:29:02+08:00",
   "source_status": {
     "SSE": {
       "ok": true,
@@ -61,17 +61,14 @@
     "count": 138
   },
   "changes": {
-    "added_ids": [
-      "SSE_7c85e7494600443a801eec475d41bca8",
-      "SSE_e02c1820b2df409abbea238fd9d57048"
-    ],
+    "added_ids": [],
     "missing_ids": []
   },
   "quality": {
     "duplicate_ids": 0,
     "unknown_classification": 13,
     "detail_warnings": [],
-    "content_sha256": "c2b8031ef7d55bee31ad08ea68b6fdaf354139ec8a07ed8bb32ccab0bfdc8be1",
+    "content_sha256": "0741a2e55db3189bb4b8bd4bbd5a31f709909da7db7e058931b5ad29b98796c5",
     "classification_counts": {
       "verified": 27,
       "inferred": 6,
@@ -82,11 +79,119 @@
     "link_validation": {
       "verified": 138,
       "total": 138,
-      "checked_at": "2026-10-30T09:20:34+08:00",
+      "checked_at": "2026-10-31T13:31:52+08:00",
       "method": "official_detail_identity_and_official_page_route"
     }
   },
   "items": [
+    {
+      "id": "SSE_333e6f0072254077920d65c6527050eb",
+      "source_id": "333e6f0072254077920d65c6527050eb",
+      "ex": "上交所",
+      "name": "华泰资管-财通-瑞安新天地持有型不动产资产支持专项计划",
+      "writer": "华泰证券（上海）资产管理有限公司",
+      "mgr": "华泰资管",
+      "origin": "武汉商盈房地产管理有限公司,武汉瑞安天地房地产发展有限公司",
+      "amt": 57.92,
+      "status": "2",
+      "up": "2026-10-30",
+      "acc": "2026-05-27",
+      "match_keywords": [
+        "持有型不动产"
+      ],
+      "query_keywords": [
+        "持有型不动产"
+      ],
+      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=333e6f0072254077920d65c6527050eb",
+      "source_kind": "project_page",
+      "link_status": "verified",
+      "is_expansion": false,
+      "archive_status": "current",
+      "product_type": "institutional",
+      "ptype": "产权类",
+      "psub": "消费",
+      "pflag": "",
+      "pnote": "睿思网报道该专项计划以武汉新天地商业为核心底层资产，范围为新天地街区、壹方南馆及北馆；资产方官网证实这三处为零售餐饮购物商业。未找到专项计划官方发行文件直接确认入池范围，归为待核实的消费类。",
+      "classification_source": "inferred",
+      "classification_confidence": "likely",
+      "research_field_sources": {
+        "origin": [
+          {
+            "title": "上交所项目基本信息",
+            "url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=333e6f0072254077920d65c6527050eb",
+            "api_fields": {
+              "FULL_NAME": "武汉商盈房地产管理有限公司,武汉瑞安天地房地产发展有限公司"
+            },
+            "checked_at": "2026-10-31T13:28:31+08:00",
+            "source_updated_at": "2026-10-30",
+            "source_method": "official_api"
+          }
+        ],
+        "writer": [
+          {
+            "title": "上交所项目基本信息",
+            "url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=333e6f0072254077920d65c6527050eb",
+            "api_fields": {
+              "WRITER_NAME": "华泰证券（上海）资产管理有限公司"
+            },
+            "checked_at": "2026-10-31T13:28:31+08:00",
+            "source_updated_at": "2026-10-30",
+            "source_method": "official_api"
+          }
+        ]
+      },
+      "num": "1",
+      "classification_evidence": [
+        {
+          "title": "武汉新天地57.92亿元机构间REIT获上交所受理 瑞安加速存量资产证券化（睿思网，2026-05-27）",
+          "url": "https://www.sohu.com/a/1028447863_121726219"
+        },
+        {
+          "title": "武汉新天地官方项目介绍（新天地资产方）",
+          "url": "https://www.xintiandi.com/project/xintiandi-wuhan/"
+        }
+      ],
+      "classification_reviewed_at": "2026-10-14",
+      "underlying_assets": "待官方核实：武汉新天地街区、壹方南馆、壹方北馆",
+      "approved_date": null,
+      "issued_date": null,
+      "is_issued": null,
+      "field_availability": {
+        "asset_type": {
+          "status": "unverified",
+          "reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=333e6f0072254077920d65c6527050eb",
+          "checked_at": "2026-10-15T11:44:10+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。"
+        },
+        "approved_date": {
+          "status": "unverified",
+          "reason": "官方详情更新日期并非通过日期；需项目审核时间线或明确通过日期的官方文件。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=333e6f0072254077920d65c6527050eb",
+          "checked_at": "2026-10-15T11:44:10+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "尚未取得明确记载审核通过日的官方文件。"
+        },
+        "issued_date": {
+          "status": "unverified",
+          "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=333e6f0072254077920d65c6527050eb",
+          "checked_at": "2026-10-15T11:44:10+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "尚未取得本次申报对应的发行或设立日期。"
+        },
+        "is_issued": {
+          "status": "unverified",
+          "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。 已全量检索上交所26652条ABS证券简称主表，取得0条候选证券要素；未取得完全匹配本申报事件的已发行证据。",
+          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=333e6f0072254077920d65c6527050eb",
+          "checked_at": "2026-10-15T11:44:10+08:00",
+          "original_status": "not_obtained_after_official_source_review",
+          "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
+        }
+      },
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
+    },
     {
       "id": "SSE_7c85e7494600443a801eec475d41bca8",
       "source_id": "7c85e7494600443a801eec475d41bca8",
@@ -125,7 +230,7 @@
             "api_fields": {
               "FULL_NAME": "石家庄市生物医药园发展集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-29",
             "source_method": "official_api"
           }
@@ -137,17 +242,17 @@
             "api_fields": {
               "WRITER_NAME": "上海国泰海通证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-29",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "1",
+      "num": "2",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_86529e1aebe749cfb446ea71c6bace17",
@@ -187,7 +292,7 @@
             "api_fields": {
               "FULL_NAME": "山东华瑞园城市运营科技有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-29",
             "source_method": "official_api"
           }
@@ -199,17 +304,17 @@
             "api_fields": {
               "WRITER_NAME": "华金证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-29",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "2",
+      "num": "3",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_e02c1820b2df409abbea238fd9d57048",
@@ -249,7 +354,7 @@
             "api_fields": {
               "FULL_NAME": "上海佳初企业管理咨询有限公司,芜湖朗易一号股权投资合伙企业（有限合伙）"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-29",
             "source_method": "official_api"
           }
@@ -261,17 +366,17 @@
             "api_fields": {
               "WRITER_NAME": "申万宏源证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-29",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "3",
+      "num": "4",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_98a6f03d34a54c3789e4dbe5b4a40268",
@@ -311,7 +416,7 @@
             "api_fields": {
               "FULL_NAME": "太仓市城市建设投资集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:49+08:00",
+            "checked_at": "2026-10-31T13:28:34+08:00",
             "source_updated_at": "2026-10-29",
             "source_method": "official_api"
           }
@@ -323,17 +428,17 @@
             "api_fields": {
               "WRITER_NAME": "东吴证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:49+08:00",
+            "checked_at": "2026-10-31T13:28:34+08:00",
             "source_updated_at": "2026-10-29",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "4",
+      "num": "5",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_73d9c707cf444f50a06171cfa027366b",
@@ -373,7 +478,7 @@
             "api_fields": {
               "FULL_NAME": "新城万博置业有限公司,新城控股集团企业管理有限公司,上海泉恒企业管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-29",
             "source_method": "official_api"
           }
@@ -385,17 +490,17 @@
             "api_fields": {
               "WRITER_NAME": "国金证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-29",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "5",
+      "num": "6",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_99ad63b648ac49cba77567407e2aeef7",
@@ -435,7 +540,7 @@
             "api_fields": {
               "FULL_NAME": "北京首创生态环保集团股份有限公司,石河子泽众水务有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-28",
             "source_method": "official_api"
           }
@@ -447,13 +552,13 @@
             "api_fields": {
               "WRITER_NAME": "富国资产管理（上海）有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-28",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "6",
+      "num": "7",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
@@ -499,7 +604,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_250c88937e5e4dfb8259590e3c34210d",
@@ -539,7 +644,7 @@
             "api_fields": {
               "FULL_NAME": "嘉兴峦茂企业管理合伙企业（有限合伙）"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-27",
             "source_method": "official_api"
           }
@@ -551,13 +656,13 @@
             "api_fields": {
               "WRITER_NAME": "申万宏源证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-27",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "7",
+      "num": "8",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
@@ -603,7 +708,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_89fded3ba64b42479710a8b62f9be34a",
@@ -643,7 +748,7 @@
             "api_fields": {
               "FULL_NAME": "中国电建地产集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:49+08:00",
+            "checked_at": "2026-10-31T13:28:34+08:00",
             "source_updated_at": "2026-10-27",
             "source_method": "official_api"
           }
@@ -655,13 +760,13 @@
             "api_fields": {
               "WRITER_NAME": "上海国泰海通证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:49+08:00",
+            "checked_at": "2026-10-31T13:28:34+08:00",
             "source_updated_at": "2026-10-27",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "8",
+      "num": "9",
       "classification_evidence": [
         {
           "title": "交易所项目身份与审核信息（未披露具体底层资产）",
@@ -707,7 +812,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_99AA60238C3B4E2487F17211D0D528DB",
@@ -748,7 +853,7 @@
             "api_fields": {
               "fxr": "成都产业功能区投资运营集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:54+08:00",
+            "checked_at": "2026-10-31T13:28:40+08:00",
             "source_updated_at": "2026-10-27",
             "source_method": "official_api"
           }
@@ -761,13 +866,13 @@
               "cxsqc": "中国国际金融股份有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:17:54+08:00",
+            "checked_at": "2026-10-31T13:28:40+08:00",
             "source_updated_at": "2026-10-27",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "9",
+      "num": "10",
       "classification_evidence": [
         {
           "title": "交易所项目身份与审核信息（未披露具体底层资产）",
@@ -813,7 +918,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_669a64d28c8b46ffa3a441b290c6e360",
@@ -853,7 +958,7 @@
             "api_fields": {
               "FULL_NAME": "北京亦庄投资控股有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-27",
             "source_method": "official_api"
           }
@@ -865,13 +970,13 @@
             "api_fields": {
               "WRITER_NAME": "中信证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-27",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "10",
+      "num": "11",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
@@ -917,7 +1022,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_cad8b4866e174600b96d717693954bf4",
@@ -957,7 +1062,7 @@
             "api_fields": {
               "FULL_NAME": "义乌市市场发展集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-27",
             "source_method": "official_api"
           }
@@ -969,13 +1074,13 @@
             "api_fields": {
               "WRITER_NAME": "中信证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-27",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "11",
+      "num": "12",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
@@ -1021,7 +1126,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_DE9431533C974EA9949CA5453FE201BD",
@@ -1062,7 +1167,7 @@
             "api_fields": {
               "fxr": "蜀道资本控股集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:55+08:00",
+            "checked_at": "2026-10-31T13:28:40+08:00",
             "source_updated_at": "2026-10-26",
             "source_method": "official_api"
           }
@@ -1075,13 +1180,13 @@
               "cxsqc": "平安证券股份有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:17:55+08:00",
+            "checked_at": "2026-10-31T13:28:40+08:00",
             "source_updated_at": "2026-10-26",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "12",
+      "num": "13",
       "classification_evidence": [
         {
           "title": "蜀道资本集团某商业不动产机构间REITs/权益并表类REITs项目信用评级机构询比采购公告",
@@ -1135,7 +1240,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_8b9fc7d1b17d4533aada88572456d221",
@@ -1175,7 +1280,7 @@
             "api_fields": {
               "FULL_NAME": "天津临港新动能经济开发有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-26",
             "source_method": "official_api"
           }
@@ -1187,13 +1292,13 @@
             "api_fields": {
               "WRITER_NAME": "建信资本管理有限责任公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-26",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "13",
+      "num": "14",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
@@ -1239,15 +1344,15 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_eab6125fa55448c1b04a9ec2cd3c1340",
       "source_id": "eab6125fa55448c1b04a9ec2cd3c1340",
       "ex": "上交所",
       "name": "东兴证券-兰州热力集团有限公司持有型不动产资产支持专项计划",
-      "writer": "东兴证券股份有限公司",
-      "mgr": "东兴证券",
+      "writer": "中国国际金融股份有限公司",
+      "mgr": "中金公司",
       "origin": "兰州热力集团有限公司",
       "amt": 10.71,
       "status": "1",
@@ -1279,7 +1384,7 @@
             "api_fields": {
               "FULL_NAME": "兰州热力集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-23",
             "source_method": "official_api"
           }
@@ -1289,19 +1394,19 @@
             "title": "上交所项目基本信息",
             "url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=eab6125fa55448c1b04a9ec2cd3c1340",
             "api_fields": {
-              "WRITER_NAME": "东兴证券股份有限公司"
+              "WRITER_NAME": "中国国际金融股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-23",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "14",
+      "num": "15",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_213e64e05b2a4db8a98568e1740b5101",
@@ -1341,7 +1446,7 @@
             "api_fields": {
               "FULL_NAME": "铜陵市综合交通投资集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:49+08:00",
+            "checked_at": "2026-10-31T13:28:34+08:00",
             "source_updated_at": "2026-10-23",
             "source_method": "official_api"
           }
@@ -1353,13 +1458,13 @@
             "api_fields": {
               "WRITER_NAME": "国金证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:49+08:00",
+            "checked_at": "2026-10-31T13:28:34+08:00",
             "source_updated_at": "2026-10-23",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "15",
+      "num": "16",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
@@ -1405,7 +1510,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_985324c17575494897af9b1b09bd780b",
@@ -1445,7 +1550,7 @@
             "api_fields": {
               "FULL_NAME": "上海城开（集团）有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-23",
             "source_method": "official_api"
           }
@@ -1457,13 +1562,13 @@
             "api_fields": {
               "WRITER_NAME": "上海国泰海通证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-23",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "16",
+      "num": "17",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
@@ -1509,7 +1614,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_a3e22cf1373744618ad63ca92b07f5aa",
@@ -1549,7 +1654,7 @@
             "api_fields": {
               "FULL_NAME": "济高科技产业有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-23",
             "source_method": "official_api"
           }
@@ -1561,13 +1666,13 @@
             "api_fields": {
               "WRITER_NAME": "上海国泰海通证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-23",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "17",
+      "num": "18",
       "classification_evidence": [
         {
           "title": "上海证券交易所：国君资管-济高控股持有型不动产资产支持专项计划项目页",
@@ -1614,7 +1719,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_9F01207B6D5E4CF3B719B5CE28B9B791",
@@ -1655,7 +1760,7 @@
             "api_fields": {
               "fxr": "江苏盐城市清洁能源发展股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:56+08:00",
+            "checked_at": "2026-10-31T13:28:41+08:00",
             "source_updated_at": "2026-10-22",
             "source_method": "official_api"
           }
@@ -1668,17 +1773,17 @@
               "cxsqc": "华泰证券(上海）资产管理有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:17:56+08:00",
+            "checked_at": "2026-10-31T13:28:41+08:00",
             "source_updated_at": "2026-10-22",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "18",
+      "num": "19",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_678579d5e0c24a459d376a9c57bb6163",
@@ -1718,7 +1823,7 @@
             "api_fields": {
               "FULL_NAME": "昆山象嘉企业咨询管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-22",
             "source_method": "official_api"
           }
@@ -1730,13 +1835,13 @@
             "api_fields": {
               "WRITER_NAME": "中信证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-22",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "19",
+      "num": "20",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
@@ -1782,7 +1887,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_48af0fdb0e8b47c49b923f11f5e1431b",
@@ -1822,7 +1927,7 @@
             "api_fields": {
               "FULL_NAME": "中国铁建投资集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-21",
             "source_method": "official_api"
           }
@@ -1834,13 +1939,13 @@
             "api_fields": {
               "WRITER_NAME": "华泰证券（上海）资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-21",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "20",
+      "num": "21",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
@@ -1886,7 +1991,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_965c1753f47b479bb403802dd6598495",
@@ -1926,7 +2031,7 @@
             "api_fields": {
               "FULL_NAME": "北京世纪互联宽带数据中心有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-21",
             "source_method": "official_api"
           }
@@ -1938,13 +2043,13 @@
             "api_fields": {
               "WRITER_NAME": "国金证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-21",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "21",
+      "num": "22",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
@@ -1990,7 +2095,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_0af8d41233494350aa7aea124071b93a",
@@ -2030,7 +2135,7 @@
             "api_fields": {
               "FULL_NAME": "青海黄河上游水电开发有限责任公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-21",
             "source_method": "official_api"
           }
@@ -2042,13 +2147,13 @@
             "api_fields": {
               "WRITER_NAME": "中信证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-21",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "22",
+      "num": "23",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
@@ -2094,7 +2199,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_72429c4ccc1d4ad0978aaa8a5ca9fe39",
@@ -2134,7 +2239,7 @@
             "api_fields": {
               "FULL_NAME": "正泰安能数字能源（浙江）股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-21",
             "source_method": "official_api"
           }
@@ -2146,13 +2251,13 @@
             "api_fields": {
               "WRITER_NAME": "财通证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-21",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "23",
+      "num": "24",
       "approved_date": null,
       "issued_date": null,
       "is_issued": null,
@@ -2198,7 +2303,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_9b728f78214d433483b3d56d33e731ab",
@@ -2238,7 +2343,7 @@
             "api_fields": {
               "FULL_NAME": "中金数据集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-21",
             "source_method": "official_api"
           }
@@ -2250,13 +2355,13 @@
             "api_fields": {
               "WRITER_NAME": "华泰证券（上海）资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-21",
             "source_method": "official_api"
           }
         ]
       },
-      "num": "24",
+      "num": "25",
       "classification_evidence": [
         {
           "title": "40.24亿！中金数据IDC机构间REIT获上交所受理，算力资产证券化扩容提速",
@@ -2309,115 +2414,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
-    },
-    {
-      "id": "SSE_333e6f0072254077920d65c6527050eb",
-      "source_id": "333e6f0072254077920d65c6527050eb",
-      "ex": "上交所",
-      "name": "华泰资管-财通-瑞安新天地持有型不动产资产支持专项计划",
-      "writer": "华泰证券（上海）资产管理有限公司",
-      "mgr": "华泰资管",
-      "origin": "武汉商盈房地产管理有限公司,武汉瑞安天地房地产发展有限公司",
-      "amt": 57.92,
-      "status": "2",
-      "up": "2026-10-21",
-      "acc": "2026-05-27",
-      "match_keywords": [
-        "持有型不动产"
-      ],
-      "query_keywords": [
-        "持有型不动产"
-      ],
-      "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=333e6f0072254077920d65c6527050eb",
-      "source_kind": "project_page",
-      "link_status": "verified",
-      "is_expansion": false,
-      "archive_status": "current",
-      "product_type": "institutional",
-      "ptype": "产权类",
-      "psub": "消费",
-      "pflag": "",
-      "pnote": "睿思网报道该专项计划以武汉新天地商业为核心底层资产，范围为新天地街区、壹方南馆及北馆；资产方官网证实这三处为零售餐饮购物商业。未找到专项计划官方发行文件直接确认入池范围，归为待核实的消费类。",
-      "classification_source": "inferred",
-      "classification_confidence": "likely",
-      "research_field_sources": {
-        "origin": [
-          {
-            "title": "上交所项目基本信息",
-            "url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=333e6f0072254077920d65c6527050eb",
-            "api_fields": {
-              "FULL_NAME": "武汉商盈房地产管理有限公司,武汉瑞安天地房地产发展有限公司"
-            },
-            "checked_at": "2026-10-30T09:17:46+08:00",
-            "source_updated_at": "2026-10-21",
-            "source_method": "official_api"
-          }
-        ],
-        "writer": [
-          {
-            "title": "上交所项目基本信息",
-            "url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=333e6f0072254077920d65c6527050eb",
-            "api_fields": {
-              "WRITER_NAME": "华泰证券（上海）资产管理有限公司"
-            },
-            "checked_at": "2026-10-30T09:17:46+08:00",
-            "source_updated_at": "2026-10-21",
-            "source_method": "official_api"
-          }
-        ]
-      },
-      "num": "25",
-      "classification_evidence": [
-        {
-          "title": "武汉新天地57.92亿元机构间REIT获上交所受理 瑞安加速存量资产证券化（睿思网，2026-05-27）",
-          "url": "https://www.sohu.com/a/1028447863_121726219"
-        },
-        {
-          "title": "武汉新天地官方项目介绍（新天地资产方）",
-          "url": "https://www.xintiandi.com/project/xintiandi-wuhan/"
-        }
-      ],
-      "classification_reviewed_at": "2026-10-14",
-      "underlying_assets": "待官方核实：武汉新天地街区、壹方南馆、壹方北馆",
-      "approved_date": null,
-      "issued_date": null,
-      "is_issued": null,
-      "field_availability": {
-        "asset_type": {
-          "status": "unverified",
-          "reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=333e6f0072254077920d65c6527050eb",
-          "checked_at": "2026-10-15T11:44:10+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "本项目官方申报详情及公开附件接口未提供资产清单/明确资产分类；未取得能够完全对应本申报批次的公开资产披露，不以项目名称或同主体其他计划代替资产清单。"
-        },
-        "approved_date": {
-          "status": "unverified",
-          "reason": "官方详情更新日期并非通过日期；需项目审核时间线或明确通过日期的官方文件。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=333e6f0072254077920d65c6527050eb",
-          "checked_at": "2026-10-15T11:44:10+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "尚未取得明确记载审核通过日的官方文件。"
-        },
-        "issued_date": {
-          "status": "unverified",
-          "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=333e6f0072254077920d65c6527050eb",
-          "checked_at": "2026-10-15T11:44:10+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "尚未取得本次申报对应的发行或设立日期。"
-        },
-        "is_issued": {
-          "status": "unverified",
-          "reason": "当前项目详情仅披露申报审核状态，未取得该申报事件对应的实际发行、成立或挂牌证据；不以审核通过推定已发行，亦不因未取得证据判为未发行。 已全量检索上交所26652条ABS证券简称主表，取得0条候选证券要素；未取得完全匹配本申报事件的已发行证据。",
-          "source_url": "https://bond.sse.com.cn/bridge/information/index_detail.shtml?bound_id=333e6f0072254077920d65c6527050eb",
-          "checked_at": "2026-10-15T11:44:10+08:00",
-          "original_status": "not_obtained_after_official_source_review",
-          "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
-        }
-      },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_CA98A72685014BA5BC8F18E5D376FF30",
@@ -2520,7 +2517,7 @@
             "api_fields": {
               "fxr": "长春高新技术产业（集团）股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:57+08:00",
+            "checked_at": "2026-10-31T13:28:42+08:00",
             "source_updated_at": "2026-10-20",
             "source_method": "official_api"
           }
@@ -2533,7 +2530,7 @@
               "cxsqc": "平安证券股份有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:17:57+08:00",
+            "checked_at": "2026-10-31T13:28:42+08:00",
             "source_updated_at": "2026-10-20",
             "source_method": "official_api"
           }
@@ -2583,7 +2580,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_f112c7774ea84dbea54e17bdb33895b5",
@@ -2697,7 +2694,7 @@
             "api_fields": {
               "FULL_NAME": "锦欣生殖医疗集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-20",
             "source_method": "official_api"
           }
@@ -2709,7 +2706,7 @@
             "api_fields": {
               "WRITER_NAME": "中国国际金融股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-20",
             "source_method": "official_api"
           }
@@ -2760,7 +2757,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_a94c118f910c46fbacfd7f4139a90685",
@@ -2800,7 +2797,7 @@
             "api_fields": {
               "FULL_NAME": "张家口崇礼山水旅游开发有限公司"
             },
-            "checked_at": "2026-10-30T09:17:49+08:00",
+            "checked_at": "2026-10-31T13:28:34+08:00",
             "source_updated_at": "2026-10-20",
             "source_method": "official_api"
           }
@@ -2812,7 +2809,7 @@
             "api_fields": {
               "WRITER_NAME": "首创证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:49+08:00",
+            "checked_at": "2026-10-31T13:28:34+08:00",
             "source_updated_at": "2026-10-20",
             "source_method": "official_api"
           }
@@ -2864,7 +2861,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_2A6C5D1546094747BF3B83B1EF7DEB55",
@@ -2905,7 +2902,7 @@
             "api_fields": {
               "fxr": "广东韶能集团股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:58+08:00",
+            "checked_at": "2026-10-31T13:28:43+08:00",
             "source_updated_at": "2026-10-19",
             "source_method": "official_api"
           }
@@ -2918,7 +2915,7 @@
               "cxsqc": "平安证券股份有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:17:58+08:00",
+            "checked_at": "2026-10-31T13:28:43+08:00",
             "source_updated_at": "2026-10-19",
             "source_method": "official_api"
           }
@@ -2970,7 +2967,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_202b52b7b6e64a83b5797db0b824c335",
@@ -3010,7 +3007,7 @@
             "api_fields": {
               "FULL_NAME": "山东高速基础设施建设有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-16",
             "source_method": "official_api"
           }
@@ -3022,7 +3019,7 @@
             "api_fields": {
               "WRITER_NAME": "上海国泰海通证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-16",
             "source_method": "official_api"
           }
@@ -3074,7 +3071,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_6abfda7406914747b4d7d408f34a5229",
@@ -3114,7 +3111,7 @@
             "api_fields": {
               "FULL_NAME": "福建至善伏安新能源投资有限公司"
             },
-            "checked_at": "2026-10-30T09:17:49+08:00",
+            "checked_at": "2026-10-31T13:28:34+08:00",
             "source_updated_at": "2026-10-15",
             "source_method": "official_api"
           }
@@ -3126,7 +3123,7 @@
             "api_fields": {
               "WRITER_NAME": "国联证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:49+08:00",
+            "checked_at": "2026-10-31T13:28:34+08:00",
             "source_updated_at": "2026-10-15",
             "source_method": "official_api"
           }
@@ -3178,7 +3175,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_36cc6e3d2d624fc588a9afdf41ec3f01",
@@ -3218,7 +3215,7 @@
             "api_fields": {
               "FULL_NAME": "佳县远宏润新能源有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-15",
             "source_method": "official_api"
           }
@@ -3230,7 +3227,7 @@
             "api_fields": {
               "WRITER_NAME": "中信证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-15",
             "source_method": "official_api"
           }
@@ -3282,7 +3279,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_6b2a6d1c1bad4942a37dbf96c33dd426",
@@ -3322,7 +3319,7 @@
             "api_fields": {
               "FULL_NAME": "长沙麓谷实业发展股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-14",
             "source_method": "official_api"
           }
@@ -3334,7 +3331,7 @@
             "api_fields": {
               "WRITER_NAME": "中国国际金融股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-14",
             "source_method": "official_api"
           }
@@ -3386,7 +3383,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_5047c4b973dd4728b7c50f1a0db46101",
@@ -3426,7 +3423,7 @@
             "api_fields": {
               "FULL_NAME": "建万（北京）住房租赁投资基金（有限合伙）,建信（北京）投资住房租赁一号不动产私募投资基金"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-14",
             "source_method": "official_api"
           }
@@ -3438,7 +3435,7 @@
             "api_fields": {
               "WRITER_NAME": "中国国际金融股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-14",
             "source_method": "official_api"
           }
@@ -3490,7 +3487,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_c033fa493960437c951b59a5e3a8ef37",
@@ -3530,7 +3527,7 @@
             "api_fields": {
               "FULL_NAME": "喜悦零售物业（香港）有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-13",
             "source_method": "official_api"
           }
@@ -3542,7 +3539,7 @@
             "api_fields": {
               "WRITER_NAME": "兴证证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-13",
             "source_method": "official_api"
           }
@@ -3594,7 +3591,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_5CCD030CB38E4250904A2C05D85E0342",
@@ -3635,7 +3632,7 @@
             "api_fields": {
               "fxr": "宁波光合盈新能源科技有限公司,宁波缇合光新能源科技有限公司,深圳通缇瑞盈新能源科技有限公司,宁波普缇瑞盈新能源科技有限公司"
             },
-            "checked_at": "2026-10-30T09:18:13+08:00",
+            "checked_at": "2026-10-31T13:28:58+08:00",
             "source_updated_at": "2026-10-12",
             "source_method": "official_api"
           }
@@ -3648,7 +3645,7 @@
               "cxsqc": "国金证券资产管理有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:13+08:00",
+            "checked_at": "2026-10-31T13:28:58+08:00",
             "source_updated_at": "2026-10-12",
             "source_method": "official_api"
           }
@@ -3700,7 +3697,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_d8eaddb351604e13b2b0807d0ee4c806",
@@ -3740,7 +3737,7 @@
             "api_fields": {
               "FULL_NAME": "上海金地威新实业有限公司,深圳威宏管理咨询合伙企业（有限合伙）"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-12",
             "source_method": "official_api"
           }
@@ -3752,7 +3749,7 @@
             "api_fields": {
               "WRITER_NAME": "太平洋资产管理有限责任公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-10-12",
             "source_method": "official_api"
           }
@@ -3811,7 +3808,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_8A1E09D85832487E8F5354EB6D049C8D",
@@ -3852,7 +3849,7 @@
             "api_fields": {
               "fxr": "合肥四牡新能源投资有限公司"
             },
-            "checked_at": "2026-10-30T09:18:14+08:00",
+            "checked_at": "2026-10-31T13:28:59+08:00",
             "source_updated_at": "2026-09-29",
             "source_method": "official_api"
           }
@@ -3865,7 +3862,7 @@
               "cxsqc": "中信建投证券股份有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:14+08:00",
+            "checked_at": "2026-10-31T13:28:59+08:00",
             "source_updated_at": "2026-09-29",
             "source_method": "official_api"
           }
@@ -3917,7 +3914,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_e8bd42e5d15a4b2c91de12e7eb03c44f",
@@ -3957,7 +3954,7 @@
             "api_fields": {
               "FULL_NAME": "广西崇左市城建资产运营投资管理集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-09-29",
             "source_method": "official_api"
           }
@@ -3969,7 +3966,7 @@
             "api_fields": {
               "WRITER_NAME": "国金证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-09-29",
             "source_method": "official_api"
           }
@@ -4021,7 +4018,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_cd269186a1344b0a92627dbaeb6503f7",
@@ -4061,7 +4058,7 @@
             "api_fields": {
               "FULL_NAME": "润邦达美物流股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-09-24",
             "source_method": "official_api"
           }
@@ -4073,7 +4070,7 @@
             "api_fields": {
               "WRITER_NAME": "华泰证券（上海）资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-09-24",
             "source_method": "official_api"
           }
@@ -4125,7 +4122,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_5880b085aa2247f58f4945eadb3f8908",
@@ -4165,7 +4162,7 @@
             "api_fields": {
               "FULL_NAME": "海盐县国有产业投资集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:49+08:00",
+            "checked_at": "2026-10-31T13:28:34+08:00",
             "source_updated_at": "2026-09-21",
             "source_method": "official_api"
           }
@@ -4177,7 +4174,7 @@
             "api_fields": {
               "WRITER_NAME": "上海国泰海通证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:49+08:00",
+            "checked_at": "2026-10-31T13:28:34+08:00",
             "source_updated_at": "2026-09-21",
             "source_method": "official_api"
           }
@@ -4229,7 +4226,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_44ed160bc4384974bffcf2a84309e7c9",
@@ -4269,7 +4266,7 @@
             "api_fields": {
               "FULL_NAME": "中国铁建大桥工程局集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-09-21",
             "source_method": "official_api"
           }
@@ -4281,7 +4278,7 @@
             "api_fields": {
               "WRITER_NAME": "招商证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-09-21",
             "source_method": "official_api"
           }
@@ -4333,7 +4330,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_E64643B78E7A47EBBC6F26E4E4AF971C",
@@ -4374,7 +4371,7 @@
             "api_fields": {
               "fxr": "北京开弦新能源有限责任公司"
             },
-            "checked_at": "2026-10-30T09:18:15+08:00",
+            "checked_at": "2026-10-31T13:29:00+08:00",
             "source_updated_at": "2026-09-18",
             "source_method": "official_api"
           }
@@ -4387,7 +4384,7 @@
               "cxsqc": "兴证证券资产管理有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:15+08:00",
+            "checked_at": "2026-10-31T13:29:00+08:00",
             "source_updated_at": "2026-09-18",
             "source_method": "official_api"
           }
@@ -4439,7 +4436,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_c4975169bdd543c59e3a5e1f4734cff9",
@@ -4479,7 +4476,7 @@
             "api_fields": {
               "FULL_NAME": "水发上善集团有限公司,山东水发天源水务集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-09-04",
             "source_method": "official_api"
           }
@@ -4491,7 +4488,7 @@
             "api_fields": {
               "WRITER_NAME": "中信建投证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-09-04",
             "source_method": "official_api"
           }
@@ -4543,7 +4540,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_02eb04f737e3491487fca3da90ab718c",
@@ -4583,7 +4580,7 @@
             "api_fields": {
               "FULL_NAME": "西安曲江金控实业投资（集团）有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-09-03",
             "source_method": "official_api"
           }
@@ -4595,7 +4592,7 @@
             "api_fields": {
               "WRITER_NAME": "开源证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-09-03",
             "source_method": "official_api"
           }
@@ -4651,7 +4648,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_8ba758e3bef746c385dbce325697b35e",
@@ -4691,7 +4688,7 @@
             "api_fields": {
               "FULL_NAME": "宿迁市新开天海投资有限公司,江苏国昇创融新能源有限公司"
             },
-            "checked_at": "2026-10-30T09:17:49+08:00",
+            "checked_at": "2026-10-31T13:28:34+08:00",
             "source_updated_at": "2026-08-31",
             "source_method": "official_api"
           }
@@ -4703,7 +4700,7 @@
             "api_fields": {
               "WRITER_NAME": "国联证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:49+08:00",
+            "checked_at": "2026-10-31T13:28:34+08:00",
             "source_updated_at": "2026-08-31",
             "source_method": "official_api"
           }
@@ -4755,7 +4752,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_a90cad7bc53c4ef0a1df1f4c1ce2134e",
@@ -4795,7 +4792,7 @@
             "api_fields": {
               "FULL_NAME": "上海外高桥集团股份有限公司,上海外高桥保税区联合发展有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-08-27",
             "source_method": "official_api"
           }
@@ -4807,7 +4804,7 @@
             "api_fields": {
               "WRITER_NAME": "中信建投证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-08-27",
             "source_method": "official_api"
           }
@@ -4863,7 +4860,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_38076302302742DF88032E0BF60FCE8A",
@@ -4904,7 +4901,7 @@
             "api_fields": {
               "fxr": "广东韶能集团股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:59+08:00",
+            "checked_at": "2026-10-31T13:28:44+08:00",
             "source_updated_at": "2026-08-21",
             "source_method": "official_api"
           }
@@ -4917,7 +4914,7 @@
               "cxsqc": "平安证券股份有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:17:59+08:00",
+            "checked_at": "2026-10-31T13:28:44+08:00",
             "source_updated_at": "2026-08-21",
             "source_method": "official_api"
           }
@@ -4969,7 +4966,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_c3a65a356256442593a76ff3c099c134",
@@ -5009,7 +5006,7 @@
             "api_fields": {
               "FULL_NAME": "上海天炜能源科技有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-08-17",
             "source_method": "official_api"
           }
@@ -5021,7 +5018,7 @@
             "api_fields": {
               "WRITER_NAME": "国元证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-08-17",
             "source_method": "official_api"
           }
@@ -5073,7 +5070,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_3039710837684CF2BE105283EF0BE719",
@@ -5114,7 +5111,7 @@
             "api_fields": {
               "fxr": "青岛海尔绿色能源科技有限公司"
             },
-            "checked_at": "2026-10-30T09:18:00+08:00",
+            "checked_at": "2026-10-31T13:28:45+08:00",
             "source_updated_at": "2026-08-10",
             "source_method": "official_api"
           }
@@ -5127,7 +5124,7 @@
               "cxsqc": "太平洋资产管理有限责任公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:00+08:00",
+            "checked_at": "2026-10-31T13:28:45+08:00",
             "source_updated_at": "2026-08-10",
             "source_method": "official_api"
           }
@@ -5179,7 +5176,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_610637d6ae87472987d8f6413cedd5ad",
@@ -5219,7 +5216,7 @@
             "api_fields": {
               "FULL_NAME": "秦皇岛北戴河新区金潮产业发展集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-08-07",
             "source_method": "official_api"
           }
@@ -5231,7 +5228,7 @@
             "api_fields": {
               "WRITER_NAME": "国联证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-08-07",
             "source_method": "official_api"
           }
@@ -5283,7 +5280,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_CE93777394A247CD961CE22879A94F76",
@@ -5324,7 +5321,7 @@
             "api_fields": {
               "fxr": "深圳易储数智能源集团有限公司"
             },
-            "checked_at": "2026-10-30T09:18:01+08:00",
+            "checked_at": "2026-10-31T13:28:46+08:00",
             "source_updated_at": "2026-08-06",
             "source_method": "official_api"
           }
@@ -5337,7 +5334,7 @@
               "cxsqc": "华泰证券(上海）资产管理有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:01+08:00",
+            "checked_at": "2026-10-31T13:28:46+08:00",
             "source_updated_at": "2026-08-06",
             "source_method": "official_api"
           }
@@ -5389,7 +5386,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_7af29dfa21bf48a692012feb1348eadc",
@@ -5429,7 +5426,7 @@
             "api_fields": {
               "FULL_NAME": "苏州新建元产业发展有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-29",
             "source_method": "official_api"
           }
@@ -5441,7 +5438,7 @@
             "api_fields": {
               "WRITER_NAME": "广发证券资产管理（广东）有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-29",
             "source_method": "official_api"
           }
@@ -5493,7 +5490,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_16810ef906a9453882e3390286b2dbc9",
@@ -5533,7 +5530,7 @@
             "api_fields": {
               "FULL_NAME": "浙江杭泰数智能源开发有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-29",
             "source_method": "official_api"
           }
@@ -5545,7 +5542,7 @@
             "api_fields": {
               "WRITER_NAME": "工银瑞信投资管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-29",
             "source_method": "official_api"
           }
@@ -5597,7 +5594,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_5b8427935c004cdc964218c9995a5354",
@@ -5637,7 +5634,7 @@
             "api_fields": {
               "FULL_NAME": "湖州安誉创业投资集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-20",
             "source_method": "official_api"
           }
@@ -5649,7 +5646,7 @@
             "api_fields": {
               "WRITER_NAME": "国金证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-20",
             "source_method": "official_api"
           }
@@ -5701,7 +5698,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_A008DEF35DB7497B80240D4B840C3F89",
@@ -5792,7 +5789,7 @@
             "api_fields": {
               "fxr": "北京居然之家家居建材市场有限公司,北京居然之家家居连锁有限公司"
             },
-            "checked_at": "2026-10-30T09:18:16+08:00",
+            "checked_at": "2026-10-31T13:29:01+08:00",
             "source_updated_at": "2026-07-17",
             "source_method": "official_api"
           }
@@ -5805,7 +5802,7 @@
               "cxsqc": "中信建投证券股份有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:16+08:00",
+            "checked_at": "2026-10-31T13:29:01+08:00",
             "source_updated_at": "2026-07-17",
             "source_method": "official_api"
           }
@@ -5854,7 +5851,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_24b496b291084b3287889b87735bfbc5",
@@ -5894,7 +5891,7 @@
             "api_fields": {
               "FULL_NAME": "天津立度资产经营管理有限公司,天津绿电管理运营有限公司,天津立度新型基础设施建设科技合伙企业（有限合伙）"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-16",
             "source_method": "official_api"
           }
@@ -5906,7 +5903,7 @@
             "api_fields": {
               "WRITER_NAME": "华泰证券（上海）资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-16",
             "source_method": "official_api"
           }
@@ -5958,7 +5955,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_4A60D5E2DDEA40058B6116083A268A44",
@@ -5999,7 +5996,7 @@
             "api_fields": {
               "fxr": "北京风禾智行科技有限公司"
             },
-            "checked_at": "2026-10-30T09:18:02+08:00",
+            "checked_at": "2026-10-31T13:28:47+08:00",
             "source_updated_at": "2026-07-10",
             "source_method": "official_api"
           }
@@ -6012,7 +6009,7 @@
               "cxsqc": "中信证券股份有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:02+08:00",
+            "checked_at": "2026-10-31T13:28:47+08:00",
             "source_updated_at": "2026-07-10",
             "source_method": "official_api"
           }
@@ -6064,7 +6061,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_98e05b639ffa4e05a431b00b3876980b",
@@ -6104,7 +6101,7 @@
             "api_fields": {
               "FULL_NAME": "上海尤汶新能源有限公司,上海承砺新能源有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-09",
             "source_method": "official_api"
           }
@@ -6116,7 +6113,7 @@
             "api_fields": {
               "WRITER_NAME": "财通证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-09",
             "source_method": "official_api"
           }
@@ -6168,7 +6165,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_d73ac2bed30144e99b6cf6a8ac5a6850",
@@ -6208,7 +6205,7 @@
             "api_fields": {
               "FULL_NAME": "远洲集团股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-08",
             "source_method": "official_api"
           }
@@ -6220,7 +6217,7 @@
             "api_fields": {
               "WRITER_NAME": "财通证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-08",
             "source_method": "official_api"
           }
@@ -6272,7 +6269,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_b3c6f5b98f0a442e93c7f87cfa35bc4a",
@@ -6312,7 +6309,7 @@
             "api_fields": {
               "FULL_NAME": "金泰产融（北京）创业投资基金管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-06",
             "source_method": "official_api"
           }
@@ -6324,7 +6321,7 @@
             "api_fields": {
               "WRITER_NAME": "华泰证券（上海）资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-06",
             "source_method": "official_api"
           }
@@ -6376,7 +6373,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_46a850964d07460c9e1ac14043048b8a",
@@ -6416,7 +6413,7 @@
             "api_fields": {
               "FULL_NAME": "汇信磐科（北京）科技合伙企业（有限合伙）"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-03",
             "source_method": "official_api"
           }
@@ -6428,7 +6425,7 @@
             "api_fields": {
               "WRITER_NAME": "中信建投证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-03",
             "source_method": "official_api"
           }
@@ -6480,7 +6477,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_d615ed841af642a1aa7c92b48838e20e",
@@ -6520,7 +6517,7 @@
             "api_fields": {
               "FULL_NAME": "浙江中光新能源科技有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-03",
             "source_method": "official_api"
           }
@@ -6532,7 +6529,7 @@
             "api_fields": {
               "WRITER_NAME": "兴证证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-03",
             "source_method": "official_api"
           }
@@ -6584,7 +6581,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_96e2d4a093c94acc84e0b715ffef055c",
@@ -6624,7 +6621,7 @@
             "api_fields": {
               "FULL_NAME": "天津绿电管理运营有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-01",
             "source_method": "official_api"
           }
@@ -6636,7 +6633,7 @@
             "api_fields": {
               "WRITER_NAME": "华泰证券（上海）资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-07-01",
             "source_method": "official_api"
           }
@@ -6688,7 +6685,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_4332659D9E3B4A598CC95FC6F37C84F0",
@@ -6729,7 +6726,7 @@
             "api_fields": {
               "fxr": "杭州碧澄能源发展有限公司"
             },
-            "checked_at": "2026-10-30T09:18:03+08:00",
+            "checked_at": "2026-10-31T13:28:48+08:00",
             "source_updated_at": "2026-06-29",
             "source_method": "official_api"
           }
@@ -6742,7 +6739,7 @@
               "cxsqc": "兴证证券资产管理有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:03+08:00",
+            "checked_at": "2026-10-31T13:28:48+08:00",
             "source_updated_at": "2026-06-29",
             "source_method": "official_api"
           }
@@ -6794,7 +6791,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_77e4f8f9cafd4f909ca53307a5159a86",
@@ -6834,7 +6831,7 @@
             "api_fields": {
               "FULL_NAME": "上海宏祚新能源科技有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-06-25",
             "source_method": "official_api"
           }
@@ -6846,7 +6843,7 @@
             "api_fields": {
               "WRITER_NAME": "兴证证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-06-25",
             "source_method": "official_api"
           }
@@ -6898,7 +6895,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_1b55a2a6fab14760bc34b2985670e113",
@@ -6938,7 +6935,7 @@
             "api_fields": {
               "FULL_NAME": "华能新能源股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-06-11",
             "source_method": "official_api"
           }
@@ -6950,7 +6947,7 @@
             "api_fields": {
               "WRITER_NAME": "长城证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-06-11",
             "source_method": "official_api"
           }
@@ -7002,7 +6999,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_0ba7147197f84495884cade76eea1d42",
@@ -7042,7 +7039,7 @@
             "api_fields": {
               "FULL_NAME": "华能新能源股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-06-11",
             "source_method": "official_api"
           }
@@ -7054,7 +7051,7 @@
             "api_fields": {
               "WRITER_NAME": "长城证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-06-11",
             "source_method": "official_api"
           }
@@ -7106,7 +7103,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_4b1931bec9284aad84ca396c6abf5abb",
@@ -7146,7 +7143,7 @@
             "api_fields": {
               "FULL_NAME": "新城万博置业有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-06-10",
             "source_method": "official_api"
           }
@@ -7158,7 +7155,7 @@
             "api_fields": {
               "WRITER_NAME": "国金证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-06-10",
             "source_method": "official_api"
           }
@@ -7210,7 +7207,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_afd265b13fea4628913108d7f9e77732",
@@ -7265,7 +7262,7 @@
             "api_fields": {
               "FULL_NAME": "上海凯德卓盈投资有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-06-10",
             "source_method": "official_api"
           }
@@ -7277,7 +7274,7 @@
             "api_fields": {
               "WRITER_NAME": "中国国际金融股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-06-10",
             "source_method": "official_api"
           }
@@ -7329,7 +7326,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_DCF15E24B0844EB9BB6C040F1D6802DA",
@@ -7412,7 +7409,7 @@
             "api_fields": {
               "fxr": "广东奥飞数据科技股份有限公司"
             },
-            "checked_at": "2026-10-30T09:18:04+08:00",
+            "checked_at": "2026-10-31T13:28:49+08:00",
             "source_updated_at": "2026-06-04",
             "source_method": "official_api"
           }
@@ -7425,7 +7422,7 @@
               "cxsqc": "中信证券股份有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:04+08:00",
+            "checked_at": "2026-10-31T13:28:49+08:00",
             "source_updated_at": "2026-06-04",
             "source_method": "official_api"
           }
@@ -7461,7 +7458,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_0b4f9a9e62084fceab2344efb5fd6308",
@@ -7501,7 +7498,7 @@
             "api_fields": {
               "FULL_NAME": "舜远（北京）企业管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-05-29",
             "source_method": "official_api"
           }
@@ -7513,7 +7510,7 @@
             "api_fields": {
               "WRITER_NAME": "中信证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-05-29",
             "source_method": "official_api"
           }
@@ -7569,7 +7566,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_13710c0a13aa48aeb5be57bad70672fd",
@@ -7639,7 +7636,7 @@
             "api_fields": {
               "FULL_NAME": "苏州银翼投资合伙企业（有限合伙）"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-05-25",
             "source_method": "official_api"
           }
@@ -7651,7 +7648,7 @@
             "api_fields": {
               "WRITER_NAME": "中国国际金融股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-05-25",
             "source_method": "official_api"
           }
@@ -7687,7 +7684,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_4fb3efe40f0a4c9f939a9f280eb81b7e",
@@ -7727,7 +7724,7 @@
             "api_fields": {
               "FULL_NAME": "南通崇盈运营管理集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-05-11",
             "source_method": "official_api"
           }
@@ -7739,7 +7736,7 @@
             "api_fields": {
               "WRITER_NAME": "东吴证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-05-11",
             "source_method": "official_api"
           }
@@ -7791,7 +7788,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_6193f1f9ee7941198793739fc95950cc",
@@ -7831,7 +7828,7 @@
             "api_fields": {
               "FULL_NAME": "深圳景顺瑞富股权投资合伙企业（有限合伙）"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-05-08",
             "source_method": "official_api"
           }
@@ -7843,7 +7840,7 @@
             "api_fields": {
               "WRITER_NAME": "中国国际金融股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-05-08",
             "source_method": "official_api"
           }
@@ -7895,7 +7892,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_ee369312e63f4e2fa74f6f0ff8a54f3c",
@@ -7935,7 +7932,7 @@
             "api_fields": {
               "FULL_NAME": "成都交子公园投资控股有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-04-30",
             "source_method": "official_api"
           }
@@ -7947,7 +7944,7 @@
             "api_fields": {
               "WRITER_NAME": "中信证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-04-30",
             "source_method": "official_api"
           }
@@ -8007,7 +8004,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_bcb8a9bf61c6441d82f5a233d4983478",
@@ -8077,7 +8074,7 @@
             "api_fields": {
               "FULL_NAME": "上海博胤安厦商业管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-04-28",
             "source_method": "official_api"
           }
@@ -8089,7 +8086,7 @@
             "api_fields": {
               "WRITER_NAME": "中国国际金融股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-04-28",
             "source_method": "official_api"
           }
@@ -8125,7 +8122,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_9d256ebda67c4d938cdd986f94214747",
@@ -8165,7 +8162,7 @@
             "api_fields": {
               "FULL_NAME": "芜湖朗易一号股权投资合伙企业(有限合伙),上海佳初企业管理咨询有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-04-28",
             "source_method": "official_api"
           }
@@ -8177,7 +8174,7 @@
             "api_fields": {
               "WRITER_NAME": "申万宏源证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-04-28",
             "source_method": "official_api"
           }
@@ -8229,7 +8226,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_b8a83c4385e8487ea9d9446d65b80472",
@@ -8284,7 +8281,7 @@
             "api_fields": {
               "FULL_NAME": "上海京鸿宇企业发展有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-04-24",
             "source_method": "official_api"
           }
@@ -8296,7 +8293,7 @@
             "api_fields": {
               "WRITER_NAME": "渤海汇金证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-04-24",
             "source_method": "official_api"
           }
@@ -8348,7 +8345,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_996C0CD8DDEA4A07A33E0B76885913BB",
@@ -8404,7 +8401,7 @@
             "api_fields": {
               "fxr": "长春市城市建设集团有限公司"
             },
-            "checked_at": "2026-10-30T09:18:05+08:00",
+            "checked_at": "2026-10-31T13:28:50+08:00",
             "source_updated_at": "2026-04-22",
             "source_method": "official_api"
           }
@@ -8417,7 +8414,7 @@
               "cxsqc": "上海国泰海通证券资产管理有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:05+08:00",
+            "checked_at": "2026-10-31T13:28:50+08:00",
             "source_updated_at": "2026-04-22",
             "source_method": "official_api"
           }
@@ -8473,7 +8470,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_08bbec2e9e3f42eeb5b5bf41d092be3d",
@@ -8513,7 +8510,7 @@
             "api_fields": {
               "FULL_NAME": "苏州阿特斯新能源开发有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-04-13",
             "source_method": "official_api"
           }
@@ -8525,7 +8522,7 @@
             "api_fields": {
               "WRITER_NAME": "财通证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-04-13",
             "source_method": "official_api"
           }
@@ -8581,7 +8578,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_45fd3bdaad2245c0aa577015e940224d",
@@ -8621,7 +8618,7 @@
             "api_fields": {
               "FULL_NAME": "福建东百集团股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-03-26",
             "source_method": "official_api"
           }
@@ -8633,7 +8630,7 @@
             "api_fields": {
               "WRITER_NAME": "中国国际金融股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-03-26",
             "source_method": "official_api"
           }
@@ -8685,7 +8682,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_81b3f5fefc834e60aa496a6250470655",
@@ -8755,7 +8752,7 @@
             "api_fields": {
               "FULL_NAME": "中铁中产置业有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-03-12",
             "source_method": "official_api"
           }
@@ -8767,7 +8764,7 @@
             "api_fields": {
               "WRITER_NAME": "招商证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-03-12",
             "source_method": "official_api"
           }
@@ -8807,7 +8804,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_9424f76a47cd448baaa3846dcd2af880",
@@ -8847,7 +8844,7 @@
             "api_fields": {
               "FULL_NAME": "湖州市农业开发集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-03-12",
             "source_method": "official_api"
           }
@@ -8859,7 +8856,7 @@
             "api_fields": {
               "WRITER_NAME": "财通证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-03-12",
             "source_method": "official_api"
           }
@@ -8915,7 +8912,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_08DED90B438E4E6C9BD3C63CAC08E6D0",
@@ -8956,7 +8953,7 @@
             "api_fields": {
               "fxr": "西安城市发展服务有限公司"
             },
-            "checked_at": "2026-10-30T09:18:06+08:00",
+            "checked_at": "2026-10-31T13:28:51+08:00",
             "source_updated_at": "2026-03-11",
             "source_method": "official_api"
           }
@@ -8969,7 +8966,7 @@
               "cxsqc": "上海国泰海通证券资产管理有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:06+08:00",
+            "checked_at": "2026-10-31T13:28:51+08:00",
             "source_updated_at": "2026-03-11",
             "source_method": "official_api"
           }
@@ -9025,7 +9022,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_913fae19dc2749a794b38eb4bd0cdde0",
@@ -9110,7 +9107,7 @@
             "api_fields": {
               "FULL_NAME": "苏州元联药谷一期基础设施投资合伙企业（有限合伙）"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-03-03",
             "source_method": "official_api"
           }
@@ -9122,7 +9119,7 @@
             "api_fields": {
               "WRITER_NAME": "广发证券资产管理（广东）有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-03-03",
             "source_method": "official_api"
           }
@@ -9162,7 +9159,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_75ADB37CB2B2485BB1201DE880F75588",
@@ -9203,7 +9200,7 @@
             "api_fields": {
               "fxr": "惠州依云四季酒店管理有限公司"
             },
-            "checked_at": "2026-10-30T09:18:17+08:00",
+            "checked_at": "2026-10-31T13:29:02+08:00",
             "source_updated_at": "2026-03-02",
             "source_method": "official_api"
           }
@@ -9216,7 +9213,7 @@
               "cxsqc": "大同证券有限责任公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:17+08:00",
+            "checked_at": "2026-10-31T13:29:02+08:00",
             "source_updated_at": "2026-03-02",
             "source_method": "official_api"
           }
@@ -9268,7 +9265,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_611ea034d5d84f89b71452053297424b",
@@ -9338,7 +9335,7 @@
             "api_fields": {
               "FULL_NAME": "上海有孚网络股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-02-13",
             "source_method": "official_api"
           }
@@ -9350,7 +9347,7 @@
             "api_fields": {
               "WRITER_NAME": "国金证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-02-13",
             "source_method": "official_api"
           }
@@ -9386,7 +9383,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_a4f49d8aa5734224b1cdedc6707738d7",
@@ -9426,7 +9423,7 @@
             "api_fields": {
               "FULL_NAME": "上海至瑞轲企业管理咨询有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-02-10",
             "source_method": "official_api"
           }
@@ -9438,7 +9435,7 @@
             "api_fields": {
               "WRITER_NAME": "中信证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-02-10",
             "source_method": "official_api"
           }
@@ -9490,7 +9487,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_c33e8b8a7a5c45a8a7746c76d9e33e19",
@@ -9530,7 +9527,7 @@
             "api_fields": {
               "FULL_NAME": "苏州中联通合新能源开发投资合伙企业(有限合伙),苏州新联壹新能源投资有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-02-02",
             "source_method": "official_api"
           }
@@ -9542,7 +9539,7 @@
             "api_fields": {
               "WRITER_NAME": "申港证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-02-02",
             "source_method": "official_api"
           }
@@ -9594,7 +9591,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_44F5FAE238634E68BD68279EDAE278F3",
@@ -9677,7 +9674,7 @@
             "api_fields": {
               "fxr": "上海港华智慧能源有限公司"
             },
-            "checked_at": "2026-10-30T09:18:07+08:00",
+            "checked_at": "2026-10-31T13:28:52+08:00",
             "source_updated_at": "2026-01-30",
             "source_method": "official_api"
           }
@@ -9690,7 +9687,7 @@
               "cxsqc": "太平洋资产管理有限责任公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:07+08:00",
+            "checked_at": "2026-10-31T13:28:52+08:00",
             "source_updated_at": "2026-01-30",
             "source_method": "official_api"
           }
@@ -9726,7 +9723,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_bc93baf652b249a191ed4383604d7b04",
@@ -9766,7 +9763,7 @@
             "api_fields": {
               "FULL_NAME": "金泰产融（北京）创业投资基金管理有限公司,金泰产融（天津）资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-01-26",
             "source_method": "official_api"
           }
@@ -9778,7 +9775,7 @@
             "api_fields": {
               "WRITER_NAME": "中国国际金融股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-01-26",
             "source_method": "official_api"
           }
@@ -9830,7 +9827,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_660d35fa453848bcb5523490e53625d3",
@@ -9900,7 +9897,7 @@
             "api_fields": {
               "FULL_NAME": "北京世纪互联宽带数据中心有限公司,乌兰察布远见智联管理咨询合伙企业（有限合伙）"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-01-19",
             "source_method": "official_api"
           }
@@ -9912,7 +9909,7 @@
             "api_fields": {
               "WRITER_NAME": "国金证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-01-19",
             "source_method": "official_api"
           }
@@ -9948,7 +9945,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_c4c39dfa801c461480aabbae1aa79326",
@@ -10018,7 +10015,7 @@
             "api_fields": {
               "FULL_NAME": "北京世纪互联宽带数据中心有限公司,苏州远见数纪管理咨询合伙企业（有限合伙）"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-01-14",
             "source_method": "official_api"
           }
@@ -10030,7 +10027,7 @@
             "api_fields": {
               "WRITER_NAME": "国金证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2026-01-14",
             "source_method": "official_api"
           }
@@ -10066,7 +10063,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_8e581a1011094674a59b9dccecb642cc",
@@ -10106,7 +10103,7 @@
             "api_fields": {
               "FULL_NAME": "中交一公局集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-30",
             "source_method": "official_api"
           }
@@ -10118,7 +10115,7 @@
             "api_fields": {
               "WRITER_NAME": "华泰证券（上海）资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-30",
             "source_method": "official_api"
           }
@@ -10170,7 +10167,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_2d2e4884bc92462a985ba7757ed59f10",
@@ -10240,7 +10237,7 @@
             "api_fields": {
               "FULL_NAME": "上海新黄浦实业集团股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-25",
             "source_method": "official_api"
           }
@@ -10252,7 +10249,7 @@
             "api_fields": {
               "WRITER_NAME": "太平洋资产管理有限责任公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-25",
             "source_method": "official_api"
           }
@@ -10288,7 +10285,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_858e70129c204e8ca8a963a0fa00fffa",
@@ -10328,7 +10325,7 @@
             "api_fields": {
               "FULL_NAME": "上海康达高地企业管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-25",
             "source_method": "official_api"
           }
@@ -10340,7 +10337,7 @@
             "api_fields": {
               "WRITER_NAME": "国金证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-25",
             "source_method": "official_api"
           }
@@ -10392,7 +10389,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_2fedfef7b676482a95c4ed32c4043f49",
@@ -10432,7 +10429,7 @@
             "api_fields": {
               "FULL_NAME": "中铁十五局集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-22",
             "source_method": "official_api"
           }
@@ -10444,7 +10441,7 @@
             "api_fields": {
               "WRITER_NAME": "中国国际金融股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-22",
             "source_method": "official_api"
           }
@@ -10500,7 +10497,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_76f7af17f992438a81a9b100c5141a35",
@@ -10570,7 +10567,7 @@
             "api_fields": {
               "FULL_NAME": "银川中铁水务集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-19",
             "source_method": "official_api"
           }
@@ -10582,7 +10579,7 @@
             "api_fields": {
               "WRITER_NAME": "中信证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-19",
             "source_method": "official_api"
           }
@@ -10618,7 +10615,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_43180de30031439dbe40687bd3cf41e4",
@@ -10673,7 +10670,7 @@
             "api_fields": {
               "FULL_NAME": "天津泰达集团有限公司,天津泰达城市综合开发投资集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-19",
             "source_method": "official_api"
           }
@@ -10685,7 +10682,7 @@
             "api_fields": {
               "WRITER_NAME": "中国国际金融股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-19",
             "source_method": "official_api"
           }
@@ -10737,7 +10734,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_d88ec5abcd6e4304ba262aa585b4fbde",
@@ -10777,7 +10774,7 @@
             "api_fields": {
               "FULL_NAME": "中国铁建投资集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-15",
             "source_method": "official_api"
           }
@@ -10789,7 +10786,7 @@
             "api_fields": {
               "WRITER_NAME": "平安证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-15",
             "source_method": "official_api"
           }
@@ -10845,7 +10842,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_5a248a9b5dea42b38a9af2c486f60d2e",
@@ -10900,7 +10897,7 @@
             "api_fields": {
               "FULL_NAME": "中建地产（天津）有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-15",
             "source_method": "official_api"
           }
@@ -10912,7 +10909,7 @@
             "api_fields": {
               "WRITER_NAME": "中信建投证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-15",
             "source_method": "official_api"
           }
@@ -10964,7 +10961,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_8fc676d3df944beaa7005fd6bc9e5eb1",
@@ -11004,7 +11001,7 @@
             "api_fields": {
               "FULL_NAME": "天津铁建宏图丰创投资合伙企业（有限合伙）"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-11",
             "source_method": "official_api"
           }
@@ -11016,7 +11013,7 @@
             "api_fields": {
               "WRITER_NAME": "中信证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-11",
             "source_method": "official_api"
           }
@@ -11068,7 +11065,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_3C1DB3F91A9648DAB110E3DA2CBE449D",
@@ -11151,7 +11148,7 @@
             "api_fields": {
               "fxr": "杭州碧澄能源发展有限公司"
             },
-            "checked_at": "2026-10-30T09:18:08+08:00",
+            "checked_at": "2026-10-31T13:28:53+08:00",
             "source_updated_at": "2025-12-09",
             "source_method": "official_api"
           }
@@ -11164,7 +11161,7 @@
               "cxsqc": "兴证证券资产管理有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:08+08:00",
+            "checked_at": "2026-10-31T13:28:53+08:00",
             "source_updated_at": "2025-12-09",
             "source_method": "official_api"
           }
@@ -11200,7 +11197,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_c323cc5aa0b5413f98321411ced9b498",
@@ -11240,7 +11237,7 @@
             "api_fields": {
               "FULL_NAME": "京能国际能源发展（北京）有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-08",
             "source_method": "official_api"
           }
@@ -11252,7 +11249,7 @@
             "api_fields": {
               "WRITER_NAME": "中国国际金融股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-08",
             "source_method": "official_api"
           }
@@ -11304,7 +11301,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_e1b855cf474b4483aa1af044b24f93b6",
@@ -11344,7 +11341,7 @@
             "api_fields": {
               "FULL_NAME": "广东保利商业发展有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-04",
             "source_method": "official_api"
           }
@@ -11356,7 +11353,7 @@
             "api_fields": {
               "WRITER_NAME": "中国国际金融股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-04",
             "source_method": "official_api"
           }
@@ -11408,7 +11405,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_217c2078fe384f489fb2f213030cfda8",
@@ -11463,7 +11460,7 @@
             "api_fields": {
               "FULL_NAME": "天津津轨资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-03",
             "source_method": "official_api"
           }
@@ -11475,7 +11472,7 @@
             "api_fields": {
               "WRITER_NAME": "上海国泰海通证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-03",
             "source_method": "official_api"
           }
@@ -11527,7 +11524,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_33d26d6eac804b31abce01535ef37b57",
@@ -11567,7 +11564,7 @@
             "api_fields": {
               "FULL_NAME": "中电建路桥集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-02",
             "source_method": "official_api"
           }
@@ -11579,7 +11576,7 @@
             "api_fields": {
               "WRITER_NAME": "中信证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-02",
             "source_method": "official_api"
           }
@@ -11631,7 +11628,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_312a1337f4394ab59fee3e16b4cf1607",
@@ -11671,7 +11668,7 @@
             "api_fields": {
               "FULL_NAME": "北京洁源新能投资有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-02",
             "source_method": "official_api"
           }
@@ -11683,7 +11680,7 @@
             "api_fields": {
               "WRITER_NAME": "中信建投证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-12-02",
             "source_method": "official_api"
           }
@@ -11735,7 +11732,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_66b5f08f3f41476b9f785c2d0f596d7b",
@@ -11775,7 +11772,7 @@
             "api_fields": {
               "FULL_NAME": "中电建电力投资集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-11-28",
             "source_method": "official_api"
           }
@@ -11787,7 +11784,7 @@
             "api_fields": {
               "WRITER_NAME": "中信建投证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-11-28",
             "source_method": "official_api"
           }
@@ -11839,7 +11836,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_53025762E07841769C0752128D5803F3",
@@ -11922,7 +11919,7 @@
             "api_fields": {
               "fxr": "青岛西海岸公用事业集团有限公司"
             },
-            "checked_at": "2026-10-30T09:18:09+08:00",
+            "checked_at": "2026-10-31T13:28:54+08:00",
             "source_updated_at": "2025-11-26",
             "source_method": "official_api"
           }
@@ -11935,7 +11932,7 @@
               "cxsqc": "上海国泰海通证券资产管理有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:09+08:00",
+            "checked_at": "2026-10-31T13:28:54+08:00",
             "source_updated_at": "2025-11-26",
             "source_method": "official_api"
           }
@@ -11975,7 +11972,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_f400fac68939483fb2a6577930181456",
@@ -12015,7 +12012,7 @@
             "api_fields": {
               "FULL_NAME": "天津铁建宏图丰创投资合伙企业（有限合伙）"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-11-25",
             "source_method": "official_api"
           }
@@ -12027,7 +12024,7 @@
             "api_fields": {
               "WRITER_NAME": "华泰证券（上海）资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-11-25",
             "source_method": "official_api"
           }
@@ -12079,7 +12076,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_36eadfbbc67f4ff9866df503fb2773d0",
@@ -12119,7 +12116,7 @@
             "api_fields": {
               "FULL_NAME": "西安经开产业园发展集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-11-20",
             "source_method": "official_api"
           }
@@ -12131,7 +12128,7 @@
             "api_fields": {
               "WRITER_NAME": "东吴证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-11-20",
             "source_method": "official_api"
           }
@@ -12183,7 +12180,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_4b1f60e601774066bbb96f5ffe8d5861",
@@ -12223,7 +12220,7 @@
             "api_fields": {
               "FULL_NAME": "上海临港奉贤经济发展有限公司,MAGNOLIA ENTERPRISES LIMITED"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-11-20",
             "source_method": "official_api"
           }
@@ -12235,7 +12232,7 @@
             "api_fields": {
               "WRITER_NAME": "上海国泰海通证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-11-20",
             "source_method": "official_api"
           }
@@ -12287,7 +12284,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_3c372d322d2e4a4ca54c1b2d77aa3fdc",
@@ -12357,7 +12354,7 @@
             "api_fields": {
               "FULL_NAME": "上海中建东孚资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-11-18",
             "source_method": "official_api"
           }
@@ -12369,7 +12366,7 @@
             "api_fields": {
               "WRITER_NAME": "华泰证券（上海）资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-11-18",
             "source_method": "official_api"
           }
@@ -12409,7 +12406,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_a7bae8a2d83544288dcc29dfb90457f7",
@@ -12449,7 +12446,7 @@
             "api_fields": {
               "FULL_NAME": "天合富家能源股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-11-12",
             "source_method": "official_api"
           }
@@ -12461,7 +12458,7 @@
             "api_fields": {
               "WRITER_NAME": "太平洋资产管理有限责任公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-11-12",
             "source_method": "official_api"
           }
@@ -12513,7 +12510,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_23a0510963724938a704512dbf26f4f2",
@@ -12553,7 +12550,7 @@
             "api_fields": {
               "FULL_NAME": "青岛水务集团环境能源有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-11-06",
             "source_method": "official_api"
           }
@@ -12565,7 +12562,7 @@
             "api_fields": {
               "WRITER_NAME": "中信证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-11-06",
             "source_method": "official_api"
           }
@@ -12617,7 +12614,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_608a7a39abba40e9b6a2af7681d66f43",
@@ -12657,7 +12654,7 @@
             "api_fields": {
               "FULL_NAME": "中交第四航务工程局有限公司,中国公路工程咨询集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-10-22",
             "source_method": "official_api"
           }
@@ -12669,7 +12666,7 @@
             "api_fields": {
               "WRITER_NAME": "中信证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-10-22",
             "source_method": "official_api"
           }
@@ -12721,7 +12718,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_71d38b93885c4fb8a9da4dfa5258bba6",
@@ -12806,7 +12803,7 @@
             "api_fields": {
               "FULL_NAME": "上海外高桥集团股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-09-19",
             "source_method": "official_api"
           }
@@ -12818,7 +12815,7 @@
             "api_fields": {
               "WRITER_NAME": "中信建投证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-09-19",
             "source_method": "official_api"
           }
@@ -12854,7 +12851,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_24cfbda989614db4b858a12f83a0eaec",
@@ -12939,7 +12936,7 @@
             "api_fields": {
               "FULL_NAME": "中铁诺德城市运营服务有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-09-19",
             "source_method": "official_api"
           }
@@ -12951,7 +12948,7 @@
             "api_fields": {
               "WRITER_NAME": "中国人保资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-09-19",
             "source_method": "official_api"
           }
@@ -12987,7 +12984,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_B97CD5F5352244F1ACC26707A2786005",
@@ -13070,7 +13067,7 @@
             "api_fields": {
               "fxr": "拉萨金鼎兴能企业管理合伙企业（有限合伙）"
             },
-            "checked_at": "2026-10-30T09:18:10+08:00",
+            "checked_at": "2026-10-31T13:28:55+08:00",
             "source_updated_at": "2025-09-15",
             "source_method": "official_api"
           }
@@ -13083,7 +13080,7 @@
               "cxsqc": "中信证券股份有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:10+08:00",
+            "checked_at": "2026-10-31T13:28:55+08:00",
             "source_updated_at": "2025-09-15",
             "source_method": "official_api"
           }
@@ -13119,7 +13116,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_95b846a6aabc48a1ab5e9a168a7f05ee",
@@ -13189,7 +13186,7 @@
             "api_fields": {
               "FULL_NAME": "北京首创生态环保集团股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-09-09",
             "source_method": "official_api"
           }
@@ -13201,7 +13198,7 @@
             "api_fields": {
               "WRITER_NAME": "富国资产管理（上海）有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-09-09",
             "source_method": "official_api"
           }
@@ -13237,7 +13234,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_2e907a8b39a0485184ed03b170fdc10d",
@@ -13307,7 +13304,7 @@
             "api_fields": {
               "FULL_NAME": "太仓港协鑫发电有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-08-29",
             "source_method": "official_api"
           }
@@ -13319,7 +13316,7 @@
             "api_fields": {
               "WRITER_NAME": "国金证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-08-29",
             "source_method": "official_api"
           }
@@ -13359,7 +13356,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_82a0db8056254a6e81bfaf0684b79026",
@@ -13429,7 +13426,7 @@
             "api_fields": {
               "FULL_NAME": "上海睿硕创企业管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-08-15",
             "source_method": "official_api"
           }
@@ -13441,7 +13438,7 @@
             "api_fields": {
               "WRITER_NAME": "国金证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-08-15",
             "source_method": "official_api"
           }
@@ -13477,7 +13474,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_305372b0865a4332a5236bbaac464156",
@@ -13517,7 +13514,7 @@
             "api_fields": {
               "FULL_NAME": "建信住房租赁基金（有限合伙）,建融安居（北京）股权投资基金（有限合伙）"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-08-08",
             "source_method": "official_api"
           }
@@ -13529,7 +13526,7 @@
             "api_fields": {
               "WRITER_NAME": "中国国际金融股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-08-08",
             "source_method": "official_api"
           }
@@ -13581,7 +13578,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_6235cf1b296b424394be359f01201227",
@@ -13621,7 +13618,7 @@
             "api_fields": {
               "FULL_NAME": "厦门象屿集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-08-01",
             "source_method": "official_api"
           }
@@ -13633,7 +13630,7 @@
             "api_fields": {
               "WRITER_NAME": "兴证证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-08-01",
             "source_method": "official_api"
           }
@@ -13685,7 +13682,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_9748b85733594cf0884070dc269ac79a",
@@ -13725,7 +13722,7 @@
             "api_fields": {
               "FULL_NAME": "无锡太湖城传感信息中心发展有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-07-23",
             "source_method": "official_api"
           }
@@ -13737,7 +13734,7 @@
             "api_fields": {
               "WRITER_NAME": "上海国泰君安证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-07-23",
             "source_method": "official_api"
           }
@@ -13789,7 +13786,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_53695",
@@ -13859,7 +13856,7 @@
             "api_fields": {
               "FULL_NAME": "天津润石申威股权投资合伙企业（有限合伙）"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-06-24",
             "source_method": "official_api"
           }
@@ -13871,7 +13868,7 @@
             "api_fields": {
               "WRITER_NAME": "国金证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-06-24",
             "source_method": "official_api"
           }
@@ -13911,7 +13908,7 @@
           "display_reason": "尚未取得明确记载审核通过日的官方文件。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_1ac6d26a734c4aefb3e327fa9dc96efe",
@@ -13951,7 +13948,7 @@
             "api_fields": {
               "FULL_NAME": "远景创业投资（海南）有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-05-19",
             "source_method": "official_api"
           }
@@ -13963,7 +13960,7 @@
             "api_fields": {
               "WRITER_NAME": "泰康资产管理有限责任公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-05-19",
             "source_method": "official_api"
           }
@@ -14015,7 +14012,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_5b048a3742404af4b74fb5e87851913e",
@@ -14055,7 +14052,7 @@
             "api_fields": {
               "FULL_NAME": "北京世纪互联宽带数据中心有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-05-09",
             "source_method": "official_api"
           }
@@ -14067,7 +14064,7 @@
             "api_fields": {
               "WRITER_NAME": "太平洋资产管理有限责任公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-05-09",
             "source_method": "official_api"
           }
@@ -14119,7 +14116,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_2e46db5dcd7943f899eb9f7e35c49209",
@@ -14159,7 +14156,7 @@
             "api_fields": {
               "FULL_NAME": "基睦(香港)有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-04-22",
             "source_method": "official_api"
           }
@@ -14171,7 +14168,7 @@
             "api_fields": {
               "WRITER_NAME": "国金证券资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-04-22",
             "source_method": "official_api"
           }
@@ -14223,7 +14220,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_52840",
@@ -14263,7 +14260,7 @@
             "api_fields": {
               "FULL_NAME": "中交资产管理有限公司,中交投资有限公司,中交第四航务工程局有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-03-12",
             "source_method": "official_api"
           }
@@ -14275,7 +14272,7 @@
             "api_fields": {
               "WRITER_NAME": "中国人保资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-03-12",
             "source_method": "official_api"
           }
@@ -14327,7 +14324,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_47475",
@@ -14367,7 +14364,7 @@
             "api_fields": {
               "FULL_NAME": "万数（上海）投资有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-01-23",
             "source_method": "official_api"
           }
@@ -14379,7 +14376,7 @@
             "api_fields": {
               "WRITER_NAME": "中信证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2025-01-23",
             "source_method": "official_api"
           }
@@ -14431,7 +14428,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_52926",
@@ -14471,7 +14468,7 @@
             "api_fields": {
               "FULL_NAME": "中铁二十五局集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2024-12-25",
             "source_method": "official_api"
           }
@@ -14483,7 +14480,7 @@
             "api_fields": {
               "WRITER_NAME": "平安证券股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2024-12-25",
             "source_method": "official_api"
           }
@@ -14539,7 +14536,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_50209",
@@ -14579,7 +14576,7 @@
             "api_fields": {
               "FULL_NAME": "中交一公局集团有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2024-11-22",
             "source_method": "official_api"
           }
@@ -14591,7 +14588,7 @@
             "api_fields": {
               "WRITER_NAME": "华泰证券（上海）资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2024-11-22",
             "source_method": "official_api"
           }
@@ -14643,7 +14640,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SZSE_1220D502C98648E9B80207112269B2B0",
@@ -14684,7 +14681,7 @@
             "api_fields": {
               "fxr": "广州仁合经济信息咨询有限公司"
             },
-            "checked_at": "2026-10-30T09:18:11+08:00",
+            "checked_at": "2026-10-31T13:28:56+08:00",
             "source_updated_at": "2024-10-25",
             "source_method": "official_api"
           }
@@ -14697,7 +14694,7 @@
               "cxsqc": "中信证券股份有限公司",
               "cxsjc": null
             },
-            "checked_at": "2026-10-30T09:18:11+08:00",
+            "checked_at": "2026-10-31T13:28:56+08:00",
             "source_updated_at": "2024-10-25",
             "source_method": "official_api"
           }
@@ -14749,7 +14746,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_46546",
@@ -14789,7 +14786,7 @@
             "api_fields": {
               "FULL_NAME": "中交资产管理有限公司,中交第二公路工程局有限公司,中交第二公路勘察设计研究院有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2024-07-22",
             "source_method": "official_api"
           }
@@ -14801,7 +14798,7 @@
             "api_fields": {
               "WRITER_NAME": "中国国际金融股份有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2024-07-22",
             "source_method": "official_api"
           }
@@ -14853,7 +14850,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     },
     {
       "id": "SSE_36404",
@@ -14893,7 +14890,7 @@
             "api_fields": {
               "FULL_NAME": "中交路桥建设有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2023-12-11",
             "source_method": "official_api"
           }
@@ -14905,7 +14902,7 @@
             "api_fields": {
               "WRITER_NAME": "华泰证券（上海）资产管理有限公司"
             },
-            "checked_at": "2026-10-30T09:17:46+08:00",
+            "checked_at": "2026-10-31T13:28:31+08:00",
             "source_updated_at": "2023-12-11",
             "source_method": "official_api"
           }
@@ -14957,7 +14954,7 @@
           "display_reason": "尚未取得本次申报对应的实际发行或设立证据。"
         }
       },
-      "link_checked_at": "2026-10-30T09:20:34+08:00"
+      "link_checked_at": "2026-10-31T13:31:52+08:00"
     }
   ],
   "enrichment": {
@@ -15137,12 +15134,12 @@
         "core": true
       }
     ],
-    "updated_at": "2026-10-30T09:18:17+08:00"
+    "updated_at": "2026-10-31T13:29:02+08:00"
   },
   "refresh_batch": {
-    "id": "40984933262-1",
-    "date": "2026-10-30",
-    "started_at": "2026-10-30T09:17:38+08:00",
-    "completed_at": "2026-10-30T09:25:18+08:00"
+    "id": "41172695230-1",
+    "date": "2026-10-31",
+    "started_at": "2026-10-31T13:28:22+08:00",
+    "completed_at": "2026-10-31T13:37:13+08:00"
   }
 }
