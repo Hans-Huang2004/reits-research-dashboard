@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/reits-research-dashboard/reits-research-dashboard/collectors/public_reits.py", line 370, in <module>
+    main()
+  File "/home/runner/work/reits-research-dashboard/reits-research-dashboard/collectors/public_reits.py", line 340, in main
+    sources[key] = collect(raw_root / name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/reits-research-dashboard/reits-research-dashboard/collectors/public_sse.py", line 260, in collect
+    filings, filing_check = fetch_pages(client, "ZQ_XMLB", params={"bond_type":4}, identity=lambda r:clean(r.get("BOND_NUM")))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/reits-research-dashboard/reits-research-dashboard/collectors/public_sse.py", line 129, in fetch_pages
+    response = client.get(endpoint, query, sql_id + "_p" + str(page))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/reits-research-dashboard/reits-research-dashboard/collectors/public_sse.py", line 119, in get
+    raise CollectionError("Request failed: " + target + " : " + str(error))
+collectors.public_sse.CollectionError: Request failed: https://query.sse.com.cn/commonSoaQuery.do?sqlId=ZQ_XMLB&isPagination=true&pageHelp.pageSize=100&pageHelp.cacheSize=1&pageHelp.pageNo=1&pageHelp.beginPage=1&pageHelp.endPage=1&bond_type=4 : HTTP Error 403: curl exit=0 http=403 remote_ip=202.122.113.77 

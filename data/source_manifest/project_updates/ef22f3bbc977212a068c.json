@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-30T09:26:20+08:00",
+  "generated_at": "2026-10-31T09:01:47+08:00",
   "output_path": "data/project_updates.json",
-  "output_sha256": "3505a4dcea3fa9437f6b37ba0c4a8074c2ce1527aeb69f4ed6ac395213bcd8aa",
+  "output_sha256": "faa8748b06188577cfde6f10a96e040b612171c6a9ad8995c9fbbd4ebe3550e0",
   "audit_path": "workpapers/project_updates/runs/ef22f3bbc977212a068c/audit.json",
   "input_index_path": "workpapers/project_updates/input_index.json",
   "sources": {

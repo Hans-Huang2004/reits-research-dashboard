@@ -1,6 +1,6 @@
 {
-  "status": "complete",
-  "attempt_ok": true,
+  "status": "failed",
+  "attempt_ok": false,
   "date": "2026-10-30",
   "batch_id": "40984933262-1",
   "started_at": "2026-10-30T09:17:38+08:00",
@@ -27,9 +27,13 @@
     }
   },
   "last_successful_at": "2026-10-30T09:25:18+08:00",
-  "last_attempt_at": "2026-10-30T09:17:38+08:00",
+  "last_attempt_at": "2026-10-31T08:58:38+08:00",
   "disclosure_checked_at": {
     "institutional": "2026-10-15T13:14:26+08:00",
     "public": "2026-10-15T13:14:26+08:00"
-  }
+  },
+  "last_attempt_batch_id": "41152984594-1",
+  "failed_at": "2026-10-31T09:01:47+08:00",
+  "error": "{\"institutional\": \"Command '['/opt/hostedtoolcache/Python/3.11.17/x64/bin/python', '-m', 'collectors.institutional', '--output', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/41152984594-1/collected/institutional.json', '--archive-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/41152984594-1/institutional_snapshots', '--verify-links', '--raw-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/41152984594-1/institutional']' returned non-zero exit status 1.\", \"public\": \"Command '['/opt/hostedtoolcache/Python/3.11.17/x64/bin/python', '-m', 'collectors.public_reits', '--output', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/41152984594-1/collected/public_reits.json', '--work-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/daily_refresh/41152984594-1/public', '--raw-dir', '/home/runner/work/reits-research-dashboard/reits-research-dashboard/data/raw/daily_refresh/41152984594-1/public']' returned non-zero exit status 1.\"}",
+  "policy": "Retain the last complete public and institutional snapshots"
 }
