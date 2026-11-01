@@ -1,0 +1,148 @@
+[
+  {
+    "metadata": {
+      "catalogid": "xmjdxx_xq",
+      "name": "项目基本信息",
+      "excel": "0",
+      "pagetype": null,
+      "subname": "",
+      "tabkey": "tab1",
+      "pagesize": 20,
+      "pageno": 1,
+      "pagecount": 1,
+      "recordcount": 1,
+      "showrecordcount": false,
+      "header": "",
+      "footer": "",
+      "reporttype": "detail",
+      "tabcss": "hasborder",
+      "conditions": [
+        {
+          "label": "",
+          "name": "xmbh",
+          "hidden": "1",
+          "defaultValue": "B97CD5F5352244F1ACC26707A2786005",
+          "labelstyle": "1",
+          "required": "false",
+          "inputType": "text",
+          "typeAhead": "",
+          "options": null,
+          "property": null,
+          "maxlength": null,
+          "otherProperties": null,
+          "clientvalidate": ""
+        },
+        {
+          "label": "",
+          "name": "type",
+          "hidden": "1",
+          "defaultValue": "2",
+          "labelstyle": "1",
+          "required": "false",
+          "inputType": "text",
+          "typeAhead": "",
+          "options": null,
+          "property": null,
+          "maxlength": null,
+          "otherProperties": null,
+          "clientvalidate": ""
+        }
+      ],
+      "colStyle": {
+        "zqmc": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "zqlb": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "nfxje": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "fxr": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "dq": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "cxsqc": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "xmzt": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "jysqrwjwh": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "xmslrq": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "xmztgxrq": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        }
+      },
+      "cols": {
+        "zqmc": "债券名称",
+        "zqlb": "债券类别",
+        "nfxje": "申报规模（亿元）",
+        "fxr": "发行人",
+        "dq": "地区",
+        "cxsqc": "承销商/管理人",
+        "xmzt": "项目状态",
+        "jysqrwjwh": "交易所确认文件文号",
+        "xmslrq": "受理日期",
+        "xmztgxrq": "更新日期"
+      },
+      "colspan": 0,
+      "notes": null,
+      "topHeader": "",
+      "hidden": "0",
+      "tablestyle": "/common/css/table_ints.css,hasborder",
+      "refreshCondition": false
+    },
+    "data": [
+      {
+        "zqmc": "中信证券-四川能源发展清洁能源持有型不动产资产支持专项计划",
+        "zqlb": "ABS",
+        "nfxje": "24.95",
+        "fxr": "拉萨金鼎兴能企业管理合伙企业（有限合伙）",
+        "dq": "西藏",
+        "cxsqc": "中信证券股份有限公司",
+        "xmzt": "通过",
+        "jysqrwjwh": "深证函【2025】993号",
+        "xmslrq": "2025-07-21",
+        "xmztgxrq": "2025-09-15"
+      }
+    ],
+    "error": null
+  }
+]
