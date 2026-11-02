@@ -1,0 +1,148 @@
+[
+  {
+    "metadata": {
+      "catalogid": "xmjdxx_xq",
+      "name": "项目基本信息",
+      "excel": "0",
+      "pagetype": null,
+      "subname": "",
+      "tabkey": "tab1",
+      "pagesize": 20,
+      "pageno": 1,
+      "pagecount": 1,
+      "recordcount": 1,
+      "showrecordcount": false,
+      "header": "",
+      "footer": "",
+      "reporttype": "detail",
+      "tabcss": "hasborder",
+      "conditions": [
+        {
+          "label": "",
+          "name": "xmbh",
+          "hidden": "1",
+          "defaultValue": "44F5FAE238634E68BD68279EDAE278F3",
+          "labelstyle": "1",
+          "required": "false",
+          "inputType": "text",
+          "typeAhead": "",
+          "options": null,
+          "property": null,
+          "maxlength": null,
+          "otherProperties": null,
+          "clientvalidate": ""
+        },
+        {
+          "label": "",
+          "name": "type",
+          "hidden": "1",
+          "defaultValue": "2",
+          "labelstyle": "1",
+          "required": "false",
+          "inputType": "text",
+          "typeAhead": "",
+          "options": null,
+          "property": null,
+          "maxlength": null,
+          "otherProperties": null,
+          "clientvalidate": ""
+        }
+      ],
+      "colStyle": {
+        "zqmc": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "zqlb": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "nfxje": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "fxr": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "dq": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "cxsqc": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "xmzt": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "jysqrwjwh": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "xmslrq": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        },
+        "xmztgxrq": {
+          "br": "1",
+          "labelwidth": "150px",
+          "labelalign": "center",
+          "hidden": "0"
+        }
+      },
+      "cols": {
+        "zqmc": "债券名称",
+        "zqlb": "债券类别",
+        "nfxje": "申报规模（亿元）",
+        "fxr": "发行人",
+        "dq": "地区",
+        "cxsqc": "承销商/管理人",
+        "xmzt": "项目状态",
+        "jysqrwjwh": "交易所确认文件文号",
+        "xmslrq": "受理日期",
+        "xmztgxrq": "更新日期"
+      },
+      "colspan": 0,
+      "notes": null,
+      "topHeader": "",
+      "hidden": "0",
+      "tablestyle": "/common/css/table_ints.css,hasborder",
+      "refreshCondition": false
+    },
+    "data": [
+      {
+        "zqmc": "太保资产-港华智慧新能源基础设施碳中和绿色持有型不动产资产支持专项计划",
+        "zqlb": "ABS",
+        "nfxje": "3.05",
+        "fxr": "上海港华智慧能源有限公司",
+        "dq": "上海",
+        "cxsqc": "太平洋资产管理有限责任公司",
+        "xmzt": "通过",
+        "jysqrwjwh": "深证函【2026】197号",
+        "xmslrq": "2025-12-08",
+        "xmztgxrq": "2026-01-30"
+      }
+    ],
+    "error": null
+  }
+]

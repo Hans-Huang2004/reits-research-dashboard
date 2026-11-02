@@ -1147,6 +1147,44 @@
       "sequence": 119,
       "first_retained_at": "2026-11-01T08:28:10+08:00",
       "current_path": "data/ndrc_recommendations.json"
+    },
+    {
+      "population": "public",
+      "path": "snapshots/public/20261102-090220.json",
+      "retained_path": "workpapers/project_updates/inputs/public/cbefa6f0a8a0a6dc034e3f1000bb55357e99d0d0cdf1fed7f4327e34207d9f55.json",
+      "sha256": "cbefa6f0a8a0a6dc034e3f1000bb55357e99d0d0cdf1fed7f4327e34207d9f55",
+      "collected_at": "2026-11-02T09:06:48+08:00",
+      "sequence": 120,
+      "first_retained_at": "2026-11-02T09:06:49+08:00"
+    },
+    {
+      "population": "public",
+      "path": "data/public_reits.json",
+      "retained_path": "workpapers/project_updates/inputs/public/d2ae5257a482d7a796227b7613e879a893a0ac8ec545037fcbebda5bf8851aa0.json",
+      "sha256": "d2ae5257a482d7a796227b7613e879a893a0ac8ec545037fcbebda5bf8851aa0",
+      "collected_at": "2026-11-02T09:06:48+08:00",
+      "sequence": 121,
+      "first_retained_at": "2026-11-02T09:06:49+08:00",
+      "current_path": "data/public_reits.json"
+    },
+    {
+      "population": "institutional",
+      "path": "workpapers/daily_refresh/41370028560-1/collected/institutional.json",
+      "retained_path": "workpapers/project_updates/inputs/institutional/854ed22db3bbcf13732d6958a459e59a4255c39b4479720d2b88c2ce41d6d759.json",
+      "sha256": "854ed22db3bbcf13732d6958a459e59a4255c39b4479720d2b88c2ce41d6d759",
+      "collected_at": "2026-11-02T08:59:50+08:00",
+      "sequence": 122,
+      "first_retained_at": "2026-11-02T09:06:49+08:00"
+    },
+    {
+      "population": "institutional",
+      "path": "data/institutional.json",
+      "retained_path": "workpapers/project_updates/inputs/institutional/bee405bd9e24095c0a24531fa1dd572ee7701ef61796128b24158108edc5f8fd.json",
+      "sha256": "bee405bd9e24095c0a24531fa1dd572ee7701ef61796128b24158108edc5f8fd",
+      "collected_at": "2026-11-02T08:59:50+08:00",
+      "sequence": 123,
+      "first_retained_at": "2026-11-02T09:06:49+08:00",
+      "current_path": "data/institutional.json"
     }
   ],
   "rejected_inputs": []
