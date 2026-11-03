@@ -1,0 +1,1122 @@
+[
+  {
+    "event_id": "SSE_0c134614a72047339c77d9e3049f03fc",
+    "fund_id": "SSE_FUND_508038",
+    "fund_code": "508038",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=0c134614a72047339c77d9e3049f03fc"
+  },
+  {
+    "event_id": "SSE_16943",
+    "fund_id": "SSE_FUND_508001",
+    "fund_code": "508001",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=16943"
+  },
+  {
+    "event_id": "SSE_16964",
+    "fund_id": "SSE_FUND_508008",
+    "fund_code": "508008",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=16964"
+  },
+  {
+    "event_id": "SSE_16980",
+    "fund_id": "SSE_FUND_508027",
+    "fund_code": "508027",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=16980"
+  },
+  {
+    "event_id": "SSE_16983",
+    "fund_id": "SSE_FUND_508056",
+    "fund_code": "508056",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=16983"
+  },
+  {
+    "event_id": "SSE_16989",
+    "fund_id": "SSE_FUND_508000",
+    "fund_code": "508000",
+    "method": "reviewed_official_evidence",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=16989"
+  },
+  {
+    "event_id": "SSE_16990",
+    "fund_id": "SSE_FUND_508006",
+    "fund_code": "508006",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=16990"
+  },
+  {
+    "event_id": "SSE_18458",
+    "fund_id": "SSE_FUND_508021",
+    "fund_code": "508021",
+    "method": "reviewed_official_evidence",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=18458"
+  },
+  {
+    "event_id": "SSE_18465",
+    "fund_id": "SSE_FUND_508099",
+    "fund_code": "508099",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=18465"
+  },
+  {
+    "event_id": "SSE_18740",
+    "fund_id": "SSE_FUND_508018",
+    "fund_code": "508018",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=18740"
+  },
+  {
+    "event_id": "SSE_1cac0428e57a4c65b9dadaa89549741b",
+    "fund_id": "SSE_APPLICANT_1cac0428e57a4c65b9dadaa89549741b",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=1cac0428e57a4c65b9dadaa89549741b"
+  },
+  {
+    "event_id": "SSE_20413",
+    "fund_id": "SSE_FUND_508066",
+    "fund_code": "508066",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=20413"
+  },
+  {
+    "event_id": "SSE_20516",
+    "fund_id": "SSE_FUND_508058",
+    "fund_code": "508058",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=20516"
+  },
+  {
+    "event_id": "SSE_20763",
+    "fund_id": "SSE_FUND_508068",
+    "fund_code": "508068",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=20763"
+  },
+  {
+    "event_id": "SSE_21292",
+    "fund_id": "SSE_FUND_508088",
+    "fund_code": "508088",
+    "method": "reviewed_official_evidence",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=21292"
+  },
+  {
+    "event_id": "SSE_21525",
+    "fund_id": "SSE_FUND_508009",
+    "fund_code": "508009",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=21525"
+  },
+  {
+    "event_id": "SSE_21754",
+    "fund_id": "SSE_FUND_508077",
+    "fund_code": "508077",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=21754"
+  },
+  {
+    "event_id": "SSE_22255",
+    "fund_id": "SSE_FUND_508007",
+    "fund_code": "508007",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=22255"
+  },
+  {
+    "event_id": "SSE_22546",
+    "fund_id": "SSE_FUND_508098",
+    "fund_code": "508098",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=22546"
+  },
+  {
+    "event_id": "SSE_22863",
+    "fund_id": "SSE_FUND_508096",
+    "fund_code": "508096",
+    "method": "reviewed_official_evidence",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=22863"
+  },
+  {
+    "event_id": "SSE_22897",
+    "fund_id": "SSE_FUND_508019",
+    "fund_code": "508019",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=22897"
+  },
+  {
+    "event_id": "SSE_22908",
+    "fund_id": "SSE_FUND_508028",
+    "fund_code": "508028",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=22908"
+  },
+  {
+    "event_id": "SSE_2442d7bd13474f31972b8605ceebefdb",
+    "fund_id": "SSE_APPLICANT_2442d7bd13474f31972b8605ceebefdb",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=2442d7bd13474f31972b8605ceebefdb"
+  },
+  {
+    "event_id": "SSE_24e84189f68749109b5302f5e1e6ad29",
+    "fund_id": "SSE_FUND_508081",
+    "fund_code": "508081",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=24e84189f68749109b5302f5e1e6ad29"
+  },
+  {
+    "event_id": "SSE_29078",
+    "fund_id": "SSE_FUND_508086",
+    "fund_code": "508086",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=29078"
+  },
+  {
+    "event_id": "SSE_294417b17ff34e6e939763427f15a767",
+    "fund_id": "SSE_APPLICANT_294417b17ff34e6e939763427f15a767",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=294417b17ff34e6e939763427f15a767"
+  },
+  {
+    "event_id": "SSE_2b703424eb68448aafc7bd18f08e9a69",
+    "fund_id": "SSE_APPLICANT_2b703424eb68448aafc7bd18f08e9a69",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=2b703424eb68448aafc7bd18f08e9a69"
+  },
+  {
+    "event_id": "SSE_3214c881b4ed492f8eb28966d291acf8",
+    "fund_id": "SSE_APPLICANT_3214c881b4ed492f8eb28966d291acf8",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=3214c881b4ed492f8eb28966d291acf8"
+  },
+  {
+    "event_id": "SSE_33670",
+    "fund_id": "SSE_FUND_508026",
+    "fund_code": "508026",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=33670"
+  },
+  {
+    "event_id": "SSE_34403",
+    "fund_id": "SSE_FUND_508022",
+    "fund_code": "508022",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=34403"
+  },
+  {
+    "event_id": "SSE_34944",
+    "fund_id": "SSE_FUND_508097",
+    "fund_code": "508097",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=34944"
+  },
+  {
+    "event_id": "SSE_35699",
+    "fund_id": "SSE_FUND_508005",
+    "fund_code": "508005",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=35699"
+  },
+  {
+    "event_id": "SSE_35723",
+    "fund_id": "SSE_FUND_508017",
+    "fund_code": "508017",
+    "method": "reviewed_official_evidence",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=35723"
+  },
+  {
+    "event_id": "SSE_36009",
+    "fund_id": "SSE_FUND_508011",
+    "fund_code": "508011",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=36009"
+  },
+  {
+    "event_id": "SSE_36024",
+    "fund_id": "SSE_FUND_508031",
+    "fund_code": "508031",
+    "method": "reviewed_official_evidence",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=36024"
+  },
+  {
+    "event_id": "SSE_36118",
+    "fund_id": "SSE_FUND_508010",
+    "fund_code": "508010",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=36118"
+  },
+  {
+    "event_id": "SSE_36405",
+    "fund_id": "SSE_FUND_508033",
+    "fund_code": "508033",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=36405"
+  },
+  {
+    "event_id": "SSE_37050",
+    "fund_id": "SSE_FUND_508002",
+    "fund_code": "508002",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=37050"
+  },
+  {
+    "event_id": "SSE_37877",
+    "fund_id": "SSE_FUND_508078",
+    "fund_code": "508078",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=37877"
+  },
+  {
+    "event_id": "SSE_38352",
+    "fund_id": "SSE_FUND_508089",
+    "fund_code": "508089",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=38352"
+  },
+  {
+    "event_id": "SSE_39be963ffbaf493ba0744506b3f451e2",
+    "fund_id": "SSE_APPLICANT_39be963ffbaf493ba0744506b3f451e2",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=39be963ffbaf493ba0744506b3f451e2"
+  },
+  {
+    "event_id": "SSE_3dfc6f28af2e4c31b1a2e267ca5e0ce7",
+    "fund_id": "SSE_FUND_508091",
+    "fund_code": "508091",
+    "method": "reviewed_official_evidence",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=3dfc6f28af2e4c31b1a2e267ca5e0ce7"
+  },
+  {
+    "event_id": "SSE_40701",
+    "fund_id": "SSE_FUND_508015",
+    "fund_code": "508015",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=40701"
+  },
+  {
+    "event_id": "SSE_41680",
+    "fund_id": "SSE_FUND_508003",
+    "fund_code": "508003",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=41680"
+  },
+  {
+    "event_id": "SSE_41693",
+    "fund_id": "SSE_FUND_508092",
+    "fund_code": "508092",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=41693"
+  },
+  {
+    "event_id": "SSE_41702",
+    "fund_id": "SSE_APPLICANT_41702",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=41702"
+  },
+  {
+    "event_id": "SSE_42815",
+    "fund_id": "SSE_FUND_508012",
+    "fund_code": "508012",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=42815"
+  },
+  {
+    "event_id": "SSE_437d1732bc7f4fd293d5969f10f8655c",
+    "fund_id": "SSE_FUND_508020",
+    "fund_code": "508020",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=437d1732bc7f4fd293d5969f10f8655c"
+  },
+  {
+    "event_id": "SSE_4440fa26ec24475d9318be11d1151ef9",
+    "fund_id": "SSE_FUND_508606",
+    "fund_code": "508606",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=4440fa26ec24475d9318be11d1151ef9"
+  },
+  {
+    "event_id": "SSE_45292",
+    "fund_id": "SSE_FUND_508069",
+    "fund_code": "508069",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=45292"
+  },
+  {
+    "event_id": "SSE_49494",
+    "fund_id": "SSE_FUND_508036",
+    "fund_code": "508036",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=49494"
+  },
+  {
+    "event_id": "SSE_49603",
+    "fund_id": "SSE_FUND_508087",
+    "fund_code": "508087",
+    "method": "reviewed_official_evidence",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=49603"
+  },
+  {
+    "event_id": "SSE_49646",
+    "fund_id": "SSE_FUND_508048",
+    "fund_code": "508048",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=49646"
+  },
+  {
+    "event_id": "SSE_49835",
+    "fund_id": "SSE_FUND_508084",
+    "fund_code": "508084",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=49835"
+  },
+  {
+    "event_id": "SSE_49865",
+    "fund_id": "SSE_FUND_508080",
+    "fund_code": "508080",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=49865"
+  },
+  {
+    "event_id": "SSE_50692",
+    "fund_id": "SSE_FUND_508085",
+    "fund_code": "508085",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=50692"
+  },
+  {
+    "event_id": "SSE_51076",
+    "fund_id": "SSE_FUND_508029",
+    "fund_code": "508029",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=51076"
+  },
+  {
+    "event_id": "SSE_53010",
+    "fund_id": "SSE_FUND_508055",
+    "fund_code": "508055",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=53010"
+  },
+  {
+    "event_id": "SSE_53112",
+    "fund_id": "SSE_FUND_508039",
+    "fund_code": "508039",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=53112"
+  },
+  {
+    "event_id": "SSE_53773",
+    "fund_id": "SSE_FUND_508090",
+    "fund_code": "508090",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=53773"
+  },
+  {
+    "event_id": "SSE_54b56d3cc1cc46b29da3d05a5efe7bf0",
+    "fund_id": "SSE_FUND_508603",
+    "fund_code": "508603",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=54b56d3cc1cc46b29da3d05a5efe7bf0"
+  },
+  {
+    "event_id": "SSE_567e0ce118814458b930c6cdebd8a43b",
+    "fund_id": "SSE_FUND_508095",
+    "fund_code": "508095",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=567e0ce118814458b930c6cdebd8a43b"
+  },
+  {
+    "event_id": "SSE_580477e00d3c436e943190c8c23be567",
+    "fund_id": "SSE_FUND_508093",
+    "fund_code": "508093",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=580477e00d3c436e943190c8c23be567"
+  },
+  {
+    "event_id": "SSE_584b3368094645ea8c90eebb375c02df",
+    "fund_id": "SSE_FUND_508050",
+    "fund_code": "508050",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=584b3368094645ea8c90eebb375c02df"
+  },
+  {
+    "event_id": "SSE_620f9db7cc1f48b1b6531c5af02e8b34",
+    "fund_id": "SSE_FUND_508610",
+    "fund_code": "508610",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=620f9db7cc1f48b1b6531c5af02e8b34"
+  },
+  {
+    "event_id": "SSE_659a67730bd24417a9e3b98780589f73",
+    "fund_id": "SSE_FUND_508601",
+    "fund_code": "508601",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=659a67730bd24417a9e3b98780589f73"
+  },
+  {
+    "event_id": "SSE_66b8e916901a4ad19167e5dd158606ac",
+    "fund_id": "SSE_FUND_508030",
+    "fund_code": "508030",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=66b8e916901a4ad19167e5dd158606ac"
+  },
+  {
+    "event_id": "SSE_6fa0b7c2f77944549b2ada7b1339be34",
+    "fund_id": "SSE_FUND_508607",
+    "fund_code": "508607",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=6fa0b7c2f77944549b2ada7b1339be34"
+  },
+  {
+    "event_id": "SSE_73c7577e4b3847aab5331d0379e15eff",
+    "fund_id": "SSE_APPLICANT_73c7577e4b3847aab5331d0379e15eff",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=73c7577e4b3847aab5331d0379e15eff"
+  },
+  {
+    "event_id": "SSE_762ec541a8a446018b6b854353629e7d",
+    "fund_id": "SSE_APPLICANT_762ec541a8a446018b6b854353629e7d",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=762ec541a8a446018b6b854353629e7d"
+  },
+  {
+    "event_id": "SSE_7c28dbd738914f278d7b55b510cf44e9",
+    "fund_id": "SSE_APPLICANT_7c28dbd738914f278d7b55b510cf44e9",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=7c28dbd738914f278d7b55b510cf44e9"
+  },
+  {
+    "event_id": "SSE_80657bb8e3a84783a3b6a2a7c311654f",
+    "fund_id": "SSE_FUND_508047",
+    "fund_code": "508047",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=80657bb8e3a84783a3b6a2a7c311654f"
+  },
+  {
+    "event_id": "SSE_84f8eff955614871a2e88d91891828a1",
+    "fund_id": "SSE_APPLICANT_84f8eff955614871a2e88d91891828a1",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=84f8eff955614871a2e88d91891828a1"
+  },
+  {
+    "event_id": "SSE_86ca5c30686342a3b403248a49578a6a",
+    "fund_id": "SSE_FUND_508059",
+    "fund_code": "508059",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=86ca5c30686342a3b403248a49578a6a"
+  },
+  {
+    "event_id": "SSE_888e50b307b74902bef134005d5c8716",
+    "fund_id": "SSE_APPLICANT_888e50b307b74902bef134005d5c8716",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=888e50b307b74902bef134005d5c8716"
+  },
+  {
+    "event_id": "SSE_894cbcc4623047c385444030dd83f921",
+    "fund_id": "SSE_APPLICANT_894cbcc4623047c385444030dd83f921",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=894cbcc4623047c385444030dd83f921"
+  },
+  {
+    "event_id": "SSE_98519f6baf014a13a59dac8cb52f35e8",
+    "fund_id": "SSE_FUND_508605",
+    "fund_code": "508605",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=98519f6baf014a13a59dac8cb52f35e8"
+  },
+  {
+    "event_id": "SSE_9c0e79ff1731437c8cb7571366675723",
+    "fund_id": "SSE_APPLICANT_9c0e79ff1731437c8cb7571366675723",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=9c0e79ff1731437c8cb7571366675723"
+  },
+  {
+    "event_id": "SSE_a1b8c90b144d41c2bbde49c4c0a2f96f",
+    "fund_id": "SSE_APPLICANT_a1b8c90b144d41c2bbde49c4c0a2f96f",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a1b8c90b144d41c2bbde49c4c0a2f96f"
+  },
+  {
+    "event_id": "SSE_a8de32e372144dbf96afee47f278bb2f",
+    "fund_id": "SSE_FUND_508060",
+    "fund_code": "508060",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a8de32e372144dbf96afee47f278bb2f"
+  },
+  {
+    "event_id": "SSE_a9ce5e95e078472998cc47ad30846c2b",
+    "fund_id": "SSE_APPLICANT_a9ce5e95e078472998cc47ad30846c2b",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=a9ce5e95e078472998cc47ad30846c2b"
+  },
+  {
+    "event_id": "SSE_b20df5ca80084efaad2e52f1d590dc21",
+    "fund_id": "SSE_APPLICANT_b20df5ca80084efaad2e52f1d590dc21",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b20df5ca80084efaad2e52f1d590dc21"
+  },
+  {
+    "event_id": "SSE_b5e45b19fd044a1ea49847f6dbd5ea0c",
+    "fund_id": "SSE_FUND_508082",
+    "fund_code": "508082",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b5e45b19fd044a1ea49847f6dbd5ea0c"
+  },
+  {
+    "event_id": "SSE_b80b031657254459b6d0010d6b2d5286",
+    "fund_id": "SSE_APPLICANT_b80b031657254459b6d0010d6b2d5286",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=b80b031657254459b6d0010d6b2d5286"
+  },
+  {
+    "event_id": "SSE_c330717c560146148c72a9a3bdeb4de8",
+    "fund_id": "SSE_APPLICANT_c330717c560146148c72a9a3bdeb4de8",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=c330717c560146148c72a9a3bdeb4de8"
+  },
+  {
+    "event_id": "SSE_ca83f8b53ee34cb0b2ee8bede1007452",
+    "fund_id": "SSE_FUND_508600",
+    "fund_code": "508600",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=ca83f8b53ee34cb0b2ee8bede1007452"
+  },
+  {
+    "event_id": "SSE_cdb91b06f7bd4b88a382d391bfdf687e",
+    "fund_id": "SSE_APPLICANT_cdb91b06f7bd4b88a382d391bfdf687e",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=cdb91b06f7bd4b88a382d391bfdf687e"
+  },
+  {
+    "event_id": "SSE_d1e2d169bad04e489952ab042b62c577",
+    "fund_id": "SSE_FUND_508609",
+    "fund_code": "508609",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=d1e2d169bad04e489952ab042b62c577"
+  },
+  {
+    "event_id": "SSE_ea0d40078cc147768bdd9741b498f6ea",
+    "fund_id": "SSE_FUND_508016",
+    "fund_code": "508016",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=ea0d40078cc147768bdd9741b498f6ea"
+  },
+  {
+    "event_id": "SSE_f461bff4962247f4a1dac82dea874c42",
+    "fund_id": "SSE_APPLICANT_f461bff4962247f4a1dac82dea874c42",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=f461bff4962247f4a1dac82dea874c42"
+  },
+  {
+    "event_id": "SSE_f73619d5cf6a45a883283047e5886e8d",
+    "fund_id": "SSE_FUND_508602",
+    "fund_code": "508602",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=f73619d5cf6a45a883283047e5886e8d"
+  },
+  {
+    "event_id": "SZSE_5000002",
+    "fund_id": "SZSE_FUND_180801",
+    "fund_code": "180801",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000002"
+  },
+  {
+    "event_id": "SZSE_5000004",
+    "fund_id": "SZSE_FUND_180101",
+    "fund_code": "180101",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000004"
+  },
+  {
+    "event_id": "SZSE_5000007",
+    "fund_id": "SZSE_FUND_180201",
+    "fund_code": "180201",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000007"
+  },
+  {
+    "event_id": "SZSE_5000008",
+    "fund_id": "SZSE_FUND_180301",
+    "fund_code": "180301",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000008"
+  },
+  {
+    "event_id": "SZSE_5000009",
+    "fund_id": "SZSE_FUND_180202",
+    "fund_code": "180202",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000009"
+  },
+  {
+    "event_id": "SZSE_5000010",
+    "fund_id": "SZSE_FUND_180401",
+    "fund_code": "180401",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000010"
+  },
+  {
+    "event_id": "SZSE_5000012",
+    "fund_id": "SZSE_FUND_180501",
+    "fund_code": "180501",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000012"
+  },
+  {
+    "event_id": "SZSE_5000014",
+    "fund_id": "SZSE_FUND_180102",
+    "fund_code": "180102",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000014"
+  },
+  {
+    "event_id": "SZSE_5000015",
+    "fund_id": "SZSE_APPLICANT_5000015",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000015"
+  },
+  {
+    "event_id": "SZSE_5000018",
+    "fund_id": "SZSE_FUND_180103",
+    "fund_code": "180103",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000018"
+  },
+  {
+    "event_id": "SZSE_5000020",
+    "fund_id": "SZSE_FUND_180203",
+    "fund_code": "180203",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000020"
+  },
+  {
+    "event_id": "SZSE_5000021",
+    "fund_id": "SZSE_FUND_180105",
+    "fund_code": "180105",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000021"
+  },
+  {
+    "event_id": "SZSE_5000024",
+    "fund_id": "SZSE_FUND_180601",
+    "fund_code": "180601",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000024"
+  },
+  {
+    "event_id": "SZSE_5000026",
+    "fund_id": "SZSE_FUND_180602",
+    "fund_code": "180602",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000026"
+  },
+  {
+    "event_id": "SZSE_5000029",
+    "fund_id": "SZSE_FUND_180303",
+    "fund_code": "180303",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000029"
+  },
+  {
+    "event_id": "SZSE_5000030",
+    "fund_id": "SZSE_FUND_180302",
+    "fund_code": "180302",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000030"
+  },
+  {
+    "event_id": "SZSE_5000031",
+    "fund_id": "SZSE_FUND_180106",
+    "fund_code": "180106",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000031"
+  },
+  {
+    "event_id": "SZSE_5000032",
+    "fund_id": "SZSE_APPLICANT_5000032",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000032"
+  },
+  {
+    "event_id": "SZSE_5000033",
+    "fund_id": "SZSE_FUND_180701",
+    "fund_code": "180701",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000033"
+  },
+  {
+    "event_id": "SZSE_5000036",
+    "fund_id": "SZSE_FUND_180502",
+    "fund_code": "180502",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000036"
+  },
+  {
+    "event_id": "SZSE_5000037",
+    "fund_id": "SZSE_FUND_180603",
+    "fund_code": "180603",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000037"
+  },
+  {
+    "event_id": "SZSE_5000039",
+    "fund_id": "SZSE_APPLICANT_5000039",
+    "fund_code": "180107",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000039"
+  },
+  {
+    "event_id": "SZSE_5000040",
+    "fund_id": "SZSE_FUND_180402",
+    "fund_code": "180402",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000040"
+  },
+  {
+    "event_id": "SZSE_5000041",
+    "fund_id": "SZSE_FUND_180605",
+    "fund_code": "180605",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000041"
+  },
+  {
+    "event_id": "SZSE_5000042",
+    "fund_id": "SZSE_FUND_180305",
+    "fund_code": "180305",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000042"
+  },
+  {
+    "event_id": "SZSE_5000045",
+    "fund_id": "SZSE_FUND_180606",
+    "fund_code": "180606",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000045"
+  },
+  {
+    "event_id": "SZSE_5000047",
+    "fund_id": "SZSE_FUND_180901",
+    "fund_code": "180901",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000047"
+  },
+  {
+    "event_id": "SZSE_5000048",
+    "fund_id": "SZSE_FUND_180306",
+    "fund_code": "180306",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000048"
+  },
+  {
+    "event_id": "SZSE_5000050",
+    "fund_id": "SZSE_APPLICANT_5000050",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000050"
+  },
+  {
+    "event_id": "SZSE_5000052",
+    "fund_id": "SZSE_FUND_180607",
+    "fund_code": "180607",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000052"
+  },
+  {
+    "event_id": "SZSE_5000053",
+    "fund_id": "SZSE_APPLICANT_5000053",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000053"
+  },
+  {
+    "event_id": "SZSE_5000054",
+    "fund_id": "SZSE_FUND_180503",
+    "fund_code": "180503",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000054"
+  },
+  {
+    "event_id": "SZSE_5000055",
+    "fund_id": "SZSE_APPLICANT_5000055",
+    "fund_code": "180702",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000055"
+  },
+  {
+    "event_id": "SZSE_5000056",
+    "fund_id": "SZSE_APPLICANT_5000056",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000056"
+  },
+  {
+    "event_id": "SZSE_5000060",
+    "fund_id": "SZSE_APPLICANT_5000060",
+    "fund_code": "181002",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000060"
+  },
+  {
+    "event_id": "SZSE_5000062",
+    "fund_id": "SZSE_FUND_181001",
+    "fund_code": "181001",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000062"
+  },
+  {
+    "event_id": "SZSE_5000065",
+    "fund_id": "SZSE_APPLICANT_5000065",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000065"
+  },
+  {
+    "event_id": "SZSE_5000067",
+    "fund_id": "SZSE_APPLICANT_5000067",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000067"
+  },
+  {
+    "event_id": "SZSE_5000068",
+    "fund_id": "SZSE_FUND_180307",
+    "fund_code": "180307",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000068"
+  },
+  {
+    "event_id": "SZSE_5000069",
+    "fund_id": "SZSE_APPLICANT_5000069",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000069"
+  },
+  {
+    "event_id": "SZSE_5000070",
+    "fund_id": "SZSE_APPLICANT_5000070",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000070"
+  },
+  {
+    "event_id": "SZSE_5000071",
+    "fund_id": "SZSE_FUND_180505",
+    "fund_code": "180505",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000071"
+  },
+  {
+    "event_id": "SZSE_5000072",
+    "fund_id": "SZSE_APPLICANT_5000072",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000072"
+  },
+  {
+    "event_id": "SZSE_5000074",
+    "fund_id": "SZSE_APPLICANT_5000074",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000074"
+  },
+  {
+    "event_id": "SZSE_5000077",
+    "fund_id": "SZSE_APPLICANT_5000077",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000077"
+  },
+  {
+    "event_id": "SZSE_5000078",
+    "fund_id": "SZSE_APPLICANT_5000078",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000078"
+  },
+  {
+    "event_id": "SZSE_5000079",
+    "fund_id": "SZSE_APPLICANT_5000079",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000079"
+  },
+  {
+    "event_id": "SZSE_5000080",
+    "fund_id": "SZSE_APPLICANT_5000080",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000080"
+  },
+  {
+    "event_id": "SZSE_5000082",
+    "fund_id": "SZSE_APPLICANT_5000082",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000082"
+  },
+  {
+    "event_id": "SZSE_5000083",
+    "fund_id": "SZSE_APPLICANT_5000083",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000083"
+  },
+  {
+    "event_id": "SZSE_5000084",
+    "fund_id": "SZSE_APPLICANT_5000084",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000084"
+  },
+  {
+    "event_id": "SZSE_5000085",
+    "fund_id": "SZSE_APPLICANT_5000085",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000085"
+  },
+  {
+    "event_id": "SZSE_5000086",
+    "fund_id": "SZSE_APPLICANT_5000086",
+    "fund_code": "",
+    "method": "official_initial_filing",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000086"
+  },
+  {
+    "event_id": "SSE_21625",
+    "fund_id": "SSE_FUND_508056",
+    "fund_code": "508056",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=21625"
+  },
+  {
+    "event_id": "SSE_21837",
+    "fund_id": "SSE_FUND_508006",
+    "fund_code": "508006",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=21837"
+  },
+  {
+    "event_id": "SSE_21839",
+    "fund_id": "SSE_FUND_508000",
+    "fund_code": "508000",
+    "method": "reviewed_official_evidence",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=21839"
+  },
+  {
+    "event_id": "SSE_2b6853bdbec648e0821425c40f6d5b45",
+    "fund_id": "SSE_FUND_508098",
+    "fund_code": "508098",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=2b6853bdbec648e0821425c40f6d5b45"
+  },
+  {
+    "event_id": "SSE_43246",
+    "fund_id": "SSE_FUND_508096",
+    "fund_code": "508096",
+    "method": "reviewed_official_evidence",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=43246"
+  },
+  {
+    "event_id": "SSE_45217",
+    "fund_id": "SSE_FUND_508068",
+    "fund_code": "508068",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=45217"
+  },
+  {
+    "event_id": "SSE_51470",
+    "fund_id": "SSE_FUND_508077",
+    "fund_code": "508077",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=51470"
+  },
+  {
+    "event_id": "SSE_52344",
+    "fund_id": "SSE_FUND_508021",
+    "fund_code": "508021",
+    "method": "reviewed_official_evidence",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=52344"
+  },
+  {
+    "event_id": "SSE_72c49c7e1ec847fea999460058302391",
+    "fund_id": "SSE_FUND_508055",
+    "fund_code": "508055",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=72c49c7e1ec847fea999460058302391"
+  },
+  {
+    "event_id": "SSE_9709dd8e44ed4697bfb8a2cc24626dd5",
+    "fund_id": "SSE_FUND_508058",
+    "fund_code": "508058",
+    "method": "official_fund_code",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=9709dd8e44ed4697bfb8a2cc24626dd5"
+  },
+  {
+    "event_id": "SSE_e3fa97711afa4d9baddfb472c7282f85",
+    "fund_id": "SSE_FUND_508088",
+    "fund_code": "508088",
+    "method": "reviewed_official_evidence",
+    "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=e3fa97711afa4d9baddfb472c7282f85"
+  },
+  {
+    "event_id": "SZSE_5000017",
+    "fund_id": "SZSE_FUND_180301",
+    "fund_code": "180301",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000017"
+  },
+  {
+    "event_id": "SZSE_5000019",
+    "fund_id": "SZSE_FUND_180101",
+    "fund_code": "180101",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000019"
+  },
+  {
+    "event_id": "SZSE_5000051",
+    "fund_id": "SZSE_FUND_180601",
+    "fund_code": "180601",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000051"
+  },
+  {
+    "event_id": "SZSE_5000057",
+    "fund_id": "SZSE_FUND_180101",
+    "fund_code": "180101",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000057"
+  },
+  {
+    "event_id": "SZSE_5000076",
+    "fund_id": "SZSE_FUND_180901",
+    "fund_code": "180901",
+    "method": "official_fund_code",
+    "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000076"
+  }
+]

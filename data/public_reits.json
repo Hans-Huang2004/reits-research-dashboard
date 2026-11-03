@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "date": "2026-11-02",
-  "updated_at": "2026-11-02T09:02:20+08:00",
+  "date": "2026-11-03",
+  "updated_at": "2026-11-03T11:04:42+08:00",
   "changes": {
     "new_fund_ids": [],
     "new_event_ids": [],
@@ -13,8 +13,8 @@
   "source_status": {
     "SSE": {
       "exchange": "上交所",
-      "collected_at": "2026-11-02T09:02:26+08:00",
-      "as_of_date": "2026-11-02",
+      "collected_at": "2026-11-03T11:04:50+08:00",
+      "as_of_date": "2026-11-03",
       "complete": true,
       "checks": [
         {
@@ -52,8 +52,8 @@
         "REITS_TYPE=1按官方脚本标为扩募；保留原始申报类型，未独立推断新购入",
         "仅对已核实基金代码、唯一已注册扩募申报及唯一已上市扩募批次匹配完成日期；其余保留未匹配状态"
       ],
-      "collection_finished_at": "2026-11-02T09:05:40+08:00",
-      "normalization_updated_at": "2026-11-02T09:05:40+08:00",
+      "collection_finished_at": "2026-11-03T11:08:26+08:00",
+      "normalization_updated_at": "2026-11-03T11:08:26+08:00",
       "reviewed_linked_events": 12,
       "linked_events": 81,
       "completed_expansions": 8,
@@ -62,9 +62,9 @@
     "SZSE": {
       "exchange": "深交所",
       "status": "complete",
-      "collected_at": "2026-11-02T09:06:48+08:00",
+      "collected_at": "2026-11-03T11:09:34+08:00",
       "latest_project_update": "2026-10-29",
-      "fund_report_date": "2026-11-02",
+      "fund_report_date": "2026-11-03",
       "listed_fund_count": 31,
       "issued_fund_count": 33,
       "disclosed_fund_count": 33,
@@ -183,7 +183,7 @@
           "advertised_total": 31,
           "raw_count": 31,
           "pages": 2,
-          "report_date": "2026-11-02"
+          "report_date": "2026-11-03"
         },
         "effective_announcements": {
           "keyword": "基金合同生效",
@@ -225,8 +225,8 @@
       },
       "freshness": {
         "series": "深交所公募REITs基金名录",
-        "latest_available_date": "2026-11-02",
-        "expected_date": "2026-11-02",
+        "latest_available_date": "2026-11-03",
+        "expected_date": "2026-11-03",
         "lagging": false
       },
       "limitations": [
@@ -260,8 +260,9 @@
       "已上市": 94,
       "审核中": 31,
       "成立待上市": 6,
-      "获批待发行": 6,
+      "获批待发行": 5,
       "发售结束待成立核验": 2,
+      "发行中": 1,
       "终止": 5
     },
     "business_types": {
@@ -7173,7 +7174,7 @@
       "product_type": "基础设施REITs",
       "asset_type": "待分类",
       "listing_date": "",
-      "planned_listing_date": "",
+      "planned_listing_date": "2026-11-06",
       "established_date": "2026-10-20",
       "initial_raise_cny_100m": 31.98,
       "initial_offered_cny_100m": 31.98,
@@ -14573,7 +14574,7 @@
       "initial_copies_100m": 7.0,
       "initial_issue_start": "2026-11-03",
       "initial_issue_end": "2026-11-09",
-      "stage": "获批待发行",
+      "stage": "发行中",
       "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508606&category=F600",
       "documents": [
         {
@@ -36621,9 +36622,9 @@
           "official_status_code": 30
         },
         {
-          "title": "已问询",
-          "date": "2026-10-29",
-          "official_status_code": 30
+          "title": "已受理",
+          "date": "2026-09-24",
+          "official_status_code": 20
         },
         {
           "title": "已申报",
@@ -36631,9 +36632,9 @@
           "official_status_code": 10
         },
         {
-          "title": "已受理",
-          "date": "2026-09-24",
-          "official_status_code": 20
+          "title": "已问询",
+          "date": "2026-10-29",
+          "official_status_code": 30
         }
       ],
       "classification_source": "official",
@@ -36854,9 +36855,9 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已问询",
-          "date": "2026-10-29",
-          "official_status_code": 30
+          "title": "已申报",
+          "date": "2026-09-22",
+          "official_status_code": 10
         },
         {
           "title": "已受理",
@@ -36869,9 +36870,9 @@
           "official_status_code": 30
         },
         {
-          "title": "已申报",
-          "date": "2026-09-22",
-          "official_status_code": 10
+          "title": "已问询",
+          "date": "2026-10-29",
+          "official_status_code": 30
         }
       ],
       "classification_source": "official",
@@ -37101,24 +37102,24 @@
       "special_plan_manager": "上海国泰海通证券资产管理有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2026-09-21",
-          "official_status_code": 10
-        },
-        {
-          "title": "已问询",
-          "date": "2026-10-29",
-          "official_status_code": 30
-        },
-        {
-          "title": "已问询",
-          "date": "2026-10-29",
-          "official_status_code": 30
-        },
-        {
           "title": "已受理",
           "date": "2026-09-24",
           "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-29",
+          "official_status_code": 30
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-29",
+          "official_status_code": 30
+        },
+        {
+          "title": "已申报",
+          "date": "2026-09-21",
+          "official_status_code": 10
         }
       ],
       "classification_source": "official",
@@ -37339,14 +37340,9 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已问询",
-          "date": "2026-10-29",
-          "official_status_code": 30
-        },
-        {
-          "title": "已问询",
-          "date": "2026-10-29",
-          "official_status_code": 30
+          "title": "已受理",
+          "date": "2026-09-24",
+          "official_status_code": 20
         },
         {
           "title": "已申报",
@@ -37354,9 +37350,14 @@
           "official_status_code": 10
         },
         {
-          "title": "已受理",
-          "date": "2026-09-24",
-          "official_status_code": 20
+          "title": "已问询",
+          "date": "2026-10-29",
+          "official_status_code": 30
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-29",
+          "official_status_code": 30
         }
       ],
       "classification_source": "official",
@@ -37578,6 +37579,11 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
+          "title": "已受理",
+          "date": "2026-07-29",
+          "official_status_code": 20
+        },
+        {
           "title": "已申报",
           "date": "2026-07-28",
           "official_status_code": 10
@@ -37586,11 +37592,6 @@
           "title": "已问询",
           "date": "2026-08-21",
           "official_status_code": 30
-        },
-        {
-          "title": "已受理",
-          "date": "2026-07-29",
-          "official_status_code": 20
         },
         {
           "title": "已问询",
@@ -38036,14 +38037,14 @@
       "special_plan_manager": "华安未来资产管理（上海）有限公司",
       "timeline": [
         {
-          "title": "已问询",
-          "date": "2026-10-20",
-          "official_status_code": 30
-        },
-        {
           "title": "已申报",
           "date": "2026-09-10",
           "official_status_code": 10
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-20",
+          "official_status_code": 30
         },
         {
           "title": "已问询",
@@ -38759,6 +38760,11 @@
       "special_plan_manager": "上海国泰海通证券资产管理有限公司",
       "timeline": [
         {
+          "title": "已问询",
+          "date": "2026-10-19",
+          "official_status_code": 30
+        },
+        {
           "title": "已受理",
           "date": "2026-09-16",
           "official_status_code": 20
@@ -38772,11 +38778,6 @@
           "title": "已申报",
           "date": "2026-09-16",
           "official_status_code": 10
-        },
-        {
-          "title": "已问询",
-          "date": "2026-10-19",
-          "official_status_code": 30
         }
       ],
       "classification_source": "official",
@@ -39009,14 +39010,14 @@
           "official_status_code": 30
         },
         {
-          "title": "已申报",
-          "date": "2026-04-28",
-          "official_status_code": 10
-        },
-        {
           "title": "已受理",
           "date": "2026-04-30",
           "official_status_code": 20
+        },
+        {
+          "title": "已申报",
+          "date": "2026-04-28",
+          "official_status_code": 10
         },
         {
           "title": "已问询",
@@ -39243,11 +39244,6 @@
       "special_plan_manager": "深创投红土资产管理（深圳）有限公司",
       "timeline": [
         {
-          "title": "已问询",
-          "date": "2026-04-03",
-          "official_status_code": 30
-        },
-        {
           "title": "已受理",
           "date": "2026-03-13",
           "official_status_code": 20
@@ -39261,6 +39257,11 @@
           "title": "已申报",
           "date": "2026-03-10",
           "official_status_code": 10
+        },
+        {
+          "title": "已问询",
+          "date": "2026-04-03",
+          "official_status_code": 30
         }
       ],
       "classification_source": "official",
@@ -40456,9 +40457,9 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已问询",
-          "date": "2026-10-13",
-          "official_status_code": 30
+          "title": "已申报",
+          "date": "2026-09-07",
+          "official_status_code": 10
         },
         {
           "title": "已受理",
@@ -40466,9 +40467,9 @@
           "official_status_code": 20
         },
         {
-          "title": "已申报",
-          "date": "2026-09-07",
-          "official_status_code": 10
+          "title": "已问询",
+          "date": "2026-10-13",
+          "official_status_code": 30
         },
         {
           "title": "已问询",
@@ -41312,9 +41313,14 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2026-05-06",
-          "official_status_code": 10
+          "title": "已受理",
+          "date": "2026-05-12",
+          "official_status_code": 20
+        },
+        {
+          "title": "注册生效",
+          "date": "2026-09-20",
+          "official_status_code": 70
         },
         {
           "title": "注册结果",
@@ -41322,24 +41328,19 @@
           "official_status_code": 70
         },
         {
+          "title": "已申报",
+          "date": "2026-05-06",
+          "official_status_code": 10
+        },
+        {
           "title": "已问询",
           "date": "2026-06-09",
           "official_status_code": 30
         },
         {
-          "title": "已受理",
-          "date": "2026-05-12",
-          "official_status_code": 20
-        },
-        {
           "title": "审核意见",
           "date": "2026-09-11",
           "official_status_code": 40
-        },
-        {
-          "title": "注册生效",
-          "date": "2026-09-20",
-          "official_status_code": 70
         }
       ],
       "classification_source": "official",
@@ -41592,21 +41593,6 @@
           "official_status_code": 40
         },
         {
-          "title": "已申报",
-          "date": "2026-06-11",
-          "official_status_code": 10
-        },
-        {
-          "title": "已受理",
-          "date": "2026-06-15",
-          "official_status_code": 20
-        },
-        {
-          "title": "已问询",
-          "date": "2026-07-07",
-          "official_status_code": 30
-        },
-        {
           "title": "注册生效",
           "date": "2026-09-20",
           "official_status_code": 70
@@ -41615,6 +41601,21 @@
           "title": "注册结果",
           "date": "2026-09-20",
           "official_status_code": 70
+        },
+        {
+          "title": "已问询",
+          "date": "2026-07-07",
+          "official_status_code": 30
+        },
+        {
+          "title": "已受理",
+          "date": "2026-06-15",
+          "official_status_code": 20
+        },
+        {
+          "title": "已申报",
+          "date": "2026-06-11",
+          "official_status_code": 10
         }
       ],
       "classification_source": "official",
@@ -42369,16 +42370,6 @@
       "special_plan_manager": "中国国际金融股份有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2026-08-21",
-          "official_status_code": 10
-        },
-        {
-          "title": "已问询",
-          "date": "2026-09-18",
-          "official_status_code": 30
-        },
-        {
           "title": "已受理",
           "date": "2026-08-25",
           "official_status_code": 20
@@ -42387,6 +42378,16 @@
           "title": "已问询",
           "date": "2026-09-18",
           "official_status_code": 30
+        },
+        {
+          "title": "已问询",
+          "date": "2026-09-18",
+          "official_status_code": 30
+        },
+        {
+          "title": "已申报",
+          "date": "2026-08-21",
+          "official_status_code": 10
         }
       ],
       "classification_source": "official",
@@ -43368,19 +43369,9 @@
       "special_plan_manager": "中国国际金融股份有限公司",
       "timeline": [
         {
-          "title": "已问询",
-          "date": "2026-05-28",
-          "official_status_code": 30
-        },
-        {
-          "title": "已受理",
-          "date": "2026-05-06",
-          "official_status_code": 20
-        },
-        {
-          "title": "已申报",
-          "date": "2026-04-29",
-          "official_status_code": 10
+          "title": "注册结果",
+          "date": "2026-09-03",
+          "official_status_code": 70
         },
         {
           "title": "注册生效",
@@ -43388,14 +43379,24 @@
           "official_status_code": 70
         },
         {
-          "title": "注册结果",
-          "date": "2026-09-03",
-          "official_status_code": 70
-        },
-        {
           "title": "审核意见",
           "date": "2026-08-28",
           "official_status_code": 40
+        },
+        {
+          "title": "已受理",
+          "date": "2026-05-06",
+          "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2026-05-28",
+          "official_status_code": 30
+        },
+        {
+          "title": "已申报",
+          "date": "2026-04-29",
+          "official_status_code": 10
         }
       ],
       "fund_link_evidence": [
@@ -43723,24 +43724,9 @@
       "special_plan_manager": "中国国际金融股份有限公司",
       "timeline": [
         {
-          "title": "审核意见",
-          "date": "2026-08-28",
-          "official_status_code": 40
-        },
-        {
-          "title": "已受理",
-          "date": "2026-04-30",
-          "official_status_code": 20
-        },
-        {
           "title": "已问询",
           "date": "2026-05-29",
           "official_status_code": 30
-        },
-        {
-          "title": "已申报",
-          "date": "2026-04-27",
-          "official_status_code": 10
         },
         {
           "title": "注册生效",
@@ -43748,9 +43734,24 @@
           "official_status_code": 70
         },
         {
+          "title": "已申报",
+          "date": "2026-04-27",
+          "official_status_code": 10
+        },
+        {
+          "title": "已受理",
+          "date": "2026-04-30",
+          "official_status_code": 20
+        },
+        {
           "title": "注册结果",
           "date": "2026-09-03",
           "official_status_code": 70
+        },
+        {
+          "title": "审核意见",
+          "date": "2026-08-28",
+          "official_status_code": 40
         }
       ],
       "fund_link_evidence": [
@@ -44086,14 +44087,19 @@
       "special_plan_manager": "银华长安资本管理（北京）有限公司",
       "timeline": [
         {
+          "title": "已申报",
+          "date": "2026-04-23",
+          "official_status_code": 10
+        },
+        {
+          "title": "注册生效",
+          "date": "2026-09-03",
+          "official_status_code": 70
+        },
+        {
           "title": "已受理",
           "date": "2026-04-27",
           "official_status_code": 20
-        },
-        {
-          "title": "注册结果",
-          "date": "2026-09-03",
-          "official_status_code": 70
         },
         {
           "title": "审核意见",
@@ -44106,12 +44112,7 @@
           "official_status_code": 30
         },
         {
-          "title": "已申报",
-          "date": "2026-04-23",
-          "official_status_code": 10
-        },
-        {
-          "title": "注册生效",
+          "title": "注册结果",
           "date": "2026-09-03",
           "official_status_code": 70
         }
@@ -44390,6 +44391,16 @@
           "official_status_code": 10
         },
         {
+          "title": "已问询",
+          "date": "2025-10-29",
+          "official_status_code": 30
+        },
+        {
+          "title": "终止(撤回)",
+          "date": "2026-09-04",
+          "official_status_code": 95
+        },
+        {
           "title": "已受理",
           "date": "2025-10-13",
           "official_status_code": 20
@@ -44398,16 +44409,6 @@
           "title": "终止",
           "date": "2026-09-04",
           "official_status_code": 80
-        },
-        {
-          "title": "终止(撤回)",
-          "date": "2026-09-04",
-          "official_status_code": 95
-        },
-        {
-          "title": "已问询",
-          "date": "2025-10-29",
-          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -45414,24 +45415,19 @@
       "special_plan_manager": "平安证券股份有限公司",
       "timeline": [
         {
-          "title": "已问询",
-          "date": "2026-01-08",
-          "official_status_code": 30
-        },
-        {
-          "title": "注册生效",
-          "date": "2026-08-13",
-          "official_status_code": 70
-        },
-        {
           "title": "审核意见",
           "date": "2026-07-22",
           "official_status_code": 40
         },
         {
-          "title": "已申报",
-          "date": "2025-11-25",
-          "official_status_code": 10
+          "title": "注册结果",
+          "date": "2026-08-13",
+          "official_status_code": 70
+        },
+        {
+          "title": "已问询",
+          "date": "2026-01-08",
+          "official_status_code": 30
         },
         {
           "title": "已受理",
@@ -45439,9 +45435,14 @@
           "official_status_code": 20
         },
         {
-          "title": "注册结果",
+          "title": "注册生效",
           "date": "2026-08-13",
           "official_status_code": 70
+        },
+        {
+          "title": "已申报",
+          "date": "2025-11-25",
+          "official_status_code": 10
         }
       ],
       "fund_link_evidence": [
@@ -45736,17 +45737,17 @@
       "special_plan_manager": "华泰证券（上海）资产管理有限公司",
       "timeline": [
         {
-          "title": "注册生效",
-          "date": "2026-08-13",
-          "official_status_code": 70
-        },
-        {
           "title": "已受理",
           "date": "2026-02-05",
           "official_status_code": 20
         },
         {
-          "title": "注册结果",
+          "title": "已申报",
+          "date": "2026-02-03",
+          "official_status_code": 10
+        },
+        {
+          "title": "注册生效",
           "date": "2026-08-13",
           "official_status_code": 70
         },
@@ -45756,9 +45757,9 @@
           "official_status_code": 30
         },
         {
-          "title": "已申报",
-          "date": "2026-02-03",
-          "official_status_code": 10
+          "title": "注册结果",
+          "date": "2026-08-13",
+          "official_status_code": 70
         },
         {
           "title": "审核意见",
@@ -46966,11 +46967,6 @@
       "special_plan_manager": "南方资本管理有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2026-07-09",
-          "official_status_code": 10
-        },
-        {
           "title": "已受理",
           "date": "2026-07-16",
           "official_status_code": 20
@@ -46979,6 +46975,11 @@
           "title": "已问询",
           "date": "2026-08-10",
           "official_status_code": 30
+        },
+        {
+          "title": "已申报",
+          "date": "2026-07-09",
+          "official_status_code": 10
         },
         {
           "title": "已问询",
@@ -47214,14 +47215,14 @@
           "official_status_code": 30
         },
         {
-          "title": "已申报",
-          "date": "2026-06-22",
-          "official_status_code": 10
-        },
-        {
           "title": "已受理",
           "date": "2026-06-26",
           "official_status_code": 20
+        },
+        {
+          "title": "已申报",
+          "date": "2026-06-22",
+          "official_status_code": 10
         }
       ],
       "classification_source": "official",
@@ -47440,6 +47441,11 @@
           "official_status_code": 30
         },
         {
+          "title": "已问询",
+          "date": "2026-07-15",
+          "official_status_code": 30
+        },
+        {
           "title": "已受理",
           "date": "2026-06-22",
           "official_status_code": 20
@@ -47448,11 +47454,6 @@
           "title": "已申报",
           "date": "2026-06-12",
           "official_status_code": 10
-        },
-        {
-          "title": "已问询",
-          "date": "2026-07-15",
-          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -48174,11 +48175,6 @@
           "official_status_code": 30
         },
         {
-          "title": "已问询",
-          "date": "2026-06-24",
-          "official_status_code": 30
-        },
-        {
           "title": "已受理",
           "date": "2026-05-27",
           "official_status_code": 20
@@ -48187,6 +48183,11 @@
           "title": "已申报",
           "date": "2026-05-25",
           "official_status_code": 10
+        },
+        {
+          "title": "已问询",
+          "date": "2026-06-24",
+          "official_status_code": 30
         }
       ],
       "classification_source": "official",
@@ -48434,24 +48435,9 @@
       "special_plan_manager": "第一创业证券股份有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2026-03-30",
-          "official_status_code": 10
-        },
-        {
-          "title": "注册生效",
-          "date": "2026-05-18",
-          "official_status_code": 70
-        },
-        {
-          "title": "已问询",
-          "date": "2026-04-17",
-          "official_status_code": 30
-        },
-        {
-          "title": "已受理",
-          "date": "2026-04-02",
-          "official_status_code": 20
+          "title": "审核意见",
+          "date": "2026-05-12",
+          "official_status_code": 40
         },
         {
           "title": "注册结果",
@@ -48459,9 +48445,24 @@
           "official_status_code": 70
         },
         {
-          "title": "审核意见",
-          "date": "2026-05-12",
-          "official_status_code": 40
+          "title": "注册生效",
+          "date": "2026-05-18",
+          "official_status_code": 70
+        },
+        {
+          "title": "已受理",
+          "date": "2026-04-02",
+          "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2026-04-17",
+          "official_status_code": 30
+        },
+        {
+          "title": "已申报",
+          "date": "2026-03-30",
+          "official_status_code": 10
         }
       ],
       "fund_link_evidence": [
@@ -49055,6 +49056,11 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
+          "title": "已问询",
+          "date": "2026-06-09",
+          "official_status_code": 30
+        },
+        {
           "title": "已申报",
           "date": "2026-05-08",
           "official_status_code": 10
@@ -49063,11 +49069,6 @@
           "title": "已受理",
           "date": "2026-05-12",
           "official_status_code": 20
-        },
-        {
-          "title": "已问询",
-          "date": "2026-06-09",
-          "official_status_code": 30
         },
         {
           "title": "已问询",
@@ -52916,16 +52917,6 @@
       "special_plan_manager": "中航证券有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2025-07-22",
-          "official_status_code": 10
-        },
-        {
-          "title": "终止",
-          "date": "2026-03-31",
-          "official_status_code": 80
-        },
-        {
           "title": "已问询",
           "date": "2025-09-03",
           "official_status_code": 30
@@ -52936,9 +52927,19 @@
           "official_status_code": 95
         },
         {
+          "title": "已申报",
+          "date": "2025-07-22",
+          "official_status_code": 10
+        },
+        {
           "title": "已受理",
           "date": "2025-07-28",
           "official_status_code": 20
+        },
+        {
+          "title": "终止",
+          "date": "2026-03-31",
+          "official_status_code": 80
         }
       ],
       "classification_source": "official",
@@ -53826,26 +53827,6 @@
       "special_plan_manager": "中航证券有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2025-12-30",
-          "official_status_code": 10
-        },
-        {
-          "title": "注册生效",
-          "date": "2026-03-23",
-          "official_status_code": 70
-        },
-        {
-          "title": "已受理",
-          "date": "2026-01-07",
-          "official_status_code": 20
-        },
-        {
-          "title": "注册结果",
-          "date": "2026-03-23",
-          "official_status_code": 70
-        },
-        {
           "title": "已问询",
           "date": "2026-01-28",
           "official_status_code": 30
@@ -53854,6 +53835,26 @@
           "title": "审核意见",
           "date": "2026-03-13",
           "official_status_code": 40
+        },
+        {
+          "title": "已申报",
+          "date": "2025-12-30",
+          "official_status_code": 10
+        },
+        {
+          "title": "已受理",
+          "date": "2026-01-07",
+          "official_status_code": 20
+        },
+        {
+          "title": "注册生效",
+          "date": "2026-03-23",
+          "official_status_code": 70
+        },
+        {
+          "title": "注册结果",
+          "date": "2026-03-23",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -54747,14 +54748,14 @@
           "official_status_code": 30
         },
         {
-          "title": "已问询",
-          "date": "2026-01-28",
-          "official_status_code": 30
-        },
-        {
           "title": "已申报",
           "date": "2025-12-26",
           "official_status_code": 10
+        },
+        {
+          "title": "已问询",
+          "date": "2026-01-28",
+          "official_status_code": 30
         },
         {
           "title": "已受理",
@@ -54979,6 +54980,11 @@
           "official_status_code": 80
         },
         {
+          "title": "已受理",
+          "date": "2024-03-01",
+          "official_status_code": 20
+        },
+        {
           "title": "终止(撤回)",
           "date": "2026-01-23",
           "official_status_code": 95
@@ -54992,11 +54998,6 @@
           "title": "已问询",
           "date": "2024-04-15",
           "official_status_code": 30
-        },
-        {
-          "title": "已受理",
-          "date": "2024-03-01",
-          "official_status_code": 20
         }
       ],
       "classification_source": "official",
@@ -55179,9 +55180,9 @@
       "special_plan_manager": "建信资本管理有限责任公司",
       "timeline": [
         {
-          "title": "已受理",
+          "title": "已申报",
           "date": "2023-09-04",
-          "official_status_code": 20
+          "official_status_code": 10
         },
         {
           "title": "已问询",
@@ -55189,19 +55190,19 @@
           "official_status_code": 30
         },
         {
-          "title": "已申报",
+          "title": "已受理",
           "date": "2023-09-04",
-          "official_status_code": 10
-        },
-        {
-          "title": "终止(撤回)",
-          "date": "2026-01-23",
-          "official_status_code": 95
+          "official_status_code": 20
         },
         {
           "title": "终止",
           "date": "2026-01-23",
           "official_status_code": 80
+        },
+        {
+          "title": "终止(撤回)",
+          "date": "2026-01-23",
+          "official_status_code": 95
         }
       ],
       "classification_source": "official",
@@ -56431,16 +56432,6 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "注册结果",
-          "date": "2025-09-22",
-          "official_status_code": 70
-        },
-        {
-          "title": "审核意见",
-          "date": "2025-09-17",
-          "official_status_code": 40
-        },
-        {
           "title": "已申报",
           "date": "2025-06-25",
           "official_status_code": 10
@@ -56451,14 +56442,24 @@
           "official_status_code": 20
         },
         {
-          "title": "注册生效",
+          "title": "已问询",
+          "date": "2025-07-15",
+          "official_status_code": 30
+        },
+        {
+          "title": "注册结果",
           "date": "2025-09-22",
           "official_status_code": 70
         },
         {
-          "title": "已问询",
-          "date": "2025-07-15",
-          "official_status_code": 30
+          "title": "审核意见",
+          "date": "2025-09-17",
+          "official_status_code": 40
+        },
+        {
+          "title": "注册生效",
+          "date": "2025-09-22",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -56772,24 +56773,19 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
+          "title": "注册结果",
+          "date": "2025-09-22",
+          "official_status_code": 70
+        },
+        {
           "title": "已申报",
           "date": "2025-06-26",
           "official_status_code": 10
         },
         {
-          "title": "已问询",
-          "date": "2025-07-17",
-          "official_status_code": 30
-        },
-        {
           "title": "审核意见",
           "date": "2025-09-17",
           "official_status_code": 40
-        },
-        {
-          "title": "注册结果",
-          "date": "2025-09-22",
-          "official_status_code": 70
         },
         {
           "title": "已受理",
@@ -56800,6 +56796,11 @@
           "title": "注册生效",
           "date": "2025-09-22",
           "official_status_code": 70
+        },
+        {
+          "title": "已问询",
+          "date": "2025-07-17",
+          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -58842,14 +58843,14 @@
           "official_status_code": 10
         },
         {
+          "title": "审核意见",
+          "date": "2025-06-10",
+          "official_status_code": 40
+        },
+        {
           "title": "注册生效",
           "date": "2025-06-16",
           "official_status_code": 70
-        },
-        {
-          "title": "已受理",
-          "date": "2025-03-21",
-          "official_status_code": 20
         },
         {
           "title": "注册结果",
@@ -58862,9 +58863,9 @@
           "official_status_code": 30
         },
         {
-          "title": "审核意见",
-          "date": "2025-06-10",
-          "official_status_code": 40
+          "title": "已受理",
+          "date": "2025-03-21",
+          "official_status_code": 20
         }
       ],
       "fund_link_evidence": [
@@ -59397,6 +59398,26 @@
       "special_plan_manager": "中国国际金融股份有限公司",
       "timeline": [
         {
+          "title": "注册结果",
+          "date": "2025-05-30",
+          "official_status_code": 70
+        },
+        {
+          "title": "已申报",
+          "date": "2025-02-25",
+          "official_status_code": 10
+        },
+        {
+          "title": "已受理",
+          "date": "2025-03-04",
+          "official_status_code": 20
+        },
+        {
+          "title": "注册生效",
+          "date": "2025-05-30",
+          "official_status_code": 70
+        },
+        {
           "title": "已问询",
           "date": "2025-03-20",
           "official_status_code": 30
@@ -59405,26 +59426,6 @@
           "title": "审核意见",
           "date": "2025-05-19",
           "official_status_code": 40
-        },
-        {
-          "title": "已受理",
-          "date": "2025-03-04",
-          "official_status_code": 20
-        },
-        {
-          "title": "注册结果",
-          "date": "2025-05-30",
-          "official_status_code": 70
-        },
-        {
-          "title": "注册生效",
-          "date": "2025-05-30",
-          "official_status_code": 70
-        },
-        {
-          "title": "已申报",
-          "date": "2025-02-25",
-          "official_status_code": 10
         }
       ],
       "fund_link_evidence": [
@@ -60930,19 +60931,19 @@
       "special_plan_manager": "南方资本管理有限公司",
       "timeline": [
         {
+          "title": "注册生效",
+          "date": "2025-03-04",
+          "official_status_code": 70
+        },
+        {
           "title": "已问询",
           "date": "2024-10-16",
           "official_status_code": 30
         },
         {
-          "title": "审核意见",
-          "date": "2025-02-24",
-          "official_status_code": 40
-        },
-        {
-          "title": "注册生效",
-          "date": "2025-03-04",
-          "official_status_code": 70
+          "title": "已受理",
+          "date": "2024-09-24",
+          "official_status_code": 20
         },
         {
           "title": "已申报",
@@ -60950,9 +60951,9 @@
           "official_status_code": 10
         },
         {
-          "title": "已受理",
-          "date": "2024-09-24",
-          "official_status_code": 20
+          "title": "审核意见",
+          "date": "2025-02-24",
+          "official_status_code": 40
         },
         {
           "title": "注册结果",
@@ -61495,11 +61496,6 @@
           "official_status_code": 20
         },
         {
-          "title": "注册结果",
-          "date": "2024-12-24",
-          "official_status_code": 70
-        },
-        {
           "title": "审核意见",
           "date": "2024-12-19",
           "official_status_code": 40
@@ -61518,6 +61514,11 @@
           "title": "已申报",
           "date": "2024-09-24",
           "official_status_code": 10
+        },
+        {
+          "title": "注册结果",
+          "date": "2024-12-24",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -62989,14 +62990,14 @@
       "special_plan_manager": "工银瑞信投资管理有限公司",
       "timeline": [
         {
+          "title": "注册结果",
+          "date": "2024-11-06",
+          "official_status_code": 70
+        },
+        {
           "title": "已受理",
           "date": "2024-06-27",
           "official_status_code": 20
-        },
-        {
-          "title": "审核意见",
-          "date": "2024-10-30",
-          "official_status_code": 40
         },
         {
           "title": "已申报",
@@ -63004,14 +63005,14 @@
           "official_status_code": 10
         },
         {
-          "title": "注册结果",
-          "date": "2024-11-06",
-          "official_status_code": 70
-        },
-        {
           "title": "已问询",
           "date": "2024-07-22",
           "official_status_code": 30
+        },
+        {
+          "title": "审核意见",
+          "date": "2024-10-30",
+          "official_status_code": 40
         },
         {
           "title": "注册生效",
@@ -63339,24 +63340,9 @@
       "special_plan_manager": "广发证券资产管理（广东）有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2024-08-05",
-          "official_status_code": 20
-        },
-        {
-          "title": "注册结果",
-          "date": "2024-11-06",
-          "official_status_code": 70
-        },
-        {
           "title": "注册生效",
           "date": "2024-11-06",
           "official_status_code": 70
-        },
-        {
-          "title": "审核意见",
-          "date": "2024-10-30",
-          "official_status_code": 40
         },
         {
           "title": "已申报",
@@ -63364,9 +63350,24 @@
           "official_status_code": 10
         },
         {
+          "title": "已受理",
+          "date": "2024-08-05",
+          "official_status_code": 20
+        },
+        {
           "title": "已问询",
           "date": "2024-08-26",
           "official_status_code": 30
+        },
+        {
+          "title": "审核意见",
+          "date": "2024-10-30",
+          "official_status_code": 40
+        },
+        {
+          "title": "注册结果",
+          "date": "2024-11-06",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -63682,19 +63683,19 @@
       "special_plan_manager": "银华长安资本管理（北京）有限公司",
       "timeline": [
         {
-          "title": "注册生效",
-          "date": "2024-09-13",
-          "official_status_code": 70
-        },
-        {
           "title": "审核意见",
           "date": "2024-09-10",
           "official_status_code": 40
         },
         {
-          "title": "已问询",
-          "date": "2024-07-02",
-          "official_status_code": 30
+          "title": "注册结果",
+          "date": "2024-09-13",
+          "official_status_code": 70
+        },
+        {
+          "title": "注册生效",
+          "date": "2024-09-13",
+          "official_status_code": 70
         },
         {
           "title": "已申报",
@@ -63702,9 +63703,9 @@
           "official_status_code": 10
         },
         {
-          "title": "注册结果",
-          "date": "2024-09-13",
-          "official_status_code": 70
+          "title": "已问询",
+          "date": "2024-07-02",
+          "official_status_code": 30
         },
         {
           "title": "已受理",
@@ -64456,9 +64457,14 @@
           "official_status_code": 70
         },
         {
-          "title": "审议会议",
-          "date": "2024-08-21",
-          "official_status_code": 40
+          "title": "注册结果",
+          "date": "2024-08-30",
+          "official_status_code": 70
+        },
+        {
+          "title": "已申报",
+          "date": "2024-05-27",
+          "official_status_code": 10
         },
         {
           "title": "已受理",
@@ -64471,14 +64477,9 @@
           "official_status_code": 30
         },
         {
-          "title": "注册结果",
-          "date": "2024-08-30",
-          "official_status_code": 70
-        },
-        {
-          "title": "已申报",
-          "date": "2024-05-27",
-          "official_status_code": 10
+          "title": "审议会议",
+          "date": "2024-08-21",
+          "official_status_code": 40
         }
       ],
       "fund_link_evidence": [
@@ -65025,24 +65026,24 @@
           "official_status_code": 70
         },
         {
-          "title": "已受理",
-          "date": "2024-05-24",
-          "official_status_code": 20
-        },
-        {
           "title": "已问询",
           "date": "2024-06-25",
           "official_status_code": 30
         },
         {
-          "title": "已申报",
-          "date": "2024-05-24",
-          "official_status_code": 10
-        },
-        {
           "title": "审议会议",
           "date": "2024-08-01",
           "official_status_code": 40
+        },
+        {
+          "title": "已受理",
+          "date": "2024-05-24",
+          "official_status_code": 20
+        },
+        {
+          "title": "已申报",
+          "date": "2024-05-24",
+          "official_status_code": 10
         },
         {
           "title": "注册生效",
@@ -66505,24 +66506,14 @@
       "special_plan_manager": "招商财富资产管理有限公司",
       "timeline": [
         {
-          "title": "审议会议",
-          "date": "2024-05-07",
-          "official_status_code": 40
-        },
-        {
-          "title": "已申报",
-          "date": "2023-11-10",
-          "official_status_code": 10
-        },
-        {
-          "title": "注册生效",
-          "date": "2024-05-23",
-          "official_status_code": 70
-        },
-        {
           "title": "已问询",
           "date": "2023-12-22",
           "official_status_code": 30
+        },
+        {
+          "title": "审议会议",
+          "date": "2024-05-07",
+          "official_status_code": 40
         },
         {
           "title": "注册结果",
@@ -66530,9 +66521,19 @@
           "official_status_code": 70
         },
         {
+          "title": "已申报",
+          "date": "2023-11-10",
+          "official_status_code": 10
+        },
+        {
           "title": "已受理",
           "date": "2023-11-17",
           "official_status_code": 20
+        },
+        {
+          "title": "注册生效",
+          "date": "2024-05-23",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -67249,12 +67250,22 @@
       "special_plan_manager": "华泰证券(上海）资产管理有限公司",
       "timeline": [
         {
-          "title": "注册结果",
-          "date": "2024-05-11",
-          "official_status_code": 70
+          "title": "审议会议",
+          "date": "2024-05-02",
+          "official_status_code": 40
         },
         {
-          "title": "注册生效",
+          "title": "已受理",
+          "date": "2023-12-08",
+          "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2024-01-22",
+          "official_status_code": 30
+        },
+        {
+          "title": "注册结果",
           "date": "2024-05-11",
           "official_status_code": 70
         },
@@ -67264,19 +67275,9 @@
           "official_status_code": 10
         },
         {
-          "title": "已问询",
-          "date": "2024-01-22",
-          "official_status_code": 30
-        },
-        {
-          "title": "已受理",
-          "date": "2023-12-08",
-          "official_status_code": 20
-        },
-        {
-          "title": "审议会议",
-          "date": "2024-05-02",
-          "official_status_code": 40
+          "title": "注册生效",
+          "date": "2024-05-11",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -67543,6 +67544,11 @@
           "official_status_code": 30
         },
         {
+          "title": "审议会议",
+          "date": "2024-03-26",
+          "official_status_code": 40
+        },
+        {
           "title": "已申报",
           "date": "2023-12-07",
           "official_status_code": 10
@@ -67553,19 +67559,14 @@
           "official_status_code": 20
         },
         {
-          "title": "注册结果",
-          "date": "2024-04-02",
-          "official_status_code": 70
-        },
-        {
           "title": "注册生效",
           "date": "2024-04-02",
           "official_status_code": 70
         },
         {
-          "title": "审议会议",
-          "date": "2024-03-26",
-          "official_status_code": 40
+          "title": "注册结果",
+          "date": "2024-04-02",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -67871,9 +67872,9 @@
       "special_plan_manager": "易方达资产管理有限公司",
       "timeline": [
         {
-          "title": "审议会议",
-          "date": "2024-03-26",
-          "official_status_code": 40
+          "title": "已受理",
+          "date": "2023-06-14",
+          "official_status_code": 20
         },
         {
           "title": "注册生效",
@@ -67881,19 +67882,19 @@
           "official_status_code": 70
         },
         {
+          "title": "已问询",
+          "date": "2023-08-10",
+          "official_status_code": 30
+        },
+        {
           "title": "注册结果",
           "date": "2024-04-02",
           "official_status_code": 70
         },
         {
-          "title": "已受理",
-          "date": "2023-06-14",
-          "official_status_code": 20
-        },
-        {
-          "title": "已问询",
-          "date": "2023-08-10",
-          "official_status_code": 30
+          "title": "审议会议",
+          "date": "2024-03-26",
+          "official_status_code": 40
         },
         {
           "title": "已申报",
@@ -69347,19 +69348,14 @@
       "special_plan_manager": "中国国际金融股份有限公司",
       "timeline": [
         {
-          "title": "审议会议",
-          "date": "2023-11-24",
-          "official_status_code": 40
-        },
-        {
-          "title": "已申报",
-          "date": "2023-10-26",
-          "official_status_code": 10
-        },
-        {
           "title": "已受理",
           "date": "2023-10-26",
           "official_status_code": 20
+        },
+        {
+          "title": "注册生效",
+          "date": "2023-11-24",
+          "official_status_code": 70
         },
         {
           "title": "注册结果",
@@ -69367,9 +69363,14 @@
           "official_status_code": 70
         },
         {
-          "title": "注册生效",
+          "title": "已申报",
+          "date": "2023-10-26",
+          "official_status_code": 10
+        },
+        {
+          "title": "审议会议",
           "date": "2023-11-24",
-          "official_status_code": 70
+          "official_status_code": 40
         },
         {
           "title": "已问询",
@@ -69682,14 +69683,14 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
+          "title": "已问询",
+          "date": "2023-11-21",
+          "official_status_code": 30
+        },
+        {
           "title": "已申报",
           "date": "2023-10-26",
           "official_status_code": 10
-        },
-        {
-          "title": "注册生效",
-          "date": "2023-11-24",
-          "official_status_code": 70
         },
         {
           "title": "已受理",
@@ -69702,9 +69703,9 @@
           "official_status_code": 40
         },
         {
-          "title": "已问询",
-          "date": "2023-11-21",
-          "official_status_code": 30
+          "title": "注册生效",
+          "date": "2023-11-24",
+          "official_status_code": 70
         },
         {
           "title": "注册结果",
@@ -70897,19 +70898,14 @@
           "official_status_code": 70
         },
         {
-          "title": "已问询",
-          "date": "2022-12-07",
-          "official_status_code": 30
-        },
-        {
           "title": "已申报",
           "date": "2022-09-28",
           "official_status_code": 10
         },
         {
-          "title": "审议会议",
-          "date": "2023-03-13",
-          "official_status_code": 40
+          "title": "已受理",
+          "date": "2022-09-29",
+          "official_status_code": 20
         },
         {
           "title": "注册生效",
@@ -70917,9 +70913,14 @@
           "official_status_code": 70
         },
         {
-          "title": "已受理",
-          "date": "2022-09-29",
-          "official_status_code": 20
+          "title": "已问询",
+          "date": "2022-12-07",
+          "official_status_code": 30
+        },
+        {
+          "title": "审议会议",
+          "date": "2023-03-13",
+          "official_status_code": 40
         }
       ],
       "fund_link_evidence": [
@@ -71222,17 +71223,17 @@
           "official_status_code": 40
         },
         {
-          "title": "已问询",
-          "date": "2022-12-07",
-          "official_status_code": 30
-        },
-        {
           "title": "已申报",
           "date": "2022-09-28",
           "official_status_code": 10
         },
         {
-          "title": "注册结果",
+          "title": "已问询",
+          "date": "2022-12-07",
+          "official_status_code": 30
+        },
+        {
+          "title": "注册生效",
           "date": "2023-03-31",
           "official_status_code": 70
         },
@@ -71242,7 +71243,7 @@
           "official_status_code": 20
         },
         {
-          "title": "注册生效",
+          "title": "注册结果",
           "date": "2023-03-31",
           "official_status_code": 70
         }
@@ -72597,14 +72598,14 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
+          "title": "已受理",
+          "date": "2022-09-14",
+          "official_status_code": 20
+        },
+        {
           "title": "注册结果",
           "date": "2022-11-25",
           "official_status_code": 70
-        },
-        {
-          "title": "已问询",
-          "date": "2022-09-20",
-          "official_status_code": 30
         },
         {
           "title": "已申报",
@@ -72612,19 +72613,19 @@
           "official_status_code": 10
         },
         {
-          "title": "审议会议",
-          "date": "2022-11-21",
-          "official_status_code": 40
-        },
-        {
           "title": "注册生效",
           "date": "2022-11-25",
           "official_status_code": 70
         },
         {
-          "title": "已受理",
-          "date": "2022-09-14",
-          "official_status_code": 20
+          "title": "审议会议",
+          "date": "2022-11-21",
+          "official_status_code": 40
+        },
+        {
+          "title": "已问询",
+          "date": "2022-09-20",
+          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -73819,6 +73820,21 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
+          "title": "注册结果",
+          "date": "2022-08-29",
+          "official_status_code": 70
+        },
+        {
+          "title": "已受理",
+          "date": "2022-07-22",
+          "official_status_code": 20
+        },
+        {
+          "title": "已申报",
+          "date": "2022-07-21",
+          "official_status_code": 10
+        },
+        {
           "title": "注册生效",
           "date": "2022-08-29",
           "official_status_code": 70
@@ -73832,21 +73848,6 @@
           "title": "已问询",
           "date": "2022-08-16",
           "official_status_code": 30
-        },
-        {
-          "title": "已申报",
-          "date": "2022-07-21",
-          "official_status_code": 10
-        },
-        {
-          "title": "已受理",
-          "date": "2022-07-22",
-          "official_status_code": 20
-        },
-        {
-          "title": "注册结果",
-          "date": "2022-08-29",
-          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -74562,9 +74563,9 @@
           "official_status_code": 30
         },
         {
-          "title": "已受理",
-          "date": "2022-05-30",
-          "official_status_code": 20
+          "title": "注册结果",
+          "date": "2022-07-27",
+          "official_status_code": 70
         },
         {
           "title": "已申报",
@@ -74572,7 +74573,12 @@
           "official_status_code": 10
         },
         {
-          "title": "注册结果",
+          "title": "已受理",
+          "date": "2022-05-30",
+          "official_status_code": 20
+        },
+        {
+          "title": "注册生效",
           "date": "2022-07-27",
           "official_status_code": 70
         },
@@ -74580,11 +74586,6 @@
           "title": "审议会议",
           "date": "2022-07-11",
           "official_status_code": 40
-        },
-        {
-          "title": "注册生效",
-          "date": "2022-07-27",
-          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -75063,9 +75064,14 @@
       "special_plan_manager": "国信证券股份有限公司",
       "timeline": [
         {
-          "title": "审议会议",
-          "date": "2022-06-20",
-          "official_status_code": 40
+          "title": "注册结果",
+          "date": "2022-06-21",
+          "official_status_code": 70
+        },
+        {
+          "title": "已问询",
+          "date": "2022-03-29",
+          "official_status_code": 30
         },
         {
           "title": "注册生效",
@@ -75073,24 +75079,19 @@
           "official_status_code": 70
         },
         {
-          "title": "注册结果",
-          "date": "2022-06-21",
-          "official_status_code": 70
-        },
-        {
-          "title": "已受理",
-          "date": "2022-02-15",
-          "official_status_code": 20
-        },
-        {
           "title": "已申报",
           "date": "2021-12-30",
           "official_status_code": 10
         },
         {
-          "title": "已问询",
-          "date": "2022-03-29",
-          "official_status_code": 30
+          "title": "审议会议",
+          "date": "2022-06-20",
+          "official_status_code": 40
+        },
+        {
+          "title": "已受理",
+          "date": "2022-02-15",
+          "official_status_code": 20
         }
       ],
       "fund_link_evidence": [
@@ -75795,14 +75796,9 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "注册结果",
-          "date": "2021-11-12",
-          "official_status_code": 70
-        },
-        {
-          "title": "注册生效",
-          "date": "2021-11-12",
-          "official_status_code": 70
+          "title": "已申报",
+          "date": "2021-10-14",
+          "official_status_code": 10
         },
         {
           "title": "审议会议",
@@ -75810,14 +75806,19 @@
           "official_status_code": 40
         },
         {
+          "title": "注册生效",
+          "date": "2021-11-12",
+          "official_status_code": 70
+        },
+        {
           "title": "已受理",
           "date": "2021-10-15",
           "official_status_code": 20
         },
         {
-          "title": "已申报",
-          "date": "2021-10-14",
-          "official_status_code": 10
+          "title": "注册结果",
+          "date": "2021-11-12",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -76240,19 +76241,14 @@
       "special_plan_manager": "深创投红土资产管理（深圳）有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2021-05-06",
-          "official_status_code": 20
-        },
-        {
           "title": "注册结果",
           "date": "2021-05-17",
           "official_status_code": 70
         },
         {
-          "title": "注册生效",
-          "date": "2021-05-17",
-          "official_status_code": 70
+          "title": "审议会议",
+          "date": "2021-05-14",
+          "official_status_code": 40
         },
         {
           "title": "已申报",
@@ -76260,9 +76256,14 @@
           "official_status_code": 10
         },
         {
-          "title": "审议会议",
-          "date": "2021-05-14",
-          "official_status_code": 40
+          "title": "已受理",
+          "date": "2021-05-06",
+          "official_status_code": 20
+        },
+        {
+          "title": "注册生效",
+          "date": "2021-05-17",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -76534,19 +76535,9 @@
       "special_plan_manager": "平安证券股份有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2021-04-28",
-          "official_status_code": 10
-        },
-        {
           "title": "审议会议",
           "date": "2021-05-14",
           "official_status_code": 40
-        },
-        {
-          "title": "注册生效",
-          "date": "2021-05-17",
-          "official_status_code": 70
         },
         {
           "title": "已受理",
@@ -76554,7 +76545,17 @@
           "official_status_code": 20
         },
         {
+          "title": "已申报",
+          "date": "2021-04-28",
+          "official_status_code": 10
+        },
+        {
           "title": "注册结果",
+          "date": "2021-05-17",
+          "official_status_code": 70
+        },
+        {
+          "title": "注册生效",
           "date": "2021-05-17",
           "official_status_code": 70
         }
@@ -76822,19 +76823,14 @@
           "official_status_code": 70
         },
         {
-          "title": "注册结果",
-          "date": "2021-05-17",
-          "official_status_code": 70
-        },
-        {
-          "title": "已申报",
-          "date": "2021-04-21",
-          "official_status_code": 10
-        },
-        {
           "title": "已受理",
           "date": "2021-04-23",
           "official_status_code": 20
+        },
+        {
+          "title": "注册结果",
+          "date": "2021-05-17",
+          "official_status_code": 70
         },
         {
           "title": "已问询",
@@ -76845,6 +76841,11 @@
           "title": "审议会议",
           "date": "2021-05-14",
           "official_status_code": 40
+        },
+        {
+          "title": "已申报",
+          "date": "2021-04-21",
+          "official_status_code": 10
         }
       ],
       "fund_link_evidence": [
@@ -77109,11 +77110,6 @@
           "official_status_code": 20
         },
         {
-          "title": "注册结果",
-          "date": "2021-05-17",
-          "official_status_code": 70
-        },
-        {
           "title": "注册生效",
           "date": "2021-05-17",
           "official_status_code": 70
@@ -77127,6 +77123,11 @@
           "title": "已申报",
           "date": "2021-04-21",
           "official_status_code": 10
+        },
+        {
+          "title": "注册结果",
+          "date": "2021-05-17",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -78440,12 +78441,12 @@
         "core": false
       }
     ],
-    "updated_at": "2026-11-02T09:06:48+08:00"
+    "updated_at": "2026-11-03T11:09:34+08:00"
   },
   "refresh_batch": {
-    "id": "41370028560-1",
-    "date": "2026-11-02",
-    "started_at": "2026-11-02T08:59:09+08:00",
-    "completed_at": "2026-11-02T09:06:48+08:00"
+    "id": "41569649679-1",
+    "date": "2026-11-03",
+    "started_at": "2026-11-03T11:01:42+08:00",
+    "completed_at": "2026-11-03T11:09:34+08:00"
   }
 }
