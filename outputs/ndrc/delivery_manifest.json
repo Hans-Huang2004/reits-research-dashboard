@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-03T11:10:53+08:00",
-  "data_date": "2026-11-03",
-  "collected_at": "2026-11-03T11:10:32+08:00",
+  "generated_at": "2026-11-04T09:45:19+08:00",
+  "data_date": "2026-11-04",
+  "collected_at": "2026-11-04T09:45:13+08:00",
   "version": 1,
   "snapshot_path": "data/ndrc_recommendations.json",
-  "snapshot_sha256": "0d5096880887868f27394f684a867acf3196bc0c1fa7b751824b136482a60715",
+  "snapshot_sha256": "925ec6ef0f9f113b40d56c6c631f3ff02bf673c295929ddb820cb96e97a9d94c",
   "public_input_path": "data/public_reits.json",
-  "public_input_sha256": "102ee532ab7378c15f36420dd6ba36fe331448f4385abdf67eb8e4b540e28767",
+  "public_input_sha256": "4fd9f6baeda9e3d1e6b767e1b35c6a389754748bbd6841face46073d6f2a35f3",
   "source_versions": [
     {
       "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
@@ -22,10 +22,10 @@
         "reportRecommendStartTime": "",
         "reportRecommendEndTime": ""
       },
-      "retrieved_at": "2026-11-03T11:10:33+08:00",
+      "retrieved_at": "2026-11-04T09:45:15+08:00",
       "status": 200,
       "tls_verified": true,
-      "raw_path": "data/raw/ndrc/refresh/41569649679-1/page0001.json",
+      "raw_path": "data/raw/ndrc/refresh/41755145420-1/page0001.json",
       "sha256": "b9712cee1a4f030fd2556feb81305ae94614ec98b94551ca91a25313088b369f",
       "bytes": 9329
     },
@@ -43,10 +43,10 @@
         "reportRecommendStartTime": "",
         "reportRecommendEndTime": ""
       },
-      "retrieved_at": "2026-11-03T11:10:35+08:00",
+      "retrieved_at": "2026-11-04T09:45:17+08:00",
       "status": 200,
       "tls_verified": true,
-      "raw_path": "data/raw/ndrc/refresh/41569649679-1/page0002.json",
+      "raw_path": "data/raw/ndrc/refresh/41755145420-1/page0002.json",
       "sha256": "d4d033142754e2eabd876a9235ad453ea8e539aca2af0e24cfb67dc150a8f3ae",
       "bytes": 9200
     },
@@ -64,18 +64,18 @@
         "reportRecommendStartTime": "",
         "reportRecommendEndTime": ""
       },
-      "retrieved_at": "2026-11-03T11:10:36+08:00",
+      "retrieved_at": "2026-11-04T09:45:19+08:00",
       "status": 200,
       "tls_verified": true,
-      "raw_path": "data/raw/ndrc/refresh/41569649679-1/page0003.json",
+      "raw_path": "data/raw/ndrc/refresh/41755145420-1/page0003.json",
       "sha256": "8046de1fd8652f8f111de35273960177e92316a64c00f2c50f669b904bb86a8e",
       "bytes": 7293
     },
     {
       "path": "data/public_reits.json",
-      "sha256": "102ee532ab7378c15f36420dd6ba36fe331448f4385abdf67eb8e4b540e28767",
-      "date": "2026-11-03",
-      "updated_at": "2026-11-03T11:04:42+08:00"
+      "sha256": "4fd9f6baeda9e3d1e6b767e1b35c6a389754748bbd6841face46073d6f2a35f3",
+      "date": "2026-11-04",
+      "updated_at": "2026-11-04T09:39:29+08:00"
     },
     {
       "kind": "reviewed_matching_config",
@@ -107,22 +107,22 @@
     "negative_acceptance_intervals": 16
   },
   "source_manifest": {
-    "path": "data/source_manifest/ndrc/20261103-111032-090119.json",
-    "sha256": "1169857c15e67e089c26024ba6db853bcf121ea8dd50a28d1be0a6f0e8a6f998"
+    "path": "data/source_manifest/ndrc/20261104-094513-530312.json",
+    "sha256": "5cfcc1de53270a09092a24a8f801ca8992770db52a6d2bc09ae8bbfb6ee7796a"
   },
   "reviewed_workpaper": {
-    "path": "workpapers/ndrc/refresh/41569649679-1/collection/collection_reviewed_snapshot.json",
-    "sha256": "0d5096880887868f27394f684a867acf3196bc0c1fa7b751824b136482a60715"
+    "path": "workpapers/ndrc/refresh/41755145420-1/collection/collection_reviewed_snapshot.json",
+    "sha256": "925ec6ef0f9f113b40d56c6c631f3ff02bf673c295929ddb820cb96e97a9d94c"
   },
-  "matching_audit_workpaper": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/ndrc/refresh/41569649679-1/collection/matching_audit.json",
+  "matching_audit_workpaper": "/home/runner/work/reits-research-dashboard/reits-research-dashboard/workpapers/ndrc/refresh/41755145420-1/collection/matching_audit.json",
   "outputs": [
     {
-      "path": "outputs/ndrc/全部推荐及历史匹配_2026-11-03.csv",
+      "path": "outputs/ndrc/全部推荐及历史匹配_2026-11-04.csv",
       "rows": 138,
       "sha256": "f17cfffb228895e524e03a5463118ce0593b13ca8891b1a98c64053c5e3249f3"
     },
     {
-      "path": "outputs/ndrc/待核实与未匹配_2026-11-03.csv",
+      "path": "outputs/ndrc/待核实与未匹配_2026-11-04.csv",
       "rows": 10,
       "sha256": "3c43d01e830c628f5d0dceed6441713556069746f09bdc737c9aed2cffbc6bc1"
     }
