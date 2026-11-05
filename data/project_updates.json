@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-05T09:51:10+08:00",
+  "generated_at": "2026-11-05T09:52:23+08:00",
   "as_of_date": "2026-11-05",
   "sources": {
     "public": {
@@ -361,8 +361,8 @@
     },
     "ndrc": {
       "label": "国家发改委推荐",
-      "checked_at": "2026-11-04T09:45:13+08:00",
-      "collected_at": "2026-11-04T09:45:13+08:00",
+      "checked_at": "2026-11-05T09:52:18+08:00",
+      "collected_at": "2026-11-05T09:52:18+08:00",
       "latest_official_date": "2026-10-20",
       "coverage_start": "2026-10-16T10:50:20+08:00",
       "complete": true,
@@ -372,20 +372,20 @@
         "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list"
       ],
       "snapshot_path": "data/ndrc_recommendations.json",
-      "snapshot_sha256": "925ec6ef0f9f113b40d56c6c631f3ff02bf673c295929ddb820cb96e97a9d94c",
+      "snapshot_sha256": "d66b7185416a786a4562abcb3d31a6807d1c5c7a77e7c2bb5b9f4d3e132c9072",
       "raw_versions": [
         {
-          "raw_path": "data/raw/ndrc/refresh/41755145420-1/page0001.json",
+          "raw_path": "data/raw/ndrc/refresh/41950399997-1/page0001.json",
           "sha256": "b9712cee1a4f030fd2556feb81305ae94614ec98b94551ca91a25313088b369f",
           "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList"
         },
         {
-          "raw_path": "data/raw/ndrc/refresh/41755145420-1/page0002.json",
+          "raw_path": "data/raw/ndrc/refresh/41950399997-1/page0002.json",
           "sha256": "d4d033142754e2eabd876a9235ad453ea8e539aca2af0e24cfb67dc150a8f3ae",
           "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList"
         },
         {
-          "raw_path": "data/raw/ndrc/refresh/41755145420-1/page0003.json",
+          "raw_path": "data/raw/ndrc/refresh/41950399997-1/page0003.json",
           "sha256": "8046de1fd8652f8f111de35273960177e92316a64c00f2c50f669b904bb86a8e",
           "url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList"
         }
@@ -405,10 +405,10 @@
             "reportRecommendStartTime": "",
             "reportRecommendEndTime": ""
           },
-          "retrieved_at": "2026-11-04T09:45:15+08:00",
+          "retrieved_at": "2026-11-05T09:52:20+08:00",
           "status": 200,
           "tls_verified": true,
-          "raw_path": "data/raw/ndrc/refresh/41755145420-1/page0001.json",
+          "raw_path": "data/raw/ndrc/refresh/41950399997-1/page0001.json",
           "sha256": "b9712cee1a4f030fd2556feb81305ae94614ec98b94551ca91a25313088b369f",
           "bytes": 9329
         },
@@ -426,10 +426,10 @@
             "reportRecommendStartTime": "",
             "reportRecommendEndTime": ""
           },
-          "retrieved_at": "2026-11-04T09:45:17+08:00",
+          "retrieved_at": "2026-11-05T09:52:21+08:00",
           "status": 200,
           "tls_verified": true,
-          "raw_path": "data/raw/ndrc/refresh/41755145420-1/page0002.json",
+          "raw_path": "data/raw/ndrc/refresh/41950399997-1/page0002.json",
           "sha256": "d4d033142754e2eabd876a9235ad453ea8e539aca2af0e24cfb67dc150a8f3ae",
           "bytes": 9200
         },
@@ -447,18 +447,18 @@
             "reportRecommendStartTime": "",
             "reportRecommendEndTime": ""
           },
-          "retrieved_at": "2026-11-04T09:45:19+08:00",
+          "retrieved_at": "2026-11-05T09:52:22+08:00",
           "status": 200,
           "tls_verified": true,
-          "raw_path": "data/raw/ndrc/refresh/41755145420-1/page0003.json",
+          "raw_path": "data/raw/ndrc/refresh/41950399997-1/page0003.json",
           "sha256": "8046de1fd8652f8f111de35273960177e92316a64c00f2c50f669b904bb86a8e",
           "bytes": 7293
         },
         {
           "path": "data/public_reits.json",
-          "sha256": "4fd9f6baeda9e3d1e6b767e1b35c6a389754748bbd6841face46073d6f2a35f3",
-          "date": "2026-11-04",
-          "updated_at": "2026-11-04T09:39:29+08:00"
+          "sha256": "3226c16c2fec6a0372b74e80bf41919a4ac3327cf5501424c5c725a26beddcca",
+          "date": "2026-11-05",
+          "updated_at": "2026-11-05T09:46:32+08:00"
         },
         {
           "kind": "reviewed_matching_config",
@@ -471,7 +471,7 @@
         "NDRC": {
           "ok": true,
           "complete": true,
-          "updated_at": "2026-11-04T09:45:13+08:00",
+          "updated_at": "2026-11-05T09:52:18+08:00",
           "latest_recommended_date": "2026-10-20",
           "source_url": "https://reitsgl.tzxm.gov.cn:8881/atom-ui/reits/#/reits/project-publicity/project-publicity-list",
           "api_url": "https://reitsgl.tzxm.gov.cn:8881/atom/api/v1/reits/getReitsPublicInfoList",
@@ -480,15 +480,15 @@
       },
       "status": "complete",
       "error": null,
-      "last_successful_at": "2026-11-04T09:45:13+08:00",
+      "last_successful_at": "2026-11-05T09:52:18+08:00",
       "revision_status": "官方来源当前完整快照；来源未统一提供初值或修订标识",
       "expected_latest_date": null,
       "is_lagging": null,
       "freshness_reason": "交易所及推荐名单不定期更新；完整成功核查时间和最新公开业务日期分别展示",
-      "matching_public_current": false,
-      "matching_public_sha256": "4fd9f6baeda9e3d1e6b767e1b35c6a389754748bbd6841face46073d6f2a35f3",
+      "matching_public_current": true,
+      "matching_public_sha256": "3226c16c2fec6a0372b74e80bf41919a4ac3327cf5501424c5c725a26beddcca",
       "source_manifest_paths": [
-        "data/source_manifest/ndrc/20261104-094513-530312.json"
+        "data/source_manifest/ndrc/20261105-095218-827522.json"
       ],
       "raw_retention": {
         "referenced_files": 3,
@@ -109329,7 +109329,7 @@
         "current_entities": 143
       },
       "ndrc": {
-        "input_versions": 40,
+        "input_versions": 41,
         "baseline_at": "2026-10-16T10:50:20+08:00",
         "current_entities": 138
       }
@@ -109497,7 +109497,7 @@
     "transformation_version": "official-date-archive-v2",
     "document_revisions": [],
     "rejected_inputs": [],
-    "retained_input_count": 139,
+    "retained_input_count": 140,
     "raw_retention": {
       "public": {
         "referenced_files": 675,
@@ -109525,12 +109525,12 @@
         "missing_local_paths": [],
         "mismatched_paths": [],
         "source_manifest_paths": [
-          "data/source_manifest/ndrc/20261104-094513-530312.json"
+          "data/source_manifest/ndrc/20261105-095218-827522.json"
         ],
         "treatment": "Original Raw hashes verified against source manifests"
       }
     },
-    "audit_path": "workpapers/project_updates/runs/138e31318991ff41b3e8/audit.json",
+    "audit_path": "workpapers/project_updates/runs/30056379f1ce7a781f7a/audit.json",
     "input_index_path": "workpapers/project_updates/input_index.json"
   }
 }
