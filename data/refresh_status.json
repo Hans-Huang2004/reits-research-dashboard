@@ -1,14 +1,14 @@
 {
   "status": "complete",
   "attempt_ok": true,
-  "date": "2026-11-04",
-  "batch_id": "41755145420-1",
-  "started_at": "2026-11-04T09:36:11+08:00",
-  "completed_at": "2026-11-04T09:44:11+08:00",
+  "date": "2026-11-05",
+  "batch_id": "41950399997-1",
+  "started_at": "2026-11-05T09:43:25+08:00",
+  "completed_at": "2026-11-05T09:51:09+08:00",
   "validation": {
     "institutional": {
-      "count": 140,
-      "SSE": 117,
+      "count": 143,
+      "SSE": 120,
       "SZSE": 23
     },
     "public": {
@@ -17,8 +17,8 @@
       "issued_funds": 102,
       "filings": 160,
       "business_types": {
-        "首发": 144,
-        "扩募": 16
+        "扩募": 16,
+        "首发": 144
       },
       "excluded_filings": 0,
       "fund_codes_unique": true,
@@ -26,8 +26,8 @@
       "unlinked_events": 0
     }
   },
-  "last_successful_at": "2026-11-04T09:44:11+08:00",
-  "last_attempt_at": "2026-11-04T09:36:11+08:00",
+  "last_successful_at": "2026-11-05T09:51:09+08:00",
+  "last_attempt_at": "2026-11-05T09:43:25+08:00",
   "disclosure_checked_at": {
     "institutional": "2026-10-15T13:14:26+08:00",
     "public": "2026-10-15T13:14:26+08:00"

@@ -1,0 +1,1360 @@
+/**
+ * Created by YJJ on 2020/11/24.
+ */
+var pageNo = 1,
+    pageSize = 25,
+    beginPage = 1,
+    pageCount = 0;
+var listParams = {};
+var searchListData = [];
+var searchAppend = document.getElementById('searchAppend');
+var mobSearchAppend = document.getElementById('mob-searchAppend');
+var fundTypeTree = []; //基金类型树
+var mobCategory = [];
+var filterIsClick = false;
+var mobFirstLoad = true;
+var CATEGORY = "F000",
+    mobCategory_code = "F000"; //基金列表默认展示类型不限
+var filterTemp = null,
+    mobFilterTemp = null; //搜索按钮点击改变参数
+var sortParams = null; //表格排序参数
+$(function () {
+    $(document).on("click", function () {
+        $("#searchAppend").hide();
+        $("#searchAppendCompany").hide();
+        $("#searchAppendIndex").hide();
+        $("#mob_searchAppendCompany").hide();
+        $("#mob_searchmb_AppendIndex").hide();
+    });
+
+    var params = {
+        CATEGORY_PARENT_CODE: "F000"
+    };
+    getFundType(params, ".filter-parent", 1, true);
+    getListData(true, true);
+    //getMobListData(true,true);
+    $("#fdlist-search").on("click", function () {
+        pageCount = 0;
+        beginPage = 1;
+        pageNo = 1;
+        var FUND_CODE = $.trim($("#FUND_CODE").val()),
+            COMPANY_NAME = $.trim($("#COMPANY_NAME").val()),
+            INDEX_NAME = $.trim($("#INDEX_NAME").val()),
+            START_DATE = $("#START_DATE").val(),
+            END_DATE = $("#END_DATE").val(),
+            SUBCLASS, SWING_TRADE;
+        if ($("#SUBCLASS").prop("checked")) {
+            SUBCLASS = $("#SUBCLASS").val();
+        } else {
+            SUBCLASS = "";
+        }
+        if ($("#SWING_TRADE").prop("checked")) {
+            SWING_TRADE = $("#SWING_TRADE").val();
+        }
+        filterTemp = {
+            "FUND_CODE": FUND_CODE,
+            "COMPANY_NAME": COMPANY_NAME,
+            "INDEX_NAME": INDEX_NAME,
+            "START_DATE": START_DATE ? START_DATE.replace(/-/g, "") : "",
+            "END_DATE": END_DATE ? END_DATE.replace(/-/g, "") : "",
+            "SUBCLASS": SUBCLASS,
+            "SWING_TRADE": SWING_TRADE
+        };
+        getListData(true, true);
+        $("#searchAppend").hide();
+    });
+    $("#fdlist-search-mob").on("click", function () { //移动端搜索
+        beginPage = 1;
+        pageNo = 1;
+        pageCount = 0;
+        getMobListData(true, true);
+    });
+    $(".fundlist-show-filter").on("click", function () {
+        $('#fundlistModal').modal('show');
+    });
+
+    $(".filter-tab").on("click", function () {
+        $(".filter-tab").removeClass("active");
+        $(this).addClass("active");
+        var index = Number($(this).attr("data"));
+        var panels = $(".filter-panel");
+        panels.removeClass("active");
+        panels.eq(index).addClass("active");
+        panels.eq(index).addClass("active");
+        if (index == 1) {
+            //$(".modal-footer").hide();
+            var params = {
+                CATEGORY_PARENT_CODE: "F000"
+            };
+            if (filterIsClick == false) {
+                getMobFundType(params, ".filter-panel-container", 1);
+                filterIsClick = true;
+            }
+        } else {
+            mobSearchAppend.style.display = 'none'
+            mobSearchAppend.innerHTML = '';
+            //$(".modal-footer").show();
+        }
+    });
+
+    $('#fundlistModal').on('hidden.bs.modal', function () {
+        mobSearchAppend.style.display = 'none'
+        mobSearchAppend.innerHTML = '';
+    });
+
+    $("#mob-filter-reset").on("click", function () {
+        filterIsClick = false;
+        $("#MOB_FUND_CODE").val("");
+        $("#MOB_COMPANY_NAME").val("");
+        $("#MOB_INDEX_NAME").val("");
+        $("#MOB_START_DATE").val("");
+        $("#MOB_END_DATE").val("");
+        $("#MOB_SUBCLASS").prop("checked", false);
+        $("#MOB_SWING_TRADE").prop("checked", false);
+        mobCategory_code = "F000";
+    });
+
+    $("#mob-fdlist-search").on("click", function () {
+        pageCount = 0;
+        beginPage = 1;
+        pageNo = 1;
+        var MOB_FUND_CODE = $("#MOB_FUND_CODE").val(),
+            MOB_COMPANY_NAME = $("#MOB_COMPANY_NAME").val(),
+            MOB_INDEX_NAME = $("#MOB_INDEX_NAME").val(),
+            MOB_START_DATE = $("#MOB_START_DATE").val(),
+            MOB_END_DATE = $("#MOB_END_DATE").val(),
+            MOB_SUBCLASS, MOB_SWING_TRADE;
+        if ($("#MOB_SUBCLASS").prop("checked")) {
+            MOB_SUBCLASS = $("#MOB_SUBCLASS").val();
+        } else {
+            MOB_SUBCLASS = "";
+        }
+        if ($("#MOB_SWING_TRADE").prop("checked")) {
+            MOB_SWING_TRADE = $("#MOB_SWING_TRADE").val();
+        } else {
+            MOB_SWING_TRADE = "";
+        }
+
+        mobFilterTemp = {
+            "FUND_CODE": MOB_FUND_CODE,
+            "COMPANY_NAME": MOB_COMPANY_NAME,
+            "INDEX_NAME": MOB_INDEX_NAME,
+            "START_DATE": MOB_START_DATE ? MOB_START_DATE.replace(/-/g, "") : "",
+            "END_DATE": MOB_END_DATE ? MOB_END_DATE.replace(/-/g, "") : "",
+            "SUBCLASS": MOB_SUBCLASS,
+            "SWING_TRADE": MOB_SWING_TRADE
+        };
+        getMobListData(true, true);
+    });
+
+    getSearchListData();
+
+    //下载导出
+    $(".exp-exc").on("click", function () {
+        if ($('#SWING_TRADE').length) {
+            //  新下载接口
+            var par = {
+                "isPagination": false,
+                "sqlId": "COMMON_JJZWZ_JJLB_L",
+                "FUND_CODE": listParams.FUND_CODE,
+                "COMPANY_NAME": listParams.COMPANY_NAME,
+                "INDEX_NAME": listParams.INDEX_NAME,
+                "START_DATE": listParams.START_DATE,
+                "END_DATE": listParams.END_DATE,
+                "CATEGORY": listParams.CATEGORY,
+                "SUBCLASS": listParams.SUBCLASS,
+                "SWING_TRADE": listParams.SWING_TRADE,
+                "type": "inParams",
+            };
+            var url = $api.exportExcelFundData_new;
+            for (var key in par) {
+                url += "&" + key + "=" + par[key];
+            }
+            var link = document.createElement('a');
+            //设置下载的文件名
+            link.download = "excel";
+            link.style.display = 'none';
+            //设置下载路径
+            link.href = url;
+            //触发点击
+            document.body.appendChild(link);
+            link.click();
+            //移除节点
+            document.body.removeChild(link);
+        } else {
+            var par = {
+                "fundCode": listParams.FUND_CODE,
+                "fundAbbr": "",
+                "companyName": listParams.COMPANY_NAME,
+                "indexName": listParams.INDEX_NAME,
+                "startDate": listParams.START_DATE,
+                "endDate": listParams.END_DATE,
+                "category": listParams.CATEGORY,
+                "subClass": listParams.SUBCLASS,
+                "SWING_TRADE": listParams.SWING_TRADE
+            };
+            var url = $api.exportExcelFundData;
+            for (var key in par) {
+                url += "&" + key + "=" + par[key];
+            }
+            var link = document.createElement('a');
+            //设置下载的文件名
+            link.download = "excel";
+            link.style.display = 'none';
+            //设置下载路径
+            link.href = url;
+            //触发点击
+            document.body.appendChild(link);
+            link.click();
+            //移除节点
+            document.body.removeChild(link);
+        }
+
+    });
+
+    //自定义开始时间
+    // $("#START_DATE").click(function () {
+    //     WdatePicker({
+    //         el:this,
+    //         lang:'auto',
+    //         dateFmt:'yyyy-MM-dd',
+    //         //minDate: '#F{$dp.$D(\'start-time\')}',
+    //         minDate:'2015-01-01',
+    //         maxDate: '#F{$dp.$D(\'END_DATE\')}',
+    //         readOnly: false
+    //     });
+    // });
+
+    // //自定义结束时间
+    // $("#END_DATE").click(function () {
+    //     WdatePicker({
+    //         el:this,
+    //         lang:'auto',
+    //         dateFmt:'yyyy-MM-dd',
+    //         minDate: '#F{$dp.$D(\'START_DATE\')}',
+    //         //maxDate: '#F{$dp.$D(\'START_DATE\')}',
+    //         readOnly: false
+    //     });
+    // });
+    // //自定义开始时间
+    // $("#MOB_START_DATE").click(function () {
+    //     WdatePicker({
+    //         el:this,
+    //         lang:'auto',
+    //         dateFmt:'yyyy-MM-dd',
+    //         //minDate: '#F{$dp.$D(\'start-time\')}',
+    //         minDate:'2015-01-01',
+    //         maxDate: '#F{$dp.$D(\'MOB_END_DATE\')}',
+    //         readOnly: false
+    //     });
+    // });
+
+    // //自定义结束时间
+    // $("#MOB_END_DATE").click(function () {
+    //     WdatePicker({
+    //         el:this,
+    //         lang:'auto',
+    //         dateFmt:'yyyy-MM-dd',
+    //         minDate: '#F{$dp.$D(\'MOB_START_DATE\')}',
+    //         //maxDate: '#F{$dp.$D(\'START_DATE\')}',
+    //         readOnly: false
+    //     });
+    // });
+    getFundTypeTree();
+
+});
+
+//获取基金类型分类树
+function getFundTypeTree() {
+    ajaxJsonp($api.fundFilterType, "get", '', function (res) {
+        var list = fundTypeListToTree(res.result);
+        if (list.length > 0) {
+            fundTypeTree = list[0].children;
+            var node = {
+                CATEGORY_CODE: "F000",
+                CATEGORY_PARENT_CODE: "F000",
+                CATEGORY_NAME: "不限",
+                text: "不限"
+            };
+            fundTypeTree.push(node);
+            // fundTypeTree.sort((a, b)=> a.CATEGORY_CODE.localeCompare(b.CATEGORY_CODE, 'en'));//排序
+            fundTypeTree.sort(function (a, b) {
+                return a.CATEGORY_CODE.localeCompare(b.CATEGORY_CODE, 'en')
+            }); //排序
+            //fundTypeTree = list;
+        }
+        //mobFundSelect();
+    }, function (err) {
+        console.log(err)
+    });
+}
+
+//基金类型列表转树图
+function fundTypeListToTree(oldArr) {
+    oldArr.forEach(function (element) {
+        var parentId = element.CATEGORY_PARENT_CODE;
+        element.text = element.CATEGORY_NAME;
+        if (parentId !== "-") {
+            oldArr.forEach(function (ele) {
+                if (ele.CATEGORY_CODE == parentId) { //当内层循环的ID== 外层循环的parendId时，（说明有children），需要往该内层id里建个children并push对应的数组；
+                    if (!ele.children) {
+                        ele.children = [];
+                    }
+                    ele.children.push(element); //此时的数组是在原基础上补充了children;
+                }
+            });
+        }
+    });
+    oldArr = oldArr.filter(function (ele) {
+        ele.CATEGORY_PARENT_CODE === "-"
+    }); //这一步是过滤，按树展开，将多余的数组剔除；
+    return oldArr;
+}
+
+//基金列表 表头 -包含 pc 端，移动端
+if ($('#fundlist-wrap').length > 0) {
+    var html = "<li class='fundlist-head'>" +
+        "<div>基金代码<span class='fa fa-sort fa-fw' onclick='sort(this)' sort='FUND_CODE' asc='true'></span></div>" +
+        "<div>基金简称</div>" +
+        "<div>基金扩位简称</div>" +
+        "<div>标的指数<span class='fa fa-sort fa-fw' onclick='sort(this)' sort='INDEX_NAME' asc='true'></span></div>" +
+        "<div>上市日期<span class='fa fa-sort fa-fw' onclick='sort(this)' sort='LISTING_DATE' asc='true'></span></div>" +
+        "<div>最新规模(亿元) <span class='fa fa-sort fa-fw' onclick='sort(this)' sort='SCALE' asc='true'></span></div>" +
+        "<div>基金管理人<span class='fa fa-sort fa-fw' onclick='sort(this)' sort='COMPANY_NAME' asc='true'></span></div>" +
+        "</li><div class='fundItem'>";
+    var html2 = "<thead><tr>" +
+        "<td>基金简称</td>" +
+        "<td>基金代码<span class='fa fa-sort fa-fw' onclick='sort(this)' sort='FUND_CODE' asc='true'></span></td>" +
+        "<td>基金扩位简称</td>" +
+        "<td>标的指数<span class='fa fa-sort fa-fw' onclick='sort(this)' sort='INDEX_NAME' asc='true'></span></td>" +
+        "<td>上市日期<span class='fa fa-sort fa-fw' onclick='sort(this)' sort='LISTING_DATE' asc='true'></span></td>" +
+        "<td>最新规模(亿元) <span class='fa fa-sort fa-fw' onclick='sort(this)' sort='SCALE' asc='true'></span></td>" +
+        "<td>基金管理人<span class='fa fa-sort fa-fw' onclick='sort(this)' sort='COMPANY_NAME' asc='true'></span></td>" +
+        "</tr></thead>" +
+        "<tbody class='mob-trans-overv-tbody'></tbody>";
+    $(".fundlist").html(html);
+    $(".fundlist-mob").html(html2);
+}
+
+/**
+ *
+ * @param flag
+ * @param isSelectCategory 是否进页面第一次请求
+ */
+function getListData(flag, isSelectCategory) {
+    //var CATEGORY = "F000";
+    if (isSelectCategory) {
+        if ($(".three-filter ul li.active").length > 0) {
+            CATEGORY = $(".three-filter ul li.active").attr("code");
+        } else if ($(".sub-filter div ul li.active").length > 0) {
+            CATEGORY = $(".sub-filter div ul li.active").attr("code");
+        } else if ($(".filter-parent > li.active").length > 0) {
+            CATEGORY = $(".filter-parent > li.active").attr("code");
+        }
+    }
+    var SUBCLASS;
+    if ($("#SUBCLASS").prop("checked")) {
+        SUBCLASS = $("#SUBCLASS").val();
+    } else {
+        SUBCLASS = "";
+    }
+    var SWING_TRADE = '';
+    if ($("#SWING_TRADE").prop("checked")) {
+        SWING_TRADE = $("#SWING_TRADE").val();
+    }
+    if (filterTemp == null) {
+        listParams = {
+            "pageHelp.cacheSize": 1,
+            "pageHelp.pageSize": pageSize,
+            "pageHelp.pageNo": pageNo,
+            "pageHelp.beginPage": beginPage,
+            "pageHelp.endPage": 1,
+            "FUND_CODE": "",
+            "COMPANY_NAME": "",
+            "INDEX_NAME": "",
+            "START_DATE": "",
+            "END_DATE": "",
+            "CATEGORY": CATEGORY,
+            "CATEGORY_ASC": 1,
+            "SUBCLASS": "",
+            "SWING_TRADE": SWING_TRADE,
+            "type": "inParams",
+            "CATEGORY_ASC": 1
+        };
+        // 排序参数添加
+        if (sortParams != null) {
+            var sortArr = Object.keys(sortParams)
+            for (var i = 0; i <= sortArr.length; i++) {
+                if (sortParams[sortArr[i]] == 1) {
+                    listParams[sortArr[i]] = 1
+                }
+            }
+            delete listParams.CATEGORY_ASC;
+        }
+    } else {
+        listParams = {
+            "pageHelp.cacheSize": 1,
+            "pageHelp.pageSize": pageSize,
+            "pageHelp.pageNo": pageNo,
+            "pageHelp.beginPage": beginPage,
+            "pageHelp.endPage": 1,
+            "FUND_CODE": filterTemp.FUND_CODE,
+            "COMPANY_NAME": filterTemp.COMPANY_NAME,
+            "INDEX_NAME": filterTemp.INDEX_NAME,
+            "START_DATE": filterTemp.START_DATE ? filterTemp.START_DATE.replace(/-/g, "") : "",
+            "END_DATE": filterTemp.END_DATE ? filterTemp.END_DATE.replace(/-/g, "") : "",
+            "CATEGORY": CATEGORY,
+            "SUBCLASS": filterTemp.SUBCLASS,
+            "SWING_TRADE": SWING_TRADE,
+            "type": "inParams"
+        };
+        if (CATEGORY == "F000") {
+            listParams['CATEGORY_ASC'] = 1
+        } else {
+          if (sortParams != null) {
+            var sortArr = Object.keys(sortParams)
+            for (var i = 0; i <= sortArr.length; i++) {
+                if (sortParams[sortArr[i]] == 1) {
+                    listParams[sortArr[i]] = 1
+                }
+            }
+            delete listParams.CATEGORY_ASC;
+          } else {
+            listParams["FUND_CODE_ASC"] = 1;
+          }
+        }
+    }
+    ajaxFundList(flag, listParams);
+}
+
+// 表格内容排序
+function sort(obj) {
+    var par = {
+        "pageHelp.cacheSize": 1,
+        "pageHelp.pageSize": pageSize,
+        "pageHelp.pageNo": 1,
+        "pageHelp.beginPage": 1,
+        "pageHelp.endPage": 1,
+        "FUND_CODE": listParams.FUND_CODE,
+        "COMPANY_NAME": listParams.COMPANY_NAME,
+        "INDEX_NAME": listParams.INDEX_NAME,
+        "START_DATE": listParams.START_DATE,
+        "END_DATE": listParams.END_DATE,
+        "CATEGORY": listParams.CATEGORY,
+        "SUBCLASS": listParams.SUBCLASS,
+        "SWING_TRADE": listParams.SWING_TRADE,
+        "type": "inParams"
+    };
+    sortParams = {
+        "FUND_CODE_ASC": '',
+        "INDEX_NAME_ASC": '',
+        "LISTING_DATE_ASC": '',
+        "SCALE_ASC": '',
+        "COMPANY_NAME_ASC": '',
+        "FUND_CODE_DESC": '',
+        "INDEX_NAME_DESC": '',
+        "LISTING_DATE_DESC": '',
+        "SCALE_DESC": '',
+        "COMPANY_NAME_DESC": '',
+    }
+
+    var type = $(obj).attr('sort')
+    var asc = $(obj).attr('asc')
+    if (asc == "true") {
+        par[type + '_DESC'] = 1;
+        sortParams[type + '_DESC'] = 1;
+    } else {
+        par[type + '_ASC'] = 1;
+        sortParams[type + '_ASC'] = 1;
+    }
+    ajaxFundList('true', par)
+    // 处理排序箭头展示
+    setTimeout(function () {
+        $('.fa-sort-asc').removeClass('fa-sort-asc')
+        $('.fa-sort-desc').removeClass('fa-sort-desc')
+        $('fa-fw').addClass('fa-sort')
+        if (asc == "true") {
+            $(obj).attr('asc', "false")
+            $(obj).removeClass('fa-sort-asc')
+            $(obj).addClass('fa-sort-desc')
+        } else {
+            $(obj).attr('asc', "true")
+            $(obj).removeClass('fa-sort-desc')
+            $(obj).addClass('fa-sort-asc')
+        }
+    })
+}
+
+// 基金列表 获取数据渲染
+function ajaxFundList(flag, listParams) {
+    ajaxJsonp($api.getFundList, "get", listParams, function (res) {
+        $(".total-fund").html(res.pageHelp.total);
+        var result = res.result;
+        var html = "";
+        var html2 = "";
+        for (var i = 0; i < result.length; i++) {
+            html += "<li class='fundlist-item' category='" + result[i].CATEGORY + "' code='" + result[i].FUND_CODE + "'>" +
+                "<div>" + result[i].FUND_CODE + "</div>" +
+                "<div>" + result[i].FUND_ABBR + "</div>" +
+                "<div>" + result[i].FUND_EXPANSION_ABBR + "</div>" +
+                "<div>" + result[i].INDEX_NAME + "</div>" +
+                "<div>" + result[i].LISTING_DATE + "</div>" +
+                "<div>" + result[i].SCALE + "</div>" +
+                "<div>" + result[i].COMPANY_NAME + "</div>" +
+                "</li>";
+            html2 += "<tr code='" + result[i].FUND_CODE + "' class='fundlist-item' category='" + result[i].CATEGORY + "'><td>" + result[i].FUND_ABBR + "</td>" +
+                "<td>" + result[i].FUND_CODE + "</td>" +
+                "<td>" + result[i].FUND_EXPANSION_ABBR + "</td>" +
+                "<td>" + result[i].INDEX_NAME + "</td>" +
+                "<td>" + result[i].LISTING_DATE + "</td>" +
+                "<td>" + result[i].SCALE + "</td>" +
+                "<td>" + result[i].COMPANY_NAME + "</td></tr>";
+        }
+        $('.fundItem').html(html)
+        $('.mob-trans-overv-tbody').html(html2)
+        $(".fundlist-item").on("click", function () {
+            var code = $(this).attr("code");
+            var CATEGORY = $(this).attr("category");
+            window.open("/fundlist/funddetail/index.shtml?code=" + code + "&category=" + CATEGORY, "_blank");
+        });
+
+        if (flag == undefined || flag) {
+            $("#fundlist-pag .com-pagination").html('');
+            $("#fundlist-pag-mob .com-pagination-mob").html('');
+            pageCount = res.pageHelp.pageCount;
+            if (pageCount > 1) {
+                var pageHtml = '<li><a class="pagination-pre blur" href="javascript:;"><i class="fa fa-angle-left"></i></a></li>';
+                var pageHtml2 = '<li style="display:inline-block"><a class="pagination-pre blur" href="javascript:;"><i class="fa fa-angle-left"></i></a></li>'; //移动端分页
+                for (var j = 0; j < pageCount; j++) {
+                    pageHtml += '<li>';
+                    pageHtml2 += '<li style="display:inline-block">';
+                    if (j == 0) {
+                        pageHtml += '<a class="page active"';
+                        pageHtml2 += '<a class="page active"';
+                    } else {
+                        pageHtml += '<a class="page"';
+                        pageHtml2 += '<a class="page"';
+                    }
+                    if (j > 2 && j < pageCount - 1) {
+                        pageHtml += ' style="display:none;"'
+                        pageHtml2 += ' style="display:none;"'
+                    }
+                    pageHtml += ' "href="javascript:;">' + (j + 1) + '</a></li>';
+                    pageHtml2 += ' "href="javascript:;">' + (j + 1) + '</a></li>';
+
+                    if (pageCount >= 4 && j == 0) {
+                        pageHtml += ' <li><a id="prePlaceHolder" "href="javascript:;">' + '...' + '</a></li>';
+                        pageHtml2 += ' <li style="display:inline-block"><a id="prePlaceHolder-mob" "href="javascript:;">' + '...' + '</a></li>';
+                    }
+                    if (pageCount >= 4 && j == pageCount - 2) {
+                        pageHtml += ' <li><a id="nextPlaceHolder" "href="javascript:;">' + '...' + '</a></li>';
+                        pageHtml2 += ' <li style="display:inline-block"><a id="nextPlaceHolder-mob" "href="javascript:;">' + '...' + '</a></li>';
+                    }
+                }
+
+
+                pageHtml += '<li><a class="pagination-next" href="javascript:;"><i class="fa fa-angle-right"></i></a></li>';
+                pageHtml2 += '<li style="display:inline-block"><a class="pagination-next" href="javascript:;"><i class="fa fa-angle-right"></i></a></li>';
+                $("#fundlist-pag .com-pagination").html(pageHtml);
+                $("#fundlist-pag-mob .com-pagination-mob").html(pageHtml2);
+                //$("#page-total").html(pageCount)
+                bindTurnPage("#fundlist-pag", pageCount);
+                bindTurnPage("#fundlist-pag-mob", pageCount);
+                $("#prePlaceHolder").hide();
+                $("#prePlaceHolder-mob").hide();
+            }
+        }
+        if (result.length == 0) {
+            $(".content-null-prompt").show()
+            //$(".jump-page").hide()
+        } else {
+            $(".content-null-prompt").hide()
+            //$(".jump-page").show()
+        }
+    }, function (err) {
+        console.log(err)
+    });
+}
+//获取移动端基金列表数据
+function getMobListData(flag, isSelectCategory) {
+    if (isSelectCategory) {
+        if ($(".filter-sub-container li.active").length > 0) {
+            mobCategory_code = $(".filter-sub-container li.active").attr("code");
+        } else if ($(".filter-panel-sub > li.active").length > 0) {
+            mobCategory_code = $(".filter-panel-sub li.active").attr("code");
+        } else if ($(".filter-panel-parent > li.active").length > 0) {
+            mobCategory_code = $(".filter-panel-parent > li.active").attr("code");
+        }
+    }
+
+    if (mobFilterTemp == null) {
+        listParams = {
+            "pageHelp.cacheSize": 1,
+            "pageHelp.pageSize": pageSize,
+            "pageHelp.pageNo": pageNo,
+            "pageHelp.beginPage": beginPage,
+            "pageHelp.endPage": 1,
+            "FUND_CODE": "",
+            //"FUND_ABBR":FUND_ABBR,
+            "COMPANY_NAME": "",
+            "INDEX_NAME": "",
+            "START_DATE": "",
+            "END_DATE": "",
+            "CATEGORY": mobCategory_code,
+            "SUBCLASS": "",
+            "SWING_TRADE": "",
+            "type": "inParams"
+        };
+        if (sortParams != null) {
+            var sortArr = Object.keys(sortParams)
+            for (var i = 0; i <= sortArr.length; i++) {
+                if (sortParams[sortArr[i]] == 1) {
+                    listParams[sortArr[i]] = 1
+                }
+            }
+            delete listParams.CATEGORY_ASC;
+        }
+    } else {
+        listParams = {
+            "pageHelp.cacheSize": 1,
+            "pageHelp.pageSize": pageSize,
+            "pageHelp.pageNo": pageNo,
+            "pageHelp.beginPage": beginPage,
+            "pageHelp.endPage": 1,
+            "FUND_CODE": mobFilterTemp.FUND_CODE,
+            //"FUND_ABBR":FUND_ABBR,
+            "COMPANY_NAME": mobFilterTemp.COMPANY_NAME,
+            "INDEX_NAME": mobFilterTemp.INDEX_NAME,
+            "START_DATE": mobFilterTemp.START_DATE ? mobFilterTemp.START_DATE.replace(/-/g, "") : "",
+            "END_DATE": mobFilterTemp.END_DATE ? mobFilterTemp.END_DATE.replace(/-/g, "") : "",
+            "CATEGORY": mobCategory_code,
+            "SUBCLASS": mobFilterTemp.SUBCLASS,
+            "SWING_TRADE": mobFilterTemp.SWING_TRADE,
+            "type": "inParams"
+        };
+        if (CATEGORY == "F000") {
+            listParams['CATEGORY_ASC'] = 1
+        }
+        if (sortParams != null) {
+            var sortArr = Object.keys(sortParams)
+            for (var i = 0; i <= sortArr.length; i++) {
+                if (sortParams[sortArr[i]] == 1) {
+                    listParams[sortArr[i]] = 1
+                }
+            }
+            delete listParams.CATEGORY_ASC;
+        }
+    }
+    ajaxJsonp($api.getFundList, "get", listParams, function (res) {
+        var result = res.result;
+        $(".total-fund").html(res.pageHelp.total);
+
+        var html2 = "";
+        for (var i = 0; i < result.length; i++) {
+            html2 += "<tr class='fundlist-item' category='" + result[i].CATEGORY + "' code='" + result[i].FUND_CODE + "'><td code='" + result[i].FUND_CODE + "'>" + result[i].FUND_ABBR + "</td>" +
+                "<td code='" + result[i].FUND_CODE + "'>" + result[i].FUND_CODE + "</td>" +
+                "<td code='" + result[i].FUND_CODE + "'>" + result[i].FUND_EXPANSION_ABBR + "</td>" +
+                "<td code='" + result[i].FUND_CODE + "'>" + result[i].INDEX_NAME + "</td>" +
+                "<td code='" + result[i].FUND_CODE + "'>" + result[i].LISTING_DATE + "</td>" +
+                "<td code='" + result[i].FUND_CODE + "'>" + result[i].SCALE + "</td>" +
+                "<td code='" + result[i].FUND_CODE + "'>" + result[i].COMPANY_NAME + "</td></tr>";
+        }
+        html2 += "</tbody>";
+        $(".fundlist-mob tbody").html(html2);
+        $(".fundlist-item").on("click", function () {
+            var code = $(this).attr("code");
+            var CATEGORY = $(this).attr("category");
+            window.open("/fundlist/funddetail/index.shtml?code=" + code + "&category=" + CATEGORY, "_self");
+        });
+        if (flag == undefined || flag) {
+            pageCount = res.pageHelp.pageCount;
+            var pageHtml2 = '<li style="display:inline-block"><a class="pagination-pre blur" href="javascript:;"><i class="fa fa-angle-left"></i></a></li>'; //移动端分页
+            for (var j = 0; j < pageCount; j++) {
+                pageHtml2 += '<li style="display:inline-block">';
+                if (j == 0) {
+                    pageHtml2 += '<a class="page active"';
+                } else {
+                    pageHtml2 += '<a class="page"';
+                }
+                if (j > 2 && j < pageCount - 1) {
+                    pageHtml2 += ' style="display:none;"'
+                }
+                pageHtml2 += ' "href="javascript:;">' + (j + 1) + '</a></li>';
+
+                if (pageCount >= 4 && j == 0) {
+                    pageHtml2 += ' <li style="display:inline-block"><a id="prePlaceHolder-mob" "href="javascript:;">' + '...' + '</a></li>';
+                }
+                if (pageCount >= 4 && j == pageCount - 2) {
+                    pageHtml2 += ' <li style="display:inline-block"><a id="nextPlaceHolder-mob" "href="javascript:;">' + '...' + '</a></li>';
+                }
+            }
+            pageHtml2 += '<li style="display:inline-block"><a class="pagination-next" href="javascript:;"><i class="fa fa-angle-right"></i></a></li>';
+            $("#fundlist-pag-mob .com-pagination-mob").html(pageHtml2);
+            bindTurnPage("#fundlist-pag-mob", pageCount);
+            $("#prePlaceHolder-mob").hide();
+            $('#fundlistModal').modal('hide');
+        }
+        //$("#page-total-mob").html(pageCount)
+        if (result.length == 0) {
+            $(".content-null-prompt").show()
+            //$(".jump-page-mob").hide()
+        } else {
+            $(".content-null-prompt").hide()
+            //$(".jump-page-mob").show()
+        }
+    }, function (err) {
+        console.log(err)
+    });
+}
+
+//翻页跳转pc
+// function jumpPage(event){
+//     if(event.keyCode==13){
+//         var pageObj = $("#fundlist-pag .page");
+//         var pageCount=parseInt($("#page-total").html());
+//         var pageNo=$("#jump-page").val()
+//         if(pageNo>pageCount){
+//             pageNo=pageCount;
+//             $("#jump-page").val(pageNo);
+//         }else if(pageNo<1){
+//             pageNo=1;
+//             $("#jump-page").val(pageNo);
+//         }
+//         beginPage = pageNo;
+//         hidePage(pageObj,pageCount,pageNo);        
+//         changePageStyle("#fundlist-pag",pageCount);
+//         pageObj.removeClass("active");
+//         pageObj.eq(pageNo-1).addClass("active");
+//         getListData(false,false);
+//     }
+// }
+
+// function jumpPageBtn(){
+//     var pageObj = $("#fundlist-pag .page");
+//         var pageCount=parseInt($("#page-total").html());
+//         var pageNo=$("#jump-page").val()
+//         if(pageNo>pageCount){
+//             pageNo=pageCount;
+//             $("#jump-page").val(pageNo);
+//         }else if(pageNo<1){
+//             pageNo=1;
+//             $("#jump-page").val(pageNo);
+//         }
+//         beginPage = pageNo;
+//         hidePage(pageObj,pageCount,pageNo);        
+//         changePageStyle("#fundlist-pag",pageCount);
+//         pageObj.removeClass("active");
+//         pageObj.eq(pageNo-1).addClass("active");
+//         getListData(false,false);
+// }
+//翻页跳转mob
+// function jumpPageMob(event){
+//     if(event.keyCode==13){
+//         var pageObj = $("#fundlist-pag-mob .page");
+//         var pageCount=parseInt($("#page-total-mob").html());
+//         var pageNo=$("#jump-page-mob").val()
+//         if(pageNo>pageCount){
+//             pageNo=pageCount;
+//             $("#jump-page-mob").val(pageNo);
+//         }else if(pageNo<1){
+//             pageNo=1;
+//             $("#jump-page-mob").val(pageNo);
+//         }
+//         beginPage = pageNo;
+//         hidePage(pageObj,pageCount,pageNo);        
+//         changePageStyle("#fundlist-pag-mob",pageCount);
+//         pageObj.removeClass("active");
+//         pageObj.eq(pageNo-1).addClass("active");
+//         getMobListData(false,false)
+//     }
+// }
+// function jumpPageBtnMob(){
+//     var pageObj = $("#fundlist-pag-mob .page");
+//         var pageCount=parseInt($("#page-total-mob").html());
+//         var pageNo=$("#jump-page-mob").val()
+//         if(pageNo>pageCount){
+//             pageNo=pageCount;
+//             $("#jump-page-mob").val(pageNo);
+//         }else if(pageNo<1){
+//             pageNo=1;
+//             $("#jump-page-mob").val(pageNo);
+//         }
+//         beginPage = pageNo;
+//         hidePage(pageObj,pageCount,pageNo);        
+//         changePageStyle("#fundlist-pag-mob",pageCount);
+//         pageObj.removeClass("active");
+//         pageObj.eq(pageNo-1).addClass("active");
+//         getMobListData(false,false)
+// }
+
+function getSearchListData() {
+    var listnew = get_funddata();
+    for (var i = 0; i < listnew.length; i++) {
+        searchListData.push(listnew[i].val + "(" + listnew[i].val2 + ")");
+    }
+}
+
+function getFundType(params, id, type, isFirst) {
+    ajaxJsonp($api.fundFilterType, "get", params, function (res) {
+        getSubNav(res.result, id, type, params, isFirst);
+    }, function (err) {
+        console.log(err)
+    });
+}
+
+//移动端获取基金类型
+function getMobFundType(params, id, type) {
+    ajaxJsonp($api.fundFilterType, "get", params, function (res) {
+        if (type == 1) {
+            mobCategory = res.result;
+        }
+        getMobSubNav(res.result, id, type, params);
+    }, function (err) {
+        console.log(err)
+    });
+}
+
+//移动端获取子菜单
+function getMobSubNav(category, id, type, parentCode) {
+    if (type == 1) { //一级
+        var html = '<li code="F000" class="filter-panel-item fa-arrow all active">不限</li>';
+        var htmlArr = [];
+        var gmStr = "";
+        for (var i = 0; i < category.length; i++) {
+            //if(category[i].CATEGORY_CODE != "F300") {
+            if (category[i].CATEGORY_CODE == "F600") {
+                gmStr = "<li class='filter-panel-item fa-arrow' code='" + category[i].CATEGORY_CODE + "'>公募REITs</li>";
+            } else {
+                var filterStr = "<li class='filter-panel-item fa-arrow' code='" + category[i].CATEGORY_CODE + "'>" + category[i].CATEGORY_NAME + "</li>"
+                //var filterStr = "<li class='filter-panel-item fa-arrow' code='" + category[i].CATEGORY_CODE + "'>" + category[i].CATEGORY_NAME + "</li>";
+                htmlArr.push(filterStr)
+            }
+            //}
+        }
+        htmlArr.splice(2, 0, gmStr);
+        for (var j = 0; j < htmlArr.length; j++) {
+            html += htmlArr[j]
+        }
+        $(id).html(html);
+        $(".filter-panel-parent > li").on("click", function (e) {
+            e.stopPropagation();
+            pageCount = 0;
+            $(".filter-panel-parent > li").removeClass("active");
+            $(this).addClass("active");
+            var pCode = $(this).attr("code");
+            mobCategory_code = pCode;
+            if (pCode != "F000") {
+                var params = {
+                    CATEGORY_PARENT_CODE: pCode
+                };
+                getMobFundType(params, $(this), 2);
+            } else {
+                if ($(".filter-panel-sub").length > 0) {
+                    $(".filter-panel-sub").remove();
+                }
+            }
+        });
+        // if (mobFirstLoad == true) {
+        //     $("[code='F000']").click();
+        // }
+    } else if (type == 2) { //二级
+        if (category.length > 0) {
+            var html = "<ul class='filter-panel-container filter-panel-sub'>";
+            for (var i = 0; i < category.length; i++) {
+                //if(category[i].CATEGORY_CODE!="F290"){//二级栏目-“分级基金”“货币ETF”不展示
+                html += "<li class='filter-panel-item fa-arrow' code='" + category[i].CATEGORY_CODE + "'";
+                html += ">" + category[i].CATEGORY_NAME + "</li>";
+                //}
+            }
+            html += "</ul>";
+            if ($(".filter-panel-sub").length > 0) {
+                $(".filter-panel-sub").remove();
+            }
+            $(id).append(html);
+            $(".filter-panel-sub li").off("click").on("click", function (e) {
+                pageCount = 0;
+                e.stopPropagation();
+                $(".filter-panel-sub li").removeClass("active");
+                $(this).addClass("active");
+                var pCode = $(this).attr("code");
+                mobCategory_code = pCode;
+                var params = {
+                    CATEGORY_PARENT_CODE: pCode
+                };
+                getMobFundType(params, $(this), 3);
+            });
+        } else {
+            if ($(".filter-panel-sub").length > 0) {
+                $(".filter-panel-sub").remove();
+            }
+            $(".fdlist-filter").removeClass("pd-bottom-115");
+            $(".fdlist-filter").removeClass("pd-bottom-55");
+        }
+    } else if (type == 3) { //三级
+        if (category.length > 0) { //货币ETF没有子级
+            var html = "<ul class='filter-sub-container'>";
+            for (var i = 0; i < category.length; i++) {
+                //if(category[i].CATEGORY_CODE!="F142"){//三级栏目-“期货ETF”不展示
+                html += "<li class='filter-sub-item' code='" + category[i].CATEGORY_CODE + "'";
+                html += ">" + category[i].CATEGORY_NAME + "</li>";
+                //}
+            }
+            html += "</ul>";
+            if ($(".filter-sub-container").length > 0) {
+                $(".filter-sub-container").remove();
+            }
+            $(id).append(html);
+            $(".filter-sub-container li").off("click").on("click", function (e) {
+                pageCount = 0;
+                e.stopPropagation();
+                mobCategory_code = $(this).attr("code");
+                $(".filter-sub-container li").removeClass("active");
+                $(this).addClass("active");
+            });
+        } else {
+            if ($(".filter-sub-container").length > 0) {
+                $(".filter-sub-containerr").remove();
+            }
+        }
+    }
+    mobFirstLoad = false;
+}
+
+//获取子菜单
+function getSubNav(category, id, type, parentCode, isFirst) {
+    if (type == 1) { //第一级
+        var html = "<li code='F000' class='active'>不限</li>";
+        var htmlArr = [];
+        var gmStr = "";
+        for (var i = 0; i < category.length; i++) {
+            //if(category[i].CATEGORY_CODE != "F300"){
+            if (category[i].CATEGORY_CODE == "F600") {
+                gmStr = "<li code='" + category[i].CATEGORY_CODE + "'>公募REITs</li>"
+            } else {
+                var filterStr = "<li code='" + category[i].CATEGORY_CODE + "'>" + category[i].CATEGORY_NAME + "</li>"
+                htmlArr.push(filterStr)
+            }
+            //}
+        }
+        htmlArr.splice(2, 0, gmStr);
+        for (var j = 0; j < htmlArr.length; j++) {
+            html += htmlArr[j]
+        }
+        $(id).html(html);
+        $(".filter-parent > li").off("click").on("click", function (event) {
+            event.stopPropagation();
+            pageCount = 0;
+            $(".filter-parent > li").removeClass("active");
+            $(this).addClass("active");
+            $(".filter-parent > li").removeClass("border-bottom-none");
+            var pCode = $(this).attr("code");
+            if (pCode != "F000") {
+                var params = {
+                    CATEGORY_PARENT_CODE: pCode
+                };
+                getFundType(params, $(this), 2);
+            } else {
+                if ($(".sub-filter").length > 0) {
+                    $(".fdlist-filter").removeClass("pd-bottom-115");
+                    $(".fdlist-filter").removeClass("pd-bottom-55");
+                    $(".sub-filter").remove();
+                }
+            }
+        });
+        // if (isFirst == true) {
+        //     $("[code='F000']").click();
+        // }
+    } else if (type == 2) { //第二级
+        if (category.length > 0) {
+            var html = "<div class='sub-filter'><div><ul>";
+            for (var i = 0; i < category.length; i++) {
+                //if(category[i].CATEGORY_CODE!="F290"){//二级栏目-“分级基金”“货币ETF”不展示
+                html += "<li code='" + category[i].CATEGORY_CODE + "'";
+                html += ">" + category[i].CATEGORY_NAME + "</li>";
+                //}
+            }
+            html += "</ul></div></div>";
+            if ($(".sub-filter").length > 0) {
+                $(".sub-filter").remove();
+            }
+            //$(".fdlist-filter").addClass("pd-bottom-115");
+            $(".fdlist-filter").removeClass("pd-bottom-115");
+            $(".fdlist-filter").addClass("pd-bottom-55");
+            $(id).append(html);
+            $(id).addClass("border-bottom-none");
+            $(".sub-filter div ul li").off("click").on("click", function (event) {
+                pageCount = 0;
+                event.stopPropagation();
+                $(".sub-filter div li").removeClass("active");
+                $(this).addClass("active");
+                var pCode = $(this).attr("code");
+                var params = {
+                    CATEGORY_PARENT_CODE: pCode
+                };
+                getFundType(params, ".sub-filter", 3);
+            });
+        } else {
+            if ($(".sub-filter").length > 0) {
+                $(".sub-filter").remove();
+            }
+            $(".fdlist-filter").removeClass("pd-bottom-55");
+            $(".fdlist-filter").removeClass("pd-bottom-115");
+        }
+    } else if (type == 3) { //第三级
+        if (category.length > 0) { //货币ETF没有子级
+            var html = "<div class='three-filter'><ul>";
+            for (var i = 0; i < category.length; i++) {
+                //if(category[i].CATEGORY_CODE!="F151"&&category[i].CATEGORY_CODE!="F152"){//三级栏目-不展示
+                html += "<li code='" + category[i].CATEGORY_CODE + "'";
+                html += ">" + category[i].CATEGORY_NAME + "</li>";
+                //}
+            }
+            html += "</ul></div>";
+            if ($(".three-filter").length > 0) {
+                $(".three-filter").remove();
+            }
+            $(".fdlist-filter").removeClass("pd-bottom-55");
+            $(".fdlist-filter").addClass("pd-bottom-115");
+            $(id).append(html);
+            $(".three-filter ul li").off("click").on("click", function (event) {
+                pageCount = 0;
+                event.stopPropagation();
+                $(".three-filter li").removeClass("active");
+                $(this).addClass("active");
+            });
+        } else {
+            if ($(".three-filter").length > 0) {
+                $(".three-filter").remove();
+            }
+            if ($(".sub-filter").length <= 0) {
+                $(".fdlist-filter").removeClass("pd-bottom-115");
+                $(".fdlist-filter").removeClass("pd-bottom-55");
+            } else {
+                $(".fdlist-filter").removeClass("pd-bottom-115");
+                $(".fdlist-filter").addClass("pd-bottom-55");
+            }
+        }
+    }
+}
+// 分页逻辑
+function bindTurnPage(parentId, pageCount) {
+    var pageObj = $(parentId + " .page");
+    pageObj.off("click").on("click", function () {
+        pageNo = parseInt($(this).html());
+        beginPage = pageNo;
+        hidePage(pageObj, pageCount, pageNo);
+        changePageStyle(parentId, pageCount);
+        pageObj.removeClass("active");
+        $(this).addClass("active");
+        if (parentId === "#fundlist-pag-mob") {
+            getMobListData(false, false)
+        } else {
+            getListData(false, false);
+        }
+
+    });
+    $(parentId + " .pagination-pre").off("click").on("click", function () {
+        if (pageNo > 1) {
+            pageNo = pageNo - 1;
+            hidePage(pageObj, pageCount, pageNo);
+            beginPage = pageNo;
+            changePageStyle(parentId, pageCount);
+            pageObj.removeClass("active");
+            pageObj.eq(pageNo - 1).addClass("active");
+            if (parentId === "#fundlist-pag-mob") {
+                getMobListData(false, false)
+            } else {
+                getListData(false, false);
+            }
+        }
+    });
+    $(parentId + " .pagination-next").off("click").on("click", function () {
+        if (pageNo < pageCount) {
+            pageNo = pageNo + 1;
+            hidePage(pageObj, pageCount, pageNo);
+            beginPage = pageNo;
+            changePageStyle(parentId, pageCount);
+            pageObj.removeClass("active");
+            pageObj.eq(pageNo - 1).addClass("active");
+            if (parentId === "#fundlist-pag-mob") {
+                getMobListData(false, false)
+            } else {
+                getListData(false, false);
+            }
+        }
+    });
+}
+
+//隐藏分页项
+function hidePage(pageObj, pageCount, pageNo) {
+    for (j = 1; j < pageCount - 1; j++) {
+        pageObj.eq(j).attr("style", "display:none")
+    }
+    pageObj.eq(pageNo - 2).attr("style", "display:block")
+    pageObj.eq(pageNo - 1).attr("style", "display:block")
+    pageObj.eq(pageNo).attr("style", "display:block")
+    if (pageNo - 2 > 1) {
+        $("#prePlaceHolder").show()
+        $("#prePlaceHolder-mob").show()
+    } else {
+        $("#prePlaceHolder").hide()
+        $("#prePlaceHolder-mob").hide()
+    }
+    if (pageNo < pageCount - 2) {
+        $("#nextPlaceHolder").show()
+        $("#nextPlaceHolder-mob").show()
+    } else {
+        $("#nextPlaceHolder").hide()
+        $("#nextPlaceHolder-mob").hide()
+    }
+}
+
+//点击左右翻页箭头时动态改变箭头样式
+function changePageStyle(parentId, pgcount) {
+    if (pageNo > 1) {
+        $(parentId + " .pagination-pre").removeClass("blur");
+    } else {
+        $(parentId + " .pagination-pre").addClass("blur");
+    }
+    if (pageNo >= pgcount) {
+        $(parentId + " .pagination-next").addClass("blur");
+    } else {
+        $(parentId + " .pagination-next").removeClass("blur");
+    }
+}
+
+//搜索基金代码简称
+function getSearchContent(obj) {
+    var kw = obj.value.trim()
+    if (kw == '') {
+        searchAppend.style.display = 'none'
+        searchAppend.innerHTML = ''
+        return false
+    }
+    var html = ''
+    var index = 0;
+    for (var i = 0; i < searchListData.length; i++) {
+        if (index > 9) {
+            break;
+        }
+        if (searchListData[i].search(kw) >= 0) {
+            html =
+                html +
+                "<div class='searchItem' onClick='getSearchCon(this);'>" +
+                searchListData[i] +
+                '</div>';
+            index++;
+        }
+    }
+    searchAppend.style.display = 'block'
+    searchAppend.innerHTML = html
+    if (html == "") {
+        searchAppend.style.display = 'none';
+    }
+}
+
+function getSearchCon(obj, id) {
+    var value = obj.innerText
+    var index = value.indexOf("(");
+    value = value.substring(0, index);
+    $("#FUND_CODE").val(value)
+    searchAppend.style.display = 'none'
+    searchAppend.innerHTML = ''
+}
+
+
+//移动端搜索基金代码简称
+function getMobSearchContent(obj) {
+    var kw = obj.value.trim();
+    if (kw == '') {
+        mobSearchAppend.style.display = 'none'
+        mobSearchAppend.innerHTML = '';
+        return false
+    }
+    var html = ''
+    for (var i = 0; i < searchListData.length; i++) {
+        if (searchListData[i].search(kw) >= 0) {
+            html =
+                html +
+                "<div class='searchItem' onClick='getMobSearchCon(this);'>" +
+                searchListData[i] +
+                '</div>';
+        }
+    }
+    mobSearchAppend.style.display = 'block';
+    mobSearchAppend.innerHTML = html;
+    if (html == '') {
+        mobSearchAppend.style.display = 'none';
+    }
+}
+
+function getMobSearchCon(obj, id) {
+    var value = obj.innerText;
+    var index = value.indexOf("(");
+    value = value.substring(0, index);
+    $("#MOB_FUND_CODE").val(value)
+    mobSearchAppend.style.display = 'none';
+    mobSearchAppend.innerHTML = ''
+}
+
+// ============ 基金列表 -搜索框部分 ==================
+var params = {
+    "CATEGORY": "F000",
+    "type": "inParams"
+};
+var searchCompany = $('#searchAppendCompany')
+var searchIndex = $('#searchAppendIndex')
+var mob_searchCompany = $('#mob_searchAppendCompany')
+var mob_searchIndex = $('#mob_searchmb_AppendIndex')
+var companyName = []
+var indexName = []
+
+// 数组排序去重
+function unique(arr, prop) {
+    if (!Array.isArray(arr)) {
+        console.log('type error!')
+        return;
+    }
+    arr = arr.sort(function (a, b) {
+        return a.localeCompare(b, 'zh')
+    })
+    var arrry = [arr[0]];
+    for (var i = 1; i < arr.length; i++) {
+        if (arr[i] !== arr[i - 1]) {
+            arrry.push(arr[i]);
+        }
+    }
+    return arrry;
+}
+// 点击提示赋值input
+function getValue(obj, id) {
+    var value = obj.innerText
+    var elm = $(obj).parent().prev().prev()
+    var equipment = elm.attr('attr').split(' ')[0]
+    var type = elm.attr('attr').split(' ')[1]
+    elm.val(value)
+    fundKeyup(elm, equipment, type)
+    if (equipment == 'pc') {
+        if (type == 'company') {
+            hideElm = searchCompany;
+        } else {
+            hideElm = searchIndex;
+        }
+    } else {
+        if (type == 'company') {
+            hideElm = mob_searchCompany;
+        } else {
+            hideElm = mob_searchIndex;
+        }
+    }
+    hideElm.hide()
+}
+// 搜索框模糊查询
+function fundKeyup(obj, equipment, type) {
+    var kw = $(obj).val().trim();
+    var elm, arrayData;
+    if (equipment == 'pc') {
+        if (type == 'company') {
+            arrayData = companyName
+            elm = searchCompany;
+        } else {
+            arrayData = indexName
+            elm = searchIndex;
+        }
+    } else {
+        if (type == 'company') {
+            arrayData = companyName
+            elm = mob_searchCompany;
+        } else {
+            arrayData = indexName
+            elm = mob_searchIndex;
+        }
+    }
+    if (kw == '') {
+        getElmData(arrayData, elm)
+        elm.hide();
+        return false;
+    }
+    getElmData(arrayData, elm, kw, true)
+    elm.show()
+    if (elm.html() == "") {
+        elm.hide()
+    }
+}
+// 提示框内容
+function getElmData(arrayData, elm, kw, search) {
+    if (search) {
+        var html = ''
+        if(arrayData.length > 0 && arrayData[0] != undefined){
+            for (var i = 0; i < arrayData.length; i++) {
+                if (arrayData[i].search(kw) >= 0) {
+                    html += '<div style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;" class="searchItem"  onclick="getValue(this);">' + arrayData[i] + '</div>'
+                }
+            }
+        }
+        elm.html(html)
+        return
+    }
+    var htmlContent = '';
+    if(arrayData.length > 0 && arrayData[0] != undefined){
+        for (var i = 0; i < arrayData.length; i++) {
+            htmlContent += '<div style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;" class="searchItem"  onclick="getValue(this);">' + arrayData[i] + '</div>'
+        }
+    }
+    elm.html(htmlContent)
+}
+// 下拉按钮点击事件
+function companyClick(equipment, type) {
+    window.event.stopPropagation();
+    var elmHide, elm;
+    if (equipment == 'pc') {
+        if (type == 'company') {
+            elmHide = searchIndex
+            elm = searchCompany
+        } else {
+            elmHide = searchCompany
+            elm = searchIndex
+        }
+    } else {
+        if (type == 'company') {
+            elmHide = mob_searchIndex
+            elm = mob_searchCompany
+        } else {
+            elmHide = mob_searchCompany
+            elm = mob_searchIndex
+        }
+    }
+
+    var companyMob = $('#MOB_COMPANY_NAME').val();
+    var indexMob = $('#MOB_INDEX_NAME').val();
+    if (companyMob == '') {
+        getElmData(companyName, mob_searchCompany)
+    }
+    if (indexMob == '') {
+        getElmData(indexName, mob_searchIndex)
+    }
+    elmHide.hide();
+    if (elm.prop("style").display === "block" || elm.html() == "") return elm.hide();
+    elm.show();
+}
+
+// 基金管理人与指数提示框内容初始化
+ajaxJsonp($api.getFundListNoPagination, "GET", params, function (res) {
+    var result = res.result;
+    // 基金管理人与指数数据
+    for (var i = 0; i < result.length; i++) {
+        if (result[i].COMPANY_NAME != "-" && result[i].COMPANY_NAME != null) companyName.push(result[i].COMPANY_NAME.trim());
+        if (result[i].INDEX_NAME != "-" && result[i].INDEX_NAME != null) indexName.push(result[i].INDEX_NAME.trim());
+    }
+    
+    companyName = unique(companyName)
+    indexName = unique(indexName)
+    // pc 端  
+    getElmData(companyName, searchCompany)
+    getElmData(indexName, searchIndex)
+    // 手机端
+    getElmData(companyName, mob_searchCompany)
+    getElmData(indexName, mob_searchIndex)
+}, function (err) {
+    console.log(err)
+});

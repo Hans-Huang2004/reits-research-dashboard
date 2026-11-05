@@ -1,19 +1,12 @@
 {
   "schema_version": 1,
-  "date": "2026-11-04",
-  "updated_at": "2026-11-04T09:39:29+08:00",
+  "date": "2026-11-05",
+  "updated_at": "2026-11-05T09:46:32+08:00",
   "changes": {
     "new_fund_ids": [],
     "new_event_ids": [],
     "changed_event_ids": [
-      "SSE_0c134614a72047339c77d9e3049f03fc",
-      "SSE_620f9db7cc1f48b1b6531c5af02e8b34",
-      "SSE_6fa0b7c2f77944549b2ada7b1339be34",
-      "SSE_7c28dbd738914f278d7b55b510cf44e9",
-      "SSE_b80b031657254459b6d0010d6b2d5286",
-      "SZSE_5000065",
-      "SZSE_5000069",
-      "SZSE_5000077"
+      "SSE_72c49c7e1ec847fea999460058302391"
     ],
     "missing_event_ids": [],
     "excluded_event_ids": [],
@@ -22,8 +15,8 @@
   "source_status": {
     "SSE": {
       "exchange": "上交所",
-      "collected_at": "2026-11-04T09:39:38+08:00",
-      "as_of_date": "2026-11-04",
+      "collected_at": "2026-11-05T09:46:38+08:00",
+      "as_of_date": "2026-11-05",
       "complete": true,
       "checks": [
         {
@@ -52,7 +45,7 @@
       "fund_details_collected": 70,
       "filing_documents_expected": 102,
       "filing_documents_collected": 102,
-      "latest_filing_update": "2026-11-03",
+      "latest_filing_update": "2026-11-04",
       "earliest_filing_acceptance": "2021-04-23",
       "exact_linked_events": 69,
       "unlinked_events": 21,
@@ -61,8 +54,8 @@
         "REITS_TYPE=1按官方脚本标为扩募；保留原始申报类型，未独立推断新购入",
         "仅对已核实基金代码、唯一已注册扩募申报及唯一已上市扩募批次匹配完成日期；其余保留未匹配状态"
       ],
-      "collection_finished_at": "2026-11-04T09:43:03+08:00",
-      "normalization_updated_at": "2026-11-04T09:43:03+08:00",
+      "collection_finished_at": "2026-11-05T09:49:59+08:00",
+      "normalization_updated_at": "2026-11-05T09:49:59+08:00",
       "reviewed_linked_events": 12,
       "linked_events": 81,
       "completed_expansions": 8,
@@ -71,9 +64,9 @@
     "SZSE": {
       "exchange": "深交所",
       "status": "complete",
-      "collected_at": "2026-11-04T09:44:11+08:00",
+      "collected_at": "2026-11-05T09:51:09+08:00",
       "latest_project_update": "2026-11-03",
-      "fund_report_date": "2026-11-04",
+      "fund_report_date": "2026-11-05",
       "listed_fund_count": 31,
       "issued_fund_count": 33,
       "disclosed_fund_count": 33,
@@ -192,7 +185,7 @@
           "advertised_total": 31,
           "raw_count": 31,
           "pages": 2,
-          "report_date": "2026-11-04"
+          "report_date": "2026-11-05"
         },
         "effective_announcements": {
           "keyword": "基金合同生效",
@@ -234,8 +227,8 @@
       },
       "freshness": {
         "series": "深交所公募REITs基金名录",
-        "latest_available_date": "2026-11-04",
-        "expected_date": "2026-11-04",
+        "latest_available_date": "2026-11-05",
+        "expected_date": "2026-11-05",
         "lagging": false
       },
       "limitations": [
@@ -262,8 +255,8 @@
       "深交所": 53
     },
     "events_by_exchange": {
-      "深交所": 58,
-      "上交所": 102
+      "上交所": 102,
+      "深交所": 58
     },
     "stages": {
       "已上市": 95,
@@ -275,8 +268,8 @@
       "终止": 5
     },
     "business_types": {
-      "首发": 144,
-      "扩募": 16
+      "扩募": 16,
+      "首发": 144
     },
     "scope_exclusions": []
   },
@@ -569,6 +562,305 @@
           "checked_at": "2026-10-15T13:14:26+08:00",
           "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508607&category=F600",
           "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        }
+      }
+    },
+    {
+      "id": "SSE_FUND_508055",
+      "code": "508055",
+      "name": "汇添富上海地产租赁住房封闭式基础设施证券投资基金",
+      "short_name": "汇添富上海地产租赁住房REIT",
+      "exchange": "上交所",
+      "manager": "汇添富基金管理股份有限公司",
+      "fund_managers": "潘德佳，李凯，杨振宁",
+      "origin": "上海地产房屋租赁有限公司",
+      "product_type": "基础设施REITs",
+      "asset_type": "租赁住房",
+      "listing_date": "2025-03-31",
+      "planned_listing_date": "",
+      "established_date": "2025-03-21",
+      "initial_raise_cny_100m": 13.62,
+      "initial_offered_cny_100m": 13.62,
+      "initial_price_cny": 2.724,
+      "initial_copies_100m": 5.0,
+      "initial_issue_start": "2025-03-17",
+      "initial_issue_end": "2025-03-18",
+      "stage": "已上市",
+      "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
+      "documents": [
+        {
+          "title": "2-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金合同（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202411/053010_20241129_UF15.pdf",
+          "date": "2024-11-29",
+          "official_file_type": "91",
+          "official_version": "1"
+        },
+        {
+          "title": "2-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金合同（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202501/053010_20250115_5LHL.pdf",
+          "date": "2025-01-15",
+          "official_file_type": "91",
+          "official_version": "2"
+        },
+        {
+          "title": "2-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金合同（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202502/053010_20250221_OR76.pdf",
+          "date": "2025-02-21",
+          "official_file_type": "91",
+          "official_version": "3"
+        },
+        {
+          "title": "3-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金托管协议（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202411/053010_20241129_0PQA.pdf",
+          "date": "2024-11-29",
+          "official_file_type": "92",
+          "official_version": "1"
+        },
+        {
+          "title": "3-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金托管协议（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202501/053010_20250115_AIO8.pdf",
+          "date": "2025-01-15",
+          "official_file_type": "92",
+          "official_version": "2"
+        },
+        {
+          "title": "3-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金托管协议（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202502/053010_20250221_WLL5.pdf",
+          "date": "2025-02-21",
+          "official_file_type": "92",
+          "official_version": "3"
+        },
+        {
+          "title": "4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金招募说明书（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202411/053010_20241129_1EZY.pdf",
+          "date": "2024-11-29",
+          "official_file_type": "93",
+          "official_version": "1"
+        },
+        {
+          "title": "4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金招募说明书（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202501/053010_20250115_HGQC.pdf",
+          "date": "2025-01-15",
+          "official_file_type": "93",
+          "official_version": "2"
+        },
+        {
+          "title": "4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金招募说明书（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202502/053010_20250221_4292.pdf",
+          "date": "2025-02-21",
+          "official_file_type": "93",
+          "official_version": "3"
+        },
+        {
+          "title": "5-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金法律意见书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202411/053010_20241129_IPKK.pdf",
+          "date": "2024-11-29",
+          "official_file_type": "94",
+          "official_version": "1"
+        },
+        {
+          "title": "5-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金法律意见书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202501/053010_20250115_8B18.pdf",
+          "date": "2025-01-15",
+          "official_file_type": "94",
+          "official_version": "2"
+        },
+        {
+          "title": "5-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金法律意见书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202502/053010_20250221_JRAH.pdf",
+          "date": "2025-02-21",
+          "official_file_type": "94",
+          "official_version": "3"
+        },
+        {
+          "title": "9-1 关于《关于汇添富上海地产租赁住房封闭式基础设施证券投资基金上市及汇添富资本-上海地产租赁住房基础设施1号资产支持专项计划资产支持证券挂牌转让申请受理反馈意见》的答复.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202501/053010_20250115_VXO6.pdf",
+          "date": "2025-01-15",
+          "official_file_type": "",
+          "official_version": ""
+        },
+        {
+          "title": "关于汇添富上海地产租赁住房封闭式基础设施证券投资基金上市及汇添富资本-上海地产租赁住房基础设施1号资产支持专项计划资产支持证券挂牌转让申请受理反馈意见.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202412/053010_20241224_QBKP.pdf",
+          "date": "2024-12-24",
+          "official_file_type": "",
+          "official_version": ""
+        },
+        {
+          "title": "1-2 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金合同（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_0DMD.pdf",
+          "date": "2026-09-28",
+          "official_file_type": "91",
+          "official_version": "1"
+        },
+        {
+          "title": "1-2 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金合同（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202611/72c49c_20261104_FABT.pdf",
+          "date": "2026-11-04",
+          "official_file_type": "91",
+          "official_version": "2"
+        },
+        {
+          "title": "1-3 汇添富上海地产租赁住房封闭式基础设施证券投资基金托管协议（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_MHBN.pdf",
+          "date": "2026-09-28",
+          "official_file_type": "92",
+          "official_version": "1"
+        },
+        {
+          "title": "1-3 汇添富上海地产租赁住房封闭式基础设施证券投资基金托管协议（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202611/72c49c_20261104_SLFI.pdf",
+          "date": "2026-11-04",
+          "official_file_type": "92",
+          "official_version": "2"
+        },
+        {
+          "title": "1-4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金2026年度第一次扩募并新购入不动产项目招募说明书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
+          "date": "2026-09-28",
+          "official_file_type": "93",
+          "official_version": "1"
+        },
+        {
+          "title": "1-4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金2026年度第一次扩募并新购入不动产项目招募说明书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202611/72c49c_20261104_R81N.pdf",
+          "date": "2026-11-04",
+          "official_file_type": "93",
+          "official_version": "2"
+        },
+        {
+          "title": "1-5 北京市汉坤律师事务所关于申请变更注册汇添富上海地产租赁住房封闭式基础设施证券投资基金的法律意见书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_GKRW.pdf",
+          "date": "2026-09-28",
+          "official_file_type": "94",
+          "official_version": "1"
+        },
+        {
+          "title": "1-5 北京市汉坤律师事务所关于申请变更注册汇添富上海地产租赁住房封闭式基础设施证券投资基金的法律意见书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202611/72c49c_20261104_B6Y4.pdf",
+          "date": "2026-11-04",
+          "official_file_type": "94",
+          "official_version": "2"
+        },
+        {
+          "title": "3-1 关于《关于汇添富上海地产租赁住房封闭式基础设施证券投资基金产品变更暨扩募份额上市及汇添富资本-上海地产租赁住房2号资产支持专项计划资产支持证券挂牌转让申请受理反馈意见》的答复.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202611/72c49c_20261104_5PX9.pdf",
+          "date": "2026-11-04",
+          "official_file_type": "",
+          "official_version": ""
+        },
+        {
+          "title": "关于汇添富上海地产租赁住房封闭式基础设施证券投资基金产品变更暨扩募份额上市及汇添富资本-上海地产租赁住房2号资产支持专项计划资产支持证券挂牌转让申请受理反馈意见.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/72c49c_20261019_BGHV.pdf",
+          "date": "2026-10-19",
+          "official_file_type": "",
+          "official_version": ""
+        }
+      ],
+      "aliases": [
+        "地产租住",
+        "汇添富上海地产租赁住房REIT",
+        "汇添富上海地产租赁住房封闭式基础设施证券投资基金"
+      ],
+      "classification_source": "keyword",
+      "classification_confidence": "likely",
+      "classification_note": "名称关键词：租赁住房",
+      "event_ids": [
+        "SSE_53010",
+        "SSE_72c49c7e1ec847fea999460058302391"
+      ],
+      "initial_raise_basis": "首发发售价格×官方首发募集份额（不含扩募）",
+      "updated_date": "2026-11-04",
+      "issuer": null,
+      "financial_advisor": "东方证券股份有限公司",
+      "proposed_sale_amount_application_cny_100m": null,
+      "proposed_sale_amount_feedback_cny_100m": null,
+      "proposed_sale_amount_inquiry_cny_100m": null,
+      "sale_amount_cny_100m": null,
+      "external_loan_amount_cny_100m": null,
+      "project_return_forecast": null,
+      "guarantee_support": null,
+      "research_field_sources": {
+        "financial_advisor": [
+          {
+            "title": "4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金招募说明书（草案）.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202502/053010_20250221_4292.pdf",
+            "published_at": "2025-02-21",
+            "page": 34,
+            "document_stage": "sealed",
+            "rule": "explicit_adviser_row_or_definition",
+            "reviewed_at": "2026-10-15T13:04:56+08:00",
+            "source_method": "native_pdf_text",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/94b745b5de896445574bfe35.json",
+            "review_status": "passage_reviewed",
+            "checked_at": "2026-10-15T13:14:26+08:00",
+            "scope": "首发披露，不含后续扩募"
+          }
+        ]
+      },
+      "field_availability": {
+        "issuer": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
+          "display_reason": "已核查资料未单列发行人。"
+        },
+        "proposed_sale_amount_application_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        },
+        "proposed_sale_amount_feedback_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
+          "display_reason": "未取得明确标注反馈稿的拟募集金额。"
+        },
+        "proposed_sale_amount_inquiry_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        },
+        "sale_amount_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        },
+        "external_loan_amount_cny_100m": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        },
+        "project_return_forecast": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        },
+        "guarantee_support": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
+          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
+        },
+        "underlying_assets": {
+          "status": "unverified",
+          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
+          "checked_at": "2026-10-15T13:14:26+08:00",
+          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
+          "display_reason": "已取得资料尚未明确本批次资产清单。"
         }
       }
     },
@@ -5500,270 +5792,6 @@
           "checked_at": "2026-10-15T13:14:26+08:00",
           "source_url": "https://reits.szse.cn/projectdynamic/detail/index.html?id=5000082",
           "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        }
-      }
-    },
-    {
-      "id": "SSE_FUND_508055",
-      "code": "508055",
-      "name": "汇添富上海地产租赁住房封闭式基础设施证券投资基金",
-      "short_name": "汇添富上海地产租赁住房REIT",
-      "exchange": "上交所",
-      "manager": "汇添富基金管理股份有限公司",
-      "fund_managers": "潘德佳，李凯，杨振宁",
-      "origin": "上海地产房屋租赁有限公司",
-      "product_type": "基础设施REITs",
-      "asset_type": "租赁住房",
-      "listing_date": "2025-03-31",
-      "planned_listing_date": "",
-      "established_date": "2025-03-21",
-      "initial_raise_cny_100m": 13.62,
-      "initial_offered_cny_100m": 13.62,
-      "initial_price_cny": 2.724,
-      "initial_copies_100m": 5.0,
-      "initial_issue_start": "2025-03-17",
-      "initial_issue_end": "2025-03-18",
-      "stage": "已上市",
-      "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
-      "documents": [
-        {
-          "title": "2-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金合同（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202411/053010_20241129_UF15.pdf",
-          "date": "2024-11-29",
-          "official_file_type": "91",
-          "official_version": "1"
-        },
-        {
-          "title": "2-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金合同（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202501/053010_20250115_5LHL.pdf",
-          "date": "2025-01-15",
-          "official_file_type": "91",
-          "official_version": "2"
-        },
-        {
-          "title": "2-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金合同（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202502/053010_20250221_OR76.pdf",
-          "date": "2025-02-21",
-          "official_file_type": "91",
-          "official_version": "3"
-        },
-        {
-          "title": "3-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金托管协议（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202411/053010_20241129_0PQA.pdf",
-          "date": "2024-11-29",
-          "official_file_type": "92",
-          "official_version": "1"
-        },
-        {
-          "title": "3-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金托管协议（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202501/053010_20250115_AIO8.pdf",
-          "date": "2025-01-15",
-          "official_file_type": "92",
-          "official_version": "2"
-        },
-        {
-          "title": "3-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金托管协议（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202502/053010_20250221_WLL5.pdf",
-          "date": "2025-02-21",
-          "official_file_type": "92",
-          "official_version": "3"
-        },
-        {
-          "title": "4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金招募说明书（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202411/053010_20241129_1EZY.pdf",
-          "date": "2024-11-29",
-          "official_file_type": "93",
-          "official_version": "1"
-        },
-        {
-          "title": "4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金招募说明书（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202501/053010_20250115_HGQC.pdf",
-          "date": "2025-01-15",
-          "official_file_type": "93",
-          "official_version": "2"
-        },
-        {
-          "title": "4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金招募说明书（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202502/053010_20250221_4292.pdf",
-          "date": "2025-02-21",
-          "official_file_type": "93",
-          "official_version": "3"
-        },
-        {
-          "title": "5-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金法律意见书.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202411/053010_20241129_IPKK.pdf",
-          "date": "2024-11-29",
-          "official_file_type": "94",
-          "official_version": "1"
-        },
-        {
-          "title": "5-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金法律意见书.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202501/053010_20250115_8B18.pdf",
-          "date": "2025-01-15",
-          "official_file_type": "94",
-          "official_version": "2"
-        },
-        {
-          "title": "5-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金法律意见书.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202502/053010_20250221_JRAH.pdf",
-          "date": "2025-02-21",
-          "official_file_type": "94",
-          "official_version": "3"
-        },
-        {
-          "title": "9-1 关于《关于汇添富上海地产租赁住房封闭式基础设施证券投资基金上市及汇添富资本-上海地产租赁住房基础设施1号资产支持专项计划资产支持证券挂牌转让申请受理反馈意见》的答复.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202501/053010_20250115_VXO6.pdf",
-          "date": "2025-01-15",
-          "official_file_type": "",
-          "official_version": ""
-        },
-        {
-          "title": "关于汇添富上海地产租赁住房封闭式基础设施证券投资基金上市及汇添富资本-上海地产租赁住房基础设施1号资产支持专项计划资产支持证券挂牌转让申请受理反馈意见.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202412/053010_20241224_QBKP.pdf",
-          "date": "2024-12-24",
-          "official_file_type": "",
-          "official_version": ""
-        },
-        {
-          "title": "1-2 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金合同（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_0DMD.pdf",
-          "date": "2026-09-28",
-          "official_file_type": "91",
-          "official_version": "1"
-        },
-        {
-          "title": "1-3 汇添富上海地产租赁住房封闭式基础设施证券投资基金托管协议（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_MHBN.pdf",
-          "date": "2026-09-28",
-          "official_file_type": "92",
-          "official_version": "1"
-        },
-        {
-          "title": "1-4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金2026年度第一次扩募并新购入不动产项目招募说明书.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
-          "date": "2026-09-28",
-          "official_file_type": "93",
-          "official_version": "1"
-        },
-        {
-          "title": "1-5 北京市汉坤律师事务所关于申请变更注册汇添富上海地产租赁住房封闭式基础设施证券投资基金的法律意见书.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_GKRW.pdf",
-          "date": "2026-09-28",
-          "official_file_type": "94",
-          "official_version": "1"
-        },
-        {
-          "title": "关于汇添富上海地产租赁住房封闭式基础设施证券投资基金产品变更暨扩募份额上市及汇添富资本-上海地产租赁住房2号资产支持专项计划资产支持证券挂牌转让申请受理反馈意见.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/72c49c_20261019_BGHV.pdf",
-          "date": "2026-10-19",
-          "official_file_type": "",
-          "official_version": ""
-        }
-      ],
-      "aliases": [
-        "地产租住",
-        "汇添富上海地产租赁住房REIT",
-        "汇添富上海地产租赁住房封闭式基础设施证券投资基金"
-      ],
-      "classification_source": "keyword",
-      "classification_confidence": "likely",
-      "classification_note": "名称关键词：租赁住房",
-      "event_ids": [
-        "SSE_53010",
-        "SSE_72c49c7e1ec847fea999460058302391"
-      ],
-      "initial_raise_basis": "首发发售价格×官方首发募集份额（不含扩募）",
-      "updated_date": "2026-10-19",
-      "issuer": null,
-      "financial_advisor": "东方证券股份有限公司",
-      "proposed_sale_amount_application_cny_100m": null,
-      "proposed_sale_amount_feedback_cny_100m": null,
-      "proposed_sale_amount_inquiry_cny_100m": null,
-      "sale_amount_cny_100m": null,
-      "external_loan_amount_cny_100m": null,
-      "project_return_forecast": null,
-      "guarantee_support": null,
-      "research_field_sources": {
-        "financial_advisor": [
-          {
-            "title": "4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金招募说明书（草案）.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202502/053010_20250221_4292.pdf",
-            "published_at": "2025-02-21",
-            "page": 34,
-            "document_stage": "sealed",
-            "rule": "explicit_adviser_row_or_definition",
-            "reviewed_at": "2026-10-15T13:04:56+08:00",
-            "source_method": "native_pdf_text",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/94b745b5de896445574bfe35.json",
-            "review_status": "passage_reviewed",
-            "checked_at": "2026-10-15T13:14:26+08:00",
-            "scope": "首发披露，不含后续扩募"
-          }
-        ]
-      },
-      "field_availability": {
-        "issuer": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
-          "display_reason": "已核查资料未单列发行人。"
-        },
-        "proposed_sale_amount_application_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        },
-        "proposed_sale_amount_feedback_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
-          "display_reason": "未取得明确标注反馈稿的拟募集金额。"
-        },
-        "proposed_sale_amount_inquiry_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        },
-        "sale_amount_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        },
-        "external_loan_amount_cny_100m": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        },
-        "project_return_forecast": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        },
-        "guarantee_support": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
-          "display_reason": "本次核查尚未取得该字段可直接使用的官方披露值。"
-        },
-        "underlying_assets": {
-          "status": "unverified",
-          "reason": "本次核查尚未取得该字段可直接使用的官方披露值。",
-          "checked_at": "2026-10-15T13:14:26+08:00",
-          "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600",
-          "display_reason": "已取得资料尚未明确本批次资产清单。"
         }
       }
     },
@@ -36681,6 +36709,241 @@
   ],
   "events": [
     {
+      "id": "SSE_72c49c7e1ec847fea999460058302391",
+      "source_id": "72c49c7e1ec847fea999460058302391",
+      "name": "汇添富上海地产租赁住房封闭式基础设施证券投资基金",
+      "exchange": "上交所",
+      "business_type": "扩募",
+      "official_business_type": "1",
+      "fund_code": "508055",
+      "manager": "汇添富基金管理股份有限公司",
+      "manager_short_name": "汇添富基金",
+      "origin": "上海地产房屋租赁有限公司",
+      "official_status": "已反馈",
+      "official_status_code": "2",
+      "official_sub_status": "",
+      "accepted_date": "2026-09-30",
+      "updated_date": "2026-11-04",
+      "registered_date": "",
+      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=72c49c7e1ec847fea999460058302391",
+      "asset_type": "租赁住房",
+      "product_type": "基础设施REITs",
+      "documents": [
+        {
+          "title": "1-2 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金合同（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_0DMD.pdf",
+          "date": "2026-09-28",
+          "official_file_type": "91",
+          "official_version": "1"
+        },
+        {
+          "title": "1-2 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金合同（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202611/72c49c_20261104_FABT.pdf",
+          "date": "2026-11-04",
+          "official_file_type": "91",
+          "official_version": "2"
+        },
+        {
+          "title": "1-3 汇添富上海地产租赁住房封闭式基础设施证券投资基金托管协议（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_MHBN.pdf",
+          "date": "2026-09-28",
+          "official_file_type": "92",
+          "official_version": "1"
+        },
+        {
+          "title": "1-3 汇添富上海地产租赁住房封闭式基础设施证券投资基金托管协议（草案）.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202611/72c49c_20261104_SLFI.pdf",
+          "date": "2026-11-04",
+          "official_file_type": "92",
+          "official_version": "2"
+        },
+        {
+          "title": "1-4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金2026年度第一次扩募并新购入不动产项目招募说明书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
+          "date": "2026-09-28",
+          "official_file_type": "93",
+          "official_version": "1"
+        },
+        {
+          "title": "1-4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金2026年度第一次扩募并新购入不动产项目招募说明书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202611/72c49c_20261104_R81N.pdf",
+          "date": "2026-11-04",
+          "official_file_type": "93",
+          "official_version": "2"
+        },
+        {
+          "title": "1-5 北京市汉坤律师事务所关于申请变更注册汇添富上海地产租赁住房封闭式基础设施证券投资基金的法律意见书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_GKRW.pdf",
+          "date": "2026-09-28",
+          "official_file_type": "94",
+          "official_version": "1"
+        },
+        {
+          "title": "1-5 北京市汉坤律师事务所关于申请变更注册汇添富上海地产租赁住房封闭式基础设施证券投资基金的法律意见书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202611/72c49c_20261104_B6Y4.pdf",
+          "date": "2026-11-04",
+          "official_file_type": "94",
+          "official_version": "2"
+        },
+        {
+          "title": "3-1 关于《关于汇添富上海地产租赁住房封闭式基础设施证券投资基金产品变更暨扩募份额上市及汇添富资本-上海地产租赁住房2号资产支持专项计划资产支持证券挂牌转让申请受理反馈意见》的答复.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202611/72c49c_20261104_5PX9.pdf",
+          "date": "2026-11-04",
+          "official_file_type": "",
+          "official_version": ""
+        },
+        {
+          "title": "关于汇添富上海地产租赁住房封闭式基础设施证券投资基金产品变更暨扩募份额上市及汇添富资本-上海地产租赁住房2号资产支持专项计划资产支持证券挂牌转让申请受理反馈意见.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/72c49c_20261019_BGHV.pdf",
+          "date": "2026-10-19",
+          "official_file_type": "",
+          "official_version": ""
+        }
+      ],
+      "underlying_assets": [],
+      "planned_issue_amount_official": 16.0,
+      "planned_issue_amount_unit": "未展示（官方字段PLAN_ISSUE_AMOUNT，未纳入规模统计）",
+      "special_plan_name": "汇添富资本-上海地产租赁住房2号资产支持专项计划",
+      "special_plan_manager": "汇添富资本管理有限公司",
+      "official_registration_approval_no": "",
+      "official_no_objection_no": "",
+      "documents_checked": true,
+      "fund_link_evidence": {
+        "method": "exact_official_fund_name",
+        "matched_name": "汇添富上海地产租赁住房封闭式基础设施证券投资基金",
+        "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600"
+      },
+      "classification_source": "official",
+      "classification_confidence": "confirmed",
+      "classification_note": "名称关键词：租赁住房",
+      "fund_id": "SSE_FUND_508055",
+      "linkage_method": "official_fund_code",
+      "stage": "审核中",
+      "issuer": null,
+      "financial_advisor": "无",
+      "proposed_sale_amount_application_cny_100m": null,
+      "proposed_sale_amount_feedback_cny_100m": null,
+      "proposed_sale_amount_inquiry_cny_100m": null,
+      "sale_amount_cny_100m": null,
+      "external_loan_amount_cny_100m": null,
+      "project_return_forecast": null,
+      "guarantee_support": null,
+      "official_asset_type": "租赁住房",
+      "classification_evidence": [
+        {
+          "title": "1-4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金2026年度第一次扩募并新购入不动产项目招募说明书.pdf",
+          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
+          "published_at": "2026-09-28",
+          "page": 29,
+          "excerpt": "不动产项目业态 租赁住房 基金投资标的 汇添富资本-上海地产租赁住房 2 号资产支持专项计划",
+          "document_stage": "application",
+          "rule": "explicit_asset_use_table",
+          "reviewed_at": "2026-10-15T12:11:07+08:00",
+          "classification_basis": "官方披露资产用途转研究资产分类",
+          "review_status": "passage_reviewed",
+          "text_workpaper": "workpapers/enrichment/public_sse/texts/7abf36e6eacfd1dcc35cbe73.json",
+          "checked_at": "2026-10-15T13:14:26+08:00"
+        }
+      ],
+      "research_field_sources": {
+        "financial_advisor": [
+          {
+            "title": "1-4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金2026年度第一次扩募并新购入不动产项目招募说明书.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
+            "published_at": "2026-09-28",
+            "page": 4,
+            "document_stage": "application",
+            "rule": "explicit_no_financial_adviser",
+            "reviewed_at": "2026-10-15T13:04:57+08:00",
+            "source_method": "native_pdf_text",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/7abf36e6eacfd1dcc35cbe73.json",
+            "review_status": "passage_reviewed",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ],
+        "asset_type": [
+          {
+            "title": "1-4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金2026年度第一次扩募并新购入不动产项目招募说明书.pdf",
+            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
+            "published_at": "2026-09-28",
+            "page": 29,
+            "document_stage": "application",
+            "rule": "explicit_asset_use_table",
+            "reviewed_at": "2026-10-15T12:11:07+08:00",
+            "classification_basis": "官方披露资产用途转研究资产分类",
+            "review_status": "passage_reviewed",
+            "text_workpaper": "workpapers/enrichment/public_sse/texts/7abf36e6eacfd1dcc35cbe73.json",
+            "checked_at": "2026-10-15T13:14:26+08:00"
+          }
+        ]
+      },
+      "field_availability": {
+        "issuer": {
+          "status": "unverified",
+          "reason": "未找到单独标识发行人且可直接确认主体的披露，未将原始权益人或基金管理人自动代填发行人。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已核查资料未单列发行人。"
+        },
+        "proposed_sale_amount_application_cny_100m": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
+        },
+        "proposed_sale_amount_feedback_cny_100m": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "未取得明确标注反馈稿的拟募集金额。"
+        },
+        "proposed_sale_amount_inquiry_cny_100m": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
+        },
+        "sale_amount_cny_100m": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
+        },
+        "external_loan_amount_cny_100m": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
+        },
+        "underlying_assets": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已取得资料尚未明确本批次资产清单。"
+        },
+        "project_return_forecast": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
+        },
+        "guarantee_support": {
+          "status": "unverified",
+          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
+          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
+          "checked_at": "2026-10-15T13:05:08+08:00",
+          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
+        }
+      }
+    },
+    {
       "id": "SZSE_5000077",
       "source_id": "5000077",
       "name": "华夏大悦城封闭式商业不动产证券投资基金",
@@ -36782,14 +37045,14 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "注册生效",
-          "date": "2026-11-02",
-          "official_status_code": 70
-        },
-        {
           "title": "已申报",
           "date": "2026-07-28",
           "official_status_code": 10
+        },
+        {
+          "title": "审核意见",
+          "date": "2026-10-29",
+          "official_status_code": 40
         },
         {
           "title": "已受理",
@@ -36797,9 +37060,9 @@
           "official_status_code": 20
         },
         {
-          "title": "已问询",
-          "date": "2026-08-21",
-          "official_status_code": 30
+          "title": "注册生效",
+          "date": "2026-11-02",
+          "official_status_code": 70
         },
         {
           "title": "注册结果",
@@ -36807,9 +37070,9 @@
           "official_status_code": 70
         },
         {
-          "title": "审核意见",
-          "date": "2026-10-29",
-          "official_status_code": 40
+          "title": "已问询",
+          "date": "2026-08-21",
+          "official_status_code": 30
         }
       ],
       "classification_source": "official",
@@ -37060,6 +37323,11 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
+          "title": "审核意见",
+          "date": "2026-10-29",
+          "official_status_code": 40
+        },
+        {
           "title": "注册生效",
           "date": "2026-11-02",
           "official_status_code": 70
@@ -37068,11 +37336,6 @@
           "title": "注册结果",
           "date": "2026-11-02",
           "official_status_code": 70
-        },
-        {
-          "title": "审核意见",
-          "date": "2026-10-29",
-          "official_status_code": 40
         },
         {
           "title": "已问询",
@@ -37309,6 +37572,11 @@
       "special_plan_manager": "深创投红土资产管理（深圳）有限公司",
       "timeline": [
         {
+          "title": "已受理",
+          "date": "2026-03-13",
+          "official_status_code": 20
+        },
+        {
           "title": "已申报",
           "date": "2026-03-10",
           "official_status_code": 10
@@ -37319,19 +37587,14 @@
           "official_status_code": 30
         },
         {
-          "title": "通过",
-          "date": "2026-10-29",
-          "official_status_code": 45
-        },
-        {
-          "title": "已受理",
-          "date": "2026-03-13",
-          "official_status_code": 20
-        },
-        {
           "title": "审核意见",
           "date": "2026-10-29",
           "official_status_code": 40
+        },
+        {
+          "title": "通过",
+          "date": "2026-10-29",
+          "official_status_code": 45
         }
       ],
       "classification_source": "official",
@@ -38105,14 +38368,14 @@
           "official_status_code": 10
         },
         {
-          "title": "已受理",
-          "date": "2026-09-24",
-          "official_status_code": 20
-        },
-        {
           "title": "已问询",
           "date": "2026-10-29",
           "official_status_code": 30
+        },
+        {
+          "title": "已受理",
+          "date": "2026-09-24",
+          "official_status_code": 20
         },
         {
           "title": "已问询",
@@ -38338,11 +38601,6 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已问询",
-          "date": "2026-10-29",
-          "official_status_code": 30
-        },
-        {
           "title": "已受理",
           "date": "2026-09-24",
           "official_status_code": 20
@@ -38351,6 +38609,11 @@
           "title": "已申报",
           "date": "2026-09-22",
           "official_status_code": 10
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-29",
+          "official_status_code": 30
         },
         {
           "title": "已问询",
@@ -38585,16 +38848,6 @@
       "special_plan_manager": "上海国泰海通证券资产管理有限公司",
       "timeline": [
         {
-          "title": "已问询",
-          "date": "2026-10-29",
-          "official_status_code": 30
-        },
-        {
-          "title": "已问询",
-          "date": "2026-10-29",
-          "official_status_code": 30
-        },
-        {
           "title": "已申报",
           "date": "2026-09-21",
           "official_status_code": 10
@@ -38603,6 +38856,16 @@
           "title": "已受理",
           "date": "2026-09-24",
           "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-29",
+          "official_status_code": 30
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-29",
+          "official_status_code": 30
         }
       ],
       "classification_source": "official",
@@ -38828,19 +39091,19 @@
           "official_status_code": 20
         },
         {
-          "title": "已问询",
-          "date": "2026-10-29",
-          "official_status_code": 30
-        },
-        {
-          "title": "已问询",
-          "date": "2026-10-29",
-          "official_status_code": 30
-        },
-        {
           "title": "已申报",
           "date": "2026-09-21",
           "official_status_code": 10
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-29",
+          "official_status_code": 30
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-29",
+          "official_status_code": 30
         }
       ],
       "classification_source": "official",
@@ -39290,14 +39553,14 @@
           "official_status_code": 20
         },
         {
-          "title": "已问询",
-          "date": "2026-10-20",
-          "official_status_code": 30
-        },
-        {
           "title": "已申报",
           "date": "2026-09-10",
           "official_status_code": 10
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-20",
+          "official_status_code": 30
         }
       ],
       "classification_source": "official",
@@ -40407,206 +40670,6 @@
       }
     },
     {
-      "id": "SSE_72c49c7e1ec847fea999460058302391",
-      "source_id": "72c49c7e1ec847fea999460058302391",
-      "name": "汇添富上海地产租赁住房封闭式基础设施证券投资基金",
-      "exchange": "上交所",
-      "business_type": "扩募",
-      "official_business_type": "1",
-      "fund_code": "508055",
-      "manager": "汇添富基金管理股份有限公司",
-      "manager_short_name": "汇添富基金",
-      "origin": "上海地产房屋租赁有限公司",
-      "official_status": "已反馈",
-      "official_status_code": "2",
-      "official_sub_status": "",
-      "accepted_date": "2026-09-30",
-      "updated_date": "2026-10-19",
-      "registered_date": "",
-      "source_url": "https://www.sse.com.cn/reits/info/index_detail.shtml?audit_id=72c49c7e1ec847fea999460058302391",
-      "asset_type": "租赁住房",
-      "product_type": "基础设施REITs",
-      "documents": [
-        {
-          "title": "1-2 汇添富上海地产租赁住房封闭式基础设施证券投资基金基金合同（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_0DMD.pdf",
-          "date": "2026-09-28",
-          "official_file_type": "91",
-          "official_version": "1"
-        },
-        {
-          "title": "1-3 汇添富上海地产租赁住房封闭式基础设施证券投资基金托管协议（草案）.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_MHBN.pdf",
-          "date": "2026-09-28",
-          "official_file_type": "92",
-          "official_version": "1"
-        },
-        {
-          "title": "1-4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金2026年度第一次扩募并新购入不动产项目招募说明书.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
-          "date": "2026-09-28",
-          "official_file_type": "93",
-          "official_version": "1"
-        },
-        {
-          "title": "1-5 北京市汉坤律师事务所关于申请变更注册汇添富上海地产租赁住房封闭式基础设施证券投资基金的法律意见书.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_GKRW.pdf",
-          "date": "2026-09-28",
-          "official_file_type": "94",
-          "official_version": "1"
-        },
-        {
-          "title": "关于汇添富上海地产租赁住房封闭式基础设施证券投资基金产品变更暨扩募份额上市及汇添富资本-上海地产租赁住房2号资产支持专项计划资产支持证券挂牌转让申请受理反馈意见.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202610/72c49c_20261019_BGHV.pdf",
-          "date": "2026-10-19",
-          "official_file_type": "",
-          "official_version": ""
-        }
-      ],
-      "underlying_assets": [],
-      "planned_issue_amount_official": 13.0,
-      "planned_issue_amount_unit": "未展示（官方字段PLAN_ISSUE_AMOUNT，未纳入规模统计）",
-      "special_plan_name": "汇添富资本-上海地产租赁住房2号资产支持专项计划",
-      "special_plan_manager": "汇添富资本管理有限公司",
-      "official_registration_approval_no": "",
-      "official_no_objection_no": "",
-      "documents_checked": true,
-      "fund_link_evidence": {
-        "method": "exact_official_fund_name",
-        "matched_name": "汇添富上海地产租赁住房封闭式基础设施证券投资基金",
-        "source_url": "https://etf.sse.com.cn/fundlist/funddetail/index.shtml?code=508055&category=F600"
-      },
-      "classification_source": "official",
-      "classification_confidence": "confirmed",
-      "classification_note": "名称关键词：租赁住房",
-      "fund_id": "SSE_FUND_508055",
-      "linkage_method": "official_fund_code",
-      "stage": "审核中",
-      "issuer": null,
-      "financial_advisor": "无",
-      "proposed_sale_amount_application_cny_100m": null,
-      "proposed_sale_amount_feedback_cny_100m": null,
-      "proposed_sale_amount_inquiry_cny_100m": null,
-      "sale_amount_cny_100m": null,
-      "external_loan_amount_cny_100m": null,
-      "project_return_forecast": null,
-      "guarantee_support": null,
-      "official_asset_type": "租赁住房",
-      "classification_evidence": [
-        {
-          "title": "1-4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金2026年度第一次扩募并新购入不动产项目招募说明书.pdf",
-          "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
-          "published_at": "2026-09-28",
-          "page": 29,
-          "excerpt": "不动产项目业态 租赁住房 基金投资标的 汇添富资本-上海地产租赁住房 2 号资产支持专项计划",
-          "document_stage": "application",
-          "rule": "explicit_asset_use_table",
-          "reviewed_at": "2026-10-15T12:11:07+08:00",
-          "classification_basis": "官方披露资产用途转研究资产分类",
-          "review_status": "passage_reviewed",
-          "text_workpaper": "workpapers/enrichment/public_sse/texts/7abf36e6eacfd1dcc35cbe73.json",
-          "checked_at": "2026-10-15T13:14:26+08:00"
-        }
-      ],
-      "research_field_sources": {
-        "financial_advisor": [
-          {
-            "title": "1-4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金2026年度第一次扩募并新购入不动产项目招募说明书.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
-            "published_at": "2026-09-28",
-            "page": 4,
-            "document_stage": "application",
-            "rule": "explicit_no_financial_adviser",
-            "reviewed_at": "2026-10-15T13:04:57+08:00",
-            "source_method": "native_pdf_text",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/7abf36e6eacfd1dcc35cbe73.json",
-            "review_status": "passage_reviewed",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ],
-        "asset_type": [
-          {
-            "title": "1-4-1 汇添富上海地产租赁住房封闭式基础设施证券投资基金2026年度第一次扩募并新购入不动产项目招募说明书.pdf",
-            "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
-            "published_at": "2026-09-28",
-            "page": 29,
-            "document_stage": "application",
-            "rule": "explicit_asset_use_table",
-            "reviewed_at": "2026-10-15T12:11:07+08:00",
-            "classification_basis": "官方披露资产用途转研究资产分类",
-            "review_status": "passage_reviewed",
-            "text_workpaper": "workpapers/enrichment/public_sse/texts/7abf36e6eacfd1dcc35cbe73.json",
-            "checked_at": "2026-10-15T13:14:26+08:00"
-          }
-        ]
-      },
-      "field_availability": {
-        "issuer": {
-          "status": "unverified",
-          "reason": "未找到单独标识发行人且可直接确认主体的披露，未将原始权益人或基金管理人自动代填发行人。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已核查资料未单列发行人。"
-        },
-        "proposed_sale_amount_application_cny_100m": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
-        },
-        "proposed_sale_amount_feedback_cny_100m": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "未取得明确标注反馈稿的拟募集金额。"
-        },
-        "proposed_sale_amount_inquiry_cny_100m": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
-        },
-        "sale_amount_cny_100m": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
-        },
-        "external_loan_amount_cny_100m": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
-        },
-        "underlying_assets": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已取得资料尚未明确本批次资产清单。"
-        },
-        "project_return_forecast": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
-        },
-        "guarantee_support": {
-          "status": "unverified",
-          "reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。",
-          "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202609/72c49c_20260928_W5CC.pdf",
-          "checked_at": "2026-10-15T13:05:08+08:00",
-          "display_reason": "已检索公开正文，尚未取得足以确认该字段的明确披露；不以主体近似、贷款上限或其他阶段金额替代。"
-        }
-      }
-    },
-    {
       "id": "SSE_f461bff4962247f4a1dac82dea874c42",
       "source_id": "f461bff4962247f4a1dac82dea874c42",
       "name": "东方红申能股份新能源封闭式基础设施证券投资基金",
@@ -40956,16 +41019,6 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2026-09-10",
-          "official_status_code": 20
-        },
-        {
-          "title": "已问询",
-          "date": "2026-10-13",
-          "official_status_code": 30
-        },
-        {
           "title": "已申报",
           "date": "2026-09-07",
           "official_status_code": 10
@@ -40974,6 +41027,16 @@
           "title": "已问询",
           "date": "2026-10-13",
           "official_status_code": 30
+        },
+        {
+          "title": "已问询",
+          "date": "2026-10-13",
+          "official_status_code": 30
+        },
+        {
+          "title": "已受理",
+          "date": "2026-09-10",
+          "official_status_code": 20
         }
       ],
       "classification_source": "official",
@@ -41812,14 +41875,14 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
+          "title": "审核意见",
+          "date": "2026-09-11",
+          "official_status_code": 40
+        },
+        {
           "title": "已受理",
           "date": "2026-05-12",
           "official_status_code": 20
-        },
-        {
-          "title": "注册生效",
-          "date": "2026-09-20",
-          "official_status_code": 70
         },
         {
           "title": "注册结果",
@@ -41832,14 +41895,14 @@
           "official_status_code": 30
         },
         {
-          "title": "审核意见",
-          "date": "2026-09-11",
-          "official_status_code": 40
-        },
-        {
           "title": "已申报",
           "date": "2026-05-06",
           "official_status_code": 10
+        },
+        {
+          "title": "注册生效",
+          "date": "2026-09-20",
+          "official_status_code": 70
         }
       ],
       "classification_source": "official",
@@ -42087,24 +42150,24 @@
       "special_plan_manager": "招商证券资产管理有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2026-06-15",
-          "official_status_code": 20
-        },
-        {
-          "title": "注册结果",
-          "date": "2026-09-20",
-          "official_status_code": 70
-        },
-        {
           "title": "已申报",
           "date": "2026-06-11",
           "official_status_code": 10
         },
         {
+          "title": "已受理",
+          "date": "2026-06-15",
+          "official_status_code": 20
+        },
+        {
           "title": "已问询",
           "date": "2026-07-07",
           "official_status_code": 30
+        },
+        {
+          "title": "注册结果",
+          "date": "2026-09-20",
+          "official_status_code": 70
         },
         {
           "title": "审核意见",
@@ -43868,7 +43931,22 @@
       "special_plan_manager": "中国国际金融股份有限公司",
       "timeline": [
         {
+          "title": "已问询",
+          "date": "2026-05-28",
+          "official_status_code": 30
+        },
+        {
           "title": "注册生效",
+          "date": "2026-09-03",
+          "official_status_code": 70
+        },
+        {
+          "title": "审核意见",
+          "date": "2026-08-28",
+          "official_status_code": 40
+        },
+        {
+          "title": "注册结果",
           "date": "2026-09-03",
           "official_status_code": 70
         },
@@ -43878,24 +43956,9 @@
           "official_status_code": 10
         },
         {
-          "title": "注册结果",
-          "date": "2026-09-03",
-          "official_status_code": 70
-        },
-        {
           "title": "已受理",
           "date": "2026-05-06",
           "official_status_code": 20
-        },
-        {
-          "title": "审核意见",
-          "date": "2026-08-28",
-          "official_status_code": 40
-        },
-        {
-          "title": "已问询",
-          "date": "2026-05-28",
-          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -44223,9 +44286,9 @@
       "special_plan_manager": "中国国际金融股份有限公司",
       "timeline": [
         {
-          "title": "注册生效",
-          "date": "2026-09-03",
-          "official_status_code": 70
+          "title": "审核意见",
+          "date": "2026-08-28",
+          "official_status_code": 40
         },
         {
           "title": "已申报",
@@ -44233,14 +44296,14 @@
           "official_status_code": 10
         },
         {
-          "title": "注册结果",
+          "title": "注册生效",
           "date": "2026-09-03",
           "official_status_code": 70
         },
         {
-          "title": "已受理",
-          "date": "2026-04-30",
-          "official_status_code": 20
+          "title": "注册结果",
+          "date": "2026-09-03",
+          "official_status_code": 70
         },
         {
           "title": "已问询",
@@ -44248,9 +44311,9 @@
           "official_status_code": 30
         },
         {
-          "title": "审核意见",
-          "date": "2026-08-28",
-          "official_status_code": 40
+          "title": "已受理",
+          "date": "2026-04-30",
+          "official_status_code": 20
         }
       ],
       "fund_link_evidence": [
@@ -44586,24 +44649,24 @@
       "special_plan_manager": "银华长安资本管理（北京）有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2026-04-23",
-          "official_status_code": 10
-        },
-        {
           "title": "已受理",
           "date": "2026-04-27",
           "official_status_code": 20
         },
         {
-          "title": "注册生效",
-          "date": "2026-09-03",
-          "official_status_code": 70
-        },
-        {
           "title": "已问询",
           "date": "2026-05-26",
           "official_status_code": 30
+        },
+        {
+          "title": "已申报",
+          "date": "2026-04-23",
+          "official_status_code": 10
+        },
+        {
+          "title": "注册生效",
+          "date": "2026-09-03",
+          "official_status_code": 70
         },
         {
           "title": "审核意见",
@@ -44885,14 +44948,19 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "终止",
-          "date": "2026-09-04",
-          "official_status_code": 80
-        },
-        {
           "title": "已受理",
           "date": "2025-10-13",
           "official_status_code": 20
+        },
+        {
+          "title": "终止(撤回)",
+          "date": "2026-09-04",
+          "official_status_code": 95
+        },
+        {
+          "title": "终止",
+          "date": "2026-09-04",
+          "official_status_code": 80
         },
         {
           "title": "已申报",
@@ -44903,11 +44971,6 @@
           "title": "已问询",
           "date": "2025-10-29",
           "official_status_code": 30
-        },
-        {
-          "title": "终止(撤回)",
-          "date": "2026-09-04",
-          "official_status_code": 95
         }
       ],
       "fund_link_evidence": [
@@ -45914,9 +45977,9 @@
       "special_plan_manager": "平安证券股份有限公司",
       "timeline": [
         {
-          "title": "注册生效",
-          "date": "2026-08-13",
-          "official_status_code": 70
+          "title": "已问询",
+          "date": "2026-01-08",
+          "official_status_code": 30
         },
         {
           "title": "已申报",
@@ -45924,24 +45987,24 @@
           "official_status_code": 10
         },
         {
+          "title": "注册生效",
+          "date": "2026-08-13",
+          "official_status_code": 70
+        },
+        {
           "title": "已受理",
           "date": "2025-12-04",
           "official_status_code": 20
         },
         {
-          "title": "已问询",
-          "date": "2026-01-08",
-          "official_status_code": 30
+          "title": "审核意见",
+          "date": "2026-07-22",
+          "official_status_code": 40
         },
         {
           "title": "注册结果",
           "date": "2026-08-13",
           "official_status_code": 70
-        },
-        {
-          "title": "审核意见",
-          "date": "2026-07-22",
-          "official_status_code": 40
         }
       ],
       "fund_link_evidence": [
@@ -46236,6 +46299,11 @@
       "special_plan_manager": "华泰证券（上海）资产管理有限公司",
       "timeline": [
         {
+          "title": "已申报",
+          "date": "2026-02-03",
+          "official_status_code": 10
+        },
+        {
           "title": "审核意见",
           "date": "2026-07-22",
           "official_status_code": 40
@@ -46246,19 +46314,14 @@
           "official_status_code": 20
         },
         {
-          "title": "已申报",
-          "date": "2026-02-03",
-          "official_status_code": 10
+          "title": "注册结果",
+          "date": "2026-08-13",
+          "official_status_code": 70
         },
         {
           "title": "已问询",
           "date": "2026-02-27",
           "official_status_code": 30
-        },
-        {
-          "title": "注册结果",
-          "date": "2026-08-13",
-          "official_status_code": 70
         },
         {
           "title": "注册生效",
@@ -47466,24 +47529,24 @@
       "special_plan_manager": "南方资本管理有限公司",
       "timeline": [
         {
+          "title": "已问询",
+          "date": "2026-08-10",
+          "official_status_code": 30
+        },
+        {
           "title": "已申报",
           "date": "2026-07-09",
           "official_status_code": 10
         },
         {
-          "title": "已问询",
-          "date": "2026-08-10",
-          "official_status_code": 30
-        },
-        {
-          "title": "已问询",
-          "date": "2026-08-10",
-          "official_status_code": 30
-        },
-        {
           "title": "已受理",
           "date": "2026-07-16",
           "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2026-08-10",
+          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -47704,6 +47767,16 @@
       "special_plan_manager": "瑞元资本管理有限公司",
       "timeline": [
         {
+          "title": "已受理",
+          "date": "2026-06-26",
+          "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2026-07-22",
+          "official_status_code": 30
+        },
+        {
           "title": "已申报",
           "date": "2026-06-22",
           "official_status_code": 10
@@ -47712,16 +47785,6 @@
           "title": "已问询",
           "date": "2026-07-22",
           "official_status_code": 30
-        },
-        {
-          "title": "已问询",
-          "date": "2026-07-22",
-          "official_status_code": 30
-        },
-        {
-          "title": "已受理",
-          "date": "2026-06-26",
-          "official_status_code": 20
         }
       ],
       "classification_source": "official",
@@ -48679,14 +48742,14 @@
           "official_status_code": 30
         },
         {
-          "title": "已受理",
-          "date": "2026-05-27",
-          "official_status_code": 20
-        },
-        {
           "title": "已申报",
           "date": "2026-05-25",
           "official_status_code": 10
+        },
+        {
+          "title": "已受理",
+          "date": "2026-05-27",
+          "official_status_code": 20
         }
       ],
       "classification_source": "official",
@@ -48934,6 +48997,11 @@
       "special_plan_manager": "第一创业证券股份有限公司",
       "timeline": [
         {
+          "title": "审核意见",
+          "date": "2026-05-12",
+          "official_status_code": 40
+        },
+        {
           "title": "已问询",
           "date": "2026-04-17",
           "official_status_code": 30
@@ -48944,12 +49012,12 @@
           "official_status_code": 20
         },
         {
-          "title": "审核意见",
-          "date": "2026-05-12",
-          "official_status_code": 40
+          "title": "注册生效",
+          "date": "2026-05-18",
+          "official_status_code": 70
         },
         {
-          "title": "注册生效",
+          "title": "注册结果",
           "date": "2026-05-18",
           "official_status_code": 70
         },
@@ -48957,11 +49025,6 @@
           "title": "已申报",
           "date": "2026-03-30",
           "official_status_code": 10
-        },
-        {
-          "title": "注册结果",
-          "date": "2026-05-18",
-          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -49555,11 +49618,6 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2026-05-12",
-          "official_status_code": 20
-        },
-        {
           "title": "已问询",
           "date": "2026-06-09",
           "official_status_code": 30
@@ -49568,6 +49626,11 @@
           "title": "已申报",
           "date": "2026-05-08",
           "official_status_code": 10
+        },
+        {
+          "title": "已受理",
+          "date": "2026-05-12",
+          "official_status_code": 20
         },
         {
           "title": "已问询",
@@ -53191,14 +53254,9 @@
       "special_plan_manager": "中航证券有限公司",
       "timeline": [
         {
-          "title": "已问询",
-          "date": "2025-09-03",
-          "official_status_code": 30
-        },
-        {
-          "title": "终止",
-          "date": "2026-03-31",
-          "official_status_code": 80
+          "title": "已申报",
+          "date": "2025-07-22",
+          "official_status_code": 10
         },
         {
           "title": "终止(撤回)",
@@ -53206,14 +53264,19 @@
           "official_status_code": 95
         },
         {
+          "title": "终止",
+          "date": "2026-03-31",
+          "official_status_code": 80
+        },
+        {
           "title": "已受理",
           "date": "2025-07-28",
           "official_status_code": 20
         },
         {
-          "title": "已申报",
-          "date": "2025-07-22",
-          "official_status_code": 10
+          "title": "已问询",
+          "date": "2025-09-03",
+          "official_status_code": 30
         }
       ],
       "classification_source": "official",
@@ -54101,21 +54164,6 @@
       "special_plan_manager": "中航证券有限公司",
       "timeline": [
         {
-          "title": "审核意见",
-          "date": "2026-03-13",
-          "official_status_code": 40
-        },
-        {
-          "title": "注册结果",
-          "date": "2026-03-23",
-          "official_status_code": 70
-        },
-        {
-          "title": "已问询",
-          "date": "2026-01-28",
-          "official_status_code": 30
-        },
-        {
           "title": "注册生效",
           "date": "2026-03-23",
           "official_status_code": 70
@@ -54129,6 +54177,21 @@
           "title": "已受理",
           "date": "2026-01-07",
           "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2026-01-28",
+          "official_status_code": 30
+        },
+        {
+          "title": "审核意见",
+          "date": "2026-03-13",
+          "official_status_code": 40
+        },
+        {
+          "title": "注册结果",
+          "date": "2026-03-23",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -55022,6 +55085,11 @@
           "official_status_code": 30
         },
         {
+          "title": "已受理",
+          "date": "2025-12-30",
+          "official_status_code": 20
+        },
+        {
           "title": "已申报",
           "date": "2025-12-26",
           "official_status_code": 10
@@ -55030,11 +55098,6 @@
           "title": "已问询",
           "date": "2026-01-28",
           "official_status_code": 30
-        },
-        {
-          "title": "已受理",
-          "date": "2025-12-30",
-          "official_status_code": 20
         }
       ],
       "classification_source": "official",
@@ -55259,9 +55322,9 @@
           "official_status_code": 10
         },
         {
-          "title": "已问询",
-          "date": "2024-04-15",
-          "official_status_code": 30
+          "title": "已受理",
+          "date": "2024-03-01",
+          "official_status_code": 20
         },
         {
           "title": "终止",
@@ -55269,9 +55332,9 @@
           "official_status_code": 80
         },
         {
-          "title": "已受理",
-          "date": "2024-03-01",
-          "official_status_code": 20
+          "title": "已问询",
+          "date": "2024-04-15",
+          "official_status_code": 30
         }
       ],
       "classification_source": "official",
@@ -55464,9 +55527,9 @@
           "official_status_code": 95
         },
         {
-          "title": "已问询",
-          "date": "2023-10-22",
-          "official_status_code": 30
+          "title": "已申报",
+          "date": "2023-09-04",
+          "official_status_code": 10
         },
         {
           "title": "已受理",
@@ -55474,9 +55537,9 @@
           "official_status_code": 20
         },
         {
-          "title": "已申报",
-          "date": "2023-09-04",
-          "official_status_code": 10
+          "title": "已问询",
+          "date": "2023-10-22",
+          "official_status_code": 30
         }
       ],
       "classification_source": "official",
@@ -56706,9 +56769,19 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
+          "title": "已问询",
+          "date": "2025-07-15",
+          "official_status_code": 30
+        },
+        {
           "title": "注册结果",
           "date": "2025-09-22",
           "official_status_code": 70
+        },
+        {
+          "title": "已受理",
+          "date": "2025-06-26",
+          "official_status_code": 20
         },
         {
           "title": "审核意见",
@@ -56721,19 +56794,9 @@
           "official_status_code": 70
         },
         {
-          "title": "已受理",
-          "date": "2025-06-26",
-          "official_status_code": 20
-        },
-        {
           "title": "已申报",
           "date": "2025-06-25",
           "official_status_code": 10
-        },
-        {
-          "title": "已问询",
-          "date": "2025-07-15",
-          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -57047,26 +57110,6 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2025-06-30",
-          "official_status_code": 20
-        },
-        {
-          "title": "已问询",
-          "date": "2025-07-17",
-          "official_status_code": 30
-        },
-        {
-          "title": "注册生效",
-          "date": "2025-09-22",
-          "official_status_code": 70
-        },
-        {
-          "title": "注册结果",
-          "date": "2025-09-22",
-          "official_status_code": 70
-        },
-        {
           "title": "审核意见",
           "date": "2025-09-17",
           "official_status_code": 40
@@ -57075,6 +57118,26 @@
           "title": "已申报",
           "date": "2025-06-26",
           "official_status_code": 10
+        },
+        {
+          "title": "已受理",
+          "date": "2025-06-30",
+          "official_status_code": 20
+        },
+        {
+          "title": "注册结果",
+          "date": "2025-09-22",
+          "official_status_code": 70
+        },
+        {
+          "title": "注册生效",
+          "date": "2025-09-22",
+          "official_status_code": 70
+        },
+        {
+          "title": "已问询",
+          "date": "2025-07-17",
+          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -59112,19 +59175,19 @@
       "special_plan_manager": "南方资本管理有限公司",
       "timeline": [
         {
+          "title": "已问询",
+          "date": "2025-04-11",
+          "official_status_code": 30
+        },
+        {
           "title": "注册生效",
           "date": "2025-06-16",
           "official_status_code": 70
         },
         {
-          "title": "审核意见",
-          "date": "2025-06-10",
-          "official_status_code": 40
-        },
-        {
-          "title": "已受理",
-          "date": "2025-03-21",
-          "official_status_code": 20
+          "title": "注册结果",
+          "date": "2025-06-16",
+          "official_status_code": 70
         },
         {
           "title": "已申报",
@@ -59132,14 +59195,14 @@
           "official_status_code": 10
         },
         {
-          "title": "已问询",
-          "date": "2025-04-11",
-          "official_status_code": 30
+          "title": "已受理",
+          "date": "2025-03-21",
+          "official_status_code": 20
         },
         {
-          "title": "注册结果",
-          "date": "2025-06-16",
-          "official_status_code": 70
+          "title": "审核意见",
+          "date": "2025-06-10",
+          "official_status_code": 40
         }
       ],
       "fund_link_evidence": [
@@ -59672,21 +59735,6 @@
       "special_plan_manager": "中国国际金融股份有限公司",
       "timeline": [
         {
-          "title": "注册生效",
-          "date": "2025-05-30",
-          "official_status_code": 70
-        },
-        {
-          "title": "审核意见",
-          "date": "2025-05-19",
-          "official_status_code": 40
-        },
-        {
-          "title": "已问询",
-          "date": "2025-03-20",
-          "official_status_code": 30
-        },
-        {
           "title": "已申报",
           "date": "2025-02-25",
           "official_status_code": 10
@@ -59697,9 +59745,24 @@
           "official_status_code": 20
         },
         {
+          "title": "注册生效",
+          "date": "2025-05-30",
+          "official_status_code": 70
+        },
+        {
           "title": "注册结果",
           "date": "2025-05-30",
           "official_status_code": 70
+        },
+        {
+          "title": "已问询",
+          "date": "2025-03-20",
+          "official_status_code": 30
+        },
+        {
+          "title": "审核意见",
+          "date": "2025-05-19",
+          "official_status_code": 40
         }
       ],
       "fund_link_evidence": [
@@ -61205,9 +61268,9 @@
       "special_plan_manager": "南方资本管理有限公司",
       "timeline": [
         {
-          "title": "审核意见",
-          "date": "2025-02-24",
-          "official_status_code": 40
+          "title": "已问询",
+          "date": "2024-10-16",
+          "official_status_code": 30
         },
         {
           "title": "注册生效",
@@ -61225,14 +61288,14 @@
           "official_status_code": 10
         },
         {
-          "title": "已问询",
-          "date": "2024-10-16",
-          "official_status_code": 30
-        },
-        {
           "title": "已受理",
           "date": "2024-09-24",
           "official_status_code": 20
+        },
+        {
+          "title": "审核意见",
+          "date": "2025-02-24",
+          "official_status_code": 40
         }
       ],
       "fund_link_evidence": [
@@ -61765,19 +61828,14 @@
       "special_plan_manager": "易方达资产管理有限公司",
       "timeline": [
         {
-          "title": "审核意见",
-          "date": "2024-12-19",
-          "official_status_code": 40
-        },
-        {
           "title": "已问询",
           "date": "2024-10-16",
           "official_status_code": 30
         },
         {
-          "title": "注册生效",
-          "date": "2024-12-24",
-          "official_status_code": 70
+          "title": "已申报",
+          "date": "2024-09-24",
+          "official_status_code": 10
         },
         {
           "title": "注册结果",
@@ -61785,14 +61843,19 @@
           "official_status_code": 70
         },
         {
+          "title": "审核意见",
+          "date": "2024-12-19",
+          "official_status_code": 40
+        },
+        {
           "title": "已受理",
           "date": "2024-09-26",
           "official_status_code": 20
         },
         {
-          "title": "已申报",
-          "date": "2024-09-24",
-          "official_status_code": 10
+          "title": "注册生效",
+          "date": "2024-12-24",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -63264,19 +63327,19 @@
       "special_plan_manager": "工银瑞信投资管理有限公司",
       "timeline": [
         {
+          "title": "审核意见",
+          "date": "2024-10-30",
+          "official_status_code": 40
+        },
+        {
           "title": "已申报",
           "date": "2024-06-26",
           "official_status_code": 10
         },
         {
-          "title": "已受理",
-          "date": "2024-06-27",
-          "official_status_code": 20
-        },
-        {
-          "title": "审核意见",
-          "date": "2024-10-30",
-          "official_status_code": 40
+          "title": "注册结果",
+          "date": "2024-11-06",
+          "official_status_code": 70
         },
         {
           "title": "已问询",
@@ -63284,12 +63347,12 @@
           "official_status_code": 30
         },
         {
-          "title": "注册生效",
-          "date": "2024-11-06",
-          "official_status_code": 70
+          "title": "已受理",
+          "date": "2024-06-27",
+          "official_status_code": 20
         },
         {
-          "title": "注册结果",
+          "title": "注册生效",
           "date": "2024-11-06",
           "official_status_code": 70
         }
@@ -63614,6 +63677,16 @@
       "special_plan_manager": "广发证券资产管理（广东）有限公司",
       "timeline": [
         {
+          "title": "已受理",
+          "date": "2024-08-05",
+          "official_status_code": 20
+        },
+        {
+          "title": "注册结果",
+          "date": "2024-11-06",
+          "official_status_code": 70
+        },
+        {
           "title": "注册生效",
           "date": "2024-11-06",
           "official_status_code": 70
@@ -63624,24 +63697,14 @@
           "official_status_code": 10
         },
         {
-          "title": "已问询",
-          "date": "2024-08-26",
-          "official_status_code": 30
-        },
-        {
           "title": "审核意见",
           "date": "2024-10-30",
           "official_status_code": 40
         },
         {
-          "title": "已受理",
-          "date": "2024-08-05",
-          "official_status_code": 20
-        },
-        {
-          "title": "注册结果",
-          "date": "2024-11-06",
-          "official_status_code": 70
+          "title": "已问询",
+          "date": "2024-08-26",
+          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -63967,17 +64030,7 @@
           "official_status_code": 20
         },
         {
-          "title": "已申报",
-          "date": "2024-06-07",
-          "official_status_code": 10
-        },
-        {
           "title": "注册结果",
-          "date": "2024-09-13",
-          "official_status_code": 70
-        },
-        {
-          "title": "注册生效",
           "date": "2024-09-13",
           "official_status_code": 70
         },
@@ -63985,6 +64038,16 @@
           "title": "已问询",
           "date": "2024-07-02",
           "official_status_code": 30
+        },
+        {
+          "title": "已申报",
+          "date": "2024-06-07",
+          "official_status_code": 10
+        },
+        {
+          "title": "注册生效",
+          "date": "2024-09-13",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -64726,11 +64789,6 @@
       "special_plan_manager": "招商财富资产管理有限公司",
       "timeline": [
         {
-          "title": "注册生效",
-          "date": "2024-08-30",
-          "official_status_code": 70
-        },
-        {
           "title": "已申报",
           "date": "2024-05-27",
           "official_status_code": 10
@@ -64746,14 +64804,19 @@
           "official_status_code": 70
         },
         {
-          "title": "已问询",
-          "date": "2024-06-25",
-          "official_status_code": 30
+          "title": "注册生效",
+          "date": "2024-08-30",
+          "official_status_code": 70
         },
         {
           "title": "审议会议",
           "date": "2024-08-21",
           "official_status_code": 40
+        },
+        {
+          "title": "已问询",
+          "date": "2024-06-25",
+          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -65295,6 +65358,16 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
+          "title": "已受理",
+          "date": "2024-05-24",
+          "official_status_code": 20
+        },
+        {
+          "title": "已申报",
+          "date": "2024-05-24",
+          "official_status_code": 10
+        },
+        {
           "title": "已问询",
           "date": "2024-06-25",
           "official_status_code": 30
@@ -65310,19 +65383,9 @@
           "official_status_code": 40
         },
         {
-          "title": "已申报",
-          "date": "2024-05-24",
-          "official_status_code": 10
-        },
-        {
           "title": "注册生效",
           "date": "2024-08-02",
           "official_status_code": 70
-        },
-        {
-          "title": "已受理",
-          "date": "2024-05-24",
-          "official_status_code": 20
         }
       ],
       "fund_link_evidence": [
@@ -66785,9 +66848,9 @@
           "official_status_code": 20
         },
         {
-          "title": "已问询",
-          "date": "2023-12-22",
-          "official_status_code": 30
+          "title": "注册结果",
+          "date": "2024-05-23",
+          "official_status_code": 70
         },
         {
           "title": "注册生效",
@@ -66795,9 +66858,9 @@
           "official_status_code": 70
         },
         {
-          "title": "注册结果",
-          "date": "2024-05-23",
-          "official_status_code": 70
+          "title": "已问询",
+          "date": "2023-12-22",
+          "official_status_code": 30
         },
         {
           "title": "已申报",
@@ -67524,19 +67587,14 @@
       "special_plan_manager": "华泰证券(上海）资产管理有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2023-12-07",
-          "official_status_code": 10
-        },
-        {
-          "title": "注册结果",
+          "title": "注册生效",
           "date": "2024-05-11",
           "official_status_code": 70
         },
         {
-          "title": "已受理",
-          "date": "2023-12-08",
-          "official_status_code": 20
+          "title": "已申报",
+          "date": "2023-12-07",
+          "official_status_code": 10
         },
         {
           "title": "已问询",
@@ -67549,9 +67607,14 @@
           "official_status_code": 40
         },
         {
-          "title": "注册生效",
+          "title": "注册结果",
           "date": "2024-05-11",
           "official_status_code": 70
+        },
+        {
+          "title": "已受理",
+          "date": "2023-12-08",
+          "official_status_code": 20
         }
       ],
       "fund_link_evidence": [
@@ -67813,6 +67876,16 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
+          "title": "注册生效",
+          "date": "2024-04-02",
+          "official_status_code": 70
+        },
+        {
+          "title": "审议会议",
+          "date": "2024-03-26",
+          "official_status_code": 40
+        },
+        {
           "title": "注册结果",
           "date": "2024-04-02",
           "official_status_code": 70
@@ -67823,19 +67896,9 @@
           "official_status_code": 10
         },
         {
-          "title": "审议会议",
-          "date": "2024-03-26",
-          "official_status_code": 40
-        },
-        {
           "title": "已受理",
           "date": "2023-12-08",
           "official_status_code": 20
-        },
-        {
-          "title": "注册生效",
-          "date": "2024-04-02",
-          "official_status_code": 70
         },
         {
           "title": "已问询",
@@ -68146,6 +68209,21 @@
       "special_plan_manager": "易方达资产管理有限公司",
       "timeline": [
         {
+          "title": "注册结果",
+          "date": "2024-04-02",
+          "official_status_code": 70
+        },
+        {
+          "title": "注册生效",
+          "date": "2024-04-02",
+          "official_status_code": 70
+        },
+        {
+          "title": "已问询",
+          "date": "2023-08-10",
+          "official_status_code": 30
+        },
+        {
           "title": "已申报",
           "date": "2023-06-14",
           "official_status_code": 10
@@ -68159,21 +68237,6 @@
           "title": "审议会议",
           "date": "2024-03-26",
           "official_status_code": 40
-        },
-        {
-          "title": "注册结果",
-          "date": "2024-04-02",
-          "official_status_code": 70
-        },
-        {
-          "title": "已问询",
-          "date": "2023-08-10",
-          "official_status_code": 30
-        },
-        {
-          "title": "注册生效",
-          "date": "2024-04-02",
-          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -69622,24 +69685,9 @@
       "special_plan_manager": "中国国际金融股份有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2023-10-26",
-          "official_status_code": 10
-        },
-        {
-          "title": "已受理",
-          "date": "2023-10-26",
-          "official_status_code": 20
-        },
-        {
           "title": "注册生效",
           "date": "2023-11-24",
           "official_status_code": 70
-        },
-        {
-          "title": "已问询",
-          "date": "2023-11-21",
-          "official_status_code": 30
         },
         {
           "title": "注册结果",
@@ -69647,9 +69695,24 @@
           "official_status_code": 70
         },
         {
+          "title": "已申报",
+          "date": "2023-10-26",
+          "official_status_code": 10
+        },
+        {
           "title": "审议会议",
           "date": "2023-11-24",
           "official_status_code": 40
+        },
+        {
+          "title": "已受理",
+          "date": "2023-10-26",
+          "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2023-11-21",
+          "official_status_code": 30
         }
       ],
       "fund_link_evidence": [
@@ -69962,6 +70025,16 @@
           "official_status_code": 20
         },
         {
+          "title": "已申报",
+          "date": "2023-10-26",
+          "official_status_code": 10
+        },
+        {
+          "title": "注册结果",
+          "date": "2023-11-24",
+          "official_status_code": 70
+        },
+        {
           "title": "审议会议",
           "date": "2023-11-24",
           "official_status_code": 40
@@ -69970,16 +70043,6 @@
           "title": "注册生效",
           "date": "2023-11-24",
           "official_status_code": 70
-        },
-        {
-          "title": "注册结果",
-          "date": "2023-11-24",
-          "official_status_code": 70
-        },
-        {
-          "title": "已申报",
-          "date": "2023-10-26",
-          "official_status_code": 10
         },
         {
           "title": "已问询",
@@ -71167,21 +71230,6 @@
       "special_plan_manager": "博时资本管理有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2022-09-29",
-          "official_status_code": 20
-        },
-        {
-          "title": "审议会议",
-          "date": "2023-03-13",
-          "official_status_code": 40
-        },
-        {
-          "title": "已申报",
-          "date": "2022-09-28",
-          "official_status_code": 10
-        },
-        {
           "title": "已问询",
           "date": "2022-12-07",
           "official_status_code": 30
@@ -71192,9 +71240,24 @@
           "official_status_code": 70
         },
         {
+          "title": "已受理",
+          "date": "2022-09-29",
+          "official_status_code": 20
+        },
+        {
+          "title": "已申报",
+          "date": "2022-09-28",
+          "official_status_code": 10
+        },
+        {
           "title": "注册生效",
           "date": "2023-03-31",
           "official_status_code": 70
+        },
+        {
+          "title": "审议会议",
+          "date": "2023-03-13",
+          "official_status_code": 40
         }
       ],
       "fund_link_evidence": [
@@ -71492,6 +71555,21 @@
       "special_plan_manager": "深创投红土资产管理（深圳）有限公司",
       "timeline": [
         {
+          "title": "注册结果",
+          "date": "2023-03-31",
+          "official_status_code": 70
+        },
+        {
+          "title": "已受理",
+          "date": "2022-09-29",
+          "official_status_code": 20
+        },
+        {
+          "title": "注册生效",
+          "date": "2023-03-31",
+          "official_status_code": 70
+        },
+        {
           "title": "已申报",
           "date": "2022-09-28",
           "official_status_code": 10
@@ -71500,21 +71578,6 @@
           "title": "已问询",
           "date": "2022-12-07",
           "official_status_code": 30
-        },
-        {
-          "title": "已受理",
-          "date": "2022-09-29",
-          "official_status_code": 20
-        },
-        {
-          "title": "注册结果",
-          "date": "2023-03-31",
-          "official_status_code": 70
-        },
-        {
-          "title": "注册生效",
-          "date": "2023-03-31",
-          "official_status_code": 70
         },
         {
           "title": "审议会议",
@@ -72882,17 +72945,17 @@
           "official_status_code": 20
         },
         {
-          "title": "注册结果",
-          "date": "2022-11-25",
-          "official_status_code": 70
-        },
-        {
           "title": "审议会议",
           "date": "2022-11-21",
           "official_status_code": 40
         },
         {
           "title": "注册生效",
+          "date": "2022-11-25",
+          "official_status_code": 70
+        },
+        {
+          "title": "注册结果",
           "date": "2022-11-25",
           "official_status_code": 70
         },
@@ -74094,11 +74157,6 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "审议会议",
-          "date": "2022-08-26",
-          "official_status_code": 40
-        },
-        {
           "title": "已问询",
           "date": "2022-08-16",
           "official_status_code": 30
@@ -74109,17 +74167,22 @@
           "official_status_code": 20
         },
         {
-          "title": "注册结果",
-          "date": "2022-08-29",
-          "official_status_code": 70
-        },
-        {
           "title": "已申报",
           "date": "2022-07-21",
           "official_status_code": 10
         },
         {
+          "title": "审议会议",
+          "date": "2022-08-26",
+          "official_status_code": 40
+        },
+        {
           "title": "注册生效",
+          "date": "2022-08-29",
+          "official_status_code": 70
+        },
+        {
+          "title": "注册结果",
           "date": "2022-08-29",
           "official_status_code": 70
         }
@@ -74832,24 +74895,9 @@
       "special_plan_manager": "深创投红土资产管理（深圳）有限公司",
       "timeline": [
         {
-          "title": "已受理",
-          "date": "2022-05-30",
-          "official_status_code": 20
-        },
-        {
-          "title": "审议会议",
-          "date": "2022-07-11",
-          "official_status_code": 40
-        },
-        {
-          "title": "注册生效",
-          "date": "2022-07-27",
-          "official_status_code": 70
-        },
-        {
-          "title": "注册结果",
-          "date": "2022-07-27",
-          "official_status_code": 70
+          "title": "已问询",
+          "date": "2022-06-17",
+          "official_status_code": 30
         },
         {
           "title": "已申报",
@@ -74857,9 +74905,24 @@
           "official_status_code": 10
         },
         {
-          "title": "已问询",
-          "date": "2022-06-17",
-          "official_status_code": 30
+          "title": "审议会议",
+          "date": "2022-07-11",
+          "official_status_code": 40
+        },
+        {
+          "title": "注册结果",
+          "date": "2022-07-27",
+          "official_status_code": 70
+        },
+        {
+          "title": "已受理",
+          "date": "2022-05-30",
+          "official_status_code": 20
+        },
+        {
+          "title": "注册生效",
+          "date": "2022-07-27",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -75338,11 +75401,6 @@
       "special_plan_manager": "国信证券股份有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2021-12-30",
-          "official_status_code": 10
-        },
-        {
           "title": "注册结果",
           "date": "2022-06-21",
           "official_status_code": 70
@@ -75353,11 +75411,6 @@
           "official_status_code": 40
         },
         {
-          "title": "已问询",
-          "date": "2022-03-29",
-          "official_status_code": 30
-        },
-        {
           "title": "注册生效",
           "date": "2022-06-21",
           "official_status_code": 70
@@ -75366,6 +75419,16 @@
           "title": "已受理",
           "date": "2022-02-15",
           "official_status_code": 20
+        },
+        {
+          "title": "已问询",
+          "date": "2022-03-29",
+          "official_status_code": 30
+        },
+        {
+          "title": "已申报",
+          "date": "2021-12-30",
+          "official_status_code": 10
         }
       ],
       "fund_link_evidence": [
@@ -76070,9 +76133,14 @@
       "special_plan_manager": "中信证券股份有限公司",
       "timeline": [
         {
-          "title": "审议会议",
-          "date": "2021-11-04",
-          "official_status_code": 40
+          "title": "注册生效",
+          "date": "2021-11-12",
+          "official_status_code": 70
+        },
+        {
+          "title": "注册结果",
+          "date": "2021-11-12",
+          "official_status_code": 70
         },
         {
           "title": "已受理",
@@ -76085,14 +76153,9 @@
           "official_status_code": 10
         },
         {
-          "title": "注册生效",
-          "date": "2021-11-12",
-          "official_status_code": 70
-        },
-        {
-          "title": "注册结果",
-          "date": "2021-11-12",
-          "official_status_code": 70
+          "title": "审议会议",
+          "date": "2021-11-04",
+          "official_status_code": 40
         }
       ],
       "fund_link_evidence": [
@@ -76515,9 +76578,9 @@
       "special_plan_manager": "深创投红土资产管理（深圳）有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2021-04-28",
-          "official_status_code": 10
+          "title": "注册结果",
+          "date": "2021-05-17",
+          "official_status_code": 70
         },
         {
           "title": "审议会议",
@@ -76525,14 +76588,14 @@
           "official_status_code": 40
         },
         {
-          "title": "注册结果",
-          "date": "2021-05-17",
-          "official_status_code": 70
-        },
-        {
           "title": "已受理",
           "date": "2021-05-06",
           "official_status_code": 20
+        },
+        {
+          "title": "已申报",
+          "date": "2021-04-28",
+          "official_status_code": 10
         },
         {
           "title": "注册生效",
@@ -76809,9 +76872,9 @@
       "special_plan_manager": "平安证券股份有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2021-04-28",
-          "official_status_code": 10
+          "title": "已受理",
+          "date": "2021-05-06",
+          "official_status_code": 20
         },
         {
           "title": "注册生效",
@@ -76819,9 +76882,9 @@
           "official_status_code": 70
         },
         {
-          "title": "已受理",
-          "date": "2021-05-06",
-          "official_status_code": 20
+          "title": "注册结果",
+          "date": "2021-05-17",
+          "official_status_code": 70
         },
         {
           "title": "审议会议",
@@ -76829,9 +76892,9 @@
           "official_status_code": 40
         },
         {
-          "title": "注册结果",
-          "date": "2021-05-17",
-          "official_status_code": 70
+          "title": "已申报",
+          "date": "2021-04-28",
+          "official_status_code": 10
         }
       ],
       "fund_link_evidence": [
@@ -77092,9 +77155,9 @@
       "special_plan_manager": "博时资本管理有限公司",
       "timeline": [
         {
-          "title": "注册生效",
-          "date": "2021-05-17",
-          "official_status_code": 70
+          "title": "已受理",
+          "date": "2021-04-23",
+          "official_status_code": 20
         },
         {
           "title": "已问询",
@@ -77102,14 +77165,9 @@
           "official_status_code": 30
         },
         {
-          "title": "注册结果",
-          "date": "2021-05-17",
-          "official_status_code": 70
-        },
-        {
-          "title": "已受理",
-          "date": "2021-04-23",
-          "official_status_code": 20
+          "title": "审议会议",
+          "date": "2021-05-14",
+          "official_status_code": 40
         },
         {
           "title": "已申报",
@@ -77117,9 +77175,14 @@
           "official_status_code": 10
         },
         {
-          "title": "审议会议",
-          "date": "2021-05-14",
-          "official_status_code": 40
+          "title": "注册生效",
+          "date": "2021-05-17",
+          "official_status_code": 70
+        },
+        {
+          "title": "注册结果",
+          "date": "2021-05-17",
+          "official_status_code": 70
         }
       ],
       "fund_link_evidence": [
@@ -77379,9 +77442,9 @@
       "special_plan_manager": "中航证券有限公司",
       "timeline": [
         {
-          "title": "已申报",
-          "date": "2021-04-21",
-          "official_status_code": 10
+          "title": "注册结果",
+          "date": "2021-05-17",
+          "official_status_code": 70
         },
         {
           "title": "审议会议",
@@ -77389,19 +77452,19 @@
           "official_status_code": 40
         },
         {
-          "title": "注册结果",
-          "date": "2021-05-17",
-          "official_status_code": 70
+          "title": "已受理",
+          "date": "2021-04-23",
+          "official_status_code": 20
+        },
+        {
+          "title": "已申报",
+          "date": "2021-04-21",
+          "official_status_code": 10
         },
         {
           "title": "注册生效",
           "date": "2021-05-17",
           "official_status_code": 70
-        },
-        {
-          "title": "已受理",
-          "date": "2021-04-23",
-          "official_status_code": 20
         }
       ],
       "fund_link_evidence": [
@@ -78715,12 +78778,12 @@
         "core": false
       }
     ],
-    "updated_at": "2026-11-04T09:44:11+08:00"
+    "updated_at": "2026-11-05T09:51:09+08:00"
   },
   "refresh_batch": {
-    "id": "41755145420-1",
-    "date": "2026-11-04",
-    "started_at": "2026-11-04T09:36:11+08:00",
-    "completed_at": "2026-11-04T09:44:11+08:00"
+    "id": "41950399997-1",
+    "date": "2026-11-05",
+    "started_at": "2026-11-05T09:43:25+08:00",
+    "completed_at": "2026-11-05T09:51:09+08:00"
   }
 }
