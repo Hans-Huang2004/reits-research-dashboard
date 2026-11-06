@@ -1,20 +1,22 @@
 name: Refresh all REIT data
 on:
-  schedule:
-    # UTC: 05:37–07:52 Beijing, then every 15 minutes at 08:07–11:52.
-    # Start before the 08:00 reading time; skip once today's pair is complete.
-    - cron: '37,52 21-23 * * *'
-    - cron: '7,22,37,52 0-3 * * *'
+  # Automatic refresh paused at user request on 2026-11-06 pending billing resolution.
+  # Restore the commented schedule/push triggers only after the user asks to resume.
+  # schedule:
+  #   # UTC: 05:37–07:52 Beijing, then every 15 minutes at 08:07–11:52.
+  #   # Start before the 08:00 reading time; skip once today's pair is complete.
+  #   - cron: '37,52 21-23 * * *'
+  #   - cron: '7,22,37,52 0-3 * * *'
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/update-data.yml
-      - scripts/refresh_all.py
-      - scripts/project_updates.py
-      - collectors/**
-      - tests/**
-      - scripts/validate*.py
+  # push:
+  #   branches: [main]
+  #   paths:
+  #     - .github/workflows/update-data.yml
+  #     - scripts/refresh_all.py
+  #     - scripts/project_updates.py
+  #     - collectors/**
+  #     - tests/**
+  #     - scripts/validate*.py
 permissions:
   contents: write
   actions: read

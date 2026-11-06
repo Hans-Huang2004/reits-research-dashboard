@@ -1,26 +1,28 @@
 name: Refresh NDRC recommendations
 on:
-  schedule:
-    # Beijing 07:45, then 08:10–11:40 until today's source/version passes.
-    - cron: '45 23 * * *'
-    - cron: '10,40 0-3 * * *'
+  # Automatic refresh paused at user request on 2026-11-06 pending billing resolution.
+  # Restore the commented schedule/push triggers only after the user asks to resume.
+  # schedule:
+  #   # Beijing 07:45, then 08:10–11:40 until today's source/version passes.
+  #   - cron: '45 23 * * *'
+  #   - cron: '10,40 0-3 * * *'
   workflow_dispatch:
   workflow_call:
     inputs:
       skip_publication:
         type: boolean
         default: false
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/ndrc-data.yml
-      - collectors/ndrc_recommendations.py
-      - collectors/ndrc_matching.py
-      - config/ndrc_exchange_links.json
-      - scripts/refresh_ndrc.py
-      - scripts/export_ndrc_review.py
-      - scripts/validate_ndrc_data.py
-      - scripts/project_updates.py
+  # push:
+  #   branches: [main]
+  #   paths:
+  #     - .github/workflows/ndrc-data.yml
+  #     - collectors/ndrc_recommendations.py
+  #     - collectors/ndrc_matching.py
+  #     - config/ndrc_exchange_links.json
+  #     - scripts/refresh_ndrc.py
+  #     - scripts/export_ndrc_review.py
+  #     - scripts/validate_ndrc_data.py
+  #     - scripts/project_updates.py
 permissions:
   contents: write
 jobs:
